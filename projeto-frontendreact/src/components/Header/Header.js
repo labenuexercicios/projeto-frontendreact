@@ -1,6 +1,6 @@
 import {HeaderStyled, LogoStyled} from './styles'
 import logo from './midia-header/8fe884105100727.5f71ebef2d0ee.jpg';
-import fundo from './midia-header/5424634-estrelas-em-uma-noite-ceu-fundo-grátis-vetor.jpg';
+import fundo from './midia-header/estrela-ceu.webp';
 import styled from "styled-components";
 
 export const Header = () => {

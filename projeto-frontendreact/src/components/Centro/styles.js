@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CentroStyled = styled.section`
-// display: flex;
+${(props) => props.display};
 // flex-direction: row;
 // flex-wrap: wrap;
 // border: 1px solid black;
@@ -13,16 +13,17 @@ export const CentroStyled = styled.section`
   text-align: center;
   border-radius: 10px;
   box-shadow: 10px 10px 30px #bdbdbd;
-  height: 300px;
+  height: 270px;
 `
 
 export const ProdutosBloco = styled.section`
-    display: flex;
+    display: ${(props) => props.display};
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 10px;
     border: 1px solid black;
+    background-color: ${(props) => props.color};
     //margin:  0;
 `
 
@@ -46,3 +47,8 @@ export const AddCarrinho = styled.button`
     background-color: rgb(141, 225, 23);;
     box-shadow: 0 6px 30px -10px #000000;
     `
+
+// export const apaga = styled.section
+// `
+// display: none;
+// `
