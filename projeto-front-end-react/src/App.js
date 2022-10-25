@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import {Header} from "./Header/Header"
 import Produtos from "./Produtos/Produtos"
 import './App.css';
+import imagemSoyuz from "./img/soyuz.png"
 
 export const GlobalStyled = createGlobalStyle`
   *{
@@ -13,15 +14,30 @@ export const GlobalStyled = createGlobalStyle`
 `;
 
 
+
 function App() {
+
+  const produto1 = {
+    nave: "Soyus",
+    imagem: imagemSoyuz,
+  }
+    
+
   return (
     
     <>
       <GlobalStyled />
       <Header>
       </Header>
-      <Produtos>
-      </Produtos>    
+
+      <Produtos
+      imagem={produto1.imagem}
+      nave={produto1.nave}
+      />
+        
+      
+      
+         
     </>
      
   );

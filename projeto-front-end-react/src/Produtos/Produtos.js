@@ -1,18 +1,20 @@
 // import React from "react";
-import { MainContainer } from './styles'
+import { MainContainer, Produto, Card } from './styles'
 
 
 
-
-export default function Produtos(){
-
-    const produto1 = "Foguete 1"
-    const produto2 = "Satélite 1"
+export default function Produtos(props){
+    
+    
 
     return(
         <MainContainer>
-        <section>{produto1}</section>
-        <section>{produto2}</section>
+        <Card>
+        <Produto src={props.imagem}/>
+        {props.nave}
+        </Card>
+       
+        
         </MainContainer>
 
     );
