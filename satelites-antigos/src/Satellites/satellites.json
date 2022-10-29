@@ -1,0 +1,32 @@
+[
+  {
+    "name": "sputnik",
+    "image": "https://img.ibxk.com.br/2020/10/09/09001157614480.jpg?ims=704x",
+    "price": "12.000,00"
+  },
+  {
+    "name": "explorer 1",
+    "image": "https://img.ibxk.com.br/2020/10/09/09001326865481.jpg?ims=704x",
+    "price": "15.000,00"
+  },
+  {
+    "name": "explorer 6",
+    "image": "https://img.ibxk.com.br/2020/10/09/09001456809482.jpg?ims=704x",
+    "price": "18.000,00"
+  },
+  {
+    "name": "vostok 1",
+    "image": "https://img.ibxk.com.br/2020/10/09/09002021259484.jpg?ims=704x",
+    "price": "18.000,00"
+  },
+  {
+    "name": "luna 10",
+    "image": "https://img.ibxk.com.br/2020/10/09/09002211130485.jpg?ims=704x",
+    "price": "18.000,00"
+  },
+  {
+    "name": "mariner 9",
+    "image": "https://img.ibxk.com.br/2020/10/09/09002324987486.jpg?ims=704x",
+    "price": "18.000,00"
+  }
+]
