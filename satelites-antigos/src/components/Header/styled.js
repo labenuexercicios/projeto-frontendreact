@@ -26,7 +26,7 @@ export const Div = styled.div`
 `
 export const Nav = styled.nav`
   width: 50%;
-  height: 18px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
