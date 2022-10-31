@@ -9,18 +9,24 @@ export const ContainerMain = styled.main`
 `
 export const ContainerFilterCard = styled.div`
   display: flex;
+  justify-content: space-between;
   width: 80%;
+  max-width: 1200px;
 `
 export const ContainerFilterArea = styled.div`
   display: flex;
   width: 30%;
-  border: 1px solid white;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid white; */
+  background-color: #242424;
 `
 export const ContainerCard = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 70%;
   max-width: 1200px;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  gap: 4vw;
   padding: 10px 0;
 `
