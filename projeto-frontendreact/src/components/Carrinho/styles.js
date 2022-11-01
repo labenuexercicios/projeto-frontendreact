@@ -2,28 +2,49 @@ import styled from "styled-components";
 
 export const CarrinhoStyled = styled.aside`
 //border: 1px solid black;
-align-items: center;
-font-size: 30px;
+/* align-items: center;
+font-size: 30px; */
+display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  @media screen and (max-device-width: 700px) {
+  //display:none;
+  ${(props) => props.display}
+  /*z-index:0;
+  min-height: 100px; */
+}
+
 `
 
 export const PStyle = styled.p
 `
 color: white;
+text-shadow: -2px 0 black, 0 2px black,
+      2px 0 black, 0 -2px black;
 font-size: 20px;
 padding-left: 5px;
-padding-top: 10px;
 `
 
 export const FixaDireita = styled.div
 `
 position: fixed;
+@media screen and (max-device-width: 700px) {
+ position: static;
+}
 
 `
 
 export const ListaContainer = styled.div`
-  width: 280px;
+  width: 18vw;
   display: flex;
   flex-direction: column;
+  @media screen and (max-device-width: 1000px) {
+    width: 30vw;
+}
+@media screen and (max-device-width: 700px) {
+  width: 70vw;
+}
   //overflow: auto;
 `;
 
@@ -69,3 +90,9 @@ export const RemoveButton = styled.button`
   justify-content: center;
   align-items: center;
 `;
+
+export const LogoStyled = styled.img`
+justify-self: center;
+height: 30px;
+border-radius: 50px;
+`
