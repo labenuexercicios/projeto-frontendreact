@@ -1,0 +1,9 @@
+[
+    {
+        "id": "01",
+        "name": "Camisa",
+        "category": "vestuário",
+        "price": 80.00,
+        "imagem": "../src/img/black-t-shirt-bitoca-1.png"
+    }
+]
