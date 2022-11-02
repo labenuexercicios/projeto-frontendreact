@@ -1,29 +1,27 @@
-import {CentroStyled, Imagem, ProdutosBloco, DadosProduto, AddCarrinho, PStyle, BotaoTamanho, LabelTamanho,
+import {CentroStyled, ProdutosBloco, DadosProduto, AddCarrinho, BotaoTamanho, LabelTamanho,
        Input356, Radio, LogoStyled} from './styles'
 import React, {useState} from 'react'
 
 import imgCarrinho from './Centro-midia/126510.png'
 export const Centro = (props) => {
-    // const onChangeDisplay = (event) => {
-    //     props.setProdutos.display(event.target.value)
+
+    /////////////////////selecionar tamanho////////////////////////
+    // const [tamanho, setTamanho] = useState("");
+    // const onChangeTamanho = (event) => {
+    //     props.setTamanho(event.target.value)
     //   }
 
-    const [tamanho, setTamanho] = useState("");
-
-    const onChangeTamanho = (event) => {
-        props.setTamanho(event.target.value)
-      }
-
     return(
-        // style={{ backgroundImage: `url(${fundo})` }}>
-          <CentroStyled  display={props.produto.display}> {/* //apaga = {props.apaga === true  ? esconde: 1===1}  */} 
+          // style={{ backgroundImage: `url(${fundo})` }}>
+        <CentroStyled  display={props.produto.display}> {/* //apaga = {props.apaga === true  ? esconde: 1===1}  */} 
             <ProdutosBloco color={props.produto.backColor}> 
-            <Imagem src={props.produto.imagemUrl} />
+                <img src={props.produto.imagemUrl} />
                 <DadosProduto>
                     <p>{props.produto.nome}</p>
                     <p>R$<strong>{props.produto.preco}</strong></p>
                 </DadosProduto>
             </ProdutosBloco>
+            {/*//////////////parte do tamanho das roupas/////////////////*/}
             {/* {props.produto.tamanho && 
             <LabelTamanho>
                 <BotaoTamanho onClick={() => props.pesquisarBotao(props.string)}>P</BotaoTamanho> 
@@ -31,19 +29,19 @@ export const Centro = (props) => {
                 <BotaoTamanho onClick={() => props.pesquisarBotao(props.string)}>G</BotaoTamanho> 
             </LabelTamanho>} */}
             
-        {/* {props.produto.tamanho && 
+            {/* {props.produto.tamanho && 
             <LabelTamanho>
             <Input356>
                 <Radio>
                 <label>
-                        <input type="radio" name="curso" value = {tamanho} onChange = {onChangeTamanho}/>
-                        <label for="integral"><span>P</span> </label>
+                    <input type="radio" name="curso" value = {tamanho} onChange = {onChangeTamanho}/>
+                    <label for="integral"><span>P</span> </label>
 
-                        <input type="radio" name="curso" value={tamanho} onChange = {onChangeTamanho}></input>
-                        <label for="noturno"><span>M</span></label>  
+                    <input type="radio" name="curso" value={tamanho} onChange = {onChangeTamanho}></input>
+                    <label for="noturno"><span>M</span></label>  
 
-                        <input type="radio" name="curso" value={tamanho} onChange = {onChangeTamanho}></input>
-                        <label for="noturno"><span>G</span></label> 
+                    <input type="radio" name="curso" value={tamanho} onChange = {onChangeTamanho}></input>
+                    <label for="noturno"><span>G</span></label> 
                 </label>
                 </Radio>      
             </Input356>      

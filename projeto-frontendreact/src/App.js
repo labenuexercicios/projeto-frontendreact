@@ -1,21 +1,32 @@
+/////////Bibliotecas//////////////
 import styled, { createGlobalStyle } from "styled-components";
 import React, {useState} from 'react'
-import './App.css';
-import fundoGalaxia from './midia-geral/panorama-cena-da-galaxia-do-espaco-com-planetas-estrelas-e-galaxias-modelo-de-banner-muitas-nebulosas-e-galaxias-no-espaco-muitos-ano.jpg'
+
+///////////////////components////////////
 import { Header } from "./components/Header/Header";
 import { Filtros } from "./components/Filtros/Filtros";
 import { Centro } from "./components/Centro/Centro";
 import { Carrinho } from "./components/Carrinho/Carrinho";
 import { Footer } from "./components/Footer/Footer";
+/////////////////////////////////////////////////////////////
 
+/////////////////renderização condicional login//////////////////
 import TelaLogin from "./components/TelaLogin/TelaLogin";
 import TelaCadastro from "./components/TelaCadastro/TelaCadastro";
 import TelaUsuarioCadastrado from "./components/TelaUsuarioCadastrado/TelaUsuarioCadastrado.js";
 import TelaCadastroEndereco from "./components/TelaCadastroEndereco/TelaCadastroEndereco"
+//////////////////////////////////////////////////////////////////////////
 
+//////////////////imagens e estilização////////////
+import './App.css';
+import fundoGalaxia from './midia-geral/panorama-cena-da-galaxia-do-espaco-com-planetas-estrelas-e-galaxias-modelo-de-banner-muitas-nebulosas-e-galaxias-no-espaco-muitos-ano.jpg'
 import lupa from "./midia-geral/lupa.png";
 import carrinho from "./midia-geral/126510.png";
 import lupaBusca from "./midia-geral/lupa.jpg";
+
+import {Container, DivCentro, DivItens, DivSemResultado, BottomMenu, MenuButtonLupa, MenuButtonCarrinho, 
+        FilterIcon, CarrinhoIcon, SectionBusca} from './AppStyle'
+//////////////////////////////////////////////////////////////////
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -25,252 +36,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Container  = styled.section`
-display: grid;
-height: 100%;
-min-height: 700px;
-width: 100%;
-grid-template-columns: 1fr 3fr 1fr;
-margin-top: 80px;   
-@media screen and (max-device-width: 1000px) {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-@media screen and (max-device-width: 700px) {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0fr;
-}
-
-`
-
-const DivCentro = styled.div
-`
-background-color: white;
-display: flex;
-flex-direction: column-reverse;
-flex-wrap: wrap;
-justify-content: flex-end;
-align-items: flex-start;
-padding-bottom: 30px;
-padding-right: 0px;
-@media screen and (max-device-width: 1000px) {
-  //flex-direction: column;
-  //align-items: center;
-}
-
-@media screen and (max-device-width: 700px) {
-  justify-content: center;
-align-items: center;
-min-height: 85vh;
-}
-
-`
-
-const DivItens = styled.div
-`
-display:flex;
-justify-content: center;
-flex-direction: row;
-flex-wrap: wrap;
-`
-
-const DivSemResultado = styled.div
-`
-padding: 30px 30px 30px 30px;
-`
-
-const BottomMenu = styled.div
-`
-position: fixed;
-bottom: 0;
-left:0;
-display: grid;
-grid-template-columns: 1fr 1fr;
-width: 100%;
-height: 8vh;
-background-color: white;
-border: 1px solid black;
-z-index:1;
-@media screen and (min-device-width: 700px) {
-  display:none;
-}
-
-`
- const MenuButtonLupa = styled.section
- `
- display: flex;
- justify-content: center;
- align-items: center;
- background-color: black;
- `
- const MenuButtonCarrinho = styled.section
- `
- display: flex;
- justify-content: center;
- `
-
- const ImgLupa = styled.img
- `
- height: 5vh;
- width: auto;
- border-radius: 50px;
- `
-
- const ImgCarrinho = styled.img
- `
- height: 5vh;
- width: auto;
- `
-
-const FilterIcon = styled.button`
-  //padding: 8px 8px 8px 8px;
-  background-color: black;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-`;
-
-const CarrinhoIcon = styled.button`
-  padding: 8px 8px 8px 8px;
-  background-color: white;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-`;
-
-
-////////////////////////busca celular
-
-const SectionBusca = styled.section
-`
-  display: flex;
-  align-items: center;
-  margin: 20px 5px 20px 5px;
-  background-color: #E0EEEE;
-  border: solid 1px #5F9EA0;
-  border-radius: 10px;
-  width: 18vw;
-  height: 41px;
-  @media screen and (max-device-width: 1000px) {
-    width: 70vw;
-}
-
-@media screen and (min-device-width: 700px) {
-  display: none;
-}
-
-`
-
-const ImgLupaBusca = styled.img
-`
-border-radius: 10px;
-  float: left;
-  width: auto;
-  height: 40px;
-  
-`
-
-const Input = styled.input`
-    float: left;
-    background-color: transparent;
-    padding-left: 5px;
-    font-size: 12px;
-    border: none;
-    height: 50px;
-    width: 9vw;
-    @media screen and (max-device-width: 1000px) {
-    width: 40vw;
-}
-    
-`
-
-const BotaoPesquisa = styled.button`
-border: none;
-float: right;
-height: 40px;
-border-radius: 10px;
-width: 10vw;
-font-weight: bold;
-background: #5F9EA0;
-font-size: 14px;
-
-@media screen and (max-device-width: 1000px) {
-    width: 28vw;
-}
-`
-
-/////////////////////////
-
-
 function App() {
-
-  ////////muda pagina celular////
-  const [carrinhoAtivado, setCarrinhoAtivado] = useState(false)
-  const [displayCarrinho, setDisplayCarrinho] = useState("display: none;")
-
-  const [telaLoginAtiva, setTelaLoginAtiva] = useState(false)
-
-  const mudarParaCarrinho = (valor) => {
-    setCarrinhoAtivado(true)
-    setDisplayCarrinho("display: flex;")
-  }
-
-  const mudarParaLista = (valor) => {
-    setCarrinhoAtivado(false)
-    setDisplayCarrinho("display: none;")
-  }
-
-  const mudarParaLogin = (valor) => {
-    setTelaLoginAtiva(true)
-  }
-
-  const voltarParaLista = (valor) => {
-    setTelaLoginAtiva(false)
-    setValorCondicional(1)
-  }
-
-  ////////////////////login////////////////////
-  const [valorCondicional, setValorCondicional] = useState(1)
-
-  const mudarTela = (valor) => {
-    setValorCondicional(valor)
-  }
-
-  // Resolução do exercício de fixação
-  const renderizaTela = () => {
-    if (telaLoginAtiva === true)
-    {
-      switch (valorCondicional) {
-        case 1:
-          return <TelaLogin mudarTela={mudarTela} voltarParaLista={voltarParaLista} />;
-        case 2:
-          return <TelaCadastro mudarTela={mudarTela} />;
-        case 3:
-          return <TelaCadastroEndereco mudarTela={mudarTela}/>
-        default:
-          return <TelaUsuarioCadastrado voltarParaLista={voltarParaLista}/>
-      }
-    }
-  }
-       
-
-      //case 2:
-        //return <TelaCadastro mudarTela={mudarTela} />;
-        //default:
-       // return <TelaCadastroEndereco mudarTela={mudarTela}/>
-    
-//////////////////////////////////
-
-  ////////busca celular
-  const handleSearch = (e) => {
-    setString(e.target.value);
-  };
-  ////////////////////
-
-///Produtos///////////////
+  /////////////////////produtos////////////////////////////
   let [produtos, setProdutos] = useState(
     [ 
       {
@@ -406,179 +173,179 @@ function App() {
         tamanho: false
       },
     ]);
+  ////////////////////////////////////////////////////////
 
-    //Funçoes
-    const [string, setString] = useState("")//recebe o texto pesquisado
-    let [valorMinimo, setValorMinimo] = useState("")
-    let [valorMaximo, setValorMaximo] = useState("")
-    let [listaCarrinho, setListaCarrinho] = useState([]);
-    const [sortABC, setSortABC] = useState("");
-    const [categoriaFilter, setCategoriaFilter] = useState("");
+  ////////variaveis////
+  const [carrinhoAtivado, setCarrinhoAtivado] = useState(false) //verifica se o botao carrinho foi ativo no modo mobile (botao flutuante)
+  const [displayCarrinho, setDisplayCarrinho] = useState("display: none;") //serve para mostrar ou não a lista do carrinho no modo mobile
+  const [telaLoginAtiva, setTelaLoginAtiva] = useState(false)// serve para ir para tela de login
+  const [valorCondicional, setValorCondicional] = useState(1) // para mudar de pagina no login
+  let [quantidadeNaTela , setQuantidadeNaTela ] = useState([])// quantidade de itens na tela no momento da pesquisa
+  const [string, setString] = useState("")//recebe o texto pesquisado nos filtros
+  let [valorMinimo, setValorMinimo] = useState("") //parametro pro valor maximo
+  let [valorMaximo, setValorMaximo] = useState("") //parametro pro valor minimo
+  let [listaCarrinho, setListaCarrinho] = useState([]);  //armazena a lista adicionada ao carrinho de compras
+  const [sortABC, setSortABC] = useState("");  //ordenar em ordem alfabética
+  const [categoriaFilter, setCategoriaFilter] = useState(""); //filtrar por categoria (calor, frio, acessórios)
+  ////////////////////////////////////////
 
-    let alertNaoEncontrado;
+//////////////////funcoes////////////////////////////////////
+  const mudarParaCarrinho = () =>  //serve para alternar entre lista de produtos e carrinho no mobile
+  {
+    setCarrinhoAtivado(true)
+    setDisplayCarrinho("display: flex;")
+  }
 
-    ////////sem o filter/////////////
-    // function pesquisar(textoDigitado)
-    // {
-    //   alertNaoEncontrado = 0
-    //   if(textoDigitado === "")
-    //   {
-    //     for(let i=0; i<produtos.length; i++) 
-    //     {
-    //       produtos[i].display = "";
-    //     }
-    //   }
-    //   else if(alertNaoEncontrado === 0)
-    //   {
-    //     for(let i=0; i<produtos.length; i++) 
-    //     {
-    //       produtos[i].display = "display: none;";
-    //     }
-    //     for(let i=0; i<produtos.length; i++) 
-    //     {    
-    //         if(produtos[i].nome.slice(produtos[i].length, textoDigitado.length).toLowerCase() === textoDigitado.toLowerCase())  //.toLowerCase().trim()
-    //         {
-    //             //console.log("o resultado da pesquisa foi: ", produtos[i].id);
-    //             produtos[i].display = "";
-    //             alertNaoEncontrado = 1
-    //         }
-    //     }
-    //     if(alertNaoEncontrado === 0)
-    //     {
-    //       alertNaoEncontrado = 1
-    //       //alert("ALERT item não encontrado")
-    //       for(let j=0; j<produtos.length; j++) 
-    //       {
-    //         produtos[j].display = "";
-    //       }
-    //     }
-    //   }
-    // }
-    ////////////////////////////////////////
-    
-    function pesquisarBotao(str)
+  const mudarParaLista = () =>  //serve para alternar entre lista de produtos e carrinho no mobile
+  {
+    setCarrinhoAtivado(false)
+    setDisplayCarrinho("display: none;")
+  }
+
+  const mudarParaLogin = () => //serve para mudar para a pagina de login 
+  {
+    setTelaLoginAtiva(true)
+  }
+
+  const voltarParaLista = () => //serve para voltar para a pagina de lista após sair do login
+  {
+    setTelaLoginAtiva(false)
+    setValorCondicional(1)    
+  }
+
+/////////////////funcoes de renderização condicional//////////////////////////
+  const mudarTela = (valor) => {
+    setValorCondicional(valor)
+  }
+
+  const renderizaTela = () => {
+    if (telaLoginAtiva === true)
     {
-      //console.log(alertNaoEncontrado, str)
-      if(alertNaoEncontrado === 1)
-      {
-        //alert("ALERT item não encontrado")
+      switch (valorCondicional) {
+        case 1:
+          return <TelaLogin mudarTela={mudarTela} voltarParaLista={voltarParaLista} />;
+        case 2:
+          return <TelaCadastro mudarTela={mudarTela} />;
+        case 3:
+          return <TelaCadastroEndereco mudarTela={mudarTela}/>
+        default:
+          return <TelaUsuarioCadastrado voltarParaLista={voltarParaLista}/>
       }
     }
+  }
+ ///////////////////////////////////////////////////////////////////////////////      
+
+  ////////busca no mobile////////////////////////////
+  const handleSearch = (e) => 
+  {
+    setString(e.target.value);
+  };
+  ////////////////////////////////////////
+
+  //////////////////funcao do carrinho///////////////////
+  function pesquisarBotao(str)
+  {
+    //não retorna nada por enquanto
+  }
     
-    function adicionarCarrinho(produto)//, arrayAdicionarCarrinho)
+  function adicionarCarrinho(produto) // funcao que adiciona o item selecionado ao carrinho
+  {
+    let itemRepetido = false  // impede que o mesmo item seja repetido no carrinho, somente a quantidade muda
+    let itemCarrinho = {nome:produto.nome, qtd: 1, preco: produto.preco} // transforma o item em um objeto padrão para o carrinho
+    for(let i=0; i<listaCarrinho.length; i++)  //loop para verificar se o item já está no carrinho
     {
-       let itemRepetido = false
-       console.log(listaCarrinho)
-       let itemCarrinho = {nome:produto.nome, qtd: 1, preco: produto.preco}
-       for(let i=0; i<listaCarrinho.length; i++)
-       {
-          if(listaCarrinho[i].nome === itemCarrinho.nome)
-          {
-            listaCarrinho[i].qtd++
-            listaCarrinho[i].preco += itemCarrinho.preco
-            setListaCarrinho([...listaCarrinho])
-            itemRepetido = true
-          }
-       }
-       if(itemRepetido === false)
-       {
-        setListaCarrinho([...listaCarrinho, itemCarrinho])
-       }
-
-      //  listaCarrinho[i].filter((item) => {
-      //   return itemRepetido = item.nome.includes(produto);
-      // })
-
-      // let repetido
-      // itemRepetido? repetido = true : setListaCarrinho([...listaCarrinho, produto]);
-      // console.log(repetido)
-      // if(repetido === true)
-      // {
-      //   for(let i=0; i<listaCarrinho.length; i++)
-      //   {
-      //     if(listaCarrinho[i].nome === produto.nome)
-      //     {
-      //       listaCarrinho[i].qtd++
-      //       setListaCarrinho([...listaCarrinho])
-      //     }
-      //   }
-      // }
+      if(listaCarrinho[i].nome === itemCarrinho.nome) //se o item já estiver no carrinho, a quantidade eo preço aumentam 1
+      {
+        listaCarrinho[i].qtd++ 
+        listaCarrinho[i].preco += itemCarrinho.preco
+        setListaCarrinho([...listaCarrinho])
+        itemRepetido = true       //o item não será repetido no carrinho
+      }
     }
+    if(itemRepetido === false) // se o item não estiver no carrinho, ele será adicionado
+    {
+      setListaCarrinho([...listaCarrinho, itemCarrinho])
+    }
+  }
+/////////////////////////////////////////////////////////////////
 
-  
-      const removeCarrinho = (produto) => {
-      listaCarrinho = listaCarrinho.filter((item) => item !== produto);
-      setListaCarrinho(listaCarrinho)
-    };
+/////////////////////funcao remove do carrinho////////////////////////
+  const removeCarrinho = (produto) => 
+  {
+    listaCarrinho = listaCarrinho.filter((item) => item !== produto);
+    setListaCarrinho(listaCarrinho)
+  }
+/////////////////////////////////////////////////////////////////////////
 
-    ////////////para reconhecer o texto mesmo com acentos////////////
-    function retira_acentos(str) 
-{
-
+////////////para reconhecer o texto mesmo com acentos////////////
+  function retira_acentos(str) 
+  {
     let com_acento = "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŕ";
     let sem_acento = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYRsBaaaaaaaceeeeiiiionoooooouuuuybyr";
     let novastr="";
-    for(let i=0; i<str.length; i++) {
-        let troca=false;
-        for (let a=0; a<com_acento.length; a++) {
-            if (str.substr(i,1)==com_acento.substr(a,1)) {
-                novastr+=sem_acento.substr(a,1);
-                troca=true;
-                break;
-            }
+    for(let i=0; i<str.length; i++) 
+    {
+      let troca=false;
+      for (let a=0; a<com_acento.length; a++) 
+      {
+        if (str.substr(i,1)==com_acento.substr(a,1)) 
+        {
+          novastr+=sem_acento.substr(a,1);
+          troca=true;
+          break;
         }
-        if (troca==false) {
-            novastr+=str.substr(i,1);
-        }
+      }
+      if (troca==false) 
+      {
+        novastr+=str.substr(i,1);
+      }
     }
     return novastr;
-}       
+  }       
+///////////////////////////////////////////////////////////
 
-let [quantidadeNaTela , setQuantidadeNaTela ] = useState([])
   return (
-
     <>  
     <GlobalStyle />
-    <Header mudarParaLogin={mudarParaLogin}/>
+    <Header mudarParaLogin={mudarParaLogin}/> 
 
     <BottomMenu>
       <MenuButtonLupa onClick = {mudarParaLista}>
-      <FilterIcon > 
-          <ImgLupa src={lupa} />
-      </FilterIcon>
+        <FilterIcon > 
+          <img src={lupa} />
+        </FilterIcon>
       </MenuButtonLupa>
+
       <MenuButtonCarrinho onClick = {mudarParaCarrinho}> 
-      <CarrinhoIcon > 
-          <ImgCarrinho src={carrinho}/>
-      </CarrinhoIcon>
+        <CarrinhoIcon > 
+          <img src={carrinho}/>
+        </CarrinhoIcon>
       </MenuButtonCarrinho>
     </BottomMenu>
 
-    {renderizaTela()}
-    {!telaLoginAtiva &&
+    {renderizaTela()} {/*chama a tela de login caso seja verdadeiro */}
+
+    {!telaLoginAtiva && //*se a tela de login for verdadeira, não mostra esse conteúdo 
     <Container style={{ backgroundImage: `url(${fundoGalaxia})` }}>
       <Filtros
       string = {string}
       setString = {setString} 
-
       valorMinimo = {valorMinimo}
       valorMaximo = {valorMaximo}
-
       setValorMinimo = {setValorMinimo}
       setValorMaximo = {setValorMaximo}
-
       pesquisarBotao = {pesquisarBotao}
-
       sortABC={sortABC}
       setSortABC={setSortABC}
-
       categoriaFilter = {categoriaFilter}
       setCategoriaFilter={setCategoriaFilter}   
       />
       
-      {!carrinhoAtivado && <DivCentro>  
+      {!carrinhoAtivado && //no mobile, não aparece se o carrinho estiver selecionado
+      <DivCentro>  
         <DivItens>
-        {quantidadeNaTela = produtos.filter((produto) => {
+        {quantidadeNaTela = produtos //produtos vai passar por uma serie de filtros e map
+          .filter((produto) => {
             return retira_acentos(produto.nome.trim().toLowerCase()).includes(retira_acentos(string.trim().toLowerCase()));
           })
           .filter((produto) => {
@@ -622,9 +389,10 @@ let [quantidadeNaTela , setQuantidadeNaTela ] = useState([])
             />
           )
         })}
+
         </DivItens>
-        {quantidadeNaTela.length === 0 && 
-          <DivSemResultado>
+        {quantidadeNaTela.length === 0 && //caso não seja encontrado nenhum item
+        <DivSemResultado>
           <h3>NÃO FOI POSSÍVEL ENCONTRAR RESULTADOS PARA O TERMO PROCURADO</h3>
           <h5>Verifique se você digitou as palavras corretamente ou tente novamente a busca.
           <h4>DICAS:</h4>
@@ -633,31 +401,22 @@ let [quantidadeNaTela , setQuantidadeNaTela ] = useState([])
           <p>- Tente buscar por termos menos específicos.</p>
           <p>- Use os filtros da busca.</p>
           <p>- Procure utilizar sinônimos ao termo desejado.</p></h5>
-          </DivSemResultado>}
+        </DivSemResultado>}
 
-        <h5>Quantidade de itens: {quantidadeNaTela.length}</h5>
-        {/* {listaProdutosnaTela = this.state.produtos} */}
+        <h5>Quantidade de itens: {quantidadeNaTela.length}</h5> {/*tive que usar column-reverse para aparecer primeiro*/}
 
-        <SectionBusca>
-                <ImgLupaBusca src={lupaBusca} alt="Buscar..." />
-                <Input type="text" placeholder="Pesquisar..." value = {string}  onChange={handleSearch}/> {/*onClick={props.pesquisar(props.string)}/> */}
-                <BotaoPesquisa onClick={() => pesquisarBotao(string)}>Buscar</BotaoPesquisa> 
+        <SectionBusca>  {/*só aparece no mobile */}
+          <img src={lupaBusca} alt="Buscar..." />
+          <input type="text" placeholder="Pesquisar..." value = {string}  onChange={handleSearch}/> {/*onClick={props.pesquisar(props.string)}/> */}
+          <button onClick={() => pesquisarBotao(string)}>Buscar</button> 
         </SectionBusca>
 
       </DivCentro>}
 
-
-      {/* {carrinhoAtivado && <Carrinho
-      listaCarrinho = {listaCarrinho}
-      removeCarrinho= {removeCarrinho}
-      //setArrayAdicionarCarrinho= {setArrayAdicionarCarrinho} 
-      /> } */}
-
       <Carrinho
-      displayCarrinho ={displayCarrinho}
-      listaCarrinho = {listaCarrinho}
-      removeCarrinho= {removeCarrinho}
-      //setArrayAdicionarCarrinho= {setArrayAdicionarCarrinho} 
+        displayCarrinho ={displayCarrinho}
+        listaCarrinho = {listaCarrinho}
+        removeCarrinho= {removeCarrinho}
       /> 
     </Container>}
 
