@@ -1,9 +1,9 @@
 import { ContainerCard, InfoDiv, Button, HideButton, Detail1, Detail2, Anchor, ContainerInformation, ImgCoin, ImgSatelite, Description, Information, Name, Price } from "./styled"
 // import satelites from '../../Satellites/satellites.json'
 import coin from '../../img/coin.png'
-import satellites from '../../Satellites/satellites.json'
 import { useState } from "react"
 import  './Card.css'
+
 
 export const Card = (props) => {
   const [Style, setStyle] = useState("hideCard")
