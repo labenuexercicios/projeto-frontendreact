@@ -1,4 +1,4 @@
-import { ContainerCard, InfoDiv, Button, HideButton, Detail1, Detail2, ContainerInformation, ImgCoin, ImgSatelite, Description, Information, Name, Price } from "./styled"
+import { ContainerCard, InfoDiv, Button, HideButton, Detail1, Detail2, Anchor, ContainerInformation, ImgCoin, ImgSatelite, Description, Information, Name, Price } from "./styled"
 // import satelites from '../../Satellites/satellites.json'
 import coin from '../../img/coin.png'
 import satellites from '../../Satellites/satellites.json'
@@ -19,7 +19,8 @@ export const Card = (props) => {
   return(
     <ContainerCard className={Style}>
         <Description>
-          <p>{satellites[0].decription}</p>
+          <p>{props.description}</p>
+          <p><Anchor href={props.link} target="_blank">&rarr; SAIBA MAIS</Anchor></p>
         </Description>
         <ImgSatelite src={props.image} alt={props.name}/>
         <ContainerInformation>

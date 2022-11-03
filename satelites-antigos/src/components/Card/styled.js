@@ -13,15 +13,28 @@ export const ContainerCard = styled.div`
 export const Description = styled.div`
   position: absolute;
   right: 0;
-  z-index: 1;
+  z-index: 0;
   width: 300px;
   padding: 8px;
   font-size: 14px;
   text-align: justify;
   color: gray;
   font-variant: small-caps;
-  /* border: 1px solid red; */
-  `
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`
+export const Anchor = styled.a`
+  text-decoration: none;
+  color: gray;
+  font-size: 10px;
+  padding-left: 8px;
+  z-index: 1;
+  &:hover{
+    color: #dbdbdb;
+    transition: color 0.3s ease-in-out;
+  }
+`
 export const Name = styled.p`
   color: #D2D0D0;
   font-size: 14px;
@@ -115,4 +128,9 @@ export const HideButton = styled.button`
   border: none;
   color: gray;
   font-size: 24px;
+  cursor: pointer;
+  &:hover{
+    color: #dbdbdb;
+    transition: color 0.3s ease-in-out;
+  }
 `

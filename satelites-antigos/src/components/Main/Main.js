@@ -12,7 +12,12 @@ export const Main = () => {
         </ContainerFilterArea>
         <ContainerCard>
           {satellites.map((satellite) => {
-            return <Card name={satellite.name} image={satellite.image} price={satellite.price}/>
+            return <Card 
+              name={satellite.name} 
+              image={satellite.image} 
+              price={satellite.price} 
+              description={satellite.description} 
+              link={satellite.link}/>
           })}
         </ContainerCard>
         </ContainerFilterCard>
