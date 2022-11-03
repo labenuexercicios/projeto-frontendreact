@@ -40,6 +40,7 @@ export const Input = styled.input`
   width: 88%;
   background-color: black;
   border: none;
+  color: white;
   /* border-right: none; */
 `
 export const ImgLupa = styled.img`

@@ -2,7 +2,8 @@
   {
     "name": "sputnik",
     "image": "https://img.ibxk.com.br/2020/10/09/09001157614480.jpg?ims=704x",
-    "price": "12.000,00"
+    "price": "12.000,00",
+    "decription": "Foi o primeiro satélite artificial colocado na órbita da Terra. O lançamento ocorreu em 4 de outubro de 1957 a partir de uma base no Cazaquistão. O Sputnik coletou dados sobre a densidade de camadas atmosféricas superiores, além de medir a qualidade dos sinais de rádio na ionosfera."
   },
   {
     "name": "explorer 1",

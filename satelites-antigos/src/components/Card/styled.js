@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerCard = styled.div`
   height: 200px;
-  width: 300px;
+  /* width: 600px; */
   position: relative;
   min-width: 180px;
   background-color: #303030;
@@ -12,8 +12,15 @@ export const ContainerCard = styled.div`
 
 export const Description = styled.div`
   position: absolute;
-  z-index: 0;
-  padding: 0px;
+  right: 0;
+  z-index: 1;
+  width: 300px;
+  padding: 8px;
+  font-size: 14px;
+  text-align: justify;
+  color: gray;
+  font-variant: small-caps;
+  /* border: 1px solid red; */
   `
 export const Name = styled.p`
   color: #D2D0D0;
@@ -25,6 +32,8 @@ export const ImgSatelite = styled.img`
   min-width: 200px;
   position: absolute;
   z-index: 1;
+  -webkit-box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.66); 
+  box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.66);
 `
 export const ContainerInformation = styled.div`
   display: flex;
@@ -35,6 +44,7 @@ export const ContainerInformation = styled.div`
   bottom: 0;
   z-index: 2;
   width: 100%;
+  max-width: 300px;
   height: 56px; 
 `
 export const Information = styled.div`
@@ -92,5 +102,17 @@ export const Button = styled.button`
     transition: background-color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
   }
-
+`
+export const HideButton = styled.button`
+  height: 30px;
+  width: 20px;
+  /* border-radius: 10px; */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px 4px;
+  background-color: #303030;
+  border: none;
+  color: gray;
+  font-size: 24px;
 `
