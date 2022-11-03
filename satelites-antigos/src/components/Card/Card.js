@@ -1,24 +1,31 @@
-import { ContainerCard, ButtonBuy, InformSatelite, ButtonInfo, ImgCoin, ImgSatelite, Description, InformBuy, Name, Price } from "./styled"
-import satelites from '../../satelites/satelites.json'
+import { ContainerCard, InfoDiv, Button, Detail1, Detail2, ContainerInformation, ImgCoin, ImgSatelite, Description, Information, Name, Price } from "./styled"
+// import satelites from '../../Satellites/satellites.json'
 import coin from '../../img/coin.png'
-export const Card = () => {
+
+export const Card = (props) => {
   return(
     <ContainerCard>
-        <InformSatelite>
-          <Name>{satelites[0].name.toUpperCase()}</Name>
-          <ButtonInfo>+</ButtonInfo>
-        </InformSatelite>
         <Description>
           <p>Texto descrição</p>
         </Description>
-        <ImgSatelite src={satelites[0].image} alt={satelites[0].name}/>
-        <InformBuy>
-          <Price>
-            <ImgCoin src={coin}/>
-            <p>{satelites[0].price}</p>
-          </Price>
-          <ButtonBuy>COMPRAR</ButtonBuy>
-        </InformBuy>
+        <ImgSatelite src={props.image} alt={props.name}/>
+        <ContainerInformation>
+          <Information>
+            <InfoDiv>
+              <Name>{props.name.toUpperCase()}</Name>
+              <Price>
+                <ImgCoin src={coin}/>
+                <p>{props.price}</p>
+              </Price>
+            </InfoDiv>
+            <InfoDiv>
+              <Button>INFO</Button>
+              <Button>BUY</Button>
+            </InfoDiv>
+          </Information>
+          <Detail1></Detail1>
+          <Detail2></Detail2>
+        </ContainerInformation>
     </ContainerCard>
   )
 }

@@ -1,4 +1,4 @@
-import {ContainerHeader, ImgLogo, ImgLupa, ImgCarrinho, ContainerDiv, Div, Nav} from './styled'
+import {ContainerHeader, ImgLogo, ImgLupa, ImgCarrinho, HeaderContent, ContainerLogo, ContainerDiv, Div, Nav} from './styled'
 import textoLogo from '../../img/space-collection.png'
 import lupa from '../../img/lupa.png'
 import carrinho from '../../img/carrinho.png'
@@ -7,8 +7,22 @@ export const Header = () => {
   return(
     <>
       <ContainerHeader>
-        <ContainerDiv>
-          <ImgLogo src={textoLogo}/>
+        <HeaderContent>
+          <ContainerLogo>
+            <ContainerDiv>
+              <Div></Div>
+              <Div></Div>
+              <Div></Div>
+              <Div></Div>
+            </ContainerDiv>
+            <ImgLogo src={textoLogo}/>
+            <ContainerDiv>
+              <Div></Div>
+              <Div></Div>
+              <Div></Div>
+              <Div></Div>
+            </ContainerDiv>
+          </ContainerLogo>
           <Nav>
             <span>HOME</span>
             <span>STORE</span>
@@ -19,7 +33,7 @@ export const Header = () => {
               <ImgCarrinho src={carrinho}/>
             </span>
           </Nav>
-        </ContainerDiv>
+        </HeaderContent>
       </ContainerHeader>
     </>
   )

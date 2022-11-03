@@ -8,25 +8,37 @@ export const ContainerHeader = styled.header`
   align-items: center;
   width: 100vw;
 `
+export const ContainerLogo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+`
 export const ImgLogo = styled.img`
   height: 24px;
 `
-export const ContainerDiv = styled.div`
-  width: 75%;
-  max-width: 1400px;
+export const HeaderContent = styled.div`
+  width: 80%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* border: 1px solid white; */
 `
+export const ContainerDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+`
 export const Div = styled.div`
   height: 0.5px;
-  width: 50%;
+  width: 40px;
   background-color: #505050;
+  color: white;
 `
 export const Nav = styled.nav`
   width: 50%;
-  height: 18px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;

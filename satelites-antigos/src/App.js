@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 `;
 
@@ -19,6 +20,7 @@ const ContainerBody = styled.div`
 const Footer = styled.footer`
   background-color: black;
   height: 10vh;
+  width: 100vw;
 `
 
 
