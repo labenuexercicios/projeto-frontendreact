@@ -8,7 +8,7 @@ export function Header(){
 
     return(
         <>
-        <HeaderContainer>
+        <HeaderContainer class="crt">
         <header><h1>{titulo}</h1></header>
         </HeaderContainer>
         </>

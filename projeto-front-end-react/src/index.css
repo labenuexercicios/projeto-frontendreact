@@ -10,4 +10,5 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    background-image: linear-gradient(rgb(4, 105, 135)(0, 195, 255), rgb(164, 200, 200));
 }
