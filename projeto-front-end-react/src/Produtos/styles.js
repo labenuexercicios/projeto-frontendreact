@@ -12,11 +12,11 @@ export const SectionContainer = styled.section`
 export const MainContainer = styled.main`
     background: rgb(4, 19, 26);
     min-height: 100vh;
-    padding-bottom: 85px;   
+    padding-bottom: 85px;  
 `
 export const Filtro = styled.div`
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 // align-items: center;
     border: 2px solid rgb(13, 98, 138);
     border-radius: 15px;
@@ -25,8 +25,32 @@ flex-direction: column;
     position: fixed;
     right: 2%;
     width: 20%;
-    height: 32%;
+    height: 200px;
     margin-top: 340px;
+    z-index: 3;
+`
+export const CarrinhoDeProdutos = styled.div`
+    display: flex;
+    flex-direction: column;
+// align-items: center;
+    border: 2px solid rgb(13, 98, 138);
+    border-radius: 15px;
+    color: rgb(102, 202, 248);
+    padding: 10px 35px;
+    position: fixed;
+    right: 2%;
+    width: 20%;
+    height: 200px;
+    margin-top: 105px;
+    z-index: 3;
+`
+
+export const Marca = styled.img`
+    // background-image: linear-gradient(rgb(4, 105, 135), rgb(164, 200, 200), rgb(4, 105, 135));
+    background: rgb(4, 105, 135);
+    padding: 10px;
+    border: 2px solid rgb(102, 202, 248);
+    border-radius: 10px;
 `
 export const Produto = styled.img`
     height: 300px;
@@ -41,11 +65,14 @@ export const Card = styled.section`
     border: 2px solid rgb(13, 98, 138);
     border-radius: 15px;
     align-items: center;
+    justify-content: center;
     width: 480px;
     height: 200px;
-    padding-left: 50px;
-    gap: 150px;
-     
+    padding-left: 5px;
+    gap: 15px;
+    .marca{
+        padding-bottom: 40px;
+    }  
 `
 export const Nave = styled.section`
     display: flex;

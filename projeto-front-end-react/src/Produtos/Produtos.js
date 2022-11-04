@@ -1,13 +1,20 @@
 // import React from "react";
-import { MainContainer, Filtro, SectionContainer, Produto, Nave, Card } from './styles'
+import { MainContainer, Filtro, CarrinhoDeProdutos, SectionContainer, Produto, Marca, Nave, Card } from './styles'
 import { useState } from "react"
 import { Filtros } from "../Filtros/Filtros.js"
+import { Carrinho } from "../Carrinho/Carrinho.js"
+import imagemRocketLab from "../img/rl.svg"
+import imagemBlueOrigin from "../img/bo.svg"
+import imagemIsro from "../img/i.svg"
+import imagemSpaceX from "../img/sx.svg"
+import imagemArianeGroup from "../img/ag.svg"
+import imagemStarship from "../img/starship.png"
 import imagemBlue from "../img/new-shepard.png"
 import imagemAriane from "../img/ariane.png"
 import imagemIndia from "../img/india.png"
 import imagemFalcon from "../img/falcon-heavy.png"
 import imagemNeutron from "../img/neutron.png"
-import imagemStarship from "../img/starship.png"
+
 
 
 export default function Produtos(props) {
@@ -21,6 +28,7 @@ export default function Produtos(props) {
       empuxo: "7 Mn",
       propulsor: "CH₄, LOX",
       origem: "Washington, EUA",
+      marca: imagemRocketLab,
       imagem: imagemNeutron,
     },
 
@@ -32,6 +40,7 @@ export default function Produtos(props) {
       empuxo: "490 Kn",
       propulsor: "LH2, LOX",
       origem: "Califórnia, EUA",
+      marca: imagemBlueOrigin,
       imagem: imagemBlue,
     },
 
@@ -43,6 +52,7 @@ export default function Produtos(props) {
       empuxo: "4.65 Mn",
       propulsor: "LH2, LOX",
       origem: "Ag. Esp. Européia",
+      marca: imagemArianeGroup,
       imagem: imagemAriane,
     },
 
@@ -54,6 +64,7 @@ export default function Produtos(props) {
       empuxo: "750 Kn",
       propulsor: "HTPB",
       origem: "Nova Délhi, Índia",
+      marca: imagemIsro,
       imagem: imagemIndia,
     },
 
@@ -65,6 +76,7 @@ export default function Produtos(props) {
       empuxo: "15.2 Mn",
       propulsor: "LOX, RP-1",
       origem: "Califórnia, EUA",
+      marca: imagemSpaceX,
       imagem: imagemFalcon,
 
     },
@@ -76,6 +88,7 @@ export default function Produtos(props) {
       empuxo: "72 Mn",
       propulsor: "LOX, CH₄",
       origem: "Califórnia, EUA",
+      marca: imagemSpaceX,
       imagem: imagemStarship,
 
     },
@@ -89,10 +102,15 @@ export default function Produtos(props) {
 
 
 
+
   return (
     <MainContainer>
-      <Filtro>
-       
+      <CarrinhoDeProdutos>
+        <Carrinho>
+
+        </Carrinho>
+      </CarrinhoDeProdutos>
+      <Filtro> 
         <Filtros
           busca={busca}
           minPreco={minPreco}
@@ -105,7 +123,6 @@ export default function Produtos(props) {
           setOrdenacao={setOrdenacao}
           setOrdenacaoCrescente={setOrdenacaoCrescente}
         />
-
       </Filtro>
       <SectionContainer>
         {produto
@@ -137,6 +154,14 @@ export default function Produtos(props) {
           })
           .map(item => {
             return <Card>
+              <div>
+              <div class="marca">
+              <Marca src={item.marca} />
+              </div>
+              <div>
+               <button onClick={""}>Comprar</button> 
+              </div>
+              </div>
               <div class="imagem">
               <Produto src={item.imagem} />
               </div>

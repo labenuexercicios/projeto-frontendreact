@@ -1,5 +1,5 @@
 
-import { FiltroBusca, Input, Ordem } from './styles'
+import { FiltroBusca, Input, Ordem, Ordenacao } from './styles'
 
 
 
@@ -8,7 +8,9 @@ export function Filtros(props) {
 
 
     return <FiltroBusca>
-        <label for="filtros">Filtros: </label>
+        <label class="filtros" for="filtros">
+            <h4>Filtros:</h4>
+         </label>
         <Input
             placeholder="Busca"
             value={props.busca}
@@ -26,11 +28,13 @@ export function Filtros(props) {
             value={props.maxPreco}
             onChange={(e) => { props.setMaxPreco(e.target.value) }}
         />
-
+        <label  class="filtros" for="ordenacao">
+            <h4>Ordenar por:</h4>
+        </label>
         <span class="ordem">
-        <label class="ordenacao" for="ordenacao">Ordenar por: </label>     
+             
             <Ordem>
-                <select
+                <Ordenacao
                     name="ordenacao"
                     value={props.ordenacao}
                     onChange={(e) => { props.setOrdenacao(e.target.value) }}
@@ -38,14 +42,14 @@ export function Filtros(props) {
                     <option value={"nave"}>Nome</option>
                     <option value={"preco"}>Preço</option>
                     <option value={"altura"}>Altura</option>
-                </select>
-                <select
+                </Ordenacao>
+                <Ordenacao
                     value={props.ordenacaoCrescente}
                     onChange={(e) => { props.setOrdenacaoCrescente(e.target.value) }}
                 >
                     <option value={"asc"}>Crescente</option>
                     <option value={"desc"}>Decrescente</option>
-                </select>
+                </Ordenacao>
             </Ordem>
         </span>
     </FiltroBusca>
