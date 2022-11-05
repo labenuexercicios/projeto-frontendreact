@@ -1,9 +1,9 @@
 .openCard{
-  width: 600px;
+  width: 88%;
   transition: width 1s ease;
 }
 
 .hideCard{
-  width: 300px;
+  width: 48%;
   transition: width 1s ease;
 }

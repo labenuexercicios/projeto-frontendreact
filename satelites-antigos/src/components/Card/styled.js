@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const ContainerCard = styled.div`
-  height: 200px;
+  height: 220px;
   /* width: 600px; */
   position: relative;
   min-width: 180px;
   background-color: #303030;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.7);
   `
 
 export const Description = styled.div`
@@ -40,13 +41,15 @@ export const Name = styled.p`
   font-size: 14px;
   `
 export const ImgSatelite = styled.img`
-  width: 300px;
-  height: 200px;
-  min-width: 200px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 370px;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
   z-index: 1;
   -webkit-box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.66); 
-  box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.66);
+  box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.5);
 `
 export const ContainerInformation = styled.div`
   display: flex;
@@ -57,7 +60,8 @@ export const ContainerInformation = styled.div`
   bottom: 0;
   z-index: 2;
   width: 100%;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 370px;
   height: 56px; 
 `
 export const Information = styled.div`
