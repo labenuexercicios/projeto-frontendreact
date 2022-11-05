@@ -4,24 +4,24 @@ import { useState } from "react"
 
 
 export const FilterArea = (props) => {
-  const [inputName, setInputName] = useState("")
+  // const [inputName, setInputName] = useState("")
   function ChangeInputName (e){
-    setInputName(e.target.value)
-    console.log(inputName)
+    props.setInputName(e.target.value)
   }
 
-  function ChangeInfoFilter(){
-    props.setInfoFilter({
-      name: inputName
-    })
-  }
+  // function ChangeInfoFilter(){
+  //   props.setInfoFilter({
+  //     name: inputName
+  //   })
+  //   setInputName("")
+  // }
 
   return(
     <ContainerFilterArea>
       <label>Name</label>
       <DivInput>
-        <Input type="text" value={inputName} onChange={ChangeInputName}></Input>
-        <ImgLupa src={lupa} onClick={ChangeInfoFilter}/>
+        <Input type="text" value={props.inputName} onChange={ChangeInputName}></Input>
+        <ImgLupa src={lupa}/>
       </DivInput>
     </ContainerFilterArea>
   )
