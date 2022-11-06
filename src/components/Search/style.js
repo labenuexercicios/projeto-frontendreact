@@ -34,6 +34,16 @@ export const Pesquisa = styled.input `
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     padding-left: 10px;
-    background: url("https://i.imgur.com/eKw2dvH.png") no-repeat left / 1.3em;
-    padding-left: 1.3em;
+    background-image:url("https://i.imgur.com/eKw2dvH.png");
+`
+
+export const Article = styled.article `
+    position: relative;
+    height: 40px;
+    width: 400px;
+`
+export const SearchIcon = styled.label`
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
 `

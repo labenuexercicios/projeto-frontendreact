@@ -1,6 +1,7 @@
 import React from "react"
 import local from '../../assets/icons/local.svg'
-import { Inf, Localization, Pesquisa } from "./style"
+import searching from '../../assets/icons/searching.svg'
+import { Inf, Localization, Pesquisa, Article, SearchIcon } from "./style"
 
 export const Search = () => {
     return (
@@ -10,8 +11,10 @@ export const Search = () => {
                 <p>Planeta Terra, 3</p>
             </Localization>
 
-            <Pesquisa placeholder="Pesquisar"/>
-
+            <Article>
+                <Pesquisa placeholder="Pesquisar"/>
+                <SearchIcon><img src={searching}/></SearchIcon>
+            </Article>
         </Inf>
     )
 }

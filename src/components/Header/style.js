@@ -11,6 +11,9 @@ export const Cab = styled.section `
     padding: 10px;
     font-family: 'Poppins', sans-serif;
 `
+export const Title = styled.article `
+    font-size: 20px;
+`
 
 export const Negrito = styled.span `
     font-family: 'Poppins', sans-serif;
