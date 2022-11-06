@@ -1,37 +1,41 @@
 import styled from "styled-components";
 
 export const ContainerFilterArea = styled.div`
+  width: 90%;
+  background-color: #202020;
+  height: 100%;
+  padding: 40px 0;
+  `
+export const DivFilter = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 90%;
+  align-items: flex-end;
+  gap: 40px;
   color: gray;
-  position: relative;
+  position: absolute;
+  width: 92%;
 `
-
+export const Filter = styled.div`
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 85%;
+  background-color: #303030;
+  padding: 15px 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+  font-variant: all-small-caps;
+  font-size: 18px;
+`
 export const DivInput = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   border-radius: 4px;
-  width: 75%;
+  width: 100%;
   border: 1px solid black;
-  /*&:after{
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    /* left: 0;
-    right: 0;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-  } */
   &:hover{
     border: 1px solid gray;
     transition: border 0.8s ease-out;
-    /* transform: scaleX(1); */
   }
 `
 
@@ -41,13 +45,10 @@ export const Input = styled.input`
   background-color: black;
   border: none;
   color: white;
-  /* border-right: none; */
 `
 export const ImgLupa = styled.img`
   height: 24px;
   width: 12%;
   padding: 4px;
   background-color: black;
-  /* border: 1px solid gray;
-  border-left: none; */
 `

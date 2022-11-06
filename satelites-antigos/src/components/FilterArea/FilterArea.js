@@ -1,4 +1,9 @@
-import {ContainerFilterArea, DivInput, Input, ImgLupa} from './styled'
+import {ContainerFilterArea,
+        DivInput, 
+        Input, 
+        ImgLupa,
+        DivFilter,
+        Filter} from './styled'
 import lupa from '../../img/lupa.png'
 import { useState } from "react"
 
@@ -18,11 +23,22 @@ export const FilterArea = (props) => {
 
   return(
     <ContainerFilterArea>
-      <label>Name</label>
-      <DivInput>
-        <Input type="text" value={props.inputName} onChange={ChangeInputName}></Input>
-        <ImgLupa src={lupa}/>
-      </DivInput>
+      <DivFilter>
+        <Filter>
+          <label>Name</label>
+          <DivInput>
+            <Input type="text" value={props.inputName} onChange={ChangeInputName}></Input>
+            <ImgLupa src={lupa}/>
+          </DivInput>
+        </Filter>
+        <Filter>
+          <label>Ano</label>
+          <DivInput>
+            <Input type="text" value={props.inputName} onChange={ChangeInputName}></Input>
+            <ImgLupa src={lupa}/>
+          </DivInput>
+        </Filter>
+      </DivFilter>
     </ContainerFilterArea>
   )
 }

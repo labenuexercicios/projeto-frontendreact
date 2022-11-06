@@ -18,9 +18,10 @@ export const ContainerFilterArea = styled.div`
   width: 30%;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  /* background-color: #202020; */
   /* border: 1px solid white; */
-  background-color: #242424;
-  padding: 40px 0;
+  
 `
 export const ContainerCard = styled.section`
   display: flex;

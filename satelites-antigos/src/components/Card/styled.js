@@ -71,7 +71,7 @@ export const Information = styled.div`
   align-items: center;
   justify-content: space-around;
   gap: 4px;
-  width: 92%;
+  width: 92.5%;
   box-shadow: 7px -5px 19px 1px rgba(0,0,0,0.52);
 `
 export const Detail1 = styled.div`
