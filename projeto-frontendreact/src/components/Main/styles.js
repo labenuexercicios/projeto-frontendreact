@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CentroStyled = styled.section`
+export const MainStyled = styled.section`
   ${(props) => props.display}; 
 
   font-size: 17px;
@@ -22,7 +22,7 @@ export const CentroStyled = styled.section`
   }
 `
 
-export const ProdutosBloco = styled.section`
+export const ProductBlock = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -43,13 +43,13 @@ export const ProdutosBloco = styled.section`
   }
 `
 
-export const DadosProduto = styled.div`
+export const ProductData = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 `
 
-export const AddCarrinho = styled.button`
+export const AddCart = styled.button`
   padding: 0.5rem;
   margin: 16px;
   border-radius: 4px;
@@ -76,7 +76,7 @@ export const PStyle = styled.p`
   padding-top: 10px;
 `
 
-export const BotaoTamanho = styled.button`
+export const ButtonSize = styled.button`
   border: none;
   float: right;
   height: 30px;
@@ -97,7 +97,7 @@ export const BotaoTamanho = styled.button`
   }
 `
 
-export const LabelTamanho = styled.label`
+export const LabelSize = styled.label`
   display:flex;
   padding: 0px 20px 0px 20px;
   justify-content: space-around;

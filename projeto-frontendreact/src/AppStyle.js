@@ -19,7 +19,7 @@ export const Container  = styled.section`
     }
 `
 
-export const DivCentro = styled.div`
+export const DivMain = styled.div`
     background-color: white;
     display: flex;
     flex-direction: column-reverse; 
@@ -48,7 +48,7 @@ export const DivItens = styled.div`
     flex-wrap: wrap;
 `
 
-export const DivSemResultado = styled.div`
+export const DivNoResults = styled.div`
     padding: 30px 30px 30px 30px;
 `
 
@@ -76,7 +76,7 @@ export const MenuButtonLupa = styled.section`
     background-color: black;
 `
 
-export const MenuButtonCarrinho = styled.section`
+export const MenuButtonCart = styled.section`
     display: flex;
     justify-content: center;
 `
@@ -97,7 +97,7 @@ export const FilterIcon = styled.button`
     }
 `
 
-export const CarrinhoIcon = styled.button`
+export const CartIcon = styled.button`
     padding: 8px 8px 8px 8px;
     background-color: white;
     border: none;

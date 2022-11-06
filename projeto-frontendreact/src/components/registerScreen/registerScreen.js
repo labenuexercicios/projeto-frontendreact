@@ -1,7 +1,7 @@
 import { Form, FormContainer, Input, StyledLabel, SendButton, BackToLoginButton } from "./styled";
 import React, {useState} from 'react'
 
-function TelaCadastro(props) {
+function registerScreen(props) {
 
 const [name, setName] = useState("")
 const [email, setEmail] = useState("")
@@ -33,7 +33,7 @@ const [senhaConfirma, setSenhaConfirma] = useState("")
           }
           else
           {
-            props.mudarTela(3)
+            props.changeScreen(3)
           }
         }
 
@@ -58,10 +58,10 @@ const [senhaConfirma, setSenhaConfirma] = useState("")
           <Input id="descricao" value={senhaConfirma} onChange={onChangeSenhaConfirma}/>
         </StyledLabel>
         <SendButton onClick={() => sendData()}>Cadastrar</SendButton>
-        <BackToLoginButton onClick={() => props.mudarTela(1)}>Já possuo um cadastro</BackToLoginButton>
+        <BackToLoginButton onClick={() => props.changeScreen(1)}>Já possuo um cadastro</BackToLoginButton>
       </Form>
     </FormContainer>
   );
 }
 
-export default TelaCadastro;
+export default registerScreen;

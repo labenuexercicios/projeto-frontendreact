@@ -23,7 +23,7 @@ export const InputMaxMin = styled.input`
   width: 2000px;
 `
 
-export const BotaoPesquisa = styled.button`
+export const ButtonSearch = styled.button`
   border: none;
   float: right;
   height: 40px;
@@ -47,7 +47,7 @@ export const BotaoPesquisa = styled.button`
   }
 `
 
-export const SectionBusca = styled.section`
+export const SectionSearch = styled.section`
   display: flex;
   align-items: center;
   margin: 20px 5px 20px 5px;
@@ -87,7 +87,7 @@ export const Input = styled.input`
   }
 `
 
-export const FixaEsquerda = styled.div`
+export const PinLeft = styled.div`
   position: fixed;
 `
 

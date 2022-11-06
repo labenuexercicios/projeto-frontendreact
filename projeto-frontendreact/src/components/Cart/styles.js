@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CarrinhoStyled = styled.aside`
+export const CartStyled = styled.aside`
   display: flex;
   flex-direction: row;
   justify-content: center;  
@@ -11,7 +11,7 @@ export const CarrinhoStyled = styled.aside`
 
 `
 
-export const FixaDireita = styled.div`
+export const PinRight = styled.div`
   position: fixed;
   @media screen and (max-device-width: 700px) 
   {
@@ -19,7 +19,7 @@ export const FixaDireita = styled.div`
   }
 `
 
-export const ListaContainer = styled.div`
+export const ContainerList = styled.div`
   width: 18vw;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@ export const RemoveButton = styled.button`
   align-items: center;
 `
 
-export const DivCarrinho = styled.p`
+export const DivCart = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;

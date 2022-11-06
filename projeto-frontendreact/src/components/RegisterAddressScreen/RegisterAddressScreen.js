@@ -1,7 +1,7 @@
 import { Form, FormContainer, Input, StyledLabel, SendButton, BackToLoginButton } from "./styled";
 import React, {useState} from 'react'
 
-function TelaCadastroEndereco(props) {
+function RegisterAddressScreen(props) {
 
 const [endereco, setEndereco] = useState("")
 const [residencia, setResidencia] = useState("")
@@ -33,7 +33,7 @@ const [telefone, setTelefone] = useState("")
           }
           else
           {
-            props.mudarTela(4)
+            props.changeScreen(4)
           }
         }
 
@@ -58,10 +58,10 @@ const [telefone, setTelefone] = useState("")
           <Input id="descricao" value={telefone} onChange={onChangeTelefone}/>
         </StyledLabel>
         <SendButton onClick={() => sendData()}>Confirmar</SendButton>
-        <BackToLoginButton onClick={() => props.mudarTela(2)}>Voltar</BackToLoginButton>
+        <BackToLoginButton onClick={() => props.changeScreen(2)}>Voltar</BackToLoginButton>
       </Form>
     </FormContainer>
   );
 }
 
-export default TelaCadastroEndereco;
+export default RegisterAddressScreen;

@@ -13,7 +13,7 @@ const BackToLoginButton = styled.button`
     }
     `
 
-function TelaLogin(props) {
+function LoginScreen(props) {
 
   const enviarLogin = () => {
     alert("E-mail não encontrado, será necessário fazer o cadastro!")
@@ -30,11 +30,11 @@ function TelaLogin(props) {
           <Input type={"password"}/>
         </StyledLabel>
         <SendButton onClick={enviarLogin}>Entrar</SendButton>
-        <RegisterButton onClick={() => props.mudarTela(2)}>Cadastre-se</RegisterButton>
-        <BackToLoginButton onClick={() => props.voltarParaLista()}>Voltar para o início</BackToLoginButton>
+        <RegisterButton onClick={() => props.changeScreen(2)}>Cadastre-se</RegisterButton>
+        <BackToLoginButton onClick={() => props.turnBackToList()}>Voltar para o início</BackToLoginButton>
       </Form>
     </FormContainer>
   );
 }
 
-export default TelaLogin;
+export default LoginScreen;

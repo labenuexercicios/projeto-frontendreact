@@ -29,7 +29,7 @@ export const FooterStyled = styled.footer`
     }
 `
 
-export const RedesSociais = styled.div`
+export const SocialNetwork = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;

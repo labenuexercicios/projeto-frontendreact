@@ -4,28 +4,28 @@ import React, {useState} from 'react'
 
 ///////////////////components////////////
 import { Header } from "./components/Header/Header";
-import { Filtros } from "./components/Filtros/Filtros";
-import { Centro } from "./components/Centro/Centro";
-import { Carrinho } from "./components/Carrinho/Carrinho";
+import { Filters } from "./components/Filters/Filters";
+import { Main } from "./components/Main/Main";
+import { Cart } from "./components/Cart/Cart";
 import { Footer } from "./components/Footer/Footer";
 /////////////////////////////////////////////////////////////
 
 /////////////////renderização condicional login//////////////////
-import TelaLogin from "./components/TelaLogin/TelaLogin";
-import TelaCadastro from "./components/TelaCadastro/TelaCadastro";
-import TelaUsuarioCadastrado from "./components/TelaUsuarioCadastrado/TelaUsuarioCadastrado.js";
-import TelaCadastroEndereco from "./components/TelaCadastroEndereco/TelaCadastroEndereco"
+import LoginScreen from "./components/LoginScreen/LoginScreen";
+import RegisterScreen from "./components/registerScreen/registerScreen";
+import LoggedScreen from "./components/LoggedScreen/loggedScreen.js";
+import RegisterAddressScreen from "./components/RegisterAddressScreen/RegisterAddressScreen"
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////imagens e estilização////////////
 import './App.css';
-import fundoGalaxia from './midia-geral/panorama-cena-da-galaxia-do-espaco-com-planetas-estrelas-e-galaxias-modelo-de-banner-muitas-nebulosas-e-galaxias-no-espaco-muitos-ano.jpg'
-import lupa from "./midia-geral/lupa.png";
-import carrinho from "./midia-geral/126510.png";
-import lupaBusca from "./midia-geral/lupa.jpg";
+import GalaxyBackground from './assets/panorama-cena-da-galaxia-do-espaco-com-planetas-estrelas-e-galaxias-modelo-de-banner-muitas-nebulosas-e-galaxias-no-espaco-muitos-ano.jpg'
+import lupaImg from "./assets/lupa.png";
+import cartImg from "./assets/126510.png";
+import lupaSearchImg from "./assets/lupa.jpg";
 
-import {Container, DivCentro, DivItens, DivSemResultado, BottomMenu, MenuButtonLupa, MenuButtonCarrinho, 
-        FilterIcon, CarrinhoIcon, SectionBusca} from './AppStyle'
+import {Container, DivMain, DivItens, DivNoResults, BottomMenu, MenuButtonLupa, MenuButtonCart, 
+        FilterIcon, CartIcon, SectionBusca} from './AppStyle'
 //////////////////////////////////////////////////////////////////
 
 const GlobalStyle = createGlobalStyle`
@@ -38,198 +38,198 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   /////////////////////produtos////////////////////////////
-  let [produtos, setProdutos] = useState(
+  let [products, setProducts] = useState(
     [ 
       {
         id: 0,
-        nome: "Camisa Luas de Saturno",
-        preco: 49.99,
-        imagemUrl: "https://images.tcdn.com.br/img/img_prod/697287/camiseta_planeta_saturno_sistema_solar_espaco_7241_1_20191112120529.jpg",
+        name: "Camisa Luas de Saturno",
+        price: 49.99,
+        imgUrl: "https://images.tcdn.com.br/img/img_prod/697287/camiseta_planeta_saturno_sistema_solar_espaco_7241_1_20191112120529.jpg",
         backColor: "white",
         display: "",
         qtd: 0, //qtd para ajudar no carrinho
-        categoria: "Calor",
-        tamanho: true
+        category: "Calor",
+        hasSize: true
       },
       {
         id: 1,
-        nome: "Camisa Sistema Solar",
-        preco: 49.99,
-        imagemUrl: "https://a-static.mlcdn.com.br/800x560/camiseta-planetas-camisa-espaco-galaxias-darkwood/darkwoodshop2/11228651084/98261ab296824e6d69a6e7f6b0c5ee7d.jpeg",
+        name: "Camisa Sistema Solar",
+        price: 49.99,
+        imgUrl: "https://a-static.mlcdn.com.br/800x560/camiseta-planetas-camisa-espaco-galaxias-darkwood/darkwoodshop2/11228651084/98261ab296824e6d69a6e7f6b0c5ee7d.jpeg",
         backColor: "white",
         display: "",
         qtd: 0,
-        categoria: "Calor",
-        tamanho: true
+        category: "Calor",
+        hasSize: true
       },
       {
         id: 2,
-        nome: "Regata das Galáxias",
-        preco: 39.99,
-        imagemUrl:"https://images.tcdn.com.br/img/img_prod/697287/regata_psicodelica_galaxia_espaco_sideral_3799_1_20190807141826.jpg",
+        name: "Regata das Galáxias",
+        price: 39.99,
+        imgUrl:"https://images.tcdn.com.br/img/img_prod/697287/regata_psicodelica_galaxia_espaco_sideral_3799_1_20190807141826.jpg",
         backColor: "white",
         display: "",
         qtd: 0,
-        categoria: "Calor",
-        tamanho: true
+        category: "Calor",
+        hasSize: true
       },
       {
         id: 3,
-        nome: "Casaco das Galáxias capuz",
-        preco: 199.99,
-        imagemUrl:"https://ae01.alicdn.com/kf/HTB1DAYoSpXXXXXwXFXXq6xXFXXXp/2017-Mulheres-Novas-Dos-Homens-Hoodies-Moletom-Espa-o-Gal-xia-3D-Hoody-Casaco-Unsex-Casual.jpg_Q90.jpg_.webp",
+        name: "Casaco das Galáxias capuz",
+        price: 199.99,
+        imgUrl:"https://ae01.alicdn.com/kf/HTB1DAYoSpXXXXXwXFXXq6xXFXXXp/2017-Mulheres-Novas-Dos-Homens-Hoodies-Moletom-Espa-o-Gal-xia-3D-Hoody-Casaco-Unsex-Casual.jpg_Q90.jpg_.webp",
         backColor: "white",
         display: "",
         qtd: 0,
-        categoria: "Frio",
-        tamanho: true
+        category: "Frio",
+        hasSize: true
       },
       {
         id: 4,
-        nome: "Casaco das Galáxias",
-        preco: 189.99,
-        imagemUrl:"https://cf.shopee.com.br/file/df384841cb0cc8186520155b1e48cef7",
+        name: "Casaco das Galáxias",
+        price: 189.99,
+        imgUrl:"https://cf.shopee.com.br/file/df384841cb0cc8186520155b1e48cef7",
         backColor: "white",
         display: "",
         qtd: 0,
-        categoria: "Frio",
-        tamanho: true
+        category: "Frio",
+        hasSize: true
       },
       {
         id: 5,
-        nome: "Moleton das Galáxias",
-        preco: 299.99,
-        imagemUrl:"https://img.elo7.com.br/product/original/3AF425D/blusa-moletom-galaxia-casaco-de-frio-moletom.jpg",
+        name: "Moleton das Galáxias",
+        price: 299.99,
+        imgUrl:"https://img.elo7.com.br/product/original/3AF425D/blusa-moletom-galaxia-casaco-de-frio-moletom.jpg",
         backColor: "white",
         display: "",
         qtd: 0,
-        categoria: "Frio",
-        tamanho: true
+        category: "Frio",
+        hasSize: true
       },
       {
         id: 6,
-        nome: "Moleton Sistema Solar",
-        preco: 289.99,
-        imagemUrl:"https://ae01.alicdn.com/kf/HTB1J0JofqQoBKNjSZJnq6yw9VXaq/Moletom-masculino-estilo-hip-hop-ujwi-planetas-casaco-com-capuz-estampa-3d-de-estrela-espa-osa.jpg_Q90.jpg_.webp",
+        name: "Moleton Sistema Solar",
+        price: 289.99,
+        imgUrl:"https://ae01.alicdn.com/kf/HTB1J0JofqQoBKNjSZJnq6yw9VXaq/Moletom-masculino-estilo-hip-hop-ujwi-planetas-casaco-com-capuz-estampa-3d-de-estrela-espa-osa.jpg_Q90.jpg_.webp",
         backColor: "white",
         display: "",
         qtd: 0,
-        categoria: "Frio",
-        tamanho: true
+        category: "Frio",
+        hasSize: true
       },
       {
         id: 7,
-        nome: "Boné das galáxias",
-        preco: 29.99,
-        imagemUrl:"https://img.ltwebstatic.com/images3_pi/2022/03/09/164681617300b42e8ad6c8eb2745c535272558b729.webp",
+        name: "Boné das galáxias",
+        price: 29.99,
+        imgUrl:"https://img.ltwebstatic.com/images3_pi/2022/03/09/164681617300b42e8ad6c8eb2745c535272558b729.webp",
         backColor: "rgb(233, 206, 159);",
         display: "",
         qtd: 0,
-        categoria: "Acessórios",
-        tamanho: false
+        category: "Acessórios",
+        hasSize: false
       },
       {
         id: 8,
-        nome: "Colar das Galáxias",
-        preco: 39.99,
-        imagemUrl:"https://i.pinimg.com/474x/62/00/44/6200447afcbf227a435e1d708d1caea8.jpg",
+        name: "Colar das Galáxias",
+        price: 39.99,
+        imgUrl:"https://i.pinimg.com/474x/62/00/44/6200447afcbf227a435e1d708d1caea8.jpg",
         backColor: "rgb(233, 206, 159);",
         display: "",
         qtd: 0,
-        categoria: "Acessórios",
-        tamanho: false
+        category: "Acessórios",
+        hasSize: false
       },
       {
         id: 9,
-        nome: "Anel das Galáxias",
-        preco: 9.99,
-        imagemUrl:"http://images.virgula.com.br/2017/02/i-sew-cute-galaxy-inspired-jewelry-11.jpg",
+        name: "Anel das Galáxias",
+        price: 9.99,
+        imgUrl:"http://images.virgula.com.br/2017/02/i-sew-cute-galaxy-inspired-jewelry-11.jpg",
         backColor: "#e2e2e2",
         display: "",
         qtd: 0,
-        categoria: "Acessórios",
-        tamanho: false
+        category: "Acessórios",
+        hasSize: false
       },
       {
         id: 10,
-        nome: "Pulseira Sistema Solar",
-        preco: 15.99,
-        imagemUrl:"https://a-static.mlcdn.com.br/800x560/pulseira-sistema-solar-8-planetas-galaxia-fashion-acessorios/jj95acessorios/1ppn/1b8be33fe50c5d6884990b8410224d44.jpeg",
+        name: "Pulseira Sistema Solar",
+        price: 15.99,
+        imgUrl:"https://a-static.mlcdn.com.br/800x560/pulseira-sistema-solar-8-planetas-galaxia-fashion-acessorios/jj95acessorios/1ppn/1b8be33fe50c5d6884990b8410224d44.jpeg",
         backColor: "white",
         display: "",
         qtd: 0,
-        categoria: "Acessórios",
-        tamanho: false
+        category: "Acessórios",
+        hasSize: false
       },
       {
         id: 11,
-        nome: "Capa das Galáxias Notebook",
-        preco: 59.99,
-        imagemUrl:"https://a-static.mlcdn.com.br/800x560/adesivo-protetor-para-notebook-17-cosmos-galaxia-d1-skin-zabom/olistplus/opmjevpxru14daof/62eec662615176175f88aaca725eb8f7.jpeg",
+        name: "Capa das Galáxias Notebook",
+        price: 59.99,
+        imgUrl:"https://a-static.mlcdn.com.br/800x560/adesivo-protetor-para-notebook-17-cosmos-galaxia-d1-skin-zabom/olistplus/opmjevpxru14daof/62eec662615176175f88aaca725eb8f7.jpeg",
         backColor: "white",
         display: "",
         qtd: 0,
-        categoria: "Acessórios",
-        tamanho: false
+        category: "Acessórios",
+        hasSize: false
       },
     ]);
   ////////////////////////////////////////////////////////
 
   ////////variaveis////
-  const [carrinhoAtivado, setCarrinhoAtivado] = useState(false) //verifica se o botao carrinho foi ativo no modo mobile (botao flutuante)
-  const [displayCarrinho, setDisplayCarrinho] = useState("display: none;") //serve para mostrar ou não a lista do carrinho no modo mobile
+  const [cartActivated, setCartActivated] = useState(false) //verifica se o botao carrinho foi ativo no modo mobile (botao flutuante)
+  const [displayCart, setDisplayCart] = useState("display: none;") //serve para mostrar ou não a lista do carrinho no modo mobile
   const [telaLoginAtiva, setTelaLoginAtiva] = useState(false)// serve para ir para tela de login
-  const [valorCondicional, setValorCondicional] = useState(1) // para mudar de pagina no login
-  let [quantidadeNaTela , setQuantidadeNaTela ] = useState([])// quantidade de itens na tela no momento da pesquisa
+  const [condicionalValue, setCondicionalValue] = useState(1) // para mudar de pagina no login
+  let [amountScreen , setAmountScreen ] = useState([])// quantidade de itens na tela no momento da pesquisa
   const [string, setString] = useState("")//recebe o texto pesquisado nos filtros
-  let [valorMinimo, setValorMinimo] = useState("") //parametro pro valor maximo
-  let [valorMaximo, setValorMaximo] = useState("") //parametro pro valor minimo
-  let [listaCarrinho, setListaCarrinho] = useState([]);  //armazena a lista adicionada ao carrinho de compras
+  let [minPrice, setMinPrice] = useState("") //parametro pro valor maximo
+  let [maxPrice, setMaxPrice] = useState("") //parametro pro valor minimo
+  let [cartList, setCartList] = useState([]);  //armazena a lista adicionada ao carrinho de compras
   const [sortABC, setSortABC] = useState("");  //ordenar em ordem alfabética
-  const [categoriaFilter, setCategoriaFilter] = useState(""); //filtrar por categoria (calor, frio, acessórios)
+  const [categoryFilter, setCategoryFilter] = useState(""); //filtrar por categoria (calor, frio, acessórios)
   ////////////////////////////////////////
 
 //////////////////funcoes////////////////////////////////////
-  const mudarParaCarrinho = () =>  //serve para alternar entre lista de produtos e carrinho no mobile
+  const toggleToCart = () =>  //serve para alternar entre lista de produtos e carrinho no mobile
   {
-    setCarrinhoAtivado(true)
-    setDisplayCarrinho("display: flex;")
+    setCartActivated(true)
+    setDisplayCart("display: flex;")
   }
 
-  const mudarParaLista = () =>  //serve para alternar entre lista de produtos e carrinho no mobile
+  const toggleToList = () =>  //serve para alternar entre lista de produtos e carrinho no mobile
   {
-    setCarrinhoAtivado(false)
-    setDisplayCarrinho("display: none;")
+    setCartActivated(false)
+    setDisplayCart("display: none;")
   }
 
-  const mudarParaLogin = () => //serve para mudar para a pagina de login 
+  const toggleToLogin = () => //serve para mudar para a pagina de login 
   {
     setTelaLoginAtiva(true)
   }
 
-  const voltarParaLista = () => //serve para voltar para a pagina de lista após sair do login
+  const turnBackToList = () => //serve para voltar para a pagina de lista após sair do login
   {
     setTelaLoginAtiva(false)
-    setValorCondicional(1)    
+    setCondicionalValue(1)    
   }
 
 /////////////////funcoes de renderização condicional//////////////////////////
-  const mudarTela = (valor) => {
-    setValorCondicional(valor)
+  const changeScreen = (valor) => {
+    setCondicionalValue(valor)
   }
 
-  const renderizaTela = () => {
+  const renderScreen = () => {
     if (telaLoginAtiva === true)
     {
-      switch (valorCondicional) {
+      switch (condicionalValue) {
         case 1:
-          return <TelaLogin mudarTela={mudarTela} voltarParaLista={voltarParaLista} />;
+          return <LoginScreen changeScreen={changeScreen} turnBackToList={turnBackToList} />;
         case 2:
-          return <TelaCadastro mudarTela={mudarTela} />;
+          return <RegisterScreen changeScreen={changeScreen} />;
         case 3:
-          return <TelaCadastroEndereco mudarTela={mudarTela}/>
+          return <RegisterAddressScreen changeScreen={changeScreen}/>
         default:
-          return <TelaUsuarioCadastrado voltarParaLista={voltarParaLista}/>
+          return <LoggedScreen turnBackToList={turnBackToList}/>
       }
     }
   }
@@ -243,41 +243,41 @@ function App() {
   ////////////////////////////////////////
 
   //////////////////funcao do carrinho///////////////////
-  function pesquisarBotao(str)
+  function searchButton(str)
   {
     //não retorna nada por enquanto
   }
     
-  function adicionarCarrinho(produto) // funcao que adiciona o item selecionado ao carrinho
+  function addCartFunction(product) // funcao que adiciona o item selecionado ao carrinho
   {
     let itemRepetido = false  // impede que o mesmo item seja repetido no carrinho, somente a quantidade muda
-    let itemCarrinho = {nome:produto.nome, qtd: 1, preco: produto.preco} // transforma o item em um objeto padrão para o carrinho
-    for(let i=0; i<listaCarrinho.length; i++)  //loop para verificar se o item já está no carrinho
+    let itemCarrinho = {name:product.name, qtd: 1, price: product.price} // transforma o item em um objeto padrão para o carrinho
+    for(let i=0; i<cartList.length; i++)  //loop para verificar se o item já está no carrinho
     {
-      if(listaCarrinho[i].nome === itemCarrinho.nome) //se o item já estiver no carrinho, a quantidade eo preço aumentam 1
+      if(cartList[i].name === itemCarrinho.name) //se o item já estiver no carrinho, a quantidade eo preço aumentam 1
       {
-        listaCarrinho[i].qtd++ 
-        listaCarrinho[i].preco += itemCarrinho.preco
-        setListaCarrinho([...listaCarrinho])
+        cartList[i].qtd++ 
+        cartList[i].price += itemCarrinho.price
+        setCartList([...cartList])
         itemRepetido = true       //o item não será repetido no carrinho
       }
     }
     if(itemRepetido === false) // se o item não estiver no carrinho, ele será adicionado
     {
-      setListaCarrinho([...listaCarrinho, itemCarrinho])
+      setCartList([...cartList, itemCarrinho])
     }
   }
 /////////////////////////////////////////////////////////////////
 
 /////////////////////funcao remove do carrinho////////////////////////
-  const removeCarrinho = (produto) => 
+  const removeCart = (product) => 
   {
-    listaCarrinho = listaCarrinho.filter((item) => item !== produto);
-    setListaCarrinho(listaCarrinho)
+    cartList = cartList.filter((item) => item !== product);
+    setCartList(cartList)
   }
 /////////////////////////////////////////////////////////////////////////
 
-////////////para reconhecer o texto mesmo com acentos////////////
+////////////para reconhecer o texto mesmo sem acentos////////////
   function retira_acentos(str) 
   {
     let com_acento = "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŕ";
@@ -307,57 +307,57 @@ function App() {
   return (
     <>  
     <GlobalStyle />
-    <Header mudarParaLogin={mudarParaLogin}/> 
+    <Header toggleToLogin={toggleToLogin}/> 
 
     <BottomMenu>
-      <MenuButtonLupa onClick = {mudarParaLista}>
+      <MenuButtonLupa onClick = {toggleToList}>
         <FilterIcon > 
-          <img src={lupa} />
+          <img src={lupaImg} />
         </FilterIcon>
       </MenuButtonLupa>
 
-      <MenuButtonCarrinho onClick = {mudarParaCarrinho}> 
-        <CarrinhoIcon > 
-          <img src={carrinho}/>
-        </CarrinhoIcon>
-      </MenuButtonCarrinho>
+      <MenuButtonCart onClick = {toggleToCart}> 
+        <CartIcon > 
+          <img src={cartImg}/>
+        </CartIcon>
+      </MenuButtonCart>
     </BottomMenu>
 
-    {renderizaTela()} {/*chama a tela de login caso seja verdadeiro */}
+    {renderScreen()} {/*chama a tela de login caso seja verdadeiro */}
 
     {!telaLoginAtiva && //*se a tela de login for verdadeira, não mostra esse conteúdo 
-    <Container style={{ backgroundImage: `url(${fundoGalaxia})` }}>
-      <Filtros
+    <Container style={{ backgroundImage: `url(${GalaxyBackground})` }}>
+      <Filters
       string = {string}
       setString = {setString} 
-      valorMinimo = {valorMinimo}
-      valorMaximo = {valorMaximo}
-      setValorMinimo = {setValorMinimo}
-      setValorMaximo = {setValorMaximo}
-      pesquisarBotao = {pesquisarBotao}
+      minPrice = {minPrice}
+      maxPrice = {maxPrice}
+      setMinPrice = {setMinPrice}
+      setMaxPrice = {setMaxPrice}
+      searchButton = {searchButton}
       sortABC={sortABC}
       setSortABC={setSortABC}
-      categoriaFilter = {categoriaFilter}
-      setCategoriaFilter={setCategoriaFilter}   
+      categoryFilter = {categoryFilter}
+      setCategoryFilter={setCategoryFilter}   
       />
       
-      {!carrinhoAtivado && //no mobile, não aparece se o carrinho estiver selecionado
-      <DivCentro>  
+      {!cartActivated && //no mobile, não aparece se o carrinho estiver selecionado
+      <DivMain>  
         <DivItens>
-        {quantidadeNaTela = produtos //produtos vai passar por uma serie de filtros e map
-          .filter((produto) => {
-            return retira_acentos(produto.nome.trim().toLowerCase()).includes(retira_acentos(string.trim().toLowerCase()));
+        {amountScreen = products //produtos vai passar por uma serie de filtros e map
+          .filter((product) => {
+            return retira_acentos(product.name.trim().toLowerCase()).includes(retira_acentos(string.trim().toLowerCase()));
           })
-          .filter((produto) => {
-          return produto.preco >= valorMinimo
+          .filter((product) => {
+          return product.price >= minPrice
           })
-          .filter((produto) => {
-          return valorMaximo !== "" ? produto.preco <= valorMaximo : produtos
+          .filter((product) => {
+          return maxPrice !== "" ? product.price <= maxPrice : products
           })
           .sort((a, b) => {
             if(sortABC === "Crescente")
             {
-              if(a.nome < b.nome)
+              if(a.name < b.name)
               {
                 return -1              
               }
@@ -368,7 +368,7 @@ function App() {
             }
             else if(sortABC === "Decrescente")
             {
-              if(a.nome < b.nome)
+              if(a.name < b.name)
               {
                 return 1              
               }
@@ -378,21 +378,21 @@ function App() {
               }
             }
           })
-          .filter((produto) => {
-            return produto.categoria.includes(categoriaFilter) || categoriaFilter === "";
-          }).map((produto) => {
+          .filter((product) => {
+            return product.category.includes(categoryFilter) || categoryFilter === "";
+          }).map((product) => {
           return (
-            <Centro
-            key={produto.id}
-            produto = {produto}
-            adicionarCarrinho = {adicionarCarrinho}
+            <Main
+            key={product.id}
+            product = {product}
+            addCartFunction = {addCartFunction}
             />
           )
         })}
 
         </DivItens>
-        {quantidadeNaTela.length === 0 && //caso não seja encontrado nenhum item
-        <DivSemResultado>
+        {amountScreen.length === 0 && //caso não seja encontrado nenhum item
+        <DivNoResults>
           <h3>NÃO FOI POSSÍVEL ENCONTRAR RESULTADOS PARA O TERMO PROCURADO</h3>
           <h5>Verifique se você digitou as palavras corretamente ou tente novamente a busca.
           <h4>DICAS:</h4>
@@ -401,22 +401,22 @@ function App() {
           <p>- Tente buscar por termos menos específicos.</p>
           <p>- Use os filtros da busca.</p>
           <p>- Procure utilizar sinônimos ao termo desejado.</p></h5>
-        </DivSemResultado>}
+        </DivNoResults>}
 
-        <h5>Quantidade de itens: {quantidadeNaTela.length}</h5> {/*tive que usar column-reverse para aparecer primeiro*/}
+        <h5>Quantidade de itens: {amountScreen.length}</h5> {/*tive que usar column-reverse para aparecer primeiro*/}
 
         <SectionBusca>  {/*só aparece no mobile */}
-          <img src={lupaBusca} alt="Buscar..." />
+          <img src={lupaSearchImg} alt="Buscar..." />
           <input type="text" placeholder="Pesquisar..." value = {string}  onChange={handleSearch}/> {/*onClick={props.pesquisar(props.string)}/> */}
-          <button onClick={() => pesquisarBotao(string)}>Buscar</button> 
+          <button onClick={() => searchButton(string)}>Buscar</button> 
         </SectionBusca>
 
-      </DivCentro>}
+      </DivMain>}
 
-      <Carrinho
-        displayCarrinho ={displayCarrinho}
-        listaCarrinho = {listaCarrinho}
-        removeCarrinho= {removeCarrinho}
+      <Cart
+        displayCart ={displayCart}
+        cartList = {cartList}
+        removeCart= {removeCart}
       /> 
     </Container>}
 

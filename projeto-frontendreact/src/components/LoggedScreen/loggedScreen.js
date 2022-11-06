@@ -13,14 +13,14 @@ const BackToLoginButton = styled.button`
     }
 `
 
-function TelaUsuarioCadastrado (props){
+function loggedScreen (props){
     return (
         <Div>
             <Titulo>Você concluiu o cadastro, parabéns!!!</Titulo>
-            <BackToLoginButton onClick={() => props.voltarParaLista()}>Voltar</BackToLoginButton>
+            <BackToLoginButton onClick={() => props.turnBackToList()}>Voltar</BackToLoginButton>
         </Div>
         
     )
 }
 
-export default TelaUsuarioCadastrado;
+export default loggedScreen;

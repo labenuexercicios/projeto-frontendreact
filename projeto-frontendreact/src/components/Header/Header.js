@@ -12,7 +12,7 @@ export const Header = (props) => {
                 <p>Venha conhecer nossa</p><LogoBlackFridayStyled src={blackFriday}/><p>das <strong>galaxias!</strong></p>
             </DivHeader>
             <DivHeader>
-                <p>Login  .</p> <button onClick={props.mudarParaLogin}><LoginStyled src={login}/></button>
+                <p>Login  .</p> <button onClick={props.toggleToLogin}><LoginStyled src={login}/></button>
             </DivHeader>
         </HeaderStyled>
     )
