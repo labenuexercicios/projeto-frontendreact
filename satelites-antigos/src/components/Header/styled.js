@@ -3,10 +3,13 @@ import styled from "styled-components";
 export const ContainerHeader = styled.header`
   background-color: black;
   height: 16vh;
+  min-height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  position: sticky;
+  top: 0;
 `
 export const ContainerLogo = styled.div`
   display: flex;

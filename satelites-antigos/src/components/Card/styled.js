@@ -16,7 +16,7 @@ export const Description = styled.div`
   right: 0;
   z-index: 0;
   width: 300px;
-  padding: 8px;
+  padding: 12px 20px 0 12px;
   font-size: 14px;
   text-align: justify;
   color: gray;
@@ -29,7 +29,7 @@ export const Anchor = styled.a`
   text-decoration: none;
   color: gray;
   font-size: 10px;
-  padding-left: 8px;
+  /* padding-left: 12px; */
   z-index: 1;
   &:hover{
     color: #dbdbdb;
@@ -127,7 +127,7 @@ export const HideButton = styled.button`
   position: absolute;
   right: 0;
   bottom: 0;
-  margin: 10px 4px;
+  margin: 0 15px 10px 0;
   background-color: #303030;
   border: none;
   color: gray;
