@@ -178,7 +178,7 @@ function App() {
   ////////variaveis////
   const [cartActivated, setCartActivated] = useState(false) //verifica se o botao carrinho foi ativo no modo mobile (botao flutuante)
   const [displayCart, setDisplayCart] = useState("display: none;") //serve para mostrar ou não a lista do carrinho no modo mobile
-  const [telaLoginAtiva, setTelaLoginAtiva] = useState(false)// serve para ir para tela de login
+  const [loginScreenActive, setLoginScreenActive] = useState(false)// serve para ir para tela de login
   const [condicionalValue, setCondicionalValue] = useState(1) // para mudar de pagina no login
   let [amountScreen , setAmountScreen ] = useState([])// quantidade de itens na tela no momento da pesquisa
   const [string, setString] = useState("")//recebe o texto pesquisado nos filtros
@@ -204,12 +204,12 @@ function App() {
 
   const toggleToLogin = () => //serve para mudar para a pagina de login 
   {
-    setTelaLoginAtiva(true)
+    setLoginScreenActive(true)
   }
 
   const turnBackToList = () => //serve para voltar para a pagina de lista após sair do login
   {
-    setTelaLoginAtiva(false)
+    setLoginScreenActive(false)
     setCondicionalValue(1)    
   }
 
@@ -219,7 +219,7 @@ function App() {
   }
 
   const renderScreen = () => {
-    if (telaLoginAtiva === true)
+    if (loginScreenActive === true)
     {
       switch (condicionalValue) {
         case 1:
@@ -250,21 +250,21 @@ function App() {
     
   function addCartFunction(product) // funcao que adiciona o item selecionado ao carrinho
   {
-    let itemRepetido = false  // impede que o mesmo item seja repetido no carrinho, somente a quantidade muda
-    let itemCarrinho = {name:product.name, qtd: 1, price: product.price} // transforma o item em um objeto padrão para o carrinho
+    let repeatedItem = false  // impede que o mesmo item seja repetido no carrinho, somente a quantidade muda
+    let cartItem = {name:product.name, qtd: 1, price: product.price} // transforma o item em um objeto padrão para o carrinho
     for(let i=0; i<cartList.length; i++)  //loop para verificar se o item já está no carrinho
     {
-      if(cartList[i].name === itemCarrinho.name) //se o item já estiver no carrinho, a quantidade eo preço aumentam 1
+      if(cartList[i].name === cartItem.name) //se o item já estiver no carrinho, a quantidade eo preço aumentam 1
       {
         cartList[i].qtd++ 
-        cartList[i].price += itemCarrinho.price
+        cartList[i].price += cartItem.price
         setCartList([...cartList])
-        itemRepetido = true       //o item não será repetido no carrinho
+        repeatedItem = true       //o item não será repetido no carrinho
       }
     }
-    if(itemRepetido === false) // se o item não estiver no carrinho, ele será adicionado
+    if(repeatedItem === false) // se o item não estiver no carrinho, ele será adicionado
     {
-      setCartList([...cartList, itemCarrinho])
+      setCartList([...cartList, cartItem])
     }
   }
 /////////////////////////////////////////////////////////////////
@@ -278,29 +278,29 @@ function App() {
 /////////////////////////////////////////////////////////////////////////
 
 ////////////para reconhecer o texto mesmo sem acentos////////////
-  function retira_acentos(str) 
+  function accentRemove(str) 
   {
-    let com_acento = "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŕ";
-    let sem_acento = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYRsBaaaaaaaceeeeiiiionoooooouuuuybyr";
-    let novastr="";
+    let withAccent = "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŕ";
+    let withoutAccent = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYRsBaaaaaaaceeeeiiiionoooooouuuuybyr";
+    let newStr="";
     for(let i=0; i<str.length; i++) 
     {
-      let troca=false;
-      for (let a=0; a<com_acento.length; a++) 
+      let change=false;
+      for (let a=0; a<withAccent.length; a++) 
       {
-        if (str.substr(i,1)==com_acento.substr(a,1)) 
+        if (str.substr(i,1)==withAccent.substr(a,1)) 
         {
-          novastr+=sem_acento.substr(a,1);
-          troca=true;
+          newStr+=withoutAccent.substr(a,1);
+          change=true;
           break;
         }
       }
-      if (troca==false) 
+      if (change==false) 
       {
-        novastr+=str.substr(i,1);
+        newStr+=str.substr(i,1);
       }
     }
-    return novastr;
+    return newStr;
   }       
 ///////////////////////////////////////////////////////////
 
@@ -325,7 +325,7 @@ function App() {
 
     {renderScreen()} {/*chama a tela de login caso seja verdadeiro */}
 
-    {!telaLoginAtiva && //*se a tela de login for verdadeira, não mostra esse conteúdo 
+    {!loginScreenActive && //*se a tela de login for verdadeira, não mostra esse conteúdo 
     <Container style={{ backgroundImage: `url(${GalaxyBackground})` }}>
       <Filters
       string = {string}
@@ -346,7 +346,7 @@ function App() {
         <DivItens>
         {amountScreen = products //produtos vai passar por uma serie de filtros e map
           .filter((product) => {
-            return retira_acentos(product.name.trim().toLowerCase()).includes(retira_acentos(string.trim().toLowerCase()));
+            return accentRemove(product.name.trim().toLowerCase()).includes(accentRemove(string.trim().toLowerCase()));
           })
           .filter((product) => {
           return product.price >= minPrice

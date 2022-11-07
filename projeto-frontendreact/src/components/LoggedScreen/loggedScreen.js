@@ -1,4 +1,4 @@
-import { Div, Titulo } from "./styled";
+import { Div, Title} from "./styled";
 import styled from "styled-components";
 
 const BackToLoginButton = styled.button`
@@ -16,7 +16,7 @@ const BackToLoginButton = styled.button`
 function loggedScreen (props){
     return (
         <Div>
-            <Titulo>Você concluiu o cadastro, parabéns!!!</Titulo>
+            <Title>Você concluiu o cadastro, parabéns!!!</Title>
             <BackToLoginButton onClick={() => props.turnBackToList()}>Voltar</BackToLoginButton>
         </Div>
         

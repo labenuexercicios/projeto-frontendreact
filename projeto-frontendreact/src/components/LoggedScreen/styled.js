@@ -8,7 +8,7 @@ export const Div = styled.div`
     align-items: center;
 `
 
-export const Titulo = styled.h1`
+export const Title = styled.h1`
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #ff4400;
 `

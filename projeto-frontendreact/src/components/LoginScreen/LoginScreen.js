@@ -15,7 +15,7 @@ const BackToLoginButton = styled.button`
 
 function LoginScreen(props) {
 
-  const enviarLogin = () => {
+  const sendLogin = () => {
     alert("E-mail não encontrado, será necessário fazer o cadastro!")
   }
 
@@ -29,7 +29,7 @@ function LoginScreen(props) {
         <StyledLabel>Senha:
           <Input type={"password"}/>
         </StyledLabel>
-        <SendButton onClick={enviarLogin}>Entrar</SendButton>
+        <SendButton onClick={sendLogin}>Entrar</SendButton>
         <RegisterButton onClick={() => props.changeScreen(2)}>Cadastre-se</RegisterButton>
         <BackToLoginButton onClick={() => props.turnBackToList()}>Voltar para o início</BackToLoginButton>
       </Form>

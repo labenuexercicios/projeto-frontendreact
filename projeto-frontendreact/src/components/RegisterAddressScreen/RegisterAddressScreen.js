@@ -3,31 +3,31 @@ import React, {useState} from 'react'
 
 function RegisterAddressScreen(props) {
 
-const [endereco, setEndereco] = useState("")
-const [residencia, setResidencia] = useState("")
-const [complemento, setComplemento] = useState("")
-const [telefone, setTelefone] = useState("")
+const [address, setAddress] = useState("")
+const [residence, setResidence] = useState("")
+const [complement, setComplement] = useState("")
+const [phone, setPhone] = useState("")
 
 
-  const onChangeEndereco = (event) => {
-    setEndereco(event.target.value)
+  const onChangeAddress = (event) => {
+    setAddress(event.target.value)
   }
   
-  const onChangeResidencia = (event) => {
-    setResidencia(event.target.value)
+  const onChangeResidence = (event) => {
+    setResidence(event.target.value)
   }
   
-  const onChangeComplemento = (event) => {
-    setComplemento(event.target.value)
+  const onChangeComplement = (event) => {
+    setComplement(event.target.value)
   }
   
-  const onChangeTelefone = (event) => {
-    setTelefone(event.target.value)
+  const onChangePhone = (event) => {
+    setPhone(event.target.value)
   }
   
   const sendData = () => {
           //verificar se algum campo ficou em branco
-          if(endereco === "" || residencia === "" || complemento === "" || telefone === "")
+          if(address === "" || residence === "" || complement === "" || phone === "")
           {
             alert("Todos os campos são obrigatórios")
           }
@@ -43,19 +43,19 @@ const [telefone, setTelefone] = useState("")
       <Form>
         <StyledLabel htmlFor="titulo">
           Endereço:
-          <Input id="titulo" value={endereco} onChange={onChangeEndereco}/>
+          <Input id="titulo" value={address} onChange={onChangeAddress}/>
         </StyledLabel>
         <StyledLabel htmlFor="foto">
           Número da residência:
-          <Input id="foto" value={residencia} onChange={onChangeResidencia}/>
+          <Input id="foto" value={residence} onChange={onChangeResidence}/>
         </StyledLabel>
         <StyledLabel htmlFor="descricao">
-          Complemento:
-          <Input id="descricao" value={complemento} onChange={onChangeComplemento}/>
+          complement:
+          <Input id="descricao" value={complement} onChange={onChangeComplement}/>
         </StyledLabel>
         <StyledLabel htmlFor="descricao">
-          Telefone:
-          <Input id="descricao" value={telefone} onChange={onChangeTelefone}/>
+          phone:
+          <Input id="descricao" value={phone} onChange={onChangePhone}/>
         </StyledLabel>
         <SendButton onClick={() => sendData()}>Confirmar</SendButton>
         <BackToLoginButton onClick={() => props.changeScreen(2)}>Voltar</BackToLoginButton>
