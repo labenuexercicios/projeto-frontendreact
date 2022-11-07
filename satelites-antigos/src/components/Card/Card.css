@@ -1,9 +1,10 @@
 .openCard{
-  width: 88%;
+  width: 670px;
+
   transition: width 1s ease;
 }
 
 .hideCard{
-  width: 48%;
+  width: 300px;
   transition: width 1s ease;
 }

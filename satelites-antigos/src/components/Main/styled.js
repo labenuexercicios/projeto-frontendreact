@@ -40,9 +40,9 @@ export const CardName = styled.div`
   justify-content: center;
   align-items: center;
 `
-export const Name = styled.p`
+export const Description = styled.p`
   position: absolute;
-  color: #353535;
+  color: #404040;
   font-size: 24px;
   width: 85%;
   /* font-variant: small-caps; */

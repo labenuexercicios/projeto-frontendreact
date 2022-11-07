@@ -5,7 +5,7 @@ import {ContainerMain,
         ContainerFilterArea, 
         ContainerCard,
         CardName,
-        Name} from './styled'
+        Description} from './styled'
 import satellites from '../../Satellites/satellites.json'
 import { useState } from "react"
 
@@ -51,10 +51,11 @@ export const Main = () => {
             })
             .map((satellite) => {
               return (<CardName>
-                <Name>{satellite.description}</Name>
+                <Description>{satellite.description}</Description>
                 <Card 
                 name={satellite.name} 
-                image={satellite.image} 
+                image={satellite.image}
+                year={satellite.year}
                 price={satellite.price} 
                 description={satellite.description} 
                 link={satellite.link}

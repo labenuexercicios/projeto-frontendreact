@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const ContainerCard = styled.div`
+  position: relative;
   height: 220px;
   /* width: 600px; */
-  position: relative;
-  min-width: 180px;
+  /* min-width: 300px; */
   background-color: #303030;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.7);
+  /* border: 1px solid blue; */
+
   `
 
 export const Description = styled.div`
@@ -16,14 +18,14 @@ export const Description = styled.div`
   right: 0;
   z-index: 0;
   width: 300px;
-  padding: 12px 20px 0 12px;
+  padding: 12px 55px 0 12px;
   font-size: 14px;
   text-align: justify;
   color: gray;
   font-variant: small-caps;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 10px;
 `
 export const Anchor = styled.a`
   text-decoration: none;
@@ -50,6 +52,39 @@ export const ImgSatelite = styled.img`
   z-index: 1;
   -webkit-box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.66); 
   box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.5);
+  /* border: 1px solid red; */
+
+`
+export const DivYear = styled.div`
+  position: absolute;
+  z-index: 2;
+  opacity: 0.2;
+  width: 220px;
+  right: -90px;
+  top: 25px;
+  display: flex;
+  /* border: 1px solid blue; */
+  gap: 5px;
+  /* background-color: gray; */
+  /* padding: 0px 20px; */
+  /* height: 70px; */
+  /* background: linear-gradient(180deg, #303030 0%, rgba(128,128,128,1) 100%, rgba(46,46,47,1) 100%); */
+  
+  transform: rotate(270deg);
+  `
+export const Year = styled.h3`
+  font-size: 52px;
+  margin-left: 5px;
+  font-family: fantasy;
+  color: white;
+`
+export const DivDetail = styled.div`
+  width: 100px;
+  margin-top: 10px;
+  background: linear-gradient(270deg, #303030 50%, rgba(128,128,128,1) 100%, rgba(46,46,47,1) 100%);
+
+  /* background-color: gray; */
+  /* border: 1px solid red; */
 `
 export const ContainerInformation = styled.div`
   display: flex;
@@ -71,7 +106,7 @@ export const Information = styled.div`
   align-items: center;
   justify-content: space-around;
   gap: 4px;
-  width: 92.5%;
+  width: 82%;
   box-shadow: 7px -5px 19px 1px rgba(0,0,0,0.52);
 `
 export const Detail1 = styled.div`
@@ -80,9 +115,11 @@ export const Detail1 = styled.div`
   background-color: #808080;
 `
 export const Detail2 = styled.div`
-  width: 16px;
+  width: 42px;
   height: 100%;
   background-color: #808080;
+  opacity: 0.5;
+
 `
 export const InfoDiv = styled.div`
   display: flex;
@@ -123,7 +160,6 @@ export const Button = styled.button`
 export const HideButton = styled.button`
   height: 30px;
   width: 20px;
-  /* border-radius: 10px; */
   position: absolute;
   right: 0;
   bottom: 0;

@@ -53,7 +53,7 @@ export const Nav = styled.nav`
 
   `
   export const ImgLupa = styled.img`
-    height: 20px;
+    height: 18px;
   `
 
   export const ImgCarrinho = styled.img`

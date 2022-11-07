@@ -1,11 +1,20 @@
 [
   {
-    "id":"1",
-    "year":"1957",
-    "name": "sputnik",
-    "image": "https://img.ibxk.com.br/2020/10/09/09001157614480.jpg?ims=704x",
-    "price": "32.000,00",
-    "description": "Lançado em 4 de outubro de 1957 pela União Soviética, foi o primeiro satélite artificial colocado na órbita da Terra. O Sputnik coletou dados sobre a densidade de camadas atmosféricas superiores, além de medir a qualidade dos sinais de rádio na ionosfera.",
+    "id":"6",
+    "year":"1971",
+    "name": "mariner 9",
+    "image": "https://img.ibxk.com.br/2020/10/09/09002324987486.jpg?ims=704x",
+    "price": "18.000,00",
+    "description": "Sonda lançada pela NASA, chegou ao Planeta Vermelho em 14 de novembro de 1971. Conseguiu cumprir sua missão e mapeou 70% do solo marciano.",
+    "link":"https://www.space.com/most-historic-satellites"
+  },
+  {
+    "id":"5",
+    "year":"1966",
+    "name": "luna 10",
+    "image": "https://img.ibxk.com.br/2020/10/09/09002211130485.jpg?ims=704x",
+    "price": "20.000,00",
+    "description": "Lançado em 1966, foi o primeiro satélite colocado na órbita da Lua. Mediu o campo magnético, a radiação, a gravidade e outras funções de nosso satélite natural. Também coletou informações sobre a composição do solo lunar.",
     "link":"https://www.space.com/most-historic-satellites"
   },
   {
@@ -14,7 +23,16 @@
     "name": "explorer 1",
     "image": "https://img.ibxk.com.br/2020/10/09/09001326865481.jpg?ims=704x",
     "price": "30.000,00",
-    "description": "Foi o primeiro satélite lançado pelos Estados Unidos e chegou à órbita da Terra em 31 de janeiro de 1958. A maior façanha do Explorer 1 foi confirmar a existência dos cinturões de Van Allen, que são zonas de partículas carregadas que armazenam a radiação na magnetosfera.",
+    "description": "Foi o primeiro satélite lançado pelos Estados Unidos e chegou à órbita da Terra em 31 de janeiro de 1958. Confirmar a existência dos cinturões de Van Allen, que são zonas de partículas carregadas que armazenam a radiação na magnetosfera.",
+    "link":"https://www.space.com/most-historic-satellites"
+  },
+  {
+    "id":"1",
+    "year":"1957",
+    "name": "sputnik",
+    "image": "https://img.ibxk.com.br/2020/10/09/09001157614480.jpg?ims=704x",
+    "price": "32.000,00",
+    "description": "Lançado em 4 de outubro de 1957 pela União Soviética, foi o primeiro satélite artificial colocado na órbita da Terra. Coletou dados sobre a densidade de camadas atmosféricas, além de medir a qualidade dos sinais de rádio na ionosfera.",
     "link":"https://www.space.com/most-historic-satellites"
   },
   {
@@ -23,7 +41,7 @@
     "name": "explorer 6",
     "image": "https://img.ibxk.com.br/2020/10/09/09001456809482.jpg?ims=704x",
     "price": "24.000,00",
-    "description": "Lançado em agosto de 1959, suas principais funções foram estudar a radiação das camadas superiores e determinar a frequência com que micrometeoritos penetravam nossa atmosfera. Uma missão paralela fez a primeira imagem da Terra vista do espaço: um fotografia do México.",
+    "description": "Lançado em agosto de 1959, participou dos estudos sobre a radiação das camadas superiores e determinar a frequência com que micrometeoritos penetravam nossa atmosfera. Também fez a primeira imagem da Terra vista do espaço: uma fotografia do México.",
     "link":"https://www.space.com/most-historic-satellites"
   },
   {
@@ -34,24 +52,6 @@
     "price": "21.000,00",
     "description": "Lançado em 12 de abril de 1961 pela União Soviética, foi o primeiro satélite com um homem a bordo. O lançamento foi visto como o ápice da corrida espacial, mas hoje é celebrado como o pontapé das jornadas espaciais.",
     "link":"https://simple.wikipedia.org/wiki/Vostok_1#/"
-  },
-  {
-    "id":"5",
-    "year":"1966",
-    "name": "luna 10",
-    "image": "https://img.ibxk.com.br/2020/10/09/09002211130485.jpg?ims=704x",
-    "price": "20.000,00",
-    "description": "Lançado em 1966, foi o primeiro satélite colocado na órbita da Lua. O Luna 10 mediu o campo magnético, a radiação, a gravidade e outras funções de nosso satélite natural. Um espectrômetro de raios gama também coletou informações sobre a composição do solo lunar.",
-    "link":"https://www.space.com/most-historic-satellites"
-  },
-  {
-    "id":"6",
-    "year":"1971",
-    "name": "mariner 9",
-    "image": "https://img.ibxk.com.br/2020/10/09/09002324987486.jpg?ims=704x",
-    "price": "18.000,00",
-    "description": "Sonda lançada pela NASA, chegou ao Planeta Vermelho em 14 de novembro de 1971. Conseguiu cumprir sua missão e mapeou 70% do solo marciano.",
-    "link":"https://www.space.com/most-historic-satellites"
   },
   {
     "id":"7",

@@ -36,8 +36,8 @@ export const DivInput = styled.div`
   flex-wrap: nowrap;
   border-radius: 4px;
   width: 100%;
-  background-color: black;
-  border: 1px solid black;
+  background-color: #202020;
+  border: 1px solid #202020;
   &:hover{
     border: 1px solid gray;
     transition: border 0.8s ease-out;
@@ -47,7 +47,7 @@ export const DivInput = styled.div`
 export const InputText = styled.input`
   height: 24px;
   width: 88%;
-  background-color: black;
+  background-color: #202020;
   border: none;
   color: white;
 `

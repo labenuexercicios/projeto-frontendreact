@@ -1,6 +1,6 @@
 import {ContainerHeader, ImgLogo, ImgLupa, ImgCarrinho, HeaderContent, ContainerLogo, ContainerDiv, Div, Nav} from './styled'
 import textoLogo from '../../img/space-collection.png'
-import lupa from '../../img/lupa.png'
+import lupa from '../../img/iconLogin.png'
 import carrinho from '../../img/carrinho.png'
 
 export const Header = () => {

@@ -1,4 +1,20 @@
-import { ContainerCard, InfoDiv, Button, HideButton, Detail1, Detail2, Anchor, ContainerInformation, ImgCoin, ImgSatelite, Description, Information, Name, Price } from "./styled"
+import {ContainerCard, 
+        InfoDiv, 
+        Button, 
+        HideButton, 
+        Detail1, 
+        Detail2, 
+        Anchor, 
+        ContainerInformation, 
+        ImgCoin, 
+        ImgSatelite,
+        DivYear,
+        DivDetail,
+        Year,
+        Description, 
+        Information, 
+        Name, 
+        Price } from "./styled"
 // import satelites from '../../Satellites/satellites.json'
 import coin from '../../img/coin.png'
 import { useState } from "react"
@@ -23,6 +39,10 @@ export const Card = (props) => {
           <p><Anchor href={props.link} target="_blank">&rarr; SAIBA MAIS</Anchor></p>
         </Description>
         <ImgSatelite src={props.image} alt={props.name}/>
+        <DivYear>
+          <Year>{props.year}</Year>
+          <DivDetail></DivDetail>
+        </DivYear>
         <ContainerInformation>
           <Information>
             <InfoDiv>
