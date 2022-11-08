@@ -3,11 +3,19 @@ import styled from "styled-components";
 export const ContainerMain = styled.main`
   display: flex;
   justify-content: center;
-  min-height: 74vh;
+  min-height: 78vh;
   width: 100vw;
   background-color: #181818;
+  position: relative;
 `
-export const ContainerFilterCard = styled.div`
+export const ImgBackground = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+`
+export const PageStore = styled.div`
   display: flex;
   justify-content: space-between;
   width: 80%;

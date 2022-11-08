@@ -1,7 +1,9 @@
 import {Card} from '../Card/Card';
 import {FilterArea} from '../FilterArea/FilterArea'
-import {ContainerMain, 
-        ContainerFilterCard, 
+import {PageLogin} from '../PageLogin/PageLogin'
+import {ContainerMain,
+        ImgBackground,
+        PageStore, 
         ContainerFilterArea, 
         ContainerCard,
         CardName,
@@ -10,15 +12,18 @@ import satellites from '../../Satellites/satellites.json'
 import { useState } from "react"
 
 
-export const Main = () => {
-  // const [infoFilter, setInfoFilter] = useState({})
+export const Main = (props) => {
   const [inputName, setInputName] = useState("")
   const [radioYear, setRadioYear] = useState("")
   const [radioPrice, setRadioPrice] = useState("")
 
   return(
     <ContainerMain>
-      <ContainerFilterCard>
+      <ImgBackground src="https://images.pexels.com/photos/1694000/pexels-photo-1694000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+      {props.page === "home"? 
+        <ImgBackground src="https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+      : props.page === "store" ?
+        <PageStore>
         <ContainerFilterArea>
           <FilterArea
             // setInfoFilter={setInfoFilter}
@@ -64,7 +69,12 @@ export const Main = () => {
             })
           }
         </ContainerCard>
-        </ContainerFilterCard>
+        </PageStore>
+      : props.page === "login"?
+        <PageLogin/>
+      : 
+        <p>CARRINHo</p>
+      }
     </ContainerMain>
   )
 }

@@ -3,7 +3,7 @@ import {createGlobalStyle} from 'styled-components';
 import {Header} from './components/Header/Header.js';
 import {Main} from './components/Main/Main'
 import styled from 'styled-components';
-import { ContainerHeader } from './components/Header/styled.js';
+import { useState } from 'react';
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -26,19 +26,18 @@ const ContainerBody = styled.div`
 // `
 const Footer = styled.footer`
   background-color: black;
-  height: 10vh;
+  height: 6vh;
   width: 100vw;
 `
 
-
 function App() {
+  const [page, setPage] = useState("home")
+
   return (
       <ContainerBody>
         <GlobalStyle/>
-        {/* <PositionHeader> */}
-          <Header/>
-        {/* </PositionHeader> */}
-        <Main/>
+        <Header setPage={setPage}/>
+        <Main page={page}/>
         <Footer/>
       </ContainerBody>
   );
