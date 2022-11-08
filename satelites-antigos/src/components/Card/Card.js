@@ -1,14 +1,48 @@
-import { ContainerCard, InfoDiv, Button, Detail1, Detail2, ContainerInformation, ImgCoin, ImgSatelite, Description, Information, Name, Price } from "./styled"
+import {ContainerCard, 
+        InfoDiv, 
+        Button, 
+        HideButton, 
+        Detail1, 
+        Detail2, 
+        Anchor, 
+        ContainerInformation, 
+        ImgCoin, 
+        ImgSatelite,
+        DivYear,
+        DivDetail,
+        Year,
+        Description, 
+        Information, 
+        Name, 
+        Price } from "./styled"
 // import satelites from '../../Satellites/satellites.json'
 import coin from '../../img/coin.png'
+import { useState } from "react"
+import  './Card.css'
+
 
 export const Card = (props) => {
+  const [Style, setStyle] = useState("hideCard")
+
+  function OpenCard() {
+    setStyle("openCard")
+  }
+
+  function HideCard() {
+    setStyle("hideCard")
+  }
+
   return(
-    <ContainerCard>
+    <ContainerCard className={Style}>
         <Description>
-          <p>Texto descrição</p>
+          <p>{props.description}</p>
+          <p><Anchor href={props.link} target="_blank">&rarr; SAIBA MAIS</Anchor></p>
         </Description>
         <ImgSatelite src={props.image} alt={props.name}/>
+        <DivYear>
+          <Year>{props.year}</Year>
+          <DivDetail></DivDetail>
+        </DivYear>
         <ContainerInformation>
           <Information>
             <InfoDiv>
@@ -19,13 +53,14 @@ export const Card = (props) => {
               </Price>
             </InfoDiv>
             <InfoDiv>
-              <Button>INFO</Button>
+              <Button onClick={OpenCard}>INFO</Button>
               <Button>BUY</Button>
             </InfoDiv>
           </Information>
           <Detail1></Detail1>
           <Detail2></Detail2>
         </ContainerInformation>
+        <HideButton onClick={HideCard}>&laquo;</HideButton>
     </ContainerCard>
   )
 }

@@ -18,15 +18,35 @@ export const ContainerFilterArea = styled.div`
   width: 30%;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  /* background-color: #202020; */
   /* border: 1px solid white; */
-  background-color: #242424;
+  
 `
 export const ContainerCard = styled.section`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   width: 70%;
   max-width: 1200px;
-  justify-content: flex-end;
   gap: 4vw;
-  padding: 10px 0;
+  padding: 40px 0;
+`
+export const CardName = styled.div`
+  /* border: 1px solid red; */
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+export const Description = styled.p`
+  position: absolute;
+  color: #404040;
+  font-size: 24px;
+  width: 85%;
+  /* font-variant: small-caps; */
+  text-align: center;
+  /* font-variant: all-small-caps; */
+  font-family: 'Pinyon Script', cursive;
 `
