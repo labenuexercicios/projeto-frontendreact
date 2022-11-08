@@ -5,7 +5,7 @@ export const ContainerMain = styled.main`
   justify-content: center;
   min-height: 78vh;
   width: 100vw;
-  background-color: #181818;
+  /* background-color: #181818; */
   position: relative;
 `
 export const ImgBackground = styled.img`
@@ -13,7 +13,7 @@ export const ImgBackground = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-
+  z-index: -1;
 `
 export const PageStore = styled.div`
   display: flex;
@@ -39,6 +39,8 @@ export const ContainerCard = styled.section`
   max-width: 1200px;
   gap: 4vw;
   padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* border: 1px solid red; */
 `
 export const CardName = styled.div`
   /* border: 1px solid red; */

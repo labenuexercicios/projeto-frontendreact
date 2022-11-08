@@ -1,6 +1,7 @@
 import {Card} from '../Card/Card';
 import {FilterArea} from '../FilterArea/FilterArea'
 import {PageLogin} from '../PageLogin/PageLogin'
+import {PageCart} from '../PageCart/PageCart'
 import {ContainerMain,
         ImgBackground,
         PageStore, 
@@ -73,7 +74,7 @@ export const Main = (props) => {
       : props.page === "login"?
         <PageLogin/>
       : 
-        <p>CARRINHo</p>
+        <PageCart/>
       }
     </ContainerMain>
   )
