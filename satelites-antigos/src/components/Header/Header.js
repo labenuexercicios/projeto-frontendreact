@@ -1,37 +1,40 @@
-import {ContainerHeader, ImgLogo, ImgLupa, ImgCarrinho, HeaderContent, ContainerLogo, ContainerDiv, Div, Nav} from './styled'
+import {ContainerHeader, 
+        ImgLupa, 
+        ImgCarrinho, 
+        HeaderContent, 
+        ContainerLogo, 
+        ContainerDiv,
+        Nav} from './styled'
 import textoLogo from '../../img/space-collection.png'
 import lupa from '../../img/iconLogin.png'
 import carrinho from '../../img/carrinho.png'
 
-export const Header = () => {
+export const Header = (props) => {
+
   return(
     <>
       <ContainerHeader>
         <HeaderContent>
           <ContainerLogo>
             <ContainerDiv>
-              <Div></Div>
-              <Div></Div>
-              <Div></Div>
-              <Div></Div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </ContainerDiv>
-            <ImgLogo src={textoLogo}/>
+            <img src={textoLogo}/>
             <ContainerDiv>
-              <Div></Div>
-              <Div></Div>
-              <Div></Div>
-              <Div></Div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </ContainerDiv>
           </ContainerLogo>
           <Nav>
-            <span>HOME</span>
-            <span>STORE</span>
-            <span>
-              <ImgLupa src={lupa}/>
-            </span>
-            <span>
-              <ImgCarrinho src={carrinho}/>
-            </span>
+            <span onClick={() => props.setPage("home")}>HOME</span>
+            <span onClick={() => props.setPage("store")}>STORE</span>
+            <ImgLupa src={lupa} onClick={() => props.setPage("login")}/>
+            <ImgCarrinho src={carrinho} onClick={() => props.setPage("cart")}/>
           </Nav>
         </HeaderContent>
       </ContainerHeader>
