@@ -1,0 +1,134 @@
+[ 
+      {
+        "id": 0,
+        "name": "Camisa Luas de Saturno",
+        "price": 49.99,
+        "imgUrl": "https://images.tcdn.com.br/img/img_prod/697287/camiseta_planeta_saturno_sistema_solar_espaco_7241_1_20191112120529.jpg",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0, 
+        "category": "Calor",
+        "hasSize": true
+      },
+      {
+        "id": 1,
+        "name": "Camisa Sistema Solar",
+        "price": 49.99,
+        "imgUrl": "https://a-static.mlcdn.com.br/800x560/camiseta-planetas-camisa-espaco-galaxias-darkwood/darkwoodshop2/11228651084/98261ab296824e6d69a6e7f6b0c5ee7d.jpeg",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0,
+        "category": "Calor",
+        "hasSize": true
+      },
+      {
+        "id": 2,
+        "name": "Regata das Galáxias",
+        "price": 39.99,
+        "imgUrl":"https://images.tcdn.com.br/img/img_prod/697287/regata_psicodelica_galaxia_espaco_sideral_3799_1_20190807141826.jpg",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0,
+        "category": "Calor",
+        "hasSize": true
+      },
+      {
+        "id": 3,
+        "name": "Casaco das Galáxias capuz",
+        "price": 199.99,
+        "imgUrl":"https://ae01.alicdn.com/kf/HTB1DAYoSpXXXXXwXFXXq6xXFXXXp/2017-Mulheres-Novas-Dos-Homens-Hoodies-Moletom-Espa-o-Gal-xia-3D-Hoody-Casaco-Unsex-Casual.jpg_Q90.jpg_.webp",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0,
+        "category": "Frio",
+        "hasSize": true
+      },
+      {
+        "id": 4,
+        "name": "Casaco das Galáxias",
+        "price": 189.99,
+        "imgUrl":"https://cf.shopee.com.br/file/df384841cb0cc8186520155b1e48cef7",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0,
+        "category": "Frio",
+        "hasSize": true
+      },
+      {
+        "id": 5,
+        "name": "Moleton das Galáxias",
+        "price": 299.99,
+        "imgUrl":"https://img.elo7.com.br/product/original/3AF425D/blusa-moletom-galaxia-casaco-de-frio-moletom.jpg",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0,
+        "category": "Frio",
+        "hasSize": true
+      },
+      {
+        "id": 6,
+        "name": "Moleton Sistema Solar",
+        "price": 289.99,
+        "imgUrl":"https://ae01.alicdn.com/kf/HTB1J0JofqQoBKNjSZJnq6yw9VXaq/Moletom-masculino-estilo-hip-hop-ujwi-planetas-casaco-com-capuz-estampa-3d-de-estrela-espa-osa.jpg_Q90.jpg_.webp",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0,
+        "category": "Frio",
+        "hasSize": true
+      },
+      {
+        "id": 7,
+        "name": "Boné das galáxias",
+        "price": 29.99,
+        "imgUrl":"https://img.ltwebstatic.com/images3_pi/2022/03/09/164681617300b42e8ad6c8eb2745c535272558b729.webp",
+        "backColor": "rgb(233, 206, 159);",
+        "display": "",
+        "qtd": 0,
+        "category": "Acessórios",
+        "hasSize": false
+      },
+      {
+        "id": 8,
+        "name": "Colar das Galáxias",
+        "price": 39.99,
+        "imgUrl":"https://i.pinimg.com/474x/62/00/44/6200447afcbf227a435e1d708d1caea8.jpg",
+        "backColor": "rgb(233, 206, 159);",
+        "display": "",
+        "qtd": 0,
+        "category": "Acessórios",
+        "hasSize": false
+      },
+      {
+        "id": 9,
+        "name": "Anel das Galáxias",
+        "price": 9.99,
+        "imgUrl":"http://images.virgula.com.br/2017/02/i-sew-cute-galaxy-inspired-jewelry-11.jpg",
+        "backColor": "#e2e2e2",
+        "display": "",
+        "qtd": 0,
+        "category": "Acessórios",
+        "hasSize": false
+      },
+      {
+        "id": 10,
+        "name": "Pulseira Sistema Solar",
+        "price": 15.99,
+        "imgUrl":"https://a-static.mlcdn.com.br/800x560/pulseira-sistema-solar-8-planetas-galaxia-fashion-acessorios/jj95acessorios/1ppn/1b8be33fe50c5d6884990b8410224d44.jpeg",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0,
+        "category": "Acessórios",
+        "hasSize": false
+      },
+      {
+        "id": 11,
+        "name": "Capa das Galáxias Notebook",
+        "price": 59.99,
+        "imgUrl":"https://a-static.mlcdn.com.br/800x560/adesivo-protetor-para-notebook-17-cosmos-galaxia-d1-skin-zabom/olistplus/opmjevpxru14daof/62eec662615176175f88aaca725eb8f7.jpeg",
+        "backColor": "white",
+        "display": "",
+        "qtd": 0,
+        "category": "Acessórios",
+        "hasSize": false
+      }
+    ]
