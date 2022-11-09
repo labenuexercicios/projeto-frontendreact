@@ -18,6 +18,9 @@ export const Main = (props) => {
   const [radioYear, setRadioYear] = useState("")
   const [radioPrice, setRadioPrice] = useState("")
 
+  const [listCart, setListCart] = useState([])
+
+
   return(
     <ContainerMain>
       <ImgBackground src="https://images.pexels.com/photos/1694000/pexels-photo-1694000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
@@ -56,15 +59,19 @@ export const Main = (props) => {
               }
             })
             .map((satellite) => {
-              return (<CardName>
+              return (<CardName key={satellite.id}>
                 <Description>{satellite.description}</Description>
                 <Card 
+                
                 name={satellite.name} 
                 image={satellite.image}
                 year={satellite.year}
                 price={satellite.price} 
                 description={satellite.description} 
                 link={satellite.link}
+                listCart={listCart}
+                setListCart={setListCart}
+                // setContentCart={setContentCart}
                 />
               </CardName>)
             })
@@ -74,7 +81,9 @@ export const Main = (props) => {
       : props.page === "login"?
         <PageLogin/>
       : 
-        <PageCart/>
+        <PageCart
+          // contentCart={contentCart}
+        />
       }
     </ContainerMain>
   )

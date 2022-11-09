@@ -1,5 +1,13 @@
-export const PageCart = () => { 
+import {ItemCart} from './styled'
+
+export const PageCart = (props) => { 
   return(
-    <p>CARRINHo</p>
+    <>
+      {/* {props.contentCart.map((item) => {
+        <ItemCart>
+          <img src={item.image}/>
+        </ItemCart>
+      })} */}
+    </>
   )
 }

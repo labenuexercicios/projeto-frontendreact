@@ -19,11 +19,6 @@ const ContainerBody = styled.div`
   flex-direction: column;
   position: relative;
 `
-// const PositionHeader = styled.div`
-//   position: sticky;
-//   top: 0;
-//   z-index: 2;
-// `
 const Footer = styled.footer`
   background-color: black;
   height: 6vh;
