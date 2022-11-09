@@ -42,21 +42,22 @@ export const ContainerCard = styled.section`
   background-color: rgba(0, 0, 0, 0.8);
   /* border: 1px solid red; */
 `
-export const CardName = styled.div`
+export const BackgroundCard = styled.div`
   /* border: 1px solid red; */
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-`
-export const Description = styled.p`
-  position: absolute;
-  color: #404040;
-  font-size: 24px;
-  width: 85%;
-  /* font-variant: small-caps; */
-  text-align: center;
-  /* font-variant: all-small-caps; */
-  font-family: 'Pinyon Script', cursive;
+
+  > p{
+    position: absolute;
+    color: #404040;
+    font-size: 24px;
+    width: 85%;
+    /* font-variant: small-caps; */
+    text-align: center;
+    /* font-variant: all-small-caps; */
+    font-family: 'Pinyon Script', cursive;
+  }
 `

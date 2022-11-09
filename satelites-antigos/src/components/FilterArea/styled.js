@@ -50,6 +50,9 @@ export const InputText = styled.input`
   background-color: #202020;
   border: none;
   color: white;
+  /* &:active{
+    border: 1px solid red;
+  } */
 `
 export const DivInputRadio = styled.div`
   display: flex;

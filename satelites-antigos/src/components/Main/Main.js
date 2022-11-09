@@ -7,8 +7,7 @@ import {ContainerMain,
         PageStore, 
         ContainerFilterArea, 
         ContainerCard,
-        CardName,
-        Description} from './styled'
+        BackgroundCard} from './styled'
 import satellites from '../../Satellites/satellites.json'
 import { useState } from "react"
 
@@ -18,8 +17,30 @@ export const Main = (props) => {
   const [radioYear, setRadioYear] = useState("")
   const [radioPrice, setRadioPrice] = useState("")
 
+  const [clickedItems, setClickedItems] = useState([]) 
   const [listCart, setListCart] = useState([])
 
+  //Remove ids duplicate
+  const uniqueIds = []
+  clickedItems.map((idItem) => {
+    if(uniqueIds.includes(idItem) === false){
+      uniqueIds.push(idItem)
+    }
+  })
+
+  //Create array of objects without repetition
+  const arrayUniqueItems = uniqueIds.map((id) => {
+    const uniqueItems = satellites.filter((satellite) => {
+      return satellite.id  === id
+    })
+    return uniqueItems[0]
+  }) 
+  
+  //Send objects to listCart 
+  function updateCart(){
+    setListCart([...arrayUniqueItems])
+    console.log(listCart)
+  }
 
   return(
     <ContainerMain>
@@ -30,7 +51,6 @@ export const Main = (props) => {
         <PageStore>
         <ContainerFilterArea>
           <FilterArea
-            // setInfoFilter={setInfoFilter}
             inputName={inputName}
             setInputName={setInputName}
             radioYear={radioYear}
@@ -59,10 +79,10 @@ export const Main = (props) => {
               }
             })
             .map((satellite) => {
-              return (<CardName key={satellite.id}>
-                <Description>{satellite.description}</Description>
+              return (<BackgroundCard key={satellite.id}>
+                <p>{satellite.description}</p>
                 <Card 
-                
+                id={satellite.id}
                 name={satellite.name} 
                 image={satellite.image}
                 year={satellite.year}
@@ -71,9 +91,11 @@ export const Main = (props) => {
                 link={satellite.link}
                 listCart={listCart}
                 setListCart={setListCart}
-                // setContentCart={setContentCart}
+                clickedItems={clickedItems}
+                setClickedItems={setClickedItems}
+                updateCart={updateCart}
                 />
-              </CardName>)
+              </BackgroundCard>)
             })
           }
         </ContainerCard>
@@ -82,7 +104,7 @@ export const Main = (props) => {
         <PageLogin/>
       : 
         <PageCart
-          // contentCart={contentCart}
+        listCart={listCart}
         />
       }
     </ContainerMain>

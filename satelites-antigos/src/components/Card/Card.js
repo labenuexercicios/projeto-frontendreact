@@ -12,22 +12,20 @@ import {ContainerCard,
 import coin from '../../img/coin.png'
 import { useState } from "react"
 import  './Card.css'
+import satellites from '../../Satellites/satellites.json'
 
 
 export const Card = (props) => {
   const [Style, setStyle] = useState("hideCard")
 
-  const [itemCart, setItemCart] = useState({})
-
-  function onClickButtonBuy() {
-    setItemCart({props})
-    props.setListCart([
-      ...props.listCart,
-      itemCart
-    ])
-    console.log(props.listCart)
-
+  function onClickButtonBuy(e) {
+    const clickedSatellite = satellites.filter((satellite) => {
+      return satellite.id === e.currentTarget.id
+    })
+    props.setClickedItems([...props.clickedItems, clickedSatellite[0].id])
+    props.updateCart()
   }
+  
 
   return(
     <ContainerCard className={Style}>
@@ -51,7 +49,7 @@ export const Card = (props) => {
             </InfoDiv>
             <InfoDiv>
               <button onClick={() => setStyle("openCard")}>INFO</button>
-              <button onClick={onClickButtonBuy}>BUY</button>
+              <button id={props.id} onClick={onClickButtonBuy}>BUY</button>
             </InfoDiv>
           </Information>
           <Detail1></Detail1>
