@@ -1,0 +1,39 @@
+[
+    {
+        "firstName":"Alexandre",
+        "middleName":"Ferreira",
+        "lastName":"Machado",
+        "email":"afmjuniors@hotmail.com",
+        "password":"123456Ab",
+        "adress":{
+            "country":"Brazil",
+            "state":"MG",
+            "distric":"Luxemburgo",
+            "street":"Juvenal dos Santos",
+            "cep":30380530,
+            "number":270,
+            "complement":"apto 104"
+
+        },
+
+        "purchasesHistoric":{
+            "id":"1",
+            "quantity":2,
+            "totalValue":10.20,
+            "PaymentType":2,
+            "date":"2022-01-30"
+        },
+        "currKart":{
+            "id":"1",
+            "quantity":1
+        },
+        "creditCards":{
+            "number":1234567890123456,
+            "validity":"2022-12",
+            "cvc":123,
+            "name":"Alexandre Machado",
+            "cpf": 12345678901
+        },
+        "favorites":[1,2]
+    }
+]
