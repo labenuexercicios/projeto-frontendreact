@@ -1,0 +1,66 @@
+[
+    {
+        "id": "01",
+        "titulo": "Astronauta Balão",
+        "tamanho": "P, M, G, GG e XGG",
+        "preco": "R$ 69.90",
+        "quantidade": "200",
+        "imagem": "colocar url imagem"
+    },
+    {
+        "id": "02",
+        "titulo": "Astronauta Bolhas",
+        "tamanho": "P, M, G e GG",
+        "preco": "R$ 49.90",
+        "quantidade": "400",
+        "imagem": "colocar url imagem"
+    },
+    {
+        "id": "03",
+        "titulo": "Astronauta Chill",
+        "tamanho": "P, M, G, GG e XGG",
+        "preco": "R$ 89.90",
+        "quantidade": "200",
+        "imagem": "colocar url imagem"
+    },
+    {
+        "id": "04",
+        "titulo": "Astro Dino",
+        "tamanho": "P, M, GG e XGG",
+        "preco": "R$ 49.90",
+        "quantidade": "200",
+        "imagem": "colocar url imagem"
+    },
+    {
+        "id": "05",
+        "titulo": "Astro Queijo",
+        "tamanho": "P, M, GG e XGG",
+        "preco": "R$ 39.90",
+        "quantidade": "300",
+        "imagem": "colocar url imagem"
+    },
+    {
+        "id": "06",
+        "titulo": "Astronauta no Gráfico",
+        "tamanho": "P, M, GG e XGG",
+        "preco": "R$ 39.90",
+        "quantidade": "250",
+        "imagem": "colocar url imagem"
+    },
+    {
+        "id": "07",
+        "titulo": "Planestas",
+        "tamanho": "M, GG e XGG",
+        "preco": "R$ 39.90",
+        "quantidade": "100",
+        "imagem": "colocar url imagem"
+    },
+    {
+        "id": "08",
+        "titulo": "Saturno Colorido",
+        "tamanho": "P, M e XGG",
+        "preco": "R$ 39.90",
+        "quantidade": "150",
+        "imagem": "colocar url imagem"
+    }
+]
