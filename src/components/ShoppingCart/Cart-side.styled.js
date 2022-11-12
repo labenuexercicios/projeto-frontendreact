@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const CartContainer = styled.div`
 display:${(props)=> props.size ? "block": "none"};
-background-color:green;
+
 margin-left:auto;
 width:15%;
 

@@ -8,9 +8,13 @@ width:100%;
 align-items:center;
 justify-content:space-between;
 background-image:url(${backgroundImg});
+-webkit-box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
+-moz-box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
+box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
 
  .logo{
     height:100%;
+    padding:8px 0 8px 8px;
    
  }
 
@@ -19,6 +23,7 @@ background-image:url(${backgroundImg});
     width:50%;
     div{
         display:flex;
+        justify-content:center;
     }
 
     img{
