@@ -8,13 +8,12 @@ flex-wrap:wrap;
 align-content:flex-start;
 width:100%;
 
-background-color:gray;
 
     nav{
         height:4vh;
         width:100%;
         color:black;
-        background-color:yellow;
+ 
         display:flex;
         justify-content:space-between;
 

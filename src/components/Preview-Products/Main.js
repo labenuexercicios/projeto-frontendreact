@@ -3,9 +3,12 @@ import Filter from '../Filter-Side/Filter'
 import Card from '../Card-Products/Card'
 
 import { useState } from 'react'
+import { changeStringSearchStandard } from '../../uteis/searchStringStandard'
 
 function Main(props) {
-    const { products,
+    const { 
+        inputName,
+        products,
         currCart,
         addToCart,
         addQuantityToProductOnCart,
@@ -113,12 +116,10 @@ function Main(props) {
     return (
         <MainContainer>
             <nav>
-                <p>Foram encontradas  produtos para "XPG"
-                </p>
-                <div>
+
                     <label>Ordenar por:</label>
                     <select value={select} onChange={handleOnChangeSelect}>
-                        <option selected value="Destaque" >Destaque</option>
+                        <option  value="Destaque" >Destaque</option>
                         <option value="Crescente" >Crescente</option>
                         <option value="Decrescente" >Decrescente</option>
                         <option value="MaiorPreco" >Maior Preço</option>
@@ -126,7 +127,6 @@ function Main(props) {
                         <option value="MediaAvaliacao" >Media de Avaliação</option>
                         <option value="MaiorDesconto" >Maior Desconto</option>
                     </select>
-                </div>
             </nav>
 
             <Filter maxPriceProduct={maxPriceProduct}
@@ -139,6 +139,7 @@ function Main(props) {
 
             <section className='filter-side'>
                 {handleSwicthCase(select)
+                .filter((product) =>changeStringSearchStandard(product.name).includes(inputName))
                     .filter((product) => product.priceDiscont >= priceMin)
                     .filter((product) => product.priceDiscont <= priceMax)
                     .filter((product) => categories.includes(product.categories[0]))

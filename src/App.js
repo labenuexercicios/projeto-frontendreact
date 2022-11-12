@@ -9,6 +9,8 @@ import { useState } from 'react'
 
 function App() {
   const [currCart, setCurrCart] = useState([])
+  const [displayProducts , setDisplayProducts] = useState()
+  const [inputName, setInputName] = useState("")
 
 
   const addToCart = (productToFind) => {
@@ -56,15 +58,7 @@ function App() {
   }
 
 
-
-
-
-
-
-
-
-
-
+const newProduct = products.filter((product)=>product.name.includes(inputName))
 
   return (
     <Container size={currCart.length} >
@@ -75,11 +69,14 @@ function App() {
       />
       <div className='main-container' >
 
-        <Header />
+        <Header
+       inputName={inputName} setInputName={setInputName}/>
 
 
 
         <Main
+        inputName={inputName}
+          newProduct={newProduct}
           products={products}
           currCart={currCart}
           addToCart={addToCart}
