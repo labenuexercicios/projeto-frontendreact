@@ -1,5 +1,6 @@
 [
     {
+        "userId":"AlexandreMachado01",
         "firstName":"Alexandre",
         "middleName":"Ferreira",
         "lastName":"Machado",
@@ -23,17 +24,18 @@
             "PaymentType":2,
             "date":"2022-01-30"
         },
-        "currKart":{
+        "currCart":{
             "id":"1",
             "quantity":1
         },
-        "creditCards":{
+        "creditCards":[{
+            "choice": true,
             "number":1234567890123456,
             "validity":"2022-12",
             "cvc":123,
             "name":"Alexandre Machado",
             "cpf": 12345678901
-        },
-        "favorites":[1,2]
+        }],
+        "favorites":["1","2"]
     }
 ]

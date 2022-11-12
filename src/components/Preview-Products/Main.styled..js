@@ -16,7 +16,19 @@ background-color:gray;
         color:black;
         background-color:yellow;
         display:flex;
-        justify-content:space-between
+        justify-content:space-between;
+
+        >div{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin-right:32px;
+            
+            >label{
+                margin-right:8px;
+            }
+            
+        }
 
         }
     .filter-side{
