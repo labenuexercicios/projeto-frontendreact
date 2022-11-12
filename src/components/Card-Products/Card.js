@@ -33,7 +33,7 @@ function Card(props) {
         <CardContainer>
 
             <div className='image-product-div'>
-                {product.offPrice ? //ternario
+                {product.offPrice ? 
                     <div className='label-off'>
                         <img src={saleImg} alt="off label" />
                         <h3>{product.offPrice}%</h3>
@@ -45,7 +45,7 @@ function Card(props) {
             <h2>{product.name}</h2>
 
             <div className='price'>
-                {product.offPrice ? <p className='price-full'>{priceFormat}</p> : ""}
+                {product.offPrice ? <p className='price-full'>{priceFormat}</p> : <br/>}
                 <p className='price-discount'>{priceOffFormat}</p>
                 <p className='p-cash'>á vista </p>
                 <p className="payment-option">ou <span>5x</span> de {priceDiveded}</p>

@@ -11,22 +11,22 @@ export default function Filter(props) {
         handleOnChangeCategory
     } = props
 
-  const [brin,setBrin] =useState(true)
-  const [livros,setLivros] =useState(true)
-  const [roupas,setRoupas] =useState(true)
+    const [brin, setBrin] = useState(true)
+    const [livros, setLivros] = useState(true)
+    const [roupas, setRoupas] = useState(true)
 
-  const handleCheckLivros = (e)=>{
-    setLivros(e.target.checked)
-    handleOnChangeCategory(e)
-  }
-  const handleCheckBrin = (e)=>{
-    setBrin(e.target.checked)
-    handleOnChangeCategory(e)
-  }
-  const handleCheckRoupas = (e)=>{
-    setRoupas(e.target.checked)
-    handleOnChangeCategory(e)
-  }
+    const handleCheckLivros = (e) => {
+        setLivros(e.target.checked)
+        handleOnChangeCategory(e)
+    }
+    const handleCheckBrin = (e) => {
+        setBrin(e.target.checked)
+        handleOnChangeCategory(e)
+    }
+    const handleCheckRoupas = (e) => {
+        setRoupas(e.target.checked)
+        handleOnChangeCategory(e)
+    }
 
 
 
@@ -34,11 +34,11 @@ export default function Filter(props) {
 
     const percentageMax = ((1 - (priceMax / maxPriceProduct)).toFixed(1) * 100)
     const percentageMin = ((priceMin / maxPriceProduct).toFixed(1) * 100)
-  
+
     const stringPercentageMax = `${percentageMax}%`
     const stringPercentageMin = `${(percentageMin)}%`
-  
-   
+
+
 
 
 
@@ -47,7 +47,7 @@ export default function Filter(props) {
             <h1>Filtrado por:</h1>
             <PriceRangeContainer stringPercentageMax={stringPercentageMax} stringPercentageMin={stringPercentageMin} >
                 <h2>Faixa de preco</h2>
-                <hr/>
+                
                 <div className='price-input'>
 
                     <div  >
@@ -69,18 +69,27 @@ export default function Filter(props) {
                     <input type="range" className="range-max" min="0" max={maxPriceProduct} value={priceMax} onChange={handleOnchagePriceMax} />
 
                 </div>
+              
 
             </PriceRangeContainer>
+            <hr />
             <CategoriesContainer>
                 <h2>Categoria</h2>
-                <label>Livros</label>
-                <input type="checkbox" name='category' value="Livros" onChange={handleCheckLivros} checked={livros} />
-                <label>Brinquedos</label>
-                <input type="checkbox" name='category' value="Brinquedos" onChange={handleCheckBrin} checked={brin}/>
-                <label>Roupas</label>
-                <input type="checkbox" name='category' value="Roupas" onChange={handleCheckRoupas} checked={roupas} />
+                <div>
+                    <label>Livros</label>
+                    <input type="checkbox" name='category' value="Livros" onChange={handleCheckLivros} checked={livros} />
+                </div>
+                <div>
+                    <label>Brinquedos</label>
+                    <input type="checkbox" name='category' value="Brinquedos" onChange={handleCheckBrin} checked={brin} />
+                </div>
+                <div>
+                    <label>Roupas</label>
+                    <input type="checkbox" name='category' value="Roupas" onChange={handleCheckRoupas} checked={roupas} />
+                </div>
             </CategoriesContainer>
-        
+            <hr/>
+
             {/* <div>
                 <h2>Idade</h2>
                 <label>0 a 2 anos</label>

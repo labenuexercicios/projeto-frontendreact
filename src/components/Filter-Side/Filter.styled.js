@@ -1,8 +1,19 @@
 import styled from "styled-components";
 
 export const FilterContainer = styled.section`
-border:1px solid black;
+
 width:20%;
+border-radius:4px;
+padding-top:5px;
+padding-right:5px;
+box-shadow: inset -3px -2px 10px 0px rgba(180,180,180,0.20);
+
+
+
+h1{
+        text-align:center;
+    }
+
 
 
 
@@ -13,7 +24,8 @@ export const PriceRangeContainer = styled.div`
     background-color:white;
     padding:10px;
     padding-top:5px;
-
+    margin-bottom:8px;
+  
     >h2{
         text-align:center;
     }
@@ -48,7 +60,9 @@ export const PriceRangeContainer = styled.div`
         background:#ddd;
         border-radius:5px;
         position:relative;
-        padding:4px 8px;
+       
+        display:flex;
+        align-items:color-interpolation-filters;
 
 
         .progress{
@@ -105,6 +119,19 @@ export const PriceRangeContainer = styled.div`
 `
 
 export const CategoriesContainer = styled.div`
+display:flex;
+flex-direction:column;
+padding:8px;
+margin-bottom:8px;
+
+div{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content:flex-end;
+    gap: 8px;
+    
+
+}
 
 `
 

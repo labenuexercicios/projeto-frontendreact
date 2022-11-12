@@ -14,6 +14,7 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
 
  .logo{
     height:100%;
+    padding:8px 0 8px 8px;
    
  }
 
@@ -22,6 +23,7 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
     width:50%;
     div{
         display:flex;
+        justify-content:center;
     }
 
     img{

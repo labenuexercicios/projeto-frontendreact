@@ -6,6 +6,7 @@ import Footer from "./components/Footer-Contacts/Footer"
 import products from "./JSON-Data/products.json"
 import users from "./JSON-Data/users.json"
 import { useState } from 'react'
+import { changeStringSearchStandard } from './uteis/searchStringStandard'
 
 function App() {
   const [currCart, setCurrCart] = useState([])
@@ -56,9 +57,12 @@ function App() {
 
 
   }
+  const productsNames= products.map((prod)=>prod.name)
+   
 
 
-const newProduct = products.filter((product)=>product.name.includes(inputName))
+ const newProduct = products.filter((product)=>changeStringSearchStandard(product.name).includes(inputName))
+ 
 
   return (
     <Container size={currCart.length} >
@@ -70,7 +74,10 @@ const newProduct = products.filter((product)=>product.name.includes(inputName))
       <div className='main-container' >
 
         <Header
-       inputName={inputName} setInputName={setInputName}/>
+       inputName={inputName}
+       setInputName={setInputName}
+       productsNames = {productsNames}
+       />
 
 
 

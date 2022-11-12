@@ -9,17 +9,34 @@ import { changeStringSearchStandard } from '../../uteis/searchStringStandard'
 function Header(props) {
     const {
         inputName,
-        setInputName
+        setInputName,
+        productsNames
     } =props
+
+    const [dummyInput, setDummyInput] = useState()
 
    
 
     const handleChangeinInput = (e)=>
     {  
-        const searchInput =changeStringSearchStandard(e.target.value)
-        setInputName(searchInput)
+
+        setDummyInput(e.target.value)
+        
        
     }
+
+    const handleSendInput = (e, value)=>
+    {
+        if(e.key==="Enter")
+        {
+            const newInputName = changeStringSearchStandard(e.target.value)
+        
+            setInputName(newInputName)
+            setDummyInput("")
+        }
+
+    }
+    
     return (
         <HeaderContainer>
             <img className='logo' src={logo} alt="logo Espaço Legal" />
@@ -29,7 +46,17 @@ function Header(props) {
                     <img src={location} alt="icon location"/>
                     <p>Rua Dr. Juvenal dos Santos 270 - Belo Horizonte Minas Gerais</p>
                 </div>
-                <input type="text" value={inputName} onChange={handleChangeinInput} placeholder="Escrever aqui" />
+                <input type="text" value={dummyInput} onChange={handleChangeinInput} placeholder="Escrever aqui" list='products' onKeyDown={handleSendInput} />
+                
+                <datalist id="products"  >
+                    {
+                        productsNames.map((productName)=>{
+                          return  <option value={productName} key={productName}/>
+                        })
+                    }
+                    
+
+                </datalist>
 
             </div>
 

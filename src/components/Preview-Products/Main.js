@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { changeStringSearchStandard } from '../../uteis/searchStringStandard'
 
 function Main(props) {
-    const { 
+    const {
         inputName,
         products,
         currCart,
@@ -70,7 +70,7 @@ function Main(props) {
         return { ...prod, priceDiscont: priceDiscont }
     })
     const sortMaxMin = arrayPriceDiscont.sort((a, b) => a.priceDiscont - b.priceDiscont)
-    const maxPriceProduct = (sortMaxMin[sortMaxMin.length - 1].priceDiscont).toFixed(0)
+    const maxPriceProduct = (sortMaxMin[sortMaxMin.length - 1].priceDiscont).toFixed(1)
 
     const [priceMin, setPriceMin] = useState(0)
     const [priceMax, setPriceMax] = useState(maxPriceProduct)
@@ -83,7 +83,7 @@ function Main(props) {
         handleSwicthCase(e.target.value)
 
     }
-    const handleSwicthCase = (selected) =>{
+    const handleSwicthCase = (selected) => {
         switch (selected) {
             case "Destaque":
                 return arrayPriceDiscont.sort((a, b) => a.sold - b.sold)
@@ -96,7 +96,7 @@ function Main(props) {
                 return arrayPriceDiscont.sort((a, b) => b.priceDiscont - a.priceDiscont)
             case "MenorPreco":
                 return arrayPriceDiscont.sort((a, b) => a.priceDiscont - b.priceDiscont)
-            case "MaiorAvaliacao":
+            case "MediaAvaliacao":
                 return arrayPriceDiscont.sort((a, b) => a.evaluation - b.evaluation)
             case "MaiorDesconto":
                 return arrayPriceDiscont.sort((a, b) => b.offPrice - a.offPrice)
@@ -108,27 +108,13 @@ function Main(props) {
 
     }
 
- 
+
 
 
 
 
     return (
         <MainContainer>
-            <nav>
-
-                    <label>Ordenar por:</label>
-                    <select value={select} onChange={handleOnChangeSelect}>
-                        <option  value="Destaque" >Destaque</option>
-                        <option value="Crescente" >Crescente</option>
-                        <option value="Decrescente" >Decrescente</option>
-                        <option value="MaiorPreco" >Maior Preço</option>
-                        <option value="MenorPreco" >Menor Preço</option>
-                        <option value="MediaAvaliacao" >Media de Avaliação</option>
-                        <option value="MaiorDesconto" >Maior Desconto</option>
-                    </select>
-            </nav>
-
             <Filter maxPriceProduct={maxPriceProduct}
                 priceMin={priceMin}
                 priceMax={priceMax}
@@ -136,31 +122,49 @@ function Main(props) {
                 handleOnchagePriceMax={handleOnchagePriceMax}
                 handleOnChangeCategory={handleOnChangeCategory}
             />
+            <div className='div-products' >
 
-            <section className='filter-side'>
-                {handleSwicthCase(select)
-                .filter((product) =>changeStringSearchStandard(product.name).includes(inputName))
-                    .filter((product) => product.priceDiscont >= priceMin)
-                    .filter((product) => product.priceDiscont <= priceMax)
-                    .filter((product) => categories.includes(product.categories[0]))
-                    .map((product) => {
+                <nav>
+
+                    <label>Ordenar por:</label>
+                    <select value={select} onChange={handleOnChangeSelect}>
+                        <option value="Destaque" >Destaque</option>
+                        <option value="Crescente" >De A a Z</option>
+                        <option value="Decrescente" >De Z a A</option>
+                        <option value="MaiorPreco" >Preço: Maior</option>
+                        <option value="MenorPreco" >Preço: Menor</option>
+                        <option value="MediaAvaliacao" >Avaliação</option>
+                        <option value="MaiorDesconto" >Maior Desconto</option>
+                    </select>
+                </nav>
 
 
-                        return (
-                            <Card key={product.id}
-                            product={product}
-                            currCart={currCart}
-                            addToCart={addToCart}
-                            addQuantityToProductOnCart={addQuantityToProductOnCart}
-                            reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
-   
-                            />
-                            
-                        )
-                    })
-                }
 
-            </section>
+                <section>
+                    {handleSwicthCase(select)
+                        .filter((product) => changeStringSearchStandard(product.name).includes(inputName))
+                        .filter((product) => product.priceDiscont >= priceMin)
+                        .filter((product) => product.priceDiscont <= priceMax)
+                        .filter((product) => categories.includes(product.categories[0]))
+                        .map((product) => {
+
+
+                            return (
+                                <Card key={product.id}
+                                    product={product}
+                                    currCart={currCart}
+                                    addToCart={addToCart}
+                                    addQuantityToProductOnCart={addQuantityToProductOnCart}
+                                    reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
+
+                                />
+
+                            )
+                        })
+                    }
+
+                </section>
+            </div>
         </MainContainer>
 
 
