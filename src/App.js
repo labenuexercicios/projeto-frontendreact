@@ -9,10 +9,10 @@ import { useState } from 'react'
 
 function App() {
   const [currCart, setCurrCart] = useState([])
-  const size = currCart.length;
+
 
   const addToCart = (productToFind) => {
-    console.log("entrou");
+
 
     const newCart = [...currCart]
 
@@ -25,6 +25,34 @@ function App() {
     } else {
       window.alert("Produto ja adicionado")
     }
+  }
+
+  const addQuantityToProductOnCart = (productToAddQuantity) => {
+    const newCart =[...currCart]
+
+    const productFound = newCart.find((product) => product.id === productToAddQuantity.id)
+
+    productFound.quantity++
+
+    setCurrCart(newCart)
+
+
+  }
+  const reduceQuantityToProductOnCart = (productToReduceQuantity) => {
+    const newCart =[...currCart]
+
+    const productFound = newCart.find((product) => product.id === productToReduceQuantity.id)
+    const indexProduct = newCart.findIndex((product)=>product.id===productToReduceQuantity.id)
+
+    productFound.quantity--
+    if(productFound.quantity<=0)
+    {
+      newCart.splice(indexProduct,1)
+    }
+
+    setCurrCart(newCart)
+
+
   }
 
 
@@ -41,6 +69,8 @@ function App() {
   return (
     <Container size={currCart.length} >
       <CartSide 
+      addQuantityToProductOnCart={addQuantityToProductOnCart}
+      reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
         currCart={currCart}
       />
       <div className='main-container' >
@@ -52,7 +82,9 @@ function App() {
         <Main
           products={products}
           currCart={currCart}
-          addToCart={addToCart} />
+          addToCart={addToCart}
+          addQuantityToProductOnCart={addQuantityToProductOnCart}
+          reduceQuantityToProductOnCart={reduceQuantityToProductOnCart} />
 
       </div>
       <Footer />

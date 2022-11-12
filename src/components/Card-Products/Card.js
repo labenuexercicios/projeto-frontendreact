@@ -1,28 +1,29 @@
 import React from 'react'
-import {
-    CardContainer,
-    DivImagemCard,
-    DivImagemOff,
-    ImagemOff,
-    ValorOff,
-    Imagemproduct,
-    NomeProduto,
-    DivFormaPagamento,
-    PrecoSemOff,
-    PreçoComOff,
-    OpcoesPagamento,
-    BotaoAddCarrinho,
-} from './Card.styled'
+import { CardContainer } from './Card.styled'
 import saleImg from '../../assets/sale.svg'
+import { formatter } from '../../uteis/formatterCurrency';
 
 
 
 
 function Card(props) {
-    const { product , addToCart} = props;
-    const precoVirgula = product.preco.toFixed(2).toString().replace(".", ",")
-    const precoDesconto = ((product.preco * (1 - product.desconto / 100)).toFixed(2)).toString().replace(".", ",")
-    const precoDividido = ((product.preco / 5).toFixed(2).toString().replace(".", ","))
+    const {
+        product,
+        addToCart,
+        currCart,
+        addQuantityToProductOnCart,
+        reduceQuantityToProductOnCart,
+
+    } = props;
+    const priceFormat = formatter.format(product.price)
+    const priceOffFormat = formatter.format(product.price * (1 - (product.offPrice) / 100))
+    const priceDiveded = formatter.format((product.price / 5))
+
+
+    const productInCart = currCart.find((productCard) => productCard.id === product.id)
+   
+
+
 
 
 
@@ -32,25 +33,34 @@ function Card(props) {
         <CardContainer>
 
             <div className='image-product-div'>
-                {product.desconto ? //ternario
+                {product.offPrice ? //ternario
                     <div className='label-off'>
                         <img src={saleImg} alt="off label" />
-                        <h3>{product.desconto}%</h3>
+                        <h3>{product.offPrice}%</h3>
                     </div> : ''}
 
-                <img src={product.imagem[0]} alt="Product Image"  />
+                <img src={product.image[0]} alt="Product Image" />
             </div>
 
-            <h2>{product.nome}</h2>
+            <h2>{product.name}</h2>
 
             <div className='price'>
-                {product.desconto?<p className='price-full'>R${precoVirgula}</p>:""}
-                <p className='price-discount'>R${precoDesconto}</p>
+                {product.offPrice ? <p className='price-full'>{priceFormat}</p> : ""}
+                <p className='price-discount'>{priceOffFormat}</p>
                 <p className='p-cash'>á vista </p>
-                <p className="payment-option">ou <span>5x</span> de ${precoDividido}</p>
+                <p className="payment-option">ou <span>5x</span> de {priceDiveded}</p>
             </div>
+            {productInCart ?
+                <div className='btn-group'>
+                    <button onClick={() => reduceQuantityToProductOnCart(productInCart)}>-</button>
+                    <p>{productInCart.quantity}</p>
+                    <button onClick={() => addQuantityToProductOnCart(productInCart)}>+</button>
+                </div>
 
-            <button onClick={()=>addToCart(product)}>Adicionar ao carrinho</button>
+                : <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button>
+
+            }
+
         </CardContainer>
     )
 }

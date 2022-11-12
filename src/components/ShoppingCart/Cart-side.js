@@ -4,11 +4,15 @@ import { CartCardContainer, CartContainer } from "./Cart-side.styled";
 
 
 
-function KartSide(props) {
-    const { currCart } = props
+function CartSide(props) {
+    const { 
+        currCart,
+        addQuantityToProductOnCart,
+        reduceQuantityToProductOnCart
+    } = props
 
 
-    const subTotal = currCart.reduce((acc, product) => (product.quantity * product.preco + acc), 0)
+    const subTotal = currCart.reduce((acc, product) => (product.quantity * product.price + acc), 0)
 
 
 
@@ -17,7 +21,7 @@ function KartSide(props) {
 
 
         <CartContainer size={currCart.length}>
-            {console.log(currCart.length)}
+           
               <div>
                 <p>SubTotal</p>
                 <p>R${subTotal}</p>
@@ -26,18 +30,17 @@ function KartSide(props) {
 
             {currCart
                 .map((product) => {
-                    console.log(product);
-
+                
                     return (
                         <CartCardContainer key={product.id}>
 
-                            <img src={product.imagem} alt="Imagem do product" />
+                            <img src={product.image} alt="Imagem do product" />
 
-                            <p>R${product.preco}</p>
+                            <p>R${product.price}</p>
                             <div>
-                                <button>-</button>
+                                <button onClick={()=>reduceQuantityToProductOnCart(product)}>-</button>
                                 <p>{product.quantity}</p>
-                                <button>+</button>
+                                <button onClick={()=>addQuantityToProductOnCart(product)}>+</button>
                             </div>
                             <button>Erase</button>
 
@@ -54,4 +57,4 @@ function KartSide(props) {
     )
 
 }
-export default KartSide
+export default CartSide
