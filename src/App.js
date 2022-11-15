@@ -1,7 +1,6 @@
 import React, { useState }  from 'react';
 import {Header} from './components/Header/Header';
 import {Footer} from './components/Footer/Footer';
-import camisetas from './camisetas.json';
 import { Card } from './components/Card/Card';
 import styled from 'styled-components';
 import background from './assets/sci-fi-deep-space-background-loop-free-video.jpeg'
