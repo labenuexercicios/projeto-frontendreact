@@ -25,8 +25,10 @@ export const Search = styled.div`
 
     button {
         background-color: white;
+        color: #6BF6FF;
         border: none;
         width: 70px;
+        height: 40px;
         height: 5vh;
         margin: 0 4px;
 

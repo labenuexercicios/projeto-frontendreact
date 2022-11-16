@@ -1,10 +1,72 @@
 [
     {
         "id": "01",
-        "name": "Camisa",
-        "category": "vestuário",
-        "price": 80.00,
-        "image": "../src/img/black-t-shirt-bitoca-1.png"
+        "name": "T-shirt Eu vim pelas bitocas",
+        "price": 45.90,
+        "image": "../src/assets/tshirtBitocas.svg"
+    },
+
+    {
+        "id": "02",
+        "name": "T-shirt Não acredito em humanos - Alien",
+        "price": 49.90,
+        "image": "../src/assets/tshirtNaoAcreditoEmHumanos.svg"
+    },
+
+    {
+        "id": "03",
+        "name": "T-shirt Minha mente é de outro mundo",
+        "price": 39.90,
+        "image": "../src/assets/tshirtMinhaMenteDeOutroMundo.svg"
+    },
+
+    {
+        "id": "04",
+        "name": "T-shirt Resgatado",
+        "price": 45.90,
+        "image": "../src/assets/tshirtResgatado.svg"
+    },
+
+    {
+        "id": "05",
+        "name": "T-shirt Três certezas da vida",
+        "price": 45.90,
+        "image": "../src/assets/tshirtTresCertezasDaVida.svg"
+    },
+
+    {
+        "id": "06",
+        "name": "T-shirt Astronauta na lua",
+        "price": 49.90,
+        "image": "../src/assets/tshirtAstronautaNaLua.svg"
+    },
+
+    {
+        "id": "07",
+        "name": "T-shirt Não acredito em humanos - Ovni",
+        "price": 39.90,
+        "image": "../src/assets/tshirtNaoAcreditoEmHumanos2.svg"
+    },
+
+    {
+        "id": "08",
+        "name": "T-shirt Ao infinito e além",
+        "price": 45.90,
+        "image": "../src/assets/tshirtAoInfinitoAlem.svg"
+    },
+
+    {
+        "id": "09",
+        "name": "T-shirt Eu preciso de mais espaço",
+        "price": 45.90,
+        "image": "../src/assets/tshirtPrecisoDeMaisEspaço.svg"
+    },
+
+    {
+        "id": "10",
+        "name": "T-shirt Foguete não tem ré",
+        "price": 39.90,
+        "image": "../src/assets/tshirtFogueteNaoTemRe.svg"
     }
     
 ]
