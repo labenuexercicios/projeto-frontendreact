@@ -1,19 +1,19 @@
 import React from "react";
 import {CardCamiseta, ImagemProduto, DescricaoProduto} from "./Card.styles";
-import camisetaAstroBaloes from "../../assets/01camiseta-astronauta-baloes-69,90reais.png"
 
 
 
-export function Card (){
+export function Card (props){
     return(
         <>
-            <CardCamiseta>
-                <ImagemProduto src={camisetaAstroBaloes} alt="Imagem camiseta"/>
+            <CardCamiseta key={props.camiseta.id}>
+                <ImagemProduto src={props.camiseta.image} alt="Imagem camiseta"/>  
                 <DescricaoProduto>
-                    <h3>Título Camiseta</h3>
-                    <p>Tamanhos</p>
-                    <p>Preço</p>
-                    <p>Quantidade</p>
+                    <h3>{props.camiseta.title}</h3>
+                    <p>Código: {props.camiseta.id}</p>
+                    <p>Tamanho: {props.camiseta.size}</p>
+                    <p>Preço: {props.camiseta.price}</p>
+                    <p>Quantidade: {props.camiseta.amount}</p>
                 </DescricaoProduto>
             </CardCamiseta>
         </>

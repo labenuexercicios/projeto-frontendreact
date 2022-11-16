@@ -1,66 +1,66 @@
 [
     {
         "id": "01",
-        "titulo": "Astronauta Balão",
-        "tamanho": "P, M, G, GG e XGG",
-        "preco": "R$ 69.90",
-        "quantidade": "200",
-        "imagem": "colocar url imagem"
+        "title": "Astronauta Balão",
+        "size": "P, M, G, GG e XGG",
+        "price": 69.90,
+        "amount": "200",
+        "image": "./image/01camiseta-astronauta-baloes-69,90reais.png"
     },
     {
         "id": "02",
-        "titulo": "Astronauta Bolhas",
-        "tamanho": "P, M, G e GG",
-        "preco": "R$ 49.90",
-        "quantidade": "400",
-        "imagem": "colocar url imagem"
+        "title": "Astronauta Bolhas",
+        "size": "P, M, G e GG",
+        "price": 49.90,
+        "amount": "400",
+        "image": "./image/02camiseta-astronauta-bolhas-41,90reais.png"
     },
     {
         "id": "03",
-        "titulo": "Astronauta Chill",
-        "tamanho": "P, M, G, GG e XGG",
-        "preco": "R$ 89.90",
-        "quantidade": "200",
-        "imagem": "colocar url imagem"
+        "title": "Astronauta Chill",
+        "size": "P, M, G, GG e XGG",
+        "price": 89.90,
+        "amount": "200",
+        "image": "./image/03camiseta-astronauta-chill-89,90reais.png"
     },
     {
         "id": "04",
-        "titulo": "Astro Dino",
-        "tamanho": "P, M, GG e XGG",
-        "preco": "R$ 49.90",
-        "quantidade": "200",
-        "imagem": "colocar url imagem"
+        "title": "Astro Dino",
+        "size": "P, M, GG e XGG",
+        "price": 49.90,
+        "amount": "200",
+        "image": "./image/04camiseta-astronauta-dinossaura-49,90reais.png"
     },
     {
         "id": "05",
-        "titulo": "Astro Queijo",
-        "tamanho": "P, M, GG e XGG",
-        "preco": "R$ 39.90",
-        "quantidade": "300",
-        "imagem": "colocar url imagem"
+        "title": "Astro Queijo",
+        "size": "P, M, GG e XGG",
+        "price": 39.90,
+        "amount": "300",
+        "image": "./image/05camiseta-astronauta-queijo-39,90reais.png"
     },
     {
         "id": "06",
-        "titulo": "Astronauta no Gráfico",
-        "tamanho": "P, M, GG e XGG",
-        "preco": "R$ 39.90",
-        "quantidade": "250",
-        "imagem": "colocar url imagem"
+        "title": "Astronauta no Gráfico",
+        "size": "P, M, GG e XGG",
+        "price": 39.90,
+        "amount": "250",
+        "image": "./image/06camiseta-grafico-astronauta-30,60reais.png"
     },
     {
         "id": "07",
-        "titulo": "Planestas",
-        "tamanho": "M, GG e XGG",
-        "preco": "R$ 39.90",
-        "quantidade": "100",
-        "imagem": "colocar url imagem"
+        "title": "Planestas",
+        "size": "M, GG e XGG",
+        "price": 39.90,
+        "amount": "100",
+        "image": "./image/07camiseta-planetas-39,90reais.png"
     },
     {
         "id": "08",
-        "titulo": "Saturno Colorido",
-        "tamanho": "P, M e XGG",
-        "preco": "R$ 39.90",
-        "quantidade": "150",
-        "imagem": "colocar url imagem"
+        "title": "Saturno Colorido",
+        "size": "P, M e XGG",
+        "price": 39.90,
+        "amount": "150",
+        "image": "./image/08camiseta-saturno-39,90reais.png"
     }
 ]

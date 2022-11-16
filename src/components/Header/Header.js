@@ -17,13 +17,15 @@ export function Header (props){
             </Buscador>
             <FilterCart>
                 <MinimumMaximum>
-                <input type="number" id="minimum" placeholder="Mínimo"/> 
-                <input type="number" id="maximum" placeholder="Máximo"/>
+                <input type="number" id="minimum" placeholder="Mínimo" value={props.inputMinPrice}
+                onChange={(e)=>{props.setInputMinPrice(e.target.value)}}/> 
+                <input type="number" id="maximum" placeholder="Máximo" value={props.inputMaxPrice} 
+                onChange={(e)=>{props.setInputMaxPrice(e.target.value)}}/>
                 </MinimumMaximum>
 
-                <SelectOrder>
-                <option value="">Crescente</option>
-                <option value="">Decrescente</option>
+                <SelectOrder value={props.sortByPrice} onChange={(e)=>{props.setSortByPrice(e.target.value)}}>
+                <option value="crescente" >Crescente</option>
+                <option value="decrescente">Decrescente</option>
                 </SelectOrder>
 
                 <ImagemCarrinho src={cartIcon} alt="Imagem de Carrinho"/>
