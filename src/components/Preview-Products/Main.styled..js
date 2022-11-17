@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const MainContainer = styled.main`
-border:1px solid black;
+
 display:flex;
 
 

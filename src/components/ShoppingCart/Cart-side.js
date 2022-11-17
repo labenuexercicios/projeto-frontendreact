@@ -12,7 +12,8 @@ function CartSide(props) {
     } = props
 
 
-    const subTotal = currCart.reduce((acc, product) => (product.quantity * product.price + acc), 0)
+    let subTotal =( currCart.reduce((acc, product) => (product.quantity * product.price + acc), 0)).toFixed(2)
+    
 
 
 
@@ -42,7 +43,7 @@ function CartSide(props) {
                                 <p>{product.quantity}</p>
                                 <button onClick={()=>addQuantityToProductOnCart(product)}>+</button>
                             </div>
-                            <button>Erase</button>
+                            <button onClick={()=>reduceQuantityToProductOnCart(product,0)}>Erase</button>
 
                         </CartCardContainer>)
 
