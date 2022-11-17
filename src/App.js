@@ -7,6 +7,7 @@ import products from "./JSON-Data/products.json"
 import users from "./JSON-Data/users.json"
 import { useState } from 'react'
 import { changeStringSearchStandard } from './uteis/searchStringStandard'
+import Login from './screens/loginScreen/Login'
 
 function App() {
   const [currCart, setCurrCart] = useState([])
@@ -41,14 +42,14 @@ function App() {
 
 
   }
-  const reduceQuantityToProductOnCart = (productToReduceQuantity) => {
+  const reduceQuantityToProductOnCart = (productToReduceQuantity, value =1) => {
     const newCart =[...currCart]
 
     const productFound = newCart.find((product) => product.id === productToReduceQuantity.id)
     const indexProduct = newCart.findIndex((product)=>product.id===productToReduceQuantity.id)
 
     productFound.quantity--
-    if(productFound.quantity<=0)
+    if(productFound.quantity<=0 || value===0)
     {
       newCart.splice(indexProduct,1)
     }
@@ -65,36 +66,39 @@ function App() {
  
 
   return (
-    <Container size={currCart.length} >
-      <CartSide 
-      addQuantityToProductOnCart={addQuantityToProductOnCart}
-      reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
-        currCart={currCart}
-      />
-      <div className='main-container' >
+    
 
-        <Header
-       inputName={inputName}
-       setInputName={setInputName}
-       productsNames = {productsNames}
-       />
+      <Login/>
+    // <Container size={currCart.length} >
+    //   <CartSide 
+    //   addQuantityToProductOnCart={addQuantityToProductOnCart}
+    //   reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
+    //     currCart={currCart}
+    //   />
+    //   <div className='main-container' >
 
-
-
-        <Main
-        inputName={inputName}
-          newProduct={newProduct}
-          products={products}
-          currCart={currCart}
-          addToCart={addToCart}
-          addQuantityToProductOnCart={addQuantityToProductOnCart}
-          reduceQuantityToProductOnCart={reduceQuantityToProductOnCart} />
-
-      </div>
-      <Footer />
+    //     <Header
+    //    inputName={inputName}
+    //    setInputName={setInputName}
+    //    productsNames = {productsNames}
+    //    />
 
 
-    </Container>
+
+    //     <Main
+    //     inputName={inputName}
+    //       newProduct={newProduct}
+    //       products={products}
+    //       currCart={currCart}
+    //       addToCart={addToCart}
+    //       addQuantityToProductOnCart={addQuantityToProductOnCart}
+    //       reduceQuantityToProductOnCart={reduceQuantityToProductOnCart} />
+
+    //   </div>
+    //   <Footer />
+
+
+    // </Container>
   )
 }
 

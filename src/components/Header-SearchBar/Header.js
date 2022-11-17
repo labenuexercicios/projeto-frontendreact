@@ -40,6 +40,7 @@ function Header(props) {
     return (
         <HeaderContainer>
             <img className='logo' src={logo} alt="logo Espaço Legal" />
+            {productsNames !== undefined?
 
             <div className='input-endereco'>
                 <div>
@@ -54,11 +55,10 @@ function Header(props) {
                           return  <option value={productName} key={productName}/>
                         })
                     }
-                    
-
                 </datalist>
-
             </div>
+             : <div></div>
+}
 
             <img className='login' src={entrar} alt="Login Sing up" />
             <img className='cart' src={carrinho} alt="Cart" />
