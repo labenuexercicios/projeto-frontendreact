@@ -1,0 +1,142 @@
+
+[
+    {
+        "id": 1,
+        "name": "Boneco Buzz Lightyear",
+        "type": "Brinquedos",
+        "price": "205,00" ,
+        "imageUrl": "https://images-americanas.b2w.io/produtos/4807842989/imagens/boneco-buzz-lightyear-com-10-frases-toy-story/4807842989_1_medium.jpg",
+        "imageAlt": "Boneco Buzz Lightyear"   
+    },
+
+
+    {
+        "id": 2,
+        "name": "Tapete de Astronauta",
+        "type": "Produtos",
+        "price": "119,90" ,
+        "imageUrl": "https://1279028l.ha.azioncdn.net/img/2020/05/produto/43317/266-1.jpg?ims=810x810",
+        "imageAlt": "Tapete de Atividades Infantil Astronauta"   
+    },
+
+
+    {
+        "id": 3,
+        "name": "Jogo - Astronomia",
+        "type": "Brinquedos",
+        "price": "131,99" ,
+        "imageUrl": "https://rihappy.vtexassets.com/arquivos/ids/399387-800-auto?v=637045999369570000&width=800&height=auto&aspect=true",
+        "imageAlt": "Jogo Astronomia"   
+    },
+
+
+    {
+        "id": 4,
+        "name": "Kit Planetário Sistema Solar",
+        "type": "Brinquedos",
+        "price": "154,00" ,
+        "imageUrl": "https://static.wixstatic.com/media/5bdf06_2d7dc7102e824c04b39c2da82f31954e~mv2.jpg/v1/fill/w_500,h_500,al_c,q_85,usm_0.66_1.00_0.01/5bdf06_2d7dc7102e824c04b39c2da82f31954e~mv2.webp",
+        "imageAlt": "Kit Planetario sistema solar"   
+    },
+
+
+    {
+        "id": 5,
+        "name": "Tenda Espacial Foguete",
+        "type": "Brinquedos",
+        "price": "319,00" ,
+        "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTSnRjk8hjFkOBL4YWzor2e44T0bKtYMofuzKQwOH3pTe1X7b6IW6wIpNGw0yAfidO1YCbFNy2ETQ&usqp=CAc",
+        "imageAlt": "Tenda espacial de foguete"   
+    },
+
+    {
+        "id": 6,
+        "name": "Luminária Astronauta",
+        "type": "Produtos",
+        "price": "215,00" ,
+        "imageUrl": "https://i0.wp.com/casapri.com.br/wp-content/uploads/2022/08/S7e27452da48748cdba07c71c2b1526f0y.jpg_960x960.jpg?fit=960%2C960&ssl=1",
+        "imageAlt": "Luminária Astronauta"   
+    },
+
+    {
+        "id": 7,
+        "name": "Almofada Lua Amarela",
+        "type": "Produtos",
+        "price": "25,90" ,
+        "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQwqaDGaWGBxQvDJT4CwsJ8YJnds0meOm3pYpaKhOSD6th1E2WS6EatNVn6uLvCDqZf2CpEt9UMh21ff9NBCZ6VnOSFataw0EpfhEmUl3k&usqp=CAE",
+        "imageAlt": "Almofada lua amarela"   
+    },
+
+    {
+        "id": 8,
+        "name": "Onibus Espacial",
+        "type": "Brinquedos",
+        "price": "399,90" ,
+        "imageUrl": "https://static3.tcdn.com.br/img/img_prod/460977/brinquedo_replica_onibus_espacial_shuttle_nasa_espaco_astronauta_discovery_ov_102_columbia_luz_e_som_85625_1_8592469c22e375292fb875951900529f.jpeg",
+        "imageAlt": "Onibus Espacial" 
+    },
+
+    {
+        "id": 9,
+        "name": "Quebra Cabeças 3D",
+        "type": "Brinquedos",
+        "price": "170,90" ,
+        "imageUrl": "https://m.media-amazon.com/images/I/71ffCsXY-EL._AC_SX679_.jpg",
+        "imageAlt": "Quebra Cabeças 3D" 
+    },
+
+    {
+        "id": 10,
+        "name": "Garrafa Buzz Lightyear",
+        "type": "Produtos",
+        "price": "17,99" ,
+        "imageUrl": "https://www.avon.com.br/assets/fit-in/720x720/center/middle/https%3A%2F%2Favongroup.vtexassets.com%2Farquivos%2Fids%2F180704%2F1485170.jpg%3Fv%3D637904670601070000",
+        "imageAlt": "Garrafa Buzz Ligthtyer" 
+    },
+
+    {
+        "id": 11,
+        "name": "Capsula Espacial com luz",
+        "type": "Brinquedos",
+        "price": "69,90" ,
+        "imageUrl": "https://a-static.mlcdn.com.br/800x560/capsula-espacial-com-luz-space-explorer-multikids-br1507/obaboxtecnologia/17756/bdb5c73e43421b4951570faf1b555f48.jpg",
+        "imageAlt": "Capsula Espacial com luz"
+    },
+
+
+    {
+        "id": 12,
+        "name": "Foguete Astronauta com luz e som",
+        "type": "Brinquedos",
+        "price": "299,90" ,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE7igO0WEnc-evrvgY2-AggbGxLo_Gwyz--w&usqp=CAU",
+        "imageAlt": "Foguete Astronauta com luz e som"
+    }, 
+
+    {
+        "id": 13,
+        "name": "Astronauta Dançarino",
+        "type": "Brinquedos",
+        "price": "79,90" ,
+        "imageUrl": "https://images-americanas.b2w.io/produtos/3713771454/imagens/danca-eletronica-espaco-robo-astronauta-musica-infantil-brinquedos-leves-tai4424/3713771497_1_large.jpg",
+        "imageAlt": "Astronauta Dançarino"
+    }, 
+
+    {
+        "id": 14,
+        "name": "Jogo Astronautas",
+        "type": "Brinquedos",
+        "price": "150,00" ,
+        "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_848933-MLB51935048281_102022-O.webp",
+        "imageAlt": "Jogo Astronautas"
+    },
+
+    {
+        "id": 15,
+        "name": "Pop Funko Buzz Lightyear Toy Story",
+        "type": "Brinquedos",
+        "price": "180,90" ,
+        "imageUrl": "https://m.media-amazon.com/images/I/71vXfEbOU9L._AC_SX569_.jpg",
+        "imageAlt": "Pop Funko Buzz Lightyear Toy Story"
+    }
+]
