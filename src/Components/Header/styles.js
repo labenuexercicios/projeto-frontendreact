@@ -3,14 +3,13 @@ import styled from "styled-components"
 export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 20px;
     width: 100%;
     height: 10vh;
     background-color: #012f6d;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-variant: small-caps;
-    font-size: larger;
+    
 `
 
 export const Search = styled.div`
