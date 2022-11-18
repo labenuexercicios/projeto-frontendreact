@@ -1,22 +1,35 @@
-import {ItemCart} from './styled'
+import {Cart, ItemCart, EmptyCart} from './styled'
+import satellites from '../../Satellites/satellites.json'
 
 export const PageCart = (props) => { 
 
-  return(
-    <>
-        {props.listCart.length !== 0 ? 
-          // props.listCart.map((item) => {
-            <ItemCart>
-              {/* <img src={item.image}/> */}
-              <p>Tem item</p>
+  const productsInCart = satellites.filter((product) => {
+    if(props.listIdCart.includes(product.id)){
+      return product
+    }
+  })
 
-            </ItemCart>
-          // })
+  return(
+    <Cart>
+      {props.listIdCart.length !== 0 ? 
+          productsInCart
+          .map((item) => {
+            return (
+              <ItemCart key={item.id}>
+                <div className='image-cart'>
+                  <img src={item.image}/>
+                </div>
+                <div className='info-cart'>
+                  <p>{item.name}</p>
+                </div>
+              </ItemCart>
+            )
+          })
           :
-            <ItemCart>
-              <p>Nenhum item comprado</p>
-            </ItemCart>
-        }
-    </>
+            <EmptyCart>
+              <p>Carrinho Vazio :( </p>
+            </EmptyCart>
+      }
+    </Cart>
   )
 }

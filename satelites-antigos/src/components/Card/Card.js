@@ -18,12 +18,26 @@ import satellites from '../../Satellites/satellites.json'
 export const Card = (props) => {
   const [Style, setStyle] = useState("hideCard")
 
-  function onClickButtonBuy(e) {
-    const clickedSatellite = satellites.filter((satellite) => {
-      return satellite.id === e.currentTarget.id
-    })
-    props.setClickedItems([...props.clickedItems, clickedSatellite[0].id])
-    props.updateCart()
+  // function onClickButtonBuy(e) {
+  //   const clickedSatellite = satellites.filter((satellite) => {
+  //     return satellite.id === e.currentTarget.id
+  //   })
+  //   props.setClickedItems([...props.clickedItems, clickedSatellite[0].id])
+  //   props.updateCart()
+  // }
+  // const [clickedItemId, setClickedItemId] = useState(Number)
+  function addToCart(itemId) {
+    const newListIdCart = [...props.listIdCart]
+    
+    const idFound = newListIdCart.includes(itemId) 
+    
+    if (!idFound) {
+      // const newProduct = {...productToAdd, quantity: 1}
+      // newCart.push(newProduct)
+      newListIdCart.push(itemId)
+    }
+      
+    props.setListIdCart(newListIdCart)
   }
   
 
@@ -49,7 +63,7 @@ export const Card = (props) => {
             </InfoDiv>
             <InfoDiv>
               <button onClick={() => setStyle("openCard")}>INFO</button>
-              <button id={props.id} onClick={onClickButtonBuy}>BUY</button>
+              <button onClick={() => addToCart(props.id)}>BUY</button>
             </InfoDiv>
           </Information>
           <Detail1></Detail1>

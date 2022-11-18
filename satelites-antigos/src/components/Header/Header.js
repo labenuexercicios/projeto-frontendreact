@@ -1,6 +1,6 @@
 import {ContainerHeader, 
         ImgLupa, 
-        ImgCarrinho, 
+        Carrinho, 
         HeaderContent, 
         ContainerLogo, 
         ContainerDiv,
@@ -34,7 +34,10 @@ export const Header = (props) => {
             <span onClick={() => props.setPage("home")}>HOME</span>
             <span onClick={() => props.setPage("store")}>STORE</span>
             <ImgLupa src={lupa} onClick={() => props.setPage("login")}/>
-            <ImgCarrinho src={carrinho} onClick={() => props.setPage("cart")}/>
+            <Carrinho>
+              <div>{props.listIdCart.length === 0 ? "" : props.listIdCart.length}</div>
+              <img src={carrinho} onClick={() => props.setPage("cart")}/>
+            </Carrinho>
           </Nav>
         </HeaderContent>
       </ContainerHeader>

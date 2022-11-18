@@ -17,30 +17,34 @@ export const Main = (props) => {
   const [radioYear, setRadioYear] = useState("")
   const [radioPrice, setRadioPrice] = useState("")
 
-  const [clickedItems, setClickedItems] = useState([]) 
-  const [listCart, setListCart] = useState([])
+  // const [clickedItems, setClickedItems] = useState([]) 
+  // const [listCart, setListCart] = useState([])
 
-  //Remove ids duplicate
-  const uniqueIds = []
-  clickedItems.map((idItem) => {
-    if(uniqueIds.includes(idItem) === false){
-      uniqueIds.push(idItem)
-    }
-  })
+  // //Remove ids duplicate
+  // const uniqueIds = []
+  // clickedItems.map((idItem) => {
+  //   if(uniqueIds.includes(idItem) === false){
+  //     uniqueIds.push(idItem)
+  //   }
+  // })
 
-  //Create array of objects without repetition
-  const arrayUniqueItems = uniqueIds.map((id) => {
-    const uniqueItems = satellites.filter((satellite) => {
-      return satellite.id  === id
-    })
-    return uniqueItems[0]
-  }) 
+  // //Create array of objects without repetition
+  // const arrayUniqueItems = uniqueIds.map((id) => {
+  //   const uniqueItems = satellites.filter((satellite) => {
+  //     return satellite.id  === id
+  //   })
+  //   return uniqueItems[0]
+  // }) 
   
-  //Send objects to listCart 
-  function updateCart(){
-    setListCart([...arrayUniqueItems])
-    console.log(listCart)
-  }
+  // //Send objects to listCart 
+  // function updateCart(){
+  //   setListCart([...arrayUniqueItems])
+  //   console.log(listCart)
+  // }
+
+
+  // const [listIdCart, setListIdCart] = useState([])
+  
 
   return(
     <ContainerMain>
@@ -89,11 +93,11 @@ export const Main = (props) => {
                 price={satellite.price} 
                 description={satellite.description} 
                 link={satellite.link}
-                listCart={listCart}
-                setListCart={setListCart}
-                clickedItems={clickedItems}
-                setClickedItems={setClickedItems}
-                updateCart={updateCart}
+                listIdCart={props.listIdCart}
+                setListIdCart={props.setListIdCart}
+                // clickedItems={clickedItems}
+                // setClickedItems={setClickedItems}
+                // updateCart={updateCart}
                 />
               </BackgroundCard>)
             })
@@ -104,7 +108,7 @@ export const Main = (props) => {
         <PageLogin/>
       : 
         <PageCart
-        listCart={listCart}
+        listIdCart={props.listIdCart}
         />
       }
     </ContainerMain>
