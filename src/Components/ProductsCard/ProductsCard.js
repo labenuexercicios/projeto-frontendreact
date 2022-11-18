@@ -3,14 +3,14 @@ import { Card } from "./styles";
 
 
 export function ProductsCard(props) {
-    //const [productsList] = props
-    
+    const {product} = props
+   
     return (
         <Card>
-            <img src="" alt="imagem produto"></img>
-            <h4>Título</h4>
-            <p>Preço: </p>
-            <button type="submit">Adicionar ao carrinho</button>
+            <img src={product.image} alt="imagem produto"></img>
+            <span>{product.name}</span>
+            <p>R$ {product.price}</p>
+            <button>Adicionar ao carrinho</button>
         </Card>
     )
 }
