@@ -9,7 +9,8 @@ function CartSide(props) {
         currCart,
         setScreen,
         addQuantityToProductOnCart,
-        reduceQuantityToProductOnCart
+        reduceQuantityToProductOnCart,
+        handleClickProduct
     } = props
 
 
@@ -37,7 +38,7 @@ function CartSide(props) {
                     return (
                         <CartCardContainer key={product.id}>
 
-                            <img src={product.image[0]} alt={product.altImage} />
+                            <img onClick={()=>handleClickProduct(product)} src={product.image[0]} alt={product.altImage} />
 
                             <p>R${product.priceDiscont.toFixed(2)}</p>
                             <div>

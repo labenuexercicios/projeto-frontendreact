@@ -8,7 +8,8 @@ function Cart(props) {
     const { currCart,
         addToCart,
         addQuantityToProductOnCart,
-        reduceQuantityToProductOnCart } = props
+        reduceQuantityToProductOnCart,
+        handleClickProduct } = props
 
     let subTotal = (currCart.reduce((acc, product) => (product.quantity * product.priceDiscont + acc), 0)).toFixed(2)
     let priceFull = (currCart.reduce((acc, product) => (product.quantity * product.price + acc), 0)).toFixed(2)
@@ -33,7 +34,7 @@ function Cart(props) {
                     return (
                         <CardProduct key={product.id} discount={product.offPrice}>
 
-                            <img className="image-product" src={product.image[0]} alt="" />
+                            <img  onClick={()=>handleClickProduct(product)} className="image-product" src={product.image[0]} alt="" />
                             <div className="info-product">
                                 <h2>{product.name}</h2>
                                 <p>Marca: {product.brand}</p>
