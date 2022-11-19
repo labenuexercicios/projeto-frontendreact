@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavHeader = styled.header`
-  background-color: #303f9f;
+  background-color: #1471c1;
   display: flex;
   height: 100px;
   width: 100%;
@@ -15,7 +15,7 @@ export const NavLogo = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: 30px;
-  p {
+  h1 {
     font-size: 20px;
   }
 `;
@@ -49,5 +49,6 @@ export const NavFilters = styled.div`
   input {
     margin-left: 10px;
     border-width: 0;
+    padding: 3px 30px 3px 10px;
   }
 `;

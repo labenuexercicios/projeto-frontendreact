@@ -6,7 +6,7 @@ function Header() {
         <>
             <NavHeader>
                 <NavLogo>
-                    <p>Loja de Jogos</p>
+                    <h1>Loja de Jogos</h1>
                 </NavLogo>
                 <NavSearch>
                     <Searchbar>
