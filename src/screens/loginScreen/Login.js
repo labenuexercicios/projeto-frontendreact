@@ -19,7 +19,9 @@ function Login() {
          
             <ContainerMainForm>
                 <ContainerForm>
-                    {formFlow===1? <FormLogin setFormFlow={setFormFlow} /> : <FormSignUp />}
+                    {formFlow===1? 
+                    <FormLogin setFormFlow={setFormFlow} /> : 
+                    <FormSignUp />}
                     
                     <div className="buttonOutSide">
                         <span>OU</span>

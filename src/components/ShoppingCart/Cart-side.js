@@ -7,6 +7,7 @@ import { CartCardContainer, CartContainer } from "./Cart-side.styled";
 function CartSide(props) {
     const { 
         currCart,
+        setScreen,
         addQuantityToProductOnCart,
         reduceQuantityToProductOnCart
     } = props
@@ -26,16 +27,17 @@ function CartSide(props) {
               <div>
                 <p>SubTotal</p>
                 <p>R${subTotal}</p>
-                <button>ir para carrinho</button>
+                <button onClick={()=>setScreen("cart")}>ir para carrinho</button>
             </div>
 
             {currCart
                 .map((product) => {
+                   
                 
                     return (
                         <CartCardContainer key={product.id}>
 
-                            <img src={product.image} alt="Imagem do product" />
+                            <img src={product.image[0]} alt={product.altImage} />
 
                             <p>R${product.priceDiscont.toFixed(2)}</p>
                             <div>

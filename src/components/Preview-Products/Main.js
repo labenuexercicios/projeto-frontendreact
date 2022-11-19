@@ -12,24 +12,23 @@ function Main(props) {
         currCart,
         addToCart,
         addQuantityToProductOnCart,
-        reduceQuantityToProductOnCart
+        reduceQuantityToProductOnCart,
+        setInputName
     } = props
 
 
 
+
     const handleOnchagePriceMin = (e) => {
-        if (!priceMax - priceMin <= 10) {
-            setPriceMin(e.target.value)
-        }
+       
+        e.target.value? setPriceMin(e.target.value):setPriceMin(0)   
     }
     const handleOnchagePriceMax = (e) => {
-        if (!priceMax - priceMin <= 10) {
-            setPriceMax(e.target.value)
-        }
+       console.log(e.target.value);
+       e.target.value?setPriceMax(e.target.value):setPriceMax(0)
     }
 
     const handleOnChangeCategory = (e) => {
-
         const valueCheckbox = e.target.value;
         const newCategory = [...categories]
         if (e.target.checked) {
@@ -47,16 +46,6 @@ function Main(props) {
         setCategories(newCategory)
     }
 
-    const filterByCategory = (prod) => {
-        let bool = false
-        for (let a of categories) {
-            if (prod.categories.includes(a))
-                bool = true
-        }
-
-    }
-
-
 
     const arrayPriceDiscont = products.map((prod) => {
 
@@ -64,7 +53,7 @@ function Main(props) {
         return { ...prod, priceDiscont: priceDiscont }
     })
     const sortMaxMin = arrayPriceDiscont.sort((a, b) => a.priceDiscont - b.priceDiscont)
-    const maxPriceProduct = (sortMaxMin[sortMaxMin.length - 1].priceDiscont).toFixed(1)
+    const maxPriceProduct = ((sortMaxMin[sortMaxMin.length - 1].priceDiscont).toFixed(0))
 
     const [priceMin, setPriceMin] = useState(0)
     const [priceMax, setPriceMax] = useState(maxPriceProduct)
@@ -94,7 +83,7 @@ function Main(props) {
                 return arrayPriceDiscont.sort((a, b) => a.evaluation - b.evaluation)
             case "MaiorDesconto":
                 return arrayPriceDiscont.sort((a, b) => b.offPrice - a.offPrice)
-                deafalt:
+                default:
                 return sortMaxMin
 
 
@@ -110,6 +99,7 @@ function Main(props) {
     return (
         <MainContainer>
             <Filter maxPriceProduct={maxPriceProduct}
+            setInputName={setInputName}
                 priceMin={priceMin}
                 priceMax={priceMax}
                 handleOnchagePriceMin={handleOnchagePriceMin}

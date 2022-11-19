@@ -8,7 +8,8 @@ export default function Filter(props) {
         priceMax,
         handleOnchagePriceMin,
         handleOnchagePriceMax,
-        handleOnChangeCategory
+        handleOnChangeCategory,
+        setInputName
     } = props
 
     const [brin, setBrin] = useState(true)
@@ -28,21 +29,16 @@ export default function Filter(props) {
         handleOnChangeCategory(e)
     }
 
-    // useEffect(()=>{
-    //     setLivros(false)
-    //     setBrin(false)
-    //     setRoupas(false)
-
-
-
-    // },[brin , livros , roupas])
+const handleClickReset= () =>{
+    setInputName("")
+}
 
 
 
 
 
-    const percentageMax = ((1 - (priceMax / maxPriceProduct)).toFixed(1) * 100)
-    const percentageMin = ((priceMin / maxPriceProduct).toFixed(1) * 100)
+    const percentageMax = ((1 - (priceMax / maxPriceProduct))* 100)
+    const percentageMin = ((priceMin / maxPriceProduct) * 100)
 
     const stringPercentageMax = `${percentageMax}%`
     const stringPercentageMin = `${(percentageMin)}%`
@@ -98,6 +94,9 @@ export default function Filter(props) {
                 </div>
             </CategoriesContainer>
             <hr/>
+
+
+            <button onClick={handleClickReset}>Resetar pesquisa</button>
 
            
 

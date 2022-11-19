@@ -8,7 +8,6 @@ import { changeStringSearchStandard } from '../../uteis/searchStringStandard'
 
 function Header(props) {
     const {  
-        inputName,
         setInputName,
         productsNames,
         screen,
@@ -30,27 +29,30 @@ function Header(props) {
     {  
 
         setDummyInput(e.target.value)
+       
         
        
     }
 
     const handleSendInput = (e, value)=>
     {
-        if(e.key==="Enter")
+        if(e.key==="Enter" || e.key ==="Tab")
         {
             const newInputName = changeStringSearchStandard(e.target.value)
-        
             setInputName(newInputName)
             setDummyInput("")
+        setScreen("main")
+
+          
         }
 
     }
     
     return (
         <HeaderContainer>
-            <img onClick={()=>handleSreenChange(1)} className='logo' src={logo} alt="logo Espaço Legal" />
+            <img onClick={()=>handleSreenChange("welcome")} className='logo' src={logo} alt="logo Espaço Legal" />
             
-            {(screen===1 || screen === 3 ) &&
+            {(screen==="main" || screen === "cart" || screen === "welcome") &&
 
             <div className='input-endereco'>
                 <div>
@@ -59,7 +61,7 @@ function Header(props) {
                 </div>
                 <input type="text" value={dummyInput} onChange={handleChangeinInput} placeholder="Escrever aqui" list='products' onKeyDown={handleSendInput} />
                 
-                <datalist id="products"  >
+                <datalist onChange={handleSendInput} id="products"  >
                     {
                         productsNames.map((productName)=>{
                           return  <option value={productName} key={productName}/>
@@ -72,13 +74,13 @@ function Header(props) {
 }
 
 {
-screen!==2 &&
-<img onClick={()=>handleSreenChange(2)} className='login' src={entrar} alt="Login Sing up" />
+screen!=="login" &&
+<img onClick={()=>handleSreenChange("login")} className='login' src={entrar} alt="Login Sing up" />
 }
 
 {
-screen!==3 &&
-<img onClick={()=>handleSreenChange(3)} className='cart' src={carrinho} alt="Cart" />
+screen!=="cart" &&
+<img onClick={()=>handleSreenChange("cart")} className='cart' src={carrinho} alt="Cart" />
 }
             
           

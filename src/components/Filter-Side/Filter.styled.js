@@ -14,6 +14,7 @@ h1{
         text-align:center;
     }
 
+text-align:center;
 
 
 
@@ -88,7 +89,7 @@ export const PriceRangeContainer = styled.div`
             height:5px;
             width:100%;
             pointer-events:none;
-
+            left:0;
             background:none;
             -webkit-appearance:none;       
          }
