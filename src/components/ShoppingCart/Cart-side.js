@@ -12,7 +12,7 @@ function CartSide(props) {
     } = props
 
 
-    let subTotal =( currCart.reduce((acc, product) => (product.quantity * product.price + acc), 0)).toFixed(2)
+    let subTotal =( currCart.reduce((acc, product) => (product.quantity * product.priceDiscont + acc), 0)).toFixed(2)
     
 
 
@@ -37,7 +37,7 @@ function CartSide(props) {
 
                             <img src={product.image} alt="Imagem do product" />
 
-                            <p>R${product.price}</p>
+                            <p>R${product.priceDiscont.toFixed(2)}</p>
                             <div>
                                 <button onClick={()=>reduceQuantityToProductOnCart(product)}>-</button>
                                 <p>{product.quantity}</p>

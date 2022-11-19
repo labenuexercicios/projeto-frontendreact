@@ -7,7 +7,9 @@ flex-direction:row-reverse;
 width:100vw;
 .main-container{
     
-  width:${(props)=>(props.size ? "85%":"100vw")}
+  width:${(props)=>(
+    props.size && props.screen ===1 ? "85%":"100vw"
+    )}
    
 
 }

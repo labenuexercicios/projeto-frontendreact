@@ -58,12 +58,6 @@ function Main(props) {
 
 
 
-
-
-
-
-
-
     const arrayPriceDiscont = products.map((prod) => {
 
         const priceDiscont = prod.price * (1 - (prod.offPrice / 100))

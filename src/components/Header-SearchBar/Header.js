@@ -7,13 +7,22 @@ import { useState } from 'react'
 import { changeStringSearchStandard } from '../../uteis/searchStringStandard'
 
 function Header(props) {
-    const {
+    const {  
         inputName,
         setInputName,
-        productsNames
+        productsNames,
+        screen,
+        setScreen
     } =props
 
     const [dummyInput, setDummyInput] = useState()
+  
+
+
+    const handleSreenChange = (screen)=>{
+        setScreen(screen)
+
+    }
 
    
 
@@ -39,8 +48,9 @@ function Header(props) {
     
     return (
         <HeaderContainer>
-            <img className='logo' src={logo} alt="logo Espaço Legal" />
-            {productsNames !== undefined?
+            <img onClick={()=>handleSreenChange(1)} className='logo' src={logo} alt="logo Espaço Legal" />
+            
+            {(screen===1 || screen === 3 ) &&
 
             <div className='input-endereco'>
                 <div>
@@ -56,12 +66,22 @@ function Header(props) {
                         })
                     }
                 </datalist>
+                
             </div>
-             : <div></div>
+         
 }
 
-            <img className='login' src={entrar} alt="Login Sing up" />
-            <img className='cart' src={carrinho} alt="Cart" />
+{
+screen!==2 &&
+<img onClick={()=>handleSreenChange(2)} className='login' src={entrar} alt="Login Sing up" />
+}
+
+{
+screen!==3 &&
+<img onClick={()=>handleSreenChange(3)} className='cart' src={carrinho} alt="Cart" />
+}
+            
+          
 
 
 
