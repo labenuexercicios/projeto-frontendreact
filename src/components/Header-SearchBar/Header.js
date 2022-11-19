@@ -52,7 +52,7 @@ function Header(props) {
         <HeaderContainer>
             <img onClick={()=>handleSreenChange("welcome")} className='logo' src={logo} alt="logo Espaço Legal" />
             
-            {(screen==="main" || screen === "cart" || screen === "welcome") &&
+            {(screen==="main" || screen === "cart" || screen === "welcome" || screen === "product") &&
 
             <div className='input-endereco'>
                 <div>

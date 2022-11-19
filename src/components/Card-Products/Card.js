@@ -13,6 +13,7 @@ function Card(props) {
         currCart,
         addQuantityToProductOnCart,
         reduceQuantityToProductOnCart,
+        handleClickProduct
 
     } = props;
     const priceFormat = formatter.format(product.price)
@@ -39,7 +40,7 @@ function Card(props) {
                         <h3>{product.offPrice}%</h3>
                     </div> : ''}
 
-                <img src={product.image[0]} alt="Product Image" />
+                <img onClick={()=>handleClickProduct(product)} src={product.image[0]} alt="Product Image" />
             </div>
 
             <h2>{product.name}</h2>

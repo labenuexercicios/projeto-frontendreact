@@ -13,7 +13,8 @@ function Main(props) {
         addToCart,
         addQuantityToProductOnCart,
         reduceQuantityToProductOnCart,
-        setInputName
+        setInputName,
+        handleClickProduct
     } = props
 
 
@@ -140,6 +141,7 @@ function Main(props) {
                                     addToCart={addToCart}
                                     addQuantityToProductOnCart={addQuantityToProductOnCart}
                                     reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
+                                    handleClickProduct={handleClickProduct}
 
                                 />
 

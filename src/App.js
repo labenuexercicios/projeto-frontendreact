@@ -10,12 +10,14 @@ import { changeStringSearchStandard } from './uteis/searchStringStandard'
 import Login from './screens/loginScreen/Login'
 import Cart from './screens/cartScreen/Cart'
 import Welcome from './screens/welcomeScreen/Welcome'
+import Product from './screens/productScreen/Product'
 
 function App() {
   const [currCart, setCurrCart] = useState([])
   const [displayProducts, setDisplayProducts] = useState()
   const [inputName, setInputName] = useState("")
   const [screen, setScreen] = useState(1)
+  const [product , setProduct] =useState({})
 
   useEffect(()=>{
     const cartLocalStorage =JSON.parse(localStorage.getItem("currCart")) 
@@ -23,6 +25,12 @@ function App() {
 
   },[])
 
+
+const handleClickProduct = (prod) =>{
+  localStorage.setItem("product",JSON.stringify(prod))
+  setProduct(prod)
+  setScreen("product")
+}
 
 
 //==========================CART manipulation=============================================
@@ -84,8 +92,9 @@ function App() {
             currCart={currCart}
             addToCart={addToCart}
             addQuantityToProductOnCart={addQuantityToProductOnCart}
-            reduceQuantityToProductOnCart={reduceQuantityToProductOnCart} />
-
+            reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
+            handleClickProduct={handleClickProduct}
+            />
         )
       case "login":
         return (
@@ -98,12 +107,18 @@ function App() {
             addToCart={addToCart}
             addQuantityToProductOnCart={addQuantityToProductOnCart}
             reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
-             />
+            handleClickProduct={handleClickProduct}
+            />
           )
           case "welcome":
-           return(
-              <Welcome/>
-           )
+           return <Welcome
+           handleClickProduct={handleClickProduct}
+           />
+           
+           case "product":
+            return <Product
+            product={product}
+            />
           default:
            setScreen('welcome')
 
@@ -121,6 +136,8 @@ function App() {
         reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
         setScreen={setScreen}
         currCart={currCart}
+        handleClickProduct={handleClickProduct}
+        
       />}
       <div className='main-container' >
 
