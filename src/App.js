@@ -5,100 +5,141 @@ import Main from "./components/Preview-Products/Main"
 import Footer from "./components/Footer-Contacts/Footer"
 import products from "./JSON-Data/products.json"
 import users from "./JSON-Data/users.json"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { changeStringSearchStandard } from './uteis/searchStringStandard'
 import Login from './screens/loginScreen/Login'
+import Cart from './screens/cartScreen/Cart'
+import Welcome from './screens/welcomeScreen/Welcome'
 
 function App() {
   const [currCart, setCurrCart] = useState([])
-  const [displayProducts , setDisplayProducts] = useState()
+  const [displayProducts, setDisplayProducts] = useState()
   const [inputName, setInputName] = useState("")
+  const [screen, setScreen] = useState(1)
+
+  useEffect(()=>{
+    const cartLocalStorage =JSON.parse(localStorage.getItem("currCart")) 
+    setCurrCart(cartLocalStorage)
+
+  },[])
 
 
+
+//==========================CART manipulation=============================================
   const addToCart = (productToFind) => {
-
-
     const newCart = [...currCart]
-
     const productFound = newCart.find((product) => product.id === productToFind.id)
-
     if (!productFound) {
-      const newProduct = { ...productToFind, quantity: 1 }
+      const priceDiscont = productToFind.price * (1-(productToFind.offPrice/100))
+      const newProduct = { ...productToFind, quantity: 1 , priceDiscont: priceDiscont }
       newCart.push(newProduct)
       setCurrCart(newCart)
-    } else {
-      window.alert("Produto ja adicionado")
-    }
+      const currCartString = JSON.stringify(newCart)
+      localStorage.setItem("currCart",currCartString)
+    } 
   }
-
   const addQuantityToProductOnCart = (productToAddQuantity) => {
-    const newCart =[...currCart]
+    const newCart = [...currCart]
 
     const productFound = newCart.find((product) => product.id === productToAddQuantity.id)
 
     productFound.quantity++
 
     setCurrCart(newCart)
+    const currCartString = JSON.stringify(newCart)
+    localStorage.setItem("currCart",currCartString)
 
 
   }
-  const reduceQuantityToProductOnCart = (productToReduceQuantity, value =1) => {
-    const newCart =[...currCart]
+  const reduceQuantityToProductOnCart = (productToReduceQuantity, value = 1) => {
+    const newCart = [...currCart]
 
     const productFound = newCart.find((product) => product.id === productToReduceQuantity.id)
-    const indexProduct = newCart.findIndex((product)=>product.id===productToReduceQuantity.id)
+    const indexProduct = newCart.findIndex((product) => product.id === productToReduceQuantity.id)
 
     productFound.quantity--
-    if(productFound.quantity<=0 || value===0)
-    {
-      newCart.splice(indexProduct,1)
+    if (productFound.quantity <= 0 || value === 0) {
+      newCart.splice(indexProduct, 1)
     }
 
     setCurrCart(newCart)
+    const currCartString = JSON.stringify(newCart)
+    localStorage.setItem("currCart",currCartString)
 
 
   }
-  const productsNames= products.map((prod)=>prod.name)
-   
+  const productsNames = products.map((prod) => prod.name)
+  const newProduct = products.filter((product) => changeStringSearchStandard(product.name).includes(inputName))
+
+  //===================================SCREEN Manipulation=======================================
+  const handleSwitchScreen = () => {
+    switch (screen) {
+      case "main":
+        return (
+          <Main
+            inputName={inputName}
+            setInputName={setInputName}
+            newProduct={newProduct}
+            products={products}
+            currCart={currCart}
+            addToCart={addToCart}
+            addQuantityToProductOnCart={addQuantityToProductOnCart}
+            reduceQuantityToProductOnCart={reduceQuantityToProductOnCart} />
+
+        )
+      case "login":
+        return (
+          <Login />
+        )
+        case "cart":
+          return(
+            <Cart 
+            currCart={currCart}
+            addToCart={addToCart}
+            addQuantityToProductOnCart={addQuantityToProductOnCart}
+            reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
+             />
+          )
+          case "welcome":
+           return(
+              <Welcome/>
+           )
+          default:
+           setScreen('welcome')
+
+    }
+  }
 
 
- const newProduct = products.filter((product)=>changeStringSearchStandard(product.name).includes(inputName))
- 
 
   return (
-    
 
-      <Login/>
-    // <Container size={currCart.length} >
-    //   <CartSide 
-    //   addQuantityToProductOnCart={addQuantityToProductOnCart}
-    //   reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
-    //     currCart={currCart}
-    //   />
-    //   <div className='main-container' >
+    <Container size={currCart.length} screen={screen} >
+      {(screen ==="main" || screen==="welcome") &&
+      <CartSide
+        addQuantityToProductOnCart={addQuantityToProductOnCart}
+        reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
+        setScreen={setScreen}
+        currCart={currCart}
+      />}
+      <div className='main-container' >
 
-    //     <Header
-    //    inputName={inputName}
-    //    setInputName={setInputName}
-    //    productsNames = {productsNames}
-    //    />
-
-
-
-    //     <Main
-    //     inputName={inputName}
-    //       newProduct={newProduct}
-    //       products={products}
-    //       currCart={currCart}
-    //       addToCart={addToCart}
-    //       addQuantityToProductOnCart={addQuantityToProductOnCart}
-    //       reduceQuantityToProductOnCart={reduceQuantityToProductOnCart} />
-
-    //   </div>
-    //   <Footer />
+        <Header
+          setInputName={setInputName}
+          productsNames={productsNames}
+          screen={screen}
+          setScreen={setScreen}
+        />
 
 
-    // </Container>
+        {handleSwitchScreen()}
+
+
+      </div>
+      <Footer />
+
+
+    </Container>
   )
 }
 

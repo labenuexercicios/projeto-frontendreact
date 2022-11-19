@@ -15,19 +15,25 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
  .logo{
     height:100%;
     padding:8px 0 8px 8px;
+  
    
  }
 
  .input-endereco{
+
+  
    
     width:50%;
     div{
         display:flex;
         justify-content:center;
+        margin-bottom:8px;
+        align-items:center;
     }
 
     img{
         width:20px;
+        margin-right:4px;
     }
     p{
         color:white;
@@ -49,6 +55,11 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
     margin-right:32px;
  }
 
+ .login{
+ 
+    margin-right:32px;
+ }
+
 
 
 
@@ -57,32 +68,3 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
 
 `
 
-// export const Logo = styled.img`
-// height:100%;
-// grid-column:1/2;
-// grid-row:1/-1;
-// padding:8px;
-// `
-// export const InputSearchBar = styled.input`
-// grid-column:2/3;
-// grid-row:2/-1;
-// width:100%;
-// margin: 8px 0;
-// `
-// export const EnderecoHeader = styled.div`
-// display:flex;
-// color:white;
-// grid-column:2/3;
-// grid-row:1/2;
-// width:100%;
-// align-items:center;
-// justify-content:center;
-
-// `
-// export const BotoesCadastro = styled.div`
-// grid-row:1/-1;
-// display:flex;
-// justify-content:space-around;
-// padding: 2vh;
-
-// `

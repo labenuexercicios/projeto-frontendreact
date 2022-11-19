@@ -7,13 +7,21 @@ import { useState } from 'react'
 import { changeStringSearchStandard } from '../../uteis/searchStringStandard'
 
 function Header(props) {
-    const {
-        inputName,
+    const {  
         setInputName,
-        productsNames
+        productsNames,
+        screen,
+        setScreen
     } =props
 
     const [dummyInput, setDummyInput] = useState()
+  
+
+
+    const handleSreenChange = (screen)=>{
+        setScreen(screen)
+
+    }
 
    
 
@@ -21,26 +29,30 @@ function Header(props) {
     {  
 
         setDummyInput(e.target.value)
+       
         
        
     }
 
     const handleSendInput = (e, value)=>
     {
-        if(e.key==="Enter")
+        if(e.key==="Enter" || e.key ==="Tab")
         {
             const newInputName = changeStringSearchStandard(e.target.value)
-        
             setInputName(newInputName)
             setDummyInput("")
+        setScreen("main")
+
+          
         }
 
     }
     
     return (
         <HeaderContainer>
-            <img className='logo' src={logo} alt="logo Espaço Legal" />
-            {productsNames !== undefined?
+            <img onClick={()=>handleSreenChange("welcome")} className='logo' src={logo} alt="logo Espaço Legal" />
+            
+            {(screen==="main" || screen === "cart" || screen === "welcome") &&
 
             <div className='input-endereco'>
                 <div>
@@ -49,19 +61,29 @@ function Header(props) {
                 </div>
                 <input type="text" value={dummyInput} onChange={handleChangeinInput} placeholder="Escrever aqui" list='products' onKeyDown={handleSendInput} />
                 
-                <datalist id="products"  >
+                <datalist onChange={handleSendInput} id="products"  >
                     {
                         productsNames.map((productName)=>{
                           return  <option value={productName} key={productName}/>
                         })
                     }
                 </datalist>
+                
             </div>
-             : <div></div>
+         
 }
 
-            <img className='login' src={entrar} alt="Login Sing up" />
-            <img className='cart' src={carrinho} alt="Cart" />
+{
+screen!=="login" &&
+<img onClick={()=>handleSreenChange("login")} className='login' src={entrar} alt="Login Sing up" />
+}
+
+{
+screen!=="cart" &&
+<img onClick={()=>handleSreenChange("cart")} className='cart' src={carrinho} alt="Cart" />
+}
+            
+          
 
 
 

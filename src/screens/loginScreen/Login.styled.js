@@ -1,104 +1,75 @@
 import styled from "styled-components"
 
-export const ContainerForm = styled.main`
+
+
+export const ContainerMainForm = styled.main`
+
+height:84vh;;
 display:flex;
 justify-content:center;
 align-items:center;
-width:100vw;
-height:100vh;
+
+`
+
+export const ContainerForm = styled.section`
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+min-width:30%;
+
+max-width:90%;
+padding:32px;
 
 
-    form{
+
+.buttonOutSide{
+    border-top:1px solid black;
+
+    position:relative;
+    width:100%;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:4px;
+    padding-top:32px;
+
+
+    > span{
+        position:absolute;
+        text-align:center;
+        width:40px;
+        background-color:white;
+
+        border-radius:50%;
+       
+        top:-10px;
+        
+    }
+    
+    button{
+
+        width:80%;
+        padding:4px;
+        margin-bottom:16px;
         display:flex;
-        flex-direction:column;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        justify-content:space-between;
         align-items:center;
-        justify-content:center;
-        min-width:30%;
-        max-width:90%;
-        padding: 32px 16px;
-
-        >p{
-            margin-top:4px;
-            font-size:12px;
-            color:red;
+        border:none;
+        border-radius:20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        span{
+            padding:2px 8px;
         }
         
-
-        >div{
-            display:flex;
-            flex-direction:column;
-        }
-        .form-data{
-            padding:32px;
-            text-align:center;
-            width:90%;
-
-            >div{
-                display:flex;
-                justify-content:space-between;
-                align-items:center;
-                
-                border-bottom:1px black solid;
-                margin-bottom:8px;
-
-
-            }
-            img{
-                height:28px;
-            }
-            .eye{
-                height:16px;
-                
-            }
-            input{
-                width:100%;
-                border:none; 
-                outline:none;
-            }
-
-
-            button{
-                border:none;
-                border-radius:10px;
-                background-color:blue;
-                color:white;
-                height:28px;
-
-            }
-         
-
-            }
-           
-        }
-      
-        button{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            margin-top:16px;
-            
-        }
+        
     }
-
-    .buttonOutSide{
-        width:80%;
-        border-bottom:16px;
-        >button{
-            padding:2px;
-            justify-content:space-around;
-            align-items:flex-start;
-            border-radius:20px;
-            height:30px;;
-
-            > img{
-                height:100%;
-            }
-            
-
-        }
     
-    }
+
+}
 
 
 `

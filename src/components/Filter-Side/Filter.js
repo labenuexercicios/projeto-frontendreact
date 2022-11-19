@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CategoriesContainer, FilterContainer, PriceRangeContainer } from './Filter.styled'
 
 export default function Filter(props) {
@@ -8,7 +8,8 @@ export default function Filter(props) {
         priceMax,
         handleOnchagePriceMin,
         handleOnchagePriceMax,
-        handleOnChangeCategory
+        handleOnChangeCategory,
+        setInputName
     } = props
 
     const [brin, setBrin] = useState(true)
@@ -28,12 +29,16 @@ export default function Filter(props) {
         handleOnChangeCategory(e)
     }
 
+const handleClickReset= () =>{
+    setInputName("")
+}
 
 
 
 
-    const percentageMax = ((1 - (priceMax / maxPriceProduct)).toFixed(1) * 100)
-    const percentageMin = ((priceMin / maxPriceProduct).toFixed(1) * 100)
+
+    const percentageMax = ((1 - (priceMax / maxPriceProduct))* 100)
+    const percentageMin = ((priceMin / maxPriceProduct) * 100)
 
     const stringPercentageMax = `${percentageMax}%`
     const stringPercentageMin = `${(percentageMin)}%`
@@ -90,30 +95,10 @@ export default function Filter(props) {
             </CategoriesContainer>
             <hr/>
 
-            {/* <div>
-                <h2>Idade</h2>
-                <label>0 a 2 anos</label>
-                <input type="radio" name="age" value={[1]} onChange={handleOnchengeAge}/>
-                <label>1 a 2</label>
-                <input type="radio" name="age" value={[2]} onChange={handleOnchengeAge}/>
-                <label>2 a 3</label>
-                <input type="radio" name="age" value={[3]} onChange={handleOnchengeAge}/>
-                <label>3 a 4</label>
-                <input type="radio" name="age" value={[4]} onChange={handleOnchengeAge} />
-                <label>Todas idades</label>
-                <input type="radio" name="age" value={[]} onChange={handleOnchengeAge} />
-            </div>
-            <div>
-                <h2>Marca</h2>
-                <label>a</label>
-                <input />
-                <label>b</label>
-                <input />
-                <label>c</label>
-                <input />
-                <label>d</label>
-                <input />
-            </div> */}
+
+            <button onClick={handleClickReset}>Resetar pesquisa</button>
+
+           
 
         </FilterContainer>
 
