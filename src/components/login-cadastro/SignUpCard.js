@@ -29,8 +29,6 @@ function FormSignUp() {
 
 
     const validationForm = () => {
-
-
         setIsEmailValid(email.length > 4 && email.includes("@") && email.includes(".com") )
         setIsUsernameValid(username.length > 2)
         setIsPasswordValid(password === confirmPassword && password.length >= 6 && password.length <= 10)
@@ -129,7 +127,7 @@ function FormSignUp() {
             </div>
 
 
-            <button type="button" onClick={validationForm}>Entrar</button>
+            <button type="button" onClick={validationForm}>Cadastrar</button>
 
 
 

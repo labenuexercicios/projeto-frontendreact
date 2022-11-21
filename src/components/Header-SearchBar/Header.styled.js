@@ -49,17 +49,33 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
     height:70%
  }
 
+.icons{
+   display:flex;
+   align-items:center;
+   
+   
 
- .cart{
-    height:50%;
+   .cart{
+    width:50px;
     margin-right:32px;
  }
 
  .login{
- 
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+   height:100px;
+    color:white;
     margin-right:32px;
+    img{
+      height:50px;
+
+    }
  }
 
+
+}
 
 
 
