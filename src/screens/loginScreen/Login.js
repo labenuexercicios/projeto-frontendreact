@@ -7,7 +7,8 @@ import FormSignUp from "../../components/login-cadastro/SignUpCard";
 import FormLogin from "../../components/login-cadastro/LoginCard";
 
 
-function Login() {
+function Login(props) {
+    const {setScreen, currCart} =props
 
 
     const [formFlow, setFormFlow] = useState(1)
@@ -20,7 +21,7 @@ function Login() {
             <ContainerMainForm>
                 <ContainerForm>
                     {formFlow===1? 
-                    <FormLogin setFormFlow={setFormFlow} /> : 
+                    <FormLogin currCart={currCart}setScreen={setScreen} setFormFlow={setFormFlow} /> : 
                     <FormSignUp />}
                     
                     <div className="buttonOutSide">

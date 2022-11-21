@@ -11,19 +11,16 @@ import Login from './screens/loginScreen/Login'
 import Cart from './screens/cartScreen/Cart'
 import Welcome from './screens/welcomeScreen/Welcome'
 import Product from './screens/productScreen/Product'
+import Account from './screens/accountScreen/Account'
+
 
 function App() {
   const [currCart, setCurrCart] = useState([])
-  const [displayProducts, setDisplayProducts] = useState()
   const [inputName, setInputName] = useState("")
   const [screen, setScreen] = useState(1)
   const [product , setProduct] =useState({})
 
-  useEffect(()=>{
-    const cartLocalStorage =JSON.parse(localStorage.getItem("currCart")) 
-    setCurrCart(cartLocalStorage)
 
-  },[])
 
 
 const handleClickProduct = (prod) =>{
@@ -31,6 +28,17 @@ const handleClickProduct = (prod) =>{
   setProduct(prod)
   setScreen("product")
 }
+useEffect(()=>{
+  const user = localStorage.getItem("user")
+  user===null && localStorage.setItem("user",JSON.stringify({}))
+  const cart = localStorage.getItem("currCart")
+  cart===null && localStorage.setItem("currCart",JSON.stringify({}))
+})
+const handleExit = () => {
+  localStorage.setItem("user", JSON.stringify({}))
+  setScreen("welcome")
+}
+
 
 
 //==========================CART manipulation=============================================
@@ -98,7 +106,9 @@ const handleClickProduct = (prod) =>{
         )
       case "login":
         return (
-          <Login />
+          <Login 
+          currCart={currCart}
+          setScreen={setScreen}/>
         )
         case "cart":
           return(
@@ -119,6 +129,10 @@ const handleClickProduct = (prod) =>{
             return <Product
             product={product}
             />
+            case "account":
+              return <Account 
+              handleExit={handleExit}
+              setScreen={setScreen}/>
           default:
            setScreen('welcome')
 

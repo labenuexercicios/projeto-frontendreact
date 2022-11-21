@@ -20,7 +20,7 @@ function Product(props) {
             <p>{product.categories.map((categoty,i)=>(product.categories.length>i+1?<span key={i}>{categoty}-</span>:<span>{categoty}</span>))}</p>
             <div className="product-view">
                 <div className="image-product">
-                    <div className="gallary-product">{product.image.map((image,i)=><img onClick={()=>setCurrImage(i)} key={i} src={image} alt="imagem pequena" /> )}
+                    <div className="gallary-product">{product.image.map((image,i)=><img onMouseEnter={()=>setCurrImage(i)} key={i} src={image} alt="imagem pequena" /> )}
                  
                     </div>
                     <img src={product.image[currImage]} alt="" />

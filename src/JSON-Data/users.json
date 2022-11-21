@@ -5,34 +5,36 @@
         "firstName":"Alexandre",
         "middleName":"Ferreira",
         "lastName":"Machado",
+        "genero":"Masculino",
+        "dataNascimento":"12/12/1985",
         "email":"afmjuniors@hotmail.com",
         "password":"123456Ab",
+        "telefone":"31996828531",
         "adress":{
-            "country":"Brazil",
             "state":"MG",
             "distric":"Luxemburgo",
-            "street":"Juvenal dos Santos",
+            "street":"Some street ina city",
             "cep":30380530,
-            "number":270,
-            "complement":"apto 104"
+            "number":0,
+            "complement":"ap 100"
 
         },
 
         "purchasesHistoric":{
             "id":"1",
+            "status":1,
             "quantity":2,
             "totalValue":10.20,
             "PaymentType":2,
-            "date":"2022-01-30"
-        },
-        "currCart":{
-            "id":"1",
-            "quantity":1
+            "date":"30/01/2022"
         },
         "creditCards":[{
             "choice": true,
+            "validity":true,
             "number":1234567890123456,
-            "validity":"2022-12",
+            "brand":"Visa",
+            "validityMounth":12,
+            "validityYear":25,
             "cvc":123,
             "name":"Alexandre Machado",
             "cpf": 12345678901

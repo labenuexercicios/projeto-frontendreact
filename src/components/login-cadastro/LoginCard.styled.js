@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormContainer = styled.form`
+export const FormContainer = styled.div`
 
     display:flex;
     flex-direction:column;
@@ -76,9 +76,14 @@ export const FormContainer = styled.form`
     color:${(props)=>props.isEmailValid?"black":"red"}
  }
  .password{
-    color:${(props)=>props.isPasswordValid?"black":"red"}
+    color:${(props)=>props.isPasswordValid2?"black":"red"}
 
  }
+ .password2{
+    color:${(props)=>props.isPasswordValid2?"black":"red" }
+
+ }
+
     
 
 
