@@ -4,6 +4,7 @@ export const MainContainer = styled.main`
   background-color: white;
   width: 1350px;
   display: flex;
+  background-color: coral;
   padding: 5px;
 `;
 
@@ -20,7 +21,7 @@ export const CardsContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-export const Card = styled.body`
+export const Card = styled.div`
   background-color: white;
   height: 350px;
   width: 280px;

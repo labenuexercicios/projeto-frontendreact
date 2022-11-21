@@ -12,7 +12,7 @@ import cards from "../../cards/card.json";
 function Content(props) {
   const [cartItems, setCartItems] = useState([]);
 
-  const onAddCart = (card) => {
+  const addCart = (card) => {
     const exist = cartItems.find((x) => x.id === card.id); //variavel q verifica os itens do carrinho existem
     if (exist){
       setCartItems(cartItems.map((x) => x.id === card.id  ? {...exist, qty: exist.qty +1} : x
@@ -37,7 +37,7 @@ function Content(props) {
   return (
     <MainContainer className="main-container">
       <CardsContainer className="cards-container"
-      onAddCart={onAddCart}
+      addCart={addCart}
       >
         {cards
           .filter((card) => {
@@ -49,7 +49,7 @@ function Content(props) {
           .map((card) => (
             <Card className="div-card"
              key={card.id} 
-             onAddCart={onAddCart}
+             addCart={addCart}
             >
               <Image src={card.imageUrl} alt={card.imageAlt} />
               
@@ -57,14 +57,14 @@ function Content(props) {
 
               <PriceAndButton className="Price-and-cart">
                 <p className="price">R${card.price}</p>
-                <button onClick={() => onAddCart(card)} className="button"> Adicionar ao carrinho</button>
+                <button onClick={() => addCart(card)} className="button"> Adicionar ao carrinho</button>
               </PriceAndButton>
             </Card>
           ))}
       </CardsContainer>
       <Cart 
       cartItems={cartItems}
-      onAddCart={onAddCart}
+      onAddCart={addCart}
       onRemove={onRemove}
       > </Cart>
     </MainContainer>
