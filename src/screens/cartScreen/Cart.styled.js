@@ -31,6 +31,10 @@ display:flex;
     }
 }
 
+.carrinho-vazio{
+    padding:8px;
+}
+
 
 
 .resume-cart{

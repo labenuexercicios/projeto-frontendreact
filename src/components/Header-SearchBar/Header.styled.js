@@ -42,12 +42,26 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
     input{
         width:100%;
     }
+    .datalist-2{
+
+      option {
+  background-color: white;
+  padding: 4px;
+  color: blue;
+  margin-bottom: 1px;
+   font-size: 18px;
+  cursor: pointer;
+}
+}
     
  }
 
  >img{
     height:70%
  }
+
+
+
 
 .icons{
    display:flex;

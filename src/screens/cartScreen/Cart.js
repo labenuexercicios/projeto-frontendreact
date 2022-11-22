@@ -29,7 +29,15 @@ function Cart(props) {
                     </div>
                 </div>
 
-                {currCart.map((product) => {
+
+
+                {subTotal==="0.00"?
+               <div>
+                <hr/>
+                    <h3 className="carrinho-vazio">Carrinho Vazio</h3>
+                </div>
+                   :
+                currCart.map((product) => {
                     const priceDiveded = formatter.format(product.priceDiscont / 5)
                     return (
                         <CardProduct key={product.id} discount={product.offPrice}>
@@ -40,11 +48,11 @@ function Cart(props) {
                                 <p>Marca: {product.brand}</p>
                                 <ManipulationItem>
                                     <div>
-                                        <img src={suntractIcon} alt="sibtractIcon" />
+                                        <img onClick={()=>reduceQuantityToProductOnCart(product)} src={suntractIcon} alt="sibtractIcon" />
                                         <input value={product.quantity} />
-                                        <img src={addIcon} alt="Add icon" />
+                                        <img onClick={()=>addQuantityToProductOnCart(product)} src={addIcon} alt="Add icon" />
                                     </div>
-                                    <img src={deleteIcon} alt="subtract icon" />
+                                    <img onClick={()=>reduceQuantityToProductOnCart(product,0)} src={deleteIcon} alt="subtract icon" />
                                 </ManipulationItem>
                             </div>
                             <div className="price-product">

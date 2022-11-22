@@ -6,6 +6,7 @@ export default function Filter(props) {
         maxPriceProduct,
         priceMin,
         priceMax,
+        setSelect,
         handleOnchagePriceMin,
         handleOnchagePriceMax,
         handleOnChangeCategory,
@@ -31,6 +32,7 @@ export default function Filter(props) {
 
 const handleClickReset= () =>{
     setInputName("")
+    setSelect("Destaque")
 }
 
 

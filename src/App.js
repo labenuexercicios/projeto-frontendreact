@@ -1,7 +1,7 @@
 import { Container } from './App.styled'
 import Header from "./components/Header-SearchBar/Header"
 import CartSide from './components/ShoppingCart/Cart-side'
-import Main from "./components/Preview-Products/Main"
+import Main from "./screens/searchScreen/Main"
 import Footer from "./components/Footer-Contacts/Footer"
 import products from "./JSON-Data/products.json"
 import users from "./JSON-Data/users.json"
@@ -84,8 +84,10 @@ const handleExit = () => {
 
 
   }
-  const productsNames = products.map((prod) => prod.name)
-  const newProduct = products.filter((product) => changeStringSearchStandard(product.name).includes(inputName))
+  const productsNames = products.map((prod) => changeStringSearchStandard(prod.name))
+  
+  
+
 
   //===================================SCREEN Manipulation=======================================
   const handleSwitchScreen = () => {
@@ -95,13 +97,13 @@ const handleExit = () => {
           <Main
             inputName={inputName}
             setInputName={setInputName}
-            newProduct={newProduct}
             products={products}
             currCart={currCart}
             addToCart={addToCart}
             addQuantityToProductOnCart={addQuantityToProductOnCart}
             reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
             handleClickProduct={handleClickProduct}
+            screen={screen}
             />
         )
       case "login":
@@ -127,12 +129,18 @@ const handleExit = () => {
            
            case "product":
             return <Product
+            addToCart={addToCart}
             product={product}
             />
             case "account":
               return <Account 
               handleExit={handleExit}
-              setScreen={setScreen}/>
+              setScreen={setScreen}
+              products={products}
+              handleClickProduct={handleClickProduct}
+              currCart={currCart}
+
+              />
           default:
            setScreen('welcome')
 
@@ -144,7 +152,7 @@ const handleExit = () => {
   return (
 
     <Container size={currCart.length} screen={screen} >
-      {(screen ==="main" || screen==="welcome") &&
+      {(screen ==="main" || screen==="welcome" || screen==="product") &&
       <CartSide
         addQuantityToProductOnCart={addQuantityToProductOnCart}
         reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
@@ -156,6 +164,7 @@ const handleExit = () => {
       <div className='main-container' >
 
         <Header
+        inputName={inputName}
           setInputName={setInputName}
           productsNames={productsNames}
           screen={screen}

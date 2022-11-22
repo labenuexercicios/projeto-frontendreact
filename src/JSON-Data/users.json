@@ -1,17 +1,21 @@
 [
     {
         "userId":"AlexandreMachado01",
+        "cpf":"12345678901",
         "username":"afmjunior",
         "firstName":"Alexandre",
         "middleName":"Ferreira",
         "lastName":"Machado",
-        "genero":"Masculino",
-        "dataNascimento":"12/12/1985",
+        "genero":"masculino",
+        "dayBirth":12,
+        "mounthBirth":12,
+        "yearBirth":1985,
         "email":"afmjuniors@hotmail.com",
         "password":"123456Ab",
         "telefone":"31996828531",
         "adress":{
             "state":"MG",
+            "city":"Belo Horizonte",
             "distric":"Luxemburgo",
             "street":"Some street ina city",
             "cep":30380530,
@@ -20,14 +24,16 @@
 
         },
 
-        "purchasesHistoric":{
-            "id":"1",
+        "purchasesHistoric":[{
+            "id":"001",
+            "name": "O mais sensacional guia intergaláctico do espaço",
             "status":1,
             "quantity":2,
             "totalValue":10.20,
             "PaymentType":2,
+            "image":"./ProdutosImagens/livros-sensacional-guia.jpg",
             "date":"30/01/2022"
-        },
+        }],
         "creditCards":[{
             "choice": true,
             "validity":true,
@@ -39,6 +45,6 @@
             "name":"Alexandre Machado",
             "cpf": 12345678901
         }],
-        "favorites":["1","2"]
+        "favorites":["001","002"]
     }
 ]

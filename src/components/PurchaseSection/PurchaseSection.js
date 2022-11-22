@@ -1,14 +1,7 @@
+import { useState } from "react"
 import { ContaninerCardPurchase, ContainerCard } from "./PurchaseSection.styled"
 
-const produtos = [{
-    id:1,
-    status: 1,
-    name:"Produto!!!!",
-    image: "https://picsum.photos/200/300",
-    titulo: "titulo do produto",
-    quantity: 1,
-    date: "12/12/2022"
-}]
+
 const handleStaus = (status) => {
     switch (status) {
         case 1:
@@ -22,7 +15,11 @@ const handleStaus = (status) => {
 }
 
 
-function CardPurchase() {
+function CardPurchase(props) {
+    const {produtos,handleClickHistory} =props
+
+
+    
 
     return (
         <ContaninerCardPurchase  >
@@ -30,8 +27,9 @@ function CardPurchase() {
             <p>aqui esta seus ultimos pedidos</p>
 
             {produtos.map((prod) => {
+          
                 return (
-                    <ContainerCard status={prod.status} key={prod.id}>
+                    <ContainerCard onClick={()=>handleClickHistory(prod.id)} status={prod.status} key={prod.id}>
                         <div className="header-card">
                             <p className="color">O pedido {handleStaus(prod.status)}</p>
                             {prod.status===1 && <p className="date">entregue em:<span className="color">{prod.date}</span> </p> }
