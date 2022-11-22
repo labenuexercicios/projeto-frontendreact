@@ -35,8 +35,8 @@ useEffect(()=>{
   cart===null && localStorage.setItem("currCart",JSON.stringify({}))
 })
 const handleExit = () => {
-  localStorage.setItem("user", JSON.stringify({}))
-  setScreen("welcome")
+  localStorage.removeItem("user")
+  window.location.reload()
 }
 
 
