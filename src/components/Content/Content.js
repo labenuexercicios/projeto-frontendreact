@@ -46,6 +46,30 @@ function Content(props) {
               .includes(props.query.toLowerCase().trim());
           })
 
+          .filter((card) => {
+             return card.price >= (props.minPrice) || (props.minPrice) === ""
+          })
+
+          .filter((card) => {
+             return card.price <= (props.maxPrice) || (props.maxPrice) === ""
+          })
+
+          .sort((a,b)=>{
+            if (props.ordenacao === "crescente"){
+              if(a.name < b.name){
+                return -1
+             } else {
+               return 1
+              }
+            } else if (props.ordenacao === "decrescente") {
+             if (a.name < b.name){
+               return 1
+            } else {
+             return -1
+            }
+           }
+          })
+
           .map((card) => (
             <Card className="div-card"
              key={card.id} 
@@ -56,7 +80,7 @@ function Content(props) {
               <h1 className="titulo">{card.name}</h1>
 
               <PriceAndButton className="Price-and-cart">
-                <p className="price">R${card.price}</p>
+                <p className="price">R${card.price.toFixed(2)}</p>
                 <button onClick={() => addCart(card)} className="button"> Adicionar ao carrinho</button>
               </PriceAndButton>
             </Card>

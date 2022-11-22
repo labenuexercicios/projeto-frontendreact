@@ -6,6 +6,8 @@ export const MenuFilter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  margin-left: -100px;
 
   .filter-name-icon {
     display: flex;
@@ -14,8 +16,13 @@ export const MenuFilter = styled.div`
     font-size: 20px;
   }
 
-  .select {
-    padding: 10px;
+ .input{
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .select{
+    padding: 5px;
     border-radius: 10px;
 
     :hover {
@@ -23,6 +30,8 @@ export const MenuFilter = styled.div`
       filter: brightness(0.9);
     }
   }
+
+ 
 `;
 
 export const ImageFilter = styled.img`

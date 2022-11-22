@@ -4,24 +4,35 @@ import Footer from "../Footer/Footer";
 import Content from "../Content/Content";
 import Filter from "../Filter/Filter";
 import { HomeContainer } from "./styles";
-import cards from "../../cards/card.json";
 
 function Home() {
   const [query, setQuery] = useState("");
-  console.log(query);
+  const [minPrice, setMinPrice] = useState("")
+  const [maxPrice, setMaxPrice] = useState("")
+  const [ordenacao, setOrdenacao] = useState("")
 
   return (
     <HomeContainer className="Home">
       <Header
         menuBrinquedos={"Brinquedos espaciais"}
         menuAcessorios={"Produtos infantis"}
-        query={query}
-        setQuery={setQuery}
+        query={query} setQuery={setQuery}
       />
 
-      <Filter />
+      <Filter
+        minPrice={minPrice} setMinPrice={setMinPrice}
+        maxPrice={maxPrice} setMaxPrice={setMaxPrice}
+        ordenacao={ordenacao} setOrdenacao={setOrdenacao}
+      />
 
-      <Content query={query} setQuery={setQuery} />
+      <Content
+        query={query} setQuery={setQuery}
+        minPrice={minPrice} setMinPrice={setMinPrice}
+        maxPrice={maxPrice} setMaxPrice={setMaxPrice}
+        ordenacao={ordenacao} setOrdenacao={setOrdenacao}
+      >
+
+      </Content>
 
       <Footer />
     </HomeContainer>

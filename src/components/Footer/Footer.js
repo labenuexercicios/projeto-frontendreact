@@ -8,7 +8,7 @@ function Footer(props) {
       </DivLeft>
 
       <DivRight className="formas-de-pagamento">
-        <p>Formas de pagamento</p>
+        <p></p>
 
         <img src="" alt="" />
       </DivRight>

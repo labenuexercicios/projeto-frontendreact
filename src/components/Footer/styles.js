@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-  background-color: #adeaea;
+  background-color: #DCDCDC;
   font-size: 20px;
   display: flex;
   align-items: center;

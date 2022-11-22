@@ -2,6 +2,19 @@ import { MenuFilter, ImageFilter } from "./styles";
 import IconFilter from "../../icons/filter.jpeg";
 
 function Filter(props) {
+
+  const onChangeMinPrice = (e) => {
+    props.setMinPrice(e.target.value);
+  };
+
+  const onChangeMaxPrice = (e) => {
+    props.setMaxPrice(e.target.value);
+  };
+
+  const onChangeOrdenar = (e) => {
+    props.setOrdenacao(e.target.value)
+  }
+
   return (
     <MenuFilter className="menu-filter">
       <div className="filter-name-icon">
@@ -9,12 +22,30 @@ function Filter(props) {
         <ImageFilter src={IconFilter} alt="icon" />
       </div>
 
-      <select className="select">
-        <option value="">Ordenar por</option>
-        <option value="">Crescente</option>
-        <option value="">Decrescente</option>
-        <option value="">Maior preço</option>
-        <option value="">Menor preço</option>
+      <input
+        className="input"
+        placeholder="Preço mínimo"
+        type="number"
+        value={props.minPrice}
+        onChange={onChangeMinPrice}
+
+      />
+
+      <input
+        className="input"
+        placeholder="Preço maximo"
+        type="number"
+        value={props.maxPrice}
+        onChange={onChangeMaxPrice}
+      />
+
+      <select className="select"
+        value={props.ordenar}
+        onChange={onChangeOrdenar}
+      >
+        <option value="ordenar">Ordenar</option>
+        <option value="crescente">Crescente</option>
+        <option value="decrescente">Decrescente</option>
       </select>
     </MenuFilter>
   );

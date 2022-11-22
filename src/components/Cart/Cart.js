@@ -1,4 +1,4 @@
-import { ContainerBag } from "./styles";
+import { ContainerBag , ColumnBag} from "./styles";
 
 function Cart(props) {
 
@@ -6,29 +6,29 @@ function Cart(props) {
 
   return (
     <ContainerBag className="container-bag">
-      <h1>Itens</h1>
+      <h1 className="h1">Oi :) </h1>
       <div>{cartItems.length === 0 && <div> Sua sacola está vazia </div>}</div>
       {cartItems.map((item) => {
-        <div>
-          <div key={item.id} className="row">
 
-            <div>{item.name}</div>
+        <ColumnBag key={item.id} className="row">
 
-            <div className="botoes">
-              <button onClick={() => addCart(item)} className="add">
-                +
-              </button>
-              <button onClick={() => onRemove(item)} className="remove">
-                -
-              </button>
-            </div>
+          <div>{item.name}</div>
 
-            <div className="colum text right">
-              {item.qty} x R${Number(item.price).toFixed(2)}
-            </div>
+          <div className="botoes">
+            <button onClick={() => addCart(item)} className="add">
+              +
+            </button>
+            <button onClick={() => onRemove(item)} className="remove">
+              -
+            </button>
+          </div>
 
-          </div>;
-        </div>
+          <div className="colum text right">
+            {item.qty} x R${item.price.toFixed(2)}
+          </div>
+
+        </ColumnBag>;
+
       })}
     </ContainerBag>
   );

@@ -4,7 +4,6 @@ export const MainContainer = styled.main`
   background-color: white;
   width: 1350px;
   display: flex;
-  background-color: coral;
   padding: 5px;
 `;
 
@@ -49,20 +48,20 @@ export const Image = styled.img`
 `;
 
 export const PriceAndButton = styled.div`
-  margin: 5px;
   display: flex;
   align-items: center;
-  gap: 55px;
+  gap: 45px;
 
   .price {
-    margin-left: 10px;
-
+    margin-left: 15px;
     :hover {
       cursor: pointer;
     }
   }
 
   .button {
+    width: 100px;
+    height: 50px;
     padding: 5px;
     border-radius: 10px;
     border: none;
@@ -76,8 +75,4 @@ export const PriceAndButton = styled.div`
   }
 `;
 
-// export const CarrinhoContainer = styled.div`
-//   background-color: pink;
-//   width: 250px;
-//   margin-right: 15px;
-// `;
+
