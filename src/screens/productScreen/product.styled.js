@@ -3,6 +3,8 @@ import styled from "styled-components"
 export const ContaninerProduct = styled.main`
 display:flex;
 flex-direction:column;
+padding:8px;
+padding-left:16px;
 .product-view{
     display:flex;
 

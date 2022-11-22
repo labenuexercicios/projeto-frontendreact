@@ -13,14 +13,15 @@ function Card(props) {
         currCart,
         addQuantityToProductOnCart,
         reduceQuantityToProductOnCart,
-        handleClickProduct
+        handleClickProduct,
+        screen
 
     } = props;
     const priceFormat = formatter.format(product.price)
     const priceOffFormat = formatter.format(product.price * (1 - (product.offPrice) / 100))
     const priceDiveded = formatter.format((product.price / 5))
 
-
+  
     const productInCart = currCart.find((productCard) => productCard.id === product.id)
    
 
@@ -51,7 +52,8 @@ function Card(props) {
                 <p className='p-cash'>á vista </p>
                 <p className="payment-option">ou <span>5x</span> de {priceDiveded}</p>
             </div>
-            {productInCart ?
+            {screen==="main" &&
+          (  productInCart ?
                 <div className='btn-group'>
                     <button onClick={() => reduceQuantityToProductOnCart(productInCart)}>-</button>
                     <p>{productInCart.quantity}</p>
@@ -60,7 +62,7 @@ function Card(props) {
 
                 : <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button>
 
-            }
+           ) }
 
         </CardContainer>
     )

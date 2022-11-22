@@ -95,7 +95,7 @@
         "warranty": 0,
         "image": [
             "./ProdutosImagens/livros-galactio.jpg",
-            "./ProdutosImagens/livros-galactio-2.jpg"
+            "./ProdutosImagens/livros-galactio2.jpg"
         ],
         "altImage": "Galáctico. Plano Abelha no Espaço Sideral",
         "brand": [
@@ -114,7 +114,7 @@
         "evaluation": 0,
         "numberEvaluation": 0,
         "price": 59.99,
-        "offPrice": 3,
+        "offPrice": 30,
         "description": "A diversão está garantida com esse Conjunto Espaço Sideral da BBR. Ajude os astronautas a explorarem lugares incríveis no espaço. Com esse incrível brinquedo as crianças terão os equipamentos essenciais para fazer descobertas. São quatro mini peças para simular a exploração espacial e a diversão vai ser completa! A sua imaginação não terá limites, assim como o universo!",
         "dimensions": [
             "6",
@@ -346,8 +346,7 @@
             "./ProdutosImagens/roupas-astronauta-2.jpg",
             "./ProdutosImagens/roupas-astronauta-3.jpg",
             "./ProdutosImagens/roupas-astronauta-4.jpg",
-            "./ProdutosImagens/roupas-astronauta-5.jpg",
-            "./ProdutosImagens/roupas-astronauta-6.jpg"
+            "./ProdutosImagens/roupas-astronauta-5.jpg"        
         ],
         "altImage": "Trajes de trajes de astronauta para crianças para traje espacial para saltos espaciais Vestido de Halloween",
         "brand": [

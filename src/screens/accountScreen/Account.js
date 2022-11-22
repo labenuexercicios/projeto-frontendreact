@@ -12,23 +12,43 @@ import shoppingBag from "../../assets/shopping_bag.svg"
 import account from "../../assets/account.svg"
 
 
+
 function Account(props) {
-    const {setScreen, handleExit}=props
+    const {setScreen,
+         handleExit, 
+         products,
+         handleClickProduct,
+         currCart
+        }=props
     const [flowPgae, setFlowPage] = useState(1)
-    const handleRender = (page) => {
+    const user =JSON.parse(localStorage.getItem("user"))
+   
+
+    const handleClickHistory = (id) =>{
+        const productFound = products.find((product)=>product.id===id)
+        handleClickProduct(productFound)
+
+    }
+ 
+    const handleRender = () => {
 
         switch (flowPgae) {
             case "Pedidos":
-                return <CardPurchase />
+                return <CardPurchase produtos={user[0].purchasesHistoric } handleClickHistory={handleClickHistory}/>
             case "Cadastro":
-                return <Cadastro />
+                return <Cadastro user={user[0]} />
             case "Metodos de Pagamento":
-                return <CreditCards />
+                return <CreditCards creditCards={user[0].creditCards} />
             case "Favoritos":
-                return <FavCard />
+                return <FavCard 
+                favorites={ user[0].favorites} 
+                products={products}
+                handleClickProduct={handleClickProduct} 
+                currCart={currCart}
+                />
 
             default:
-                return <CardPurchase />
+                return setFlowPage("Pedidos")
         }
     }
 
@@ -68,7 +88,9 @@ function Account(props) {
                 <section className="side-nav">
 
                     {miniCards.map((card) => {
+                  
                         return (
+                            
 
                             <div key={card.name} onClick={() => setFlowPage(card.name)} className="mini-card">
                                 <img className="icon-image" src={card.image} alt="icon" />

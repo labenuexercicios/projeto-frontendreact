@@ -1,6 +1,6 @@
 import { MainContainer, NavContainer, ListaContainer } from './Main.styled.'
-import Filter from '../Filter-Side/Filter'
-import Card from '../Card-Products/Card'
+import Filter from '../../components/Filter-Side/Filter'
+import Card from '../../components/Card-Products/Card'
 
 import { useState } from 'react'
 import { changeStringSearchStandard } from '../../uteis/searchStringStandard'
@@ -14,9 +14,9 @@ function Main(props) {
         addQuantityToProductOnCart,
         reduceQuantityToProductOnCart,
         setInputName,
-        handleClickProduct
+        handleClickProduct,
+        screen
     } = props
-
 
 
 
@@ -103,6 +103,7 @@ function Main(props) {
             setInputName={setInputName}
                 priceMin={priceMin}
                 priceMax={priceMax}
+                setSelect={setSelect}
                 handleOnchagePriceMin={handleOnchagePriceMin}
                 handleOnchagePriceMax={handleOnchagePriceMax}
                 handleOnChangeCategory={handleOnChangeCategory}
@@ -127,7 +128,7 @@ function Main(props) {
 
                 <section>
                     {handleSwicthCase(select)
-                        .filter((product) => changeStringSearchStandard(product.name).includes(inputName))
+                        .filter((product) => changeStringSearchStandard(product.name).includes(changeStringSearchStandard(inputName)))
                         .filter((product) => product.priceDiscont >= priceMin)
                         .filter((product) => product.priceDiscont <= priceMax)
                         .filter((product) => categories.includes(product.categories[0]))
@@ -142,6 +143,7 @@ function Main(props) {
                                     addQuantityToProductOnCart={addQuantityToProductOnCart}
                                     reduceQuantityToProductOnCart={reduceQuantityToProductOnCart}
                                     handleClickProduct={handleClickProduct}
+                                    screen={screen}
 
                                 />
 

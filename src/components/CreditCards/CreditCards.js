@@ -5,42 +5,9 @@ import elo from "../../assets/elo.png"
 
 
 
-function CreditCards() {
-    const creditCards = [
-        {
-            choise: true,
-            validity: true,
-            number: 1234567890123456,
-            validityMounth: 12,
-            validityYear: 25,
-            cvc: 123,
-            name: "Alexandre Machado",
-            cpf: 12345678901,
-            brand: "Visa",
-        },
-        {
-            choise: true,
-            validity: true,
-            number: 1234567890123456,
-            validityMounth: 12,
-            validityYear: 25,
-            cvc: 123,
-            name: "Alexandre Machado",
-            cpf: 12345678901,
-            brand: "Master Card",
-        },
-        {
-            choise: true,
-            validity: true,
-            number: 1234567890123456,
-            validityMounth: 12,
-            validityYear: 25,
-            cvc: 123,
-            name: "Alexandre Machado",
-            cpf: 12345678901,
-            brand: "Elo",
-        }
-    ]
+function CreditCards(props) {
+    const {creditCards} = props
+
     const handleSwitch = (brand) => {
         switch (brand) {
             case "Visa":
