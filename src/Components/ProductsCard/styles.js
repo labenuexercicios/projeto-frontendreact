@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import imageCards from "../../assets/backgroundCards.png"
+import imageCards from "../../assets/backgroundCards2.png"
 
 export const Card = styled.div`
     width: 250px;
@@ -10,12 +10,14 @@ export const Card = styled.div`
     align-items: center;
     border-radius: 20px;
     background-color: #012f6d;
+    background-image: url(${imageCards});
     color: white;
     font-weight: 300;
 
     img{
-        width: 100%;
+        width: 80%;
         height: 70%;
+        border-radius: 10%;
     }
 
     span{

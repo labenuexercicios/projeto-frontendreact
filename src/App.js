@@ -16,23 +16,16 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 function App() {
-  const [search, setSearch] = useState("")
+  
 
   return (
     <>
       <GlobalStyle />
       <Header
-        search={search}
-        setSearch={setSearch}
+        
       />
       <PrincipalCard>
-        {products.filter((product) => {
-          return product.name.toLowerCase().includes(search.toLowerCase())
-        })
-          .map((product) => {
-            return <ProductsCard key={product.id} product={product} />
-          })
-        }
+      
       </PrincipalCard>
     </>
   )
