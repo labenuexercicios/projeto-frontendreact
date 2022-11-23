@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Ônibus Espacial ",
+        "price": 95,
+        "imageUrl": "img-1.png",
+        "imageAlt": "Aviãozinho"
+         
+    },
+    {
+        "id": 2,
+        "name": "Brinquedo Infantil Galáctico",
+        "price": 110,
+        "imageUrl": "img-2.png",
+        "imageAlt": "Aviãozinho"
+    },
+    {
+        "id": 3,
+        "name": "Avião Astronautas",
+        "price": 109,
+        "imageUrl": "img-3.png",
+        "imageAlt": "Aviãozinho"
+    },
+    {
+        "id": 4,
+        "name": "Foguete Astronautas",
+        "price": 109,
+        "imageUrl": "img-9.png",
+        "imageAlt": "Aviãozinho"
+    },
+    {
+        "id": 5,
+        "name": "Estação Espacial",
+        "price": 140,
+        "imageUrl": "img-5.png",
+        "imageAlt": "Aviãozinho"
+    },
+    {
+        "id": 6,
+        "name": "Nave espacial para montar",
+        "price": 300,
+        "imageUrl": "img-10.png",
+        "imageAlt": "Aviãozinho"
+    },
+    {
+        "id": 7,
+        "name": "Ônibus espacial ",
+        "price": 90,
+        "imageUrl": "img-6.png",
+        "imageAlt": "Aviãozinho"
+    }
+]
