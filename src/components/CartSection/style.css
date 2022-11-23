@@ -1,0 +1,127 @@
+#cart-section{
+    position: fixed;
+    right: calc(-1320px - (100% - 1670px)/2 + 60px);
+    background-color: white;
+    z-index: 3;
+    width: calc((100% - 1670px)/2 + 1320px);
+    padding: 40px 20px;
+    border-radius: 20px;
+    display: flex;
+    height: auto;
+    transition: all 1s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#cart-section.see{
+    right: 0px;
+}
+
+#first-cart-col{
+    margin-right: 20px;
+    width: 20px;
+    /* background-color: red; */
+    writing-mode: vertical-rl;
+    cursor: pointer;
+}
+
+#second-cart-col{
+    width: 100%;
+}
+
+#shopping-cart-title{
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-bottom: 20px;
+    /* border-bottom: 2px solid #ECEEF0; */
+}
+
+#shopping-cart-parameters{
+    display: grid;
+    grid-template-columns: .6fr 2fr 1fr 1fr 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ECEEF0;
+}
+
+.shopping-cart-parameter{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#shopping-cart-products{
+    height: 400px;
+    overflow: auto;
+}
+
+#subtotal{
+    margin-top: 20px;
+    /* margin-left: calc((100% - 40px)*3/5); */
+    /* padding-top: 20px; */
+    text-align: right;
+    /* padding-bottom: 60px; */
+    /* font-size: 28px; */
+}
+
+#subtotal-span{
+    font-weight: 300;
+}
+
+.fa-arrow-left{
+    font-size: 16px;
+    margin-top: 5px;
+    transition: .25s ease all;
+}
+
+.fa-arrow-left:hover{
+    color: #DA2525;
+    scale: 1.5;
+}
+
+@media screen and (max-width: 1780px){
+    #cart-section{
+        width: calc((100% - 1240px)/2 + 890px);
+        right: calc(-890px - (100% - 1240px)/2 + 60px);
+    }
+}
+
+@media screen and (max-width: 1380px){
+    #cart-section{
+        width: calc((100% - 890px)/2 + 890px);
+        right: calc(-890px - (100% - 890px)/2 + 60px);
+    }
+}
+
+@media screen and (max-width: 1010px){
+    #cart-section{
+        width: 100%;
+        right: calc(-100% + 2vw + 20px);
+        padding: 40px 2vw;
+    }
+
+    #first-cart-col{
+        margin-right: 0;
+    }
+
+    #shopping-cart-title{
+        font-size: clamp(20px, 3.2vw, 32px);
+    }
+
+    #shopping-cart-parameters{
+        grid-template-columns: .6fr 2fr 1fr 1fr clamp(16px, 3vw, 30px);
+    }
+
+    .shopping-cart-parameter{
+        font-size: clamp(12px, 1.6vw, 16px);
+    }
+}
+
+@media screen and (max-height: 770px){
+    #shopping-cart-products{
+        height: 45vh;
+    }
+
+    #cart-section{
+        overflow: visible;
+    }
+}

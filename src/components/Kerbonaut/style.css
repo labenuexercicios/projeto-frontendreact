@@ -1,0 +1,113 @@
+#kerbonaut{
+    /* background-color: red; */
+    animation: animation2 360s linear infinite;
+    /* height: 100%; */
+    height: 100%;
+    padding: 20px;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+
+svg{
+    animation: animation1 180s linear infinite;
+    max-height: 100%;
+    width: 10vw;
+}
+
+#palpebra-1{
+    animation: attempt 5s infinite;
+    /* transform: translateY(40px); */
+}
+
+#palpebra-2{
+    animation: attempt2 5s infinite;
+    /* transform: translateY(-20px) translateX(-2px); */
+}
+
+#palpebra-3{
+    animation: attempt3 5s infinite
+}
+
+#palpebra-4{
+    animation: attempt4 5s infinite;
+}
+
+@keyframes attempt {
+    40% {
+        transform: translateY(0px);
+    }
+
+    45% {
+        transform: translateY(24px);
+    }
+
+    55% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes attempt2 {
+    40% {
+        transform: translateX(0) translateY(0);
+    }
+
+    45% {
+        transform: translateY(-26px) translateX(-4px);
+    }
+
+    55% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes attempt3 {
+    40% {
+        transform: translateY(0px) translateY(0);
+    }
+
+    45% {
+        transform: translateX(4px) translateY(25px);
+    }
+
+    55% {
+        transform: translateY(0px) translateY(0);
+    }
+}
+
+@keyframes attempt4 {
+    40% {
+        transform: translateX(0) translateY(0);
+    }
+
+    45% {
+        transform: translateY(-26px) translateX(6px);
+    }
+
+    55% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes animation1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes animation2 {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    50%{
+        transform: translateX(80vw);
+    }
+
+    100%{
+        transform: translateX(0vw);
+    }
+}
