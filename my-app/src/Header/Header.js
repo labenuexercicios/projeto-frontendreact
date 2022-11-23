@@ -1,11 +1,23 @@
 import StyledHeader from "./styled.header";
 
-const Header = () => {
+const Header = (props) => {
+    
+    const onChange = (e) =>{
+        props.setBusca(e.target.value)
+        
+    }
+
     return(
         <StyledHeader>
             
                 <h1 className="h1">Gravidade ZERO</h1>
-                <input className="input" type="text" placeHolder="Buscar"/> 
+                <input
+                value={props.busca} 
+                onChange={onChange}
+                className="input" 
+                type="search" 
+                placeHolder="  Buscar"
+                /> 
             
         </StyledHeader>
     )
