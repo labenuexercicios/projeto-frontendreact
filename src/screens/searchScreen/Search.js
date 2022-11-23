@@ -1,4 +1,4 @@
-import { MainContainer, NavContainer, ListaContainer } from './Main.styled.'
+import { MainContainer, NavContainer, ListaContainer } from './Search.styled.'
 import Filter from '../../components/Filter-Side/Filter'
 import Card from '../../components/Card-Products/Card'
 

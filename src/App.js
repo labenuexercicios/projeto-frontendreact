@@ -1,10 +1,9 @@
 import { Container } from './App.styled'
 import Header from "./components/Header-SearchBar/Header"
 import CartSide from './components/ShoppingCart/Cart-side'
-import Main from "./screens/searchScreen/Main"
+import Main from "./screens/searchScreen/Search"
 import Footer from "./components/Footer-Contacts/Footer"
 import products from "./JSON-Data/products.json"
-import users from "./JSON-Data/users.json"
 import { useEffect, useState } from 'react'
 import { changeStringSearchStandard } from './uteis/searchStringStandard'
 import Login from './screens/loginScreen/Login'
@@ -12,6 +11,7 @@ import Cart from './screens/cartScreen/Cart'
 import Welcome from './screens/welcomeScreen/Welcome'
 import Product from './screens/productScreen/Product'
 import Account from './screens/accountScreen/Account'
+import CloseCart from './screens/Ficalizar-compra/CloseCart'
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
   const [inputName, setInputName] = useState("")
   const [screen, setScreen] = useState(1)
   const [product , setProduct] =useState({})
+  const [user , setUser] =useState([])
 
 
 
@@ -29,14 +30,26 @@ const handleClickProduct = (prod) =>{
   setScreen("product")
 }
 useEffect(()=>{
-  const user = localStorage.getItem("user")
-  user===null && localStorage.setItem("user",JSON.stringify({}))
-  const cart = localStorage.getItem("currCart")
-  cart===null && localStorage.setItem("currCart",JSON.stringify({}))
-})
+  handleLocalUser()
+  handleLocalCart()
+},[])
 const handleExit = () => {
   localStorage.removeItem("user")
   window.location.reload()
+}
+
+const handleLocalUser = () =>{
+  let userString =localStorage.getItem("user")
+  userString || localStorage.setItem("user",JSON.stringify([]))
+  userString =localStorage.getItem("user")
+  setUser(JSON.parse(userString))
+}
+const handleLocalCart = () =>{
+  let cartString =localStorage.getItem("user")
+  cartString || localStorage.setItem("user",JSON.stringify([]))
+  cartString =localStorage.getItem("user")
+  setCurrCart(JSON.parse(cartString))
+
 }
 
 
@@ -141,6 +154,8 @@ const handleExit = () => {
               currCart={currCart}
 
               />
+              case "newPage":
+                return <CloseCart/>
           default:
            setScreen('welcome')
 
@@ -150,6 +165,8 @@ const handleExit = () => {
 
 
   return (
+
+    // <CloseCart user={user}/>
 
     <Container size={currCart.length} screen={screen} >
       {(screen ==="main" || screen==="welcome" || screen==="product") &&
