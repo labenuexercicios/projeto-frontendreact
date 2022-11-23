@@ -1,0 +1,72 @@
+[
+    {
+        "id": "01",
+        "name": "T-shirt Eu vim pelas bitocas",
+        "price": 45.90,
+        "feature": "bitoca"
+    },
+
+    {
+        "id": "02",
+        "name": "T-shirt Não acredito em humanos - Alien",
+        "price": 49.90,
+        "feature": "humanos"
+    },
+
+    {
+        "id": "03",
+        "name": "T-shirt Minha mente é de outro mundo",
+        "price": 39.90,
+        "feature": "mundo"
+    },
+
+    {
+        "id": "04",
+        "name": "T-shirt Resgatado",
+        "price": 45.90,
+        "feature": "resgatado"
+    },
+
+    {
+        "id": "05",
+        "name": "T-shirt Três certezas da vida",
+        "price": 45.90,
+        "feature": "certezas"
+    },
+
+    {
+        "id": "06",
+        "name": "T-shirt Astronauta na lua",
+        "price": 49.90,
+        "feature": "astronauta"
+    },
+
+    {
+        "id": "07",
+        "name": "T-shirt Não acredito em humanos - Ovni",
+        "price": 39.90,
+        "feature": "humanos2"
+    },
+
+    {
+        "id": "08",
+        "name": "T-shirt Ao infinito e além",
+        "price": 45.90,
+        "feature": "infinito"
+    },
+
+    {
+        "id": "09",
+        "name": "T-shirt Eu preciso de mais espaço",
+        "price": 45.90,
+        "feature": "espaco"
+    },
+
+    {
+        "id": "10",
+        "name": "T-shirt Foguete não tem ré",
+        "price": 39.90,
+        "feature": "foguete"
+    }
+    
+]
