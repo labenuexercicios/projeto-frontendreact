@@ -28,19 +28,18 @@ export const Localization = styled.article `
 `
 export const Pesquisa = styled.input `
     height: 40px;
-    width: 400px;
+    width: 31.25vw;
     border-radius: 15px;
     border: 1px #808080 solid;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     padding-left: 10px;
-    background-image:url("https://i.imgur.com/eKw2dvH.png");
 `
 
 export const Article = styled.article `
     position: relative;
     height: 40px;
-    width: 400px;
+    width: 39%;
 `
 export const SearchIcon = styled.label`
     position: absolute;
