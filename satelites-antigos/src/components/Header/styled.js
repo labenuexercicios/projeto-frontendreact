@@ -82,17 +82,22 @@ export const Nav = styled.nav`
     position: relative;
     
     div{
+      display: ${(props) => props.show};
+      justify-content: center;
       position: absolute;
       right: 0;
       top: 0;
       background-color: red;
       height: 15px;
       width: 15px;
-      font-size: 10px;
+      font-size: 11px;
       color: white;
-      text-align: center;
       border-radius: 50%;
       font-weight: bold;
+      p{
+        position: relative;
+        top: -1px;
+      }
     }
 
     img{

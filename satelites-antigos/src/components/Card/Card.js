@@ -12,32 +12,25 @@ import {ContainerCard,
 import coin from '../../img/coin.png'
 import { useState } from "react"
 import  './Card.css'
-import satellites from '../../Satellites/satellites.json'
+// import satellites from '../../Satellites/satellites.json'
 
 
 export const Card = (props) => {
   const [Style, setStyle] = useState("hideCard")
 
-  // function onClickButtonBuy(e) {
-  //   const clickedSatellite = satellites.filter((satellite) => {
-  //     return satellite.id === e.currentTarget.id
-  //   })
-  //   props.setClickedItems([...props.clickedItems, clickedSatellite[0].id])
-  //   props.updateCart()
-  // }
-  // const [clickedItemId, setClickedItemId] = useState(Number)
-  function addToCart(itemId) {
-    const newListIdCart = [...props.listIdCart]
-    
-    const idFound = newListIdCart.includes(itemId) 
-    
-    if (!idFound) {
-      // const newProduct = {...productToAdd, quantity: 1}
-      // newCart.push(newProduct)
-      newListIdCart.push(itemId)
+  function addToCart(item) {
+
+    const newListCart = [...props.listCart]
+
+    const itemFound = newListCart.find((element) => element.id === item.id) 
+
+    if (!itemFound) {
+      newListCart.push(item)
+    }else {
+      item.quantity++
+      // props.setTotalCart(item.quantity)
     }
-      
-    props.setListIdCart(newListIdCart)
+    props.setListCart(newListCart)
   }
   
 
@@ -63,7 +56,7 @@ export const Card = (props) => {
             </InfoDiv>
             <InfoDiv>
               <button onClick={() => setStyle("openCard")}>INFO</button>
-              <button onClick={() => addToCart(props.id)}>BUY</button>
+              <button onClick={() => addToCart(props.satellite)}>BUY</button>
             </InfoDiv>
           </Information>
           <Detail1></Detail1>

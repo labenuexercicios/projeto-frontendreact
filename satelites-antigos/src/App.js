@@ -27,13 +27,16 @@ const Footer = styled.footer`
 
 function App() {
   const [page, setPage] = useState("store")
-  const [listIdCart, setListIdCart] = useState([])
+  const [listCart, setListCart] = useState([])
 
   return (
       <ContainerBody>
         <GlobalStyle/>
-        <Header setPage={setPage} listIdCart={listIdCart}/>
-        <Main page={page} listIdCart={listIdCart} setListIdCart={setListIdCart}/>
+        <Header setPage={setPage} listCart={listCart}/>
+        <Main 
+          page={page} 
+          listCart={listCart} 
+          setListCart={setListCart}/>
         <Footer/>
       </ContainerBody>
   );

@@ -11,6 +11,11 @@ import carrinho from '../../img/carrinho.png'
 
 export const Header = (props) => {
 
+  let soma = 0
+  for(let item of props.listCart){
+    soma += item.quantity
+  }
+
   return(
     <>
       <ContainerHeader>
@@ -34,8 +39,8 @@ export const Header = (props) => {
             <span onClick={() => props.setPage("home")}>HOME</span>
             <span onClick={() => props.setPage("store")}>STORE</span>
             <ImgLupa src={lupa} onClick={() => props.setPage("login")}/>
-            <Carrinho>
-              <div>{props.listIdCart.length === 0 ? "" : props.listIdCart.length}</div>
+            <Carrinho show={props.listCart.length === 0 ? "none" : "flex"}>
+              <div><p>{soma}</p></div>
               <img src={carrinho} onClick={() => props.setPage("cart")}/>
             </Carrinho>
           </Nav>
