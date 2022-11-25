@@ -48,43 +48,32 @@ function App(props) {
             }else{
               newListaCarrinho.splice(i, 1)
             }
+            //localStore p remover e  quando atualizar continuar removido
+            const carrinhoString =JSON.stringify(newListaCarrinho)
+            localStorage.setItem("carr", carrinhoString) 
             setListaCarrinho(newListaCarrinho)
           }
         }        
      }
-    //  const carrinhoString =JSON.stringify(listaCarrinho )
-    //  localStorage.setItem("carr", carrinhoString)
 
     const guardaCarrinho = () =>{
-      const newListaCarrinho = localStorage.getItem("carr")
-     const carrinho2 = JSON.parse(newListaCarrinho)
+    const newListaCarrinho = localStorage.getItem("carr")
+    const carrinho2 = JSON.parse(newListaCarrinho)
      setListaCarrinho(carrinho2)       
     }
-   
+//localStore p remover e  quando atualizar continuar removido
+    const avisarCompraFinalizada = () => {
+      alert("Compra concluida com sucesso!")
+      const carrinhoString =JSON.stringify([])
+      localStorage.setItem("carr", carrinhoString)
+      setListaCarrinho([])
+  }
+
     useEffect (()=>{
       guardaCarrinho()
     },[])
 
-     
 
-
-
-  
-  // const removeBrinquedo = (brinquedo) => {
-   
-  //     const novaListaCarrinho = [...listaCarrinho]
-  //     console.log(novaListaCarrinho)
-
-  //     const index = novaListaCarrinho.indexOf(brinquedo)
-  //     console.log(index)
-  //     console.log(brinquedo)
-
-  //     if(index > -1){
-  //       novaListaCarrinho.splice(index, 1)
-  //       setListaCarrinho(novaListaCarrinho)
-  //     }
-   
-  // }
 
    return (
     <div>
@@ -145,9 +134,8 @@ function App(props) {
           listaCarrinho={listaCarrinho}
           setListaCarrinho={setListaCarrinho}
           TodosBrinquedos={TodosBrinquedos}
-          removeBrinquedo={removeBrinquedo}         
-          // decreaseQuantityInCarrinho={decreaseQuantityInCarrinho}
-          // increaseQuantityInCarrinho={increaseQuantityInCarrinho} 
+          removeBrinquedo={removeBrinquedo} 
+          avisarCompraFinalizada={avisarCompraFinalizada}
           
         >
         </Carrinho>

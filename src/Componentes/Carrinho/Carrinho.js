@@ -6,16 +6,23 @@ import { CarrinhoContainer, ItensCarrinho, SecaoPrecoFinal } from "./styled";
 function Carrinho(props) {
     let totalPreco = 0
 
-    function avisarCompraFinalizada () {
-        alert("Compra concluida com sucesso!")
-        props.setListaCarrinho([])
-    }
+   const QtdTotalItemCarrinho = props.listaCarrinho.reduce(
+    (acc, produto)=>{
+        return produto.quantity + acc
+    },0
+   )
+
+    // function avisarCompraFinalizada () {
+    //     alert("Compra concluida com sucesso!")
+    //     props.setListaCarrinho([])
+    // }
+
 
     return (
         <CarrinhoContainer>
             <div className="posicaoImgCarrinho">
               <img src={carrinhoImagem} alt="" /> 
-              <h1>CARRINHO</h1> 
+              <h1>CARRINHO ({QtdTotalItemCarrinho})</h1> 
               <img src={carrinhoImagem} alt="" />
            </div>
 
@@ -39,10 +46,11 @@ function Carrinho(props) {
                 
                 </ItensCarrinho>
                 <SecaoPrecoFinal>
+                   
                     <p>
                         {`Preço total: ${formatarPreco.format(totalPreco)}`}
                     </p>
-                    <button onClick={avisarCompraFinalizada}>Finalizar compra</button>
+                    <button onClick={props.avisarCompraFinalizada}>Finalizar compra</button>
                 </SecaoPrecoFinal>
             </div>
         </CarrinhoContainer>
