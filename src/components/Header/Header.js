@@ -10,8 +10,14 @@ import {
 } from "./styles";
 import Image from "../../icons/mundo-da-lua.png";
 import Bag from "../../icons/shopping-bag.png";
+import { useNavigate } from 'react-router-dom';
+import {goToProductPage, goToToysPage} from "../../router/cordinator"
+
 
 function Header(props) {
+
+  const navigate = useNavigate();
+
   const onChangeQuery = (e) => {
     props.setQuery(e.target.value);
   };
@@ -21,8 +27,8 @@ function Header(props) {
       <Logo className="img" src={Image} alt="image-logo" />
 
       <MenuCenter className="nav">
-        <OptionsMenu>{props.menuBrinquedos}</OptionsMenu>
-        <OptionsMenu>{props.menuAcessorios}</OptionsMenu>
+        <OptionsMenu onClick={() => goToToysPage(navigate)}>{props.menuBrinquedos}</OptionsMenu>
+        <OptionsMenu onClick={() => goToProductPage(navigate)}>{props.menuAcessorios}</OptionsMenu>
       </MenuCenter>
 
       <DivRight className="div-right">

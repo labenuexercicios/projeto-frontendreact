@@ -85,10 +85,11 @@ function Content(props) {
               </PriceAndButton>
             </Card>
           ))}
+          
       </CardsContainer>
       <Cart 
       cartItems={cartItems}
-      onAddCart={addCart}
+      addCart={addCart}
       onRemove={onRemove}
       > </Cart>
     </MainContainer>

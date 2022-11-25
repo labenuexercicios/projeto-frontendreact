@@ -12,6 +12,7 @@ function Home() {
   const [ordenacao, setOrdenacao] = useState("")
 
   return (
+  
     <HomeContainer className="Home">
       <Header
         menuBrinquedos={"Brinquedos espaciais"}
@@ -35,6 +36,7 @@ function Home() {
       </Content>
 
       <Footer />
+  
     </HomeContainer>
   );
 }
