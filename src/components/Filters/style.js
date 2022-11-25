@@ -1,23 +1,24 @@
 import styled from "styled-components";
 
+export const Main = styled.main `
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    gap: 40px;
+    aside{
+        width: 25%;
+    }
+`
 
-
-export const Price = styled.section `
+export const Price = styled.article `
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
     display: flex;
-    width: 20%;
     padding-top: 10px;
     font-family: 'Poppins', sans-serif;
     position: relative;
     margin-left: 5vw;
 `
 
-export const PlaceHolder = styled.label `
-    color: #808080;
-    position: absolute;
-    left: 45%;
-    top: 35%;
-`
 export const ImgIcon = styled.label `
     position: absolute;
     right: 2%;
@@ -26,7 +27,7 @@ export const ImgIcon = styled.label `
 
 export const Search = styled.input `
     height: 40px;
-    width: 100%;
+    min-width: 100%;
     border-radius: 15px;
     border: 1px #808080 solid;
     font-family: 'Poppins', sans-serif;
