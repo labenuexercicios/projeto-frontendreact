@@ -12,6 +12,19 @@ function Carrinho(props) {
     },0
    )
 
+   const avisarCompraFinalizada = () => {
+    if(QtdTotalItemCarrinho>0){
+
+   
+    alert("Compra concluida com sucesso!")
+    const carrinhoString =JSON.stringify([])
+    localStorage.setItem("carr", carrinhoString)
+    props.setListaCarrinho([]) 
+}else{
+    alert("Carrinho vazinho, adicione um brinquedo!")
+}
+}
+
     // function avisarCompraFinalizada () {
     //     alert("Compra concluida com sucesso!")
     //     props.setListaCarrinho([])
@@ -50,7 +63,8 @@ function Carrinho(props) {
                     <p>
                         {`Preço total: ${formatarPreco.format(totalPreco)}`}
                     </p>
-                    <button onClick={props.avisarCompraFinalizada}>Finalizar compra</button>
+                    <button onClick={avisarCompraFinalizada}>Finalizar compra</button>
+
                 </SecaoPrecoFinal>
             </div>
         </CarrinhoContainer>

@@ -62,12 +62,7 @@ function App(props) {
      setListaCarrinho(carrinho2)       
     }
 //localStore p remover e  quando atualizar continuar removido
-    const avisarCompraFinalizada = () => {
-      alert("Compra concluida com sucesso!")
-      const carrinhoString =JSON.stringify([])
-      localStorage.setItem("carr", carrinhoString)
-      setListaCarrinho([])
-  }
+
 
     useEffect (()=>{
       guardaCarrinho()
@@ -135,7 +130,7 @@ function App(props) {
           setListaCarrinho={setListaCarrinho}
           TodosBrinquedos={TodosBrinquedos}
           removeBrinquedo={removeBrinquedo} 
-          avisarCompraFinalizada={avisarCompraFinalizada}
+          
           
         >
         </Carrinho>
