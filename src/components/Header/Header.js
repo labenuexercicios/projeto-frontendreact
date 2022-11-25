@@ -18,14 +18,14 @@ function Header(props) {
 
   return (
     <HeaderContainer>
-      <Logo className="img" src={Image} alt="imagem-logo" />
+      <Logo className="img" src={Image} alt="image-logo" />
 
       <MenuCenter className="nav">
         <OptionsMenu>{props.menuBrinquedos}</OptionsMenu>
         <OptionsMenu>{props.menuAcessorios}</OptionsMenu>
       </MenuCenter>
 
-      <DivRight className="div-a-direita">
+      <DivRight className="div-right">
         <BagImage src={Bag} />
 
         <InputBuscar
@@ -35,9 +35,8 @@ function Header(props) {
           value={props.query}
           onChange={onChangeQuery}
         />
-        {/* dentro do >< só algo que for aparecer para o usuario */}
 
-        <BotaoBuscar className="button">Buscar</BotaoBuscar>
+        <BotaoBuscar className="button-search">Buscar</BotaoBuscar>
       </DivRight>
     </HeaderContainer>
   );

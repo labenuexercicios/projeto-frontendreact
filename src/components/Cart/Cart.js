@@ -14,7 +14,7 @@ function Cart(props) {
 
           <div>{item.name}</div>
 
-          <div className="botoes">
+          <div className="buttons">
             <button onClick={() => addCart(item)} className="add">
               +
             </button>

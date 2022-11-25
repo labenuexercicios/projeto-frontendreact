@@ -34,7 +34,7 @@ export const Card = styled.div`
   justify-content: center;
   overflow: hidden;
 
-  .titulo {
+  .title {
     font-size: 20px;
     margin: 15px;
   }

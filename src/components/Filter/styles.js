@@ -18,7 +18,8 @@ export const MenuFilter = styled.div`
 
  .input{
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: 0.5px solid grey;
   }
 
   .select{

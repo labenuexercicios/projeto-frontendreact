@@ -77,7 +77,7 @@ function Content(props) {
             >
               <Image src={card.imageUrl} alt={card.imageAlt} />
               
-              <h1 className="titulo">{card.name}</h1>
+              <h1 className="title">{card.name}</h1>
 
               <PriceAndButton className="Price-and-cart">
                 <p className="price">R${card.price.toFixed(2)}</p>

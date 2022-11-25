@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  /* background-color: greenyellow; */
-  /* position: fixed; */
   width: 1350px;
   font-size: 20px;
   display: flex;

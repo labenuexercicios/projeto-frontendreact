@@ -3,15 +3,15 @@ import { FooterContainer, DivLeft, DivRight } from "./styles";
 function Footer(props) {
   return (
     <FooterContainer className="footer">
-      <DivLeft className="autor">
+      <DivLeft className="credits">
         Feito com ♡ em Labenu por Taís Zimerer
       </DivLeft>
 
-      <DivRight className="formas-de-pagamento">
+      {/* <DivRight className="payment methods">
         <p></p>
 
         <img src="" alt="" />
-      </DivRight>
+      </DivRight> */}
     </FooterContainer>
   );
 }
