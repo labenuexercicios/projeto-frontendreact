@@ -32,7 +32,7 @@ function Header (props){
                     />
                 </Inputs>
                 <Ordenacao>
-                    <label for="sortingParameter">Ordenar preço:</label>
+                    <label htmlFor="sortingParameter">Ordenar preço:</label>
                 
                     <select
                         value={props.order}

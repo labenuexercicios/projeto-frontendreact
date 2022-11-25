@@ -31,6 +31,9 @@ function App(props) {
     else{
       brinquedoFound.quantity++
     }
+    // if(){
+
+    // }
     const carrinhoString =JSON.stringify(newListaCarrinho)
     localStorage.setItem("carr", carrinhoString) 
       

@@ -13,19 +13,21 @@ function Carrinho(props) {
    )
 
    const avisarCompraFinalizada = () => {
-    if(QtdTotalItemCarrinho>0){
+    if(QtdTotalItemCarrinho > 0){
 
    
     alert("Compra concluida com sucesso!")
     const carrinhoString =JSON.stringify([])
     localStorage.setItem("carr", carrinhoString)
     props.setListaCarrinho([]) 
-}else{
+  }else{
     alert("Carrinho vazinho, adicione um brinquedo!")
-}
-}
+  }
+  }
 
     // function avisarCompraFinalizada () {
+
+    
     //     alert("Compra concluida com sucesso!")
     //     props.setListaCarrinho([])
     // }
