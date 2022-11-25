@@ -40,8 +40,8 @@ export const BotaoCarrinho = styled.span`
 
 
     button{
-        height: 4vh;
-        width: 10vw;
+        height: 6vh;
+        width: 12vw;
         border: none;
         border-radius: 10px;       
     }

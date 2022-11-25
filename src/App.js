@@ -60,12 +60,14 @@ function App(props) {
      }
 
     const guardaCarrinho = () =>{
+      
+    if (localStorage.getItem("carr")){
     const newListaCarrinho = localStorage.getItem("carr")
     const carrinho2 = JSON.parse(newListaCarrinho)
      setListaCarrinho(carrinho2)       
     }
-//localStore p remover e  quando atualizar continuar removido
-
+    
+  }
 
     useEffect (()=>{
       guardaCarrinho()
