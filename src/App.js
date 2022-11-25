@@ -2,7 +2,7 @@
 import Header from "./Componentes/Header/Header"
 import Main from "./styled"
 import { CardContainer } from "./styled"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import TodosBrinquedos from "./objetos"
 import Cards from "./Componentes/Cards/Cards"
 import Carrinho from "./Componentes/Carrinho/Carrinho"
@@ -27,15 +27,14 @@ function App(props) {
     if (!brinquedoFound){
       const newBrinquedo = { ...brinquedoToAdd, quantity:1}
       newListaCarrinho.push(newBrinquedo)      
-    }else{
+    }   
+    else{
       brinquedoFound.quantity++
     }
-
-        // setListaCarrinho([...listaCarrinho, brinquedo])
-        // console.log(brinquedo)
-    
-      setListaCarrinho(newListaCarrinho)
-       
+    const carrinhoString =JSON.stringify(newListaCarrinho)
+    localStorage.setItem("carr", carrinhoString) 
+      
+      setListaCarrinho(newListaCarrinho)       
     }
 
       const removeBrinquedo = (id) => {
@@ -51,18 +50,22 @@ function App(props) {
             }
             setListaCarrinho(newListaCarrinho)
           }
-        } 
-       
+        }        
      }
+    //  const carrinhoString =JSON.stringify(listaCarrinho )
+    //  localStorage.setItem("carr", carrinhoString)
 
+    const guardaCarrinho = () =>{
+      const newListaCarrinho = localStorage.getItem("carr")
+     const carrinho2 = JSON.parse(newListaCarrinho)
+     setListaCarrinho(carrinho2)       
+    }
+   
+    useEffect (()=>{
+      guardaCarrinho()
+    },[])
 
-
-     const carrinhoString =JSON.stringify(listaCarrinho )
-     localStorage.setItem("carr", carrinhoString)
-
-     const newListaCarrinho = localStorage.getItem("carr")
-
-    const carrinho2 = JSON.parse(newListaCarrinho)
+     
 
 
 
@@ -128,12 +131,10 @@ function App(props) {
               produto={produto}
               addBrinquedo={addBrinquedo}
               isOnCarrinho={true}
-              //  remBrinquedo={remBrinquedo}
+          
               removeBrinquedo={removeBrinquedo}
               
-              carrinhoString2={newListaCarrinho}
-              carrinho2={carrinho2}
-                          
+          
               >
             </Cards>
           )
