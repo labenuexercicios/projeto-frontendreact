@@ -1,4 +1,4 @@
-import {Cart, InfoCart, ItemCart, CardCart, Quantity, Info, EmptyCart} from './styled'
+import {Cart, InfoCart, ItemCart, CardCart, Quantity, Info, Delete, EmptyCart} from './styled'
 import satellites from '../../Satellites/satellites.json'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -19,6 +19,15 @@ export const PageCart = (props) => {
     productFound.quantity = productFound.quantity + moreOrLess
     props.setListCart(newList)
     return productFound.quantity
+  }
+
+  const deleteOfCart = (item) => {
+    const newList = [...props.listCart]
+    const ListWithoutItem = newList.filter((elemente) => {
+      item.quantity = 1
+      return elemente.id !== item.id
+    })
+    props.setListCart(ListWithoutItem)
   }
 
   return(
@@ -43,12 +52,16 @@ export const PageCart = (props) => {
                         <h4>{item.quantity}</h4>
                         <button onClick={() => quantity(item, 1)}>&rang;</button>
                       </div>
-                      <div>
+                      {/* <div>
                         <p>AVAILABLE</p>
-                      </div>
+                      </div> */}
                     </Quantity>
+                    <Delete onClick={() => deleteOfCart(item)}>
+                      <p>REMOVE</p>
+                    </Delete>
                   </div>
                 </CardCart>
+                  
               )
             })
             :

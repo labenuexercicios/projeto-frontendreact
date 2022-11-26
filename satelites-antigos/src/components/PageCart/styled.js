@@ -47,6 +47,8 @@ export const CardCart = styled.div`
     padding-left: 40px;
     background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(128,128,128,1) 100%, rgba(46,46,47,1) 100%);
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     /* border: 1px red solid; */
   }
 
@@ -96,10 +98,23 @@ export const Quantity = styled.div`
     height: 22px;
     color: black;
     cursor: pointer;
+    border: none;
+  }
+  button:hover{
+    opacity: 0.9;
   }
   h4{
     color: white;
   }
+`
+
+export const Delete = styled.button`
+  height: 22px;
+  width: 70px;
+  /* border-radius: 50%; */
+  justify-self: end;
+  cursor: pointer;
+  border: none;
 `
 
 export const EmptyCart = styled.div`
