@@ -58,13 +58,6 @@ export const Main = (props) => {
                 <p>{satellite.description}</p>
                 <Card 
                 satellite={satellite}
-                id={satellite.id}
-                name={satellite.name} 
-                image={satellite.image}
-                year={satellite.year}
-                price={satellite.price} 
-                description={satellite.description} 
-                link={satellite.link}
                 listCart={props.listCart}
                 setListCart={props.setListCart}
                 />
@@ -78,6 +71,7 @@ export const Main = (props) => {
       : 
         <PageCart
         listCart={props.listCart}
+        setListCart={props.setListCart}
         />
       }
     </ContainerMain>

@@ -95,6 +95,7 @@ export const Quantity = styled.div`
     width: 25px;
     height: 22px;
     color: black;
+    cursor: pointer;
   }
   h4{
     color: white;

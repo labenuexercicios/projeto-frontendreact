@@ -1,25 +1,24 @@
 import {Cart, InfoCart, ItemCart, CardCart, Quantity, Info, EmptyCart} from './styled'
 import satellites from '../../Satellites/satellites.json'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 export const PageCart = (props) => { 
   const listId = props.listCart.map((item) => item.id)
 
   const productsInCart = satellites.filter((product) => {
     if(listId.includes(product.id)){
+      // console.log(product)
       return product
     }
   })
 
-  
-  const [q, setQ] = useState(Number)
-  //ta faltando atualizar apenas a quantidade clicada
-  const increaseQuantity = (item) => {
-    console.log(item)
-    setQ(item.quantity++)
-  }
-  const decreaseQuantity  = (item) => {
-    setQ(item.quantity--)
+  const quantity = (item, moreOrLess) => {
+    const newList = [...props.listCart]
+    const productFound = newList.find((elemente)=> elemente.id === item.id)
+    productFound.quantity = productFound.quantity + moreOrLess
+    props.setListCart(newList)
+    return productFound.quantity
   }
 
   return(
@@ -40,9 +39,9 @@ export const PageCart = (props) => {
                     </Info>
                     <Quantity>
                       <div> 
-                        <button onClick={() => decreaseQuantity(item)}>&lang;</button>
-                        <h4>{q}</h4>
-                        <button onClick={() => increaseQuantity(item)}>&rang;</button>
+                        <button disabled={item.quantity === 1 ? true : false} onClick={() => quantity(item, -1)}>&lang;</button>
+                        <h4>{item.quantity}</h4>
+                        <button onClick={() => quantity(item, 1)}>&rang;</button>
                       </div>
                       <div>
                         <p>AVAILABLE</p>

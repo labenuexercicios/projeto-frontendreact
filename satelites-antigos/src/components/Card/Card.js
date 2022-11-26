@@ -28,7 +28,6 @@ export const Card = (props) => {
       newListCart.push(item)
     }else {
       item.quantity++
-      // props.setTotalCart(item.quantity)
     }
     props.setListCart(newListCart)
   }
@@ -37,21 +36,21 @@ export const Card = (props) => {
   return(
     <ContainerCard className={Style}>
         <Description>
-          <p>{props.description}</p>
-          <p><a href={props.link} target="_blank">&rarr; SAIBA MAIS</a></p>
+          <p>{props.satellite.description}</p>
+          <p><a href={props.satellite.link} target="_blank">&rarr; SAIBA MAIS</a></p>
         </Description>
-        <ImgSatelite src={props.image} alt={props.name}/>
+        <ImgSatelite src={props.satellite.image} alt={props.satellite.name}/>
         <DivYear>
-          <h3>{props.year}</h3>
+          <h3>{props.satellite.year}</h3>
           <div></div>
         </DivYear>
         <ContainerInformation>
           <Information>
             <InfoDiv>
-              <h1>{props.name.toUpperCase()}</h1>
+              <h1>{props.satellite.name.toUpperCase()}</h1>
               <Price>
                 <img src={coin}/>
-                <p>{props.price}</p>
+                <p>{props.satellite.price}</p>
               </Price>
             </InfoDiv>
             <InfoDiv>
