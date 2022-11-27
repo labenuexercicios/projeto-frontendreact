@@ -15,8 +15,7 @@ export const NavContentWrapper = styled.div`
   display: flex;
   width: 60%;
   justify-content: space-between;
-  
-`
+`;
 
 export const NavLogo = styled.div`
   display: flex;
@@ -37,9 +36,18 @@ export const Searchbar = styled.div`
   input {
     height: 38px;
     width: 100%;
-    padding: 7px 60px 9px 15px;
+    padding: 7px 15px 9px 15px;
     border-style: solid;
     border-width: 0;
     font-size: 17px;
+  }
+  button {
+    background-color: white;
+    border: none;
+    padding-right: 10px;
+    img {
+      object-fit: contain;
+      width: 20px;
+    }
   }
 `;

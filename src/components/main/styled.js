@@ -18,14 +18,14 @@ export const CardsGrid = styled.section`
 
 export const AsideContent = styled.div`
   padding-top: 30px;
-`
+`;
 
 export const Cart = styled.aside`
   display: flex;
   width: 200px;
   height: 100px;
   padding-top: 10px;
-`
+`;
 export const NavFilters = styled.div`
   display: flex;
   flex-direction: column;
@@ -33,18 +33,4 @@ export const NavFilters = styled.div`
 export const MainContentWrapper = styled.div`
   display: flex;
   width: 60%;
-`
-
-/* height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  label {
-    font-size: 12px;
-  }
-  input {
-    margin-left: 10px;
-    border-width: 0;
-    padding: 2px 30px 2px 10px;
-  } */
+`;

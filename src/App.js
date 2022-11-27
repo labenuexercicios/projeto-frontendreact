@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import Footer from "./components/footer/Footer";
@@ -14,10 +14,11 @@ export const GlobalStyled = createGlobalStyle`
 `;
 
 function App() {
+  const [searchByName, setSearchByName] = useState("");
   return (
     <div>
       <Body>
-        <Header />
+        <Header searchByName={searchByName} setSearchByName={setSearchByName}/>
         <Main />
         <Footer />
         <GlobalStyled />

@@ -1,7 +1,16 @@
 import React from "react";
-import { NavHeader, NavLogo, NavSearch, Searchbar, NavContentWrapper  } from "./styled";
+import {
+  NavHeader,
+  NavLogo,
+  NavSearch,
+  Searchbar,
+  NavContentWrapper,
+} from "./styled";
 
-function Header() {
+function Header(props) {
+  const onChangeSearchByName = (e) => {
+    props.setSearchByName(e.target.value);
+  };
   return (
     <>
       <NavHeader>
@@ -11,7 +20,18 @@ function Header() {
           </NavLogo>
           <NavSearch>
             <Searchbar>
-              <input type="search" placeholder="Digite o produto desejado" />
+              <input
+                type="text"
+                placeholder="Digite o produto desejado"
+                onChange={onChangeSearchByName}
+                value={props.searchByName}
+              />
+              <button type="submit">
+                <img
+                  src="https://icons.veryicon.com/png/128/application/alipay-library/search-509.png"
+                  alt="search button"
+                />
+              </button>
             </Searchbar>
           </NavSearch>
         </NavContentWrapper>
