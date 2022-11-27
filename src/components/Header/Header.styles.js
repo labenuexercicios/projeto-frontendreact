@@ -7,7 +7,7 @@ export const ContainerHeader = styled.header`
     padding: 4px;
     gap: 10px;
     align-items: center;
-    justify-content: space-evenly
+    justify-content: space-evenly;
 `
 
 export const ImagemLogo = styled.img`
@@ -53,6 +53,12 @@ export const ImagemCarrinho = styled.img`
     /* border: 2px solid red; */
     height: 5vh;
 `
-
-
+export const CartButton = styled.button`
+    background-color: black;
+    border: none;
+`
+export const ButtonLogo = styled.button`
+    border: none;
+    background-color: black;
+`
 

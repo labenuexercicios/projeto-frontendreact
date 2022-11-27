@@ -1,34 +1,52 @@
 import React from "react";
-import {ButtonPesquisar, ContainerHeader, ImagemLogo, Buscador, MinimumMaximum, SelectOrder, ImagemCarrinho, FilterCart} from "./Header.styles";
+import {ButtonPesquisar, ContainerHeader, ImagemLogo, ButtonLogo, Buscador, MinimumMaximum, SelectOrder, ImagemCarrinho, FilterCart, CartButton} from "./Header.styles";
 import logo from "../../assets/logo.png";
 import cartIcon from "../../assets/cart-icon.png"
-
+import {goToProductPage, goToCartPage} from '../../Router/coordinator'
+import { useNavigate } from "react-router-dom"
 
 export function Header (props){
+
+    const { setInputHeader,
+        inputHeader, 
+        setInputMaxPrice, 
+        inputMaxPrice, 
+        setInputMinPrice,
+        inputMinPrice, 
+        setSortByPrice, 
+        sortByPrice
+    } = props     
+
+    const navigate = useNavigate()
+    
     return(
     <>    
         <ContainerHeader>
-            <ImagemLogo src={logo} alt="Imagem Logo"/>
-
+            <ButtonLogo onClick={() => goToProductPage(navigate)} >
+                <ImagemLogo src={logo} alt="Imagem Logo"/>
+            </ButtonLogo>
+            
             <Buscador>
-                <input placeholder="Pesquisar" value={props.inputHeader} 
-                       onChange={(e)=>{props.setInputHeader(e.target.value)}}/>
+                <input placeholder="Pesquisar" value={inputHeader} 
+                       onChange={(e)=>{setInputHeader(e.target.value)}}/>
                 <ButtonPesquisar>Buscar</ButtonPesquisar>
             </Buscador>
             <FilterCart>
                 <MinimumMaximum>
-                <input type="number" id="minimum" placeholder="Mínimo" value={props.inputMinPrice}
-                onChange={(e)=>{props.setInputMinPrice(e.target.value)}}/> 
-                <input type="number" id="maximum" placeholder="Máximo" value={props.inputMaxPrice} 
-                onChange={(e)=>{props.setInputMaxPrice(e.target.value)}}/>
+                <input type="number" id="minimum" placeholder="Mínimo" value={inputMinPrice}
+                onChange={(e)=>{setInputMinPrice(e.target.value)}}/> 
+                <input type="number" id="maximum" placeholder="Máximo" value={inputMaxPrice} 
+                onChange={(e)=>{setInputMaxPrice(e.target.value)}}/>
                 </MinimumMaximum>
 
-                <SelectOrder value={props.sortByPrice} onChange={(e)=>{props.setSortByPrice(e.target.value)}}>
+                <SelectOrder value={sortByPrice} onChange={(e)=>{setSortByPrice(e.target.value)}}>
                 <option value="crescente" >Crescente</option>
                 <option value="decrescente">Decrescente</option>
                 </SelectOrder>
 
-                <ImagemCarrinho src={cartIcon} alt="Imagem de Carrinho"/>
+                <CartButton onClick={() => goToCartPage(navigate)}>
+                    <ImagemCarrinho src={cartIcon} alt="Imagem de Carrinho"/>
+                </CartButton>
             </FilterCart>
             
             

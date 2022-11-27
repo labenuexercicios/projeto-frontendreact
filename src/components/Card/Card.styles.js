@@ -30,3 +30,32 @@ export const DescricaoProduto = styled.div`
   border: 2px solid red;
   color: white;
 `
+export const PriceCard = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  height: 30vh;
+  align-items: center;
+
+  
+  p{
+    display: flex;
+  }
+
+  h1{
+    font-size: 48px;
+  }
+`
+export const SizeAddButton = styled.div`
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 8vw;
+    gap: 8px;
+
+    button{
+      font-size: 12px;
+    }
+`

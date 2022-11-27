@@ -2,7 +2,8 @@
     {
         "id": "01",
         "title": "Astronauta Balão",
-        "size": "P, M, G, GG e XGG",
+        "rating": 4.5,
+        "size": ["P", "M", "G", "GG", "XGG"],
         "price": 69.90,
         "amount": "200",
         "image": "./image/01camiseta-astronauta-baloes-69,90reais.png"
@@ -10,7 +11,8 @@
     {
         "id": "02",
         "title": "Astronauta Bolhas",
-        "size": "P, M, G e GG",
+        "rating": 4.9,
+        "size": ["P", "M", "G", "GG"],
         "price": 49.90,
         "amount": "400",
         "image": "./image/02camiseta-astronauta-bolhas-41,90reais.png"
@@ -18,7 +20,8 @@
     {
         "id": "03",
         "title": "Astronauta Chill",
-        "size": "P, M, G, GG e XGG",
+        "rating": 5.0,
+        "size": ["P", "M", "G", "GG", "XGG"],
         "price": 89.90,
         "amount": "200",
         "image": "./image/03camiseta-astronauta-chill-89,90reais.png"
@@ -26,7 +29,8 @@
     {
         "id": "04",
         "title": "Astro Dino",
-        "size": "P, M, GG e XGG",
+        "rating": 4.0,
+        "size": ["P", "G", "GG", "XGG"],
         "price": 49.90,
         "amount": "200",
         "image": "./image/04camiseta-astronauta-dinossaura-49,90reais.png"
@@ -34,7 +38,8 @@
     {
         "id": "05",
         "title": "Astro Queijo",
-        "size": "P, M, GG e XGG",
+        "rating": 4.7,
+        "size": ["P", "G", "GG", "XGG"],
         "price": 39.90,
         "amount": "300",
         "image": "./image/05camiseta-astronauta-queijo-39,90reais.png"
@@ -42,7 +47,8 @@
     {
         "id": "06",
         "title": "Astronauta no Gráfico",
-        "size": "P, M, GG e XGG",
+        "rating": 4.8,
+        "size": ["P", "G", "GG", "XGG"],
         "price": 39.90,
         "amount": "250",
         "image": "./image/06camiseta-grafico-astronauta-30,60reais.png"
@@ -50,7 +56,8 @@
     {
         "id": "07",
         "title": "Planestas",
-        "size": "M, GG e XGG",
+        "rating": 4.2,
+        "size": ["P", "G", "GG", "XGG"],
         "price": 39.90,
         "amount": "100",
         "image": "./image/07camiseta-planetas-39,90reais.png"
@@ -58,7 +65,8 @@
     {
         "id": "08",
         "title": "Saturno Colorido",
-        "size": "P, M e XGG",
+        "rating": 2.5,
+        "size": ["P", "M", "G", "GG", "XGG"],
         "price": 39.90,
         "amount": "150",
         "image": "./image/08camiseta-saturno-39,90reais.png"
