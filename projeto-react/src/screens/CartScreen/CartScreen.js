@@ -9,7 +9,7 @@ import RuPay from '../../assets/rupay-icon.svg'
 import Footer from "../../Components/Footer/Footer";
 
 function CartScreen(props) {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("")
 
   const { cart, goToMainPage, increaseQuantityInCart, decreaseQuantityInCart, deleteFromCart } = props
 
