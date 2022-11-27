@@ -1,9 +1,9 @@
 import React from "react";
-import {CardCamiseta, ImagemProduto, DescricaoProduto, PriceCard, SizeAddButton} from "./Card.styles";
+import {CardCamiseta, ImagemProduto, DescricaoProduto, PriceCard, SizeAddButton} from "./CardProduct.styles";
 
 
 
-export function Card (props){
+export function CardProduct (props){
 
     const {camiseta} = props
     return(

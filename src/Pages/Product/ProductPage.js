@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '../../components/Card/Card'
+import { CardProduct } from '../../components/CardProduct/CardProduct'
 import { CardsContainer } from './ProductPage.styled'
 
 
@@ -37,7 +37,7 @@ const ProductPage = (props) => {
               
             })
             .map ((camiseta) => {
-              return <Card key={camiseta.id} camiseta={camiseta} />
+              return <CardProduct key={camiseta.id} camiseta={camiseta} />
             })}
     </CardsContainer>
     </>

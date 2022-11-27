@@ -3,7 +3,7 @@ import {ButtonPesquisar, ContainerHeader, ImagemLogo, ButtonLogo, Buscador, Mini
 import logo from "../../assets/logo.png";
 import cartIcon from "../../assets/cart-icon.png"
 import {goToProductPage, goToCartPage} from '../../Router/coordinator'
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 
 export function Header (props){
 
@@ -14,15 +14,17 @@ export function Header (props){
         setInputMinPrice,
         inputMinPrice, 
         setSortByPrice, 
-        sortByPrice
+        sortByPrice,
+        goToCartPage,
+        goToProductPage
     } = props     
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     
     return(
     <>    
         <ContainerHeader>
-            <ButtonLogo onClick={() => goToProductPage(navigate)} >
+            <ButtonLogo onClick={() => goToProductPage()} >
                 <ImagemLogo src={logo} alt="Imagem Logo"/>
             </ButtonLogo>
             
@@ -44,7 +46,7 @@ export function Header (props){
                 <option value="decrescente">Decrescente</option>
                 </SelectOrder>
 
-                <CartButton onClick={() => goToCartPage(navigate)}>
+                <CartButton onClick={() => goToCartPage()}>
                     <ImagemCarrinho src={cartIcon} alt="Imagem de Carrinho"/>
                 </CartButton>
             </FilterCart>

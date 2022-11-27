@@ -2,8 +2,9 @@ import React, { useState }  from 'react';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import ProductPage from './Pages/Product/ProductPage';
-import {Router} from './Router/Router';
+// import {Router} from './Router/Router';
 import camisetas from './camisetas.json'
+import CartPage from './Pages/Cart/CartPage';
 
 function App() {
 
@@ -11,7 +12,11 @@ function App() {
   const [inputMinPrice, setInputMinPrice] = useState(-Infinity)
   const [inputMaxPrice, setInputMaxPrice] = useState(Infinity)
   const [sortByPrice, setSortByPrice] = useState("")
+  const [activePage, setActivePage] = useState("ProductPage")
   const [cart, setCart] = useState([])
+
+  const goToProductPage = () => setActivePage("ProductPage")
+  const goToCartPage = () => setActivePage ("CartPage")
 
   const addToCart = (productToAdd) => {
     const newCart = [...cart]
@@ -41,6 +46,24 @@ const decreaseQuantityInCart = (productToDecrease) => {
   setCart(newCart)
 }
 
+const renderPage = () => {
+  switch (activePage) {
+    case "ProductPage":
+      return <ProductPage
+      camisetas={camisetas}
+      inputHeader={inputHeader}
+      inputMaxPrice={inputMaxPrice}
+      inputMinPrice={inputMinPrice}
+      sortByPrice={sortByPrice}
+      />
+    case "CartPage":
+      return <CartPage
+      camisetas={camisetas}
+      />
+    default:
+      return <div>Tela não existe</div>    
+  }
+}
 
   return (
   <>
@@ -53,18 +76,14 @@ const decreaseQuantityInCart = (productToDecrease) => {
     setInputMaxPrice = {setInputMaxPrice}    
     sortByPrice = {sortByPrice}
     setSortByPrice = {setSortByPrice}
+    goToCartPage={goToCartPage}
+    goToProductPage={goToProductPage}
     itensInCart = {cart.length}
     cart={cart}
     setCart={setCart}
     />
-    <ProductPage
-    camisetas={camisetas}
-    inputHeader={inputHeader}
-    inputMaxPrice={inputMaxPrice}
-    inputMinPrice={inputMinPrice}
-    sortByPrice={sortByPrice}/>
-    <Router
-    path="/"
+    {renderPage()}
+    {/* <Router
     inputHeader={inputHeader}
     setInputHeader={setInputHeader}
     inputMinPrice = {inputMinPrice}
@@ -79,7 +98,7 @@ const decreaseQuantityInCart = (productToDecrease) => {
     addToCart={addToCart}
     increaseQuantityInCart={increaseQuantityInCart}
     decreaseQuantityInCart={decreaseQuantityInCart}
-    />
+    /> */}
     <Footer/>
   </>
   )
