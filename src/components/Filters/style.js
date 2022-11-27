@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
 export const Main = styled.main `
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
     width: 100%;
-    border: 1px solid black;
     display: flex;
     gap: 40px;
     aside{
         width: 25%;
+        padding-top: 20px;
     }
 `
 
 export const Price = styled.article `
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
     display: flex;
     padding-top: 10px;
     font-family: 'Poppins', sans-serif;
