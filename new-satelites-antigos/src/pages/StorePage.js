@@ -1,7 +1,7 @@
-import { Header } from "../../components/Header/Header";
-import { Main } from "../../components/Main/Main";
-import {Footer} from "../../components/Footer/Footer"
-import {satellites} from "../../Satellites/satellites.json"
+import { Header } from "../components/Header/Header";
+// import { Main } from "../components/Main/Main";
+import {Footer} from "../components/Footer/Footer"
+// import {satellites} from "../../Satellites/satellites.json"
 
 export const StorePage = () => {
   // const [inputName, setInputName] = useState("")

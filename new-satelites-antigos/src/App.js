@@ -1,9 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import { Router } from '../src/router/router';
 
 function App() {
   return (
     <>
+      <Router/>
     </>
   );
 }
