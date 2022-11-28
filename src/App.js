@@ -24,6 +24,10 @@ export const GlobalStyled = createGlobalStyle`
 
 function App() {
   const [searchByName, setSearchByName] = useState("");
+  const [order, setOrder] = useState("")
+  const onChangeOrder = (e) => {
+    setOrder(e.target.value)
+  }
   return (
     <div>
       <Body>
@@ -36,6 +40,17 @@ function App() {
                   return game.name
                     .toLowerCase()
                     .includes(searchByName.toLowerCase());
+                })
+                .sort((a, b) => {
+                  if (order === "Crescente") {
+                    return a.price > b.price ? 1 : -1;                    
+                  } else if (order === "Decrescente") {
+                    if (a.price < b.price) {
+                      return 1;
+                    } else {
+                      return -1;
+                    }
+                  }
                 })
                 .map((game) => {
                   return <Cards name={game.name} price={game.price} img={game.imageUrl} />;
@@ -53,6 +68,11 @@ function App() {
                   <input type="number" />
                 </label>
               </NavFilters>
+              <select onChange={onChangeOrder}>
+                <option value="">Ordenar</option>
+                <option value="Crescente">Crescente</option>
+                <option value="Decrescente">Decrescente</option>
+              </select>
               <Cart>
                 <span>CARRINHO</span>
               </Cart>
