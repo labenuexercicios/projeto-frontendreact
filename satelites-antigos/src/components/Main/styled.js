@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerMain = styled.main`
   display: flex;
   justify-content: center;
-  min-height: 78vh;
+  height: 78vh;
   width: 100vw;
   /* background-color: #181818; */
   position: relative;
@@ -20,16 +20,15 @@ export const PageStore = styled.div`
   justify-content: space-between;
   width: 80%;
   max-width: 1200px;
+  height: 100%;
 `
 export const ContainerFilterArea = styled.div`
   display: flex;
   width: 30%;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  /* background-color: #202020; */
-  /* border: 1px solid white; */
-  
+  position: sticky;
+  top: 0;  
 `
 export const ContainerCard = styled.section`
   display: flex;
@@ -37,18 +36,24 @@ export const ContainerCard = styled.section`
   align-items: center;
   width: 70%;
   max-width: 1200px;
-  gap: 4vw;
+  min-height: 400%;
+  gap: 2vw;
   padding: 40px 0;
   background-color: rgba(0, 0, 0, 0.8);
-  /* border: 1px solid red; */
+  /* border: 1px solid green; */
+  /* overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; */
 `
 export const BackgroundCard = styled.div`
-  /* border: 1px solid red; */
   width: 100%;
+  height: 225px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid red; */
+  /* scroll-snap-align: start; */
 
   > p{
     position: absolute;

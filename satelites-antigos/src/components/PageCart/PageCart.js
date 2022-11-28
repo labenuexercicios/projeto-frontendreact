@@ -66,7 +66,7 @@ export const PageCart = (props) => {
             })
             :
               <EmptyCart>
-                <p>Carrinho Vazio :( </p>
+                <p>YOUR SHOPPING CART IS EMPTY.</p>
               </EmptyCart>
         }
       </ItemCart>

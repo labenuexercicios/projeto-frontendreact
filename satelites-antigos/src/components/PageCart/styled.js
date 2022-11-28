@@ -3,24 +3,24 @@ import styled from "styled-components";
 export const Cart = styled.div`
   min-height: 100%;
   width: 80%;
-  background-color: gray;
+  background-color: rgba(0,0,0,0.8);
   display: flex;
   justify-content: space-evenly;
   `
 export const ItemCart = styled.div`
-  width: 45%;
+  width: 55%;
   height: 100%;
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
 
 `
 export const InfoCart = styled.div`
-  width: 45%;
+  width: 35%;
   height: 100%;
   border: 1px blue solid;
 
 `
 export const CardCart = styled.div`
-  width: 100%;
+  width: 80%;
   height: 35%;
   position: relative;
   display: flex;
@@ -45,7 +45,8 @@ export const CardCart = styled.div`
     height: 100px;
     margin-left: 130px;
     padding-left: 40px;
-    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(128,128,128,1) 100%, rgba(46,46,47,1) 100%);
+    /* background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(128,128,128,1) 100%, rgba(0,0,0,1) 100%); */
+    background: linear-gradient(90deg, rgba(71,71,71,1) 0%, rgba(92,92,92,0.8) 38%, rgba(45,45,45,0.1) 100%);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -118,13 +119,13 @@ export const Delete = styled.button`
 `
 
 export const EmptyCart = styled.div`
-  width: 50%;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   p{
-    color: white;
-    font-size: 32px;
+    color: #707070;
+    font-size: 18px;
   }
 `
