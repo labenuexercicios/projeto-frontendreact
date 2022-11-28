@@ -4,14 +4,15 @@ import {Footer} from "../../components/Footer/Footer"
 import {satellites} from "../../Satellites/satellites.json"
 
 export const StorePage = () => {
-  const [inputName, setInputName] = useState("")
-  const [radioYear, setRadioYear] = useState("")
-  const [radioPrice, setRadioPrice] = useState("")
+  // const [inputName, setInputName] = useState("")
+  // const [radioYear, setRadioYear] = useState("")
+  // const [radioPrice, setRadioPrice] = useState("")
   
   return (
     <>
       <Header/>
-      <Main>
+      <h1>Store</h1>
+      {/* <Main>
       <PageStore>
         <ContainerFilterArea>
           <FilterArea
@@ -55,7 +56,7 @@ export const StorePage = () => {
           }
         </ContainerCard>
         </PageStore>
-      </Main>
+      </Main> */}
       <Footer/>
     </>
   )
