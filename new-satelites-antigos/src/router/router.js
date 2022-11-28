@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomePage } from '../pages/HomePage'
-import { StorePage } from '../pages/StorePage'
-import { LoginPage } from '../pages/LoginPage'
-import { CartPage } from '../pages/CartPage'
+import { HomePage } from '../pages/Home/HomePage'
+import { StorePage } from '../pages/StorePage/StorePage'
+import { LoginPage } from '../pages/LoginPage/LoginPage'
+import { CartPage } from '../pages/CartPage/CartPage'
 
 export const Router = () => {
   return(

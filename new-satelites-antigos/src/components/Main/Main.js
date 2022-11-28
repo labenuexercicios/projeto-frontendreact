@@ -1,19 +1,29 @@
-import { Header } from "../components/Header/Header";
-// import { Main } from "../components/Main/Main";
-import {Footer} from "../components/Footer/Footer"
-// import {satellites} from "../../Satellites/satellites.json"
+// import {Card} from '../Card/Card';
+// import {FilterArea} from '../FilterArea/FilterArea'
+// import {PageLogin} from '../PageLogin/PageLogin'
+// import {PageCart} from '../PageCart/PageCart'
+import {ContainerMain,
+        ImgBackground,
+        PageStore, 
+        ContainerFilterArea, 
+        ContainerCard,
+        BackgroundCard} from './styled'
+import satellites from '../../Satellites/satellites.json'
+import { useState } from "react"
 
-export const StorePage = () => {
-  // const [inputName, setInputName] = useState("")
-  // const [radioYear, setRadioYear] = useState("")
-  // const [radioPrice, setRadioPrice] = useState("")
-  
-  return (
-    <>
-      <Header/>
-      <h1>Store</h1>
-      {/* <Main>
-      <PageStore>
+
+export const Main = (props) => {
+  const [inputName, setInputName] = useState("")
+  const [radioYear, setRadioYear] = useState("")
+  const [radioPrice, setRadioPrice] = useState("")  
+
+  return(
+    <ContainerMain>
+      <ImgBackground src="https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+      {/* {props.page === "home"? 
+      <ImgBackground src="https://images.pexels.com/photos/1694000/pexels-photo-1694000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+      : props.page === "store" ?
+        <PageStore>
         <ContainerFilterArea>
           <FilterArea
             inputName={inputName}
@@ -56,8 +66,14 @@ export const StorePage = () => {
           }
         </ContainerCard>
         </PageStore>
-      </Main> */}
-      <Footer/>
-    </>
+      : props.page === "login"?
+        <PageLogin/>
+      : 
+        <PageCart
+        listCart={props.listCart}
+        setListCart={props.setListCart}
+        />
+      } */}
+    </ContainerMain>
   )
 }
