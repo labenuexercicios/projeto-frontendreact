@@ -55,12 +55,11 @@ export const Nav = styled.nav`
   /* border: 1px solid white; */
 
     span{
-     cursor: pointer; 
-    }
-
-    span:hover{
-      color: #BDBDBD;
-      transition: color 0.3s ease-in-out;
+     cursor: pointer;
+     &:hover{
+       color: #BDBDBD;
+       transition: color 0.3s ease-in-out;
+     }
     }
   `
   export const ImgLupa = styled.img`

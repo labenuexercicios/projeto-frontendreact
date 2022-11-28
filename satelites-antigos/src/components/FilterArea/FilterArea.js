@@ -11,17 +11,9 @@ import { useState } from "react"
 
 
 export const FilterArea = (props) => {
-  // const [inputName, setInputName] = useState("")
   function ChangeInputName (e){
     props.setInputName(e.target.value)
   }
-
-  // function ChangeInfoFilter(){
-  //   props.setInfoFilter({
-  //     name: inputName
-  //   })
-  //   setInputName("")
-  // }
 
   function onChangeRadioYear (e){
     props.setRadioYear(e.target.id)

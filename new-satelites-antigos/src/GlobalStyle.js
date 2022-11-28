@@ -6,5 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    color: #707070;
+    font-family: system-ui;
   }
 `
