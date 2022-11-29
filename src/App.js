@@ -3,7 +3,7 @@
 function App() {
   return (
     <div >
-      <h1>oi Sofia</h1>
+      <h1>oi</h1>
 
     </div>
   );
