@@ -33,5 +33,12 @@
     "price": "10",
     "imageUrl":
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-c7Wu70JGw8SeZspNN82NEs4T-R5oZj_z_w&usqp=CAU"
+  },
+  {
+    "id": "6",
+    "name": "jogo6",
+    "price": "120",
+    "imageUrl":
+      "https://upload.wikimedia.org/wikipedia/pt/5/5f/Mega_Man_8_capa.jpg"
   }
 ]
