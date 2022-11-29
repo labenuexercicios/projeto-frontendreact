@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardProduct } from '../../components/CardProduct/CardProduct'
+import { CardProduct } from '../../components/ProductCard/ProductCard'
 import { CardsContainer } from './ProductPage.styled'
 
 
@@ -9,7 +9,8 @@ const ProductPage = (props) => {
     inputHeader, 
     inputMaxPrice, 
     inputMinPrice, 
-    sortByPrice
+    sortByPrice,
+    addToCart
   } = props
 
   return (
@@ -37,7 +38,10 @@ const ProductPage = (props) => {
               
             })
             .map ((camiseta) => {
-              return <CardProduct key={camiseta.id} camiseta={camiseta} />
+              return <CardProduct key={camiseta.id} 
+              camiseta={camiseta} 
+              addToCart={addToCart}
+              />
             })}
     </CardsContainer>
     </>

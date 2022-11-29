@@ -1,11 +1,11 @@
 import React from "react";
-import {CardCamiseta, ImagemProduto, DescricaoProduto, PriceCard, SizeAddButton} from "./CardProduct.styles";
+import {CardCamiseta, ImagemProduto, DescricaoProduto, PriceCard, SizeAddButton} from "./ProductCard.styles";
 
 
 
 export function CardProduct (props){
 
-    const {camiseta} = props
+    const {camiseta, addToCart} = props
     return(
         <>
             <CardCamiseta key={camiseta.id}>
@@ -25,7 +25,7 @@ export function CardProduct (props){
                             <option>M</option>
                             <option>GG</option>
                         </select>
-                    <button>+ Adicionar ao carrinho</button>
+                    <button onClick={() => addToCart(camiseta)}>+ Adicionar ao carrinho</button>
                     </SizeAddButton>
                     
                     </PriceCard>

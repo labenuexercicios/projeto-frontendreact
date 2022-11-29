@@ -2,9 +2,12 @@ import React, { useState }  from 'react';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import ProductPage from './Pages/Product/ProductPage';
-// import {Router} from './Router/Router';
 import camisetas from './camisetas.json'
 import CartPage from './Pages/Cart/CartPage';
+import {CartPageStyle, FinalCart} from "./App.styled"
+import astroCart  from './assets/astro-pensante.png'
+import {priceFormatter} from './utils/priceFormatter'
+
 
 function App() {
 
@@ -14,6 +17,7 @@ function App() {
   const [sortByPrice, setSortByPrice] = useState("")
   const [activePage, setActivePage] = useState("ProductPage")
   const [cart, setCart] = useState([])
+
 
   const goToProductPage = () => setActivePage("ProductPage")
   const goToCartPage = () => setActivePage ("CartPage")
@@ -40,12 +44,26 @@ const increaseQuantityInCart = (productToIncrease) => {
 }
 
 const decreaseQuantityInCart = (productToDecrease) => {
-  const newCart = [...cart]
-  const productFound = newCart.find((productInCart)=>productInCart.id === productToDecrease.id)
-  productFound.quantity --
-  setCart(newCart)
+  if(productToDecrease.quantity > 1){
+    const newCart = [...cart]
+    const productFound = newCart.find((productInCart)=>productInCart.id === productToDecrease.id)
+    productFound.quantity --
+    setCart(newCart)
+  } 
 }
 
+const removeProductCart = (productToRemove) =>{
+  const newCart = [...cart]
+  const productRemove = newCart.find ((productInCart)=> productInCart.id === productToRemove.id)
+  productRemove.slice(productToRemove, 1)
+  setActivePage(newCart)
+}
+
+const total = cart.reduce((acc,product)=> (product.price * product.quantity) + acc, 0)
+
+const frete = total*0.05
+
+const totalQuantity = cart.reduce((acc,product)=> (product.quantity) + acc, 0)
 const renderPage = () => {
   switch (activePage) {
     case "ProductPage":
@@ -55,11 +73,25 @@ const renderPage = () => {
       inputMaxPrice={inputMaxPrice}
       inputMinPrice={inputMinPrice}
       sortByPrice={sortByPrice}
+      addToCart={addToCart}
       />
     case "CartPage":
-      return <CartPage
-      camisetas={camisetas}
+      return <CartPageStyle><CartPage
+      increaseQuantityInCart={increaseQuantityInCart}
+      decreaseQuantityInCart={decreaseQuantityInCart}
+      cart={cart}
+      removeProductCart={removeProductCart}
       />
+      <FinalCart> 
+        <img src={astroCart} alt="Astrounauta Pensando"/>
+        <div>
+        <h3>Quantidade total: <br/> <h1>{totalQuantity}</h1></h3>
+        <h3>Valor total: <br/> <h1>{priceFormatter.format(total)}</h1></h3>
+        <h3>Frete: {priceFormatter.format(frete)}</h3>
+        <button>Finalizar Compra</button>
+        </div>
+      </FinalCart>
+      </CartPageStyle>
     default:
       return <div>Tela não existe</div>    
   }
@@ -83,22 +115,6 @@ const renderPage = () => {
     setCart={setCart}
     />
     {renderPage()}
-    {/* <Router
-    inputHeader={inputHeader}
-    setInputHeader={setInputHeader}
-    inputMinPrice = {inputMinPrice}
-    setInputMinPrice = {setInputMinPrice}
-    inputMaxPrice = {inputMaxPrice}
-    setInputMaxPrice = {setInputMaxPrice}    
-    sortByPrice = {sortByPrice}
-    setSortByPrice = {setSortByPrice}
-    cart={cart}
-    camisetas={camisetas}
-    setCart={setCart}
-    addToCart={addToCart}
-    increaseQuantityInCart={increaseQuantityInCart}
-    decreaseQuantityInCart={decreaseQuantityInCart}
-    /> */}
     <Footer/>
   </>
   )

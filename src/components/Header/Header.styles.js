@@ -25,9 +25,12 @@ export const Buscador = styled.div`
 `
 
 export const ButtonPesquisar = styled.button`
-    border: 2px solid orange;
+    border: none;
     border-radius: 1px;
+    width: 4vw;
+    height: 2.5vh;
     background-color: orange;
+
 `
 
 export const FilterCart = styled.div`

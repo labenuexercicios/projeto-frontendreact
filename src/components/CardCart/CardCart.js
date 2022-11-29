@@ -1,9 +1,14 @@
 import React from 'react'
-import { CardCamiseta, ImagemProduto, DetalheProduto, PriceCard, SizeAddButton, DescricaoProduto } from './CardCart.styled'
+import { CardCamiseta, ImagemProduto, DetalheProduto, PriceCard, QuantityProduct, DescricaoProduto, QuantityRemove } from './CardCart.styled'
+import { priceFormatter } from '../../utils/priceFormatter'
 
 export const CardCart = (props) => {
 
-    const {camiseta} = props
+    const {camiseta,
+        increaseQuantityInCart,
+        decreaseQuantityInCart,
+        removeProductCart
+    } = props
 
     return (
             <CardCamiseta key={camiseta.id}>
@@ -18,21 +23,22 @@ export const CardCart = (props) => {
                     })} */}
                     </div>
                     <DescricaoProduto>
-                    <p>Sobre o Produto</p>
+                    <p>{camiseta.description}</p>
                     </DescricaoProduto>
                 </DetalheProduto>
                
                     <PriceCard>
-                    <p>R$<h1>{camiseta.price}</h1></p> 
-                    <SizeAddButton>
-                        <select>
-                            <option>P</option>
-                            <option>M</option>
-                            <option>GG</option>
-                        </select>
-                    <button>+ Adicionar ao carrinho</button>
-                    </SizeAddButton>
+                    <h1>{priceFormatter.format(camiseta.price)}</h1> 
+                    <QuantityRemove>
+                        <QuantityProduct>
+                            <button onClick={() => decreaseQuantityInCart(camiseta)}>-</button>
+                            {camiseta.quantity}
+                            <button onClick={() => increaseQuantityInCart(camiseta)}>+</button>
+                        </QuantityProduct>
+                        <button onClick={()=>removeProductCart(camiseta)}>Remove</button>
+                    </QuantityRemove>
                     </PriceCard>
+                    
                 
             </CardCamiseta>
     )

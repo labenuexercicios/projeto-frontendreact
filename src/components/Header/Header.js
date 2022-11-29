@@ -1,9 +1,7 @@
 import React from "react";
 import {ButtonPesquisar, ContainerHeader, ImagemLogo, ButtonLogo, Buscador, MinimumMaximum, SelectOrder, ImagemCarrinho, FilterCart, CartButton} from "./Header.styles";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo2.png";
 import cartIcon from "../../assets/cart-icon.png"
-import {goToProductPage, goToCartPage} from '../../Router/coordinator'
-// import { useNavigate } from "react-router-dom"
 
 export function Header (props){
 
@@ -18,8 +16,6 @@ export function Header (props){
         goToCartPage,
         goToProductPage
     } = props     
-
-    // const navigate = useNavigate()
     
     return(
     <>    
