@@ -17,13 +17,15 @@ export const Localization = styled.article `
     color: white;
     gap: 8px;
     justify-content: center;
-    width: 125px;
+    width: 150px;
     height: 40px;
     border-radius: 15px;
     font-weight: 500;
     font-size: 12px;
+    transition: 0.2s;
     :hover{
         cursor: pointer;
+        background-color: #ff006e;
     }
 `
 export const Pesquisa = styled.input `
@@ -44,5 +46,5 @@ export const Article = styled.article `
 export const SearchIcon = styled.label`
     position: absolute;
     right: 10px;
-    bottom: 5px;
+    bottom: 25%;
 `

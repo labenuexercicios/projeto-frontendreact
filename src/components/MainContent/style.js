@@ -12,4 +12,5 @@ export const ContentSale = styled.section `
 export const ProductsSale = styled.article `
     display: flex;
     flex-wrap: wrap;
+    column-gap: 30px;
 `

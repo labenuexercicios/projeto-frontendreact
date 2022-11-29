@@ -4,7 +4,7 @@ import { Cart } from '../Cart/Cart'
 import { MainContent } from '../MainContent/MainContent'
 import { Price, Search, ImgIcon, Main} from './style'
 
-export const Filters = () => {
+export const Filters = (props) => {
 
   const [minValue, setMinValue] = useState('')
 
