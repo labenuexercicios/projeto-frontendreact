@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import {CardCamiseta, ImagemProduto, DescricaoProduto, PriceCard, SizeAddButton} from "./ProductCard.styles";
-
 
 
 export function CardProduct (props){
 
     const {camiseta, addToCart} = props
+
+    const [choosenSize, setChoosenSize] = useState(camiseta.size[0])
+
     return(
         <>
             <CardCamiseta key={camiseta.id}>
@@ -13,19 +15,15 @@ export function CardProduct (props){
                 <DescricaoProduto>
                     <h3>{camiseta.title}</h3>
                     <p>***** {camiseta.rating}</p>
-                    <p>Tamanho?????????</p>
-                    {/* {camiseta.map((tamanhoCamiseta)=>{
-                        return <span>{tamanhoCamiseta.size}</span>
-                    })} */}
                     <PriceCard>
                     <p>R$<h1>{camiseta.price}</h1></p> 
                     <SizeAddButton>
-                        <select>
-                            <option>P</option>
-                            <option>M</option>
-                            <option>GG</option>
+                        <select value={choosenSize} onChange={(e)=>setChoosenSize(e.target.value)}>
+                        {camiseta.size.map((tamanhoCamiseta)=>{
+                        return <option value={tamanhoCamiseta}>{tamanhoCamiseta}</option>
+                    })}
                         </select>
-                    <button onClick={() => addToCart(camiseta)}>+ Adicionar ao carrinho</button>
+                    <button onClick={() => addToCart(camiseta, choosenSize)}>+ Adicionar ao carrinho</button>
                     </SizeAddButton>
                     
                     </PriceCard>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardCamiseta, ImagemProduto, DetalheProduto, PriceCard, QuantityProduct, DescricaoProduto, QuantityRemove } from './CardCart.styled'
+import { CardCamiseta, ImagemProduto, DetalheProduto, PriceCard, QuantityProduct, DescricaoProduto, QuantityRemove, ChoosenSize } from './CardCart.styled'
 import { priceFormatter } from '../../utils/priceFormatter'
 
 export const CardCart = (props) => {
@@ -17,10 +17,7 @@ export const CardCart = (props) => {
                     <div>
                     <h3>{camiseta.title}</h3>
                     <p>***** {camiseta.rating}</p>
-                    <p>Tamanho?????????</p>
-                    {/* {camiseta.map((tamanhoCamiseta)=>{
-                        return <span>{tamanhoCamiseta.size}</span>
-                    })} */}
+                    <ChoosenSize>Tamanho: {camiseta.cartSize}</ChoosenSize>
                     </div>
                     <DescricaoProduto>
                     <p>{camiseta.description}</p>

@@ -69,3 +69,21 @@ export const QuantityRemove = styled.div`
   gap: 16px;
 `
 
+export const ChoosenSize = styled.p`
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 8px;
+
+  select{
+    width: 3vw;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+
+    /* option{
+      background: rgba(0, 0, 0, 0);
+      color: black;
+    } */
+  }
+
+`

@@ -13,7 +13,7 @@
         "id": "02",
         "title": "Astronauta Bolhas",
         "rating": 4.9,
-        "size": ["P", "M", "G", "GG"],
+        "size": ["M", "G", "GG"],
         "price": 49.90,
         "amount": "400",
         "image": "./image/02camiseta-astronauta-bolhas-41,90reais.png",

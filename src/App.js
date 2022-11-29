@@ -22,16 +22,28 @@ function App() {
   const goToProductPage = () => setActivePage("ProductPage")
   const goToCartPage = () => setActivePage ("CartPage")
 
-  const addToCart = (productToAdd) => {
+  const addToCart = (productToAdd, size) => {
     const newCart = [...cart]
 
-    const productFound = newCart.find((productInCart)=>productInCart.id === productToAdd.id)
+    const productFound = newCart.find((productInCart)=>productInCart.id === productToAdd.id && productInCart.cartSize === size)
 
     if (!productFound){
-      const newProduct = {...productToAdd, quantity: 1}
+      const newProduct = {...productToAdd, cartSize: size, quantity: 1}
       newCart.push(newProduct)
     } else {
-      productFound.quantity ++
+      console.log(productFound.cartSize)
+      if(productFound.cartSize === size){
+        console.log("entrou")
+        productFound.quantity ++
+      } else {
+        console.log("entrou no else 2")
+        const newProduct = {...productToAdd, cartSize: size, quantity: 1}
+        newCart.push(newProduct) 
+      }
+      // productFound.quantity ++
+      // if(!productFound.cartSize.includes(size)){
+      //   productFound.cartSize.push(size)
+      // }
     }
     setCart(newCart)
 }
@@ -55,8 +67,10 @@ const decreaseQuantityInCart = (productToDecrease) => {
 const removeProductCart = (productToRemove) =>{
   const newCart = [...cart]
   const productRemove = newCart.find ((productInCart)=> productInCart.id === productToRemove.id)
-  productRemove.slice(productToRemove, 1)
-  setActivePage(newCart)
+  const productRemoveIndex = newCart.findIndex ((productInCart)=> productInCart.id === productToRemove.id)
+  console.log(productRemove)
+  newCart.splice(productRemoveIndex, 1)
+  setCart(newCart)
 }
 
 const total = cart.reduce((acc,product)=> (product.price * product.quantity) + acc, 0)
