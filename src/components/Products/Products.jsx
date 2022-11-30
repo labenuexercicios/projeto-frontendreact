@@ -8,6 +8,8 @@ import {
     Text,
     Stack,
     Image,
+    Button,
+    color,
   } from '@chakra-ui/react';
 
   const IMAGE =
@@ -33,10 +35,17 @@ import {
             <Heading fontSize={'12px'} fontFamily={'Poppins, sans-serif'} fontWeight={500} width={'80%'} paddingLeft={'2px'}>
                 <a href='#'>{props.naves.nave}</a>
             </Heading>
-            <Stack direction={'row'} align={'center'}>
+            <Stack direction={'row'}>
               <Text fontWeight={400} fontSize={'10px'} fontFamily={'Poppins, sans-serif'} paddingLeft={'2px'}>
                 R$ {props.naves.price}
               </Text>
+
+              <Button fontWeight={400} fontSize={'10px'} fontFamily={'Poppins, sans-serif'}
+              backgroundColor=' #FF008A' width={'50%'} height={'20%'}
+              display='flex' justifyContent={'center'} color={'white'}
+              borderRadius={'5px'} cursor={'pointer'} transition={'0.5s'} _hover={{backgroundColor: '#32e55f'}}
+              >Adicionar</Button>
+
             </Stack>
           </Stack>
         </Box>

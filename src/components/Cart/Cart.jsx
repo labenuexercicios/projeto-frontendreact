@@ -1,9 +1,11 @@
 import { CartSection } from "./style"
+import { BsFillCartFill } from 'react-icons/bs'
 
 export const Cart = () => {
+
     return(
         <CartSection>
-            cart
+            <BsFillCartFill     style={{margin:'10px'}}/>
         </CartSection>
     )
 }
