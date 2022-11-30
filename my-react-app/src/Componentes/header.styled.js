@@ -7,7 +7,7 @@ overflow: hidden;
 border: 1px solid black;
 justify-items: center;
 align-items: center;
-height: 4vw;
+height: 12vh;
 font-size: 3vh;
 background-color: black;
 color: #ff8c00;

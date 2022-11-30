@@ -32,7 +32,8 @@ background-position: center center;
 justify-content: center;
 text-align: center;
 grid-column: 2/3;
-min-height: 100%;
+min-height: 100vh;
+height: 100%;
 `
 
 export const ImagemEsquerda = styled.div`

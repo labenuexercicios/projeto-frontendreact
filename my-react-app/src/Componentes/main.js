@@ -33,6 +33,7 @@ const preço = new Intl.NumberFormat('pt-BR', {
 
         const [addCarrinho, setAddCarrinho] = useState([])
 
+       
      const mandarCarrinho = (itemCarrinho) => {
      const novoCarrinho = [...addCarrinho]
 
@@ -84,11 +85,31 @@ const preço = new Intl.NumberFormat('pt-BR', {
       localStorage.setItem("local", virarString)
       setAddCarrinho(filtroDelete)
     }
-      
+   
+    const filterNome = () => {
+      const novoArray = (Naves.filter
+      ((item) => { 
+        console.log(item);
+        return item.nome.toLowerCase().includes(filtrarNome.toLowerCase())})
+      .filter((item) => {
+        return item.valor >= valorMin || valorMin === "" 
+      })      
+      .filter((item) => {
+        return item.valor <= valorMax || valorMax === "" 
+      })
+      )
+      if(novoArray.length === 0){
+        alert("Busca não encontrada!") 
+      }
+      return novoArray
+    }
+    
+     
       
         return (
           <>
-            
+
+          
             <Header/>
             <ContainerApp >
               
@@ -116,26 +137,11 @@ const preço = new Intl.NumberFormat('pt-BR', {
                   ordenar={ordenar}
                   setOrdenar={setOrdenar}
                 />
-      
-      
-                {Naves
-      
-                  .filter((item) => {
-                    return item.valor >= valorMin || valorMin === ""
-                  })
-      
-                  .filter((item) => {
-                    return item.valor <= valorMax || valorMax === ""
-                  })
-      
+
                  
       
-                  .filter((item) => {
-                    return item.nome
-                      .toLowerCase()
-                      .includes(filtrarNome.toLowerCase());
-                  })
-      
+                {filterNome()
+                
                   .sort((nome1, nome2) => {
                     if (ordenar === "Crescente") {
                       if (nome1.valor > nome2.valor) {
@@ -152,7 +158,8 @@ const preço = new Intl.NumberFormat('pt-BR', {
                       }
                     }
                   })
-      
+                  
+                  
       
                   .map((item) => {
                     return (
@@ -163,12 +170,19 @@ const preço = new Intl.NumberFormat('pt-BR', {
                           <button onClick={()=>{mandarCarrinho(item)}} >Adicionar ao carrinho</button>
                           <p><Image src={item.img} width="320" height="205" /></p>
                         </li>
-                      </Img>)
-                  })}
+                      </Img>
+                    )
+                   }
+                  )
+                  }
+
+                 
+                  
                 
                
-                </ImagemFundo>
-
+              </ImagemFundo>
+              
+              
               </ContainerProduto>
               
               <ImagemDireita>

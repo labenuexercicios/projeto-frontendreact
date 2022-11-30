@@ -5,6 +5,13 @@ export const ContainerCarrinho = styled.div`
 padding: 1vw;
 color: white;
 background-color: black;
+
+
+.Remover button {
+    border: 0;
+    height: 32px;
+    margin-left: 7.7vw;   
+}
 `
 
 export const MainCarrinho = styled.div`
@@ -23,9 +30,14 @@ margin-right: 14vw;
 `
 
 
-export const ButtonRemover = styled.button`
+export const ButtonRemover = styled.div`
 background-color: none;
-border: none;
+border: 0;
+height:50px;
 border-radius: 1vw;
 margin-top: 1vh;
 `
+
+
+
+ 
