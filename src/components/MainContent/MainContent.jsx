@@ -2,15 +2,27 @@ import { Products } from "../Products/Products"
 import { ContentSale, ProductsSale } from "./style"
 import naves from '../../Naves/naves.json'
 
-export const MainContent = () => {
+export const MainContent = (props) => {
 
 
     return (
         <ContentSale>
             <article>Ofertas sem gravidade pra você</article>
             <ProductsSale>
-                {naves.map((nave)=>{
-                    return <Products naves={nave} />
+                {naves
+                .filter((nave)=>{
+                    return props.search ? nave.nave.toLowerCase().includes(props.search.toLowerCase()) : nave
+                })
+                .filter((nave)=>{
+                    return props.minValue ? nave.price >= props.minValue : nave
+                })
+                .filter((nave)=>{
+                    return props.maxValue ? nave.price <= props.maxValue : nave
+                })
+                .map((nave, index)=>{
+                    return <Products 
+                    naves={nave} 
+                    key={index}/>
                 })}
             </ProductsSale>
         </ContentSale>

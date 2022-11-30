@@ -3,7 +3,12 @@ import local from '../../assets/icons/local.svg'
 import searching from '../../assets/icons/searching.svg'
 import { Inf, Localization, Pesquisa, Article, SearchIcon } from "./style"
 
-export const Search = () => {
+export const Search = (props) => {
+    
+    const handleChange = (e) => {
+        props.setSearch(e.target.value)
+    }
+
     return (
         <Inf>
             <Localization>
@@ -12,7 +17,7 @@ export const Search = () => {
             </Localization>
 
             <Article>
-                <Pesquisa placeholder="Pesquisar"/>
+                <Pesquisa placeholder="Pesquisar" value={props.search} onChange={handleChange}/>
                 <SearchIcon><img src={searching}/></SearchIcon>
             </Article>
         </Inf>

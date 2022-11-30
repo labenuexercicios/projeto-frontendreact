@@ -1,23 +1,36 @@
 import { ChakraProvider } from "@chakra-ui/react"
-import React from "react"
+import React, { useState } from "react"
+import { Cart } from "./components/Cart/Cart"
 import { Filters } from "./components/Filters/Filters"
 import { Footer } from "./components/Footer/Footer"
 import { Header } from "./components/Header/Header"
+import { MainContent } from "./components/MainContent/MainContent"
 import { Search } from "./components/Search/Search"
 import { Text } from "./components/Text/Text"
 import { GlobalStyle } from "./globalStyle"
-import {Div} from './style'
+import {Div, Main} from './style'
 
 function App() {
+
+  const [search, setSearch] = useState('')
+  const [minValue, setMinValue] = useState('')
+  const [maxValue, setMaxValue] = useState('')
 
   return (
     <ChakraProvider>
       <GlobalStyle/>
       <Header/>
-      <Search/>
+      <Search search={search} setSearch={setSearch}/>
       <Div>
         <Text/>
-        <Filters/>
+        <Main>
+          <Filters minValue={minValue} setMinValue={setMinValue}
+          maxValue={maxValue} setMaxValue={setMaxValue}/>
+          <MainContent search={search} minValue={minValue}
+          maxValue={maxValue}
+          />
+          <Cart/>
+        </Main>
       </Div>
       <Footer/>
     </ChakraProvider>

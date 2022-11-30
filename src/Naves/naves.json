@@ -1,11 +1,11 @@
 [
-  {"id": 1, "nave":"Millenium Falcon - Solo", "price": 14627.00, "img": "" }, 
-  {"id": 2, "nave": "Endurance", "price": 12699.00, "img": "" },
-  {"id": 3, "nave": "Enterprise", "price": 5699.90, "img": "" },
-  {"id": 4, "nave": "SSV normandy", "price": 6900, "img": "" },
-  {"id": 5, "nave": "Ishimura", "price": 1200.99, "img": "" },
-  {"id": 6, "nave": "Orion", "price": 7498.00, "img": ""},
-  {"id": 7, "nave": "Golden Heart", "price": 6990.50, "img": "" },
-  {"id": 8, "nave": "Milano", "price": 11540.30, "img": "" },
-  {"id": 9, "nave": "X-wing", "price": 10552.99, "img": "" }
+  {"id": 1, "nave":"Millenium Falcon - Solo", "price": 546.27, "img": "" }, 
+  {"id": 2, "nave": "Endurance", "price": 326.99, "img": "" },
+  {"id": 3, "nave": "Enterprise", "price": 269.90, "img": "" },
+  {"id": 4, "nave": "SSV normandy", "price": 190.00, "img": "" },
+  {"id": 5, "nave": "Ishimura", "price": 120.99, "img": "" },
+  {"id": 6, "nave": "Orion", "price": 78.00, "img": ""},
+  {"id": 7, "nave": "Golden Heart", "price": 360.50, "img": "" },
+  {"id": 8, "nave": "Milano", "price": 540.30, "img": "" },
+  {"id": 9, "nave": "X-wing", "price": 452.99, "img": "" }
 ]

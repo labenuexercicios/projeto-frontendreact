@@ -6,32 +6,27 @@ import { Price, Search, ImgIcon, Main} from './style'
 
 export const Filters = (props) => {
 
-  const [minValue, setMinValue] = useState('')
-
   function handleMinValue(e){   
-    setMinValue(e.target.value)
+    props.setMinValue(e.target.value)
+  }
+
+  function handleMaxValue(e){   
+    props.setMaxValue(e.target.value)
   }
 
   return (
-    <Main>
       <aside>
           <Price>
-              <Search value={minValue} onChange={handleMinValue} placeholder='Valor Mínimo'/>
+              <Search value={props.minValue} onChange={handleMinValue} placeholder='Valor Mínimo' type={'number'}/>
               
               <ImgIcon><img src={searching}/></ImgIcon>
           </Price>
 
           <Price>
-              <Search value={minValue} onChange={handleMinValue} placeholder='Valor Máximo'/>
+              <Search value={props.maxValue} onChange={handleMaxValue} placeholder='Valor Máximo'/>
               
               <ImgIcon><img src={searching}/></ImgIcon>
           </Price>
       </aside>
-
-      <MainContent/>
-
-      <Cart/>
-      
-    </Main>
   )
 }
