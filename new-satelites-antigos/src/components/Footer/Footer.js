@@ -3,15 +3,17 @@ import github from '../../assets/github.png'
 import linkedin from '../../assets/linkedin.png'
 
 const FooterStyle = styled.footer`
-  background-color: black;
+  background-color: #101010;
   height: 6vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   font-size: 10px;
-
+  color: #808080;
+  
   >div{
     width: 80%;
+    max-width: 1200px;
     height: 100%;
     display: flex;
     align-items: center;

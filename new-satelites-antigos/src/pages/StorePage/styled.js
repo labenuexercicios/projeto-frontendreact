@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const Store = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.6);
   display: flex;
   position: relative;
+  /* border: 1px solid red; */
 `
 export const ContainerFilters = styled.div`
   display: flex;
@@ -36,8 +37,10 @@ export const ContainerCard = styled.section`
   height: 400%;
   gap: 2vw;
   padding: 40px 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* border: 1px solid green;
+  /* width */
+  /* border: 1px solid green; */
+
+  /* background-color: rgba(0, 0, 0, 0.8);
   overflow-y: visible;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth; */
@@ -49,7 +52,7 @@ export const BackgroundCard = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* scroll-snap-align: start; */
 
   > p{
@@ -60,6 +63,6 @@ export const BackgroundCard = styled.div`
     /* font-variant: small-caps; */
     text-align: center;
     /* font-variant: all-small-caps; */
-    font-family: 'Pinyon Script', cursive;
+    /* font-family: 'Pinyon Script', cursive; */
   }
 `

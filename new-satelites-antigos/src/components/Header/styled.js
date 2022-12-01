@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerHeader = styled.header`
-  background-color: black;
+  background-color: #101010;
   height: 16vh;
   min-height: 8vh;
   display: flex;
@@ -35,7 +35,7 @@ export const ContainerDiv = styled.div`
   /* border: 1px solid red; */
 
   > div {
-    height: 0.5px;
+    height: 1px;
     width: 40px;
     background-color: #505050;
     color: white;

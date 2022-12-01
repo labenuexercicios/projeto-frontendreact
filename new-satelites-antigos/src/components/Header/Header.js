@@ -6,18 +6,31 @@ import {ContainerHeader,
         ContainerDiv,
         Nav} from './styled'
 import textoLogo from '../../assets/space-collection.png'
-import lupa from '../../assets/iconLogin.png'
-import carrinho from '../../assets/carrinho.png'
+import iconLogin from '../../assets/iconLogin.png'
+import iconCarrinho from '../../assets/carrinho.png'
 import { useNavigate } from 'react-router-dom'
 import {goToHomePage, goToStorePage, goToLoginPage, goToCartPage} from '../../router/coordinator'
+import { useEffect, useState } from 'react'
 
-export const Header = (props) => {
+export const Header = () => {
   const navigate = useNavigate()
 
-  // let soma = 0
-  // for(let item of props.listCart){
-  //   soma += item.quantity
-  // }
+  const itemsCart = JSON.parse(localStorage.getItem("itemsCart"))
+  const [quantityCart, setQuantityCart] = useState(itemsCart);
+
+  useEffect(()=>{
+    // window.dispatchEvent(new Event("storage"));
+  },[quantityCart])
+  
+  
+  window.addEventListener("storage", () => {
+    setQuantityCart(itemsCart)
+  });
+
+  let soma = 0
+  for(let item of quantityCart){
+    soma += item.quantity
+  }
 
   return(
     <>
@@ -41,16 +54,11 @@ export const Header = (props) => {
           <Nav>
             <span onClick={() => goToHomePage(navigate)}>HOME</span>
             <span onClick={() => goToStorePage(navigate)}>STORE</span>
-            <ImgLupa src={lupa} onClick={() => goToLoginPage(navigate)}/>
-            <Carrinho>
-              <img src={carrinho} onClick={() => goToCartPage(navigate)}/>
-            </Carrinho>
-            {/* <span onClick={() => props.setPage("store")}>STORE</span> */}
-            {/* <ImgLupa src={lupa} onClick={() => props.setPage("login")}/> */}
-            {/* <Carrinho show={props.listCart.length === 0 ? "none" : "flex"}>
+            <ImgLupa src={iconLogin} onClick={() => goToLoginPage(navigate)}/>
+            <Carrinho show={soma === 0 ? "none" : "flex"}>
+              <img src={iconCarrinho} onClick={() => goToCartPage(navigate)}/>
               <div><p>{soma}</p></div>
-              <img src={carrinho} onClick={() => props.setPage("cart")}/>
-            </Carrinho> */}
+            </Carrinho>
           </Nav>
         </HeaderContent>
       </ContainerHeader>
