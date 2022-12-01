@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const CardCamiseta = styled.div`
   /* border: 2px solid yellow; */
   background-color: rgba(0, 0, 0, 0.729);
-  width: 78vw;
   height: 24vh;
   display: flex;
   align-items: center;
@@ -23,8 +22,8 @@ export const DetalheProduto = styled.div`
     flex-direction: column;
     margin-left: 16px;
     gap: 20px;
-    width: 60vw;
-    padding-left: 7vw;
+    width: 30vw;
+    padding-left: 3vw;
 `
 export const DescricaoProduto = styled.div`
   /* border: 2px solid red; */

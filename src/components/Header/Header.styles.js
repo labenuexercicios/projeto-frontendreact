@@ -1,13 +1,22 @@
 import styled from "styled-components";
 
-export const ContainerHeader = styled.header`
+export const MainHeader = styled.header`
+    /* border: 2px solid white; */
     background-color: black;
-    height: 8vh;
+    height: 9vh;
+    width: 100%;
     display: flex;
+    justify-content: center;
+`
+
+export const ContainerHeader = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 4px;
     gap: 10px;
-    align-items: center;
-    justify-content: space-evenly;
+    /* border: 2px solid yellow; */
+    width: 80%;
 `
 
 export const ImagemLogo = styled.img`
@@ -20,7 +29,7 @@ export const Buscador = styled.div`
 /* border: 2px solid red; */
 
     input{
-        width: 50vw;
+        width: 25vw;
     }
 `
 
@@ -52,10 +61,7 @@ export const SelectOrder = styled.select`
     /* border: 2px solid red; */
     height: 3vh;
 `
-export const ImagemCarrinho = styled.img`
-    /* border: 2px solid red; */
-    height: 5vh;
-`
+
 export const CartButton = styled.button`
     background-color: black;
     border: none;
@@ -64,4 +70,15 @@ export const ButtonLogo = styled.button`
     border: none;
     background-color: black;
 `
+export const ImagemCarrinho = styled.img`
+    border: 2px solid red;
+    height: 5vh;
+    position: relative;
+`
 
+export const CartQuantity = styled.div`
+    border: 2px solid white;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+`

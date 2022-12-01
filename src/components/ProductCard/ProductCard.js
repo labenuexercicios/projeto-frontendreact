@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {CardCamiseta, ImagemProduto, DescricaoProduto, PriceCard, SizeAddButton} from "./ProductCard.styles";
 
 
-export function CardProduct (props){
+export function ProductCard (props){
 
     const {camiseta, addToCart} = props
 
