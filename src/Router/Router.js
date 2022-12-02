@@ -1,17 +1,24 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import ErroPage from '../pages/ErroPage'
 import ProductPage from '../Pages/Product/ProductPage'
 import CartPage from '../Pages/Cart/CartPage'
 import camisetas from '../camisetas.json'
+import { LoginPage } from '../Pages/LoginPage/LoginPage'
 
 export const Router = () => {
+
+    const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]")
 
     const [inputHeader, setInputHeader] = useState("")
     const [inputMinPrice, setInputMinPrice] = useState(-Infinity)
     const [inputMaxPrice, setInputMaxPrice] = useState(Infinity)
     const [sortByPrice, setSortByPrice] = useState("")
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(cartFromLocalStorage)
+
+    useEffect(()=>{
+      localStorage.setItem("cart", JSON.stringify(cart))
+    }, [cart])
 
     const addToCart = (productToAdd, size) => {
         const newCart = [...cart]
@@ -57,6 +64,7 @@ export const Router = () => {
                 inputMinPrice={inputMinPrice}
                 sortByPrice={sortByPrice}
                 cart={cart}
+                cartSize={cart.length}
                 setInputHeader={setInputHeader}
                 setInputMinPrice = {setInputMinPrice}
                 setInputMaxPrice = {setInputMaxPrice}    
@@ -69,6 +77,7 @@ export const Router = () => {
                  setCart={setCart}
                 removeProductCart={removeProductCart}
                 />} />
+                <Route path="/login" element={<LoginPage/>}/>
                 {/* <Route path="*"element={<ErroPage/>} /> */}
             </Routes>
         </BrowserRouter>

@@ -17,7 +17,7 @@ const ProductPage = (props) => {
     setInputMinPrice,
     setCart,
     setSortByPrice,
-    cart
+    cart,
   } = props
 
   return (

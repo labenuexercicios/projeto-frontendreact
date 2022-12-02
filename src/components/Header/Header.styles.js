@@ -71,14 +71,22 @@ export const ButtonLogo = styled.button`
     background-color: black;
 `
 export const ImagemCarrinho = styled.img`
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 5vh;
     position: relative;
 `
 
 export const CartQuantity = styled.div`
-    border: 2px solid white;
+    /* border: 2px solid white; */
+    background-color: white;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    top: 40px;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
 `

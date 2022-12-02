@@ -15,7 +15,7 @@ export function Header (props){
         inputMinPrice, 
         setSortByPrice, 
         sortByPrice,
-        totalQuantity
+        itensInCart
     } = props     
     
     const navigate = useNavigate()
@@ -46,7 +46,7 @@ export function Header (props){
                     </SelectOrder>
                     <CartButton onClick={() => goToCartPage(navigate)}>
                         <ImagemCarrinho src={cartIcon} alt="Imagem de Carrinho"/>
-                        <CartQuantity>{totalQuantity}</CartQuantity>
+                        <CartQuantity>{itensInCart}</CartQuantity>
                     </CartButton>
                     
                 </FilterCart>

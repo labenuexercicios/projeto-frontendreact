@@ -4,13 +4,17 @@ import { CardCart } from '../../components/CardCart/CardCart'
 import { Layout } from '../../components/Layout/Layout'
 import astroCart from '../../assets/astro-pensante.png'
 import { priceFormatter } from '../../utils/priceFormatter'
+import { goToLoginPage } from '../../Router/coordinator'
+import { useNavigate } from 'react-router-dom'
 
 const CartPage = (props) => {
 
   const { cart,
     setCart,
-    removeProductCart
+    removeProductCart,
   } = props
+
+  const navigate = useNavigate()
 
   const total = cart.reduce((acc, product) => (product.price * product.quantity) + acc, 0)
 
@@ -36,7 +40,7 @@ const CartPage = (props) => {
 
   return (
     <Layout
-    totalQuantity={totalQuantity}
+    totalQuantity={totalQuantity} 
     >
       <CartPageStyle>
         <ContainerCart>
@@ -57,7 +61,7 @@ const CartPage = (props) => {
             <h3>Quantidade total: <br /> <h1>{totalQuantity}</h1></h3>
             <h3>Valor total: <br /> <h1>{priceFormatter.format(total)}</h1></h3>
             <h3>Frete: {priceFormatter.format(frete)}</h3>
-            <button>Finalizar Compra</button>
+            {cart.length >=1 ? <button onClick={()=>goToLoginPage(navigate)}>Finalizar Compra</button> : <div></div>}
           </div>
         </FinalCart>
       </CartPageStyle>
