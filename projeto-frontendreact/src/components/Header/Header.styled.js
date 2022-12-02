@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header`
         padding: 8px;
         width: 500px;
         height: 50px;
-        background: #FAFAFA;
+        background: #E6E6E6;
         border: 1px solid #14b6b9;
         border-radius: 8px;
     
