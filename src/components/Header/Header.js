@@ -15,7 +15,7 @@ export function Header (props){
         inputMinPrice, 
         setSortByPrice, 
         sortByPrice,
-        itensInCart
+        cart
     } = props     
     
     const navigate = useNavigate()
@@ -27,7 +27,7 @@ export function Header (props){
                 <ButtonLogo onClick={() => goToProductPage(navigate)} >
                     <ImagemLogo src={logo} alt="Imagem Logo"/>
                 </ButtonLogo>
-                
+            
                 <Buscador>
                     <input placeholder="Pesquisar" value={inputHeader}
                            onChange={(e)=>{setInputHeader(e.target.value)}}/>
@@ -46,7 +46,7 @@ export function Header (props){
                     </SelectOrder>
                     <CartButton onClick={() => goToCartPage(navigate)}>
                         <ImagemCarrinho src={cartIcon} alt="Imagem de Carrinho"/>
-                        <CartQuantity>{itensInCart}</CartQuantity>
+                        <CartQuantity>{cart.length}</CartQuantity>
                     </CartButton>
                     
                 </FilterCart>

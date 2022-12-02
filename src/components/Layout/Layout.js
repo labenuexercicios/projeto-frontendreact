@@ -5,19 +5,19 @@ import styled from 'styled-components'
 import background from '../../assets/sci-fi-deep-space-background-loop-free-video.jpeg';
 
 const CointainerLayout = styled.body`
-  border: 2px solid red;
+  /* border: 2px solid red; */
   background-image: url(${background});
 `
 
 const Main = styled.main`
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
     width: 100%;
     display: flex;
     justify-content: center;
 `
 
 const Container = styled.div`
-  border: 2px solid purple;
+ background-color: rgba(0, 0, 0, 0.2);
     width: 80%;
 `
 
@@ -31,7 +31,7 @@ export const Layout = (props) => {
     inputMinPrice, 
     setSortByPrice, 
     sortByPrice,
-    itensInCart, 
+    cart 
 } = props     
 
   return (
@@ -45,7 +45,7 @@ export const Layout = (props) => {
     setInputMaxPrice = {setInputMaxPrice}    
     sortByPrice = {sortByPrice}
     setSortByPrice = {setSortByPrice}
-    itensInCart = {itensInCart}
+    cart={cart}
     />
     <Main>
         <Container>

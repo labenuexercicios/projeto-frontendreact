@@ -30,7 +30,6 @@ const ProductPage = (props) => {
     setInputMaxPrice = {setInputMaxPrice}    
     sortByPrice = {sortByPrice}
     setSortByPrice = {setSortByPrice}
-    itensInCart = {cart.length}
     cart={cart}
     setCart={setCart}
     >

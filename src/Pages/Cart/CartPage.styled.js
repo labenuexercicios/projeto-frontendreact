@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 export const ContainerCart = styled.main`
-    border: 2px solid red;
+    /* border: 2px solid red; */
     min-height: 82vh;
     width: 80%;
     display: flex;
@@ -15,7 +15,7 @@ export const CartPageStyle = styled.div`
 
 `
 export const FinalCart = styled.div`
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 20vw;
     display: flex;
     flex-direction: column;

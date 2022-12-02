@@ -64,7 +64,6 @@ export const Router = () => {
                 inputMinPrice={inputMinPrice}
                 sortByPrice={sortByPrice}
                 cart={cart}
-                cartSize={cart.length}
                 setInputHeader={setInputHeader}
                 setInputMinPrice = {setInputMinPrice}
                 setInputMaxPrice = {setInputMaxPrice}    

@@ -41,6 +41,7 @@ const CartPage = (props) => {
   return (
     <Layout
     totalQuantity={totalQuantity} 
+    cart={cart}
     >
       <CartPageStyle>
         <ContainerCart>
