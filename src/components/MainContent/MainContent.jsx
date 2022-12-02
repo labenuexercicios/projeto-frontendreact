@@ -4,7 +4,9 @@ import naves from '../../Naves/naves.json'
 
 export const MainContent = (props) => {
 
+    const cart = []
 
+    console.log(cart)
     return (
         <ContentSale>
             <article>Ofertas sem gravidade pra você</article>
@@ -22,7 +24,10 @@ export const MainContent = (props) => {
                 .map((nave, index)=>{
                     return <Products 
                     naves={nave} 
-                    key={index}/>
+                    key={index}
+                    addToCart={()=>{props.setCart.push({nave})
+                    console.log(props.cart)
+                }}/>
                 })}
             </ProductsSale>
         </ContentSale>

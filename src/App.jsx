@@ -16,6 +16,8 @@ function App() {
   const [minValue, setMinValue] = useState('')
   const [maxValue, setMaxValue] = useState('')
 
+  const cart = []
+
   return (
     <ChakraProvider>
       <GlobalStyle/>
@@ -27,9 +29,9 @@ function App() {
           <Filters minValue={minValue} setMinValue={setMinValue}
           maxValue={maxValue} setMaxValue={setMaxValue}/>
           <MainContent search={search} minValue={minValue}
-          maxValue={maxValue}
+          maxValue={maxValue} cart = {cart}
           />
-          <Cart/>
+          <Cart cart = {cart}/>
         </Main>
       </Div>
       <Footer/>
