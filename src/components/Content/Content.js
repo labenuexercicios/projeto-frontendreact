@@ -8,36 +8,54 @@ import {
 import { useState } from "react";
 import Cart from "../Cart/Cart";
 import cards from "../../cards/card.json";
+import { useEffect } from "react";
 
 function Content(props) {
   const [cartItems, setCartItems] = useState([]);
 
   const addCart = (card) => {
-    const exist = cartItems.find((x) => x.id === card.id); //variavel q verifica os itens do carrinho existem
-    if (exist){
-      setCartItems(cartItems.map((x) => x.id === card.id  ? {...exist, qty: exist.qty +1} : x
-        )
-        )
+    const exist = cartItems.find((x) =>
+      x.id === card.id); //variavel q verifica os itens do carrinho existem
+    if (exist) {
+      setCartItems(cartItems.map((x) =>
+        x.id === card.id ? { ...exist, qty: exist.qty + 1 } : x
+      ))
+      localStorage.setItem('cartItems', JSON.stringify(setCartItems))
     } else {
-      setCartItems([...cartItems, {...card, qty:1}])
+      setCartItems([...cartItems, { ...card, qty: 1 }])
+      localStorage.setItem('cartItems', JSON.stringify(setCartItems))
     }
   };
 
-  const onRemove = (card) =>{
+  const onRemove = (card) => {
     const exist = cartItems.find((x) => x.id === card.id);
-    if (exist.qty === 1){
-      setCartItems(cartItems.filter((x)=> x.id !== card.id))
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== card.id))
+      localStorage.setItem('cartItems', JSON.stringify(setCartItems))
     } else {
-      setCartItems(cartItems.map((x) => x.id === card.id ? {...exist, qty: exist.qty - 1} : x
-      
+      setCartItems(cartItems.map((x) => x.id === card.id ? { ...exist, qty: exist.qty - 1 } : x
       ))
+      localStorage.setItem('cartItems', JSON.stringify(setCartItems))
     }
   }
+
+  const localStorageCart = () => {
+    if (localStorage.getItem('cartItems')) {
+      const newCartItems = localStorage.getItem('cartItems')
+      const newCartItemsParse = JSON.parse(newCartItems)
+      setCartItems(newCartItemsParse)
+    }
+  }
+
+  useEffect(() => {
+    localStorageCart();
+  }, [])
+
 
   return (
     <MainContainer className="main-container">
       <CardsContainer className="cards-container"
-      addCart={addCart}
+        addCart={addCart}
       >
         {cards
           .filter((card) => {
@@ -47,36 +65,36 @@ function Content(props) {
           })
 
           .filter((card) => {
-             return card.price >= (props.minPrice) || (props.minPrice) === ""
+            return card.price >= (props.minPrice) || (props.minPrice) === ""
           })
 
           .filter((card) => {
-             return card.price <= (props.maxPrice) || (props.maxPrice) === ""
+            return card.price <= (props.maxPrice) || (props.maxPrice) === ""
           })
 
-          .sort((a,b)=>{
-            if (props.ordenacao === "crescente"){
-              if(a.name < b.name){
+          .sort((a, b) => {
+            if (props.ordenacao === "crescente") {
+              if (a.name < b.name) {
                 return -1
-             } else {
-               return 1
+              } else {
+                return 1
               }
             } else if (props.ordenacao === "decrescente") {
-             if (a.name < b.name){
-               return 1
-            } else {
-             return -1
+              if (a.name < b.name) {
+                return 1
+              } else {
+                return -1
+              }
             }
-           }
           })
 
           .map((card) => (
             <Card className="div-card"
-             key={card.id} 
-             addCart={addCart}
+              key={card.id}
+              addCart={addCart}
             >
               <Image src={card.imageUrl} alt={card.imageAlt} />
-              
+
               <h1 className="title">{card.name}</h1>
 
               <PriceAndButton className="Price-and-cart">
@@ -85,12 +103,12 @@ function Content(props) {
               </PriceAndButton>
             </Card>
           ))}
-          
+
       </CardsContainer>
-      <Cart 
-      cartItems={cartItems}
-      addCart={addCart}
-      onRemove={onRemove}
+      <Cart
+        cartItems={cartItems}
+        addCart={addCart}
+        onRemove={onRemove}
       > </Cart>
     </MainContainer>
   );

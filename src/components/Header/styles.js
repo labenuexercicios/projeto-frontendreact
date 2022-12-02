@@ -11,14 +11,14 @@ export const Logo = styled.img`
   width: 300px;
 `;
 
-export const MenuCenter = styled.nav`
+export const MenuCenter = styled.div`
   display: flex;
   align-items: center;
   gap: 35px;
   cursor: pointer;
 `;
 
-export const OptionsMenu = styled.span`
+export const OptionsMenu = styled.div`
   &:hover {
     background-color: #adeaea;
     color: black;
