@@ -10,8 +10,10 @@ export const SideBarContainer = styled.div`
     height: 120px;
     background-color: #E6E6E6;
     border-radius: 8px;
-    margin: 20px 50px;
-
+    padding: 6px;
+    position: fixed;
+    left: 10px;
+    top: 180px;
 }
 
 input {
@@ -38,4 +40,35 @@ input {
         border: 1px solid #14b6b9;
         border-radius: 8px;
     }
+`
+
+export const Main = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    button {
+        background-color: #14b6b9;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+
+        :hover {
+            cursor: pointer;
+            filter: brightness(1.1);
+        }
+
+        :active {
+            filter: brightness(0.95);
+        }
+    }
+
+
+
+
 `
