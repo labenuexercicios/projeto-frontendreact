@@ -6,13 +6,11 @@ import Filter from "./components/Filter/Filter";
 import styled from "styled-components";
 
 function App(props) {
-
-
   const AppContainer = styled.div`
-  width: 1350px;
-  height: 1024px;
+  width: 100vw;
+  height: 100vh;
   display: grid;
-  grid-template-rows: 120px 50px 6fr 90px;
+  grid-template-rows: 20vh auto auto 15vh;
   grid-template-columns: auto;
 `;
   const [query, setQuery] = useState("");
@@ -21,8 +19,8 @@ function App(props) {
   const [ordenacao, setOrdenacao] = useState("")
 
   return (
-  
-    <AppContainer className="Home">
+
+    <AppContainer className="App-pagina-inteira">
       <Header
         query={query} setQuery={setQuery}
       />
@@ -43,7 +41,7 @@ function App(props) {
       </Content>
 
       <Footer />
-  
+
     </AppContainer>
   );
 }

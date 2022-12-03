@@ -1,20 +1,23 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  width: 1350px;
-  font-size: 20px;
+  width: 100%;
+  max-width: 1200px; 
+  font-size: 130%;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 `;
 
 export const Logo = styled.img`
-  width: 300px;
+  width: auto;
 `;
 
 export const MenuCenter = styled.div`
   display: flex;
   align-items: center;
   gap: 35px;
+  font-size: 1.3rem;
   cursor: pointer;
 `;
 
@@ -31,13 +34,12 @@ export const DivRight = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-right: 75px;
 `;
 
 export const BagImage = styled.img`
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
+  width: auto;
+  height: 30%;
+  margin-right: auto;
   &:hover {
     background-color: #adeaea;
     padding: 5px;
@@ -47,7 +49,7 @@ export const BagImage = styled.img`
 `;
 export const InputBuscar = styled.input`
   background-color: #f8f8f8;
-  height: 35px;
+  height: 30%;
   border: none;
   border-radius: 20px;
   padding: 5px;
@@ -55,7 +57,8 @@ export const InputBuscar = styled.input`
 
 export const BotaoBuscar = styled.button`
   background-color: white;
-  height: 35px;
+  margin-right: 10px;
+  height: 30%;
   border-radius: 10px;
   border: 1px solid grey;
   padding: 5px;

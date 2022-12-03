@@ -14,28 +14,31 @@ function Content(props) {
   const [cartItems, setCartItems] = useState([]);
 
   const addCart = (card) => {
-    const exist = cartItems.find((x) =>
-      x.id === card.id); //variavel q verifica os itens do carrinho existem
+    const exist = cartItems.find((x) => x.id === card.id); //variavel q verifica os itens do carrinho existem
     if (exist) {
-      setCartItems(cartItems.map((x) =>
+      const newCart = cartItems.map((x) =>
         x.id === card.id ? { ...exist, qty: exist.qty + 1 } : x
-      ))
-      localStorage.setItem('cartItems', JSON.stringify(setCartItems))
+      )
+      setCartItems(newCart)
+      localStorage.setItem('cartItems', JSON.stringify(newCart))
     } else {
-      setCartItems([...cartItems, { ...card, qty: 1 }])
-      localStorage.setItem('cartItems', JSON.stringify(setCartItems))
+      const newCart = [...cartItems, { ...card, qty: 1 }]
+      setCartItems(newCart)
+      localStorage.setItem('cartItems', JSON.stringify(newCart))
     }
   };
 
   const onRemove = (card) => {
     const exist = cartItems.find((x) => x.id === card.id);
     if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== card.id))
-      localStorage.setItem('cartItems', JSON.stringify(setCartItems))
+      const newCart = cartItems.filter((x) => x.id !== card.id)
+      setCartItems(newCart)
+      localStorage.setItem('cartItems', JSON.stringify(newCart))
     } else {
-      setCartItems(cartItems.map((x) => x.id === card.id ? { ...exist, qty: exist.qty - 1 } : x
-      ))
-      localStorage.setItem('cartItems', JSON.stringify(setCartItems))
+      const newCart = cartItems.map((x) => x.id === card.id ? { ...exist, qty: exist.qty - 1 } : x
+      )
+      setCartItems(newCart)
+      localStorage.setItem('cartItems', JSON.stringify(newCart))
     }
   }
 

@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const MenuFilter = styled.div`
   padding: 10px;
-  height: 40px;
+  height: 8vh;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-left: -100px;
+  margin-left: -65px;
 
   .filter-name-icon {
     display: flex;
@@ -36,5 +36,5 @@ export const MenuFilter = styled.div`
 `;
 
 export const ImageFilter = styled.img`
-  width: 40px;
+  width: 38px;
 `;

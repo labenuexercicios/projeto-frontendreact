@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.div`
   background-color: #DCDCDC;
-  font-size: 20px;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;

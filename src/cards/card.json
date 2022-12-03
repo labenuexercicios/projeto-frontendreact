@@ -106,7 +106,7 @@
 
     {
         "id": 12,
-        "name": "Foguete Astronauta com luz e som",
+        "name": "Foguete Astronauta",
         "type": "Brinquedos",
         "price": 299.90 ,
         "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE7igO0WEnc-evrvgY2-AggbGxLo_Gwyz--w&usqp=CAU",
@@ -133,7 +133,7 @@
 
     {
         "id": 15,
-        "name": "Pop Funko Buzz Lightyear Toy Story",
+        "name": "Pop Funko Buzz Lightyear",
         "type": "Brinquedos",
         "price": 180.90 ,
         "imageUrl": "https://m.media-amazon.com/images/I/71vXfEbOU9L._AC_SX569_.jpg",

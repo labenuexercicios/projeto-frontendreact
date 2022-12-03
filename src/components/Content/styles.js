@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const MainContainer = styled.main`
   background-color: white;
-  width: 1350px;
+  width: 100%;
+  max-width: 1350px; 
   display: flex;
   padding: 5px;
 `;
@@ -10,8 +11,9 @@ export const MainContainer = styled.main`
 export const CardsContainer = styled.div`
   font-family: Cambria, sans-serif;
   background-color: white;
-  margin-right: -70px;
-  width: 1100px;
+  margin-right: auto;
+  margin-left: 30px;
+  width: 80%;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -22,20 +24,20 @@ export const CardsContainer = styled.div`
 
 export const Card = styled.div`
   background-color: white;
-  height: 350px;
-  width: 280px;
-  top: 436px;
+  height: 360px;
+  width: 290px; 
   border-radius: 8px;
   border: 1px solid grey;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 
   .title {
-    font-size: 20px;
+    font-size: 1.1rem;
     margin: 15px;
   }
 `;
