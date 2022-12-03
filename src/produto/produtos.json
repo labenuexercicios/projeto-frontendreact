@@ -1,0 +1,72 @@
+[
+    {
+    "id": "001",
+    "item": "Astronauta",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 45
+    },
+    {
+    "id": "002",
+    "item": "Camisa 2",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 60
+    },
+    {
+    "id": "003",
+    "item": "Camisa 3",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 35
+    },
+    {
+    "id": "004",
+    "item": "Camisa 4",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 45
+    },
+    {
+    "id": "005",
+    "item": "Camisa 5",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 45
+    },
+    {
+    "id": "006",
+    "item": "Camisa 6",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 50
+    },
+    {
+    "id": "007",
+    "item": "Camisa 7",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 75
+    },
+    {
+    "id": "008",
+    "item": "Camisa 8",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 75
+    },
+    {
+    "id": "009",
+    "item": "Camisa 9",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 50
+    },
+    {
+    "id": "010",
+    "item": "Camisa 10",
+    "tamanhos": ["P", "M", "G"],
+    "imagem": "https://picsum.photos/200",
+    "valor": 50
+    }
+]
