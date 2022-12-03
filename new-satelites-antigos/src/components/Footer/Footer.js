@@ -8,8 +8,6 @@ const FooterStyle = styled.footer`
   width: 100vw;
   display: flex;
   justify-content: center;
-  font-size: 10px;
-  color: #808080;
   
   >div{
     width: 80%;
@@ -18,6 +16,13 @@ const FooterStyle = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    p{
+      font-size: 10px;
+      color: #808080;
+      font-family: system-ui;
+    }
+    
     div{
       width: 5%;
       height: 100%;
@@ -25,6 +30,7 @@ const FooterStyle = styled.footer`
       align-items: center;
       justify-content: center;
       gap: 10px;
+      
     }
   }
 

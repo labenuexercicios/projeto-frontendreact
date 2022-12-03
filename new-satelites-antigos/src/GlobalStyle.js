@@ -6,7 +6,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    font-family: system-ui;
+    /* font-family: system-ui; */
+    font-family: 'Pinyon Script', cursive;
+    font-family: 'Rajdhani', sans-serif;
+
     ::-webkit-scrollbar-track {
     background: #101010; 
     };

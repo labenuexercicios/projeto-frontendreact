@@ -1,5 +1,5 @@
 import {ContainerHeader, 
-        ImgLupa, 
+        Login, 
         Carrinho, 
         HeaderContent, 
         ContainerLogo, 
@@ -52,13 +52,20 @@ export const Header = () => {
             </ContainerDiv>
           </ContainerLogo>
           <Nav>
-            <span onClick={() => goToHomePage(navigate)}>HOME</span>
-            <span onClick={() => goToStorePage(navigate)}>STORE</span>
-            <ImgLupa src={iconLogin} onClick={() => goToLoginPage(navigate)}/>
-            <Carrinho show={soma === 0 ? "none" : "flex"}>
-              <img src={iconCarrinho} onClick={() => goToCartPage(navigate)}/>
-              <div><p>{soma}</p></div>
-            </Carrinho>
+            <div>
+              <span onClick={() => goToHomePage(navigate)}>HOME</span>
+              <span onClick={() => goToStorePage(navigate)}>STORE</span>
+            </div>
+            <div>
+              <Login>
+                <p>Login </p>
+                <img src={iconLogin} onClick={() => goToLoginPage(navigate)}/>
+              </Login>
+              <Carrinho show={soma === 0 ? "none" : "flex"}>
+                <img src={iconCarrinho} onClick={() => goToCartPage(navigate)}/>
+                <div><p>{soma}</p></div>
+              </Carrinho>
+            </div>
           </Nav>
         </HeaderContent>
       </ContainerHeader>

@@ -10,11 +10,11 @@ export const Cart = styled.div`
 export const Items = styled.div`
   width: 55%;
   min-height: 100%;
-  border: 1px blue solid;
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding-top: 40px;
+  /* border: 1px blue solid; */
 `
 export const Infomation = styled.div`
   width: 35%;

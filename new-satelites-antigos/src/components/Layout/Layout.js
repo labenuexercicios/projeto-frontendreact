@@ -20,7 +20,7 @@ export const Container = styled.div`
   position: relative;
   width: 80%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1200px;git status
   /* border: 1px solid red; */
 `
 export const Layout = (props) => {

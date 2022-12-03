@@ -10,16 +10,7 @@ export const ContainerHeader = styled.header`
   width: 100vw;
   position: sticky;
   top: 0;
-`
-export const ContainerLogo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
-
-  > img {
-    height: 24px;
-  }
-`
+  `
 export const HeaderContent = styled.div`
   width: 80%;
   max-width: 1200px;
@@ -27,6 +18,16 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
   /* border: 1px solid white; */
+`
+export const ContainerLogo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  /* border: 1px solid red; */
+
+  > img {
+    height: 24px;
+  }
 `
 export const ContainerDiv = styled.div`
   display: flex;
@@ -43,33 +44,52 @@ export const ContainerDiv = styled.div`
 `
 
 export const Nav = styled.nav`
-  width: 50%;
+  width: 35%;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   gap: 20px;
-  color: #707070;
-  font-size: 18px;
-  /* border: 1px solid white; */
-
-    span{
-     cursor: pointer;
-     &:hover{
-       color: #BDBDBD;
-       transition: color 0.3s ease-in-out;
-     }
+  color: #808080;
+  font-size: 20px;
+  font-weight: bold;
+  
+  >div{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+  }
+  
+  span{
+    cursor: pointer;
+    &:hover{
+      color: #BDBDBD;
+      transition: color 0.3s ease-in-out;
+    }
     }
   `
-  export const ImgLupa = styled.img`
-    height: 30px;
-    padding: 6px;
+  export const Login = styled.div`
+    display: flex;
+    align-items: flex-end;
     cursor: pointer; 
     &:hover{
         filter: brightness(5);
         transition: filter 0.3s ease-in-out;
-      }
+    }
+    
+    p{
+      /* border: 1px solid white; */
+      font-size: 18px;
+      height: 28px;
+      
+    }
+
+    img{
+      height: 32px;
+      padding: 6px;
+    }
   `
 
   export const Carrinho = styled.div`
@@ -87,15 +107,18 @@ export const Nav = styled.nav`
       right: 0;
       top: 0;
       background-color: red;
-      height: 15px;
-      width: 15px;
-      font-size: 11px;
-      color: white;
+      height: 16px;
+      width: 16px;
       border-radius: 50%;
-      font-weight: bold;
+      
       p{
+        font-weight: bold;
+        color: white;
+        font-family: system-ui;
+        font-size: 10px;
         position: relative;
-        top: -1px;
+        /* top: -1px; */
+        left: -1px;
       }
     }
 

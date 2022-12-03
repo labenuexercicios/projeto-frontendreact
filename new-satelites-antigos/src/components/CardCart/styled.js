@@ -15,7 +15,7 @@ export const Container = styled.div`
     height: 110px;
     width: 150px;
     left: 50px;
-    box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.6);
     /* border-radius: 50%; */
 
     img{
