@@ -23,30 +23,9 @@ const Container = styled.div`
 
 export const Layout = (props) => {
 
-  const { setInputHeader,
-    inputHeader, 
-    setInputMaxPrice, 
-    inputMaxPrice, 
-    setInputMinPrice,
-    inputMinPrice, 
-    setSortByPrice, 
-    sortByPrice,
-    cart 
-} = props     
-
   return (
     <CointainerLayout>
-    <Header
-    inputHeader={inputHeader}
-    setInputHeader={setInputHeader}
-    inputMinPrice = {inputMinPrice}
-    setInputMinPrice = {setInputMinPrice}
-    inputMaxPrice = {inputMaxPrice}
-    setInputMaxPrice = {setInputMaxPrice}    
-    sortByPrice = {sortByPrice}
-    setSortByPrice = {setSortByPrice}
-    cart={cart}
-    />
+    <Header/>
     <Main>
         <Container>
             {props.children}

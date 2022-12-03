@@ -1,53 +1,35 @@
 import React, { useContext } from 'react'
-import { ContainerCart, CartPageStyle, FinalCart } from './CartPage.styled'
-import { CardCart } from '../../components/CardCart/CardCart'
 import { Layout } from '../../components/Layout/Layout'
-import astroCart from '../../assets/astro-pensante.png'
+import { ContainerCart, CartPageStyle, FinalCart} from './PayPage.styled'
+import {PayCard} from '../../components/PayCard/PayCard'
+import { GlobalContext } from '../../contexts/GlobalContext'
 import { priceFormatter } from '../../utils/priceFormatter'
+import astroCart from '../../assets/astro-pensante.png'
 import { goToLoginPage } from '../../Router/coordinator'
 import { useNavigate } from 'react-router-dom'
-import { GlobalContext } from '../../contexts/GlobalContext'
 
-const CartPage = () => {
+
+export const PayPage = () => {
+
+  const navigate = useNavigate()
 
   const context = useContext(GlobalContext)
-
-  const { cart,
-    setCart,
+  const {cart,
+    increaseQuantityInCart,
+    decreaseQuantityInCart,
     removeProductCart,
     totalQuantity,
     total,
     frete
-  } = context
-
-  const navigate = useNavigate()
-
-  const increaseQuantityInCart = (productToIncrease) => {
-    const newCart = [...cart]
-    const productFound = newCart.find((productInCart) => productInCart.id === productToIncrease.id)
-    productFound.quantity++
-    setCart(newCart)
-  }
-
-  const decreaseQuantityInCart = (productToDecrease) => {
-    if (productToDecrease.quantity > 1) {
-      const newCart = [...cart]
-      const productFound = newCart.find((productInCart) => productInCart.id === productToDecrease.id)
-      productFound.quantity--
-      setCart(newCart)
-    }
-  }
+} = context
 
   return (
-    <Layout
-    totalQuantity={totalQuantity} 
-    cart={cart}
-    >
+    <Layout>
       <CartPageStyle>
         <ContainerCart>
           {cart
             .map((camiseta) => {
-              return <div><CardCart key={camiseta.id}
+              return <div><PayCard key={camiseta.id}
                 camiseta={camiseta}
                 increaseQuantityInCart={increaseQuantityInCart}
                 decreaseQuantityInCart={decreaseQuantityInCart}
@@ -69,5 +51,3 @@ const CartPage = () => {
     </Layout>
   )
 }
-
-export default CartPage

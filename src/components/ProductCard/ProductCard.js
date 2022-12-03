@@ -9,7 +9,6 @@ export function ProductCard (props){
     const [choosenSize, setChoosenSize] = useState(camiseta.size[0])
 
     return(
-        <>
             <CardCamiseta key={camiseta.id}>
                 <ImagemProduto src={camiseta.image} alt="Imagem camiseta"/>  
                 <DescricaoProduto>
@@ -31,6 +30,5 @@ export function ProductCard (props){
                 </DescricaoProduto>
                 
             </CardCamiseta>
-        </>
 )   
 }

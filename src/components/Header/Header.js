@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import {ButtonPesquisar, ContainerHeader, MainHeader, ImagemLogo, ButtonLogo, Buscador, MinimumMaximum, SelectOrder, ImagemCarrinho, FilterCart, CartButton, CartQuantity} from "./Header.styles";
 import logo from "../../assets/logo2.png";
 import cartIcon from "../../assets/cart-icon.png"
 import { goToCartPage, goToProductPage } from "../../Router/coordinator";
 import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
-export function Header (props){
+export function Header (){
+
+    const context = useContext(GlobalContext)
 
     const { setInputHeader,
         inputHeader, 
@@ -16,7 +19,7 @@ export function Header (props){
         setSortByPrice, 
         sortByPrice,
         cart
-    } = props     
+    } = context     
     
     const navigate = useNavigate()
     

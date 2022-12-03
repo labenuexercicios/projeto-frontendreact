@@ -1,38 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ProductCard } from '../../components/ProductCard/ProductCard'
 import { CardsContainer } from './ProductPage.styled'
 import {Layout} from '../../components/Layout/Layout'
+import { GlobalContext } from '../../contexts/GlobalContext'
 
 
-const ProductPage = (props) => {
+const ProductPage = () => {
+
+  const context = useContext(GlobalContext)
 
   const {camisetas, 
     inputHeader, 
     inputMaxPrice, 
     inputMinPrice, 
     sortByPrice,
-    addToCart,
-    setInputHeader,
-    setInputMaxPrice,
-    setInputMinPrice,
-    setCart,
-    setSortByPrice,
-    cart,
-  } = props
+    addToCart
+  } = context
 
   return (
-    <Layout
-    inputHeader={inputHeader}
-    setInputHeader={setInputHeader}
-    inputMinPrice = {inputMinPrice}
-    setInputMinPrice = {setInputMinPrice}
-    inputMaxPrice = {inputMaxPrice}
-    setInputMaxPrice = {setInputMaxPrice}    
-    sortByPrice = {sortByPrice}
-    setSortByPrice = {setSortByPrice}
-    cart={cart}
-    setCart={setCart}
-    >
+    <Layout>
     <CardsContainer>
             {camisetas
             .filter((camiseta)=>{
