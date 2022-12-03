@@ -20,7 +20,8 @@ export const PayPage = () => {
     removeProductCart,
     totalQuantity,
     total,
-    frete
+    frete,
+    users
 } = context
 
   return (
@@ -34,7 +35,8 @@ export const PayPage = () => {
                 increaseQuantityInCart={increaseQuantityInCart}
                 decreaseQuantityInCart={decreaseQuantityInCart}
                 removeProductCart={removeProductCart}
-              /><hr /></div>
+                users={users}
+              /><hr/></div>
             })}
 
         </ContainerCart>

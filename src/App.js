@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Router } from './Router/Router';
 import {GlobalContext} from './contexts/GlobalContext'
 import camisetas from './camisetas.json'
+import { GlobalStyles } from './GlobalStyles';
+import users from './users.json'
 
 
 function App() {
@@ -73,11 +75,13 @@ function App() {
     removeProductCart,
     total,
     frete,
-    totalQuantity
+    totalQuantity,
+    users
   }
 
   return (
   <GlobalContext.Provider value={context}>
+    <GlobalStyles/>
     <Router/>
   </GlobalContext.Provider>
   )
