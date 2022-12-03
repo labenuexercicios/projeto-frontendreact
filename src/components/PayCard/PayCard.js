@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
     CardPayment,
     ImagemProduto,
@@ -6,25 +6,10 @@ import {
     PriceCard,
     QuantityProduct,
     DescricaoProduto,
-    QuantityRemove,
     ChoosenSize,
-    InfoCard,
-    CardUserInfo,
-    Title,
-    ButtonChange,
-    CardPaymentAdd,
-    CardInfo,
-    BillingInfo,
-    ButtonClose,
-    HeaderPayment,
-    ExistingCard,
-    TypeOfCard,
-    DateExp,
-    LinhaShort
+    ContentProduct,
 } from './PayCard.styled'
 import { priceFormatter } from '../../utils/priceFormatter'
-import cardImage from '../../assets/visacard.png'
-import { FormAddCard } from '../FormAddCard/FormAddCard'
 
 
 
@@ -33,107 +18,74 @@ export const PayCard = (props) => {
     const { camiseta,
         increaseQuantityInCart,
         decreaseQuantityInCart,
-        removeProductCart,
-        users
     } = props
 
-    
 
+    const cardFromLocalStorage = JSON.parse(localStorage.getItem("card") || "[]")
+    const [card, setCard] = useState(cardFromLocalStorage)
+
+    useEffect(()=>{
+        localStorage.setItem("card", JSON.stringify(card))
+      }, [card])
+  
+      const addToCard = (cardToAdd, size) => {
+        const newCard = [...card]
+    
+        const cardFound = newCard.find((cardInCard)=>cardInCard.id === cardToAdd.id && cardInCard.cartSize === size)
+    
+        if (!cardFound){
+          const newCard = {...cardToAdd, cartSize: size, quantity: 1}
+          newCard.push(newCard)
+        } else {
+          console.log(cardFound.cartSize)
+          if(cardFound.cartSize === size){
+            console.log("entrou")
+            cardFound.quantity ++
+          } else {
+            console.log("entrou no else 2")
+            const newCard = {...cardToAdd, cartSize: size, quantity: 1}
+            newCard.push(newCard) 
+          }}
+          
+          setCard(newCard)
+          JSON.stringify(newCard)
+          localStorage.setItem(card, newCard)
+        }
+          
+          const removeProductCard = (cardToRemove) =>{
+            const newCard = [...card]
+            const productRemove = newCard.find ((cardInCard)=> cardInCard.id === cardToRemove.id)
+            const productRemoveIndex = newCard.findIndex ((cardInCard)=> cardInCard.id === cardToRemove.id)
+            console.log(productRemove)
+            newCard.splice(productRemoveIndex, 1)
+            setCard(newCard)
+          }
+
+   
     return (
         <>
-            <CardUserInfo>
-                <Title>01 Endereço de Entrega</Title>
-                {
-                    users.map((user) => {
-                        return <InfoCard key={user.id}>
-                            <p>{user.name}</p>
-                            <p>{user.address}</p>
-                            <p>{user.district}</p>
-                            <p>{user.city}, {user.state} {user.zipCode}</p>
-                        </InfoCard>
-                    })
-                }
-                <ButtonChange>Mudar</ButtonChange>
-            </CardUserInfo>
-            <hr />
-            <CardUserInfo>
-                <Title>02 Método de Pagamento</Title>
-                <InfoCard>
-                    <CardInfo>
-                        <img src={cardImage} alt="Imagem Cartão" />
-                        <span>Visa final 2194</span>
-                    </CardInfo>
-                    <BillingInfo>
-                        <p>Endereço de cobrança:</p>
-                        <span>O mesmo endereço de entrega.</span>
-                    </BillingInfo>
-                </InfoCard>
-                <ButtonChange>Mudar</ButtonChange>
-            </CardUserInfo>
-            <hr />
-            <CardPaymentAdd>
-                <HeaderPayment>
-                    <Title>02 Método de Pagamento</Title>
-                    <ButtonClose>Fechar</ButtonClose>
-                </HeaderPayment>
-                <ExistingCard>
-                    <TypeOfCard>
-                        <input type='radio'></input>
-                        <img src={cardImage} alt="Card Image"/>
-                        <span>Visa finalizando com 2194</span>
-                    </TypeOfCard>
-                    <div>
-                        <p>Nome no Cartão</p>
-                        <p>Marina Jaudy</p>
-                    </div>
-                    <DateExp>
-                        <p>Expirado em</p>
-                        <p>03/2029</p>
-                    </DateExp>
-                </ExistingCard>
-                <LinhaShort></LinhaShort>
-                <FormAddCard/>
-            </CardPaymentAdd>
-            <hr />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <CardPayment>
-                <ImagemProduto src={camiseta.image} alt="Imagem camiseta" />
-                <DetalheProduto>
-                    <div>
-                        <h3>{camiseta.title}</h3>
-                        <p>***** {camiseta.rating}</p>
-                        <ChoosenSize>Tamanho: {camiseta.cartSize}</ChoosenSize>
-                    </div>
-                    <DescricaoProduto>
-                        <p>{camiseta.description}</p>
-                    </DescricaoProduto>
-                </DetalheProduto>
-
-                <PriceCard>
-                    <h1>{priceFormatter.format(camiseta.price)}</h1>
-                    <QuantityRemove>
+                <ContentProduct>
+                    <ImagemProduto src={camiseta.image} alt="Imagem camiseta" />
+                    <DetalheProduto>
+                        <div>
+                            <h3>{camiseta.title}</h3>
+                            <p>***** {camiseta.rating}</p>
+                            <ChoosenSize>Tamanho: {camiseta.cartSize}</ChoosenSize>
+                        </div>
+                        <DescricaoProduto>
+                            <p>{camiseta.description}</p>
+                        </DescricaoProduto>
+                    </DetalheProduto>
+                    <PriceCard>
+                    <h2>{priceFormatter.format(camiseta.price)}</h2>
                         <QuantityProduct>
                             <button onClick={() => decreaseQuantityInCart(camiseta)}>-</button>
                             {camiseta.quantity}
                             <button onClick={() => increaseQuantityInCart(camiseta)}>+</button>
                         </QuantityProduct>
-                        <button onClick={() => removeProductCart(camiseta)}>Remove</button>
-                    </QuantityRemove>
                 </PriceCard>
+                </ContentProduct>
             </CardPayment>
         </>
     )

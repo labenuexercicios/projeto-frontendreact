@@ -15,9 +15,11 @@ import visaCard from '../../assets/visacard.png'
 import masterCard from '../../assets/mastercard.jpeg'
 import eloCard from '../../assets/elocard.png'
 
-export const FormAddCard = () => {
+export const FormAddCard = (props) => {
 
     const [form, onChangeForm] = useForm({ cardNumber: "", nameCard: "", securityCvv: ""})
+
+    const {goToCardExist} = props
 
   return (
     <ContainerAddCard>
@@ -90,7 +92,7 @@ export const FormAddCard = () => {
             required
         />
     </LabelInput>
-    <ButtonAddCard>Adicionar</ButtonAddCard>
+    <ButtonAddCard onClick={goToCardExist}>Adicionar</ButtonAddCard>
 </ContainerForm>
 <ContainerTypeCard>
     <p>Astro Tshirts aceita alguns tipo bandeira de cartão de crédito e débito: </p>

@@ -5,6 +5,7 @@ import ProductPage from '../Pages/Product/ProductPage'
 import CartPage from '../Pages/Cart/CartPage'
 import { LoginPage } from '../Pages/LoginPage/LoginPage'
 import {PayPage} from '../Pages/PayPage/Paypage'
+import {CofirmPage} from '../Pages/ConfirmPage/CofirmPage'
 
 export const Router = () => {
  
@@ -16,6 +17,7 @@ export const Router = () => {
                 <Route path="/carrinho" element={<CartPage/>} />
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/paypage" element={<PayPage/>}/>
+                <Route path="/confirmpayment" element={<CofirmPage/>} />
                 {/* <Route path="*"element={<ErroPage/>} /> */}
             </Routes>
         </BrowserRouter>

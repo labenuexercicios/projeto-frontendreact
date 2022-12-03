@@ -17,7 +17,7 @@ function App() {
 
     const total = cart.reduce((acc, product) => (product.price * product.quantity) + acc, 0)
 
-    const frete = total * 0.05
+    const frete = total * 0.20
   
     const totalQuantity = cart.reduce((acc, product) => (product.quantity) + acc, 0)
   

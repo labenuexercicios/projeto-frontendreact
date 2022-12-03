@@ -37,7 +37,6 @@ export const FormControl = styled.form`
   color: white;
   display: flex;
   flex-direction: column;
-  height: 14vh;
   justify-content: center;
   width: 20vw;
   gap: 20px;
@@ -71,7 +70,7 @@ export const ButtonSingIn = styled.button`
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 4px;
-  height: 8vh;
+  height: 4vh;
 `
 
 export const LabelInput = styled.div`

@@ -13,6 +13,10 @@ export const goToLoginPage = (navigate) =>{
 export const goToPayPage = (navigate) =>{
     navigate('/paypage')
 }
+
+export const goToConfirmPage = (navigate) =>{
+    navigate('/confirmpayment')
+}
 // export const goToLoginPage = (navigate) => {
 //     navigate('/login')
 // }
