@@ -1,19 +1,15 @@
 import { Layout } from "../../components/Layout/Layout";
 import {Store, ContainerFilters, BackgrondFilters, ContainerCard,BackgroundCard} from './styled'
 import satellites from "../../Satellites/satellites.json"
-import {useEffect, useState} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import { Filters } from "../../components/Filters/Filters";
 import {Card} from '../../components/Card/Card'
+import { GlobalContext } from "../../context/GlobalContext";
 
 export const StorePage = () => {
   const [inputName, setInputName] = useState("")
   const [radioYear, setRadioYear] = useState("")
   const [radioPrice, setRadioPrice] = useState("") 
-
-  const itemsCart = JSON.parse(localStorage.getItem("itemsCart"))
-  const [listCart, setListCart] = useState([...itemsCart])
-  localStorage.setItem("itemsCart", JSON.stringify(listCart))
-
 
   return (
     <Layout>
@@ -54,8 +50,8 @@ export const StorePage = () => {
                 {/* <p>{satellite.description}</p> */}
                 <Card 
                 satellite={satellite}
-                listCart={listCart}
-                setListCart={setListCart}
+                // listCart={listCart}
+                // setListCart={setListCart}
                 />
               </BackgroundCard>)
             })

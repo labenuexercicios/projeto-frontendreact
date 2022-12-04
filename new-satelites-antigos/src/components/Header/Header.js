@@ -10,27 +10,24 @@ import iconLogin from '../../assets/iconLogin.png'
 import iconCarrinho from '../../assets/carrinho.png'
 import { useNavigate } from 'react-router-dom'
 import {goToHomePage, goToStorePage, goToLoginPage, goToCartPage} from '../../router/coordinator'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+import { GlobalContext } from '../../context/GlobalContext'
 
 export const Header = () => {
   const navigate = useNavigate()
 
-  const itemsCart = JSON.parse(localStorage.getItem("itemsCart"))
-  const [quantityCart, setQuantityCart] = useState(itemsCart);
+  const context = useContext(GlobalContext)
+  const {listCart} = context
 
+  const [quantityCart, setQuantityCart] = useState(0);
+  
   useEffect(()=>{
-    // window.dispatchEvent(new Event("storage"));
-  },[quantityCart])
-  
-  
-  window.addEventListener("storage", () => {
-    setQuantityCart(itemsCart)
-  });
-
-  let soma = 0
-  for(let item of quantityCart){
-    soma += item.quantity
-  }
+    let soma = 0
+    for(let item of listCart){
+      soma += item.quantity
+    }
+    setQuantityCart(soma)
+  },[listCart])
 
   return(
     <>
@@ -61,9 +58,9 @@ export const Header = () => {
                 <p>Login </p>
                 <img src={iconLogin} onClick={() => goToLoginPage(navigate)}/>
               </Login>
-              <Carrinho show={soma === 0 ? "none" : "flex"}>
+              <Carrinho show={quantityCart === 0 ? "none" : "flex"}>
                 <img src={iconCarrinho} onClick={() => goToCartPage(navigate)}/>
-                <div><p>{soma}</p></div>
+                <div><p>{quantityCart}</p></div>
               </Carrinho>
             </div>
           </Nav>

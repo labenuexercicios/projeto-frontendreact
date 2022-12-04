@@ -14,7 +14,6 @@ export const Router = () => {
         <Route path='login/' element={<LoginPage/>}/>
         <Route path='cart/' element={<CartPage/>}/>
         <Route path='*' element={<ErrorPage/>}/>
-        {/* Rota erro */}
       </Routes>
     </BrowserRouter>
   )

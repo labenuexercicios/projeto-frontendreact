@@ -10,25 +10,31 @@ import {ContainerCard,
         Information, 
         Price } from "./styled"
 import coin from '../../assets/coin.png'
-import { useState } from "react"
+import { useContext, useState } from "react"
 import  './Card.css'
+import { GlobalContext } from "../../context/GlobalContext"
 
 
 export const Card = (props) => {
   const [style, setStyle] = useState("hideCard")
 
-  const newListCart = [...props.listCart]
-  // console.log(newListCart)
+  const context = useContext(GlobalContext)
+  const {listCart, setListCart} = context
 
   
   function addToCart(item) {
+    const newListCart = [...listCart]
+    
     const itemFound = newListCart.find((element) => element.id === item.id)     
     if (!itemFound) {
       newListCart.push(item)
     }else {
       item.quantity++
+      console.log("item", item.quantity)
     }
-    props.setListCart(newListCart)
+    console.log(newListCart)
+    setListCart(newListCart)
+
   }
   
 
