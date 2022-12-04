@@ -26,18 +26,18 @@ export const Card = (props) => {
     const newListCart = [...listCart]
     
     const itemFound = newListCart.find((element) => element.id === item.id)     
+    
     if (!itemFound) {
       newListCart.push(item)
+      setListCart(newListCart)
     }else {
-      item.quantity++
-      console.log("item", item.quantity)
+      const updateList = newListCart.filter((element)=> element.id !== item.id)
+      itemFound.quantity++
+      updateList.push(itemFound)
+      setListCart(updateList)
     }
-    console.log(newListCart)
-    setListCart(newListCart)
-
   }
   
-
   return(
     <ContainerCard className={style}>
         <Description>

@@ -31,7 +31,7 @@ export const EmptyCart = styled.div`
   align-items: center;
   justify-content: center;
   p{
-    color: #707070;
-    font-size: 18px;
+    color: #d0d0d0;
+    font-size: 24px;
   }
 `
