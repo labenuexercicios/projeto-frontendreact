@@ -18,14 +18,14 @@ import React from "react";
         <input 
         type="number" 
         placeholder="A partir de"
-        // value={props.valorMin}
+        value={props.valorMin}
         onChange={onChangeValorMin}
         />
 
         <input 
         type="number" 
         placeholder="Até"
-        // value={props.valorMax}
+        value={props.valorMax}
         onChange={onChangeValorMax}/>
 
         <select value={props.ordenaValor} onChange={onChangeOrdenaValor}>
