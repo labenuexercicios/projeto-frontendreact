@@ -1,4 +1,4 @@
-<h1 align="center"> Viagens espaciais - e-commerce  ![image](https://user-images.githubusercontent.com/102393426/205749278-02c0e339-77ae-4aba-a143-33ba8553600c.png)
+<h1 align="center"> Viagens espaciais
 </h1>
 
 <p align="center">
