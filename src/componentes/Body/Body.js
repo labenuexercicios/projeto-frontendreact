@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import Box from "./Box";
 import produtos from "../../produto/produtos.json"
 import Filtros from "./Filter";
-import Carrinho from "./Carrinho";
+import Carrinho from "./Cart";
+import { StyleBody } from "../../styles";
 // import Card from "../CardProduto/CardProduto";
 
 export default function Body() {
@@ -13,28 +14,38 @@ export default function Body() {
     const [ordenaValor, setOrdenaValor] = useState("")
     const [listaProdutos, setListaProdutos] = useState([])
 
+    console.log(`Aqui é a lista de produtos ${listaProdutos.length}`)
     
     return(
-        <>
-            <Filtros
-            valorMin={valorMin}
-            setValorMin={setValorMin}
-            valorMax={valorMax}
-            setValorMax={setValorMax}
-            ordenaValor={ordenaValor}
-            setOrdenaValor={setOrdenaValor}
-            />
-            <Box
-            buscaNome={buscaNome}
-            setBuscaNome={setBuscaNome}
-            valorMin={valorMin}
-            valorMax={valorMax}
-            ordenaValor={ordenaValor}
-            listaProdutos={listaProdutos} 
-            setListaProdutos={setListaProdutos}
-            />
-            <Carrinho listaProdutos={listaProdutos} setListaProdutos={setListaProdutos}/>
-            
-        </>
+        <StyleBody>
+            {/* <section> */}
+                <span>
+                <Filtros
+                valorMin={valorMin}
+                setValorMin={setValorMin}
+                valorMax={valorMax}
+                setValorMax={setValorMax}
+                ordenaValor={ordenaValor}
+                setOrdenaValor={setOrdenaValor}
+                />
+                </span>
+                <span>
+                <Box
+                buscaNome={buscaNome}
+                setBuscaNome={setBuscaNome}
+                valorMin={valorMin}
+                valorMax={valorMax}
+                ordenaValor={ordenaValor}
+                listaProdutos={listaProdutos} 
+                setListaProdutos={setListaProdutos}
+                />
+                </span>
+                <span>
+                <Carrinho 
+                listaProdutos={listaProdutos}
+                />
+                </span>
+            {/* </section> */}
+        </StyleBody>
     )
 }   

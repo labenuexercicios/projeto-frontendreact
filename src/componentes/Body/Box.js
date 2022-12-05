@@ -1,17 +1,24 @@
 import React, {useState} from "react";
 import produtos from "../../produto/produtos.json"
+import { StyleBox, StyleCard } from "../../styles";
 
 export default function Box(props) {
     const onChangeBuscaNome = (e) => {
         props.setBuscaNome(e.target.value)
     }
-
-
-    const adicionarProduto = (produto) => {
-        const novoProduto = produtos.filter((novoItem) => {
-            return (produto.item === novoItem)
-        })
-        props.setListaProdutos([...props.listaProdutos, novoProduto])   
+    const adicionarProduto = (item) => {
+        const novaListaProdutos = [...props.listaProdutos]
+        const verificaExistenciaItem = novaListaProdutos.find((produto) => 
+            produto.id === item.id 
+        )
+        if(!verificaExistenciaItem) {
+        const novoItem = {...item, quantidade: 1}
+        novaListaProdutos.push(novoItem)
+        } else {
+            verificaExistenciaItem.quantidade = verificaExistenciaItem.quantidade + 1
+        }
+        
+        props.setListaProdutos(novaListaProdutos) 
     }
     
 
@@ -34,26 +41,33 @@ export default function Box(props) {
     })
     .map((produto) => {
             return (
-                <div>
+                <StyleCard key={produto.id}>
                     <img src={produto.imagem} />
                     <h2>{produto.item}</h2>
                     <h3>R$ {produto.valor}</h3>
-                    <button onClick={adicionarProduto}>Adicionar ao carrinho</button>
-                </div>
+                    <select>
+                        <option >Escolha o tamanho  </option>
+                        <option value="p" >P</option>
+                        <option value="m" >M</option>
+                        <option value="g" >G</option>
+                    </select>
+                    <button onClick={() => adicionarProduto(produto)}>Adicionar ao carrinho</button>
+                </StyleCard>
             )
         }
     )
 
     return(
-        <>
-            <h1>Box de produtos</h1>
+        <div>
             <input
             type="text"
             placeholder="Produto"
             value={props.buscaNome}
             onChange={onChangeBuscaNome}
             />
+            <StyleBox>
             {card}
-        </>
+            </StyleBox>
+        </div>
     )
 }
