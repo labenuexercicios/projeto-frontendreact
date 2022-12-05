@@ -44,8 +44,8 @@ function App() {
   const [displayCart, setDisplayCart] = useState("display: none;") //serve para mostrar ou não a lista do carrinho no modo mobile
   const [loginScreenActive, setLoginScreenActive] = useState(false)// serve para ir para tela de login
   const [condicionalValue, setCondicionalValue] = useState(1) // para mudar de pagina no login
-  let [amountScreen , setAmountScreen ] = useState([])// quantidade de itens na tela no momento da pesquisa
-  const [string, setString] = useState("")//recebe o texto pesquisado nos filtros
+  let [amountScreen ] = useState([])// quantidade de itens na tela no momento da pesquisa
+  const [stringTyped, setStringTyped] = useState("")//recebe o texto pesquisado nos filtros
   let [minPrice, setMinPrice] = useState("") //parametro pro valor maximo
   let [maxPrice, setMaxPrice] = useState("") //parametro pro valor minimo
   let [cartList, setCartList] = useState([]);  //armazena a lista adicionada ao carrinho de compras
@@ -102,7 +102,7 @@ function App() {
   ////////busca no mobile////////////////////////////
   const handleSearch = (e) => 
   {
-    setString(e.target.value);
+    setStringTyped(e.target.value);
   };
   ////////////////////////////////////////
 
@@ -152,14 +152,14 @@ function App() {
       let change=false;
       for (let a=0; a<withAccent.length; a++) 
       {
-        if (str.substr(i,1)==withAccent.substr(a,1)) 
+        if (str.substr(i,1)===withAccent.substr(a,1)) 
         {
           newStr+=withoutAccent.substr(a,1);
           change=true;
           break;
         }
       }
-      if (change==false) 
+      if (change===false) 
       {
         newStr+=str.substr(i,1);
       }
@@ -176,13 +176,13 @@ function App() {
     <BottomMenu>
       <MenuButtonLupa onClick = {toggleToList}>
         <FilterIcon > 
-          <img src={lupaImg} />
+          <img alt="" src={lupaImg} />
         </FilterIcon>
       </MenuButtonLupa>
 
       <MenuButtonCart onClick = {toggleToCart}> 
         <CartIcon > 
-          <img src={cartImg}/>
+          <img alt="" src={cartImg}/>
         </CartIcon>
       </MenuButtonCart>
     </BottomMenu>
@@ -192,8 +192,8 @@ function App() {
     {!loginScreenActive && //*se a tela de login for verdadeira, não mostra esse conteúdo 
     <Container style={{ backgroundImage: `url(${GalaxyBackground})` }}>
       <Filters
-      string = {string}
-      setString = {setString} 
+      stringTyped = {stringTyped}
+      setStringTyped = {setStringTyped} 
       minPrice = {minPrice}
       maxPrice = {maxPrice}
       setMinPrice = {setMinPrice}
@@ -210,48 +210,34 @@ function App() {
         <DivItens>
         {amountScreen = products //produtos vai passar por uma serie de filtros e map
           .filter((product) => {
-            return accentRemove(product.name.trim().toLowerCase()).includes(accentRemove(string.trim().toLowerCase()));
+            return accentRemove(product.name.trim().toLowerCase()).includes(accentRemove(stringTyped.trim().toLowerCase()));
           })
           .filter((product) => {
-          return product.price >= minPrice
+            return product.price >= minPrice
           })
           .filter((product) => {
-          return maxPrice !== "" ? product.price <= maxPrice : products
+            return maxPrice !== "" ? product.price <= maxPrice : products
           })
           .sort((a, b) => {
             if(sortABC === "Crescente")
             {
-              if(a.name < b.name)
-              {
-                return -1              
-              }
-              else
-              {
-                return 1
-              }
+              return a.name < b.name? -1 : 1
             }
             else if(sortABC === "Decrescente")
             {
-              if(a.name < b.name)
-              {
-                return 1              
-              }
-              else
-              {
-                return -1
-              }
+              return a.name < b.name? 1 : -1
             }
           })
           .filter((product) => {
             return product.category.includes(categoryFilter) || categoryFilter === "";
           }).map((product) => {
-          return (
-            <Main
-            key={product.id}
-            product = {product}
-            addCartFunction = {addCartFunction}
-            />
-          )
+            return (
+              <Main
+                key={product.id}
+                product = {product}
+                addCartFunction = {addCartFunction}
+                />
+            )
         })}
 
         </DivItens>
@@ -271,8 +257,8 @@ function App() {
 
         <SectionBusca>  {/*só aparece no mobile */}
           <img src={lupaSearchImg} alt="Buscar..." />
-          <input type="text" placeholder="Pesquisar..." value = {string}  onChange={handleSearch}/> {/*onClick={props.pesquisar(props.string)}/> */}
-          <button onClick={() => searchButton(string)}>Buscar</button> 
+          <input type="text" placeholder="Pesquisar..." value = {stringTyped}  onChange={handleSearch}/> {/*onClick={props.pesquisar(props.string)}/> */}
+          <button onClick={() => searchButton(stringTyped)}>Buscar</button> 
         </SectionBusca>
 
       </DivMain>}
@@ -281,6 +267,7 @@ function App() {
         displayCart ={displayCart}
         cartList = {cartList}
         removeCart= {removeCart}
+        setCartList={setCartList}
       /> 
     </Container>}
 

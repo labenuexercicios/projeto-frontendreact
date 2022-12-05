@@ -5,7 +5,7 @@ import lupaImg from './Filters-assets/lupa.jpg'
 export const Filters = (props) => {
 
   const handleSearch = (e) => {
-    props.setString(e.target.value);
+    props.setStringTyped(e.target.value);
   };
     
   const handleSearchMin = (e) => {
@@ -34,8 +34,8 @@ export const Filters = (props) => {
                     </PStyle>
                     <SectionSearch>
                         <img src={lupaImg} alt="Buscar..." />
-                        <Input type="text" placeholder="Pesquisar..." value = {props.string}  onChange={handleSearch}/> {/*onClick={props.pesquisar(props.string)}/> */}
-                        <ButtonSearch onClick={() => props.searchButton(props.string)}>Buscar</ButtonSearch> 
+                        <Input type="text" placeholder="Pesquisar..." value = {props.stringTyped}  onChange={handleSearch}/> {/*onClick={props.pesquisar(props.string)}/> */}
+                        <ButtonSearch onClick={() => props.searchButton(props.stringTyped)}>Buscar</ButtonSearch> 
                     </SectionSearch>
                 </label>
                 <label>
