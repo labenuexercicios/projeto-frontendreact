@@ -1,30 +1,11 @@
 import { SideBarContainer } from "./ProductsScreen.styled";
-import products from "../../assets/products.json"
-import cartIcon from "../../assets/cart-white.png"
-import { Main } from "./ProductsScreen.styled"
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 function ProdutcsScreen(props) {
-
-
-
     return (
 
      <div>
-        {products.map((product)=> (
-         <Main key={product.id}>
-            <img scr={product.imageUrl} alt={product.imageAlt} />
-            <div>
-                <h3>{product.name}</h3>
-                <h4>{product.description}</h4>
-            </div>
-            <div>
-                <span>{product.price}</span>
-                <button>
-                    <img src={cartIcon} alt="cart icon"/>
-                </button>
-            </div>
-         </Main>  
-        ))}
+       <ProductCard />
     
         <SideBarContainer>
             <div className="side-bar">
