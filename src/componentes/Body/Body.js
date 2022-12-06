@@ -43,6 +43,7 @@ export default function Body() {
                 <span>
                 <Carrinho 
                 listaProdutos={listaProdutos}
+                setListaProdutos={setListaProdutos}
                 />
                 </span>
             {/* </section> */}

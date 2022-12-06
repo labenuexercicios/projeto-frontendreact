@@ -3,6 +3,14 @@ import { StyleCarrinho } from "../../styles";
 
 export default function Carrinho(props) {
     
+    console.log("Lista de Produtos do Carrinho "+ props.listaProdutos)
+
+    const excluirItem = (produto) => {
+        const novaListaProdutos = [...props.listaProdutos]
+        const indexProduto = novaListaProdutos.findIndex((produtoCarrinho) => produtoCarrinho.id === produto.id)
+        novaListaProdutos.splice(indexProduto, 1)
+        props.setListaProdutos(novaListaProdutos)
+    }
 
     
     return (
@@ -12,7 +20,7 @@ export default function Carrinho(props) {
                 <div key={produto.id}>
                 <h2>{produto.item}</h2>
                 <p>Quantidade: {produto.quantidade}</p>
-                <button>Excluir produto</button>
+                <button onClick={()=>excluirItem(produto)}>Excluir produto</button>
                 </div>
             ))) 
             :(<div><p>Carrinho vazio</p></div>)

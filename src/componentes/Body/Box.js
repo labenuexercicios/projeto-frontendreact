@@ -12,15 +12,14 @@ export default function Box(props) {
             produto.id === item.id 
         )
         if(!verificaExistenciaItem) {
-        const novoItem = {...item, quantidade: 1}
-        novaListaProdutos.push(novoItem)
+            const novoItem = {...item, quantidade: 1}
+            novaListaProdutos.push(novoItem)
         } else {
             verificaExistenciaItem.quantidade = verificaExistenciaItem.quantidade + 1
         }
         
         props.setListaProdutos(novaListaProdutos) 
     }
-    
 
     const card = produtos
     .filter((produto) => {

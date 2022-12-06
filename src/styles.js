@@ -47,6 +47,10 @@ export const StyleCard = styled.div`
         border-radius: 5px;
     }
 
+    input{
+        height: 100%;
+    }
+
 `
 
 
