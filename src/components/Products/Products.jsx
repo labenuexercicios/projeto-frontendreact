@@ -44,7 +44,7 @@ import {
               backgroundColor=' #FF008A' width={'50%'} height={'20%'}
               display='flex' justifyContent={'center'} color={'white'}
               borderRadius={'5px'} cursor={'pointer'} transition={'0.5s'} _hover={{backgroundColor: '#32e55f'}}
-              onClick={props.addToCart}
+              onClick={() => props.addToCart(props.naves.id,props.naves.nave, props.naves.price)}
               >Adicionar</Button>
 
             </Stack>

@@ -24,10 +24,9 @@ export const MainContent = (props) => {
                 .map((nave, index)=>{
                     return <Products 
                     naves={nave} 
-                    key={index}
-                    addToCart={()=>{props.setCart.push({nave})
-                    console.log(props.cart)
-                }}/>
+                    key={index} 
+                    addToCart={props.addToCart}
+                />
                 })}
             </ProductsSale>
         </ContentSale>

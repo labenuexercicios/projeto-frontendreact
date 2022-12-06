@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import local from '../../assets/icons/local.svg'
 import searching from '../../assets/icons/searching.svg'
 import { Inf, Localization, Pesquisa, Article, SearchIcon } from "./style"

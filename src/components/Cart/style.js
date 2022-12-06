@@ -8,9 +8,13 @@ export const CartSection = styled.section `
     height: 100;
     border-top-left-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 15px;
-    display: flex;
-    gap: 10px;
     h6{
         margin-top: 5px;
     }
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    display: flex;
+    flex-direction: column;
 `

@@ -16,7 +16,18 @@ function App() {
   const [minValue, setMinValue] = useState('')
   const [maxValue, setMaxValue] = useState('')
 
-  const cart = []
+  const [saleCart, setSaleCart] = useState([])
+  
+  function addToCart(id, nave, price){
+    const itemObject = {id, nave, price}
+    const cloneCart = [...saleCart, itemObject]
+    setSaleCart(cloneCart)
+    console.log(saleCart)
+  }
+
+  function removeToCart(itemId){
+    alert(itemId);
+  }
 
   return (
     <ChakraProvider>
@@ -29,9 +40,9 @@ function App() {
           <Filters minValue={minValue} setMinValue={setMinValue}
           maxValue={maxValue} setMaxValue={setMaxValue}/>
           <MainContent search={search} minValue={minValue}
-          maxValue={maxValue} cart = {cart}
+          maxValue={maxValue} addToCart={addToCart} 
           />
-          <Cart cart = {cart}/>
+          <Cart saleCart = {saleCart} removeToCart={removeToCart}/>
         </Main>
       </Div>
       <Footer/>
