@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const Main = styled.section `
     padding-top: 24px;
-    display: grid;
-    // grid-template-columns: 3fr 1fr;
-    // grid-template-rows: 1fr;
     background-color: white;
+    display: flex;
+    justify-content: center;
     width: 100%;
+    min-height: 60vh;
 
 `
 export default Main
@@ -14,8 +14,10 @@ export default Main
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
     flex-wrap: wrap;
     padding: 24px;
+    width: 80%;
     
 `

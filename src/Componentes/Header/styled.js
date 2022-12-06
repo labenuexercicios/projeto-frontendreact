@@ -7,19 +7,29 @@ export const HeaderContainer = styled.section `
     background-repeat: no-repeat;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    
-    
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 30vh;
+
+    >div{
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        
+
+    }
+   
 `
 
 export const TituloContainer = styled.div`
-    height: 20vh;
-    width: 100vw; 
+    height: 40%;
     display: flex;
     justify-content: left;
     align-items: center;
+    min-width:100%;
+ 
 `
 
 export const Titulo = styled.h1`
@@ -37,33 +47,54 @@ export const Filtros = styled.section`
     font-family: cursive;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     padding-bottom: 20px;
-    padding-left: 12px;
-   
+    padding-left: 12px;  
+       
 `
 
 export const Inputs = styled.section`
     display: flex;
     justify-content: space-between;
-    width: 44%;
-    height: 5vh;
+    width: 55%;
+    height: 5.5vh;
     padding-left: 10px;
-   
+
+   input{
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+   }
    
 `
 
 export const Ordenacao = styled.section`
-    height: 6vh;
+    
     width: 25%;
     padding-right: 14px;
     color: white;
     display: flex;
     justify-content: space-around;
-
+    font-family: cursive;
     label{
         font-size: 1.2rem;
         
-    
+    }   
+    select{
+        border-radius: 10px;
     }
+    
 `
+export const BotaoCarrinho =styled.section`
+display: flex;
+justify-content: space-between;
+border-radius: 10px;
+
+
+
+
+img{    
+    width: min-content;
+    height:1.5vw;   
+   }
+ `

@@ -1,6 +1,6 @@
 import imagem1 from "./imagem/img-1.png"
 import imagem2 from "./imagem/img-2.png"
-import imagem3 from "./imagem/img-3.png"
+// import imagem3 from "./imagem/img-3.png"
 import imagem4 from "./imagem/img-5.png"
 import imagem5 from "./imagem/img-6.png"
 import imagem6 from "./imagem/img-9.png"
@@ -21,13 +21,13 @@ const TodosBrinquedos = [
   preco: 95,
   imagem: imagem2,
 },
-{
-  id: 3,
-  rendImagem: Math.ceil(Math.random() * 100000),
-  produto:"Avião Astronautas",
-  preco: 110,
-  imagem: imagem3,
-},
+// {
+//   id: 3,
+//   rendImagem: Math.ceil(Math.random() * 100000),
+//   produto:"Avião Astronautas",
+//   preco: 110,
+//   imagem: imagem3,
+// },
 {
   id: 4,
   rendImagem: Math.ceil(Math.random() * 100000),

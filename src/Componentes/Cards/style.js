@@ -9,15 +9,14 @@ export const Card = styled.section `
     width: 22vw;
     height: 65vh;
     margin-bottom: 32px;
-    box-shadow: 0px 8px 8px 8px rgba(102,102,102,1);
+    box-shadow: 0px 5px 5px 5px rgba(102,102,102,1);
     padding: 10px;
-    background-color: #2e5894;
+    background-color:#2e5894;
     justify-content: center;
-    
-   
 `
 
 export const PrimeiroBloco = styled.span`
+
 
 `
 
@@ -34,18 +33,14 @@ export const TextoCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
-
+    `
 export const BotaoCarrinho = styled.span`
-
-
     button{
         height: 6vh;
         width: 12vw;
         border: none;
-        border-radius: 10px;       
+        border-radius: 10px;
     }
-
     button:hover{
         background-color: gray;
     }
@@ -55,8 +50,7 @@ export const SegundoBloco = styled.section`
     height: 50%;
     display: flex;
     flex-direction: column;   
-    align-items: center;
-    
+    align-items: center;    
     p{
         margin: 2px;        
     }

@@ -5,11 +5,12 @@ import { CardContainer } from "./styled"
 import { useEffect, useState } from "react"
 import TodosBrinquedos from "./objetos"
 import Cards from "./Componentes/Cards/Cards"
-import Carrinho from "./Componentes/Carrinho/Carrinho"
+import Carrinho from "./PaginaCarrinho/Carrinho"
 import {Footer} from "./Componentes/Footer/Footer"
 
 function App(props) {
-  
+
+  const [goToCarrinho, setGoToCarrinho] = useState(1);
   const [minPrice, setMinPrice] = useState(-Infinity)
   const [maxPrice, setMaxPrice] = useState(Infinity)
   const [query, setQuery] = useState("")
@@ -75,6 +76,13 @@ function App(props) {
 
 
 
+    const QtdTotalItemCarrinho = listaCarrinho.reduce(
+      (acc, produto)=>{
+          return produto.quantity + acc
+      },0
+     )
+
+
    return (
     <div>
       <Header
@@ -88,9 +96,14 @@ function App(props) {
         setSortingParameter = {setSortingParameter}
         order = {order}
         setOrder = {setOrder}
+        setGoToCarrinho={setGoToCarrinho}
+        QtdTotalItemCarrinho={QtdTotalItemCarrinho}
+       
       />
       <Main>
+        {goToCarrinho === 1?(
         <CardContainer>
+        
         {TodosBrinquedos
         .filter((item) => {
           console.log(item.produto)
@@ -119,26 +132,24 @@ function App(props) {
               key={produto.id}
               produto={produto}
               addBrinquedo={addBrinquedo}
-              isOnCarrinho={true}
-          
+              isOnCarrinho={true}          
               removeBrinquedo={removeBrinquedo}
-              
-          
               >
             </Cards>
           )
         })}
-        </CardContainer>
-        
+        </CardContainer>):(
+              
         <Carrinho 
           listaCarrinho={listaCarrinho}
           setListaCarrinho={setListaCarrinho}
           TodosBrinquedos={TodosBrinquedos}
           removeBrinquedo={removeBrinquedo} 
-          
-          
+          setGoToCarrinho={setGoToCarrinho}
+          QtdTotalItemCarrinho={QtdTotalItemCarrinho}
         >
         </Carrinho>
+        )}
       </Main>
       <Footer>
 

@@ -3,8 +3,7 @@ import {Card, ImagemProdutos, BotaoCarrinho,TextoCard, PrimeiroBloco, SegundoBlo
 // import carrinhoImagem from "../../imagem/imagem-carrinho.svg"
 import { formatarPreco } from "../../formatacaoPreco";
 
-function Cards (props) {
-   
+function Cards (props) {   
     
     return  (
         <Card>
@@ -20,13 +19,10 @@ function Cards (props) {
                     <BotaoCarrinho>
                         <button onClick={() =>props.addBrinquedo(props.produto)}>
                          Adicionar ao carrinho
-                        </button> 
-                        
-                         {/* isOnCarrinho <span>x{produto.quantity}</span>  */}
-                     
+                        </button>                         
+                         {/* isOnCarrinho <span>x{produto.quantity}</span>  */}                     
                     </BotaoCarrinho> 
                 </PrimeiroBloco>
-
                 
             </TextoCard>
         </Card>

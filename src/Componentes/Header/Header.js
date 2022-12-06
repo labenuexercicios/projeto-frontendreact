@@ -1,16 +1,27 @@
 import React from "react";
-import {Titulo, HeaderContainer, Filtros, TituloContainer, Inputs, Ordenacao} from "./styled";
+import imagemCarrinho from "../../imagem/carrinho-de-compras.png"
+import {Titulo, HeaderContainer, Filtros, BotaoCarrinho, TituloContainer, Inputs, Ordenacao} from "./styled";
 
 function Header (props){
+
+    const entrarCarrinho =() =>{
+        props.setGoToCarrinho(2)
+    }
+    // const voltarTelaPrincipal =() =>{
+    //     props.setGoToCarrinho(1)
+    // }
+    
+    
 
     return (
         
         <HeaderContainer>
             <TituloContainer>
-                <Titulo>LOJA DE BRINQUEDOS ESPACIAIS</Titulo>
+                <Titulo>NAVIGATE-LOJA DE BRINQUEDOS ESPACIAIS</Titulo>
             </TituloContainer>
+            <div>
             
-            <Filtros>
+            <Filtros>           
                 <Inputs>
                     <input
                     placeholder="Busca por produto"
@@ -32,7 +43,7 @@ function Header (props){
                     />
                 </Inputs>
                 <Ordenacao>
-                    <label htmlFor="sortingParameter">Ordenar preço:</label>
+                    <label for="sortingParameter">Ordenar preço:</label>
                 
                     <select
                         value={props.order}
@@ -41,8 +52,16 @@ function Header (props){
                     <option value={"asc"}>Crescente</option>
                     <option value={"desc"}>Decrescente</option>
                     </select>
-                </Ordenacao>
+                </Ordenacao>               
             </Filtros>
+            {/* primeiro parenteses p executar sozinho, o segundo é chamndo a função */}
+            
+            
+            <BotaoCarrinho>  
+                {/* <button onClick={()=>voltarTelaPrincipal()}><h4>Voltar</h4></button>                   */}
+                <button onClick={()=>entrarCarrinho()}><h5>CARRINHO ({props.QtdTotalItemCarrinho})</h5> <img src={imagemCarrinho} alt="Carrinho img" /></button>
+                </BotaoCarrinho>
+                </div>
         </HeaderContainer>
         
     )
