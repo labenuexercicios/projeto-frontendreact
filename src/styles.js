@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "./produto/Imagens/bgApp3.jpg"
+import logo from "./produto/bgApp3.jpg"
 
 export const StyleApp = styled.section`
     background-image: url(${logo})
@@ -44,6 +44,7 @@ export const StyleCard = styled.div`
     img{
         max-width: 200px;
         max-height: 200px;
+        border-radius: 5px;
     }
 
 `

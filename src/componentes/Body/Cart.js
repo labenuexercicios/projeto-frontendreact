@@ -7,6 +7,7 @@ export default function Carrinho(props) {
     
     return (
         <StyleCarrinho>
+            <h2>CARRINHO</h2>
             {props.listaProdutos.length > 0 ? (props.listaProdutos.map((produto) => (
                 <div key={produto.id}>
                 <h2>{produto.item}</h2>

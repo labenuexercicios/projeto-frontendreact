@@ -1,72 +1,72 @@
 [
     {
     "id": "001",
-    "item": "Astronauta",
+    "item": "Moletom Astronauta",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "/Imagens/camiseta-astronauta-8a1.jpg",
+    "imagem": "/Imagens/moleton_astronauta.jpg",
     "valor": 45
     },
     {
     "id": "002",
-    "item": "Camisa 2",
+    "item": "Camisa Astronauta In Love",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/camiseta-astronauta-in-love-10f.jpg",
     "valor": 60
     },
     {
     "id": "003",
     "item": "Camisa 3",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/camiseta-astronauta-universo-galaxia-d18.jpg",
     "valor": 35
     },
     {
     "id": "004",
     "item": "Camisa 4",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/galaxia-universo-d15-baby-look.jpg",
     "valor": 45
     },
     {
     "id": "005",
     "item": "Camisa 5",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/camiseta-astronauta-saturno-universo-planeta-d17.jpg",
     "valor": 45
     },
     {
     "id": "006",
     "item": "Camisa 6",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/camiseta-universo-astronauta-foguete-cometa-d09.jpg",  
     "valor": 50
     },
     {
     "id": "007",
     "item": "Camisa 7",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/camiseta-astronauta-surf-waves-universo-galaxia-d16.jpg",
     "valor": 75
     },
     {
     "id": "008",
     "item": "Camisa 8",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/camiseta-galaxia-universo-et-planeta-astronauta-d11.jpg",
     "valor": 75
     },
     {
     "id": "009",
     "item": "Camisa 9",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/camiseta-polvo-universo-galaxia-estrelas-astros-d13-baby-look-estampada.jpg",
     "valor": 50
     },
     {
     "id": "010",
     "item": "Camisa 10",
     "tamanhos": ["P", "M", "G"],
-    "imagem": "https://picsum.photos/200",
+    "imagem": "/Imagens/camiseta-trippy-astronauta-2b9.jpg",
     "valor": 50
     }
 ]

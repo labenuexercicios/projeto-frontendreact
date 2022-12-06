@@ -66,7 +66,7 @@ export default function Box(props) {
             onChange={onChangeBuscaNome}
             />
             <StyleBox>
-            {card}
+               {card}
             </StyleBox>
         </div>
     )

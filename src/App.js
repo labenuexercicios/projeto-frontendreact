@@ -10,7 +10,6 @@ function App() {
     <StyleApp>
     <section>
       <Header/>
-
       <Body/>
     </section>
     </StyleApp>
