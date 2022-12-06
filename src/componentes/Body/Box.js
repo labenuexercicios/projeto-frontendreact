@@ -58,7 +58,7 @@ export default function Box(props) {
     )
 
     return(
-        <div>
+        <StyleBox>
             <input
             type="text"
             placeholder="Produto"
@@ -68,6 +68,6 @@ export default function Box(props) {
             <StyleBox>
                {card}
             </StyleBox>
-        </div>
+        </StyleBox>
     )
 }
