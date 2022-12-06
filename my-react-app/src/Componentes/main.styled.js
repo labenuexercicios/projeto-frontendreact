@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 
+
 export const Image = styled.img`
 border-radius: 0.5rem;
 margin: 2rem 0;

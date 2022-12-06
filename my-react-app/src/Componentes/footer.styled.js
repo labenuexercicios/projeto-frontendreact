@@ -7,5 +7,6 @@ align-items: center;
 gap: 2vw;
 background-color: black;
 height: 10vh;
+width: 100%;
 
 `

@@ -24,7 +24,7 @@ const preço = new Intl.NumberFormat('pt-BR', {
 
 
 
-    export function Main(props) {
+    export function Main() {
 
         const [ordenar, setOrdenar] = useState("");
         const [filtrarNome, setFiltrarNome] = useState("");

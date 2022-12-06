@@ -1,5 +1,6 @@
 import React, { useEffect} from 'react';
 import {ButtonCarrinho, ContainerCarrinho, MainCarrinho, EspaçoButton} from "./carrinho.styled"
+import botaoRemover from "../assets/excluir.png"
 
 
 
@@ -67,7 +68,7 @@ useEffect (()=>{
     <p>{item.nome}</p>
     <p className="Remover">{preço.format(item.valor * item.quantidade)}
     <button onClick={()=>props.deletarItem(item)}>
-    <img src="../../img2/excluir.png" width="32" height="32"/>
+    <img src={botaoRemover} width="32" height="32"/>
     </button></p>
     <img src={item.img} width="300" height="190"/>
     <p>{item.quantity}</p>
