@@ -25,14 +25,6 @@
     },
     {
         "id": 4,
-        "name": "Saturno",
-        "description": "Ideal para quem gosta de frio, tour pelos anéis inclusa.",
-        "price": 350,
-        "imageUrl": "https://media.istockphoto.com/id/1252446500/pt/foto/planet-saturn-in-space.jpg?s=612x612&w=0&k=20&c=WQvZ5Yyv9GHKxcxhe_PvWF0Pgfis3u-HMFGqF08-9fc=",
-        "imageAlt": "Saturno"
-    },
-    {
-        "id": 5,
         "name": "Júpiter",
         "price": 800,
         "description": "Júpiter é o maior planeta do sistema solar. Para quem não liga muito para idade é uma ótima viagem, já que um ano em Júpiter é equivalente a 12 anos na Terra." ,
@@ -40,7 +32,7 @@
         "imageAlt": "Planeta Urano"
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Plutão",
         "price": 600,
         "description": "Plutão já foi planeta, não é mais. Mas vale a pena a visita.",

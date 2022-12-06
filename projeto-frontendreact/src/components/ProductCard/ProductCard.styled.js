@@ -46,4 +46,5 @@ export const Main = styled.div`
         width: 180px;
         height: 180px;
     }
+
 `

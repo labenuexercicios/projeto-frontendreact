@@ -5,7 +5,14 @@ import { Main } from "./ProductCard.styled"
 
 function ProdutcCard(props) {
 
+const { 
+    
+    product, 
+    addToCart,
+    isOnProductsScreen,
+    isOnCartScreen
 
+} = props
 
     return (
 
@@ -17,11 +24,16 @@ function ProdutcCard(props) {
                 <img src={product.imageUrl} alt={product.imageAlt} />
                 <h4>{product.description}</h4>
             </div>
-            <div>
-                <span>R$ {product.price}</span>
-                <button>
-                    <img src={cartIcon} alt="cart icon"/>
-                </button>
+            <div className="cart-price-icon">
+                <span> R$ {product.price}</span>
+                {
+                  isOnProductsScreen && <button onClick={() => addToCart(product)}>
+                  <img src={cartIcon} alt="cart icon"/>
+              </button>
+                }
+                {
+                    isOnCartScreen && <span>{product.quantity}</span>
+                }
             </div>
          </Main>  
         ))}
