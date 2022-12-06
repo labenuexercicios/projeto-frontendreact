@@ -21,7 +21,7 @@ function App() {
   return (
     <MainApp>
       <div className="back" style={{ backgroundImage: `url(${background})` }}>
-      Hello World
+  
     </div>
     <GlobalStyled />
     <Header/>

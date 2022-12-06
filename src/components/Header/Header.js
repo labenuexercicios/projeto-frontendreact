@@ -7,7 +7,7 @@ export default function Header(props) {
     <HeaderContainer>
    
         
-          <h1>Rocket Shopping </h1>        
+          <h2 className="rocket">Rocket</h2><h2 className="shopping">Shopping </h2>        
  
       
     </HeaderContainer>

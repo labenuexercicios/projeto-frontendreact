@@ -6,7 +6,7 @@ display: flex;
 border: 2px solid rgb(139, 164, 176);
 background: rgb(28, 56, 70, 0.6);
 border-radius: 15px;
-width: 360px;
+min-width: 360px;
 height: 330px;
 padding-left: 10px;
 gap: 6px;

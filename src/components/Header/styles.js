@@ -16,10 +16,28 @@ export const HeaderContainer = styled.main`
     color: rgb(139, 164, 176);
     border-bottom-left-radius : 15px;
     border-bottom-right-radius : 15px;
-    height: 10vh;
+    height: 75px;
     width: 97%;
     margin-left: 1.5%;
     z-index: 1;
+
+    .rocket{
+        border: 2px solid rgb(139, 164, 176);
+        border-bottom-left-radius : 15px;
+        border-top-left-radius : 15px;
+        padding: 0 20px;
+    }
+
+    .shopping{
+        color: rgb(130, 98, 138);
+        background: rgb(139, 164, 176);
+        border-top: 2px solid rgb(139, 164, 176);
+        border-right: 2px solid rgb(139, 164, 176);
+        border-bottom: 2px solid rgb(139, 164, 176);
+        border-bottom-right-radius : 15px;
+        border-top-right-radius : 15px;
+        padding: 0 20px;
+    }
 
   
 `

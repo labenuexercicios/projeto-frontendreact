@@ -11,20 +11,20 @@ export default function Main(props) {
   const { products } = props
   const [busca, setBusca] = useState("")
   const [precoMin, setPrecoMin] = useState(-Infinity)
-  const [precoMax, setPrecoMax] = useState(10)
+  const [precoMax, setPrecoMax] = useState(Infinity)
   const [ordenacao, setOrdenacao] = useState("nome")
   const [crescente, setCrescente] = useState("cresce")
   const [cartItems, setCartItems] = useState([]);
 
 
   const onAdd = (product) => {
-    const novoCarrinho =[...cartItems]
+    const novoCarrinho = [...cartItems]
 
-    const produtoNovo = novoCarrinho.find((novoItem)=> novoItem.id === product.id)
-    if(!produtoNovo){
-      const novoProduto = {...product, qtd: 1}
+    const produtoNovo = novoCarrinho.find((novoItem) => novoItem.id === product.id)
+    if (!produtoNovo) {
+      const novoProduto = { ...product, qtd: 1 }
       novoCarrinho.push(novoProduto)
-    }else{
+    } else {
       produtoNovo.qtd++
     }
     const virarString = JSON.stringify(novoCarrinho)
@@ -38,35 +38,35 @@ export default function Main(props) {
     const produtoNovo = novoCarrinho.find(
       (novoItem) => novoItem.id === itemCarrinho.id
     )
-    if(produtoNovo.qtd > 1){
-    produtoNovo.qtd--
-  } 
+    if (produtoNovo.qtd > 1) {
+      produtoNovo.qtd--
+    }
     const virarString = JSON.stringify(novoCarrinho)
     localStorage.setItem("local", virarString)
     setCartItems(novoCarrinho)
-   }
+  }
 
 
-const onRemoveTotal = (itemCarrinho) =>{
-      
-      const filtroDelete = cartItems.filter(
+  const onRemoveTotal = (itemCarrinho) => {
+
+    const filtroDelete = cartItems.filter(
       (item) => item.id !== itemCarrinho.id)
-      const virarString = JSON.stringify(filtroDelete)
-      localStorage.setItem("local", virarString)
-      setCartItems(filtroDelete)
-    }
+    const virarString = JSON.stringify(filtroDelete)
+    localStorage.setItem("local", virarString)
+    setCartItems(filtroDelete)
+  }
 
-  const consultarItem =()=>{
-    if(localStorage.getItem("local")){    
-    const armazenarItem = localStorage.getItem("local")
-    const pegarString = JSON.parse(armazenarItem);
-    setCartItems(pegarString)
+  const consultarItem = () => {
+    if (localStorage.getItem("local")) {
+      const armazenarItem = localStorage.getItem("local")
+      const pegarString = JSON.parse(armazenarItem);
+      setCartItems(pegarString)
+    }
   }
-  }
-  
-  useEffect (()=> {
+
+  useEffect(() => {
     consultarItem()
-  },[])
+  }, [])
 
   return (
 
@@ -85,7 +85,7 @@ const onRemoveTotal = (itemCarrinho) =>{
         onAdd={onAdd}
         onRemove={onRemove}
         onRemoveTotal={onRemoveTotal}
-        
+
       >
       </Carrinho>
       <Filtros

@@ -93,6 +93,18 @@ export default function Carrinho(props) {
           </>
         )}
       </div>
+      <div className="propag">
+      <h3>Vá para o céu com</h3>
+      <div className="logo">
+      <span>
+      <h2 className="rocket">Rocket</h2>
+      </span>
+      <span>
+        <h2 className="shopping">Shopping </h2>
+      </span>
+      </div>
+      </div>
+      
     </CarrinhoAside>
   );
 }

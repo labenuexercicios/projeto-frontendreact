@@ -6,6 +6,41 @@ position: fixed;
 right: 1.5%;
 width: 323px;
 
+.propag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3px;
+    gap: 6px;
+    font-family: 'Saira Condensed', sans-serif;
+    color: rgb(139, 164, 176);
+        
+}
+.logo{
+    display: flex;
+    
+}
+.rocket{
+    font-family: 'Stick No Bills', sans-serif; 
+    background:rgb(130, 98, 138);
+    border: 2px solid rgb(139, 164, 176);
+    border-bottom-left-radius : 10px;
+    border-top-left-radius : 10px;
+    padding: 0 10px;
+    }
+.shopping{
+    font-family: 'Stick No Bills', sans-serif; 
+    color: rgb(130, 98, 138);
+    background: rgb(139, 164, 176);
+    border-top: 2px solid rgb(139, 164, 176);
+    border-right: 2px solid rgb(139, 164, 176);
+    border-bottom: 2px solid rgb(139, 164, 176);
+    border-bottom-right-radius : 10px;
+    border-top-right-radius : 10px;
+    padding: 0 10px;
+    }
+
+
 
 
 .nome{
@@ -26,7 +61,7 @@ width: 323px;
     flex-direction: column;
     background: rgb(28, 56, 70, 0.6);
     font-family: 'Stick No Bills', sans-serif; 
-    margin-top: 20px;
+    margin-top: 12px;
     padding: 10px 0;
     border: 2px solid rgb(139, 164, 176);
     color: rgb(139, 164, 176);
@@ -110,7 +145,6 @@ width: 323px;
 .valortotal{
     display: flex;
     gap: 80px;
- 
     text-decoration: overline;
     font-family: 'Stick No Bills', sans-serif;
     padding: 0px 10px;
