@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { createGlobalStyle } from "styled-components";
-import { Carrinho } from './Componentes/carrinho';
 import { Main } from './Componentes/main';
 
 
