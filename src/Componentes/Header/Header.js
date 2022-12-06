@@ -20,7 +20,8 @@ function Header (props){
                 <Titulo>NAVIGATE-LOJA DE BRINQUEDOS ESPACIAIS</Titulo>
             </TituloContainer>
             <div>
-            
+
+                            
             <Filtros>           
                 <Inputs>
                     <input
