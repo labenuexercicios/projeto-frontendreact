@@ -15,6 +15,15 @@ export const DivFilter = styled.div`
   color: gray;
   position: absolute;
   width: 100%;
+  >button{
+    width: 30%;
+    height: 25px;
+    background-color: #303030;
+    border: none;
+    color: #d0d0d0;
+    font-variant: all-small-caps;
+    font-size: 16px;
+  }
 `
 export const Filter = styled.div`
   display: flex;
@@ -30,8 +39,8 @@ export const Filter = styled.div`
   /* font-variant: all-small-caps; */
   text-transform: uppercase;
   font-size: 14px;
-  /* color: #d0d0d0; */
-  color: white;
+  color: #d0d0d0;
+  /* color: white; */
   p{
     overflow-y: hidden;
   }

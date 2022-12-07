@@ -9,61 +9,39 @@ import { useEffect, useState } from 'react'
 
 
 export const Filters = (props) => {
-// function ChangeInputName (e){
-// props.setInputName(e.target.value)
-// }
-
-// function onChangeRadioYear (e){
-// props.setRadioYear(e.target.id)
-// }
-// function onChangeRadioPrice (e){
-// props.setRadioPrice(e.target.id)
-// }
-
-// const [sliderOne, setSliderOne] = useState(0)
-// const [sliderTwo, setSliderTwo] = useState(100)
-// const [max, setMax] = useState(props.sortByPrice[props.sortByPrice.length-1].price - 1000)
-const [max, setMax] = useState(19000)
-const [min, setMin] = useState(31000)
-
-let minGap = 0
 
 
-const slideOne = () => {
-  if(props.sliderTwo - props.sliderOne <= 999){
-    // setSliderOne(sliderTwo - minGap)
-    // props.setSliderTwo(props.sortByPrice[props.sortByPrice.length-1])
-    // setMax(props.sliderTwo - 1000)
-    
-    props.setSliderTwo(32000)
-    // props.setSliderTwo(props.sliderOne + 1000)
-    // console.log(sliderOne)
-    
+  const slideOne = () => {
+    if(props.sliderTwo - props.sliderOne <= 999){    
+      props.setSliderTwo(32000)
+    }
+    fillColor();
   }
-  fillColor();
-}
-function slideTwo(){
-  if(props.sliderTwo - props.sliderOne <= 999){
-    // setSliderTwo(sliderOne + minGap)
-    // props.setSliderOne(props.sortByPrice[0].price)
+  function slideTwo(){
+    if(props.sliderTwo - props.sliderOne <= 999){
+      props.setSliderOne(18000)
+    }
+
+    fillColor();
+  }
+  function fillColor(){
+    // let percent1 = (sliderOne / 100) * 100;
+    // let percent2 = (sliderTwo / 100) * 100;
+    // sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+  }
+
+  const filterClear = () => {
+    props.setInputName("")
     props.setSliderOne(18000)
-    // setMax(props.sliderTwo - 1000)
-    // setMin(props.sliderOne + 1000)
-
+    props.setSliderTwo(32000)
+    window.document.querySelector('#older').checked = false
+    window.document.querySelector('#last').checked = false
   }
-  // displayValTwo.textContent = sliderTwo.value;
-  fillColor();
-}
-function fillColor(){
-  // let percent1 = (sliderOne / 100) * 100;
-  // let percent2 = (sliderTwo / 100) * 100;
-  // sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
-}
 
-useEffect(()=>{
-  slideOne();
-  slideTwo()
-},[props.sliderOne,props.sliderTwo])
+  useEffect(()=>{
+    slideOne();
+    slideTwo()
+  },[props.sliderOne,props.sliderTwo])
 
 return(
 <ContainerFilterArea>
@@ -72,7 +50,11 @@ return(
     {/* <label>Filter by Name</label> */}
     <label>Filtar pelo nome do satélite</label>
     <DivInput>
-      <input type="text" value={props.inputName} onChange={(e)=>props.setInputName(e.target.value)}></input>
+      <input 
+        type="text" 
+        value={props.inputName} 
+        onChange={(e)=>props.setInputName(e.target.value)}
+      />
       <img src={lupa}/>
     </DivInput>
   </Filter>
@@ -80,11 +62,23 @@ return(
         {/* <p>Sort by year of release</p> */}
         <p>Ordenar pelo ano de lançamento</p>
         <DivInputRadio>
-          <input type="radio" id='older' name='byYear' value={props.radioYear} onChange={(e)=>props.setRadioYear(e.target.id)}></input>
+          <input 
+            type="radio" 
+            id='older' 
+            name='byYear' 
+            value={props.radioYear} 
+            onChange={(e) => props.setRadioYear(e.target.id)}
+          />
           <label htmlFor='older'>Crescente</label>
         </DivInputRadio>
         <DivInputRadio>
-          <input type="radio" id='last' name='byYear' value={props.radioYear} onChange={(e)=>props.setRadioYear(e.target.id)}></input>
+          <input 
+            type="radio" 
+            id='last' 
+            name='byYear' 
+            value={props.radioYear} 
+            onChange={(e)=>props.setRadioYear(e.target.id)}
+          />
           <label htmlFor="last">Decrescente</label>
         </DivInputRadio>
       </Filter>
@@ -130,13 +124,13 @@ return(
           onChange={(e)=>props.setSliderTwo(e.target.value)}
         />
       </div>
-      {/* <label htmlFor='older'>Older</label> */}
     </DivRanger>
     {/* <DivInputRadio>
       <input type="radio" id='last' name='byYear' value={props.radioYear} onChange={onChangeRadioYear}></input>
       <label htmlFor="last">Last</label>
     </DivInputRadio> */}
   </Filter>
+  <button onClick={()=>filterClear()}>Limpar Filtros</button>
 </DivFilter>
 </ContainerFilterArea>
 )

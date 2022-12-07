@@ -8,7 +8,7 @@ import {Card} from '../../components/Card/Card'
 export const StorePage = () => {
   const [inputName, setInputName] = useState("")
   const [radioYear, setRadioYear] = useState("")
-  const [radioPrice, setRadioPrice] = useState("") 
+  // const [radioPrice, setRadioPrice] = useState("") 
 
   const sortByPrice = satellites.sort((a,b) => {
     if(a.price < b.price){
@@ -31,8 +31,8 @@ export const StorePage = () => {
               setInputName={setInputName}
               radioYear={radioYear}
               setRadioYear={setRadioYear}
-              radioPrice={radioPrice}
-              setRadioPrice={setRadioPrice}
+              // radioPrice={radioPrice}
+              // setRadioPrice={setRadioPrice}
               sliderOne={sliderOne}
               setSliderOne={setSliderOne}
               sliderTwo={sliderTwo}

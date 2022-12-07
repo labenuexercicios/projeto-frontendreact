@@ -8,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     /* font-family: system-ui; */
     font-weight: 600;
-    font-family: 'Pinyon Script', cursive;
     font-family: 'Rajdhani', sans-serif;
+    /* font-family: system-ui; */
 
     ::-webkit-scrollbar-track {
     background: #101010; 

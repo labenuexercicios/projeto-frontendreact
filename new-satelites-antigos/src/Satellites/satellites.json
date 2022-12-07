@@ -14,7 +14,7 @@
     "year":"1966",
     "name": "luna 10",
     "image": "https://img.ibxk.com.br/2020/10/09/09002211130485.jpg?ims=704x",
-    "price": 20000,
+    "price": 20300,
     "description": "Lançado em 1966, foi o primeiro satélite colocado na órbita da Lua. Mediu o campo magnético, a radiação, a gravidade e outras funções de nosso satélite natural. Também coletou informações sobre a composição do solo lunar.",
     "link":"https://www.space.com/most-historic-satellites",
     "quantity": 1
@@ -24,7 +24,7 @@
     "year":"1958",
     "name": "explorer 1",
     "image": "https://img.ibxk.com.br/2020/10/09/09001326865481.jpg?ims=704x",
-    "price": 30000,
+    "price": 30500,
     "description": "Foi o primeiro satélite lançado pelos Estados Unidos e chegou à órbita da Terra em 31 de janeiro de 1958. Confirmar a existência dos cinturões de Van Allen, que são zonas de partículas carregadas que armazenam a radiação na magnetosfera.",
     "link":"https://www.space.com/most-historic-satellites",
     "quantity": 1
@@ -44,7 +44,7 @@
     "year":"1959",
     "name": "explorer 6",
     "image": "https://img.ibxk.com.br/2020/10/09/09001456809482.jpg?ims=704x",
-    "price": 24000,
+    "price": 24700,
     "description": "Lançado em agosto de 1959, participou dos estudos sobre a radiação das camadas superiores e determinar a frequência com que micrometeoritos penetravam nossa atmosfera. Também fez a primeira imagem da Terra vista do espaço: uma fotografia do México.",
     "link":"https://www.space.com/most-historic-satellites",
     "quantity": 1
@@ -54,7 +54,7 @@
     "year":"1961",
     "name": "vostok 1",
     "image": "https://img.ibxk.com.br/2020/10/09/09002021259484.jpg?ims=704x",
-    "price": 21000,
+    "price": 21600,
     "description": "Lançado em 12 de abril de 1961 pela União Soviética, foi o primeiro satélite com um homem a bordo. O lançamento foi visto como o ápice da corrida espacial, mas hoje é celebrado como o pontapé das jornadas espaciais.",
     "link":"https://simple.wikipedia.org/wiki/Vostok_1#/",
     "quantity": 1
@@ -64,7 +64,7 @@
     "year":"2004",
     "name": "cassini",
     "image": "https://img.ibxk.com.br/2020/10/09/09003306939491.jpg?ims=704x",
-    "price": 25000,
+    "price": 25200,
     "description": "Foi a primeira sonda colocada na órbita de Saturno em 2004. Durante 13 anos, a Cassini forneceu dados precioso sobre o planeta dos anéis, bem como de suas diversas luas, inclusive a descoberta de enormes gêiseres de água gelada em Encélado.",
     "link":"https://www.space.com/most-historic-satellites",
     "quantity": 1
@@ -74,7 +74,7 @@
     "year":"2011",
     "name": "messenger",
     "image": "https://img.ibxk.com.br/2020/10/09/09003405846492.jpg?ims=704x",
-    "price": 22000,
+    "price": 22800,
     "description": "Em 2011, foi a vez de Mercúrio receber o primeiro visitante em sua órbita. Durante 4 anos, forneceu informações geológicas, como a presença de enxofre, que pode estar ligada ao vulcanismo do planeta.",
     "link":"https://www.space.com/most-historic-satellites",
     "quantity": 1
