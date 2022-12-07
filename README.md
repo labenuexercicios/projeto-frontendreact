@@ -17,18 +17,18 @@ http://navigate-lojinhaespacial.surge.sh/
 
 ## Funcionalidades
 
-Home (Lista de Produtos)
+1- Home (Lista de Produtos)
 
  [x]  Mostra todos os produtos da loja com seus respectivos nomes, e preços. Possui um botão de adicioná-los ao carrinho.
  
- Carrinho
+2- Carrinho
 
  [x]Onde mostra os nomes dos produtos adicionados e suas quantidades, o usuário é capaz de reduzir a quantidade de ítens do carrinho, e até elimina-lo por completo.
  
  [x]O usuário pode ver o preço total dos produtos, e finalizar a compra.
  
  
-Filtros e Ordenação
+3- Filtros e Ordenação
 
 [x] O Usuário pode filtrar por nome, preço, por valor mínimo e máximo e por ordem crescente e decrescente. 
 
