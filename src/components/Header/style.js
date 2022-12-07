@@ -13,6 +13,7 @@ export const Cab = styled.section `
 `
 export const Title = styled.article `
     font-size: 20px;
+    cursor: pointer;
 `
 
 export const Negrito = styled.span `

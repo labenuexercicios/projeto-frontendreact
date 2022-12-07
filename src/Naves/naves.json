@@ -1,5 +1,5 @@
 [
-  {"id": 1, "nave":"Millenium Falcon - Solo", "price": 546.27, "img": "https://st4.depositphotos.com/4147207/24892/i/600/depositphotos_248927354-stock-photo-kuala-lumpur-malaysia-november-2018.jpg" }, 
+  {"id": 1, "nave":"Millenium Falcon (Solo)", "price": 546.27, "img": "https://st4.depositphotos.com/4147207/24892/i/600/depositphotos_248927354-stock-photo-kuala-lumpur-malaysia-november-2018.jpg" }, 
   {"id": 2, "nave": "Endurance", "price": 326.99, "img": "https://static.wikia.nocookie.net/interstellarfilm/images/c/c1/Endurance-0.jpg" },
   {"id": 3, "nave": "Enterprise", "price": 269.90, "img": "https://www.cnet.com/a/img/resize/95f707244caa25e6c5088741a96fa1d1353fb373/hub/2013/05/15/e8c5a3d7-f07b-11e2-8c7c-d4ae52e62bcc/TOS_newent1_1.jpg?auto=webp&width=1200" },
   {"id": 4, "nave": "SSV normandy", "price": 190.00, "img": "https://static.wikia.nocookie.net/masseffect/images/1/11/Mass_Effect_Normandy_SR2.png" },

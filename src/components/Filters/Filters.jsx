@@ -1,8 +1,5 @@
-import React, { useState } from 'react'
 import searching from '../../assets/icons/searching.svg'
-import { Cart } from '../Cart/Cart'
-import { MainContent } from '../MainContent/MainContent'
-import { Price, Search, ImgIcon, Main} from './style'
+import { Price, Search, ImgIcon,Aside} from './style'
 
 export const Filters = (props) => {
 
@@ -15,7 +12,7 @@ export const Filters = (props) => {
   }
 
   return (
-      <aside>
+      <Aside>
           <Price>
               <Search value={props.minValue} onChange={handleMinValue} placeholder='Valor Mínimo' type={'number'}/>
               
@@ -23,10 +20,10 @@ export const Filters = (props) => {
           </Price>
 
           <Price>
-              <Search value={props.maxValue} onChange={handleMaxValue} placeholder='Valor Máximo'/>
+              <Search value={props.maxValue} onChange={handleMaxValue} placeholder='Valor Máximo' type={'number'}/>
               
               <ImgIcon><img src={searching}/></ImgIcon>
           </Price>
-      </aside>
+      </Aside>
   )
 }
