@@ -24,6 +24,7 @@ Home (Lista de Produtos)
  Carrinho
 
  [x]Onde mostra os nomes dos produtos adicionados e suas quantidades, o usuário é capaz de reduzir a quantidade de ítens do carrinho, e até elimina-lo por completo.
+ 
  [x]O usuário pode ver o preço total dos produtos, e finalizar a compra.
  
  
