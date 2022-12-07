@@ -4,6 +4,11 @@ import { CartProduct } from "../CartProduct/CartProduct"
 
 export const Cart = (props) => {
 
+    const totalPrice = props.saleCart.reduce((acumulator, current)=>{
+        const sumPrice = acumulator + current.price
+        return sumPrice
+    }, 0)
+
     return(
         <CartSection>
             <header>
@@ -13,10 +18,11 @@ export const Cart = (props) => {
             <article>
                 {props.saleCart.map((cartItem, index)=>{
                     return <CartProduct key={index} nave={cartItem} 
-                    itemIndex = {index}
+                    clickedItemIndex = {index}
                     removeToCart={props.removeToCart}/>    
                 })}
             </article>
+            <article>Total: {"R$" + totalPrice.toFixed(2)}</article>
             <button>Comprar</button>
         </CartSection>
     )

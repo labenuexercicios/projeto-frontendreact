@@ -26,6 +26,7 @@ export const MainContent = (props) => {
                     naves={nave} 
                     key={index} 
                     addToCart={props.addToCart}
+
                 />
                 })}
             </ProductsSale>

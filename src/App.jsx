@@ -25,8 +25,11 @@ function App() {
     console.log(saleCart)
   }
 
-  function removeToCart(itemId){
-    alert(itemId);
+  function removeToCart(clickedItemId){
+    const filterCard = saleCart.filter((cardItem)=>{
+      return saleCart.indexOf(cardItem) !== clickedItemId
+    })
+    setSaleCart(filterCard)
   }
 
   return (

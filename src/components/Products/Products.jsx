@@ -12,8 +12,7 @@ import {
     color,
   } from '@chakra-ui/react';
 
-  const IMAGE =
-    'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
+
   
   export const Products = (props)=>{
     return (
@@ -30,7 +29,7 @@ import {
             height={130}
             width={182}
             objectFit={'cover'}
-            src={millenium}/>
+            src={props.naves.img}/>
           <Stack pt={5} align={'flex-start'}>
             <Heading fontSize={'12px'} fontFamily={'Poppins, sans-serif'} fontWeight={500} width={'80%'} paddingLeft={'2px'}>
                 <a href='#'>{props.naves.nave}</a>
