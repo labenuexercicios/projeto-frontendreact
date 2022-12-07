@@ -23,7 +23,7 @@ export const Cart = (props) => {
                 })}
             </article>
             <article>Total: {"R$" + totalPrice.toFixed(2)}</article>
-            <button>Comprar</button>
+            <button>COMPRAR</button>
         </CartSection>
     )
 }
