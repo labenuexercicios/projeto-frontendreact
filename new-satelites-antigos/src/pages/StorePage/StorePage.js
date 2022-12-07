@@ -1,15 +1,25 @@
 import { Layout } from "../../components/Layout/Layout";
 import {Store, ContainerFilters, BackgrondFilters, ContainerCard,BackgroundCard} from './styled'
 import satellites from "../../Satellites/satellites.json"
-import {useContext, useEffect, useState} from 'react'
+import {useState} from 'react'
 import { Filters } from "../../components/Filters/Filters";
 import {Card} from '../../components/Card/Card'
-import { GlobalContext } from "../../context/GlobalContext";
 
 export const StorePage = () => {
   const [inputName, setInputName] = useState("")
   const [radioYear, setRadioYear] = useState("")
   const [radioPrice, setRadioPrice] = useState("") 
+
+  const sortByPrice = satellites.sort((a,b) => {
+    if(a.price < b.price){
+      return -1
+    } else if (a.price > b.price){
+      return 1
+    }
+  })
+
+  const [sliderOne, setSliderOne] = useState(sortByPrice[0].price)
+  const [sliderTwo, setSliderTwo] = useState(sortByPrice[sortByPrice.length-1].price)
 
   return (
     <Layout>
@@ -23,6 +33,11 @@ export const StorePage = () => {
               setRadioYear={setRadioYear}
               radioPrice={radioPrice}
               setRadioPrice={setRadioPrice}
+              sliderOne={sliderOne}
+              setSliderOne={setSliderOne}
+              sliderTwo={sliderTwo}
+              setSliderTwo={setSliderTwo}
+              sortByPrice={sortByPrice}
             />
           </BackgrondFilters>
         </ContainerFilters>
@@ -38,13 +53,16 @@ export const StorePage = () => {
                 return a.year > b.year ? -1 : 1
               }
             })
-            .sort((a,b) => {
-              if(radioPrice === "lowest"){
-                return a.price < b.price ? -1 : 1
-              } else if (radioPrice === "biggest"){
-                return a.price > b.price ? -1 : 1
-              }
+            .filter((satellite)=>{
+              return satellite.price >= sliderOne && satellite.price <= sliderTwo
             })
+            // .sort((a,b) => {
+            //   if(radioPrice === "lowest"){
+            //     return a.price < b.price ? -1 : 1
+            //   } else if (radioPrice === "biggest"){
+            //     return a.price > b.price ? -1 : 1
+            //   }
+            // })
             .map((satellite) => {
               return (<BackgroundCard key={satellite.id}>
                 {/* <p>{satellite.description}</p> */}

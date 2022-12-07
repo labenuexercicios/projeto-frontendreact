@@ -13,6 +13,7 @@ import coin from '../../assets/coin.png'
 import { useContext, useState } from "react"
 import  './Card.css'
 import { GlobalContext } from "../../context/GlobalContext"
+import {priceFormatter} from '../../utils/priceFormatter'
 
 
 export const Card = (props) => {
@@ -29,13 +30,15 @@ export const Card = (props) => {
     
     if (!itemFound) {
       newListCart.push(item)
-      setListCart(newListCart)
+      // setListCart(newListCart)
     }else {
-      const updateList = newListCart.filter((element)=> element.id !== item.id)
+      // const updateList = newListCart.filter((element)=> element.id !== item.id)
       itemFound.quantity++
-      updateList.push(itemFound)
-      setListCart(updateList)
+      // updateList.push(itemFound)
+      // setListCart(updateList)
     }
+    setListCart(newListCart)
+    
   }
   
   return(
@@ -55,7 +58,7 @@ export const Card = (props) => {
               <h1>{props.satellite.name.toUpperCase()}</h1>
               <Price>
                 <img src={coin}/>
-                <p>{props.satellite.price}</p>
+                <p>{priceFormatter.format(props.satellite.price)}</p>
               </Price>
             </InfoDiv>
             <InfoDiv>

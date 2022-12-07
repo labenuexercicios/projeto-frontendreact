@@ -52,17 +52,12 @@ export const BackgroundCard = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
-  /* scroll-snap-align: start; */
 
   > p{
     position: absolute;
     color: #404040;
     font-size: 24px;
     width: 85%;
-    /* font-variant: small-caps; */
     text-align: center;
-    /* font-variant: all-small-caps; */
-    /* font-family: 'Pinyon Script', cursive; */
   }
 `

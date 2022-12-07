@@ -54,9 +54,9 @@ export const Header = () => {
               <span onClick={() => goToStorePage(navigate)}>STORE</span>
             </div>
             <div>
-              <Login>
+              <Login onClick={() => goToLoginPage(navigate)}>
                 <p>Login </p>
-                <img src={iconLogin} onClick={() => goToLoginPage(navigate)}/>
+                <img src={iconLogin}/>
               </Login>
               <Carrinho show={quantityCart === 0 ? "none" : "flex"}>
                 <img src={iconCarrinho} onClick={() => goToCartPage(navigate)}/>

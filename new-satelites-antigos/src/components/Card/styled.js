@@ -19,19 +19,18 @@ export const Description = styled.div`
   z-index: 0;
   width: 300px;
   padding: 12px 55px 0 12px;
-  font-size: 14px;
   text-align: justify;
-  color: gray;
-  font-variant: small-caps;
+  font-size: 18px;
+  color: #d0d0d0;
+  font-variant: all-small-caps;
   display: flex;
   flex-direction: column;
   gap: 10px;
 
   a{
     text-decoration: none;
-    color: gray;
-    font-size: 10px;
-    /* padding-left: 12px; */
+    color: #d0d0d0;
+    font-size: 15px;
     z-index: 1;
     &:hover{
       color: #dbdbdb;
@@ -116,7 +115,8 @@ export const InfoDiv = styled.div`
   gap: 4px;
 
   h1{
-    color: #D2D0D0;
+    /* color: #D2D0D0; */
+    color: white;
     font-size: 14px;
   }
 
@@ -125,14 +125,15 @@ export const InfoDiv = styled.div`
     height: 16px;
     border-radius: 5px;
     border: none;
-    color: #504F4F;
-    font-size: 10px;
+    color: #101010;
+    font-size: 11px;
     background-color: #A4A4A4;
     font-weight: bold;
     cursor: pointer;
     &:hover{
       background-color: #959595;
-      color: #dbdbdb;
+      /* color: #dbdbdb; */
+      color: white;
       font-weight: bolder;
       transition: background-color 0.3s ease-in-out;
       transition: color 0.3s ease-in-out;
@@ -146,8 +147,8 @@ export const Price = styled.div`
   align-items: center;
   justify-content: center;
   gap: 5px;
-  font-size: 12px;
-  color: #E1B629;
+  font-size: 14px;
+  color: #E1B650;
   font-weight: bold;
 
   > img {

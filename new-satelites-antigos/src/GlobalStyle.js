@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     overflow-x: hidden;
     /* font-family: system-ui; */
+    font-weight: 600;
     font-family: 'Pinyon Script', cursive;
     font-family: 'Rajdhani', sans-serif;
 
