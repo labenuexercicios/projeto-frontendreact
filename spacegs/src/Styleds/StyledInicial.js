@@ -58,11 +58,12 @@ font-family:'PT Serif', serif;
 
 padding: 5px;
 align-items: center;
-background: linear-gradient(90deg, rgba(28,4,106,1) 35%, rgba(59,59,59,1) 94%);
-  border-radius: 20px;
+/* background: linear-gradient(90deg, rgba(28,4,106,1) 35%, rgba(59,59,59,1) 94%); */
+  border-radius: 20px 10px 20px;
   border: hidden;
   box-shadow: 10px 10px 10px grey;
   
+  background-image: radial-gradient(circle at 0% 0%, #c193fd 0, #9b77e9 50%, #725dd5 100%);
 
 font-size: 15px;
 font-family: 'Kdam Thmor Pro', sans-serif;
@@ -102,8 +103,8 @@ margin:0;
 }
 
 h1{
-color: white;
-border-radius: 10px;
+color: black;
+border-radius: 20px 10px 20px;
 padding: 10px;
 /* background-color: rgba(10,23,55,0.5); */
 margin-bottom:1px;
@@ -112,17 +113,17 @@ background-color: black;
 
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 font-family: 'Kdam Thmor Pro', sans-serif;
-background: linear-gradient(90deg, rgba(28,4,106,1) 35%, rgba(59,59,59,1) 94%);
+background-image: radial-gradient(circle at 0% 0%, #c193fd 0, #9b77e9 50%, #725dd5 100%);
   border-radius: 10px;
   box-shadow: 10px 10px 10px grey;
 }
 
 h4{
-color: white;
-border-radius: 10px;
+color: black;
+border-radius: 20px 10px ;
 padding: 20px;
 /* background-color: rgba(10,23,55,0.5); */
-background: linear-gradient(90deg, rgba(28,4,106,1) 35%, rgba(59,59,59,1) 94%);
+background-image: radial-gradient(circle at 0% 0%, #c193fd 0, #9b77e9 50%, #725dd5 100%);
   border-radius: 10px;
   box-shadow: 10px 10px 10px grey;
 

@@ -28,6 +28,7 @@ export function Home(props) {
                 ordem={props.ordem}
                 setOrdem={props.setOrdem}
                 addCart = {props.addCart}
+                produtos = {props.produtos}
 
 
 

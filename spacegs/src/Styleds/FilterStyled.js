@@ -40,7 +40,7 @@ border-radius: 10px;
 padding: 30px;
 box-sizing: border-box;
 border: thick double;
-height: 800px;
+height: 850px;
 
 h1{
     border-radius: 10px 20px 10px 20px;
@@ -90,7 +90,33 @@ h1{
   border: thick double ; 
   border-color: black ;
 
+
+
+
 }
+
+button{
+      border-radius:10px;
+      padding:10px;
+      cursor: pointer;
+      border: thick double ; 
+      box-shadow: 10px 10px 10px 10px ;
+      
+      
+img{
+   background-color: #222;
+   
+}
+
+
+}
+
+button:hover{
+
+   padding: 15px ;
+
+}
+ 
 
 
 

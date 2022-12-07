@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import { TelaInicial } from "../pages/TelaInicial"
 import { Home } from "../pages/Home"
@@ -16,8 +16,8 @@ export function Router (){
     const [valorDoFiltro, setValorDoFiltro] = useState("")
     const [valorMin, setValorMin] = useState(Infinity)
     const [valorMax, setValorMax] = useState(Infinity)
-    const [sortProdutos, setSortProdutos] = useState("title")
-    const [ordem, setOrdem] = useState()
+    const [sortProdutos, setSortProdutos] = useState("nome")
+    const [ordem, setOrdem] = useState("cres")
     const [carrinho, setCarrinho]= useState([])
 
 
@@ -31,8 +31,24 @@ export function Router (){
         setCarrinho(novoCarrinho)
         console.log(carrinho)
 
-
+        const virarString = JSON.stringify(novoCarrinho)
+        localStorage.setItem("local", virarString)
+        setCarrinho(novoCarrinho)
+       
     }
+    
+    const consultarItem = () => {
+        if(localStorage.getItem("local")){
+            const armazenarItem = localStorage.getItem("local")
+            const pegarString = JSON.parse(armazenarItem)
+            setCarrinho(pegarString)
+        }
+    }
+
+    useEffect(()=> {
+        consultarItem()
+    }, [])
+
     
 
 

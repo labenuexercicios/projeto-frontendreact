@@ -45,6 +45,7 @@ grid-template-columns:1fr 1fr 1fr;
 
 
 
+
 .blocos{
     display: flex;
     justify-content: center;
