@@ -7,7 +7,7 @@ const Header = () => {
   
     return (
       <Container>
-       <p>Loja dos Brinquedos Espaciais</p>
+       <h3>Loja dos Brinquedos Espaciais</h3>
       </Container>
     );
 };

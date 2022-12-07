@@ -52,7 +52,8 @@ const LadoDireito = ({cartItems, setCartItems}) => {
   }
   
   return (
-    <Container>
+    <>
+     <Container>
       <h2>Carrinho:</h2>
       <p>Quantidade de itens: {countCartItems}</p>
       {cartItems.map((itemCarrinho)=> {
@@ -62,10 +63,11 @@ const LadoDireito = ({cartItems, setCartItems}) => {
            <button onClick={() => onRemove(itemCarrinho)}>-</button>
            <button onClick={() => onAdicionar(itemCarrinho)}>+</button>
            <button onClick={() => onRemoveTotal(itemCarrinho)}>Remover</button>
-         </PP>
+          </PP>
          )})}
-         <h3>Total: R${totalPrice}</h3>
-    </Container>
+        <h3>Total: R${totalPrice}</h3>
+     </Container>
+    </>
   );
 };
 

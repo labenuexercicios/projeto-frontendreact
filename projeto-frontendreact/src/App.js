@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import LadoEsquerdo from './Componentes/Lado-Esquerdo/Lado-Esquerdo';
 import LadoDireito from "./Componentes/Lado-Direito/Lado-Direiro";
 import Header from "./Componentes/Header/Header"
-import { Main, Section, Cards, ImagemProduto, MainContainer } from "./Styles.js";
+import { Main, Section, Cards, ImagemProduto, MainContainer, Nome, Valor, Button } from "./Styles.js";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -107,60 +107,62 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <MainContainer>
-        <LadoEsquerdo 
-        buscar={buscar}
-        setBuscar={setBuscar}
-        valorMinimo={valorMinimo}
-        setValorMinimo={setValorMinimo}
-        valorMaximo={valorMaximo}
-        setValorMaximo={setValorMaximo}
-        ordenacao={ordenacao}
-        setOrdenacao={setOrdenacao}
-        />
-        <Main>
-          <Section>
-            {produtos.filter((produto) => {
-              return produto.nome.toLowerCase().includes(buscar.toLowerCase());
-            })
-            .filter((produto) => {
-              return valorMinimo? valorMinimo <= produto.valor : produto
-            })
-            .filter((produto) => {
-              return valorMaximo? valorMaximo >= produto.valor : produto
-            })
-            .sort((a, b)=>{
-              if(ordenacao === "crescente"){
-                if(a.valor < b.valor){
-                  return -1
-                } else {
-                  return 1
-                }
-              } else if(ordenacao === "decrescente"){
+        <Header />
+        <MainContainer>
+          <LadoEsquerdo 
+          buscar={buscar}
+          setBuscar={setBuscar}
+          valorMinimo={valorMinimo}
+          setValorMinimo={setValorMinimo}
+          valorMaximo={valorMaximo}
+          setValorMaximo={setValorMaximo}
+          ordenacao={ordenacao}
+          setOrdenacao={setOrdenacao}
+          />
+          <Main>
+            <Section>
+              {produtos.filter((produto) => {
+                return produto.nome.toLowerCase().includes(buscar.toLowerCase());
+              })
+              .filter((produto) => {
+                return valorMinimo? valorMinimo <= produto.valor : produto
+              })
+              .filter((produto) => {
+                return valorMaximo? valorMaximo >= produto.valor : produto
+              })
+              .sort((a, b)=>{
+                if(ordenacao === "crescente"){
                   if(a.valor < b.valor){
-                    return 1
-                  } else {
                     return -1
+                  } else {
+                    return 1
                   }
-              }
-            })
-            .map((product) => {
-            return (
-              <Cards key={product.id}>
-                <ImagemProduto src={product.imagemUrl}/>
-                <p>{product.nome}</p>
-                <p>{product.valor}</p>
-                <button onClick={() => onAdd(product)}>Comprar</button>
-              </Cards>
-            )})}
-          </Section>
-        </Main>
-        <LadoDireito  
-        cartItems={cartItems}
-        setCartItems={setCartItems}
-        />
-      </MainContainer>
+                } else if(ordenacao === "decrescente"){
+                    if(a.valor < b.valor){
+                      return 1
+                    } else {
+                      return -1
+                    }
+                }
+              })
+              .map((product) => {
+              return (
+                <Cards key={product.id}>
+                  <ImagemProduto src={product.imagemUrl}/>
+                  <Nome>
+                    <p>{product.nome}</p>
+                   <Valor>R$ {product.valor.toLocaleString('pt-br',{ minimumFractionDigits: 2})}</Valor>
+                   <Button onClick={() => onAdd(product)}>Comprar</Button>
+                  </Nome>
+                </Cards>
+              )})}
+            </Section>
+          </Main>
+          <LadoDireito  
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+          />
+        </MainContainer>
     </>
   );
 }
