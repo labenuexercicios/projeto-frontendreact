@@ -19,37 +19,17 @@ http://navigate-lojinhaespacial.surge.sh/
 
 Home (Lista de Produtos)
 
- [x]O usuário visualiza uma lista de produtos
-
- [x]O usuário visualiza os dados do produto (nome, preço e imagem)
+ [x]  Mostra todos os produtos da loja com seus respectivos nomes, e preços. Possui um botão de adicioná-los ao carrinho.
  
- [x]O usuário deve ser capaz de adicionar um produto no carrinho Carrinho
+ Carrinho
 
- [x]O usuário deve ser capaz de visualizar os produtos adicionados
-
- [x]O usuário deve ser capaz de visualizar a quantidade correta de cada 
- produto
-
- [x]O usuário deve ser capaz de remover itens do carrinho
-
- [x]O usuário deve ser capaz de ver corretamente o valor total de sua 
- compra
-
- [x]Quando a página é atualizada, os itens devem continuar no carrinho
-
+ [x]Onde mostra os nomes dos produtos adicionados e suas quantidades, o usuário é capaz de reduzir a quantidade de ítens do carrinho, e até elimina-lo por completo.
+ [x]O usuário pode ver o preço total dos produtos, e finalizar a compra.
+ 
+ 
 Filtros e Ordenação
 
- [x]O usuário deve ser capaz de filtrar os itens por preço mínimo
-
- [x]O usuário deve ser capaz de filtrar os itens por preço máximo
-
- [x]O usuário deve ser capaz de realizar uma busca por nome. "Atenção: Digitar o nome dos produtos igual está nos cards."
-
- [x]O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
-
- [x]O usuário deve ser capaz de adicionar filtros, busca e ordenação simultaneamente
-
- [x]O usuário deve ser capaz de retornar à visualização sem filtros
+[x] O Usuário pode filtrar por nome, preço, por valor mínimo e máximo e por ordem crescente e decrescente. 
 
 #
 ## Como rodar este projeto?
