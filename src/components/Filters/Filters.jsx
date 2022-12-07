@@ -11,6 +11,14 @@ export const Filters = (props) => {
     props.setMaxValue(e.target.value)
   }
 
+  function handleOrder(e){
+    props.setOrder(e.target.value);
+  }
+
+  function handleOrderPrice(e){
+    props.setOrderPrice(e.target.value);
+  }
+
   return (
       <Aside>
           <Price>
@@ -24,6 +32,23 @@ export const Filters = (props) => {
               
               <ImgIcon><img src={searching}/></ImgIcon>
           </Price>
+
+          <Price>
+            <select value={props.order} onChange={handleOrder}>
+              <option value="Ordenar">Ordenar Nome</option>
+              <option value="Crescente">Crescente</option>
+              <option value="Decrescente">Decrescente</option>
+            </select>
+          </Price>
+
+          <Price>
+            <select value={props.orderPrice} onChange={handleOrderPrice}>
+              <option value="Ordenar">Ordenar Preço</option>
+              <option value="MenorPreco">Menor Preço</option>
+              <option value="MaiorPreco">Maior Preço</option>
+            </select>
+          </Price>
+
       </Aside>
   )
 }

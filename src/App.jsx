@@ -15,6 +15,8 @@ function App() {
   const [search, setSearch] = useState('')
   const [minValue, setMinValue] = useState('')
   const [maxValue, setMaxValue] = useState('')
+  const [order, setOrder] = useState('')
+  const [orderPrice, setOrderPrice] = useState('')
 
   const [saleCart, setSaleCart] = useState([])
   
@@ -41,9 +43,11 @@ function App() {
         <Text/>
         <Main>
           <Filters minValue={minValue} setMinValue={setMinValue}
-          maxValue={maxValue} setMaxValue={setMaxValue}/>
+          maxValue={maxValue} setMaxValue={setMaxValue}
+          order={order} setOrder={setOrder} orderPrice={orderPrice} setOrderPrice={setOrderPrice}
+          />
           <MainContent search={search} minValue={minValue}
-          maxValue={maxValue} addToCart={addToCart} 
+          maxValue={maxValue} addToCart={addToCart} order={order} orderPrice={orderPrice}
           />
           <Cart saleCart = {saleCart} removeToCart={removeToCart}/>
         </Main>

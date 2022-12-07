@@ -14,6 +14,10 @@ export const Price = styled.article `
     font-family: 'Poppins', sans-serif;
     position: relative;
     margin-left: 5vw;
+    select{
+        outline: 0;
+    }
+    
 `
 
 export const ImgIcon = styled.label `
