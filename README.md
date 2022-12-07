@@ -22,11 +22,8 @@ Home (Lista de Produtos)
  [x]O usuário visualiza uma lista de produtos
 
  [x]O usuário visualiza os dados do produto (nome, preço e imagem)
- "Atenção: Digitar o nome dos produtos igual está nos cards."
-
- [x]O usuário deve ser capaz de adicionar um produto no carrinho
-
-Carrinho
+ 
+ [x]O usuário deve ser capaz de adicionar um produto no carrinho Carrinho
 
  [x]O usuário deve ser capaz de visualizar os produtos adicionados
 
@@ -46,7 +43,7 @@ Filtros e Ordenação
 
  [x]O usuário deve ser capaz de filtrar os itens por preço máximo
 
- [x]O usuário deve ser capaz de realizar uma busca por nome
+ [x]O usuário deve ser capaz de realizar uma busca por nome. "Atenção: Digitar o nome dos produtos igual está nos cards."
 
  [x]O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
 
