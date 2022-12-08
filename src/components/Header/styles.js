@@ -43,7 +43,7 @@ export const OptionsMenu = styled.div`
     background-color: #adeaea;
     color: black;
     padding: 8px;
-    border-radius: 6px;
+    border-radius: 7px;
   }
 `;
 
