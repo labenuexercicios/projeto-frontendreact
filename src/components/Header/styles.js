@@ -7,10 +7,20 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   gap: 10px;
+
+  @media screen and (max-device-width:450px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Logo = styled.img`
-  width: auto;
+  width: 25vw;
+
+  @media screen and (max-device-width:450px) {
+    width: 40vw;
+   margin: 30px 0px 0px 30px;
+  }
 `;
 
 export const MenuCenter = styled.div`
@@ -19,6 +29,13 @@ export const MenuCenter = styled.div`
   gap: 35px;
   font-size: 1.3rem;
   cursor: pointer;
+
+  @media screen and (max-device-width:450px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: -50px;
+    gap: 5px;
+  }
 `;
 
 export const OptionsMenu = styled.div`
@@ -34,6 +51,12 @@ export const DivRight = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @media screen and (max-device-width:450px) {
+    display: flex;
+    justify-content: center;
+    margin-left: -100px;
+  }
 `;
 
 export const BagImage = styled.img`
@@ -46,6 +69,12 @@ export const BagImage = styled.img`
     border-radius: 25px;
     cursor: pointer;
   }
+
+  @media screen and (max-device-width:450px) {
+   width: 10vw;
+   height: 4vh;
+   margin: 0;
+  }
 `;
 export const InputBuscar = styled.input`
   background-color: #f8f8f8;
@@ -53,6 +82,11 @@ export const InputBuscar = styled.input`
   border: none;
   border-radius: 20px;
   padding: 5px;
+
+  @media screen and (max-device-width:450px) {
+    height: 3vh;
+
+  }
 `;
 
 export const BotaoBuscar = styled.button`
@@ -67,5 +101,9 @@ export const BotaoBuscar = styled.button`
   &:hover {
     background-color: #adeaea;
     color: black;
+  }
+
+  @media screen and (max-device-width:450px) {
+   height: 3vh;
   }
 `;

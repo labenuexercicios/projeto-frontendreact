@@ -6,6 +6,7 @@ export const MainContainer = styled.main`
   max-width: 1350px; 
   display: flex;
   padding: 5px;
+
 `;
 
 export const CardsContainer = styled.div`
