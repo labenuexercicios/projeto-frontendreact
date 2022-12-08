@@ -4,7 +4,8 @@
 E-commerce de viagens espaciais
 </p>
 
-<p> Link do deploy:  </p>
+<p> Link do projeto:
+https://viagemparamarte.surge.sh/</p>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
