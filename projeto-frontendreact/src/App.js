@@ -13,6 +13,10 @@ const [ activeScreen, setActiveScreen ] = useState("ProductsScreen")
 
 const [buscaNome, setBuscaNome] = useState("");
 
+const [minPrice, setMinPrice] = useState(-Infinity)
+
+const [maxPrice, setMaxPrice] = useState(Infinity)
+
 const goToProductsScreen = () => setActiveScreen("ProductsScreen")
 const goToCartScreen = () => setActiveScreen("CartScreen")
 
@@ -79,7 +83,11 @@ const renderScreen = () => {
     case "ProductsScreen":
       return <ProdutcsScreen  
       addToCart={addToCart}
-      buscaNome={buscaNome}/>
+      buscaNome={buscaNome}
+      minPrice = {minPrice}
+      setMinPrice = {setMinPrice}
+      maxPrice = {maxPrice}
+      setMaxPrice = {setMaxPrice}/>
     case "CartScreen":
       return <CartScreen  
       cart={cart} 

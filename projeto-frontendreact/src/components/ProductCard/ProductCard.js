@@ -12,6 +12,8 @@ const {
     isOnProductsScreen,
     isOnCartScreen,
     buscaNome,
+    minPrice,
+    maxPrice
 } = props
 
 
@@ -19,6 +21,15 @@ const {
 
      <div className="main">
         {products
+        .filter((item) => {
+            return item.price >= minPrice || minPrice === ""
+          })
+          .filter((item) => {
+            return item.price <= maxPrice || maxPrice === ""
+          })
+          .sort((a, b) => {
+            return a.price - b.price
+          })
         .filter(
             (product) => product.name.toLowerCase().includes(buscaNome.toLowerCase())
         )

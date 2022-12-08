@@ -1,4 +1,4 @@
-<h1 align="center"> Viagens espaciais - e-commerce </h1>
+<h1 align="center"> Viagens espaciais </h1>
 
 <p align="center">
 E-commerce de viagens espaciais
