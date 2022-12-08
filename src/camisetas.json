@@ -1,6 +1,6 @@
 [
     {
-        "id": "01",
+        "id": 1,
         "title": "Astronauta Balão",
         "rating": 4.5,
         "size": ["P", "M", "G", "GG", "XGG"],
@@ -10,7 +10,7 @@
         "description": "Camiseta preta com desenho de astronauta segurando um balão."
     },
     {
-        "id": "02",
+        "id": 2,
         "title": "Astronauta Bolhas",
         "rating": 4.9,
         "size": ["M", "G", "GG"],
@@ -20,7 +20,7 @@
         "description": "Camiseta preta com desenho de astronauta soltando bolhas."
     },
     {
-        "id": "03",
+        "id": 3,
         "title": "Astronauta Chill",
         "rating": 5.0,
         "size": ["P", "M", "G", "GG", "XGG"],
@@ -30,7 +30,7 @@
         "description": "Camiseta preta com desenho de astronauta relaxando."
     },
     {
-        "id": "04",
+        "id": 4,
         "title": "Astro Dino",
         "rating": 4.0,
         "size": ["P", "G", "GG", "XGG"],
@@ -40,7 +40,7 @@
         "description": "Camiseta preta com desenho de astronauta dinossauro."
     },
     {
-        "id": "05",
+        "id": 5,
         "title": "Astro Queijo",
         "rating": 4.7,
         "size": ["P", "G", "GG", "XGG"],
@@ -50,7 +50,7 @@
         "description": "Camiseta preta com desenho de astronauta e queijos."
     },
     {
-        "id": "06",
+        "id": 6,
         "title": "Astronauta no Gráfico",
         "rating": 4.8,
         "size": ["P", "G", "GG", "XGG"],
@@ -60,7 +60,7 @@
         "description": "Camiseta preta com desenho de astronauta no gráfico."
     },
     {
-        "id": "07",
+        "id": 7,
         "title": "Planestas",
         "rating": 4.2,
         "size": ["P", "G", "GG", "XGG"],
@@ -70,7 +70,7 @@
         "description": "Camiseta preta com desenho de planetas."
     },
     {
-        "id": "08",
+        "id": 8,
         "title": "Saturno Colorido",
         "rating": 2.5,
         "size": ["P", "M", "G", "GG", "XGG"],

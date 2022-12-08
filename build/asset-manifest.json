@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.7eaeaf60.js",
+    "main.js": "/static/js/main.e4d8ad65.js",
     "static/media/astro-pensante.png": "/static/media/astro-pensante.38dbb375abd6a07d6595.png",
     "static/media/sci-fi-deep-space-background-loop-free-video.jpeg": "/static/media/sci-fi-deep-space-background-loop-free-video.aebf96e02c28ac067140.jpeg",
     "static/media/logogithub-removebg-preview.png": "/static/media/logogithub-removebg-preview.a48b3a120c70f1a69104.png",
+    "static/media/astrologin.png": "/static/media/astrologin.60c88e7eb104034e3ccd.png",
+    "static/media/astroconfirm.png": "/static/media/astroconfirm.a53e6c4db5f5f05fcf20.png",
     "static/media/logo2.png": "/static/media/logo2.fe12e4a278500041bfd0.png",
     "static/media/LogoLinkedin.png": "/static/media/LogoLinkedin.c616aaae3bbc0a703fe1.png",
+    "static/media/visacard.png": "/static/media/visacard.19daae453cb0f88e2927.png",
+    "static/media/mastercard.jpeg": "/static/media/mastercard.d0e59ae73897cbc86553.jpeg",
+    "static/media/elocard.png": "/static/media/elocard.62da193831ea5c3b77a0.png",
     "index.html": "/index.html",
-    "main.7eaeaf60.js.map": "/static/js/main.7eaeaf60.js.map"
+    "main.e4d8ad65.js.map": "/static/js/main.e4d8ad65.js.map"
   },
   "entrypoints": [
-    "static/js/main.7eaeaf60.js"
+    "static/js/main.e4d8ad65.js"
   ]
 }

@@ -17,14 +17,15 @@ const CartPage = () => {
     removeProductCart,
     totalQuantity,
     total,
-    frete
+    frete,
+
   } = context
 
   const navigate = useNavigate()
 
   const increaseQuantityInCart = (productToIncrease) => {
     const newCart = [...cart]
-    const productFound = newCart.find((productInCart) => productInCart.id === productToIncrease.id)
+    const productFound = newCart.find((productInCart) => productInCart.id === productToIncrease.id && productInCart.cartSize === productToIncrease.cartSize)
     productFound.quantity++
     setCart(newCart)
   }
@@ -32,7 +33,7 @@ const CartPage = () => {
   const decreaseQuantityInCart = (productToDecrease) => {
     if (productToDecrease.quantity > 1) {
       const newCart = [...cart]
-      const productFound = newCart.find((productInCart) => productInCart.id === productToDecrease.id)
+      const productFound = newCart.find((productInCart) => productInCart.id === productToDecrease.id && productInCart.cartSize === productToDecrease.cartSize)
       productFound.quantity--
       setCart(newCart)
     }

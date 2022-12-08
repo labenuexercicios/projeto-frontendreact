@@ -17,7 +17,8 @@ export const goToPayPage = (navigate) =>{
 export const goToConfirmPage = (navigate) =>{
     navigate('/confirmpayment')
 }
-// export const goToLoginPage = (navigate) => {
-//     navigate('/login')
-// }
+
+export const goToErrorPage = (navigate) => {
+    navigate('*')
+}
 

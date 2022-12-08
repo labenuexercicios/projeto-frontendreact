@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 
 export const useForm = (estadoInicial) => {
 
@@ -12,6 +12,5 @@ export const useForm = (estadoInicial) => {
         }
         setForm(novoForm)
     }
-
   return [form, onChangeForm]
 }

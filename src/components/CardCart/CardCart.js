@@ -28,9 +28,11 @@ export const CardCart = (props) => {
                     <h1>{priceFormatter.format(camiseta.price)}</h1> 
                     <QuantityRemove>
                         <QuantityProduct>
-                            <button onClick={() => decreaseQuantityInCart(camiseta)}>-</button>
+                           {camiseta.quantity > 1 ? <button onClick={() => decreaseQuantityInCart(camiseta)}>-</button> : <div></div>}
                             {camiseta.quantity}
-                            <button onClick={() => increaseQuantityInCart(camiseta)}>+</button>
+                            <button onClick={() => {
+                                console.log(camiseta)
+                                return increaseQuantityInCart(camiseta)}}>+</button>
                         </QuantityProduct>
                         <button onClick={()=>removeProductCart(camiseta)}>Remove</button>
                     </QuantityRemove>

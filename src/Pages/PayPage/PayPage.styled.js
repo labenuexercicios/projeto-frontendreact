@@ -11,9 +11,10 @@ export const ContainerCart = styled.main`
 export const CardUserInfo = styled.div`
   /* border: 2px solid yellow; */
   background-color: rgba(0, 0, 0, 0.729);
-  height: 14vh;
+  height: 16vh;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   color: white;
   padding: 16px 8px;
   width: 100%;
@@ -78,9 +79,11 @@ export const LinhaShort = styled.div`
 
 export const CardInfo = styled.div`
   /* border: 2px solid yellowgreen; */
-  width: 12vw;
+  width: 15vw;
+
   display: flex;
   justify-content: space-between;
+
   img{
     width: 2vw;
     height: 2.5vh;
@@ -134,7 +137,9 @@ export const FinalCart = styled.div`
 
 export const Title = styled.h3`
   /* border: 2px solid green; */
-  width: 35%;
+  width: 50%;
+  display: flex;
+  align-self: flex-start;
   `
 
 export const InfoCard = styled.p`
@@ -143,7 +148,7 @@ color: white;
 display: flex;
 flex-direction: column;
 width: 60%;
-gap: 4px;
+gap: 8px;
 `
 
 
@@ -155,6 +160,7 @@ export const ButtonChange = styled.button`
     border: none;
     font-size:16px;
     display: flex;
+    align-self: flex-start;
     width: 5%;
 
     :hover{
@@ -254,4 +260,83 @@ export const ChoosenSize = styled.p`
   }
 
 `
+export const RemoveCard = styled.img`
+  /* border: 2px solid pink; */
+`
 
+
+// Estilização FORM
+
+export const ContainerAddCard = styled.div`
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+`
+export const ContainerForm = styled.form`
+  /* border: 2px solid red; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25vw;
+  gap: 20px;
+  position: relative;
+`
+export const ContainerTypeCard = styled.div`
+    /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 25vw;
+  gap: 20px;
+
+  div{
+    display: flex;
+    gap: 16px
+  }
+
+  img{
+    width: 4vw;
+    height: 4.5vh;
+  }
+`
+export const LabelInput = styled.div`
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+`
+
+export const FormLabel = styled.label`
+  /* border: 2px solid white; */
+`
+export const Input = styled.input`
+  color: white;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  height: 4vh;
+
+`
+
+export const InputCvv = styled.input`
+    width: 3vw;
+    color: white;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    height: 4vh;
+`
+
+
+export const ButtonAddCard = styled.button`
+  color: white;
+  width: 15vw;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  height: 4vh;
+  bottom: 0;
+  right: 0;
+`

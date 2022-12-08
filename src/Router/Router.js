@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import ErroPage from '../pages/ErroPage'
+import {ErroPage} from '../Pages/ErroPage/ErroPage'
 import ProductPage from '../Pages/Product/ProductPage'
 import CartPage from '../Pages/Cart/CartPage'
 import { LoginPage } from '../Pages/LoginPage/LoginPage'
@@ -18,7 +18,7 @@ export const Router = () => {
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/paypage" element={<PayPage/>}/>
                 <Route path="/confirmpayment" element={<CofirmPage/>} />
-                {/* <Route path="*"element={<ErroPage/>} /> */}
+                <Route path="*"element={<ErroPage/>} />
             </Routes>
         </BrowserRouter>
     )

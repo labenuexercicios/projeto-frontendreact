@@ -36,10 +36,11 @@ const ProductPage = () => {
             .sort((a, b)=>{
               if (sortByPrice === "crescente"){
                 return a.price < b.price ? -1 : 1
-              } else{
+              } else if (sortByPrice === "decrescente") {
                 return a.price > b.price ? -1 : 1
+              } else {
+                console.log('Deu errado algo na busca.')
               }
-              
             })
             .map ((camiseta) => {
               return <ProductCard key={camiseta.id} 

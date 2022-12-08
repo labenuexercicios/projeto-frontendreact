@@ -6,6 +6,24 @@
         "district": "Ponta Negra",
         "city": "Natal",
         "state": "RN",
-        "zipCode": "59090-315"
+        "zipCode": "59090-315",
+        "card": [
+            {
+                "nameCard": "Marina Jaudy",
+                "numberCard": 4987775534259876,
+                "cardType": "Visa",
+                "codSecurity": 222,
+                "dateExp": "03/30",
+                "imageCard": "./image/visacard.png"
+            },
+            {
+                "nameCard": "Marina Jaudy",
+                "numberCard": 4399207012335526,
+                "cardType": "MasterCard",
+                "codSecurity": 222,
+                "dateExp": "03/2030",
+                "imageCard": "./image/mastercard.jpeg"
+            }
+        ]
     }
 ]
