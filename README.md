@@ -13,14 +13,10 @@ E-commerce de viagens espaciais
   <a href="#memo-licença">Licença</a>
 </p>
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
-
 <br>
 
 <p align="center">
-  <img alt="viagens espaciais produtos" src="./assets/viagens.png" width="100%">
+  <img alt="viagens espaciais produtos" src="./src/assets/viagens.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
