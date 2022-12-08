@@ -22,7 +22,7 @@ export function Cards(props) {
     // const setOrdem = props.setOrdem
     // const addCart = props.addCart
 
-    console.log(produtos)
+   
 
     const navigate = useNavigate()
     let totalPreco = 0
