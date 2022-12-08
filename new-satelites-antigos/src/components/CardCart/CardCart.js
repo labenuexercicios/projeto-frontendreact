@@ -1,4 +1,5 @@
 import {Container, Quantity, Info, Delete } from "./styled"
+import {priceFormatter} from '../../utils/priceFormatter'
 
 export const CardCart = (props) =>{
   return(
@@ -9,7 +10,7 @@ export const CardCart = (props) =>{
       <div className='info-card'>
         <Info>
           <h1>{props.item.name.toUpperCase()}</h1>
-          <p>Total: <span>{props.item.price}</span></p>
+          <p>Subtotal: <span>{priceFormatter.format(props.item.price * props.item.quantity)}</span></p>
         </Info>
         <Quantity>
           <div> 

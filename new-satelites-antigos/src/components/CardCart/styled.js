@@ -50,14 +50,14 @@ export const Info = styled.div`
 
   h1{
     color: #D2D0D0;
-    font-size: 14px;
+    font-size: 16px;
   }
   p{
     color: #D2D0D0;
-    font-size: 12px;
+    font-size: 14px;
   }
   span{
-    font-size: 12px;
+    font-size: 14px;
     color: #E1B629;
     font-weight: bold;
   }

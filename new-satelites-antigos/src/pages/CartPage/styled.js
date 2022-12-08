@@ -18,10 +18,15 @@ export const Items = styled.div`
 `
 export const Infomation = styled.div`
   width: 35%;
-  height: 100%;
-  border: 1px blue solid;
+  min-height: 100%;
   position: static;
   top: 0;
+  color: white;
+  background-color: #202020;
+  div{
+    height: 50%;
+    
+  }
 `
 
 export const EmptyCart = styled.div`

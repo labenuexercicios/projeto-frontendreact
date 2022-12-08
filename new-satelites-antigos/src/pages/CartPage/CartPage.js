@@ -3,6 +3,7 @@ import { Cart, Infomation, Items, EmptyCart } from "./styled"
 import { useEffect, useState, useContext } from "react"
 import { CardCart } from "../../components/CardCart/CardCart"
 import { GlobalContext } from "../../context/GlobalContext"
+import {priceFormatter} from '../../utils/priceFormatter'
 
 
 export const CartPage = () => {
@@ -31,6 +32,16 @@ export const CartPage = () => {
     })
     setListCart(ListWithoutItem)
   }
+
+  const [totalCart, setTotalCart] = useState(0);
+  
+  useEffect(()=>{
+    let soma = 0
+    for(let item of listCart){
+      soma += item.quantity * item.price
+    }
+    setTotalCart(soma)
+  },[listCart])
 
   return (
     <Layout>
@@ -61,7 +72,14 @@ export const CartPage = () => {
               </EmptyCart>
           }
         </Items>
-        <Infomation></Infomation>
+        <Infomation>
+          <div>
+            Infos de login
+          </div>
+          <div>
+            <p>Total a pagar: {priceFormatter.format(totalCart)}</p>
+          </div>
+        </Infomation>
       </Cart>
     </Layout>
   )

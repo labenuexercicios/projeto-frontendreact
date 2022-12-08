@@ -22,10 +22,11 @@ export const BackgrondFilters = styled.div`
   flex-direction: column;
   align-items: flex-end;
   gap: 40px;
-  color: gray;
+  /* color: gray; */
   position: absolute;
   width: 100%;
   height: 100%;
+  /* border: 1px solid red; */
 `
 
 export const ContainerCard = styled.section`
