@@ -6,6 +6,10 @@ export const MainContainer = styled.main`
   max-width: 1350px; 
   display: flex;
   padding: 5px;
+
+  @media screen and (max-device-width:450px) {
+   width: 90vw;
+  }
 `;
 
 export const CardsContainer = styled.div`
@@ -20,6 +24,12 @@ export const CardsContainer = styled.div`
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+
+  @media screen and (max-device-width:450px) {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+  }
 `;
 
 export const Card = styled.div`
@@ -40,6 +50,12 @@ export const Card = styled.div`
     font-size: 1.1rem;
     margin: 15px;
   }
+
+  @media screen and (max-device-width:450px) {
+   width: 50vw;
+   height: 45vh;
+   padding: 2px;
+  }
 `;
 
 export const Image = styled.img`
@@ -47,6 +63,11 @@ export const Image = styled.img`
   height: 200px;
   margin-top: 20px;
   display: flex;
+
+  @media screen and (max-device-width:450px) {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 export const PriceAndButton = styled.div`
@@ -74,6 +95,12 @@ export const PriceAndButton = styled.div`
       cursor: pointer;
       filter: brightness(0.9);
     }
+  }
+
+  @media screen and (max-device-width:450px) {
+    display: flex;
+    gap: 10px;
+
   }
 `;
 

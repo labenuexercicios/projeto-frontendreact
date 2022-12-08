@@ -14,12 +14,20 @@ export const MenuFilter = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 20px;
+
+    @media screen and (max-device-width:450px) {
+    display: none;
+  }
   }
 
  .input{
     padding: 5px;
     border-radius: 8px;
     border: 0.5px solid grey;
+
+    @media screen and (max-device-width:450px) {
+    width: 30vw;
+  }
   }
 
   .select{
@@ -30,9 +38,12 @@ export const MenuFilter = styled.div`
       cursor: pointer;
       filter: brightness(0.9);
     }
-  }
+  } 
 
- 
+  @media screen and (max-device-width:450px) {
+    margin: 65px 2px 2px 2px;
+
+  }
 `;
 
 export const ImageFilter = styled.img`

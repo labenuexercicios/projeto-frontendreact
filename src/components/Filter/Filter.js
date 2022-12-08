@@ -18,7 +18,7 @@ function Filter(props) {
   return (
     <MenuFilter className="menu-filter">
       <div className="filter-name-icon">
-        <span>Filtros</span>
+        <span className="filter">Filtros</span>
         <ImageFilter src={IconFilter} alt="icon" />
       </div>
 

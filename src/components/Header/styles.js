@@ -32,7 +32,6 @@ export const MenuCenter = styled.div`
     @media screen and (max-device-width:450px) {
     display: flex;
     flex-direction: column;
-    margin-left: -50px;
     gap: 5px;
     }
 `;
@@ -53,7 +52,6 @@ export const DivRight = styled.div`
   @media screen and (max-device-width:450px) {
     display: flex;
     justify-content: center;
-    margin-left: -100px;
   }
 `;
 
@@ -80,9 +78,11 @@ export const InputBuscar = styled.input`
   border: none;
   border-radius: 20px;
   padding: 5px;
+
   @media screen and (max-device-width:450px) {
-    height: 3vh;
+    height: 4vh;
   }
+  
 `;
 
 export const BotaoBuscar = styled.button`
@@ -99,7 +99,7 @@ export const BotaoBuscar = styled.button`
   }
 
    @media screen and (max-device-width:450px) {
-   height: 3vh;
+   height: 4vh;
   }
-  
+
 `;

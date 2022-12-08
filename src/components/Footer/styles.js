@@ -6,14 +6,15 @@ export const FooterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-device-width:450px) {
+   height: 7vh;
+  }
 `;
 
-export const DivLeft = styled.div`
+export const Div = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const DivRight = styled.div`
-  display: flex;
-  align-items: center;
-`;
+

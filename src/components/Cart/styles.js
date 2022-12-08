@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerBag = styled.div`
-    width: 24vw;
+    width: 25vw;
     margin: 12px;
     border-radius: 8px;
     padding: 10px;
@@ -22,6 +22,11 @@ export const ContainerBag = styled.div`
         padding: 5px;
         display: flex;
         justify-content:center;
+    }
+
+    @media screen and (max-device-width:450px) {
+     width: 50vw;
+     margin-right:  0px;
     }
 
 `

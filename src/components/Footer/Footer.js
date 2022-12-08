@@ -1,17 +1,12 @@
-import { FooterContainer, DivLeft, DivRight } from "./styles";
+import { FooterContainer, Div} from "./styles";
 
 function Footer(props) {
   return (
     <FooterContainer className="footer">
-      <DivLeft className="credits">
+      <Div className="credits">
         Feito com ♡ em Labenu por Taís Zimerer
-      </DivLeft>
+      </Div>
 
-      {/* <DivRight className="payment methods">
-        <p></p>
-
-        <img src="" alt="" />
-      </DivRight> */}
     </FooterContainer>
   );
 }
