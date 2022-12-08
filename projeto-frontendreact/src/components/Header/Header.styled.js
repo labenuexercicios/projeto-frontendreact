@@ -37,7 +37,7 @@ export const HeaderContainer = styled.header`
             cursor: pointer;
             filter: brightness(1.1);
             -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+            transform: scale(1.2);
         }
 
         :active {

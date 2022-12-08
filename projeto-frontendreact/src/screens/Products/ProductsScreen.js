@@ -32,13 +32,13 @@ function ProdutcsScreen(props) {
                     <input placeholder="R$ Max" type="number" value={maxPrice} 
                     onChange = {(event) => props.setMaxPrice(event.target.value)}/>
                     <Ordem>
-                    <label for="sortingParameter">Ordenar preço:</label>
+                    <label for="sortingParameter">Ordenar:</label>
                     <select
                         value={props.order}
                         onChange={(event) => {props.setOrder(event.target.value)}}
                     >
-                    <option value={"asc"}>Crescente</option>
-                    <option value={"desc"}>Decrescente</option>
+                    <option value={"asc"}>menor preço</option>
+                    <option value={"desc"}>maior preço</option>
                     </select>
                     </Ordem>
                 </div>

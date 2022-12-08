@@ -6,8 +6,8 @@ export const SideBarContainer = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 200px;
-    height: 120px;
+    width: 220px;
+    height: 140px;
     background-color: #E6E6E6;
     border-radius: 8px;
     padding: 6px;
@@ -19,14 +19,15 @@ export const SideBarContainer = styled.div`
 input { 
         text-align: center;
         padding: 8px;
-        width: 80px;
-        height: 18px;
+        margin: 4px;
+        width: 100px;
+        height: 22px;
         background: #E6E6E6;
         border: 1px solid #14b6b9;
         border-radius: 8px;
     
         ::-webkit-input-placeholder { 
-            font-size: 12px;
+            font-size: 16px;
             font-family: 'Cabin', sans-serif;
             text-align: center;
 
@@ -52,11 +53,12 @@ export const Ordem = styled.div`
 
     label {
         color:#757775;
-        font-size: 16px;
+        text-align: center;
+        font-size: 18px;
     }
 
     select {
-        font-size: 12px;
+        font-size: 14px;
         font-family: 'Cabin', sans-serif;
         border: 1px solid #14b6b9;
         border-radius: 8px;
