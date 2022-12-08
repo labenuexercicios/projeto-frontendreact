@@ -31,10 +31,13 @@ export const HeaderContainer = styled.header`
         height: 50px;
         border-radius: 8px;
         margin: 0 4px;
+        transition: all 0.5s;
 
         :hover {
             cursor: pointer;
             filter: brightness(1.1);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
         }
 
         :active {
@@ -53,6 +56,20 @@ export const HeaderContainer = styled.header`
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .cart-button {
+        position: relative;
+    }
+
+    .cart-badge {
+        position: absolute;
+        top: 0;
+        right: 4px;
+        border-radius: 50%;
+        background-color: #14b6b9;
+        color:#FFFFFF;
+        font-family: 'Cabin', sans-serif;
     }
 `
 

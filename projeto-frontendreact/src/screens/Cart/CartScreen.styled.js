@@ -30,12 +30,12 @@ export const SideBarCart = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     align-items: center;
     background-color: #E6E6E6;
     border-radius: 8px;
-    padding: 6px;
+    padding: 16px;
     position: fixed;
     top: 260px;
     border: none;
@@ -73,14 +73,18 @@ export const Main = styled.div`
         width: 30px;
         height: 30px;
         border-radius: 8px;
+        padding: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 20px auto;
+        transition: all 0.5s;
 
         :hover {
             cursor: pointer;
             filter: brightness(1.1);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
         }
 
         :active {
@@ -98,6 +102,31 @@ export const Main = styled.div`
         border-radius: 50%;
         width: 180px;
         height: 180px;
+    }
+
+`
+
+export const Footer = styled.footer`
+    font-family: 'Cabin', sans-serif;;
+    width: 100%;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #757775;
+
+    img {
+        width: 28px;
+        margin: 4px;
+    }
+    
+    span > img {
+        width: 18px;
+
+    }
+
+    .linkedin-icon {
+        width: 30px;
     }
 
 `

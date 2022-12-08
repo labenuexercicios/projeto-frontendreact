@@ -7,14 +7,12 @@ import heart from "../../assets/heart-icon.png"
 
 function ProdutcsScreen(props) {
 
-    const { addToCart } = props
-
+    const { addToCart, product, filterText,  } = props
 
     return (
 
         <div>
             <ProductCard  
-            
             addToCart={ addToCart}
             isOnProductsScreen={true}
             />
@@ -22,8 +20,8 @@ function ProdutcsScreen(props) {
             <SideBarContainer>
                 <div className="side-bar">
                     <h3>Preço</h3>
-                    <input placeholder="$Min" />
-                    <input placeholder="$Max" />
+                    <input placeholder="$Min" type="number" />
+                    <input placeholder="$Max" type="number" />
                     <select>
                         <option value="">Ordenar</option>
                         <option value="crescente">Crescente</option>

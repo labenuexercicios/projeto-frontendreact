@@ -1,24 +1,24 @@
 import products from "../../assets/products.json"
 import cartIcon from "../../assets/cart-white.png"
 import { Main } from "./ProductCard.styled"
+import ProdutcsScreen from "../../screens/Products/ProductsScreen"
 
 
 function ProdutcCard(props) {
 
 const { 
-    
     product, 
     addToCart,
     isOnProductsScreen,
-    isOnCartScreen
-
+    isOnCartScreen,
 } = props
+
 
     return (
 
-     <div>
+     <div className="main">
         {products.map((product)=> (
-         <Main key={product.id}>
+         <Main key={product.id} product={product}>
             <h3>{product.name}</h3>
             <div className="product-container">
                 <img src={product.imageUrl} alt={product.imageAlt} />

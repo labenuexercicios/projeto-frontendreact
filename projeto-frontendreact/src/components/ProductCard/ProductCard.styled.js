@@ -14,6 +14,7 @@ export const Main = styled.div`
     color: #757775;
     padding: 16px;
 
+
     button {
         background-color: #14b6b9;
         border: none;
@@ -24,10 +25,13 @@ export const Main = styled.div`
         align-items: center;
         justify-content: center;
         margin: 20px auto;
+        transition: all 0.5s;
 
         :hover {
             cursor: pointer;
             filter: brightness(1.1);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
         }
 
         :active {
