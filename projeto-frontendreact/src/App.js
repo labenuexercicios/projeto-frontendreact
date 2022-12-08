@@ -17,6 +17,11 @@ const [minPrice, setMinPrice] = useState(-Infinity)
 
 const [maxPrice, setMaxPrice] = useState(Infinity)
 
+const [sortingParameter, setSortingParameter] = useState("title")
+
+const [order, setOrder] = useState("asc")
+
+
 const goToProductsScreen = () => setActiveScreen("ProductsScreen")
 const goToCartScreen = () => setActiveScreen("CartScreen")
 
@@ -87,7 +92,11 @@ const renderScreen = () => {
       minPrice = {minPrice}
       setMinPrice = {setMinPrice}
       maxPrice = {maxPrice}
-      setMaxPrice = {setMaxPrice}/>
+      setMaxPrice = {setMaxPrice}
+      sortingParameter = {sortingParameter}
+      setSortingParameter = {setSortingParameter}
+      order = {order}
+      setOrder = {setOrder}/>
     case "CartScreen":
       return <CartScreen  
       cart={cart} 

@@ -13,7 +13,9 @@ const {
     isOnCartScreen,
     buscaNome,
     minPrice,
-    maxPrice
+    maxPrice,
+    asc,
+    order
 } = props
 
 
@@ -29,6 +31,13 @@ const {
           })
           .sort((a, b) => {
             return a.price - b.price
+          })
+          .sort(() => {
+            if (order === "asc"){
+              return 0
+            } else {
+              return -1
+            }
           })
         .filter(
             (product) => product.name.toLowerCase().includes(buscaNome.toLowerCase())
