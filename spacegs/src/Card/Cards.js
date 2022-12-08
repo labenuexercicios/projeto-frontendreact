@@ -5,6 +5,8 @@ import { FilterStyled } from "../Styleds/FilterStyled";
 import { StyledCards } from "../Styleds/StyledCards";
 import { useNavigate } from "react-router-dom"
 import { handleCart } from "../Router/cordinator";
+import { FooterStyled } from "../Styleds/FooterStyled";
+import carrinhoPhoto from "../Styleds/fotos/carrinho.png"
 
 
 export function Cards(props) {
@@ -23,7 +25,7 @@ export function Cards(props) {
     console.log(produtos)
 
     const navigate = useNavigate()
-
+    let totalPreco = 0
 
     return (
 
@@ -103,7 +105,7 @@ export function Cards(props) {
                 <button onClick={() => handleCart(navigate)} 
                 className="foguetinho"
                 
-                > <img src="https://w7.pngwing.com/pngs/233/658/png-transparent-rocket-computer-icons-rockets-spacecraft-monochrome-black.png" height={"90px"}  ></img></button>
+                > <img src={carrinhoPhoto} height={"90px"}  ></img></button>
 
 
 
@@ -124,7 +126,7 @@ export function Cards(props) {
                             return prod.nome.toLocaleLowerCase().includes(props.valorDoFiltro)
                         })
                         .filter((prod) => {
-                            if (prod.preco >= props.valorMin && prod.valor <= props.valorMax){
+                            if (prod.preco >= props.valorMin ){
                                 return prod
                             }else{
                                 return prod
@@ -133,6 +135,7 @@ export function Cards(props) {
                             
                         })
                         .filter((prod) => {
+                            
                             return (prod.preco <= props.valorMax || props.valorMax === "")
                         })
                         .sort((atualValue, proxValue) => {
@@ -166,8 +169,8 @@ export function Cards(props) {
                                
                                     <div className="blocos">
                                         <img className="imagem" src={itens.img} width="320" height="205" />
-                                        <p>{itens.nome}</p>
-                                        <p>{itens.preco}</p>
+                                        <p>{`${itens.nome}`}</p>
+                                        <p>{` R$${itens.preco}`}</p>
                                         <p>{itens.descricao}</p>
                                         
 
@@ -190,6 +193,9 @@ export function Cards(props) {
 
 
             </StyledCards>
+
+          
+
         </GlobalSyled>
 
 

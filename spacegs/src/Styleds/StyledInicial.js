@@ -34,7 +34,7 @@ background-repeat: repeat-x, repeat-x repeat repeat;
 -moz-background-size: contain;
 background-size: contain;
 -o-background-size: contain;
-/* background-size: 310px 310px; */
+
 
 
 
@@ -104,7 +104,7 @@ margin:0;
 
 h1{
 color: black;
-border-radius: 20px 10px 20px;
+border-radius: 10px 10px 20px;
 padding: 10px;
 /* background-color: rgba(10,23,55,0.5); */
 margin-bottom:1px;

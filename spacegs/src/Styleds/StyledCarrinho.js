@@ -34,11 +34,12 @@ background-repeat: repeat-x, repeat-x repeat repeat;
 
 
 display: flex;
-flex-direction: column;
-padding: 10vh;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
+padding: 2vh;
+
+
+
+
+
 
 
 
@@ -57,14 +58,15 @@ margin: 0;
     flex-wrap:wrap;
     margin: 0px;
     min-height:44vh;
-    width: 65vh;
+    width: 25vh;
     
-    padding: 70px;
+    padding: 30px;
     font-family:Arial, Helvetica, sans-serif;
     font-size:20px;
     align-items: center;
-    background: linear-gradient(90deg, rgba(28,4,106,1) 35%, rgba(59,59,59,1) 94%);
-    border-radius: 10px;
+    background: rgb(23,22,22);
+    background: linear-gradient(0deg, rgba(23,22,22,1) 2%, rgba(120,49,177,1) 100%);   
+     border-radius: 10px;
     box-shadow: 20px 20px 10px grey;
     
 

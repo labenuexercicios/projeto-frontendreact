@@ -52,12 +52,12 @@ grid-template-columns:1fr 1fr 1fr;
     flex-direction: column;
     flex-wrap:wrap;
     margin: 20px;
-    
     padding: 20px;
-    font-family:Arial, Helvetica, sans-serif;
+    background: rgb(23,22,22);
+background: linear-gradient(0deg, rgba(23,22,22,1) 2%, rgba(120,49,177,1) 100%);    font-family:Arial, Helvetica, sans-serif;
     font-size:20px;
     align-items: center;
-    background: linear-gradient(90deg, rgba(28,4,106,1) 35%, rgba(59,59,59,1) 94%);
+    /* background: linear-gradient(90deg, rgba(28,4,106,1) 35%, rgba(59,59,59,1) 94%); */
     border-radius: 10px;
     box-shadow: 20px 20px 10px grey;
     

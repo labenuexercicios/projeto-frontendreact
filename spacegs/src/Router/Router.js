@@ -49,6 +49,26 @@ export function Router (){
         consultarItem()
     }, [])
 
+
+    const removeCart = (prod) =>{
+       
+
+
+
+
+        const novoCarrinho = [...carrinho]
+        const index = novoCarrinho.indexOf(prod)
+        console.log(index)
+        console.log(prod)
+
+        if(index  > -1){
+            //splice remove e adicionar dentro da array 
+            novoCarrinho.splice(index, 1)
+            setCarrinho(novoCarrinho)
+        }
+
+
+    }
     
 
 
@@ -88,6 +108,7 @@ export function Router (){
             carrinho={carrinho}
             setCarrinho={setCarrinho}
             produtos={produtos}
+            removeCart = {removeCart}
             
             />}></Route>
 

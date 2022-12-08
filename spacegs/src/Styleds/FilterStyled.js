@@ -41,6 +41,7 @@ padding: 30px;
 box-sizing: border-box;
 border: thick double;
 height: 850px;
+margin-top: 6vh;
 
 h1{
     border-radius: 10px 20px 10px 20px;
@@ -104,9 +105,11 @@ button{
       
       
 img{
-   background-color: #222;
+   /* background-color: #222; */
    
 }
+
+
 
 
 }

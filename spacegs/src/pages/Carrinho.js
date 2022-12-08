@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom"
 import { handleHome } from "../Router/cordinator";
 import styled from "styled-components";
 import { StyledCarrinho } from "../Styleds/StyledCarrinho";
-import { FilterStyled } from "../Styleds/FilterStyled";
+import { FooterStyled } from "../Styleds/FooterStyled";
+import astrodev from "../Styleds/fotos/afrogirl.png";
+import linkedin from "../Styleds/fotos/linkedin.png";
+import git from "../Styleds/fotos/github.png";
+
 
 
 export function Carrinho(props) {
@@ -12,11 +16,16 @@ export function Carrinho(props) {
   const setCarrinho = props.setCarrinho
 
 
+
+
   const navigate = useNavigate()
 
-  let totalPreco = 0
+  let totalPreco = 0.
+  
+  
 
   return (
+    <div>
     <CarrinhoContainer>
 
       <button className="campoParaVoltar" onClick={() => handleHome(navigate)}> Voltar a Loja</button>
@@ -33,11 +42,11 @@ export function Carrinho(props) {
               <div className="blocos">
                 <img className="imagem" src={prod.img} width="320" height="205" />
                 <p>{prod.nome}</p>
-                <p>{prod.preco}</p>
+                <p>{ `R$${prod.preco}`}</p>
                 <p>{prod.descricao}</p>
 
 
-                <button >Remover do SpaceCart</button>
+                <button onClick={() => props.removeCart(prod)} >Remover do SpaceCart</button>
 
 
 
@@ -68,7 +77,44 @@ export function Carrinho(props) {
 
       </div>
 
+      
+
     </CarrinhoContainer>
+
+<FooterStyled>
+<div className="footer">
+    <img className="astro" src={astrodev}></img>
+    <p className="titulo-gab"> Desenvolvido com 💜 por Gabriella Silverio
+
+    
+    <a href="https://www.linkedin.com/in/gabriella-santanati/"> 
+        <img className="linkedin" src={linkedin} alt="linkedin"></img>
+     
+     </a>
+
+     <a href="https://github.com/slvgs"> 
+        <img className="github" src={git} alt="gihub"></img>
+     
+     </a>
+
+    </p>
+     {/* <a href="https://www.linkedin.com/in/gabriella-santanati/"> 
+        <img className="linkedin" src={linkedin} alt="linkedin"></img>
+     
+     </a> */}
+     {/* <a href="https://github.com/slvgs"> 
+        <img className="github" src={git} alt="gihub"></img>
+     
+     </a> */}
+    
+     
+
+
+</div>
+
+</FooterStyled>
+
+</div>
 
 
   )
@@ -101,13 +147,13 @@ min-width:100vh;
   flex-direction: row;
   justify-content: center;
   background-color: #01084e;
-  background-image: linear-gradient(43deg, #01084e 0%, #0a020a 46%, #0a0adc 100%);
+  background-image: radial-gradient(circle at 0% 0%, #c193fd 0, #9b77e9 50%, #725dd5 100%);
 
   border-color: #2980b9, #6dd5fa, #ffffff ;
   width:30vh;
   height: 5vh;
   align-items: center;
-  color: white;
+  color: black;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
  
