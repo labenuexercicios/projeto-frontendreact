@@ -6,9 +6,8 @@
 
 <h4 align="center"><a href="#">Clique para visitar o projeto</a></h4>
 
-## 📚 Seções
+## 📚 Projeto
 
-O site é composto por cinco seções:
 
 - **O Projeto:** Promovido pela instituição de ensino Full-Stack Labenu, o projeto incentiva a criação de um e-commerce simples com os fundamentos básicos de ReactJs
 
