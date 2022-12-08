@@ -20,7 +20,7 @@ export const Cart = (props) => {
         setVisible(true)
         setTimeout(()=>{
             setVisible(false)
-        }, 3000)
+        }, 2000)
         if(totalPrice > 0){
             setContentMessage('Pedido Feito!')
             setType(true)
