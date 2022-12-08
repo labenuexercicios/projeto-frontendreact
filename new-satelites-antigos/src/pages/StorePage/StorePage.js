@@ -51,6 +51,8 @@ export const StorePage = () => {
                 return a.year < b.year ? -1 : 1
               } else if (radioYear === "last"){
                 return a.year > b.year ? -1 : 1
+              } else {
+                return 0
               }
             })
             .filter((satellite)=>{

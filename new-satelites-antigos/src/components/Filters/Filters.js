@@ -32,6 +32,7 @@ export const Filters = (props) => {
 
   const filterClear = () => {
     props.setInputName("")
+    props.setRadioYear("")
     props.setSliderOne(18000)
     props.setSliderTwo(32000)
     window.document.querySelector('#older').checked = false
@@ -108,7 +109,8 @@ return(
         <input 
           type="range" 
           id='slider-1' 
-          name='min' 
+          name='min'
+          step={100}
           min={props.sortByPrice[0].price} 
           max={props.sortByPrice[props.sortByPrice.length-1].price - 1000}
           value={props.sliderOne} 
@@ -118,6 +120,7 @@ return(
           type="range" 
           id='slider-2' 
           name='max' 
+          step={100}
           min={props.sortByPrice[0].price + 1000} 
           max={props.sortByPrice[props.sortByPrice.length-1].price}
           value={props.sliderTwo} 
