@@ -4,14 +4,23 @@ export const FooterStyle = styled.footer `
    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
     background-color: #404040;
     color: white;
-    padding: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 5px;
     article{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         ul{
             display: flex;
-            gap: 20px;
+            gap: 50px;
             list-style: none;
+
+            li{
+                transition: 0.5s;
+                :hover{
+                    color: #FF008A;
+                }
+            }
         }
     }
 `

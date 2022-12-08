@@ -7,9 +7,9 @@ export const Footer  = () => {
             <article>
                 <img src={astrodev}/>
                 <ul>
-                    <li>dcsc</li>
-                    <li>dcsd</li>
-                    <li>dscsd</li>
+                    <a href="https://guilhermesquita.vercel.app/" target='_blank'><li>Sobre Mim</li></a>
+                    <a href="https://www.linkedin.com/in/guilhermesquita/" target='_blank'><li>Contato</li></a>
+                    <a href="https://github.com/" target="_blank"><li>Github</li></a>
                 </ul>
                 <article>
                     portuguese
