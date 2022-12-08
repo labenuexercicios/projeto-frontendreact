@@ -11,13 +11,18 @@ const {
     addToCart,
     isOnProductsScreen,
     isOnCartScreen,
+    buscaNome,
 } = props
 
 
     return (
 
      <div className="main">
-        {products.map((product)=> (
+        {products
+        .filter(
+            (product) => product.name.toLowerCase().includes(buscaNome.toLowerCase())
+        )
+        .map((product)=> (
          <Main key={product.id} product={product}>
             <h3>{product.name}</h3>
             <div className="product-container">

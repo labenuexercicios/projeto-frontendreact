@@ -65,7 +65,7 @@ export const HeaderContainer = styled.header`
     .cart-badge {
         position: absolute;
         top: 0;
-        right: 4px;
+        right: 10px;
         border-radius: 50%;
         background-color: #14b6b9;
         color:#FFFFFF;

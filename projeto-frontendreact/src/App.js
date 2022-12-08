@@ -1,4 +1,5 @@
 import { useState } from "react";
+import products from "./assets/products.json"
 import CartScreen from "./screens/Cart/CartScreen";
 import ProdutcsScreen from "./screens/Products/ProductsScreen";
 import Header from "./components/Header/Header"
@@ -11,8 +12,6 @@ const [ cart, setCart ] = useState([])
 const [ activeScreen, setActiveScreen ] = useState("ProductsScreen")
 
 const [buscaNome, setBuscaNome] = useState("");
-
-
 
 const goToProductsScreen = () => setActiveScreen("ProductsScreen")
 const goToCartScreen = () => setActiveScreen("CartScreen")
@@ -79,7 +78,8 @@ const renderScreen = () => {
   switch (activeScreen) {
     case "ProductsScreen":
       return <ProdutcsScreen  
-      addToCart={addToCart}/>
+      addToCart={addToCart}
+      buscaNome={buscaNome}/>
     case "CartScreen":
       return <CartScreen  
       cart={cart} 
@@ -98,6 +98,7 @@ const renderScreen = () => {
         goToCartScreen={goToCartScreen}
         itemsInCart={cart.length}
         buscaNome={buscaNome}
+        setBuscaNome={setBuscaNome}
       />
 
      {renderScreen()}

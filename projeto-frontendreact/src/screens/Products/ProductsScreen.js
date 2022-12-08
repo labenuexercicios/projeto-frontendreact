@@ -7,7 +7,7 @@ import heart from "../../assets/heart-icon.png"
 
 function ProdutcsScreen(props) {
 
-    const { addToCart, product, filterText,  } = props
+    const { addToCart, product, buscaNome  } = props
 
     return (
 
@@ -15,6 +15,7 @@ function ProdutcsScreen(props) {
             <ProductCard  
             addToCart={ addToCart}
             isOnProductsScreen={true}
+            buscaNome={buscaNome}
             />
 
             <SideBarContainer>

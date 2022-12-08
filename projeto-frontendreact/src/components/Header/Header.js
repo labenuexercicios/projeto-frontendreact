@@ -11,9 +11,8 @@ function Header(props) {
     const { goToCartScreen,
         goToProductsScreen,
         itemsInCart, 
-        filterText,
-        onChangeFilterText
-    
+        buscaNome,
+
     } = props
 
 
@@ -30,8 +29,8 @@ function Header(props) {
             <input 
             placeholder="Busque seu planeta" 
             type="text" 
-            value={filterText}
-            onChange={onChangeFilterText}
+            value={buscaNome}
+            onChange={onChangeNome}
 
             />
             <button>
