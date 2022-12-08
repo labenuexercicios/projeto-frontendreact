@@ -14,6 +14,9 @@ export const SideBarContainer = styled.div`
     position: fixed;
     left: 10px;
     top: 180px;
+    @media only screen and (max-width: 414px) {
+        left: 450px;
+    }
 }
 
 input { 
@@ -44,6 +47,7 @@ input {
         border-radius: 8px;
         text-align: center;
     }
+    
 `
 export const Ordem = styled.div`
 

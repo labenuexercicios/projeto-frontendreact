@@ -53,7 +53,6 @@ function ProdutcsScreen(props) {
                         <img className="linkedin-icon" src={Linkedin} alt="icon linkedin"/>
                     </a>
            </Footer>
-
             
         </div>
     );
