@@ -36,6 +36,14 @@ export const Pesquisa = styled.input `
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     padding-left: 10px;
+    ::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+        @media screen and (min-width: 58px) and (max-width: 483px)   {
+            font-size: 12px;
+        }
+        @media screen and (min-width: 483px) and (max-width: 1030px) {
+            font-size: 12px;
+        }
+        }
 `
 
 export const Article = styled.article `

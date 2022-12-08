@@ -1,10 +1,16 @@
 import styled from "styled-components";
 
-
-
 export const Aside = styled.aside`
     min-height: 500px;
     margin-top: 20px;
+    @media screen and (min-width: 58px) and (max-width: 483px) {
+        display: flex;
+        margin-top: 0px;
+    }
+    @media screen and (min-width: 484px) and (max-width: 1030px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export const Price = styled.article `
@@ -17,13 +23,23 @@ export const Price = styled.article `
     select{
         outline: 0;
     }
-    
+    @media screen and (min-width: 58px) and (max-width: 483px) {
+        width: 120px;
+    }
+    @media screen and (min-width: 483px) and (max-width: 1030px) {
+        width: 120px;
+    }
 `
 
 export const ImgIcon = styled.label `
     position: absolute;
     right: 2%;
     bottom: 20%;
+    @media screen and (min-width: 58px) and (max-width: 483px) {
+        right: 0;
+        top: 0;
+        width: 0;
+    }
 `
 
 export const Search = styled.input `
@@ -40,5 +56,15 @@ export const Search = styled.input `
         position: absolute;
         right: 13%;
         top: 20%;
+        @media screen and (min-width: 58px) and (max-width: 483px) {
+            font-size: 12px;
+            right: 15%;
+            top: 30%;
+        }
+        @media screen and (min-width: 483px) and (max-width: 1030px) {
+            font-size: 12px;
+            left: 5%;
+            top: 30%;
+        }
 }
 `

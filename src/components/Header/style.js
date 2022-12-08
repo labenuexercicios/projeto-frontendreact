@@ -10,6 +10,12 @@ export const Cab = styled.section `
     justify-content: space-between;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
+    @media screen and (min-width : 481px) and (max-width : 800px) {
+        margin: 0 auto;
+    }
+    @media screen and (min-width : 200px) and (max-width : 480px) {
+        margin: 0 auto;
+    }
 `
 export const Title = styled.article `
     font-size: 20px;

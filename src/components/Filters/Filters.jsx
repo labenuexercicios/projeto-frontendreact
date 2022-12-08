@@ -33,6 +33,7 @@ export const Filters = (props) => {
               <ImgIcon><img src={searching}/></ImgIcon>
           </Price>
 
+        <article>
           <Price>
             <select value={props.order} onChange={handleOrder}>
               <option value="Ordenar">Ordenar Nome</option>
@@ -48,6 +49,7 @@ export const Filters = (props) => {
               <option value="MaiorPreco">Maior Preço</option>
             </select>
           </Price>
+        </article>
 
       </Aside>
   )
