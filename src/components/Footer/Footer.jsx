@@ -1,5 +1,6 @@
 import { FooterStyle } from "./style"
 import astrodev from '../../assets/icons/astrodev.svg'
+import { GiBrazilFlag } from 'react-icons/gi'
 
 export const Footer  = () => {
     return(
@@ -12,6 +13,7 @@ export const Footer  = () => {
                     <a href="https://github.com/" target="_blank"><li>Github</li></a>
                 </ul>
                 <article>
+                    <GiBrazilFlag/>
                     portuguese
                 </article>
             </article>

@@ -10,6 +10,13 @@ export const FooterStyle = styled.footer `
     article{
         display: flex;
         justify-content: space-around;
+
+        article{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         ul{
             display: flex;
             gap: 50px;

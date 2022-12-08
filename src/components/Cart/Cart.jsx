@@ -2,7 +2,7 @@ import { CartSection } from "./style"
 import { BsFillCartFill } from 'react-icons/bs'
 import { CartProduct } from "../CartProduct/CartProduct"
 import { MessageConfirm } from "../messageConfirm/MessageConfirm"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 export const Cart = (props) => {
 
