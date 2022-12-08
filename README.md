@@ -2,7 +2,7 @@
   🧱<br>Projeto - Astrodev
 </h1>
 
-![Resultado final do projeto](assets/preview.jpg)
+![Resultado final do projeto](src/assets/preview.jpg)
 
 <h4 align="center"><a href="#">Clique para visitar o projeto</a></h4>
 
