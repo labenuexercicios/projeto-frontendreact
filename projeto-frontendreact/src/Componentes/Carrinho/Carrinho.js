@@ -1,5 +1,8 @@
 import React from "react";
-import { Container, PP } from "./Styles";
+import { Container, Product, FirstLine, ButtonMais, 
+  ButtonMenos, ButtonRemove, Value, Name, Buttons, Img, LineEnd, ButtonEnd, Total } from "./Styles";
+import lixeira from "../../asset/img/lixeira.png"
+
 
 const LadoDireito = ({cartItems, setCartItems}) => {
 
@@ -50,24 +53,45 @@ const LadoDireito = ({cartItems, setCartItems}) => {
     localStorage.setItem("local", virarString)
     setCartItems(filtroDelete)
   }
+
+  function avisarCompraFinalizada () {
+    if(cartItems.length >= 1){
+        alert("Compra concluida com sucesso!")
+      }else{
+        alert("Primeiro adicione itens ao carrinho")
+      }
+    const virarString =JSON.stringify([])
+    localStorage.setItem("local", virarString)
+    setCartItems([])
+  }
+  
   
   return (
-    <>
-     <Container>
+    <Container>
       <h2>Carrinho:</h2>
       <p>Quantidade de itens: {countCartItems}</p>
       {cartItems.map((itemCarrinho)=> {
         return ( 
-          <PP>
-           <p key={itemCarrinho.id} >{itemCarrinho.qtd}x {itemCarrinho.nome} R${itemCarrinho.valor*itemCarrinho.qtd}</p>
-           <button onClick={() => onRemove(itemCarrinho)}>-</button>
-           <button onClick={() => onAdicionar(itemCarrinho)}>+</button>
-           <button onClick={() => onRemoveTotal(itemCarrinho)}>Remover</button>
-          </PP>
+          <Product>
+           <FirstLine key={itemCarrinho.id}>
+              <Buttons>
+                <ButtonMenos onClick={() => onRemove(itemCarrinho)}>-</ButtonMenos>
+                {itemCarrinho.qtd}x 
+                <ButtonMais onClick={() => onAdicionar(itemCarrinho)}>+</ButtonMais>
+              </Buttons>
+              <Value>R${(itemCarrinho.valor*itemCarrinho.qtd).toLocaleString('pt-br',{ minimumFractionDigits: 2})}</Value>
+           </FirstLine>
+           <Name>{itemCarrinho.nome}</Name>
+           <ButtonRemove onClick={() => onRemoveTotal(itemCarrinho)}>
+            <Img className="lixeira" src={lixeira} alt="lixeira" />
+           </ButtonRemove>
+          </Product>
          )})}
-        <h3>Total: R${totalPrice}</h3>
-     </Container>
-    </>
+         <LineEnd>
+           <Total>Total: R${totalPrice.toLocaleString('pt-br',{ minimumFractionDigits: 2})}</Total>
+           <ButtonEnd onClick={avisarCompraFinalizada}>Finalizar compra</ButtonEnd>
+         </LineEnd>
+    </Container>
   );
 };
 

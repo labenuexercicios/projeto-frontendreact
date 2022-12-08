@@ -1,10 +1,19 @@
 import { createGlobalStyle } from "styled-components";
 import React from "react";
 import { useState, useEffect } from "react";
-import LadoEsquerdo from './Componentes/Lado-Esquerdo/Lado-Esquerdo';
-import LadoDireito from "./Componentes/Lado-Direito/Lado-Direiro";
+import Filtros from './Componentes/Filtros/Filtros';
+import Carrinho from "./Componentes/Carrinho/Carrinho";
 import Header from "./Componentes/Header/Header"
-import { Main, Section, Cards, ImagemProduto, MainContainer, Nome, Valor, Button } from "./Styles.js";
+import { Main, Section, Cards, ImagemProduto, MainContainer, Nome, Value, Button } from "./Styles.js";
+import imgId1 from "../src/asset/img/id1.png"
+import imgId2 from "../src/asset/img/id2.png"
+import imgId3 from "../src/asset/img/id3.png"
+import imgId4 from "../src/asset/img/id4.png"
+import imgId5 from "../src/asset/img/id5.png"
+import imgId6 from "../src/asset/img/id6.png"
+import imgId7 from "../src/asset/img/id7.png"
+import imgId8 from "../src/asset/img/id8.png"
+import imgId9 from "../src/asset/img/id9.png"
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -17,57 +26,57 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   const produtos= [{
     id: 1,
-    nome: "Brinquedos Espaciais para Crianças com 2 Astronautas, Ônibus e Rover",
+    nome: "Brinquedos Espaciais com 2 Astronautas, Ônibus e Rover",
     valor: 299.00, 
-    imagemUrl: "https://images-americanas.b2w.io/produtos/4125742585/imagens/brinquedos-do-a-nibus-espacial-para-3-4-5-6-meninos-de-7-anos-lights-sounds-brinquedos-espaciais-para-criancas-3-5-com-2-astronautas-onibus-de-brinquedos-e-rover-espaconave-brinquedos-playsets-aniversario-meninas-da-pascoa-meninos/4125742585_1_xlarge.jpg"
+    imagemUrl: imgId1
   },
   {
      id: 2,
-     nome: "KIT Astronautas Estação Espacial Missão Marte",
+     nome: "Kit Astronautas Estação Espacial Missão Marte",
      valor: 469.00,
-     imagemUrl: "https://images.tcdn.com.br/img/img_prod/860583/kit_astronautas_estacao_espacial_missao_marte_f00811_fun_61677_1_49e4ad47aff99e16cb9fcb40cc0b65a3.jpg"
+     imagemUrl: imgId2
   },
   {
     id: 3,
     nome: "Brinquedo Nave Cápsula Espacial Com Astronauta",
     valor: 59.00,
-    imagemUrl: "https://a-static.mlcdn.com.br/800x560/brinquedo-nave-capsula-espacial-com-astronautas-fun-f00241-fun-divirta-se/toysteam/7898039605708/998b9441ea908365067046e821f56077.jpg"
+    imagemUrl: imgId3
   },
   {
     id: 4,
-    nome: "Brinquedos Conjunto de Naves Espaciais, Foguete Foguete Astro Solar Playset para Crianças",
+    nome: "Brinquedos Conjunto de Naves e Equipamentos Espaciais",
     valor: 399.00,
-    imagemUrl: "https://imgs.extra.com.br/1515640460/1xg.jpg"
+    imagemUrl: imgId4
   },
   {
     id: 5,
-    nome: "Pistola missão espacial com projetor de imagem + som",
+    nome: "Pistola Missão Espacial com Projetor de Imagem + Som",
     valor: 49.00,
-    imagemUrl: "https://images-submarino.b2w.io/produtos/6268622599/imagens/kit-com-2-pistolas-missao-espacial-c-som-luz-projeta-imagem/6268622599_1_xlarge.jpg"
+    imagemUrl: imgId5
  },
  {
    id: 6,
-   nome: "Kit de construção de brinquedos espaciais, 13 em 1",
+   nome: "Kit de Construção de Brinquedos Espaciais, 13 em 1",
    valor: 329.00,
-   imagemUrl: "https://imgs.extra.com.br/1531097120/1xg.jpg"
+   imagemUrl: imgId6
  },
  {
    id: 7,
-   nome: "Brinquedo Réplica Onibus Espacial Shuttle Nasa Espaço Astronauta Discovery OV-102 Columbia",
+   nome: "Brinquedo Réplica Ônibus Espacial Shuttle Nasa Columbia",
    valor: 399.00,
-   imagemUrl: "https://static3.tcdn.com.br/img/img_prod/460977/brinquedo_replica_onibus_espacial_shuttle_nasa_espaco_astronauta_discovery_ov_102_columbia_luz_e_som_85625_1_8592469c22e375292fb875951900529f.jpeg"
+   imagemUrl: imgId7
  },
  {
   id: 8,
   nome: "Star Wars Millenium Falcon Nave Espacial com Miniaturas",
   valor: 649.00,
-  imagemUrl: "https://a-static.mlcdn.com.br/800x560/star-wars-millenium-falcon-nave-espacial-com-miniaturas-sunny-brinquedos/toysteam/7899573634469/3b0aabe8bd3a04b8d025476fc260b9ec.jpeg"
+  imagemUrl: imgId8
 },
 {
   id: 9,
   nome: "Lego Marvel Nave Dos Guardiões Da Galáxia 1901 Peças",
   valor: 1299.00,
-  imagemUrl: "https://http2.mlstatic.com/D_NQ_NP_760988-MLB50819508963_072022-O.webp"
+  imagemUrl: imgId9
 }
 ]
 
@@ -109,7 +118,7 @@ function App() {
       <GlobalStyle />
         <Header />
         <MainContainer>
-          <LadoEsquerdo 
+          <Filtros 
           buscar={buscar}
           setBuscar={setBuscar}
           valorMinimo={valorMinimo}
@@ -151,14 +160,14 @@ function App() {
                   <ImagemProduto src={product.imagemUrl}/>
                   <Nome>
                     <p>{product.nome}</p>
-                   <Valor>R$ {product.valor.toLocaleString('pt-br',{ minimumFractionDigits: 2})}</Valor>
+                   <Value>R$ {product.valor.toLocaleString('pt-br',{ minimumFractionDigits: 2})}</Value>
                    <Button onClick={() => onAdd(product)}>Comprar</Button>
                   </Nome>
                 </Cards>
               )})}
             </Section>
           </Main>
-          <LadoDireito  
+          <Carrinho  
           cartItems={cartItems}
           setCartItems={setCartItems}
           />

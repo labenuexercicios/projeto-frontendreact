@@ -15,8 +15,7 @@ export const Main = styled.main`
     flex-direction: column;
     width: 98.78vw;
     min-height: 87vh;
-    max-height: max-content;
-    
+    /* max-height: max-content; */
 `;
 
 export const Section = styled.div`
@@ -24,7 +23,7 @@ export const Section = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     width: 58vw;
-    gap: 20px;
+    gap: 10px;
     margin-top: 0 auto;
 `;
 
@@ -38,12 +37,18 @@ export const Cards = styled.div`
    color: black;
    border: 1px solid black;
    align-items: center;
+   &:hover {
+      background-color: white
+   }
 `
 
 export const ImagemProduto = styled.img`
    width: 90%;
    height: 55%;
    margin-top: 2vh;
+   &:hover{
+    transition: all .2s ease-in-out; 
+    transform: scale(1.1); }
 `
 
 export const Nome = styled.p`
@@ -58,7 +63,7 @@ export const Nome = styled.p`
    height: 22vh;
 `
 
-export const Valor = styled.p`
+export const Value = styled.p`
    font-family: 'Signika Negative', sans-serif;
    font-size: 1.2rem;
 `
