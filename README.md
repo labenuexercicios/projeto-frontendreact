@@ -20,7 +20,7 @@ E-commerce de viagens espaciais
 <br>
 
 <p align="center">
-  <img alt="calendario da copa" src="./github/capa.png" width="100%">
+  <img alt="viagens espaciais produtos" src="./assets/viagens.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
