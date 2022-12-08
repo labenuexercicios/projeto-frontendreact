@@ -22,7 +22,6 @@ import {
           w={'full'}
           bg={useColorModeValue('white', 'gray.800')}
           boxShadow={'2xl'}
-
           >
             <Image
             rounded={'lg'}

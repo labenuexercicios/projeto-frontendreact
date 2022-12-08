@@ -11,6 +11,10 @@ export const FooterStyle = styled.footer `
         display: flex;
         justify-content: space-around;
 
+        img{
+            width: 10%;
+        }
+
         article{
             display: flex;
             align-items: center;
@@ -29,5 +33,12 @@ export const FooterStyle = styled.footer `
                 }
             }
         }
+    }
+
+    @media screen and (min-width: 58px) and (max-width: 483px) {
+        font-size: 10px;
+    }
+    @media screen and (min-width: 484px) and (max-width: 1030px) {
+        font-size: 10px;
     }
 `

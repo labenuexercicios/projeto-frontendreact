@@ -9,6 +9,7 @@ export const True = styled.article `
     margin-top: 20px;
     border-radius: 5px;
     margin-right: 8px;
+    margin-bottom: 20px;
 `
 export const False = styled.article `
     background-color: red;
@@ -19,4 +20,5 @@ export const False = styled.article `
     margin-top: 20px;
     border-radius: 5px;
     margin-right: 8px;
+    margin-bottom: 20px;
 `

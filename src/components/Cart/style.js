@@ -30,4 +30,13 @@ export const CartSection = styled.section `
     
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: 58px) and (max-width: 483px) {
+        margin: 0;
+        width: 100vw;
+    }
+    @media screen and (min-width: 484px) and (max-width: 1030px) {
+        margin: 0;
+        width: 100vw;
+    }
 `

@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Aside = styled.aside`
     min-height: 500px;
-    margin-top: 20px;
+    margin-top: 10px;
     @media screen and (min-width: 58px) and (max-width: 483px) {
+        min-height: 0;
         display: flex;
         margin-top: 0px;
     }
@@ -19,12 +20,13 @@ export const Price = styled.article `
     padding-top: 10px;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    margin-left: 5vw;
+    margin-left: 2vw;
     select{
         outline: 0;
+        font-size: 12px;
     }
     @media screen and (min-width: 58px) and (max-width: 483px) {
-        width: 120px;
+        width: 25% ;
     }
     @media screen and (min-width: 483px) and (max-width: 1030px) {
         width: 120px;

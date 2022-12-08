@@ -8,9 +8,14 @@ export const ContentSale = styled.section `
         border-bottom: dashed #FF008A 2.5px;
         font-weight: 600;
     }
+    @media screen and (min-width: 58px) and (max-width: 483px) {
+        width: 100%;
+    }
 `
 export const ProductsSale = styled.article `
     display: flex;
     flex-wrap: wrap;
-    column-gap: 30px;
+    column-gap: 20px;
+    margin-left: 10px;
+    align-items: center;
 `
