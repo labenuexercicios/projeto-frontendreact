@@ -1,11 +1,11 @@
-<h1 align="center"> Viagens espaciais
-</h1>
+<h1 align="center"> Viagens espaciais </h1>
 
 <p align="center">
 E-commerce de viagens espaciais
 </p>
 
-<p> Link do deploy:  </p>
+<p> Link do projeto:
+https://viagemparamarte.surge.sh/</p>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -17,7 +17,7 @@ E-commerce de viagens espaciais
 <br>
 
 <p align="center">
-  <img alt="calendario da copa" src="./github/capa.png" width="100%">
+  <img alt="viagens espaciais produtos" src="projeto-frontendreact/src/assets/viagens.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
