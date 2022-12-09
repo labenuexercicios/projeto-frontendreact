@@ -80,12 +80,25 @@ O projeto possui os seguintes requisitos:
  
  Para além destes, foram adicionados dois filtros:
  
- - Filtro por categoria: cada produto tem uma categoria única, é possível filtrar por categoria através de um dropdown
- - Filtro por tamanho radial: cada produto pode ter mais de um tamanho radial. É possível filtrar os produtos por tamanho radial através de caixas checkbox
+ - Filtro por categoria: cada produto tem uma categoria única, é possível filtrar por categoria através de um dropdown:
+ 
+ ![Dropdown](public/dropdown-print.png)
+ 
+ - Filtro por tamanho radial: cada produto pode ter mais de um tamanho radial. É possível filtrar os produtos por tamanho radial através de caixas checkbox:
+ 
+ ![Checkboxes](public/checkbox-print.png)
  
  Existem duas formas de acessar o carrinho (ou escondê-lo):
  
- - Através d
+ - Clicando-se na opção "see/hide cart" no canto superior direito da página:
+
+ ![See/hide cart](public/see-cart-print.png)
+ 
+ - Clicando-se na seta presente no próprio carrinho:
+
+ ![Cart arrow](public/arrow-see-card-print.png)
+ 
+ Uma vez acessado, o carrinho terá essa aparência:
   
  <!-- MARKDOWN LINKS & IMAGES -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
