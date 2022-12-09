@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "name": "Mercúrio",
+        "description": "Esse é o planeta mais perto do sol, não esqueça de levar seu protetor solar.",
+        "price": 400,
+        "imageUrl": "https://thumbs.dreamstime.com/z/planeta-mercury-isolated-95489588.jpg",
+        "imageAlt": "Planeta Mercúrio"
+    },
+    {
+        "id": 2,
+        "name": "Vênus",
+        "description": "Ideal para um bate e volta, já que é o planeta mais perto da terra." ,
+        "price": 450,
+        "imageUrl": "https://meioambiente.culturamix.com/blog/wp-content/uploads/2010/06/46.gif",
+        "imageAlt": "Vênus planeta"
+       
+    },
+    {
+        "id": 3,
+        "name": "Marte",
+        "description": "Para quem curte um rolê alternativo para conhecer novos tipos de vida.",
+        "price": 300,
+        "imageUrl": "https://img.freepik.com/fotos-premium/planeta-vermelho-marte-em-um-fundo-branco-isolado_338491-7351.jpg?w=740",
+        "imageAlt": "Marte planeta"
+    },
+    {
+        "id": 4,
+        "name": "Júpiter",
+        "price": 600,
+        "description": "Júpiter é o maior planeta do sistema solar. Para quem não liga muito para idade é uma ótima viagem, já que um ano em Júpiter é equivalente a 12 anos na Terra." ,
+        "imageUrl": "https://thumbs.dreamstime.com/b/j%C3%BApiter-do-planeta-isolado-no-fundo-branco-108603792.jpg",
+        "imageAlt": "Planeta Urano"
+    },
+    {
+        "id": 5,
+        "name": "Plutão",
+        "price": 850,
+        "description": "Plutão já foi planeta, não é mais. Mas vale a pena a visita.",
+        "imageUrl": "https://thumbs.dreamstime.com/b/o-plut%C3%A3o-do-planeta-an%C3%A3o-isolado-no-fundo-branco-elementos-desta-imagem-%C3%A9-fornecido-pela-nasa-112967554.jpg",
+        "imageAlt": "Netuno planeta"
+    }
+]
