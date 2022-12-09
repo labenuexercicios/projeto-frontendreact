@@ -23,13 +23,13 @@ export const Card = styled.div`
     justify-content: center;
   }
 
-  .card-carting{
+  .card-quantity-button{
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .card-delete{
+  .card-delete-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +43,7 @@ export const Card = styled.div`
     background-color: #ffd100;
     border: none;
     color: white;
+    cursor: pointer
   }
 `;
 

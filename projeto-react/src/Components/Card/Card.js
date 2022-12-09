@@ -21,7 +21,6 @@ function Cards(props) {
           <div className="card-carting">
             <button onClick={() => addToCart(product)}><FaShoppingCart/>Adicionar ao Carrinho</button>
           </div>
-
         </Legenda>
       </Card>
   );

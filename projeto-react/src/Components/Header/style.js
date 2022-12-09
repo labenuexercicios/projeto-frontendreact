@@ -8,7 +8,6 @@ export const HeaderContainer = styled.section`
   align-items: center;
   position: fixed;
   background-color: rgb(0, 96, 177);
-  outline: 3px solid #ffd100;
 
   .search-group{
     position: relative;
@@ -49,7 +48,7 @@ export const HeaderContainer = styled.section`
     }
   }
 
-  .namePage-group {
+  .logo-header {
     display: flex;
     align-items: center;
 
@@ -80,7 +79,7 @@ export const HeaderContainer = styled.section`
   }
 `;
 
-export const NamePage = styled.h1`
+export const Logo = styled.h1`
   display: flex;
   flex-direction: column;
   margin-left: 100px;

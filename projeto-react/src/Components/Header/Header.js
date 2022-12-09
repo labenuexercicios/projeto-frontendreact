@@ -1,20 +1,20 @@
 import React from "react";
-import { HeaderContainer, NamePage } from "./style";
+import { HeaderContainer, Logo } from "./style";
 import searchIcon from '../../assets/search.svg'
 import { FaUserAlt, FaShoppingCart, FaQuestionCircle } from 'react-icons/fa'
 import { IoRocketSharp } from "react-icons/io5";
 
 function Header(props) {
-  const { goToCartScreen, goToMainPage, itemsInCart } = props;
+  const { goToCartScreen, itemsInCart } = props;
 
 
   return (
     <HeaderContainer>
-      <div className="namePage-group">
-        <NamePage onClick={goToMainPage}>
+      <div className="logo-header">
+        <Logo>
           <h1>Space</h1>
           <h1>Land</h1>
-        </NamePage>
+        </Logo>
         <IoRocketSharp size="70px" color="#ffd100"/>
       </div>
 

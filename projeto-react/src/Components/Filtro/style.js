@@ -3,16 +3,15 @@ import styled from "styled-components";
 export const FiltroContainer = styled.section`
   display: grid;
   grid-column: 1/2;
-  justify-items: center;
+  justify-items: end;
   align-items: start;
 `;
 
 export const Filtros = styled.div`
   border: 1px solid black;
-  width: 320px;
+  width: 250px;
   height: 60vh;
   margin-top: 50px;
-  margin-left: 20px;
   border-radius: 15px;
   background-color: white;
   border: none;
@@ -21,6 +20,9 @@ export const Filtros = styled.div`
     font-size: 1.3em;
     padding: 1em 1em;
     font-weight: bold;
+    background-color: #ffd100;
+    border-radius: 15px 15px 0 0; 
+    margin-bottom: 15px;
   };
 
   .filtro-min, .filtro-max{
@@ -32,7 +34,7 @@ export const Filtros = styled.div`
   }
 
   input{
-    width: 75%;
+    width: 90%;
     background: #fff 0 0 no-repeat padding-box;
     border: 1px solid #dfdfdf;
     border-radius: 10px;
@@ -40,3 +42,17 @@ export const Filtros = styled.div`
     outline: none;
   }
 `;
+
+export const ClearFilters = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+
+  button{
+    width: 80%;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+` 

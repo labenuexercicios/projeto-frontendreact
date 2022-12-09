@@ -1,4 +1,4 @@
-import { FiltroContainer, Filtros } from "./style";
+import { ClearFilters, FiltroContainer, Filtros } from "./style";
 
 function Filtro(props) {
   const onChangeMinPrice = (e) => {
@@ -8,6 +8,11 @@ function Filtro(props) {
   const onChangeMaxPrice = (e) => {
     props.setMaxPrice(e.target.value);
   };
+
+  const clearFilters = () => {
+    props.setMinPrice("")
+    props.setMaxPrice("")
+  }
 
   return (
     <FiltroContainer>
@@ -34,6 +39,10 @@ function Filtro(props) {
             />
           </label>
         </div>
+
+        <ClearFilters>
+          <button onClick={clearFilters}>Limpar filtros</button>
+        </ClearFilters>
       </Filtros>
     </FiltroContainer>
   );

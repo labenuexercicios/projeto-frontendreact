@@ -17,7 +17,7 @@ function CardCart(props) {
             <h4>{priceFormatter.format(props.product.price)}</h4>
           </div>
 
-          <div className="card-carting">
+          <div className="card-quantity-button">
             {
               product.quantity > 1 && <button onClick={() => decreaseQuantityInCart(product)}>-</button>
             }
@@ -25,7 +25,7 @@ function CardCart(props) {
             <button onClick={() => increaseQuantityInCart(product)}>+</button>
           </div>
 
-          <div className="card-delete">
+          <div className="card-delete-button">
             <button onClick={() => deleteFromCart(product)}><FaTrash/></button>
           </div>
       </Card>

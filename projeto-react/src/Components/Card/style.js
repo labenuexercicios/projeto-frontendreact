@@ -59,13 +59,6 @@ export const Legenda = styled.div`
     }
   }
 
-  .top-basket-icon {
-    margin-bottom: 3px;
-    margin-right: 5px;
-    width: 19px;
-    height: 17px;
-  }
-
   button{
     width: 60%;
     height: 36px;

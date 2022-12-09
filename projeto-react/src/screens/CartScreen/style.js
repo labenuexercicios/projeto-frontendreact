@@ -6,23 +6,97 @@ export const AppContainer = styled.div`
   background-color: #f3f3f3;
 `;
 
+export const Header = styled.header`
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(0, 96, 177);
+  outline: 3px solid #ffd100;
+
+  .logo-group{
+    display: flex;
+    align-items: center;
+  }
+
+  .checkout-steps-cart, .checkout-steps-identify{
+    background-color: #ffd100;
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    margin-left: 150px;
+  }
+
+  .checkout-steps-identify{
+    background-color: white;
+    margin-left: 8px;
+  }
+
+  p{
+    color: white;
+    margin-right: 8px;
+  }
+`
+
+export const Logo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  text-align: center;
+  color: white;
+  padding-right: 5px;
+`
+
 export const Main = styled.div`
-  font-weight: 600;
-  font-size: 18px;
+  // font-weight: 600;
+  // font-size: 18px;
   margin-top: 15vh;
   background-color: #f3f3f3;
   margin-bottom: 70px;
   
   .shopping-continue{
+    display: flex;
+    gap: 10px;
     font-weight: 600;
     font-size: 25px;
     margin: 20px 16px;
+
+    :hover{
+      cursor: pointer;
+    }
   }
 
-  .cart-section{
+  section{
     display: flex;
     gap: 2rem;
     padding-left: 16px;
+
+    .cart{
+      display: flex;
+      flex-direction: column;
+
+      .header-cart-section{
+        margin: 20px 0px;
+
+        h3{
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        p{
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 27px;
+        }
+      }
+    }
   }
 
   .cart-products{
@@ -33,6 +107,16 @@ export const Main = styled.div`
     border: 1px solid rgba(var(--lightGrey), 1);
     background-color: #fff;
     border-radius: 15px;
+
+    .header-cart-products{
+      display: flex;
+      justify-content: center;
+      gap: 150px;
+      margin-left: 400px;
+      margin-right: 50px;
+      padding: 20px 0px;
+      font-weight: 600;
+    }
   }
 
   .total-products{
@@ -58,13 +142,13 @@ export const Main = styled.div`
     span:nth-child(2n){
       padding-left: 40px;
     }
-  }
 
-  hr{
-    margin-top: 20px;
-    margin-bottom: 15px;
-    border: 1px solid rgb(0,96,177);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    hr{
+      margin-top: 20px;
+      margin-bottom: 15px;
+      border: 1px solid rgb(0,96,177);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
 
   .card-type{
@@ -79,7 +163,7 @@ export const Main = styled.div`
     width: 100%;
     height: 40px;
     border-radius: 6px;
-    outline: none
+    outline: none;
 }
 
   input::placeholder{
