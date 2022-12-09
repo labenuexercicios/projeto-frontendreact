@@ -41,4 +41,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - React
 - React Icons
+- Styled-components
 
