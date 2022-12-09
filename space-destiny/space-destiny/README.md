@@ -1,0 +1,1 @@
+Esse é o projeto de introdução aos fundamentos do React, o objetivo é que funcione como o front-end de um E-Commerce, e algumas ferramentas utilizadas foram: Redux Toolkit e react-toastify.

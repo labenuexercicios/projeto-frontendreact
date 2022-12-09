@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Bodoni+Moda:ital,opsz@1,6..96&family=Bungee+Spice&family=Chela+One&family=Eagle+Lake&family=Lobster&family=Mitr:wght@300&family=Rampart+One&family=Rye&family=Titan+One&display=swap');
+
+.product__img{
+    max-height: 310px;
+    max-width: 270px;
+    object-fit: cover;
+}
+.product__item{
+    padding: 15px 12px 12px 15px;
+    background-color: rgba(151, 211, 246, 0.995);
+    border: 1px solid rgba(190, 209, 250, 0.905);
+    display:flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 220px;
+    justify-content: space-around;
+    margin: 100px 1100px 130px 1300px;
+    margin-block-start: 2.9rem;
+    float:left;
+    margin-inline-start: 140px;
+    margin-inline-end: 69px;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 650;
+}
+
+.product__info h3 a{
+    font-size: 1.3rem;
+    color: rgba(7, 22, 106, 0.951);
+    font-weight: 750;
+}
+
+.product__info a:hover{
+    color: rgb(66, 95, 146);
+}
+
+.product__info span{
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+}
+
+.product__card-bottom .price{
+    font-size: 1.0rem;
+    color: rgba(5, 3, 84, 0.951);
+    font-weight: 820;
+}
+
+.product__card-bottom span i{
+    font-size: 0.8rem;
+    padding: 3px;
+    background: var(--card-bg-03);
+    color: rgb(35, 3, 122);
+    border-radius: 60px;
+}
+
+.product__card-bottom h4{
+    font-size: 1.6rem;
+    margin: 55px 37px -190px 20px;
+    bottom: 3000px;
+    color: rgb(2, 14, 104);
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 992px){
+    .product__info h3 a{
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (max-width: 768px){
+    .product__item{
+        margin: 10px 100px 12px 78px;
+        margin-bottom: auto;
+    }
+}
+@media only screen and (max-width: 576px){
+    .product__item{
+      margin: 25px 45px 23px 85px;
+      padding: 15px;
+      margin-left: 22%;
+    }
+  }

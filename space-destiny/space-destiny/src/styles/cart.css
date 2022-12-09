@@ -1,0 +1,51 @@
+
+.table{
+    margin: 12px 532px 25px;
+    padding: auto;
+    width: 605px;
+    line-height: 40px;
+    color: rgb(58, 180, 199);
+    font-weight: 500;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+}
+
+td{
+    margin: 12px 532px 25px;
+    padding: 27px;
+    width: 605px;
+    line-height: 40px;
+    font-weight: 500;
+    font-family: 'Lobster', cursive;
+    font-size: 1.3rem;
+    color: rgb(110, 110, 132);
+}
+
+.table tr td img{
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover;
+}
+
+td i{
+    cursor: pointer;
+    color: rgb(185, 22, 36);
+}
+
+.total__cart h6{
+    margin: 12px 532px 25px;
+    padding: auto;
+    width: 605px;
+    font-weight: 500;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+}
+
+.total__cart span{
+    margin: 12px 532px 25px;
+    padding: auto;
+    width: 605px;
+    font-weight: 500;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+}

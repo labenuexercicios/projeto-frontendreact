@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Lobster&family=Rampart+One&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Eagle+Lake&family=Lobster&family=Rampart+One&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Bungee+Spice&family=Chela+One&family=Eagle+Lake&family=Lobster&family=Rampart+One&family=Rye&family=Titan+One&display=swap');
+
+.hero__section{
+    background-color: rgb(2, 2, 28);
+    font-size: 1.2rem;
+    font-family: 'Akaya Kanadaka', cursive;
+}
+
+.hero_content h2{
+    color: rgb(198, 230, 253);
+    font-size: 1.7rem;
+    font-weight: 590;
+    font-family: 'Rampart One', cursive;
+    margin-left: 41%;
+}
+
+.hero_img img{
+    width: 14%;
+    object-fit: cover;
+    border: 1px solid rgba(106, 106, 110, 0.284);
+    border-radius: 15%;
+    margin-left: 23%;
+    margin-top: -290px;
+}
+
+.hero_content p{
+    color: #fff;
+    line-height: 50px;
+    margin-left: 41%;
+}
+
+.hero__section p:nth-child(1){
+    font-weight: 500;
+}
+
+.buy_btn{
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    margin-block-start: 1.1rem;
+    border-radius: 13px;
+    background: rgb(5, 5, 105);
+    color: rgb(223, 239, 253);
+    font-size: 1rem;
+    line-height: 25px;
+    font-family: 'Chela One', cursive;
+    cursor: pointer;
+    text-decoration-color: none;
+    margin-left: 41%;
+}
+
+.buy_btn a:hover{
+    color: currentColor rgb(206, 230, 251);
+}
+
+.buy_btn a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu{
+    color: rgb(5, 5, 105);
+    font-family: 'Rampart One', cursive;
+    font-size: 17px;
+}
+
+.hero_content{
+    padding-top: 45px;
+}
+
+@media only screen and (max-width: 768px){
+    .hero_img img{
+        width: 200px;
+        height: 308px;
+        margin-left: 3%;
+        top: 0;
+        left: 0;
+    }
+    .section__title{
+        margin-left: 35%;;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .hero_img img{
+    width: 33%;
+    margin-left: 6%;
+}
+
+    .hero_content p{
+    width: auto;
+    margin-left: 56%;
+    line-height: 25px;
+}
+    .hero_content h2{
+        margin-left: 56%;
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+    .buy_btn{
+        margin-left: 56%;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+     .hero_img img{
+        width: 20%;
+        object-fit: cover;
+        margin-left: 12%;
+        height: 295px;
+} 
+
+.hero_content{
+    font-size: 1rem;
+    margin: 8px 150px 8px 8px;
+}
+.section__title{
+    font-size: 1.8rem;
+}
+}

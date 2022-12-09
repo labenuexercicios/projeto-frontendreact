@@ -1,0 +1,16 @@
+
+
+.common__section{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(20, 1, 39, 0.558)),
+    url("../Images/back/star.jpg") no-repeat center center;
+    background-size:cover;
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.common__section h1{
+    color: #fff;
+    font-weight: 620;
+}
