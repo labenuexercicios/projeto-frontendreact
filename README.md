@@ -74,7 +74,18 @@ O projeto possui os seguintes requisitos:
     - [ ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
     - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
     
- ### 
+ ## Utilização
+ 
+ Foram desenvolvidos todos os filtros pedidos nos requisitos: de preço mínimo, preço máximo, busca por nome e um filtro de ordenação por preço.
+ 
+ Para além destes, foram adicionados dois filtros:
+ 
+ - Filtro por categoria: cada produto tem uma categoria única, é possível filtrar por categoria através de um dropdown
+ - Filtro por tamanho radial: cada produto pode ter mais de um tamanho radial. É possível filtrar os produtos por tamanho radial através de caixas checkbox
+ 
+ Existem duas formas de acessar o carrinho (ou escondê-lo):
+ 
+ - Através d
   
  <!-- MARKDOWN LINKS & IMAGES -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
