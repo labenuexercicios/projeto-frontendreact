@@ -4,7 +4,7 @@ import { CartPage } from "./pages/CartPage"
 import MeteoritoDeFerro from "./image/MeteoritoDeFerro.png"
 import EsferaDeGibeao from "./image/EsferaDeGibeao.png"
 import FatiaDeImilac from "./image/FatiaDeImilac.png"
-import { GlobalStyle } from "./globalStyles"
+import { GlobalStyle} from "./globalStyles"
 
 function App() {
 
