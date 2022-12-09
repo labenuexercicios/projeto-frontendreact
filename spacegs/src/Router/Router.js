@@ -14,10 +14,10 @@ import produtos from "../produtos.json"
 export function Router (){
 
     const [valorDoFiltro, setValorDoFiltro] = useState("")
-    const [valorMin, setValorMin] = useState(Infinity)
+    const [valorMin, setValorMin] = useState(-Infinity)
     const [valorMax, setValorMax] = useState(Infinity)
     const [sortProdutos, setSortProdutos] = useState("nome")
-    const [ordem, setOrdem] = useState("cres")
+    const [ordem, setOrdem] = useState("")
     const [carrinho, setCarrinho]= useState([])
 
 

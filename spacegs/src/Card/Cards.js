@@ -94,7 +94,7 @@ export function Cards(props) {
 
 
                     >
-                        <option value="cres">Crescente</option>
+                        <option value="cresc">Crescente</option>
                         <option value="desc">Decrescente</option>
 
 
@@ -132,6 +132,8 @@ export function Cards(props) {
                                 return prod
 
                             }
+
+                            
                             
                         })
                         .filter((prod) => {
@@ -158,11 +160,12 @@ export function Cards(props) {
                         .sort(() => {
                             if (props.ordem === "cres") {
                                 return 0
-                            } else {
+                            }else{
                                 return -1
                             }
 
-                        }).map(itens => {
+                        })
+                        .map(itens => {
 
                             return (
 
