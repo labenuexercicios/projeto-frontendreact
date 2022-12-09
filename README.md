@@ -17,10 +17,7 @@ O Astrodev deixou um testamento e essa foi a herança deixada pra vocês:
 
 ```
 Estudantes do meu coração,
-Estou querendo montar um e-commerce de itens espaciais e vocês serão responsáveis por essa construção. 
-Pretendo montar diferentes linhas de produtos. 
-
-As possíveis linhas de produto são:
+Estou querendo montar um e-commerce de itens espaciais e vocês serão responsáveis por essa construção. Pretendo montar diferentes linhas de produtos. As possíveis linhas de produto são:
 - Satélites antigos;
 - Roupas espaciais;
 - Camisetas com estampas divertidas relacionadas ao espaço;
@@ -28,11 +25,8 @@ As possíveis linhas de produto são:
 - Meteoritos / aerolitos como pedras preciosas;
 - Brinquedos e produtos infantis temáticos;
 - Naves / Foguetes / Ônibus espaciais;
-
-Escolham uma linha dentre essas, e criem um e-commerce de acordo com a lista de requisitos.
-
-**O prazo é até sexta, 23h59.** 
-
+Escolham uma linha dentre essas, e criem um e-commerce de acordo com as especificações.
+O prazo é até sexta, 23h59.
 Att.
 ```
 
