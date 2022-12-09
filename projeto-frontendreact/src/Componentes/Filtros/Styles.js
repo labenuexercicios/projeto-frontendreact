@@ -5,7 +5,8 @@ export const Container = styled.form`
     flex-direction: column;
     gap: 8px;
     margin-right: 1vw;
-    padding: 20px;
+    margin-left: 1vw;
+    padding: 10px;
     height: 47vh;
     width: 16vw;
     color: white;
@@ -16,7 +17,7 @@ export const Container = styled.form`
 
 export const Input = styled.input`
    height: 3vh;
-   width: 13vw;
+   width: 10vw;
 `
 
 export const Label = styled.label`
@@ -30,6 +31,6 @@ export const Label = styled.label`
 
 export const Select = styled.select`
     font-size: 2vh;
-    width: 13.3vw;
+    width: 10vw;
     height: 3vh;
 `

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Input, Label, Select } from "./Styles";
 
-const LadoEsquerdo = (props) => {
+const Filtros = (props) => {
 
   const pesquisar = (e) => {
     props.setBuscar(e.target.value);
@@ -39,4 +39,4 @@ const LadoEsquerdo = (props) => {
     );
 };
 
-export default LadoEsquerdo;
+export default Filtros;

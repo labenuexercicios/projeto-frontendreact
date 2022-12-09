@@ -7,14 +7,13 @@ export const MainContainer = styled.main`
   background-image: url("https://i.pinimg.com/originals/96/48/17/964817c3d30f206246d49bf28ca1a96f.jpg");
   background-attachment: local;
   height: max-content;
-  width: 98.78vw;
 `;
 
 export const Main = styled.main`
     display: flex;
     flex-direction: column;
-    width: 98.78vw;
-    min-height: 87vh;
+    width: 90vw;
+    min-height: 74vh;
     /* max-height: max-content; */
 `;
 
@@ -22,15 +21,16 @@ export const Section = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 58vw;
+    width: 70vw;
     gap: 10px;
     margin-top: 0 auto;
+    margin-bottom: 2vh;
 `;
 
 export const Cards = styled.div`
    display: flex;
    flex-direction: column;
-   width: 15.5rem;
+   width: 17rem;
    height: 60vh;
    background: rgba(255, 255, 255, 0.9);
    border-radius: 15px;
@@ -43,7 +43,7 @@ export const Cards = styled.div`
 `
 
 export const ImagemProduto = styled.img`
-   width: 90%;
+   width: 85%;
    height: 55%;
    margin-top: 2vh;
    &:hover{
@@ -51,7 +51,7 @@ export const ImagemProduto = styled.img`
     transform: scale(1.1); }
 `
 
-export const Nome = styled.p`
+export const Nome = styled.div`
    font-family: 'Signika Negative', sans-serif;
    font-weight: bold;
    display: flex;
@@ -59,11 +59,11 @@ export const Nome = styled.p`
    text-align: center;
    align-items: center;
    justify-content: space-between;
-   margin-top: 1.5vh;
+   margin-top: 2.5vh;
    height: 22vh;
 `
 
-export const Value = styled.p`
+export const Value = styled.div`
    font-family: 'Signika Negative', sans-serif;
    font-size: 1.2rem;
 `

@@ -4,7 +4,7 @@ import { Container, Product, FirstLine, ButtonMais,
 import lixeira from "../../asset/img/lixeira.png"
 
 
-const LadoDireito = ({cartItems, setCartItems}) => {
+const Carrinho = ({cartItems, setCartItems}) => {
 
   const itemsPrice = cartItems.reduce((a, c) => {
     return a + c.qtd * c.valor
@@ -69,11 +69,11 @@ const LadoDireito = ({cartItems, setCartItems}) => {
   return (
     <Container>
       <h2>Carrinho:</h2>
-      <p>Quantidade de itens: {countCartItems}</p>
+      <span>Quantidade de itens: {countCartItems}</span>
       {cartItems.map((itemCarrinho)=> {
         return ( 
-          <Product>
-           <FirstLine key={itemCarrinho.id}>
+          <Product key={itemCarrinho.id}>
+           <FirstLine >
               <Buttons>
                 <ButtonMenos onClick={() => onRemove(itemCarrinho)}>-</ButtonMenos>
                 {itemCarrinho.qtd}x 
@@ -95,4 +95,4 @@ const LadoDireito = ({cartItems, setCartItems}) => {
   );
 };
 
-export default LadoDireito;
+export default Carrinho;

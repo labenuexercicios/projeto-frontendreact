@@ -6,7 +6,7 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 16px;
     padding: 10px;
-    width: 40vw;
+    width: 33vw;
     margin-right: 10px;
     color: white;
     background: rgba(22, 24, 55, 0.9);
@@ -47,7 +47,8 @@ export const ButtonMenos = styled.button`
    }
    &:active{
     background-color: rgba(248, 32, 0, 0.8)
-   }
+   };
+   cursor: pointer;
 `;
 
 export const ButtonMais = styled.button`
@@ -59,7 +60,8 @@ export const ButtonMais = styled.button`
    }
    &:active{
     background-color: #00db00
-   }
+   };
+   cursor: pointer;
    
 `;
 export const Value = styled.div`
@@ -80,8 +82,8 @@ export const Name = styled.div`
 `;
 
 export const ButtonRemove = styled.button`
-   height: 3.5vh;
-   width: 1.5vw;
+   height: 3.8vh;
+   width: 2vw;
    justify-content: center;
    margin-right: 2%;
    border: none;
@@ -91,13 +93,16 @@ export const ButtonRemove = styled.button`
    }
    &:active{
     background-color: rgba(248, 32, 0, 0.8)
-   }
+   };
+   cursor: pointer;
 `
 
 export const Img = styled.img`
-   height: 100%;
-   width: 100%;
+   height: 88%;
+   width: 72%;
    border: 6px;
+   padding-right: 2px;
+   padding-top: 4px;
 `
 export const LineEnd = styled.div`
   display: flex;
