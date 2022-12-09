@@ -1,0 +1,81 @@
+[
+    {
+        "name":"Max",
+        "id": 1,
+        "category": "Filmes",
+        "show": "Flight of the Navigator",
+        "price": 250,
+        "description": ["Lorem ipsum dolor sit amet consectetur adipiscing, elit dictumst ridiculus orci. Hendrerit natoque fames nostra nam in mauris odio nascetur class, fermentum sagittis eleifend felis viverra placerat vel purus mus malesuada, turpis volutpat proin fringilla aliquet vestibulum integer consequat."],
+        "image": "https://i.pinimg.com/originals/0c/7b/13/0c7b13dc280caaf174ef04275940d42a.jpg"
+    },
+
+    {
+        "name":"Cubo Borg",
+        "id": 2,
+        "category": "Séries",
+        "show": "Star Trek",
+        "price": 300,
+        "description": ["Pretium cras sociis nunc taciti duis iaculis congue parturient ad ante inceptos malesuada netus varius nam, lobortis nascetur class eleifend cum libero sapien diam mi a pharetra torquent consequat."],
+        "image": "https://w0.peakpx.com/wallpaper/516/267/HD-wallpaper-borg-cube-sf-startrek.jpg"
+    },
+
+    {
+        "name":"Estrela da Morte",
+        "id": 3,
+        "category": "Filmes",
+        "show": "Star Wars",
+        "price": 525,
+        "description": ["Lorem ipsum dolor sit amet consectetur adipiscing, elit dictumst ridiculus orci. Hendrerit natoque fames nostra nam in mauris odio nascetur class, fermentum sagittis eleifend felis viverra placerat vel purus mus malesuada, turpis volutpat proin fringilla aliquet vestibulum integer consequat. "],
+        "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/estrella-de-la-muerte-2-1540977640.jpeg?resize=480:*"
+    },
+
+    {
+        "name":"Coração de Ferro",
+        "id": 4,
+        "category": "Outro",
+        "show": "Guia de Autopista Galático",
+        "price": 150,
+        "description": ["Pretium cras sociis nunc taciti duis iaculis congue parturient ad ante inceptos malesuada netus varius nam, lobortis nascetur class eleifend cum libero sapien diam mi a pharetra torquent consequat."],
+        "image": "https://pbs.twimg.com/media/CaZpNu8UEAImkUj.jpg"
+    },
+
+    {
+        "name": "Ave de Presa Klingon",
+        "id": 5,
+        "category": "Séries",
+        "show": "Star Trek",
+        "price": 350,
+        "description": ["Lorem ipsum dolor sit amet consectetur adipiscing, elit dictumst ridiculus orci. Hendrerit natoque fames nostra nam in mauris odio nascetur class, fermentum sagittis eleifend felis viverra placerat vel purus mus malesuada, turpis volutpat proin fringilla aliquet vestibulum integer consequat."],
+        "image": "https://p4.wallpaperbetter.com/wallpaper/8/503/733/star-trek-klingon-star-trek-wallpaper-preview.jpg"
+    },
+
+    {
+        "name": "A Pipa",
+        "id": 6,
+        "category": "Filmes",
+        "show": "Guardiões da Galáxia",
+        "price": 715,
+        "description": ["Pretium cras sociis nunc taciti duis iaculis congue parturient ad ante inceptos malesuada netus varius nam, lobortis nascetur class eleifend cum libero sapien diam mi a pharetra torquent consequat."],
+        "image": "https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/noticias-cine/chris-pratt-nos-invita-a-su-nave-durante-el-rodaje-de-guardianes-de-la-galaxia-vol.-2/104090746-1-esl-ES/Chris-Pratt-nos-invita-a-su-nave-durante-el-rodaje-de-Guardianes-de-la-galaxia-Vol.-2.jpg?crop=1xw:0.9922480620155039xh;center,top&resize=1200:*"
+    },
+
+    {
+        "name": "USS Enterprise",
+        "id": 7,
+        "category": "Séries",
+        "show": "Star Trek",
+        "price": 250,
+        "description": ["Lorem ipsum dolor sit amet consectetur adipiscing, elit dictumst ridiculus orci. Hendrerit natoque fames nostra nam in mauris odio nascetur class, fermentum sagittis eleifend felis viverra placerat vel purus mus malesuada, turpis volutpat proin fringilla aliquet vestibulum integer consequat. "],
+        "image": "https://www.startrek.com/sites/default/files/styles/content_full/public/images/2019-07/5d44ee6f2c3f71b73125876103c8f6c4.jpg?itok=mG7wPAao"
+    },
+    {
+        "name": "Cruzeiro Espacial",
+        "id": 8,
+        "category": "Outro",
+        "show": "Rick y Morty",
+        "price": 430,
+        "description": ["Pretium cras sociis nunc taciti duis iaculis congue parturient ad ante inceptos malesuada netus varius nam, lobortis nascetur class eleifend cum libero sapien diam mi a pharetra torquent consequat."],
+        "image": "https://www.cultture.com/pics/2021/10/rick-amp-morty-10-preguntas-que-fueron-respondidas-en-la-quinta-temporada-4.webp"
+    }
+
+]
