@@ -1,32 +1,32 @@
 import styled from "styled-components";
 
-export const Cart = styled.div`
-  min-height: 100%;
+export const Container = styled.div`
+  height: 100%;
   width: 100%;
   background-color: rgba(0,0,0,0.6);
   display: flex;
-  justify-content: space-evenly;
+  position: relative;
+  /* border: 1px solid green; */
 `
 export const Items = styled.div`
-  width: 55%;
-  min-height: 100%;
+  width: 65%;
+  height: ${props => props.listCart.length <= 3 ? "100%" : "245%"};
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-top: 40px;
+  padding: 40px 6%;
   /* border: 1px blue solid; */
 `
 export const Infomation = styled.div`
   width: 35%;
-  min-height: 100%;
-  position: static;
-  top: 0;
-  color: white;
+  height: 100%;
   background-color: #202020;
-  div{
-    height: 50%;
-    
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 5px solid blue; */
+  position: sticky;
+  top: 0;
 `
 
 export const EmptyCart = styled.div`

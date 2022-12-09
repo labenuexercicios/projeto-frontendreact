@@ -21,7 +21,6 @@ export const Container = styled.div`
   width: 80%;
   margin: 0 auto;
   max-width: 1200px;
-  /* border: 1px solid red; */
 `
 export const Layout = (props) => {
 

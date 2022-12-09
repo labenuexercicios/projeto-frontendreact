@@ -1,9 +1,9 @@
 import { Layout } from "../../components/Layout/Layout"
-import { Cart, Infomation, Items, EmptyCart } from "./styled"
-import { useEffect, useState, useContext } from "react"
+import { Container, Infomation, Items, EmptyCart } from "./styled"
+import { useContext } from "react"
 import { CardCart } from "../../components/CardCart/CardCart"
 import { GlobalContext } from "../../context/GlobalContext"
-import {priceFormatter} from '../../utils/priceFormatter'
+import { InfoCart } from "../../components/InfoCart/InfoCart"
 
 
 export const CartPage = () => {
@@ -33,20 +33,10 @@ export const CartPage = () => {
     setListCart(ListWithoutItem)
   }
 
-  const [totalCart, setTotalCart] = useState(0);
-  
-  useEffect(()=>{
-    let soma = 0
-    for(let item of listCart){
-      soma += item.quantity * item.price
-    }
-    setTotalCart(soma)
-  },[listCart])
-
   return (
     <Layout>
-      <Cart>
-        <Items>
+      <Container>
+        <Items listCart={listCart}>
         {listCart.length !== 0 ? 
             listCart
             .sort((a,b) => {
@@ -73,14 +63,9 @@ export const CartPage = () => {
           }
         </Items>
         <Infomation>
-          <div>
-            Infos de login
-          </div>
-          <div>
-            <p>Total a pagar: {priceFormatter.format(totalCart)}</p>
-          </div>
+          <InfoCart></InfoCart>
         </Infomation>
-      </Cart>
+      </Container>
     </Layout>
   )
 }
