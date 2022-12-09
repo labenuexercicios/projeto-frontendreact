@@ -16,7 +16,6 @@ function App() {
 
 
   function addToCart(e) {
-    console.log(amountToBuy0)
   }
 
   let products = [
