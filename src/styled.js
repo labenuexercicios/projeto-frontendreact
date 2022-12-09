@@ -24,11 +24,17 @@ export const AsideContent = styled.div`
   padding-top: 30px;
 `;
 
-export const Cart = styled.aside`
+export const CartContainer = styled.aside`
   display: flex;
+  margin-top: 10px;
+  flex-direction: column;
   width: 200px;
-  height: 100px;
-  padding-top: 10px;
+  height: 500px;
+  background-color: white;
+  border-radius: 8px;
+  p {
+    padding-left: 10px;
+  }
 `;
 export const NavFilters = styled.div`
   display: flex;
