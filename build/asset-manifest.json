@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.924acda6.js",
+    "main.js": "/static/js/main.a4ddfa16.js",
     "static/media/astroErroPage.png": "/static/media/astroErroPage.3f188498e07c0da4c7b0.png",
     "static/media/astro-pensante.png": "/static/media/astro-pensante.38dbb375abd6a07d6595.png",
     "static/media/sci-fi-deep-space-background-loop-free-video.jpeg": "/static/media/sci-fi-deep-space-background-loop-free-video.aebf96e02c28ac067140.jpeg",
@@ -14,9 +14,9 @@
     "static/media/elocard.png": "/static/media/elocard.62da193831ea5c3b77a0.png",
     "static/media/trasIcon.svg": "/static/media/trasIcon.b35cba4357bf6a85370cb79671c99ccc.svg",
     "index.html": "/index.html",
-    "main.924acda6.js.map": "/static/js/main.924acda6.js.map"
+    "main.a4ddfa16.js.map": "/static/js/main.a4ddfa16.js.map"
   },
   "entrypoints": [
-    "static/js/main.924acda6.js"
+    "static/js/main.a4ddfa16.js"
   ]
 }
