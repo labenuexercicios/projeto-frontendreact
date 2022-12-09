@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const DivTable=styled.table`
     font-size: 14px;
+    
     .nome{
         font-weight: bold;
     }

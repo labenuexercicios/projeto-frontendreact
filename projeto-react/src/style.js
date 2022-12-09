@@ -5,6 +5,7 @@ export const LayoutApp = styled.div`
     display: grid;
     grid-template-rows: 15vh 70vh;
     gap: 20px;
+    
   
 `
 export const Footer = styled.footer`
@@ -64,8 +65,10 @@ export const Parametros = styled.div`
 
 export const DivCarrinho = styled.div`
 border: 1px solid black;
-height: 200px;
+height: 180px;
+
 padding: 10px;
+
 
 
 `

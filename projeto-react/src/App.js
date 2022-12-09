@@ -141,7 +141,7 @@ const addCarrinho = carrinhoAdd.map((item)=>{
                 return produto.valor <= valorMaximo || valorMaximo === ""
               })
               .filter((produto) => {
-                return produto.nome.includes(nomeProduto)
+                return produto.nome.toLowerCase().includes(nomeProduto.toLowerCase())
               })
               .map(produto => {
               return <Produtos key={produto.id} onClick={()=>{AddProdutoCarrinho(produto.id)}} produto={produto} />
@@ -154,7 +154,7 @@ const addCarrinho = carrinhoAdd.map((item)=>{
         
           <DivCarrinho>
 
-            <h1>Carrinho</h1>
+            <h2>Carrinho</h2>
             {addCarrinho}
             {carrinhoRecuperar}
             <div className='divSoma'>

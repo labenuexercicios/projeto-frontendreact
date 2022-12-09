@@ -1,44 +1,53 @@
+import saturn from "./img/saturn.jpg"
+import galaxy from "./img/galaxy.jpg"
+import spacestation from "./img/spacestation.jpg"
+import moon from "./img/moon.jpg"
+import blackhole from "./img/blackhole.jpg"
+import mars from "./img/mars.jpg"
+
+
+
 export const ListadeProdutos = [
     {
         id: 1,
         nome: "Lua",
-        imagem: "https://i.ibb.co/jvBztyT/1.png",
+        imagem: moon,
         alt: "Lua",
-        valor: 555.000
+        valor: 55000
     },
     {
         id: 2,
         nome: "Saturno",
-        imagem: "https://i.ibb.co/ZHqKCYr/2.png",
+        imagem: saturn,
         alt: "Saturno",
         valor: 1000.0
     },
     {
         id: 3,
         nome: "Estação Internacional Espacial",
-        imagem: "https://ibb.co/GxDzPMH",
+        imagem: spacestation,
         alt: "Estação Espacial",
-        valor: 20.000
+        valor: 20000
     },
     {
         id: 4,
         nome: "Buraco Negro",
-        imagem: "https://i.ibb.co/gmtMtV2/4.png",
+        imagem: blackhole,
         alt: "Buraco Negro",
-        valor: 40.000
+        valor: 40000
     },
     {
         id: 5,
-        nome: "Galáxia de Andrômeda",
-        imagem: "https://i.ibb.co/g9Z0NcC/5.png",
-        alt: "Galáxia de Andrômeda",
-        valor: 42.90
+        nome: "Galáxia Andrômeda",
+        imagem: galaxy,
+        alt: "Galáxia Andrômeda",
+        valor: 600000
     },
     {
         id: 6,
-        nome: "Camiseta 6 - P&B",
-        imagem: "https://i.ibb.co/tQd0kv0/6.png",
-        alt: "Camiseta com desenho de planeta em preto e branco, visto de um local rochoso",
-        valor: 55.90
+        nome: "Planeta Marte",
+        imagem: mars,
+        alt: "Planeta Marte",
+        valor: 30000
     },
 ]

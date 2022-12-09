@@ -5,7 +5,7 @@ export default function SecaoFiltros(props){
        
     return(
         <DivFiltros>
-            <h1>Filtros</h1>
+            <h2>Busque Aqui</h2>
 
             <label>Valor mínimo</label>
             <input placeholder="Insira valor mínimo" type="number" value={props.valorMinimo} onChange={(e)=>{props.setValorMinimo(e.target.value)}}></input>
