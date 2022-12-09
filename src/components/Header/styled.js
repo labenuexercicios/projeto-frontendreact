@@ -7,7 +7,7 @@ export const Container = styled.header`
     align-items: center;
     border-bottom: 2px solid #6C7070;
     border-radius: 0 0 15px 15px;
-
+    width: 100%;
     > .logo{
         margin-left: 10px;
         height: 70px;

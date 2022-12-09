@@ -1,7 +1,7 @@
 import { Container } from "./styled"
 import logo from "../../assets/logo.jpg"
 
-export const Header = (props) => {  
+export const Header = (props) => {
     return (
         <Container>
             <div className="logo">

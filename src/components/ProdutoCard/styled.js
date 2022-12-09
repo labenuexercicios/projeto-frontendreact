@@ -10,27 +10,29 @@ button{
         }
         :active {
             filter: brightness(0.95);
-            border-radius: 30%;
         }
     }
 `
 export const SectionFilter = styled.section`
+display: flex;
 width: 600px;
 margin: 10px;
+margin-left: 10px auto;
     >div{
         height: 350px;
         width: 350px;
         border: 2px solid #6C7070;
         padding: 0 20px;
-
+        box-shadow: -9px 6px 10px 0px rgba(0,0,0,0.25);
         >*{
-            margin-top: 30px;
+            margin-top: 25px;
         }
         
         > .search{
         margin-right: 20px;
 
         > input{
+            background-color: azure;
             margin-left: 10px;
             height: 24px;
             width: 200px;
@@ -117,6 +119,7 @@ export const SectionThings = styled.div`
 `
 
 export const Select = styled.select`
+    background-color: azure;
     margin-left: 10px;
     height: 24px;
     width: 200px;
@@ -126,3 +129,12 @@ export const Select = styled.select`
     padding: 4px;`
 
 
+export const Botao = styled.button`
+    background-color: azure;
+    margin-left: 10px;
+    height: 24px;
+    border: none;
+    border-radius: 7px;
+    padding: 3px;
+    box-shadow: -1px 2px 17px 1px rgba(0,0,0,0.43);
+`

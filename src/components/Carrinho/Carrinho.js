@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Card } from '../ProdutoCard/styled'
 import {
     MainContainer,
@@ -10,26 +10,21 @@ import {
     TituloSoma,
     SectionSoma,
     Quant,
-    ContaSoma
+    ContaSoma,
+    ImgRemover,
+    SpanRemove
 } from './styled'
 import aumentar from "../../assets/aumentar.png"
 import diminuir from "../../assets/diminuir.png"
+import remover from "../../assets/remover.png"
 
-export const Carrinho = ({ carrinho }) => {
-
-    const [soma, setSoma] = useState("")
-
-
-
-    const calcular = carrinho.reduce((a, b) => a.preco + b.preco)
-    console.log(calcular)
-
+export const Carrinho = ({ carrinho, soma, aumentarQuantidade, diminuirQuantidade, removerDoCarrinho, salvar }) => {
     return (
         <MainContainer>
             <SectionContainer>
                 {carrinho.map((produto) => {
                     return (
-                        <Card key={produto.id}>
+                        <Card onLoad={salvar} key={produto.id}>
                             <div>
                                 <SectionImg src={require("../../assets/" + produto.imagem)} alt={produto.alt} />
                             </div>
@@ -45,13 +40,13 @@ export const Carrinho = ({ carrinho }) => {
                             </SectionThings>
                             <AddRemove>
                                 <SpanBotao>
-                                    <button><img src={aumentar} alt="imagem aumentar" /></button>
+                                    {produto.quantidade > 1 ? <button onClick={() => diminuirQuantidade(produto)}><img src={diminuir} alt="imagem diminuir" /></button> : <SpanRemove><button onClick={() => removerDoCarrinho(produto)}><ImgRemover src={remover} alt="remover"></ImgRemover></button></SpanRemove>}
                                 </SpanBotao>
                                 <span>
-                                    <Quant>Quantidade</Quant>
+                                    <Quant>x{produto.quantidade}</Quant>
                                 </span>
                                 <SpanBotao>
-                                    <button><img src={diminuir} alt="imagem diminuir" /></button>
+                                    <button onClick={() => aumentarQuantidade(produto)}><img src={aumentar} alt="imagem aumentar" /></button>
                                 </SpanBotao>
                             </AddRemove>
                         </Card>
@@ -62,16 +57,16 @@ export const Carrinho = ({ carrinho }) => {
                 <div>
                     <div>
                         {carrinho.map((produto) => {
-                            return<ContaSoma key={produto.id}>
-                                <p>{produto.nome}</p>
-                                <p>R${produto.preco.toFixed(2)}</p>
+                            return <ContaSoma key={produto.id}>
+                                <span>{produto.nome}</span>
+                                <br></br>
+                                <span>R${produto.preco.toFixed(2)}</span>
                             </ContaSoma>
                         })}
                     </div>
                     <div>
                         <TituloSoma>Total A pagar</TituloSoma>
-                        <ContaSoma>R${calcular}</ContaSoma>
-                        <button>calcular</button>
+                        <ContaSoma>R${soma ? soma.toFixed(2) : 0}</ContaSoma>
                     </div>
                 </div>
             </SectionSoma>

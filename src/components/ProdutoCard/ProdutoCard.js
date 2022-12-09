@@ -7,7 +7,8 @@ import {
   SectionThings,
   SectionFilter,
   TituloFilter,
-  Select
+  Select,
+  Botao
 } from "./styled"
 import car from "../../assets/carrinho.png"
 import { useState } from "react"
@@ -17,6 +18,12 @@ export const ProdutoCard = (props) => {
   const [alfabeto, setAlfabeto] = useState("ordem")
   const [maximo, setMaximo] = useState("")
   const [minimo, setMinimo] = useState("")
+
+  const limparFiltro = () => {
+    setFiltrado("")
+    setMaximo("")
+    setMinimo("")
+  }
 
   return (
     <MainContainer>
@@ -53,6 +60,9 @@ export const ProdutoCard = (props) => {
               <option value="crescente">Crescente</option>
               <option value="decrescente">Decrescente</option>
             </Select>
+          </div>
+          <div>
+            <Botao onClick={limparFiltro}>Limpar Filtro</Botao>
           </div>
         </div>
 
@@ -95,7 +105,7 @@ export const ProdutoCard = (props) => {
                     {`Preço: R$${produto.preco.toFixed(2)}`}
                   </span>
                   <span>
-                    <button onClick={()=>props.adiconarCarrinho(produto)}><img src={car} alt="imagem carrinho" /></button>
+                    <button onClick={() => props.adiconarCarrinho(produto)}><img src={car} alt="imagem carrinho" /></button>
                   </span>
                 </SectionThings>
               </Card>

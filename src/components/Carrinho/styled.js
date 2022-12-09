@@ -18,6 +18,7 @@ export const SectionContainer = styled.section`
 display:flex;
 justify-content: space-around;
 flex-wrap: wrap;
+
 `
 export const SectionImg = styled.img`
     height: 300px;
@@ -25,6 +26,26 @@ export const SectionImg = styled.img`
     border-bottom: 2px solid #6C7070;
     padding-top: 20px;
 `
+export const ImgRemover = styled.img`
+    height: 30px;
+    width: 30px;
+`
+export const SpanRemove = styled.span`
+    >button{ 
+        height: 35px;
+        width: 35px;    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    :active{
+            border-radius:50%;
+            filter: brightness(0.80);
+        }
+    }
+        
+`
+
 export const Card = styled.section`
     overflow: hidden;
     display: flex;
@@ -83,20 +104,26 @@ justify-content: space-around;
     }
 `
 
-export const Quant =styled.p`
+export const Quant = styled.p`
     color: #6C7070;
     font-style: oblique;
     font-weight: bold;
     display: flex;
     justify-content: center;
     padding-top: 8px;
+    width: 200px;
+    align-items: center;
 `
 
 export const AddRemove = styled.div`
 display: flex;
-justify-content: space-between;
-width: 280px;
+width: 200px;
 padding-bottom: 20px;
+justify-content: space-around;
+
+    >span{
+        justify-content: center;
+    }
 `
 
 export const SectionSoma = styled.section`
