@@ -1,5 +1,5 @@
 #first-row{
-    background-image: url("../public/night-sky.png");
+    background-image: url("/night-sky.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 150px;

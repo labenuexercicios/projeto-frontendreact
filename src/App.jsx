@@ -55,7 +55,7 @@ function App() {
       <div id="first-row">
         <Kerbonaut />
         <div id="logo-container">
-          <img src="/jebs-garage-logo.svg" />
+          <img src="/jebs-garage-logo.svg" alt="Jeb's Garage Logo" />
         </div>
       </div>
       <div id="see-cart-container">
