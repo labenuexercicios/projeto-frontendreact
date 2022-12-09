@@ -28,6 +28,7 @@
         <li><a href="#filtros">Filtros</a></li>
         <li><a href="#carrinho">Carrinho</a></li>
       </ul>
+    <li><a href="#licença">Licença</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="#contribuições">Contribuições</a></li>
   </ol>
@@ -137,6 +138,13 @@ O projeto possui os seguintes requisitos:
  ![Cart](public/cart.png)
  
  <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+ 
+<!-- LICENSE -->
+## Licença
+
+Distribuído sob a MIT License. Veja `LICENSE.txt` para mais informações.
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
  
  <!-- CONTATO -->
  ## Contato
