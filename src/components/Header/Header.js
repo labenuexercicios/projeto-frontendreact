@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Cart, CartButton } from "./styles";
+import { Container,  } from "./styles";
 
-const Header = (props) => {
+const Header = () => {
  
     return (
     <Container>
