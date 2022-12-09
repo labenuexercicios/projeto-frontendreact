@@ -24,6 +24,8 @@ O objetivo é que o projeto funcione como o front-end de um E-commerce, trabalha
 - Renderização condicional
 - localStorage
 
+A temática escolhida para o projeto foi relacionada ao jogo [Kerbal Space Program](https://pt.wikipedia.org/wiki/Kerbal_Space_Program).
+
 <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
 ### Feito com
@@ -74,7 +76,11 @@ O projeto possui os seguintes requisitos:
     - [ ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
     - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
     
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+    
  ## Utilização
+ 
+ ### Filtros
  
  Foram desenvolvidos todos os filtros pedidos nos requisitos: de preço mínimo, preço máximo, busca por nome e um filtro de ordenação por preço.
  
@@ -88,6 +94,8 @@ O projeto possui os seguintes requisitos:
  
  ![Checkboxes](public/checkbox-print.png)
  
+ ### Carrinho
+ 
  Existem duas formas de acessar o carrinho (ou escondê-lo):
  
  - Clicando-se na opção "see/hide cart" no canto superior direito da página:
@@ -98,9 +106,38 @@ O projeto possui os seguintes requisitos:
 
  ![Cart arrow](public/arrow-see-card-print.png)
  
- Uma vez acessado, o carrinho terá essa aparência:
+ Uma vez acessado, o carrinho terá a seguinte aparência:
+ 
+ ![Cart](public/cart.png)
+ 
+ <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+ 
+ ## Contato
+
+[![Github][github-shield]][github-url][![Linkedin][linkedin-shield]][linkedin-url]
+
+Link do Projeto: [https://github.com/vitorfontenele/projeto-frontendreact](https://github.com/vitorfontenele/projeto-frontendreact)
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+ 
+ ## Contribuições
+
+* [Vite](https://vitejs.dev)
+* [Surge](https://surge.sh/)
+* [Kerbal Space Program Wiki](https://wiki.kerbalspaceprogram.com/wiki/Parts)
+* [HTML Table to JSON Converter](https://www.convertjson.com/html-table-to-json.htm)
+* [Font Awesome](https://fontawesome.com)
+* [SVG Repo](svgrepo.com)
+* [Unsplash](unsplash.com)
+* [Tutorial de React – Como trabalhar com várias caixas de seleção](https://www.freecodecamp.org/portuguese/news/tutorial-de-react-como-trabalhar-com-varias-caixas-de-selecao/)
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
   
  <!-- MARKDOWN LINKS & IMAGES -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-url]: https://www.linkedin.com/in/vitor-fontenele/
+[github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[github-url]: https://github.com/vitorfontenele
 
