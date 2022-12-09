@@ -124,7 +124,7 @@ function App() {
           setCartItems={setCartItems}
           />
         </MainContainer>
-         <Footer />
+        <Footer />
     </>
   );
 }

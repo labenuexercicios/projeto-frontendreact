@@ -1,34 +1,35 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 10px;
-    width: 33vw;
-    margin-right: 10px;
-    color: white;
-    background: rgba(22, 24, 55, 0.9);
-    border-radius: 30px;
-    font-family: 'Signika Negative', sans-serif;
+   height: max-content;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   padding: 10px;
+   width: 33vw;
+   margin-right: 10px;
+   color: white;
+   background: rgba(22, 24, 55, 0.9);
+   border-radius: 30px;
+   font-family: 'Signika Negative', sans-serif;
+   margin-bottom: 2vh;
 `;
 
 export const Product = styled.div`
-    border: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
-    width: 22vw;
-    background: white;
-    color: black;
-    align-items: center;
-    border-radius: 8px;
+   border: 1px solid #000;
+   display: flex;
+   justify-content: space-between;
+   width: 22vw;
+   background: white;
+   color: black;
+   align-items: center;
+   border-radius: 8px;
 `;
 
 export const FirstLine = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    gap: 0.4vw;
+   display: flex;
+   justify-content: flex-start;
+   gap: 0.4vw;
 `;
 
 export const Buttons = styled.div`
@@ -66,9 +67,10 @@ export const ButtonMais = styled.button`
 `;
 export const Value = styled.div`
    margin-left: 1%;
-   width: 4vw;
+   width: 5.6vw;
    font-size: 0.75rem;
    font-weight: bold;
+   text-align: center;
 `;
 
 export const Name = styled.div`

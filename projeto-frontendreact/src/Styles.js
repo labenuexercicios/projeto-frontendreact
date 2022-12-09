@@ -13,15 +13,14 @@ export const Main = styled.main`
     display: flex;
     flex-direction: column;
     width: 90vw;
-    min-height: 74vh;
-    /* max-height: max-content; */
+    min-height: 77vh;
 `;
 
 export const Section = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70vw;
+    width: 61.5vw;
     gap: 10px;
     margin-top: 0 auto;
     margin-bottom: 2vh;
@@ -59,7 +58,7 @@ export const Nome = styled.div`
    text-align: center;
    align-items: center;
    justify-content: space-between;
-   margin-top: 2.5vh;
+   margin: 2vh;
    height: 22vh;
 `
 

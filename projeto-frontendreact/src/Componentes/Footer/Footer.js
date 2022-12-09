@@ -1,13 +1,17 @@
 import React from "react";
-import { Container } from "./Styles";
-
+import { Container, Name, Img, ImgGitHub, ImgLinKedin } from "./Styles";
+import GitHub from "../../asset/img/GitHub.jpg"
+import LinKedin from "../../asset/img/Linkedin.jpeg"
 
 const Footer = () => {
 
-  
     return (
       <Container>
-       <h3>Loja dos Brinquedos Espaciais</h3>
+       <Name>Criado por: Heytor de Souza</Name>
+       <Img>
+        <ImgGitHub href="https://github.com/Heytordesouza" target="_blank"><img src={GitHub} alt="GitHub"></img></ImgGitHub>
+        <ImgLinKedin href="https://www.linkedin.com/in/heytor-de-souza" target="_blank"><img src={LinKedin} alt="LinKedin"></img></ImgLinKedin>
+       </Img>
       </Container>
     );
 };
