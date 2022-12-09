@@ -43,3 +43,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - React Icons
 - Styled-components
 
+#### Demonstração
+
+[Link de Demonstração](https://spaceland-toys.surge.sh/)
+
+##### Pessoas Autoras
+
+[Linkedin](https://www.linkedin.com/in/giovana-ferreira-tiburtino-475486216/)
