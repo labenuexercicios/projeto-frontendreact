@@ -63,7 +63,7 @@ align-items: center;
   border: hidden;
   box-shadow: 10px 10px 10px grey;
   
-  background-image: radial-gradient(circle at 0% 0%, #c193fd 0, #9b77e9 50%, #725dd5 100%);
+  /* background-image: radial-gradient(circle at 0% 0%, #c193fd 0, #9b77e9 50%, #725dd5 100%); */
 
 font-size: 15px;
 font-family: 'Kdam Thmor Pro', sans-serif;
@@ -87,8 +87,7 @@ cursor: pointer;
 font-size: 20px;
 font-family: 'Kdam Thmor Pro', sans-serif;
 /* background-image: url("https://images.unsplash.com/photo-1513628253939-010e64ac66cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80") ; */
-height: 544px;
-color:black;
+height: 80vh;
 align-items: center;
 display: flex;
 justify-content: center;
@@ -102,9 +101,9 @@ margin:0;
 
 }
 
-h1{
-color: black;
-border-radius: 10px 10px 20px;
+.h1{
+color: white;
+
 padding: 10px;
 /* background-color: rgba(10,23,55,0.5); */
 margin-bottom:1px;
@@ -119,7 +118,7 @@ background-image: radial-gradient(circle at 0% 0%, #c193fd 0, #9b77e9 50%, #725d
 }
 
 h4{
-color: black;
+color: white;
 border-radius: 20px 10px ;
 padding: 20px;
 /* background-color: rgba(10,23,55,0.5); */
