@@ -8,6 +8,31 @@
   <a href="https://jebs-garage.surge.sh/">https://jebs-garage.surge.sh/</a>
 </div>
 
+<!-- Conteúdo -->
+<details>
+  <summary>Conteúdo</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#feito-com">Feito com</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#instalação">Instalação</a>
+    </li>
+    <li><a href="#requisitos">Requisitos</a></li>
+    <li>
+      <a href="#utilização">Utilização</a></li>
+      <ul>
+        <li><a href="#filtros">Filtros</a></li>
+        <li><a href="#carrinho">Carrinho</a></li>
+      </ul>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#contribuições">Contribuições</a></li>
+  </ol>
+</details>
+
 <!-- SOBRE O PROJETO -->
 ## Sobre o projeto
 
@@ -53,7 +78,7 @@ A temática escolhida para o projeto foi relacionada ao jogo [Kerbal Space Progr
 <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
 
-
+<!-- REQUISITOS -->
 ## Requisitos
 
 O projeto possui os seguintes requisitos:
@@ -77,7 +102,8 @@ O projeto possui os seguintes requisitos:
     - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
     
 <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
-    
+
+ <!-- UTILIZAÇÃO -->   
  ## Utilização
  
  ### Filtros
@@ -112,6 +138,7 @@ O projeto possui os seguintes requisitos:
  
  <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
  
+ <!-- CONTATO -->
  ## Contato
 
 [![Github][github-shield]][github-url][![Linkedin][linkedin-shield]][linkedin-url]
@@ -120,6 +147,7 @@ Link do Projeto: [https://github.com/vitorfontenele/projeto-frontendreact](https
 
 <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
  
+  <!-- CONTRIBUIÇÕES -->
  ## Contribuições
 
 * [Vite](https://vitejs.dev)
