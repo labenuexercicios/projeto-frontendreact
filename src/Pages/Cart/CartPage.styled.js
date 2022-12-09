@@ -1,18 +1,15 @@
 import styled from "styled-components";
 
+export const CartPageStyle = styled.div`
+    display: flex;
 
-
+`
 export const ContainerCart = styled.main`
     /* border: 2px solid red; */
     min-height: 82vh;
     width: 80%;
     display: flex;
     flex-direction: column;
-`
-
-export const CartPageStyle = styled.div`
-    display: flex;
-
 `
 export const FinalCart = styled.div`
     /* border: 2px solid blue; */
@@ -40,6 +37,7 @@ export const FinalCart = styled.div`
         border-radius: 8px;
         color: whitesmoke;
         box-shadow: 2px 4px 26px -3px rgba(255,255,255,1);
+        cursor: pointer;
     }
 
     img{

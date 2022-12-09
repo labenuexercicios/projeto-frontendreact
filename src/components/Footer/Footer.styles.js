@@ -8,7 +8,6 @@ export const MainFooter = styled.main`
   justify-content: center;
   align-items: center;
 `
-
 export const ContainerFooter = styled.footer`
   /* border: 2px solid white; */
   width: 80%;
@@ -20,17 +19,14 @@ export const ContainerFooter = styled.footer`
   align-items: center;
   padding: 10px;
 `
-
 export const ImageFooter = styled.div`
   /* border: 2px solid red; */
   display: flex;
 `
-
 export const Github = styled.img`
   width: 2.6vw;
   height: 5vh;
 `
-
 export const Likedin = styled.img`
   width: 2.7vw;
   height: 5vh;

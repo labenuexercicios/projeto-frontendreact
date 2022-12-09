@@ -30,6 +30,23 @@ export const DescricaoProduto = styled.div`
   color: white;
   
 `
+export const ChoosenSize = styled.p`
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 8px;
+
+  select{
+    width: 3vw;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+
+    /* option{
+      background: rgba(0, 0, 0, 0);
+      color: black;
+    } */
+  }
+`
 export const PriceCard = styled.div`
   /* border: 2px solid red; */
   display: flex;
@@ -49,6 +66,15 @@ export const PriceCard = styled.div`
     font-size: 38px;
   }
 `
+export const QuantityRemove = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  button{
+    cursor: pointer;
+  }
+`
 export const QuantityProduct = styled.div`
     /* border: 2px solid blue; */
     display: flex;
@@ -60,29 +86,4 @@ export const QuantityProduct = styled.div`
       font-size: 16px;
       width: 2vw;
     }
-`
-
-export const QuantityRemove = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`
-
-export const ChoosenSize = styled.p`
-  /* border: 2px solid red; */
-  display: flex;
-  gap: 8px;
-
-  select{
-    width: 3vw;
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    color: white;
-
-    /* option{
-      background: rgba(0, 0, 0, 0);
-      color: black;
-    } */
-  }
-
 `

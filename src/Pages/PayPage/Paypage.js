@@ -32,7 +32,11 @@ import {
   ButtonAddCard,
   InputCvv,
   ContainerAddCard,
-  ContainerTypeCard
+  ContainerTypeCard,
+  PayUserInfo,
+  TypingCard,
+  InfoCardExist,
+  NameCard
 } from './PayPage.styled'
 import trashIcon from '../../assets/trasIcon.svg'
 import { useForm } from '../../hook/useForm'
@@ -45,6 +49,7 @@ import eloCard from '../../assets/elocard.png'
 export const PayPage = () => {
 
   const context = useContext(GlobalContext)
+  const navigate = useNavigate()
   const { cart,
     increaseQuantityInCart,
     decreaseQuantityInCart,
@@ -55,21 +60,17 @@ export const PayPage = () => {
     users
   } = context
 
-  const navigate = useNavigate()
   const [switchMethod, setSwitchMethod] = useState("CardExist")
+  const [form, onChangeForm, clearFrom] = useForm({ cardNumber: "", nameCard: "", dateExp: "", securityCvv: "" })
+  const cardFromLocalStorage = JSON.parse(localStorage.getItem("card") || "[]")
+  const [card, setCard] = useState(cardFromLocalStorage)
 
   const goToAddCard = () => setSwitchMethod("AddCard")
   const goToCardExist = () => setSwitchMethod("CardExist")
 
-  const [form, onChangeForm] = useForm({ cardNumber: "", nameCard: "", dateExp: "", securityCvv: "" })
-
-  const cardFromLocalStorage = JSON.parse(localStorage.getItem("card") || "[]")
-  const [card, setCard] = useState(cardFromLocalStorage)
-
-    useEffect(()=>{
-        localStorage.setItem("card", JSON.stringify(card))
-      }, [card])
-
+  useEffect(() => {
+    localStorage.setItem("card", JSON.stringify(card))
+  }, [card])
 
   const handleClick = (event) => {
     event.preventDefault()
@@ -78,54 +79,58 @@ export const PayPage = () => {
     setCard(newCard)
     localStorage.setItem("card", JSON.stringify(newCard))
     goToCardExist()
+    clearFrom()
   }
 
-  // const removeProductCard = (cardToRemove) =>{
-  //   const newCard = [...card]
-  //   const productRemove = newCard.find ((cardInCard)=> cardInCard.cardNumber === cardToRemove.cardNumber)
-  //   const productRemoveIndex = newCard.findIndex ((cardInCard)=> cardInCard.cardNumber === cardToRemove.cardNumber)
-  //   console.log(productRemove)
-  //   newCard.splice(productRemoveIndex, 1)
-  //   setCard(newCard)
-  // }
+  const removeProductCard = (cardToRemove) => {
+    const newCard = [...card]
+    const productRemove = newCard.find((cardInCard) => cardInCard.cardNumber === cardToRemove.cardNumber)
+    const productRemoveIndex = newCard.findIndex((cardInCard) => cardInCard.cardNumber === cardToRemove.cardNumber)
+    console.log(productRemove)
+    newCard.splice(productRemoveIndex, 1)
+    setCard(newCard)
+  }
 
-  const renderTypeCard = (card)=>{
-    if((4500000000000000 > card.cardNumber) && (card.cardNumber >= 400000000000000)){
+  const renderTypeCard = (card) => {
+    if ((4500000000000000 > card.cardNumber) && (card.cardNumber >= 400000000000000)) {
       console.log(`primeiro case`)
       return <img src={visaCard} alt="Imagem Cartão" />
-    } else if ((5000000000000000 > card.cardNumber) && (card.cardNumber >= 4500000000000000)){
+    } else if ((5000000000000000 > card.cardNumber) && (card.cardNumber >= 4500000000000000)) {
       return <img src={masterCard} alt="Imagem Cartão" />
-    } else if ((5500000000000000 > card.cardNumber) && (card.cardNumber >= 5000000000000000)){
+    } else if ((5500000000000000 > card.cardNumber) && (card.cardNumber >= 5000000000000000)) {
       return <img src={eloCard} alt="Imagem Cartão" />
-    } else{
+    } else {
       console.log('seu cartão não existe')
-    }}
-
+    }
+  }
 
   const renderMethod = () => {
     switch (switchMethod) {
       case "CardExist":
         return <>
-          <CardUserInfo>
-            <Title>02 Método de Pagamento</Title>
-            {card.map((cardInfo)=>{
+          <PayUserInfo>
+            <HeaderPayment>
+              <Title>02 Método de Pagamento</Title>
+              <ButtonChange onClick={goToAddCard}>Mudar</ButtonChange>
+            </HeaderPayment>
+            {card.map((cardInfo) => {
               return (
-                <InfoCard>
-                <CardInfo>
-                  {renderTypeCard(cardInfo)}
-                  {/* <img src={visaCard} alt="Imagem Cartão" /> */}
-                  <span> Visa final {cardInfo.cardNumber % 10000}</span>
-                </CardInfo>
-                <BillingInfo>
-                  <p>Endereço de cobrança:</p>
-                  <span>O mesmo endereço de entrega.</span>
-                </BillingInfo>
-              </InfoCard>
+                <InfoCardExist>
+                  <CardInfo>
+                    {renderTypeCard(cardInfo)}
+                    {/* <img src={visaCard} alt="Imagem Cartão" /> */}
+                    <span> Visa final {cardInfo.cardNumber % 10000}</span>
+                  </CardInfo>
+                  <BillingInfo>
+                    <p>Endereço de cobrança:</p>
+                    <span>O mesmo endereço de entrega.</span>
+                  </BillingInfo>
+                </InfoCardExist>
               )
             })
             }
-            <ButtonChange onClick={goToAddCard}>Mudar</ButtonChange>
-          </CardUserInfo>
+
+          </PayUserInfo>
           <hr /></>
       case "AddCard":
         return <>
@@ -135,105 +140,102 @@ export const PayPage = () => {
               <ButtonClose onClick={goToCardExist}>Fechar</ButtonClose>
             </HeaderPayment>
             {
-              card.map((cardInfo)=>{
+              card.map((cardInfo) => {
                 return (<ExistingCard>
-              <TypeOfCard>
-                <img src={visaCard} alt="Card Image" />
-                <span>Visa finalizando {cardInfo.cardNumber % 10000}</span>
-              </TypeOfCard>
-              <div>
-                <p>Nome no Cartão</p>
-                <p>{cardInfo.nameCard}</p>
-              </div>
-              <RemoveCard
-                // onClick={()=>removeProductCard(card)} 
-                src={trashIcon} alt="Trash Remove" />
-              <DateExp>
-                <p>Expirado em</p>
-                <p>{cardInfo.dateExp}</p>
-              </DateExp>
-            </ExistingCard>)
+                  <TypeOfCard>
+                    {renderTypeCard(cardInfo)}
+                    <span>Visa finalizando {cardInfo.cardNumber % 10000}</span>
+                  </TypeOfCard>
+                  <div>
+                    <p>Nome no Cartão</p>
+                    <p>{cardInfo.nameCard}</p>
+                  </div>
+                  <RemoveCard
+                    onClick={() => removeProductCard(cardInfo)}
+                    src={trashIcon} alt="Trash Remove" />
+                  <DateExp>
+                    <p>Expirado em</p>
+                    <p>{cardInfo.dateExp}</p>
+                  </DateExp>
+                </ExistingCard>)
               })
             }
-            <ExistingCard>
+            <TypingCard>
               <TypeOfCard>
-                <img src={visaCard} alt="Card Image" />
+                {renderTypeCard(form)}
                 <span>Visa finalizando {form.cardNumber % 10000}</span>
               </TypeOfCard>
               <div>
-                <p>Nome no Cartão</p>
-                <p>{form.nameCard}</p>
+                <NameCard>Nome no Cartão</NameCard>
+                <NameCard>{form.nameCard}</NameCard>
               </div>
-              <RemoveCard
-                // onClick={()=>removeProductCard(card)} 
-                src={trashIcon} alt="Trash Remove" />
               <DateExp>
                 <p>Expirado em</p>
                 <p>{form.dateExp}</p>
               </DateExp>
-            </ExistingCard>
+            </TypingCard>
             <LinhaShort></LinhaShort>
             <ContainerAddCard>
-                <ContainerForm onSubmit={handleClick}>
-                  <LabelInput>
-                    <FormLabel for="cardNumber">Número do cartão:</FormLabel>
-                    <Input
-                      id="cardNumber"
-                      type="card"
-                      value={form.cardNumber}
-                      name="cardNumber"
-                      onChange={onChangeForm}
-                      maxLength={16}
-                      required
-                    />
-                  </LabelInput>
-                  <LabelInput>
-                    <FormLabel for="nameCard">Nome no cartão:</FormLabel>
-                    <Input
-                      id="nameCard"
-                      type="text"
-                      value={form.nameCard}
-                      name="nameCard"
-                      onChange={onChangeForm}
-                      // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                      required
-                    />
-                  </LabelInput>
-                  <LabelInput>
-                    <FormLabel for="dateExp">Data de Expiração:</FormLabel>
-                    <Input
-                      id="dateExp"
-                      type="month"
-                      format="mm/aaaa"
-                      value={form.dateExp}
-                      name="dateExp"
-                      onChange={onChangeForm}
-                      // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                      required
-                    />
-                  </LabelInput>
-                  <LabelInput>
-                    <FormLabel for="securityCvv">Cód. Segurança - CVV/CVC:</FormLabel>
-                    <InputCvv
-                      id="securityCvv"
-                      type="number"
-                      value={form.securityCvv}
-                      name="securityCvv"
-                      onChange={onChangeForm}
-                      required
-                    />
-                  </LabelInput>
-                  <ButtonAddCard>Adicionar</ButtonAddCard>
-                </ContainerForm>
-                <ContainerTypeCard>
-                  <p>Astro Tshirts aceita alguns tipo bandeira de cartão de crédito e débito: </p>
-                  <div>
-                    <img src={visaCard} alt="Visa card" />
-                    <img src={masterCard} alt="Master card" />
-                    <img src={eloCard} alt="Elo card" />
-                  </div>
-                </ContainerTypeCard>
-              </ContainerAddCard>
+              <ContainerForm onSubmit={handleClick}>
+                <LabelInput>
+                  <FormLabel for="cardNumber">Número do cartão:</FormLabel>
+                  <Input
+                    id="cardNumber"
+                    type="card"
+                    value={form.cardNumber}
+                    name="cardNumber"
+                    onChange={onChangeForm}
+                    maxLength={16}
+                    required
+                  />
+                </LabelInput>
+                <LabelInput>
+                  <FormLabel for="nameCard">Nome no cartão:</FormLabel>
+                  <Input
+                    id="nameCard"
+                    type="text"
+                    value={form.nameCard}
+                    name="nameCard"
+                    onChange={onChangeForm}
+                    // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    required
+                  />
+                </LabelInput>
+                <LabelInput>
+                  <FormLabel for="dateExp">Data de Expiração:</FormLabel>
+                  <Input
+                    id="dateExp"
+                    type="month"
+                    format="mm/aaaa"
+                    value={form.dateExp}
+                    name="dateExp"
+                    onChange={onChangeForm}
+                    // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    required
+                  />
+                </LabelInput>
+                <LabelInput>
+                  <FormLabel for="securityCvv">Cód. Segurança - CVV/CVC:</FormLabel>
+                  <InputCvv
+                    id="securityCvv"
+                    type="number"
+                    value={form.securityCvv}
+                    name="securityCvv"
+                    onChange={onChangeForm}
+                    required
+                  />
+                </LabelInput>
+                <ButtonAddCard>Adicionar</ButtonAddCard>
+              </ContainerForm>
+              <ContainerTypeCard>
+                <p>Astro Tshirts aceita alguns tipo bandeira de cartão de crédito e débito: </p>
+                <div>
+                  <img src={visaCard} alt="Visa card" />
+                  <img src={masterCard} alt="Master card" />
+                  <img src={eloCard} alt="Elo card" />
+                </div>
+              </ContainerTypeCard>
+            </ContainerAddCard>
           </CardPaymentAdd>
           <hr /></>
       default:
@@ -247,16 +249,14 @@ export const PayPage = () => {
         <ContainerCart>
           <CardUserInfo>
             <Title>01 Endereço de Entrega</Title>
-            {
-              users.map((user) => {
-                return <InfoCard key={user.id}>
-                  <p>{user.name}</p>
-                  <p>{user.address}</p>
-                  <p>{user.district}</p>
-                  <p>{user.city}, {user.state} {user.zipCode}</p>
-                </InfoCard>
-              })
-            }
+            {users.map((user) => {
+              return <InfoCard key={user.id}>
+                <p>{user.name}</p>
+                <p>{user.address}</p>
+                <p>{user.district}</p>
+                <p>{user.city}, {user.state} {user.zipCode}</p>
+              </InfoCard>
+            })}
             {/* <ButtonChange>Mudar</ButtonChange> */}
           </CardUserInfo>
           <hr />

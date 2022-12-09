@@ -18,7 +18,6 @@ export const ImagemProduto = styled.img`
   align-self: center;
   margin-top: 20px;
 `
-
 export const DescricaoProduto = styled.div`
   /* border: 2px solid red; */
   display: flex;
@@ -47,8 +46,9 @@ export const SizeAddButton = styled.div`
     justify-content: space-between;
     width: 8vw;
     gap: 8px;
-
+    
     button{
       font-size: 12px;
+      cursor: pointer;
     }
 `

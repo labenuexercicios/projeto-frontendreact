@@ -18,7 +18,6 @@ const CartPage = () => {
     totalQuantity,
     total,
     frete,
-
   } = context
 
   const navigate = useNavigate()
@@ -41,8 +40,8 @@ const CartPage = () => {
 
   return (
     <Layout
-    totalQuantity={totalQuantity} 
-    cart={cart}
+      totalQuantity={totalQuantity}
+      cart={cart}
     >
       <CartPageStyle>
         <ContainerCart>
@@ -55,7 +54,6 @@ const CartPage = () => {
                 removeProductCart={removeProductCart}
               /><hr /></div>
             })}
-
         </ContainerCart>
         <FinalCart>
           <img src={astroCart} alt="Astrounauta Pensando" />
@@ -63,7 +61,7 @@ const CartPage = () => {
             <h3>Quantidade total: <br /> <h1>{totalQuantity}</h1></h3>
             <h3>Valor total: <br /> <h1>{priceFormatter.format(total)}</h1></h3>
             <h3>Frete: {priceFormatter.format(frete)}</h3>
-            {cart.length >=1 ? <button onClick={()=>goToLoginPage(navigate)}>Finalizar Compra</button> : <div></div>}
+            {cart.length >= 1 ? <button onClick={() => goToLoginPage(navigate)}>Finalizar Compra</button> : <div></div>}
           </div>
         </FinalCart>
       </CartPageStyle>

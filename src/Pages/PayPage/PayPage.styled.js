@@ -1,43 +1,84 @@
 import styled from "styled-components";
 
-export const ContainerCart = styled.main`
-    /* border: 2px solid red; */
-    min-height: 82vh;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-`
-
-export const CardUserInfo = styled.div`
+export const PayUserInfo = styled.div`
   /* border: 2px solid yellow; */
   background-color: rgba(0, 0, 0, 0.729);
-  height: 16vh;
+  min-height: 16vh;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  gap: 24px;
   color: white;
   padding: 16px 8px;
   width: 100%;
 `
-export const CardPaymentAdd = styled.div`
-/* border: 2px solid yellow; */
-background-color: rgba(0, 0, 0, 0.729);
-height: 60vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-gap: 24px;
-color: white;
-padding: 16px 8px;
-padding-right: 18px;
-`
-
 export const HeaderPayment = styled.div`
   /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
+  align-self: flex-start;
+  width: 100%;
 `
+export const Title = styled.h3`
+  /* border: 2px solid green; */
+  width: 50%;
+  display: flex;
+  align-self: flex-start;
+  `
+export const ButtonChange = styled.button`
+/* border: 2px solid red; */
+background-color: transparent;
+color: white;
+border: none;
+font-size:16px;
+display: flex;
+align-self: flex-start;
+width: 5%;
+cursor: pointer;
 
+:hover{
+color: orange;
+}
+`
+export const InfoCardExist = styled.p`
+/* border: 2px solid blue; */
+color: white;
+display: flex;
+justify-content: space-between;
+width: 60%;
+gap: 8px;
+padding-left: 16px;
+`
+export const CardInfo = styled.div`
+  /* border: 2px solid yellowgreen; */
+  width: 15vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  img{
+    width: 2vw;
+    height: 2.5vh;
+  }
+`
+export const BillingInfo = styled.div`
+  /* border: 2px solid red; */
+  p{
+    color: #c559df;
+  }
+`
+export const CardPaymentAdd = styled.div`
+  /* border: 2px solid yellow; */
+  background-color: rgba(0, 0, 0, 0.729);
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  color: white;
+  padding: 16px 8px;
+  padding-right: 18px;
+`
 export const ButtonClose = styled.button`
     background-color: transparent;
     color: white;
@@ -45,6 +86,7 @@ export const ButtonClose = styled.button`
     font-size:16px;
     display: flex;
     width: 5%;
+    cursor: pointer;
 
     :hover{
     color: orange;
@@ -64,43 +106,145 @@ export const ExistingCard = styled.div`
   }
 `
 export const TypeOfCard = styled.div`
+  /* border: 2px solid white; */
   display: flex;
+  width: 16vw;
   gap: 8px;
 `
-
+export const RemoveCard = styled.img`
+  /* border: 2px solid pink; */
+  cursor: pointer;
+`
 export const DateExp = styled.div`
   text-align: end;
 `
-
-export const LinhaShort = styled.div`
-  border: 1px solid gray;
-  margin: 0 35px;
-`
-
-export const CardInfo = styled.div`
-  /* border: 2px solid yellowgreen; */
-  width: 15vw;
-
+export const TypingCard = styled.div`
+  /* border: 2px solid yellow; */
   display: flex;
   justify-content: space-between;
-
+  margin: 0 35px;
+  align-items: center;
+  
   img{
     width: 2vw;
     height: 2.5vh;
   }
 `
-
-export const BillingInfo = styled.div`
+export const NameCard = styled.p`
+  /* border: 2px solid greenyellow; */
+  width: 17.5vw;
+`
+export const LinhaShort = styled.div`
+  border: 1px solid gray;
+  margin: 0 35px;
+`
+export const ContainerAddCard = styled.div`
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+`
+export const ContainerForm = styled.form`
   /* border: 2px solid red; */
-  p{
-    color: #c559df;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25vw;
+  gap: 20px;
+  position: relative;
+`
+export const LabelInput = styled.div`
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+`
+export const FormLabel = styled.label`
+  /* border: 2px solid white; */
+`
+export const Input = styled.input`
+  color: white;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  height: 4vh;
+
+`
+export const InputCvv = styled.input`
+    width: 3vw;
+    color: white;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    height: 4vh;
+`
+export const ButtonAddCard = styled.button`
+  color: white;
+  width: 15vw;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  height: 4vh;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+`
+export const ContainerTypeCard = styled.div`
+    /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 25vw;
+  gap: 20px;
+
+  div{
+    display: flex;
+    gap: 16px
+  }
+
+  img{
+    width: 4vw;
+    height: 4.5vh;
   }
 `
-
-
 export const CartPageStyle = styled.div`
     display: flex;
 
+`
+export const ContainerCart = styled.main`
+    /* border: 2px solid red; */
+    min-height: 83vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+`
+export const CardUserInfo = styled.div`
+  /* border: 2px solid yellow; */
+  background-color: rgba(0, 0, 0, 0.729);
+  height: 16vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  padding: 16px 8px;
+  width: 100%;
+`
+export const InfoCard = styled.p`
+/* border: 2px solid blue; */
+color: white;
+display: flex;
+flex-direction: column;
+width: 60%;
+gap: 8px;
+`
+export const HeaderProduct = styled.div`
+  /* border: 2px solid red; */
+  background-color: rgba(0, 0, 0, 0.729);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 8px;
+  color: white;
 `
 export const FinalCart = styled.div`
     /* border: 2px solid blue; */
@@ -128,215 +272,10 @@ export const FinalCart = styled.div`
         border-radius: 8px;
         color: whitesmoke;
         box-shadow: 2px 4px 26px -3px rgba(255,255,255,1);
+        cursor: pointer;
     }
 
     img{
         width: 15vw;
     }
-`
-
-export const Title = styled.h3`
-  /* border: 2px solid green; */
-  width: 50%;
-  display: flex;
-  align-self: flex-start;
-  `
-
-export const InfoCard = styled.p`
-/* border: 2px solid blue; */
-color: white;
-display: flex;
-flex-direction: column;
-width: 60%;
-gap: 8px;
-`
-
-
-
-export const ButtonChange = styled.button`
-    /* border: 2px solid red; */
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size:16px;
-    display: flex;
-    align-self: flex-start;
-    width: 5%;
-
-    :hover{
-    color: orange;
-  }
-  `
-export const CardPayment = styled.div`
-  /* border: 2px solid yellow; */
-  background-color: rgba(0, 0, 0, 0.729);
-  min-height: 35vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  color: white;
-`
-export const HeaderProduct = styled.div`
-  /* border: 2px solid red; */
-  background-color: rgba(0, 0, 0, 0.729);
-  display: flex;
-  justify-content: space-between;
-  padding-right: 8px;
-  color: white;
-`
-export const ContentProduct = styled.div`
-  /* border: 2px solid pink; */
-  display: flex;
-  justify-content: space-between;
-`
-export const ImagemProduto = styled.img`
-  /* border: 2px solid blue; */
-  width: 10vw;
-  align-self: center;
-  margin-left: 16px;
-`
-export const DetalheProduto = styled.div`
-    /* border: 2px solid white; */
-    display: flex;
-    flex-direction: column;
-    margin-left: 16px;
-    gap: 20px;
-    width: 30vw;
-    padding-left: 3vw;
-`
-export const DescricaoProduto = styled.div`
-  /* border: 2px solid red; */
-  color: white;
-  
-`
-export const PriceCard = styled.div`
-  /* border: 2px solid red; */
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  gap: 40px;
-  height: 20vh;
-  align-items: center;
-  margin: 16px;
-
-  
-  p{
-    display: flex;
-  }
-
-  h2{
-    font-size: 38px;
-  }
-`
-export const QuantityProduct = styled.div`
-    /* border: 2px solid blue; */
-    display: flex;
-    justify-content: space-around;
-    width: 6vw;
-    gap: 8px;
-
-    button{
-      font-size: 16px;
-      width: 2vw;
-    }
-`
-
-export const ChoosenSize = styled.p`
-  /* border: 2px solid red; */
-  display: flex;
-  gap: 8px;
-
-  select{
-    width: 3vw;
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    color: white;
-
-    /* option{
-      background: rgba(0, 0, 0, 0);
-      color: black;
-    } */
-  }
-
-`
-export const RemoveCard = styled.img`
-  /* border: 2px solid pink; */
-`
-
-
-// Estilização FORM
-
-export const ContainerAddCard = styled.div`
-    /* border: 2px solid white; */
-    display: flex;
-    justify-content: space-around;
-    height: 50vh;
-`
-export const ContainerForm = styled.form`
-  /* border: 2px solid red; */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 25vw;
-  gap: 20px;
-  position: relative;
-`
-export const ContainerTypeCard = styled.div`
-    /* border: 2px solid yellow; */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 25vw;
-  gap: 20px;
-
-  div{
-    display: flex;
-    gap: 16px
-  }
-
-  img{
-    width: 4vw;
-    height: 4.5vh;
-  }
-`
-export const LabelInput = styled.div`
-  /* border: 2px solid blue; */
-  display: flex;
-  flex-direction: column;
-`
-
-export const FormLabel = styled.label`
-  /* border: 2px solid white; */
-`
-export const Input = styled.input`
-  color: white;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  height: 4vh;
-
-`
-
-export const InputCvv = styled.input`
-    width: 3vw;
-    color: white;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    height: 4vh;
-`
-
-
-export const ButtonAddCard = styled.button`
-  color: white;
-  width: 15vw;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 4px;
-  height: 4vh;
-  bottom: 0;
-  right: 0;
 `

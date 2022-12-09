@@ -2,23 +2,22 @@ import React from "react";
 import { ButtonSingIn, CadastrarPassword, CardLogin, FormControl, FormLabel, HeadForm, Input, LabelInput, ImageLogin } from "./LoginCard.styled";
 import { useForm } from '../../hook/useForm'
 import astrologin from '../../assets/astrologin.png'
-import {goToPayPage} from '../../Router/coordinator'
+import { goToPayPage } from '../../Router/coordinator'
 import { useNavigate } from "react-router-dom";
 
 export function LoginCard() {
 
+    const navigate = useNavigate()
     const [form, onChangeForm] = useForm({ email: "", password: "" })
 
     const handleClick = (event) => {
         event.preventDefault()
         console.log(`E-mail: ${form.email} Senha: ${form.password}`)
     }
-    // ✌️
 
-    const navigate = useNavigate()
     return (
         <CardLogin>
-            <ImageLogin src={astrologin} alt="Astronauta de Cadastrando"/>
+            <ImageLogin src={astrologin} alt="Astronauta de Cadastrando" />
             <HeadForm>
                 <h2>Entre na sua conta </h2>
             </HeadForm>
@@ -48,10 +47,10 @@ export function LoginCard() {
                     />
                 </LabelInput>
                 <CadastrarPassword>
-                <p>Cadastrar</p>
-                <a>Esqueceu sua senha?</a>
+                    <p>Cadastrar</p>
+                    <a>Esqueceu sua senha?</a>
                 </CadastrarPassword>
-                <ButtonSingIn onClick={()=>goToPayPage(navigate)}>Entrar</ButtonSingIn>
+                <ButtonSingIn onClick={() => goToPayPage(navigate)}>Entrar</ButtonSingIn>
             </FormControl>
         </CardLogin>
 

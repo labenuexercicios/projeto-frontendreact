@@ -1,6 +1,6 @@
 import React from 'react'
-import {Header} from '../Header/Header'
-import {Footer} from '../Footer/Footer'
+import { Header } from '../Header/Header'
+import { Footer } from '../Footer/Footer'
 import styled from 'styled-components'
 import background from '../../assets/sci-fi-deep-space-background-loop-free-video.jpeg';
 
@@ -25,13 +25,13 @@ export const Layout = (props) => {
 
   return (
     <CointainerLayout>
-    <Header/>
-    <Main>
+      <Header />
+      <Main>
         <Container>
-            {props.children}
+          {props.children}
         </Container>
-    </Main>
-    <Footer/>
+      </Main>
+      <Footer />
     </CointainerLayout>
   )
 }

@@ -12,13 +12,11 @@ import {
 import { priceFormatter } from '../../utils/priceFormatter'
 
 
-
 export const PayCard = (props) => {
 
     const { camiseta
     } = props
 
-   
     return (
         <>
             <CardPayment>
@@ -35,11 +33,11 @@ export const PayCard = (props) => {
                         </DescricaoProduto>
                     </DetalheProduto>
                     <PriceCard>
-                    <h2>{priceFormatter.format(camiseta.price)}</h2>
+                        <h2>{priceFormatter.format(camiseta.price)}</h2>
                         <QuantityProduct>
                             {camiseta.quantity}
                         </QuantityProduct>
-                </PriceCard>
+                    </PriceCard>
                 </ContentProduct>
             </CardPayment>
         </>

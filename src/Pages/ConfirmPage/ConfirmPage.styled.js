@@ -7,7 +7,6 @@ export const ContainerConfirm = styled.div`
      justify-content: center;
      align-items: center;
 `
-
 export const CardConfirm = styled.div`
   /* border: 2px solid yellow; */
   background-color: rgba(0, 0, 0, 0.729);
@@ -23,7 +22,6 @@ export const CardConfirm = styled.div`
   color: white;
   position: relative;
 `
-
 export const ImageConfirm = styled.img`
 /* border: 2px solid white; */
   height: 20vh;
@@ -31,7 +29,6 @@ export const ImageConfirm = styled.img`
   position: absolute;
   top: 2vh;
 `
-
 export const InfoConfirm = styled.div`
     /* border: 2px solid green; */
     display: flex;
@@ -42,7 +39,6 @@ export const InfoConfirm = styled.div`
     bottom: 10vh;
     gap: 16px;
 `
-
 export const HeadConfirm = styled.div`
   /* border: 2px solid blue; */
   color: white;
@@ -50,7 +46,6 @@ export const HeadConfirm = styled.div`
   text-align: center;
   
 `
-
 export const ButtonReturn = styled.button`
   /* border: 2px solid red; */
   color: white;
@@ -59,4 +54,5 @@ export const ButtonReturn = styled.button`
   border: none;
   border-radius: 4px;
   color: orange;
+  cursor: pointer;
 `

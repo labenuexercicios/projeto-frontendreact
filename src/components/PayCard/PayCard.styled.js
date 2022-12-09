@@ -1,18 +1,5 @@
 import styled from "styled-components";
 
-
-export const CardUserInfo = styled.div`
-  /* border: 2px solid yellow; */
-  background-color: rgba(0, 0, 0, 0.729);
-  height: 14vh;
-  display: flex;
-  justify-content: flex-start;
-  color: white;
-  padding: 16px 8px;
-  width: 100%;
-`
-
-
 export const CardPayment = styled.div`
   /* border: 2px solid yellow; */
   background-color: rgba(0, 0, 0, 0.729);
@@ -23,7 +10,6 @@ export const CardPayment = styled.div`
   justify-content: space-around;
   color: white;
 `
-
 export const ContentProduct = styled.div`
   /* border: 2px solid pink; */
   display: flex;
@@ -43,6 +29,43 @@ export const DetalheProduto = styled.div`
     gap: 20px;
     width: 30vw;
     padding-left: 3vw;
+`
+export const ChoosenSize = styled.p`
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 8px;
+
+  select{
+    width: 3vw;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+
+    /* option{
+      background: rgba(0, 0, 0, 0);
+      color: black;
+    } */
+  }
+
+`
+
+
+
+
+
+
+
+
+
+export const CardUserInfo = styled.div`
+  /* border: 2px solid yellow; */
+  background-color: rgba(0, 0, 0, 0.729);
+  height: 14vh;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  padding: 16px 8px;
+  width: 100%;
 `
 export const DescricaoProduto = styled.div`
   /* border: 2px solid red; */
@@ -80,23 +103,3 @@ export const QuantityProduct = styled.div`
       width: 2vw;
     }
 `
-
-export const ChoosenSize = styled.p`
-  /* border: 2px solid red; */
-  display: flex;
-  gap: 8px;
-
-  select{
-    width: 3vw;
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    color: white;
-
-    /* option{
-      background: rgba(0, 0, 0, 0);
-      color: black;
-    } */
-  }
-
-`
-
