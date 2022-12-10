@@ -6,7 +6,8 @@ function CartScreen(props) {
     const {
       cart,
       increaseQuantityInCart,
-      decreaseQuantityInCart
+      decreaseQuantityInCart,
+      deleteCardProduct
     }= props
 
     const formatter = new Intl.NumberFormat('en-US', {
@@ -28,6 +29,7 @@ function CartScreen(props) {
           cart
           .map((product) => (
           <ProductCard 
+            deleteCardProduct={deleteCardProduct}
             increaseQuantityInCart={increaseQuantityInCart}
             decreaseQuantityInCart={decreaseQuantityInCart}
             product={product} 

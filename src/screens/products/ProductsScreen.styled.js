@@ -6,9 +6,16 @@ export const Main = styled.main`
         flex-wrap: wrap;
     }
     h1{
-        width: 100%;
+       
     }
     hr{
         width: 100%;
     }
+    .Header-Main{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 `

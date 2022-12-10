@@ -5,7 +5,8 @@ export const ProductCardContainer = styled.article`
     margin: 8px 0 0 4px;
     padding-bottom: 8px;
     border-radius: 3px;
-    
+    position: relative;
+
     .Card-price-and-button{
         display: flex;
         justify-content: space-between;
@@ -15,4 +16,12 @@ export const ProductCardContainer = styled.article`
     .header{
         padding-left: 8px;
     }
+    .deleteButton{
+        position: absolute;
+        bottom: 7%;
+        right: 0;
+        background-color: #ffc2b2;
+        padding: 10px
+    }
+    
 `

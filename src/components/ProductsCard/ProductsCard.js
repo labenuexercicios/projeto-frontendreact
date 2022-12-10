@@ -13,12 +13,11 @@ function ProductCard(props) {
     isOnCartScreen,
     increaseQuantityInCart,
     decreaseQuantityInCart,
+    deleteCardProduct
   } = props;
 
   return (
     <ProductCardContainer>
-      <p>{isOnProductsScreen && "Produtos"}</p>
-      <p>{isOnCartScreen && "carrinho"}</p>
       <img src={product.imageUrl} alt={product.imageAlt} />
       <div className="header">
         <h2>{product.name}</h2>
@@ -26,18 +25,17 @@ function ProductCard(props) {
       <div className="Card-price-and-button">
         <span>{formatter.format(product.value)}</span>
 
-        {
-        isOnCartScreen && product.quantity > 1 
-        && <button 
-            onClick={()=>decreaseQuantityInCart(product)}> - </button>
-        }
+        {isOnCartScreen && product.quantity > 1 && (
+          <button onClick={() => decreaseQuantityInCart(product)}> - </button>
+        )}
         {isOnCartScreen && (
-          <button onClick={()=> increaseQuantityInCart(product)}> + </button>
+          <button onClick={() => increaseQuantityInCart(product)}> + </button>
         )}
         {isOnProductsScreen && (
           <button onClick={() => addToCart(product)}> Add to cart </button>
         )}
         {isOnCartScreen && <span>x{product.quantity}</span>}
+        {isOnCartScreen && <button className="deleteButton" onClick={()=> deleteCardProduct(product)}>x</button>}
       </div>
     </ProductCardContainer>
   );
