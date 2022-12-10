@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Elden Ring",
+    "price": "149",
+    "quantity": "0", 
+    "imageUrl":
+      "https://i0.wp.com/gamesever.com.br/wp-content/uploads/2022/02/ELDEN-RING-LOGO.jpg?resize=740%2C417&ssl=1"
+  },
+  {
+    "id": "2",
+    "name": "Stray",
+    "price": "50",
+    "quantity": "0", 
+    "imageUrl":
+      "https://blog.br.playstation.com/tachyon/sites/4/2022/06/94e5bafc4d882ae6d867d1c2f1985093fc176976.jpg?resize=1088%2C612&crop_strategy=smart"
+  },
+  {
+    "id": "3",
+    "name": "God of War Ragnarok",
+    "price": "170",
+    "quantity": "0", 
+    "imageUrl":
+      "https://revolutionarena.com.br/wp-content/uploads/2022/11/God-of-War-Ragnarok-11.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Splatoon 3",
+    "price": "230",
+    "quantity": "0", 
+    "imageUrl":
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/14ff-splatoon_3.jpeg"
+  },
+  {
+    "id": "5",
+    "name": "Gran Turismo 7",
+    "price": "190",
+    "quantity": "0", 
+    "imageUrl":
+      "https://sm.ign.com/ign_br/game/g/gran-turis/gran-turismo-7_rh56.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Divinity: Original Sin 2",
+    "price": "120",
+    "quantity": "0", 
+    "imageUrl":
+      "https://store.playstation.com/store/api/chihiro/00_09_000/container/BR/en/99/UP3526-CUSA12611_00-ORIGINALSIN2DE01/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
+  }
+]
