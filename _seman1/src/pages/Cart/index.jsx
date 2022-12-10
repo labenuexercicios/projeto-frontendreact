@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import StoreListItem from '../../components/ListItem'
 
 const Cart = () => {
-  const [products, setProducts] = useState()
+  const [products] = useState([])
 
   return (
     <StyledContainer>

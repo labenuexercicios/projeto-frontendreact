@@ -5,21 +5,21 @@ import * as React from 'react'
 import { StyledCard, StyledCardActions, StyledCardContent } from './styles'
 
 
-const CardProduct= ({ product }) => {
+const CardProduct = ({ produto }) => {
   return (
     <StyledCard>
       <CardMedia
         component="img"
         height="300"
-        image={product.url}
+        image={produto.url}
         alt="green iguana"
       />
       <StyledCardContent>
         <Typography variant="body1">
-          <strong>{product.nome}</strong>
+          <strong>{produto.nome}</strong>
         </Typography>
         <Typography gutterBottom variant="body2">
-          <strong>R$ {product.preco}</strong>
+          <strong>R$ {produto.preco.toFixed(2).replace(".", ",")}</strong>
         </Typography>
       </StyledCardContent>
       <StyledCardActions>

@@ -1,57 +1,85 @@
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import { Grid, InputAdornment } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import CardProduct from '../../components/Card'
 import InputSearch from '../../components/Input'
 import { StyledContainer, StyledSearchWrapper, StyledTitle } from './styles'
+import produtos from '../../assets/mocks/lojinha.json'
+import { useAppContext } from '../../contexts/GlobalContext'
 
 const Home = () => {
-  const [searchInput, setSearchInput] = useState('')
-  const [products, setProducts] = useState(
-    require('../../assets/mocks/lojinha.json')
-  )
+  const {
+    campoBuscarNome,
+    setCampoBuscarNome,
+    campoPrecoMin,
+    setCampoPrecoMin,
+    campoPrecoMax,
+    setCampoPrecoMax
+  } = useAppContext()
 
-  useEffect(() => {
-    console.log(products)
-  })
-
-  function handleSearch(value) {
-    setSearchInput(value)
-  }
+  const produtosFiltrados = campoBuscarNome.length > 0 || campoPrecoMin.length > 0 || campoPrecoMax.length > 0 ?
+    produtos
+      .filter((item) =>
+        item.nome.toLowerCase().includes(campoBuscarNome.toLowerCase())
+      )
+      .filter((item) => {
+        return item.preco >= campoPrecoMin;
+      })
+      .filter((item) => {
+        return campoPrecoMax ? item.preco <= campoPrecoMax : produtos;
+      }) : produtos
 
   return (
     <StyledContainer>
       <StyledSearchWrapper>
-        <InputSearch
-          autoFocus={true}
-          label="Pesquisar"
-          value={searchInput}
-          onChange={(e) => handleSearch(e.target.value)}
-          type="text"
-          endAdornment={
-            <InputAdornment position="end">
-              <SearchOutlinedIcon />
-            </InputAdornment>
-          }
-        />
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={12} lg={4}>
+            <InputSearch
+              autoFocus={true}
+              label="Pesquisar"
+              value={campoBuscarNome}
+              onChange={(e) => setCampoBuscarNome(e.target.value)}
+              type="text"
+              endAdornment={
+                <InputAdornment position="end">
+                  <SearchOutlinedIcon />
+                </InputAdornment>
+              }
+            />
+          </Grid>
+          <Grid item xs={12} md={12} lg={4}>
+            <InputSearch
+              label="Valor Minimo"
+              value={campoPrecoMin}
+              onChange={(e) => setCampoPrecoMin(e.target.value)}
+              type="text"
+            />
+          </Grid>
+          <Grid item xs={12} md={12} lg={4}>
+            <InputSearch
+              label="Valor Maximo"
+              value={campoPrecoMax}
+              onChange={(e) => setCampoPrecoMax(e.target.value)}
+              type="text"
+            />
+          </Grid>
+        </Grid>
       </StyledSearchWrapper>
       <StyledTitle variant="h6" color="inherit">
         Brinquedos
       </StyledTitle>
 
       <Grid container spacing={2}>
-        {products.length > 0 ? (
-          products.map((p, i) => (
+        {produtosFiltrados.length === 0 ? (
+          <Grid container justifyContent="center">
+            <StyledTitle variant="h6">Nenhum produto encontrado</StyledTitle>
+          </Grid>
+        ) : (
+          produtosFiltrados.map((p, i) => (
             <Grid item key={i} xs={12} md={6} lg={3} xl={2}>
-              <CardProduct product={p} />
+              <CardProduct produto={p} />
             </Grid>
           ))
-        ) : (
-          <>
-            <Grid container justifyContent="center">
-              <StyledTitle variant="h6">Nenhum produto encontrado</StyledTitle>
-            </Grid>
-          </>
         )}
       </Grid>
     </StyledContainer>
