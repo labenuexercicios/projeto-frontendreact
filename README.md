@@ -87,7 +87,7 @@ A temática escolhida para o projeto foi relacionada ao jogo [Kerbal Space Progr
 <!-- REQUISITOS -->
 ## Requisitos
 
-O projeto possui os seguintes requisitos:
+O projeto possui os seguintes requisitos propostos no bootcamp da Labenu:
 
 - Home (Lista de Produtos)
     - [ ]  O usuário deve ser capaz de visualizar uma lista de produtos
