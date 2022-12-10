@@ -4,12 +4,10 @@ export const ContainerProduto = styled.div`
         
         padding: 5px;
         border: 1px solid black;
-        
-
-        
+      
     img {
-        max-width: 250px;
-        max-height: 250px;
+        width: 260px;
+        height: 220px;
     }
     button{
         padding: 10px 54px;

@@ -124,7 +124,7 @@ const addCarrinho = carrinhoAdd.map((item)=>{
 
             <Parametros>
                   <p>Viagens Espaciais: {produtos.length} </p>
-                  <label> Ordenar:
+                  <label> Ordenar por Preço:
                       <select value={ordenar} onChange={(e)=>setOrdenar(e.target.value)}>
                           <option value="">Selecione...</option>
                           <option value="crescente">Crescente</option>
