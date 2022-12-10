@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Bonecos de Boba Fett",
+        "rating": 4.5,
+        "price": 160,
+        "imageUrl": "https://media.gazetadopovo.com.br/2015/11/971a4484f7531e23f22d579abacb253f-gpLarge.jpg",
+        "imageAlt": "imagem boneco boba fett"
+    },
+    {
+        "id": 2,
+        "name": "Boneco Darth Vader",
+        "rating": 4.0,
+        "price": 75,
+        "imageUrl": "data:image/jpeg;base64,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",
+        "imageAlt": "imagem Boneco Star Wars Black Series Darth Vader"
+    },
+    {
+        "id": 3,
+        "name": "Kit Figura De Ação Star Wars",
+        "rating": 4.8,
+        "price": 80,
+        "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_851705-MLB45938099695_052021-O.webp",
+        "imageAlt": "Boneco Figura De Ação Star Wars Darth Vader+stormtrooper"
+    },
+    {
+        "id": 4,
+        "name": "Senhor Das Estrelas",
+        "rating": 3.5,
+        "price": 50,
+        "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_840045-MLB52164191203_102022-O.webp",
+        "imageAlt": "brinquedo gaudiões da galáxia"
+    },
+    {
+        "id": 5,
+        "name": "Young Groot Brinquedo",
+        "rating": 4.7,
+        "price": 715,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQV3eTcypwRub3K4DVaM3UOSVF37zEP20RlnOruKDo6ySNetRR24Cs8dgzAa6WqQ9W-FrSxVG4JZtMFDjxTpgnWAnPh4psTzbDw5Wqd2dmY0FJJQDFuU1kwTEuGqPGL&usqp=CAE",
+        "imageAlt": "boneco grood"
+    },
+    {
+        "id": 6,
+        "name": "Funko pop!: Chewbacca",
+        "rating": 4.6,
+        "price": 130,
+        "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSW2M3B5njHcZo17zjt1rmOB0liPG8U9eM85OuthXR69gJBEg6_J_afRaYKQulvsXNIe-qGgoHaHTF_GnjlSl6yAFyjyAdTyk7Y7Su-2EG1OZhUJuh2W6kwZO2WyYkK&usqp=CAE",
+        "imageAlt": "brinquedo Chewbacca"
+    },
+    {
+        "id": 7,
+        "name": "Kit Bonecos Guardões da Galáxia",
+        "rating": 4.5,
+        "price": 300,
+        "imageUrl": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSY8vUswqpYLCELwm_qG8_27wDjho0I6fDzHzlhIAHIn-8Xf4mFah49fNjNHHvTMlN0PXoFwG6_UyKMCismnCzUjqUxqQdGxZbRakxnGjcrZA7QrjQRb-rVaq9Zqx4&usqp=CAE",
+        "imageAlt": "Kit bonecos lego"
+    },
+    {
+        "id": 8,
+        "name": "Kit Astronauta",
+        "rating": 4.9,
+        "price": 220,
+        "imageUrl": "https://a-static.mlcdn.com.br/800x560/kit-astronauta-estacao-e-capsula-fun/magazineluiza/226772600/a59249e79d2f2a648b1fcdf08848ab7f.jpg",
+        "imageAlt": "kit astronauta"
+    }
+]
