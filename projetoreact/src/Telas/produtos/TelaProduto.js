@@ -1,6 +1,9 @@
 import produtos from "../../assets/produtos.json"
 import { Main,Filtros, Cards } from "./TelaProduto.styled";
 import { useState } from 'react'
+import imagem from "../../assets/imagemvenda.jpg"
+
+
 
 
 
@@ -17,14 +20,17 @@ function TelaProduto(props) {
   const [ordenar, setOrdenar] = useState("")
 
   return (
+
+    
     <Main >
 
       <Filtros>
 
-        <section className="filtros">
+        
           <div>
+            <h1 className="tituloFiltro">FILTROS</h1>
             <input
-              placeholder="Search"
+              placeholder="Busca"
               value={buscar}
               onChange={(e) => setBuscar(e.target.value)}
             />
@@ -42,8 +48,9 @@ function TelaProduto(props) {
               value={precoMaximo}
               onChange={(e) => { setPrecoMaximo(e.target.value) }} />
           </div>
-          <span>
+          <span className="ordenar">
             <label for="paramClassificacao">Ordenar por:</label>
+
             <select
               value={paramClassificacao}
               onChange={(e) => setParamCassificacao(e.target.value)}
@@ -59,12 +66,17 @@ function TelaProduto(props) {
               <option value="decrescente">Decrescente</option>
             </select>
           </span>
-        </section>
+        
       </Filtros>
 
       <Cards>
-        
+
+        <img className="imagemTopo" src={imagem}/>
+      
+
         { produtos
+
+          
             .filter((brinquedo) => {
               return brinquedo.name.toLowerCase().includes(buscar.toLowerCase())
             })
@@ -78,11 +90,11 @@ function TelaProduto(props) {
               switch (paramClassificacao) {
                 case "price":
                   return atualBrinquedo.price - proximoBrinquedo.price
-                default:
-
-                  return atualBrinquedo.name.localeCompare(proximoBrinquedo)
-              }
-            })
+                  default:
+                    
+                    return atualBrinquedo.name.localeCompare(proximoBrinquedo)
+                  }
+                })
             .sort(() => {
               if (ordenar === "crescente") {
                 return 0
@@ -90,6 +102,7 @@ function TelaProduto(props) {
                 return -1
               }
             })
+            
             
             .map((item) => {
             
@@ -102,9 +115,9 @@ function TelaProduto(props) {
                   <h2>{item.name}</h2>
                   <span>{produtos.rating}</span>
                 </div>
-                <div>
+                <div className="precoCompra">
                   <span>R$ {item.price},00</span>
-                  <button onClick={() => adicionarCarrinho(item)}>Adicionar Carrinho</button>
+                  <button className="botaoCompra" onClick={() => adicionarCarrinho(item)}>Compre Agora</button>
                 </div>
               </div>
 

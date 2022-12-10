@@ -3,7 +3,7 @@
 [
     {
         "id":1,
-        "name":"Capacete Lego Stars Wars-Darth Vader",
+        "name":"Capacete Lego - Star Wars Darth Vader",
         "rating":4.5,
         "price":599,
         "imageUrl":"img/capacetedarthvader.jpg",
@@ -12,7 +12,7 @@
  
     {
         "id":2,
-        "name":"Brinquedo Lego star Wars imperial Star Detroyer",
+        "name":"Brinquedo Lego - Star Wars imperial Star Detroyer",
         "rating":4.2,
         "price":6860,
         "imageUrl":"img/legodetroyer.jpg",
@@ -21,7 +21,7 @@
     
     {
         "id":3,
-        "name":"Espada-Sabre de Luz-Satr Wars-vermelha",
+        "name":"Espada Sabre de Luz-Star Wars",
         "rating":4.8,
         "price":101,
         "imageUrl":"img/espada.jpg",
@@ -30,7 +30,7 @@
    
     {
         "id":4,
-        "name":"Figura eletrônica-Satr Wars-baby Yoda com sons e movimentos",
+        "name":"Figura eletrônica- Star Wars baby Yoda",
         "rating":4.9,
         "price":554,
         "imageUrl":"img/extraterrestre.jpg",
@@ -39,7 +39,7 @@
    
     {
         "id":5,
-        "name":"Nave Stars Wars-x-wing Fighter de 12 cm do Luke Skywaker",
+        "name":"Nave Stars Wars-x-wing Fighter do Luke Skywaker",
         "rating":4.7,
         "price":249,
         "imageUrl":"img/naveskawaker.jpg",
@@ -48,7 +48,7 @@
     
     {
         "id":6,
-        "name":"Nave Millenium Falcon de 22 cm com figura",
+        "name":"Nave Star Wars Millenium Falcon ",
         "rating":4.5,
         "price":649,
         "imageUrl":"img/navemilenniumfalcom.jpg",
@@ -57,7 +57,7 @@
     
     {
         "id":7,
-        "name": "Lego Disney Star Wars BD-1" ,
+        "name": "Lego Star Wars BD-1" ,
         "rating":4.2,
         "price":707,
         "imageUrl":"img/legobd1.jpg",
@@ -66,7 +66,7 @@
     
     {
         "id":8,
-        "name":"Boneco Star Wars-Chewbacca",
+        "name":"Boneco Star Wars Chewbacca",
         "rating":4.3,
         "price":299,
         "imageUrl":"img/bonecocheibaka.jpg",
@@ -75,7 +75,7 @@
    
     {
         "id":9,
-        "name":"Bonecos R2 e B-B8- Star Wars",
+        "name":"Bonecos Star Wars R2 e B-B8 ",
         "rating":4.4,
         "price":284,
         "imageUrl":"img/r2eb8.jpg",
@@ -84,7 +84,7 @@
    
     {
         "id":10,
-        "name":"Boneco uma nova Esperança The Black C-3PO dourado, figuea 15 cm",
+        "name":"Boneco Star Wars C-3PO dourado",
         "rating":4.8,
         "price":234,
         "imageUrl":"img/roboc3po.jpg",
@@ -93,7 +93,7 @@
    
     {
         "id":11,
-        "name":"Boneco Satr Wars Darth Vader 24 cm",
+        "name":"Boneco Star Wars Darth Vader",
         "rating":4.1,
         "price":179,
         "imageUrl":"img/dartvader.jpg",

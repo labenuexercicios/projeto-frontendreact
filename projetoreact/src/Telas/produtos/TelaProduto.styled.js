@@ -2,12 +2,23 @@ import styled from "styled-components"
 
 export const Main = styled.main`
     display: flex;
-    border: 1px solid black;
     margin: 36px 0px;
     flex-direction: row;
+    height: 300vh;
+       
 `
 export const Filtros= styled.section `
-    border: 1px solid blue;
+    display: flex;
+    border-radius: 5px;
+    margin-top: 10px;
+    gap: 20px;
+    flex-direction: column;
+
+    .ordenar{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 `
 
 export const Cards= styled.section`
@@ -18,7 +29,16 @@ export const Cards= styled.section`
     align-items: flex-start;
     align-content: center;
     min-width:100vh;
-    border: 4px solid green;
+    
+.precoCompra{
+    margin-top:15px;
+ 
+}
+
+.imagemTopo{
+    height: 300px ;
+    width: 1100px;
+}
 
 .container {
     position: relative;
@@ -30,7 +50,7 @@ export const Cards= styled.section`
 .container .card{
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 320px;
     margin: 30px;
     border-radius: 15px;
     display: flex;
@@ -38,14 +58,40 @@ export const Cards= styled.section`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    font-family:sans-serif;
+    font-size:12px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px 5px black;
 
 }
+
+    .botaoCompra{
+
+        :hover {
+        
+            cursor: pointer;
+            filter: brightness(1.1);
+            background-color: lightgreen;
+        }
+
+        :active {
+            filter: brightness(0.95);
+        }
+
+        margin-left:15px;
+        background-color:yellow;
+        border-radius:10px;
+        border: none;
+        height:50px;
+        width:80px;
+    }
    
     
     .imagens{
-        height: 200px;
-        width: 200px;
+        height: 190px;
+        width: 190px;
+
     }
 
 `

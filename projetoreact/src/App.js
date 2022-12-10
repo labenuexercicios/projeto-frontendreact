@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
+import Footer from "./footer/Footer";
 import TelaCarrinho from "./Telas/carrinho/TelaCarrinho";
 import TelaProduto from "./Telas/produtos/TelaProduto";
 
@@ -21,10 +22,20 @@ function App() {
     const novoCarrinho = [...carrinho]
 
     const guardarProduto = JSON.stringify(novoCarrinho) //vai transformar todos os produtos em string para poder armazenar no localstorage
-    localStorage.setItem("localSalvo", guardarProduto)// criei localSalvo para guardar os produtos que transformei em string
+    
+    const procurarProdutos= novoCarrinho.find((produtoNoCarrinho) =>produtoNoCarrinho.id===novoProduto.id)
+    if (!procurarProdutos){
+      const produtoNovoAdicionado= {...novoProduto, quantidade: 1}
 
-    novoCarrinho.push(novoProduto)
+      novoCarrinho.push(produtoNovoAdicionado)
+
+    }else{
+      procurarProdutos.quantidade ++
+    }
+
     setCarrinho(novoCarrinho)
+    
+    localStorage.setItem("localSalvo", guardarProduto)// criei localSalvo para guardar os produtos que transformei em string
 
   }
 
@@ -36,8 +47,8 @@ function App() {
       removerItem.splice(index, 1) //splice remove
 
       const guardarProduto = JSON.stringify(removerItem)
+      
       localStorage.setItem("localSalvo", guardarProduto)
-
       setCarrinho(removerItem)
     }
 
@@ -78,10 +89,11 @@ function App() {
       <Header
         alternarTelaCarrinho={alternarTelaCarrinho}
         alternarTelaProduto={alternarTelaProduto}
-      // itensCarrinho={carrinho.length}
+    
       />
 
       {renderizarTela()}
+      <Footer/>
     </>
 
   )

@@ -1,20 +1,21 @@
 import produtos from "../../assets/produtos.json"
-import {Main, Card} from "./TelaCarrinho.styled"
+import {Main, Card, PrecoTotal} from "./TelaCarrinho.styled"
 
 
 
 function TelaCarrinho(props) {
-  let precoTotal= 0
   const {carrinho, removerProduto} = props
- 
+  
+  let precoTotal= carrinho.reduce((acc, product) => (product.price * product.quantidade) + acc, 0)
+  console.log(precoTotal)
 
   return (
-
+<>
     <Main>
 
       <Card>
         {carrinho.map((item) => {
-          precoTotal+=item.price
+         
           
           return (
             <div className="container">
@@ -23,23 +24,37 @@ function TelaCarrinho(props) {
             <img className="imagens" src={item.imageUrl} /*alt={Produtos.imageAlt}*/ />
             <div>
               <h2>{item.name}</h2>
-              <span>{produtos.rating}</span>
+              {/* <span>{produtos.rating}</span> */}
             </div>
             <div>
               <span>{item.price}</span>
-              <button onClick={() => removerProduto(item)}>Remover Produto</button>
-              <span>{carrinho.quantity}</span>
+              <button onClick={() => removerProduto(item)}>Remover</button>
+              <span>x{item.quantidade}</span>
+             
 
             </div>
           </div>
           </div>
         )})}
 
+
         </Card>
 
-        <div>Preço Total: R$ {precoTotal},00</div>
+        
       
     </Main>
+
+    
+    
+    <PrecoTotal>
+      
+      <div className="preco">Preço Total: R$ {precoTotal},00</div>
+    
+    
+    </PrecoTotal>
+    
+
+    </>
 
   )
 }
