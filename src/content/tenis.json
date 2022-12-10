@@ -1,0 +1,253 @@
+[{
+    "id":"1",
+    "name":"Vans Old-Skool",
+    "cor":"Preto",
+    "tamanho":["38 ","40 ","42 "],
+    "preco":210,
+    "imagem":"https://secure-static.vans.com.br/medias/sys_master/vans/vans/h28/hf9/h00/h00/9572420648990/1002001070008U-04-BASEIMAGE-Midres.jpg"
+},
+{
+    "id": "2",
+    "name":"Vans Old-Skool",
+    "cor":"Preto e branco",
+    "tamanho":["38 ","40 ","42 "],
+    "preco":215,
+    "imagem":"https://secure-static.vans.com.br/medias/sys_master/vans/vans/he0/hff/h00/h00/9592308367390/1002001070011U-04-BASEIMAGE-Hires.jpg?ims=900x"
+},
+{
+    "id": "3",
+    "name":"Vans Old-Skool",
+    "cor":"Branco",
+    "tamanho":["38 ","40 ","42 "],
+    "preco":210,
+    "imagem":"https://secure-static.vans.com.br/medias/sys_master/vans/vans/h47/h40/h00/h00/10222589837342/1002001070010U-04-BASEIMAGE-Midres.jpg"
+},
+{
+    "id": "4",
+    "name":"Converse All-Star",
+    "cor":"Preto e branco",
+    "tamanho":["36 ","38 ","40 "],
+    "preco":180,
+    "imagem":"https://esportelegal.fbitsstatic.net/img/p/tenis-converse-all-star-chuck-taylor-as-core-hi-preto-vermelho-tamanho-especial-ct00060007-83963/286448.jpg?w=800&h=800&v=no-change&qs=ignore"
+},{
+    "id":"5",
+    "name":"Converse All-Star",
+    "cor":"Amarelo",
+    "tamanho":["36 ","38 ","40 "],
+    "preco":180,
+    "imagem":"https://imgcentauro-a.akamaihd.net/900x900/88286808/tenis-converse-all-star-ct-as-core-ox-ct0001-unissex-img.jpg"
+},{
+    "id": "6",
+    "name": "Nike Jordan 1",
+    "cor": "Preto, branco e vermelho",
+    "tamanho": [
+        "40 ",
+        "42 ",
+        "44 "
+    ],
+    "preco": 280,
+    "imagem": "https://imgnike-a.akamaihd.net/1920x1920/016511INA2.jpg"
+},{
+    "id": "7",
+    "name": "Nike Air Force",
+    "cor": "Preto",
+    "tamanho": [
+        "40 ",
+        "42 ",
+        "44 "
+    ],
+    "preco": 200,
+    "imagem": "https://imgnike-a.akamaihd.net/768x768/011137IDA3.jpg"
+},
+{
+    "id": "8",
+    "name": "Nike Air Force",
+    "cor": "Branco",
+    "tamanho": [
+        "40 ",
+        "42 ",
+        "44 "
+    ],
+    "preco": 200,
+    "imagem": "https://imgnike-a.akamaihd.net/768x768/02235351A3.jpg"
+},
+{
+    "id": "9",
+    "name": "Yeezy Boost",
+    "cor": "Branco e preto",
+    "tamanho": [
+        "40 ",
+        "42 ",
+        "44 "
+    ],
+    "preco": 350,
+    "imagem": "https://cdn-images.farfetch-contents.com/12/96/03/30/12960330_13486513_600.jpg"
+},
+{
+    "id": "10",
+    "name": "Tênis do sonic",
+    "cor": "Vermelho e branco",
+    "tamanho": ["único"
+    ],
+    "preco": 1000,
+    "imagem": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ee6859cc-0eeb-4949-a1ae-97e8af41d7e1/dbpnp8d-ffc9b390-82bf-4039-8baf-784c0dd2ba1a.png/v1/fill/w_461,h_350,strp/sonic_s_shoes_render__without_shadow__by_kolnzberserk_dbpnp8d-350t.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU1NiIsInBhdGgiOiJcL2ZcL2VlNjg1OWNjLTBlZWItNDk0OS1hMWFlLTk3ZThhZjQxZDdlMVwvZGJwbnA4ZC1mZmM5YjM5MC04MmJmLTQwMzktOGJhZi03ODRjMGRkMmJhMWEucG5nIiwid2lkdGgiOiI8PTIwNDgifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Qkkbl9sslfVSsQvv0pYihUrSRr16ozFvCuIncitU0nc"
+},
+{
+    "id": "11",
+    "name": "Nike Air Mag",
+    "cor": "Branco e cinza",
+    "tamanho": [
+        "40 ",
+        "42 ",
+        "44 "
+    ],
+    "preco": 1550,
+    "imagem": "https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-air-mag-back-to-the-future-417744-001.png?v=1659441140"
+},
+{
+    "id": "12",
+    "name": "Fila Oakmont",
+    "cor": "Branco",
+    "tamanho": [
+        "36 ",
+        "38 ",
+        "40 "
+    ],
+    "preco": 150,
+    "imagem": "https://static.netshoes.com.br/produtos/tenis-fila-oakmont-feminino/24/D29-6945-024/D29-6945-024_zoom5.jpg?ts=1600104123&ims=544x"
+},
+{
+    "id": "13",
+    "name": "Adidas Daily",
+    "cor": "Preto e branco",
+    "tamanho": [
+        "36 ",
+        "38 ",
+        "40 "
+    ],
+    "preco": 225,
+    "imagem": "https://d1xpm53719yy2u.cloudfront.net/Custom/Content/Products/59/21/59212_tenis-adidas-daily-2-0-f34468_s4_637469247940356352.jpg"
+},
+{
+    "id": "14",
+    "name": "Mizuno Wave Prophecy",
+    "cor": "Preto e branco",
+    "tamanho": [
+        "40 ",
+        "42 "
+    ],
+    "preco": 175,
+    "imagem": "https://www.tradeinn.com/f/13881/138819750_2/mizuno-%E3%83%A9%E3%83%B3%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA-wave-prophecy.jpg"
+},
+{
+    "id": "15",
+    "name": "New Balance X70",
+    "cor": "Azul",
+    "tamanho": [
+        "40 ",
+        "42 "
+    ],
+    "preco": 165,
+    "imagem": "https://cdnstatic8.com/b2online.com.br/image/cache/data/produtos/new-balance/masculino/tenis-new-balance-x70-azul---laranja-4237-21-09-08-1200x1200.jpg"
+},
+{
+    "id": "16",
+    "name": "Asics Gel Nimbus 23",
+    "cor": "Vermelho e preto",
+    "tamanho": [
+        "40 ",
+        "42 "
+    ],
+    "preco": 160,
+    "imagem": "https://asicsbr.vteximg.com.br/arquivos/ids/323501/1011B004_600_SR_RT_GLB_PNG_1280x1280-JPG.jpg?v=637618214310730000"
+},
+{
+    "id": "17",
+    "name": "Vans Van Gogh",
+    "cor": "Azul e branco",
+    "tamanho": [
+        "38 ",
+        "40 "
+    ],
+    "preco": 320,
+    "imagem": "https://images.stockx.com/images/Vans-Authentic-Van-Gogh-Self-Portrait-W.png?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1609946065&q=75"
+},
+{
+    "id": "18",
+    "name": "Nike Shox",
+    "cor": "Preto e prateado",
+    "tamanho": [
+        "42 ",
+        "44 "
+    ],
+    "preco": 600,
+    "imagem": "https://static.zattini.com.br/produtos/tenis-nike-shox-r4-masculino/72/004-4265-172/004-4265-172_zoom1.jpg?ts=1632845904"
+},
+{
+    "id": "19",
+    "name": "Nike Travis Scott",
+    "cor": "Bege",
+    "tamanho": [
+        "42 ",
+        "44 "
+    ],
+    "preco": 800,
+    "imagem": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/118/115/products/nike-sb-dunk-low-travis-scott-ct5053-001-offbr-011-658e28943769a04bfd15829992800871-640-01-579c52b4e9c7a7750815852054034075-640-01-fd9e8b9a15bb75806a16466573636839-640-0.jpg"
+},
+{
+    "id": "20",
+    "name": "Gucci Ace",
+    "cor": "Branco",
+    "tamanho": [
+        "38 ",
+        "40 "
+    ],
+    "preco": 900,
+    "imagem": "https://cf.shopee.com.br/file/e25e1e6827c5a0994f2550705043ef76"
+},
+{
+    "id": "21",
+    "name": "Mad Rats Quadriculado",
+    "cor": "Branco e preto",
+    "tamanho": [
+        "42 ",
+        "44 "
+    ],
+    "preco": 240,
+    "imagem": "https://images.tcdn.com.br/img/img_prod/974905/old_school_quadriculado_171_1_de745104060a609d6744f530ab26620a.jpg"
+},
+{
+    "id": "22",
+    "name": "DC Shoes Striker",
+    "cor": "Branco e preto",
+    "tamanho": [
+        "42 ",
+        "44 "
+    ],
+    "preco": 310,
+    "imagem": "https://d2e5mvjndnxyoo.cloudfront.net/Custom/Content/Products/16/05/1605201_tenis-striker-dc-shoes-dc042a-wbw_l5_637834956332496650.jpg"
+},
+{
+    "id": "23",
+    "name": "Olympikus Ultraleve",
+    "cor": "Cinza",
+    "tamanho": [
+        "42 ",
+        "44 "
+    ],
+    "preco": 190,
+    "imagem": "https://vulcabras.vteximg.com.br/arquivos/ids/226492-1000-1000/TA%C2%AAnis-Olympikus-215G-Ultraleve-Masculino.jpg?v=637795909032400000"
+},
+{
+    "id": "24",
+    "name": "PUMA Smash",
+    "cor": "Cinza",
+    "tamanho": [
+        "42 ",
+        "44 "
+    ],
+    "preco": 160,
+    "imagem": "https://static.netshoes.com.br/produtos/tenis-juvenil-puma-smash-v2-/06/NWG-2784-006/NWG-2784-006_zoom1.jpg?ts=1631796265"
+}
+
+]
