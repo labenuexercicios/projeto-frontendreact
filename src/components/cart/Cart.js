@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { CartItem, TotalValue } from "./styled";
 
 function Cart({ cartList, setCartList }) {
@@ -9,14 +9,14 @@ function Cart({ cartList, setCartList }) {
     setCartList(findGameFromCart);
   };
 
-  const totalValueSom = () => {
+  const totalValueSum = () => {
     for (let i = 0; i < cartList.length; i++) {
-      totalValue += cartList[i].totalprice;
+      totalValue += parseInt(cartList[i].totalprice);
     }
     return;
   };
 
-  totalValueSom()
+  totalValueSum();
 
   return (
     <>
@@ -27,13 +27,13 @@ function Cart({ cartList, setCartList }) {
               <p>{item.quantity}x</p>
               <p>{item.name}</p>
               <p>R$ {item.totalprice}</p>
-              <button onClick={() => removeGame(item)}>Remover</button>
+              <button onClick={() => removeGame(item)}>X</button>
             </div>
           </CartItem>
         );
       })}
       <TotalValue>
-        <p>Valor Total: R$ {totalValue} </p>
+        <span>Valor Total: R$ {totalValue}</span>
       </TotalValue>
     </>
   );

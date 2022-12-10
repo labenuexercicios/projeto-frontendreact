@@ -10,6 +10,7 @@ import {
   MainContentWrapper,
   AsideContent,
   Body,
+  OrderContainer,
 } from "./styled";
 import Cards from "./components/cards/Cards";
 import games from "./components/games/games.json";
@@ -27,7 +28,7 @@ function App() {
   const [searchByName, setSearchByName] = useState("");
   const [order, setOrder] = useState("");
   const [minValueOrder, setMinValueOrder] = useState("");
-  const [maxValueOrder, setMaxValueOrder] = useState("");
+  const [maxValueOrder, setMaxValueOrder] = useState("1000000000");
   const [cartList, setCartList] = useState([]);
 
   const addGameOnCart = (item) => {
@@ -38,7 +39,8 @@ function App() {
     });
     if (findGameFromCart) {
       findGameFromCart.quantity++;
-      findGameFromCart.totalprice = findGameFromCart.quantity * findGameFromCart.price
+      findGameFromCart.totalprice =
+        findGameFromCart.quantity * findGameFromCart.price;
     } else {
       newCart.push({ ...gameAdd, quantity: 1, totalprice: gameAdd.price });
     }
@@ -55,19 +57,19 @@ function App() {
     setOrder(e.target.value);
   };
 
-  useEffect(()=> {
-    if(cartList.length > 0){
-      const cartListString = JSON.stringify(cartList)
-      localStorage.setItem("cartList", cartListString)
+  useEffect(() => {
+    if (cartList.length > 0) {
+      const cartListString = JSON.stringify(cartList);
+      localStorage.setItem("cartList", cartListString);
     }
-  },[cartList])
+  }, [cartList]);
 
-  useEffect(()=> {
-    const newCartForStorage = JSON.parse(localStorage.getItem("cartList"))
-    if(newCartForStorage !== null){
-      setCartList(newCartForStorage)
+  useEffect(() => {
+    const newCartForStorage = JSON.parse(localStorage.getItem("cartList"));
+    if (newCartForStorage !== null) {
+      setCartList(newCartForStorage);
     }
-  },[])
+  }, []);
 
   return (
     <div>
@@ -106,7 +108,7 @@ function App() {
                       id={game.id}
                       name={game.name}
                       price={game.price}
-                      qty={game.quantity}
+                      quantity={game.quantity}
                       img={game.imageUrl}
                       addGameOnCart={addGameOnCart}
                     />
@@ -116,23 +118,34 @@ function App() {
             <AsideContent>
               <NavFilters>
                 <p>Filtros: </p>
-                <label>
-                  Valor mínimo:
-                  <input type="number" onChange={onChangeMinValueOrder} />
-                </label>
-                <label>
-                  Valor máximo:
-                  <input type="number" onChange={onChangeMaxValueOrder} />
-                </label>
+                <div>
+                  <label>
+                    <input
+                      type="number"
+                      onChange={onChangeMinValueOrder}
+                      placeholder="Mínimo"
+                    />
+                  </label>
+                  <span> - </span>
+                  <label>
+                    <input
+                      type="number"
+                      onChange={onChangeMaxValueOrder}
+                      placeholder="Máximo"
+                    />
+                  </label>
+                </div>
               </NavFilters>
-              <p>Ordenação: </p>
-              <select onChange={onChangeOrder}>
-                <option value="">Ordenar</option>
-                <option value="Crescente">Crescente</option>
-                <option value="Decrescente">Decrescente</option>
-              </select>
+              <OrderContainer>
+                <p>Ordenação: </p>
+                <select onChange={onChangeOrder}>
+                  <option value="">Ordenar</option>
+                  <option value="Crescente">Crescente</option>
+                  <option value="Decrescente">Decrescente</option>
+                </select>
+              </OrderContainer>
               <CartContainer>
-                <p>Carrinho: </p>
+                <span>Carrinho: </span>
                 <Cart cartList={cartList} setCartList={setCartList} />
               </CartContainer>
             </AsideContent>

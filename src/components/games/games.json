@@ -1,50 +1,50 @@
 [
   {
     "id": "1",
-    "name": "jogo1",
-    "price": "30",
+    "name": "Elden Ring",
+    "price": "149",
     "quantity": "0", 
     "imageUrl":
-      "https://s2.glbimg.com/dLHiEFov94ONVIVLP2V85FWh7hE=/0x0:695x390/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/3/t/9vl0fdRyi9SvlPOe33yA/subway-surfers-mais-baixado-downloads-decada-2010-2019.jpg"
+      "https://i0.wp.com/gamesever.com.br/wp-content/uploads/2022/02/ELDEN-RING-LOGO.jpg?resize=740%2C417&ssl=1"
   },
   {
     "id": "2",
-    "name": "jogo2",
-    "price": "20",
-    "quantity": "0", 
-    "imageUrl":
-      "https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
-  },
-  {
-    "id": "3",
-    "name": "jogo3",
-    "price": "40",
-    "quantity": "0", 
-    "imageUrl":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWHtCJcqMj7KOeOBYUzBfGJz-1aPDsjmI_6g&usqp=CAU"
-  },
-  {
-    "id": "4",
-    "name": "jogo4",
+    "name": "Stray",
     "price": "50",
     "quantity": "0", 
     "imageUrl":
-      "https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2020/10/among_us_divulga%C3%A7%C3%A3o.jpg"
+      "https://blog.br.playstation.com/tachyon/sites/4/2022/06/94e5bafc4d882ae6d867d1c2f1985093fc176976.jpg?resize=1088%2C612&crop_strategy=smart"
+  },
+  {
+    "id": "3",
+    "name": "God of War Ragnarok",
+    "price": "170",
+    "quantity": "0", 
+    "imageUrl":
+      "https://revolutionarena.com.br/wp-content/uploads/2022/11/God-of-War-Ragnarok-11.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Splatoon 3",
+    "price": "230",
+    "quantity": "0", 
+    "imageUrl":
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/14ff-splatoon_3.jpeg"
   },
   {
     "id": "5",
-    "name": "jogo5",
-    "price": "10",
+    "name": "Gran Turismo 7",
+    "price": "190",
     "quantity": "0", 
     "imageUrl":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-c7Wu70JGw8SeZspNN82NEs4T-R5oZj_z_w&usqp=CAU"
+      "https://sm.ign.com/ign_br/game/g/gran-turis/gran-turismo-7_rh56.jpg"
   },
   {
     "id": "6",
-    "name": "jogo6",
+    "name": "Divinity: Original Sin 2",
     "price": "120",
     "quantity": "0", 
     "imageUrl":
-      "https://upload.wikimedia.org/wikipedia/pt/5/5f/Mega_Man_8_capa.jpg"
+      "https://store.playstation.com/store/api/chihiro/00_09_000/container/BR/en/99/UP3526-CUSA12611_00-ORIGINALSIN2DE01/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
   }
 ]

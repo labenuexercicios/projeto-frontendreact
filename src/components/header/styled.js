@@ -40,6 +40,7 @@ export const Searchbar = styled.div`
     border-style: solid;
     border-width: 0;
     font-size: 17px;
+    outline: none;
   }
   button {
     background-color: white;
