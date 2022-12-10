@@ -43,7 +43,7 @@ function ProductsScreen(props) {
             <select
 
               value={props.sortingProperties}
-              onChange={(e) => { props.setSortingProperties(e.target.value) }}>
+              onChange={(e) => props.setSortingProperties(e.target.value)}>
 
               <option value={"name"}>Nome</option>
               <option value={"price"}>Preço</option>

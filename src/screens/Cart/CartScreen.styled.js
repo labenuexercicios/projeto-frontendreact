@@ -5,7 +5,8 @@ export const GlobalStyle = createGlobalStyle`
 
 body{
   background-color: #513895;
-  border: 10px solid black;
+  border: 10px solid #000;
+  
 }
 /* *{
   margin: 0;
@@ -21,7 +22,6 @@ export const MainContainer = styled.main`
     align-items: flex-start;
     align-content: center;  
     border-bottom: 10px solid black;
-    /* border: 10px solid #000; */
     background-color: #513895;
 
     .container {
@@ -79,6 +79,15 @@ export const MainContainer = styled.main`
       font-size: 1em;
       color: white;
       z-index: 1;
+    }
+    .container .card .content span {
+      font-size: 1em;
+    }
+
+    .container .card .content span{
+      font-size: 1.4em;
+      color: black;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .container .card .content .remove-to-cart {

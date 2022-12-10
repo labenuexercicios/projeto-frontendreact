@@ -5,7 +5,7 @@ export const HeaderContainer = styled.header`
 display: flex;
 justify-content: space-around; 
 background-color: black;
-height: 7em;
+height: 9em;
 border: 10px solid black;
 
 .galaxy {
