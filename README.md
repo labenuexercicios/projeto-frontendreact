@@ -28,6 +28,7 @@
         <li><a href="#filtros">Filtros</a></li>
         <li><a href="#carrinho">Carrinho</a></li>
       </ul>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#licença">Licença</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="#contribuições">Contribuições</a></li>
@@ -75,6 +76,10 @@ A temática escolhida para o projeto foi relacionada ao jogo [Kerbal Space Progr
    ```sh
    npm install
    ```
+3. Para executar a aplicação em modo de desenvolvimento:
+   ```sh
+   npm run dev
+   ```   
 
 <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
@@ -138,7 +143,22 @@ O projeto possui os seguintes requisitos:
  ![Cart](public/cart.png)
  
  <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
- 
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Construção do layout dos cards no Figma
+- [x] Construção do SVG do Jeb (astronauta Kerbal) no Figma
+- [x] Criação da animação do Jeb
+- [x] Criação de um JSON com os produtos da loja, através da conversão de *tables* HTML em JSON (ver Contribuições)
+- [x] Desenvolvimento do código em React
+- [x] Tratamento do CSS e da responsividade
+- [x] Deploy do projeto no Surge
+
+Veja [open issues](https://github.com/vitorfontenele/projeto-frontendreact/issues) para modificações propostas (e issues conhecidos).
+
+ <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
+
 <!-- LICENSE -->
 ## Licença
 
