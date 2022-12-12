@@ -6,8 +6,8 @@ export const AppContext = ({ children }) => {
     const [carrinho, setCarrinho] = useState([]);
     const [quantidade, setQuantidade] = useState(0);
     const [campoBuscarNome, setCampoBuscarNome] = useState("");
-    const [campoPrecoMin, setCampoPrecoMin] = useState(0);
-    const [campoPrecoMax, setCampoPrecoMax] = useState(0);
+    const [campoPrecoMin, setCampoPrecoMin] = useState("");
+    const [campoPrecoMax, setCampoPrecoMax] = useState("");
 
     const adicionarItemAoCarrinho = (novoItem) => {
         const novoCarrinho = [...carrinho];

@@ -3,9 +3,15 @@ import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import * as React from 'react'
 import { StyledCard, StyledCardActions, StyledCardContent } from './styles'
+import { useAppContext } from '../../contexts/GlobalContext'
+
 
 
 const CardProduct = ({ produto }) => {
+  const {
+    adicionarItemAoCarrinho,
+  } = useAppContext()
+
   return (
     <StyledCard>
       <CardMedia
@@ -23,7 +29,12 @@ const CardProduct = ({ produto }) => {
         </Typography>
       </StyledCardContent>
       <StyledCardActions>
-        <Button size="small">Adicionar</Button>
+        <Button 
+          size="small" 
+          onClick={() => adicionarItemAoCarrinho(produto)}
+        >
+          Adicionar
+        </Button>
       </StyledCardActions>
     </StyledCard>
   )

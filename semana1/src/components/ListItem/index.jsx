@@ -20,6 +20,7 @@ const StoreListItem = ({ index, product }) => {
       >
         <ListItemAvatar />
         <ListItemText primary={product.nome} secondary={product.preco} />
+        <ListItemText primary={`quantidade: ${product.quantidade}`}/>
       </ListItem>
       <Divider variant="inset" component="li" />
     </>
