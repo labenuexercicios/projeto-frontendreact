@@ -7,7 +7,7 @@ function Footer() {
       <div className='customer-information'>
         <div>
           <h4>Institucional</h4>
-          <ul>
+          <ul className='institutional-group'>
             <li>Sobre nossa empresa</li>
             <li>Nossas lojas</li>
             <li>Trabalhe conosco</li>
@@ -15,7 +15,7 @@ function Footer() {
         </div>
         <div>
           <h4>Atendimento</h4>
-          <ul>
+          <ul className='support-client-group'>
             <li>Central de Atendimento</li>
             <li>Políticas de privacidade</li>
             <li>Compra segura</li>

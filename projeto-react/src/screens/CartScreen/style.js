@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #f3f3f3;
 `;
 
 export const Header = styled.header`
@@ -12,8 +11,6 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   position: absolute;
-  background-color: rgb(0, 96, 177);
-  outline: 3px solid #ffd100;
 
   .logo-group{
     display: flex;
@@ -53,10 +50,7 @@ export const Logo = styled.div`
 `
 
 export const Main = styled.div`
-  // font-weight: 600;
-  // font-size: 18px;
   margin-top: 15vh;
-  background-color: #f3f3f3;
   margin-bottom: 70px;
   
   .shopping-continue{
@@ -65,6 +59,7 @@ export const Main = styled.div`
     font-weight: 600;
     font-size: 25px;
     margin: 20px 16px;
+    color: white;
 
     :hover{
       cursor: pointer;
@@ -82,6 +77,7 @@ export const Main = styled.div`
 
       .header-cart-section{
         margin: 20px 0px;
+        color: white;
 
         h3{
           font-size: 20px;
@@ -89,11 +85,11 @@ export const Main = styled.div`
         }
 
         p{
-          font-family: 'Poppins';
           font-style: normal;
           font-weight: 500;
           font-size: 18px;
           line-height: 27px;
+          color: #CBD5E0;
         }
       }
     }
@@ -105,7 +101,6 @@ export const Main = styled.div`
     border: 1px solid #e3e3e3;
     box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
     border: 1px solid rgba(var(--lightGrey), 1);
-    background-color: #fff;
     border-radius: 15px;
 
     .header-cart-products{
@@ -116,6 +111,7 @@ export const Main = styled.div`
       margin-right: 50px;
       padding: 20px 0px;
       font-weight: 600;
+      color: white;
     }
   }
 
@@ -123,7 +119,7 @@ export const Main = styled.div`
     display: flex;
     flex-direction: column;
     width: 50vh;
-    background-color: rgb(0, 96, 177);
+    background-color: black;
     border-radius: 15px;
     color: #FEFCFC;
     padding: 20px 20px;
@@ -146,7 +142,7 @@ export const Main = styled.div`
     hr{
       margin-top: 20px;
       margin-bottom: 15px;
-      border: 1px solid rgb(0,96,177);
+      border: 1px solid #2c3ab7;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
@@ -157,7 +153,7 @@ export const Main = styled.div`
   }
 
   input[type="text"]{
-    background-color: rgb(0, 96, 177);
+    background-color: #383838;
     filter: brightness(1.1);
     border: none;
     width: 100%;
@@ -178,7 +174,7 @@ export const Main = styled.div`
     gap: 10px;
     
     input{
-      background-color: rgb(0, 96, 177);
+      background-color: #383838;
       filter: brightness(1.1);
       border: none;
       width: 100%;
@@ -193,7 +189,7 @@ export const Main = styled.div`
   }
 `
 export const Checkout = styled.button`
-  background-color: #43b02a;
+  background-color: #272c99;
   color: white;
   outline: none;
   width: 300px;
@@ -207,6 +203,6 @@ export const Checkout = styled.button`
 
   :hover{
     cursor: pointer;
-    background-color: rgb(7, 118, 0);
+    background-color: #2c3ab7;
   }
 ` 

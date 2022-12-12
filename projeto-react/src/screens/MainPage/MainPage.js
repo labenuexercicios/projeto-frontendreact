@@ -6,6 +6,8 @@ import { ContainerCard, AppContainer, MainContainer, ProductContainer } from "./
 import brinquedos from "../../assets/products.json";
 import Cards from "../../Components/Card/Card";
 import Footer from "../../Components/Footer/Footer";
+import background from "../../assets/spacebackground.webp"
+import Hero from "../../Components/Hero/Hero";
 
 function MainPage(props) {
   const [minPrice, setMinPrice] = useState(-Infinity);
@@ -18,8 +20,9 @@ function MainPage(props) {
   const { addToCart } = props;
 
   return (
-    <AppContainer>
+    <AppContainer style={{ backgroundImage: `url(${background})` }}>
       <Header search={search} setSearch={setSearch} goToCartScreen={goToCartScreen} itemsInCart={itemsInCart} />
+      <Hero search={search} setSearch={setSearch}/>
       <MainContainer>
         <Filtro
           minPrice={minPrice}

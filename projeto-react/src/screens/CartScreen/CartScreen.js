@@ -7,6 +7,7 @@ import RuPay from '../../assets/rupay-icon.svg'
 import Footer from "../../Components/Footer/Footer";
 import { FaArrowLeft } from "react-icons/fa";
 import { IoRocketSharp } from "react-icons/io5";
+import background from "../../assets/spacebackground.webp"
 
 function CartScreen(props) {
 
@@ -17,14 +18,14 @@ function CartScreen(props) {
     }, 0)
 
     return (
-        <AppContainer>
+        <AppContainer style={{ backgroundImage: `url(${background})` }}>
             <Header>
                 <div className="logo-group">
                     <Logo>
                         <h1>Space</h1>
                         <h1>Land</h1>
                     </Logo>
-                    <IoRocketSharp size="70px" color="#ffd100" />
+                    <IoRocketSharp size="70px" color="white" />
                 </div>
             </Header>
             <Main>

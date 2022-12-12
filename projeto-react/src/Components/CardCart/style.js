@@ -6,16 +6,17 @@ export const Card = styled.div`
   justify-content: space-between;
   height: 35vh;
   width: 70vw;
+  background: #ffffff10;
 
   .card-name{
     font-size: 0.7rem;
     text-align: center;
     font-weight: 600;
-    color: rgb(66, 70, 77);
+    color: white;
   }
 
   .card-price{
-    color: rgb(0, 96, 177);
+    color: white;
     font-size: 1.20rem;
     font-weight: 700;
     padding: 10px;
@@ -27,6 +28,7 @@ export const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
   }
 
   .card-delete-button{
@@ -40,10 +42,12 @@ export const Card = styled.div`
     width: 30px;
     height: 36px;
     border-radius: 10px;
-    background-color: #ffd100;
+    background: none;
     border: none;
+    border: 2px solid white;
     color: white;
-    cursor: pointer
+    cursor: pointer;
+    margin: 5px 5px;
   }
 `;
 
