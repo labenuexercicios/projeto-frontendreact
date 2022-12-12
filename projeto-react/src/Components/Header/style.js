@@ -6,8 +6,6 @@ export const HeaderContainer = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  background-color: rgb(0, 96, 177);
 
   .search-group{
     position: relative;
@@ -62,9 +60,9 @@ export const HeaderContainer = styled.section`
     justify-content: center;
     align-items: center;
     margin-right: 30px;
-    background-color: rgb(0, 96, 177);
     border: none;
-    color: #ffd100;
+    color: white;
+    background: none;
 
     :hover{
       cursor: pointer;

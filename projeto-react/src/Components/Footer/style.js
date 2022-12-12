@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterSection = styled.footer`
     height: 40vh;
     width: 100%;
-    background-color: rgb(0,96,177);
+    border-top: 3px solid #ffffff30;
     color: white;
 
     .customer-information{
@@ -12,10 +12,26 @@ export const FooterSection = styled.footer`
         gap: 100px;
         height: 30vh;
         padding-top: 30px;
+
+        .institutional-group{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px 0px;
+            list-style: none;
+        }
+
+        .support-client-group{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px 0px;
+            list-style: none;
+        }
     }
     
     h4{
-        color: #ffd100;
+        color: #4299e1;
         font-size: 22px;
     }
 

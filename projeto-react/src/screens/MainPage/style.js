@@ -10,12 +10,10 @@ export const ContainerCard = styled.div`
 export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #f3f3f3;
 `;
 
 export const MainContainer = styled.div`
   flex-grow: 1;
-  background-color: #f3f3f3;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 40px;

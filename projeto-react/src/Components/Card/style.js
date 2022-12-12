@@ -6,11 +6,11 @@ export const Card = styled.div`
   flex-direction: column;
   height: 50vh;
   width: 20vw;
-  background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
   border: 1px solid rgba(var(--lightGrey), 1);
-  background-color: #fff;
+  background: #ffffff10;
+  border: 1px solid #ffffff30;
 `;
 
 export const Imagem = styled.img`
@@ -28,44 +28,69 @@ export const Legenda = styled.div`
     font-size: 0.7rem;
     text-align: center;
     font-weight: 600;
-    color: rgb(66, 70, 77);
+    padding-top: 8px;
+    color: #fff;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 7px #fff,
+        0 0 21px #fff,
+        0 0 30px #4299e1,
+        0 0 80px #4299e1,
+        0 0 90px #4299e1,
+        0 0 100px #4299e1,
+        0 0 120px #4299e1;
   }
 
   .card-price{
-    color: rgb(0, 96, 177);
     font-size: 1.20rem;
     font-weight: 700;
     padding: 10px;
     display: flex;
     justify-content: center;
+    color: #fff;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 7px #fff,
+      0 0 21px #fff,
+      0 0 30px #4299e1,
+      0 0 80px #4299e1,
+      0 0 90px #4299e1,
+      0 0 100px #4299e1,
+      0 0 120px #4299e1;
   }
 
   .card-carting{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8px;
 
     button{
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 5px;
+      width: 60%;
+      height: 36px;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      font-weight: 600;
+      background-color: black;
+      animation: pulsate 1.5s infinite alternate;  
+      border: 0.2rem solid #fff;
+      border-radius: 2rem;
+      padding: 0.4em;
+      box-shadow: 0 0 .1rem #fff,
+            0 0 .1rem #fff,
+            0 0 1rem #4299e1,
+            0 0 0.8rem #4299e1,
+            0 0 0.8rem #4299e1,
+            inset 0 0 1.3rem #4299e1; 
 
       :hover{
         cursor: pointer;
         filter: brightness(1.1);
       }
     }
-  }
-
-  button{
-    width: 60%;
-    height: 36px;
-    border-radius: 8px;
-    background-color: #ffd100;
-    border: none;
-    color: white;
-    font-weight: 600;
   }
 `;

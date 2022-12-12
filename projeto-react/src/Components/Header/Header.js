@@ -1,6 +1,5 @@
 import React from "react";
 import { HeaderContainer, Logo } from "./style";
-import searchIcon from '../../assets/search.svg'
 import { FaUserAlt, FaShoppingCart, FaQuestionCircle } from 'react-icons/fa'
 import { IoRocketSharp } from "react-icons/io5";
 
@@ -15,19 +14,8 @@ function Header(props) {
           <h1>Space</h1>
           <h1>Land</h1>
         </Logo>
-        <IoRocketSharp size="70px" color="#ffd100"/>
+        <IoRocketSharp size="70px" color="white"/>
       </div>
-
-      <div className="search-group">
-        <input
-          placeholder="Busque por brinquedos e produtos infantis"
-          value={props.search}
-          onChange={(event) => props.setSearch(event.target.value)}
-          className="search-input"
-        />
-        <img src={searchIcon} alt="search icon" />
-      </div>
-
 
       <div className="nav-bar">
         <button>

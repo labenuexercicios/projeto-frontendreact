@@ -6,6 +6,8 @@ export const SortProducts = styled.div`
   justify-content: space-between;
   padding: 16px;
   margin-top: 30px;
+  margin-right: 60px;
+  color: white;
 
   select{
     background: #fff 0 0 no-repeat padding-box;
