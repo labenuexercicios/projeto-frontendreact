@@ -4,11 +4,11 @@ export const StyledContainer = styled(Grid)(() => ({
   backgroundColor: '#fff',
 }))
 
-export const StyledTitle = styled(Typography)(({ theme }) => ({
+export const StyledTitle = styled(Typography)(() => ({
   backgroundColor: '#fff',
-  margin: theme.spacing(2, 0, 2, 0),
+  margin: '35px 0',
 }))
 
-export const StyledSearchWrapper = styled('div')(({ theme }) => ({
-  margin: theme.spacing(3, 0, 4, 0),
+export const StyledSearchWrapper = styled('div')(() => ({
+  margin: '10px 0',
 }))

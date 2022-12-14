@@ -7,6 +7,7 @@ import { StyledContainer, StyledSearchWrapper, StyledTitle } from './styles'
 import produtos from '../../assets/mocks/lojinha.json'
 import { useAppContext } from '../../contexts/GlobalContext'
 
+
 const Home = () => {
   const {
     campoBuscarNome,
@@ -31,6 +32,9 @@ const Home = () => {
 
   return (
     <StyledContainer>
+      <StyledTitle variant="h6" color="inherit">
+        Filtros de Pesquisa
+      </StyledTitle>
       <StyledSearchWrapper>
         <Grid container spacing={2}>
           <Grid item xs={12} md={12} lg={4}>

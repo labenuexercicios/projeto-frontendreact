@@ -8,12 +8,11 @@ export const AppContext = ({ children }) => {
     const [campoBuscarNome, setCampoBuscarNome] = useState("");
     const [campoPrecoMin, setCampoPrecoMin] = useState("");
     const [campoPrecoMax, setCampoPrecoMax] = useState("");
+    const [valorTotal, setValorTotal] = useState(0);
 
     const adicionarItemAoCarrinho = (novoItem) => {
         const novoCarrinho = [...carrinho];
-
         const itemSelectionado = novoCarrinho.find((p) => p.id === novoItem.id);
-
         if (!itemSelectionado) {
             const novoProduto = { ...novoItem, quantidade: 1 };
             setQuantidade(quantidade + 1);
@@ -22,45 +21,27 @@ export const AppContext = ({ children }) => {
             setQuantidade(quantidade + 1);
             itemSelectionado.quantidade++;
         }
+        setValorTotal(prev => prev + novoItem.preco);
         setCarrinho(novoCarrinho);
         localStorage.setItem("carrinho", JSON.stringify(novoCarrinho));
         localStorage.setItem("quantidade", JSON.stringify(quantidade));
     }
 
-    const somarItemSelecionado = (somarItem) => {
+    const deletarItemDoCarrinho = (index, deletarItem) => {
         const novoCarrinho = [...carrinho];
-        const itemSelectionado = novoCarrinho.find((p) => p.id === somarItem.id);
-
-        itemSelectionado.quantidade++;
-
-        setQuantidade(quantidade + 1);
+        const itemSelectionado = novoCarrinho.find((p) => p.id === index);
+        if (itemSelectionado.quantidade <= 1) {
+            const indexItem = novoCarrinho.findIndex((p) => p.id === deletarItem.id);
+            setQuantidade(quantidade - carrinho[indexItem].quantidade);
+            novoCarrinho.splice(indexItem, 1);
+        } else {
+            itemSelectionado.quantidade--;
+            setQuantidade(quantidade - 1);
+        }
+        setValorTotal(prev => prev - deletarItem.preco)
         setCarrinho(novoCarrinho);
         localStorage.setItem("carrinho", JSON.stringify(novoCarrinho));
         localStorage.setItem("quantidade", JSON.stringify(quantidade));
-    }
-
-    const subtrairItemSelecionado = (subtrairItem) => {
-        const novoCarrinho = [...carrinho];
-        const itemSelectionado = novoCarrinho.find((p) => p.id === subtrairItem.id);
-
-        itemSelectionado.quantidade--;
-
-        setQuantidade(quantidade - 1);
-        setCarrinho(novoCarrinho);
-        localStorage.setItem("carrinho", JSON.stringify(novoCarrinho));
-        localStorage.setItem("quantidade", JSON.stringify(quantidade));
-    }
-
-    const deletaItemDoCarrinho = (deletarItem) => {
-        const novoCarrinho = [...carrinho];
-
-        const indexItem = novoCarrinho.findIndex((p) => p.id === deletarItem.id);
-
-        setQuantidade(quantidade - carrinho[indexItem].quantidade);
-        novoCarrinho.splice(indexItem, 1);
-        setCarrinho(novoCarrinho);
-        localStorage.setItem("carrinho", JSON.stringify(novoCarrinho));
-        localStorage.setItem("quantidade", JSON.stringify(quantidade - 1));
     }
 
     const atualizaPrecoMin = (e) => {
@@ -113,12 +94,11 @@ export const AppContext = ({ children }) => {
         campoPrecoMax,
         setCampoPrecoMax,
         adicionarItemAoCarrinho,
-        somarItemSelecionado,
-        subtrairItemSelecionado,
         atualizaPrecoMin,
         atualizaPrecoMax,
         atualizaCampoBuscar,
-        deletaItemDoCarrinho
+        deletarItemDoCarrinho,
+        valorTotal,
     }
 
     return (

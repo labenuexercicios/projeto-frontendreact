@@ -3,28 +3,50 @@ import { Divider, IconButton } from '@mui/material'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import * as React from 'react'
-import ListItemAvatar from '../ListItemAvatar'
+import { useAppContext } from '../../contexts/GlobalContext'
+import Avatar from '@mui/material/Avatar'
+import MuiListItemAvatar from '@mui/material/ListItemAvatar'
 
-const StoreListItem = ({ index, product }) => {
+
+const CartListItem = ({ index, produto }) => {
+
+  const {
+    deletarItemDoCarrinho
+  } = useAppContext();
+
   return (
     <>
       <ListItem
         secondaryAction={
           <IconButton
             edge="end"
-          //onClick={() => handleDeleteClick(index, p.id)}
+            onClick={() => deletarItemDoCarrinho(index, produto)}
           >
             <DeleteOutlineOutlinedIcon />
           </IconButton>
         }
       >
-        <ListItemAvatar />
-        <ListItemText primary={product.nome} secondary={product.preco} />
-        <ListItemText primary={`quantidade: ${product.quantidade}`}/>
+        <MuiListItemAvatar>
+          <Avatar alt={produto.nome} src={produto.url} />
+        </MuiListItemAvatar>
+        <ListItemText
+          primary={
+            <div>
+              <strong>
+                {`${produto.nome} | `}
+              </strong>
+              <strong>
+                {`Subtotal: `}
+              </strong>
+              R$ {produto.preco * produto.quantidade}
+            </div>
+          }
+          secondary={`quantidade: ${produto.quantidade}`}
+        />
       </ListItem>
       <Divider variant="inset" component="li" />
     </>
   )
 }
 
-export default StoreListItem
+export default CartListItem
