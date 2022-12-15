@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "name" : "Netuno",
+        "price": 220000,
+        "image": "https://scitechdaily.com/images/Venus-Planet.jpg",
+        "imaAlt": "Netuno"
+    },
+    {
+        "id": 2,
+        "name" : "Urano",
+        "price": 280000,
+        "image": "https://scitechdaily.com/images/Venus-Planet.jpg",
+        "imaAlt": "Urano"
+    },
+    {
+        "id": 3,
+        "name" : "Saturno",
+        "price": 180000,
+        "image": "img/Saturn.jpg"
+    },
+    {
+        "id": 4,
+        "name" : "Júpiter",
+        "price": 450000,
+        "image": "img/Jupiter.webp",
+        "imaAlt": "Júpiter"
+    },
+    {
+        "id": 5,
+        "name" : "Marte",
+        "price": 740000,
+        "image": "https://scitechdaily.com/images/Venus-Planet.jpg",
+        "imaAlt": "Marte"
+    },
+    {
+        "id": 6,
+        "name" : "Vênus",
+        "price": 250000,
+        "image": "https://scitechdaily.com/images/Venus-Planet.jpg",
+        "imaAlt": "Vênus"
+    },
+    {
+        "id": 7,
+        "name" : "Mercúrio",
+        "price": 220000,
+        "image": "https://scitechdaily.com/images/Venus-Planet.jpg",
+        "imaAlt": "Mercúrio"
+    },
+    {
+        "id": 7,
+        "name" : "Plutão",
+        "price": 220000,
+        "image": "https://scitechdaily.com/images/Venus-Planet.jpg",
+        "imaAlt": "Mercúrio"
+    }
+
+
+]
