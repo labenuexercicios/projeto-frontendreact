@@ -4,12 +4,14 @@ import Header from "../../components/Header";
 import ProminenceCard from "../../components/prominenceCard";
 import Section from "../../components/Section";
 
-const Home = () => {
+const Home = ({ prodShopping, setProdShopping }) => {
     return (
         <div>
             <Header />
             <ProminenceCard />
-            <Section />
+            <Section
+                prodShopping={prodShopping}
+            />
             <Footer />
         </div>
     )

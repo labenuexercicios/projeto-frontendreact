@@ -1,14 +1,17 @@
 import React from 'react'
-import ImagemOne from "../../img/camiseta-baby-look-feminina-espacial-astronauta-total-print-baby-look.jpg"
-import { ContainerDIv, DivSectionProds, Img } from './styled'
+import { ContainerDIv, DivSectionProds, } from './styled'
 
-const Section = () => {
+const Section = ({ prodShopping }) => {
     return (
         <ContainerDIv>
-            <DivSectionProds>
+            {prodShopping.map((item, index) => {
+                return (
+                    <DivSectionProds key={index}>
+                        <h3>{item.name}</h3>
 
-
-            </DivSectionProds>
+                    </DivSectionProds>
+                )
+            })}
         </ContainerDIv>
     )
 }
