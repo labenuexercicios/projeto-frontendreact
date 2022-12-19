@@ -1,29 +1,23 @@
 import React from "react";
-import { BoxButtons, BoxDivList, BoxList, BoxLogo, Buttons, ContainerHeader, DivContainer } from "./styled";
+import { BoxButtons, BoxDiv, BoxForm, InputProductsSearch, StyledHeader, Title } from "./styled";
+import { BsFillCartFill } from "react-icons/bs";
+
 
 const Header = () => {
     return (
-        <ContainerHeader>
-            <DivContainer>
-                <BoxLogo>
-                    <Buttons><img src="" alt="logo" /></Buttons>
-                </BoxLogo>
-                <BoxDivList>
-                    <BoxList>
-                        <li><Buttons>???</Buttons></li>
-                        <li><Buttons>???</Buttons></li>
-                        <li><Buttons>???</Buttons></li>
-                    </BoxList>
-                </BoxDivList>
-                <BoxButtons>
-                    <BoxList>
-                        <li><Buttons>???</Buttons></li>
-                        <li><Buttons>???</Buttons></li>
-                    </BoxList>
-                </BoxButtons>
-            </DivContainer>
-
-        </ContainerHeader>
+        <StyledHeader>
+            <BoxDiv>
+                <Title>Labe Store</Title>
+            </BoxDiv>
+            <BoxForm>
+                <form >
+                    <InputProductsSearch type="text" placeholder="Digite o nome do produto" />
+                </form>
+            </BoxForm>
+            <BoxButtons>
+                <button><BsFillCartFill /></button>
+            </BoxButtons>
+        </StyledHeader>
     )
 }
 

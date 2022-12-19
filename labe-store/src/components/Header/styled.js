@@ -1,44 +1,37 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const ContainerHeader = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
-export const DivContainer = styled.div`
+export const StyledHeader = styled.header`
+    height: 10vh;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
-
+    background-color: #e9e9e9;
 `
 
-export const BoxLogo = styled.div`
-    width: 25%;
-    padding: 1em;
-    border: 2px solid;
+export const BoxDiv = styled.div`
     display: flex;
-    justify-content: center;
-`
-
-export const BoxDivList = styled(BoxLogo)`
-    width: 50%;
-    justify-content: center;
-`
-
-export const BoxList = styled.ul`
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    list-style: none;
-`
-
-export const BoxButtons = styled(BoxLogo)`
-
-`
-
-export const Buttons = styled.button`
-    background-color: transparent;
-    width: 25%;
     height: 100%;
-    border: none;
+    width: 25%;
+    align-items: center;
+`
+export const Title = styled.h1`
+    font-size:4vw
+`
+
+export const BoxForm = styled(BoxDiv)`
+    width: 50%;
+    justify-content:center;
+    `
+
+export const BoxButtons = styled(BoxDiv)`
+    justify-content:space-around;
+    `
+export const InputProductsSearch = styled.input`
+    width: 30vw;
+    height:5vh;
+    font-size:1vw;
+    border: 1px solid #ccc;
+`
+
+export const Icon = styled.img`
+    height: 5vh;
 `

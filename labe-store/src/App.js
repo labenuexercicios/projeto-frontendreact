@@ -7,14 +7,12 @@ import ListProds from "./components/data/data.json";
 
 
 function App() {
-  const [prodShopping, setProdShopping] = useState([ListProds])
-  console.log(prodShopping)
+  // const [prodShopping, setProdShopping] = useState([...ListProds])
 
   return (
     <div >
       <GlobalStyled />
       <Home
-        prodShopping={prodShopping} setProdShopping={setProdShopping}
       />
 
     </div>

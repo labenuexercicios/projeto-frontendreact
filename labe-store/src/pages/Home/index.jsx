@@ -1,17 +1,16 @@
 import React from "react";
+import Filters from "../../components/filters";
 import Footer from "../../components/footer";
 import Header from "../../components/Header";
-import ProminenceCard from "../../components/prominenceCard";
-import Section from "../../components/Section";
+import { Main } from "./styled";
 
-const Home = ({ prodShopping, setProdShopping }) => {
+const Home = () => {
     return (
         <div>
             <Header />
-            <ProminenceCard />
-            <Section
-                prodShopping={prodShopping}
-            />
+            <Main>
+                <Filters />
+            </Main>
             <Footer />
         </div>
     )
