@@ -1,0 +1,74 @@
+[
+    {
+        "nome": "Voyager 1",
+        "preco": "250",
+        "tipo": "Satélite",
+        "imagem": "https://www.rbsdirect.com.br/filestore/4/6/0/4/5_f6502a8716ef34b/54064_fe7cf64e6bb3e94.jpg?w=700"
+    },
+    {
+        "nome": "James Webb",
+        "preco": "1000",
+        "tipo": "Satélite",
+        "imagem": "https://conteudo.imguol.com.br/c/noticias/e6/2022/06/09/esta-e-a-quinta-vez-que-o-telescopio-espacial-e-atingido-por-um-micrometeorito-1654801333288_v2_4x3.png"
+    },
+    {
+        "nome": "Traje Astronauta",
+        "preco": "150",
+        "tipo": "Roupa",
+        "imagem": "https://s2.glbimg.com/tv8OpGXJzOJHhSYlpePztfD94GM=/e.glbimg.com/og/ed/f/original/2015/11/05/flickr_jasbond007.jpg"
+    },
+    {
+        "nome": "Camisa Paranoid Android",
+        "preco": "100",
+        "tipo": "Roupa",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_637572-MLB46813031023_072021-W.jpg"
+    },
+    {
+        "nome": "Camisa Cowboy Bebop",
+        "preco": "100",
+        "tipo": "Roupa",
+        "imagem": "https://img.elo7.com.br/product/main/282BD3D/camiseta-cowboy-bebop-spike-see-you-space-cowboy-animes-anime.jpg"
+    },
+    {
+        "nome": "Camisa Blade Runner",
+        "preco": "100",
+        "tipo": "Roupa",
+        "imagem": "https://ae01.alicdn.com/kf/H3bbd5e91fd734869b5e94be64aca030bK/Blade-runner-2049-ryan-gosling-filme-k-e-joi-preto-camiseta-de-manga-curta.jpg_Q90.jpg_.webp"
+    },
+    {
+        "nome": "Viagem para Buraco Negro",
+        "preco": "10000",
+        "tipo": "Viagem",
+        "imagem": "https://epsilon.aeon.co/images/78ba87e7-7198-4468-81b5-500c505d5bc8/header_essay-gettyimages-1237093074.jpg"
+    },
+    {
+        "nome": "Viagem para Nebulosa Olho de Deus",
+        "preco": "5000",
+        "tipo": "Viagem",
+        "imagem": "https://www.universetoday.com/wp-content/uploads/2009/12/helixnebula.jpg"
+    },
+    {
+        "nome": "Viagem para Marte",
+        "preco": "9000",
+        "tipo": "Viagem",
+        "imagem": "https://s1.static.brasilescola.uol.com.br/be/2021/11/planeta-marte.jpg"
+    },
+    {
+        "nome": "Bebop",
+        "preco": "50000",
+        "tipo": "Espaçonave",
+        "imagem": "https://preview.redd.it/cgmorhpw5k271.jpg?auto=webp&s=e204540e9e2cf57c9decdee290f3b101610fc80f"
+    },
+    {
+        "nome": "Milano",
+        "preco": "30000",
+        "tipo": "Espaçonave",
+        "imagem": "https://cdn.mos.cms.futurecdn.net/97GixZRqSemPDtWWJyUXsn-1200-80.jpg"
+    },
+    {
+        "nome": "Endurance",
+        "preco": "20000",
+        "tipo": "Espaçonave",
+        "imagem": "https://www.google.com/url?sa=i&url=https%3A%2F%2Finterstellarfilm.fandom.com%2Fwiki%2FEndurance&psig=AOvVaw1qL4bmMA73wLVfyydT10j1&ust=1670363057683000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIjXwbW54_sCFQAAAAAdAAAAABAE"
+    }
+]
