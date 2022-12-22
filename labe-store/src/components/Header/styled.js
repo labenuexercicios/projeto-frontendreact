@@ -4,7 +4,6 @@ export const StyledHeader = styled.header`
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    background-color: #e9e9e9;
 `
 
 export const BoxDiv = styled.div`

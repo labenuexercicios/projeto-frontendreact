@@ -1,18 +1,24 @@
 import { React, useState } from "react";
-import { MenuInterativo } from "./styled";
+import { ContainerForm, MenuInterativo } from "./styled";
 import { FiMenu } from "react-icons/fi";
 
 
-const Filters = () => {
+const Filters = ({ numberMin, setNumberMin }) => {
+
     const [sideBar, setSideBar] = useState(false)
     return (
         <div>
             {sideBar === true ?
                 <MenuInterativo>
-                    <button onClick={() => { setSideBar(false) }}>X</button>
-                    <form action="">
-                        <input type="text" placeholder="preco minimo" />
-                    </form>
+                    <button onClick={() => {
+                        setSideBar(false)
+                    }}>X</button>
+                    <ContainerForm action="">
+                        <input type="number" placeholder="preco minimo"
+                            onChange={(e) => { setNumberMin(e.target.value) }}
+                        />
+                        <input type="number" placeholder="preco maximo" />
+                    </ContainerForm>
                 </MenuInterativo>
                 :
                 <section>

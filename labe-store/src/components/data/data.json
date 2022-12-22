@@ -51,5 +51,22 @@
         "thumbnail": "https://github.com/MathMendesReis/projeto-frontendreact/blob/matheusBarbosaA/labe-store/src/img/imgProducts/7.jpg?raw=true",
         "prominence":false,
         "quantProdsCart":0
+    },
+    {
+        "name": "Capa de celular Astronauta Poco x3",
+        "descripton":"",
+        "price": 18.12,
+        "id":8,
+        "thumbnail": "https://github.com/MathMendesReis/projeto-frontendreact/blob/matheusBarbosaA/labe-store/src/img/imgProducts/7.jpg?raw=true",
+        "prominence":false,
+        "quantProdsCart":0
+    },{
+        "name": "Capa de celular Astronauta Poco x3",
+        "descripton":"",
+        "price": 18.12,
+        "id":9,
+        "thumbnail": "https://github.com/MathMendesReis/projeto-frontendreact/blob/matheusBarbosaA/labe-store/src/img/imgProducts/7.jpg?raw=true",
+        "prominence":false,
+        "quantProdsCart":0
     }
 ]
