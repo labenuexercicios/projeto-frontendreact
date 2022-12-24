@@ -1,24 +1,23 @@
-import { React, useState } from "react";
-import { BoxButtons, BoxDiv, BoxForm, InputProductsSearch, StyledHeader, Title } from "./styled";
+import { BoxButtons, BoxDiv, BoxForm, Buttons, ButtonsTitle, InputProductsSearch, StyledHeader, Title } from "./styled";
 import { BsFillCartFill } from "react-icons/bs";
 
 
-const Header = ({ setName, setShowCart }) => {
+const Header = ({ goCart, goHome, filterName }) => {
 
     return (
         <StyledHeader>
             <BoxDiv>
-                <Title>Labe Store</Title>
+                <ButtonsTitle onClick={goHome}><Title>Labe Store</Title></ButtonsTitle>
             </BoxDiv>
             <BoxForm>
                 <form >
                     <InputProductsSearch type="text" placeholder="Digite o nome do produto"
-                        onChange={(e) => { setName(e.target.value) }}
+                        onChange={filterName}
                     />
                 </form>
             </BoxForm>
             <BoxButtons>
-                <button onClick={() => { setShowCart(true) }}><BsFillCartFill /></button>
+                <Buttons onClick={goCart}><BsFillCartFill fontSize='25' /></Buttons>
             </BoxButtons>
         </StyledHeader>
     )

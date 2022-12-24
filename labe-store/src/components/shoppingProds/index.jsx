@@ -1,29 +1,7 @@
 import React from "react";
 import { ContainerProd, ContainerShopping, ImagemProd, NameProd, PriceProd } from "./styled";
 
-const ShoppingProds = ({ prodShopping, name, numberMin, cart, setCart }) => {
-
-    const addProdInCart = (prod) => {
-        const copyProductsCart = [...cart]
-
-        const item = copyProductsCart.find(product => product.id === prod.id)
-
-        if (!item) {
-            // não tem produto
-            copyProductsCart.push({
-                id: prod.id,
-                name: prod.name,
-                quant: 1
-            })
-        } else {
-            item.quant = item.quant + 1
-        }
-
-        setCart(copyProductsCart)
-    }
-
-
-
+const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart }) => {
     return (
         <ContainerShopping>
             {prodShopping.filter((item) => {

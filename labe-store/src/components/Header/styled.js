@@ -4,6 +4,7 @@ export const StyledHeader = styled.header`
     height: 10vh;
     display: flex;
     justify-content: space-between;
+    padding: 5em;
 `
 
 export const BoxDiv = styled.div`
@@ -19,7 +20,7 @@ export const Title = styled.h1`
 export const BoxForm = styled(BoxDiv)`
     width: 50%;
     justify-content:center;
-    `
+`
 
 export const BoxButtons = styled(BoxDiv)`
     justify-content:space-around;
@@ -33,4 +34,19 @@ export const InputProductsSearch = styled.input`
 
 export const Icon = styled.img`
     height: 5vh;
+`
+
+export const Buttons = styled.button`
+    appearance: auto;
+    height: 5vh;
+    width: 3vw;
+    border-style: none;
+    background-color:transparent;
+    cursor: pointer;
+`
+export const ButtonsTitle = styled.button`
+    appearance: auto;
+    background-color:transparent;
+    border-style: none;
+    cursor: pointer;
 `
