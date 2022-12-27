@@ -3,11 +3,6 @@ import CartEmpty from "../cartEmpty";
 import { ContainerCart, ContainerDiv, DivButtons, DivImg, DivInfoProd, Img, ProdCart } from "./styled";
 
 const Cart = ({ cart, removeProductToCart, addProdInCart, priceTot }) => {
-
-
-
-
-
     return (
         <ContainerDiv>
             {cart.length === 0 ?

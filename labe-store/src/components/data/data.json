@@ -53,19 +53,19 @@
         "quantProdsCart":0
     },
     {
-        "name": "Capa de celular Astronauta Poco x3",
+        "name": "Capa de celular Astronauta Poco x3 pro",
         "descripton":"",
-        "price": 18.12,
+        "price": 19.12,
         "id":8,
         "thumbnail": "https://github.com/MathMendesReis/projeto-frontendreact/blob/matheusBarbosaA/labe-store/src/img/imgProducts/7.jpg?raw=true",
         "prominence":false,
         "quantProdsCart":0
     },{
-        "name": "Capa de celular Astronauta Poco x3",
+        "name": "Capa de celular Astronauta Poco x3 m4",
         "descripton":"",
-        "price": 18.12,
+        "price": 21.12,
         "id":9,
-        "thumbnail": "https://github.com/MathMendesReis/projeto-frontendreact/blob/matheusBarbosaA/labe-store/src/img/imgProducts/7.jpg?raw=true",
+        "thumbnail": "'https://th.bing.com/th/id/R.0364563a682037804a57da7da09b742d?rik=FDKRKKMjajyfJw&pid=ImgRaw&r=0",
         "prominence":false,
         "quantProdsCart":0
     }
