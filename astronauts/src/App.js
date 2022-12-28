@@ -4,6 +4,7 @@ import {Header} from "./components/Header"
 import { NavBar } from "./components/NavBar";
 import { Slide } from "./components/Slide";
 import { Main } from "./components/Main";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <NavBar/>
       <Slide/>
       <Main/>
+      <Footer/>
       </Container>
     </div>
   );
