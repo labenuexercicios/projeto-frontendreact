@@ -1,5 +1,7 @@
 import { BoxButtons, BoxDiv, BoxForm, Buttons, ButtonsTitle, InputProductsSearch, StyledHeader, Title } from "./styled";
 import { BsFillCartFill } from "react-icons/bs";
+import { TiFilter } from "react-icons/ti";
+import { HiUser } from "react-icons/hi2";
 
 
 const Header = ({ goCart, goHome, filterName }) => {
@@ -17,7 +19,9 @@ const Header = ({ goCart, goHome, filterName }) => {
                 </form>
             </BoxForm>
             <BoxButtons>
-                <Buttons onClick={goCart}><BsFillCartFill fontSize='25' /></Buttons>
+                <Buttons onClick={goCart}><BsFillCartFill fontSize='25' color="white" /></Buttons>
+                <Buttons><TiFilter fontSize='25' color="white" /></Buttons>
+                <Buttons><HiUser fontSize='25' color="white" /></Buttons>
             </BoxButtons>
         </StyledHeader>
     )

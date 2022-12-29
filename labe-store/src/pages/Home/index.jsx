@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import ShoppingProds from "../../components/shoppingProds";
 import { Main } from "./styled";
 
-const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowCart, cart, setCart, setPages, goCart, addProdInCart, filterName, name }) => {
+const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowCart, cart, setCart, setPages, goCart, addProdInCart, filterName, name, setNumberMax, numberMax }) => {
 
     return (
         <div>
@@ -17,17 +17,31 @@ const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowC
 
             />
             <Main>
-                {/* <Filters
-                    numberMin={numberMin} setNumberMin={setNumberMin}
-                    prodShopping={prodShopping} setProdShopping={setProdShopping}
-                /> */}
+                <Filters
+                    cart={cart}
+                    numberMin={numberMin}
+                    setNumberMin={setNumberMin}
+                    setCart={setCart}
+                    numberMax={numberMax}
+                    setNumberMax={setNumberMax}
+                    prodShopping={prodShopping}
+                    setProdShopping={setProdShopping}
+
+
+                />
+
                 <ShoppingProds
                     prodShopping={prodShopping} name={name}
                     numberMin={numberMin} setNumberMin={setNumberMin}
                     addProdInCart={addProdInCart}
 
+                    numberMax={numberMax}
+                    setNumberMax={setNumberMax}
+
                     cart={cart}
                     setCart={setCart}
+                    setProdShopping={setProdShopping}
+
                 />
 
             </Main>

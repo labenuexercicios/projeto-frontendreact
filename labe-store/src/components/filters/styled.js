@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
-export const MenuInterativo = styled.aside`
-    height: 100%;
-    width: 15vw;
+export const StyledDiv = styled.div`
+    border: 2px solid;
+    height: auto;
+    width: 15%;
+`;
+
+export const StyledDivPrice = styled.form`
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-
+    align-items: center;
+    gap: 1em;
+    margin-top: 2em;
 `
 
-export const ContainerForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1em;
-    align-items: center;
+export const StyledDivOrdem = styled(StyledDivPrice)`
 
 `

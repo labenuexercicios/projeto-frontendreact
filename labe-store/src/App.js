@@ -10,11 +10,13 @@ import CartPage from './pages/CartPage';
 function App() {
   const [prodShopping, setProdShopping] = useState([...ListProds])
   const [numberMin, setNumberMin] = useState(-Infinity)
+  const [numberMax, setNumberMax] = useState(Infinity)
   const [cart, setCart] = useState([])
   const [pages, setPages] = useState(1)
   const [name, setName] = useState("")
   const [priceTot, setPriceTot] = useState(0)
-  console.log(priceTot)
+
+  console.log(numberMin)
   // /////////////////////////////////////////////////////
   const goHome = () => {
     /*Função que carrega pagina principal*/
@@ -47,8 +49,8 @@ function App() {
         imagem: prod.thumbnail
       })
       // setCart(copyProductsCart)
-      priceTotFunctionSum(copyProductsCart)
-      setLocalStorageCart(copyProductsCart)
+      // priceTotFunctionSum(copyProductsCart)
+      // setLocalStorageCart(copyProductsCart)
       setCart(copyProductsCart)
     } else {
       //caso o produto ja esteja no carrinho, so e preciso alterar a quantidade
@@ -62,8 +64,6 @@ function App() {
   // /////////////////////////////////////////////////////
   const removeProductToCart = (prod) => {
     /*Função que remove produtos do carrinho*/
-
-
     // criando uma copia do array original
     const copyProductsCart = [...cart]
     //SELECIONANDO QUAL PRODUTO SERÁ REMOVIDO DO CARRINHO
@@ -144,6 +144,9 @@ function App() {
 
         numberMin={numberMin}
         setNumberMin={setNumberMin}
+
+        numberMax={numberMax}
+        setNumberMax={setNumberMax}
 
         cart={cart}
         setCart={setCart}

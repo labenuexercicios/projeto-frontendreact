@@ -1,14 +1,12 @@
 import React from "react";
 import { ContainerProd, ContainerShopping, ImagemProd, NameProd, PriceProd } from "./styled";
 
-const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart }) => {
+const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax }) => {
     return (
         <ContainerShopping>
-            {prodShopping.filter((item) => {
-                return item.name.toLowerCase().includes(name.toLowerCase());
-            })
+            {prodShopping
                 .filter((item) => {
-                    return item.price >= numberMin
+                    return item.price >= numberMin && item.price <= numberMax
                 })
                 .map((item) => {
                     return (

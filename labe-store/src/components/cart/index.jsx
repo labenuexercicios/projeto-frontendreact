@@ -12,7 +12,6 @@ const Cart = ({ cart, removeProductToCart, addProdInCart, priceTot }) => {
 
                     </div>
                 </div>
-
                 :
                 cart.map((item, index) => {
                     return (

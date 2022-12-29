@@ -4,7 +4,9 @@ export const StyledHeader = styled.header`
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    padding: 5em;
+    padding: 2em;
+    background:linear-gradient(#212727 15%, #50aaaa 95%);
+
 `
 
 export const BoxDiv = styled.div`
@@ -14,7 +16,9 @@ export const BoxDiv = styled.div`
     align-items: center;
 `
 export const Title = styled.h1`
-    font-size:4vw
+    font-size:4vw;
+    color:white;
+
 `
 
 export const BoxForm = styled(BoxDiv)`
@@ -23,7 +27,7 @@ export const BoxForm = styled(BoxDiv)`
 `
 
 export const BoxButtons = styled(BoxDiv)`
-    justify-content:space-around;
+    justify-content:space-evenly;
     `
 export const InputProductsSearch = styled.input`
     width: 30vw;
