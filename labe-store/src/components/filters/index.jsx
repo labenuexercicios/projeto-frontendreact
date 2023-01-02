@@ -1,14 +1,13 @@
 import React from "react";
 import { StyledDiv, StyledDivOrdem, StyledDivPrice } from "./styled";
 
-const Filters = ({ numberMin, setNumberMin, setNumberMax, numberMax, cart, prodShopping, setProdShopping }) => {
+const Filters = ({ numberMin, setNumberMin, setNumberMax, numberMax, cart, prodShopping, setProdShopping, sort, setSort }) => {
 
-    console.log(prodShopping)
     return (
         <StyledDiv>
             <div>
-                <h2>Preço</h2>
                 <StyledDivPrice action="">
+                    <label htmlFor="price">Filtrar por preço:</label>
                     <input type="number" id="numberMin" name="numberMin" value={numberMin} placeholder="valor minimo" onChange={(e) => {
                         setNumberMin(e.target.value)
                     }} />
@@ -16,19 +15,16 @@ const Filters = ({ numberMin, setNumberMin, setNumberMax, numberMax, cart, prodS
                         setNumberMax(e.target.value)
                     }} />
                 </StyledDivPrice>
-                <h2>Ordenação</h2>
                 <StyledDivOrdem>
-                    <button onClick={() => {
-                        const nameOrde = prodShopping.sort(item => { return item.name - item.name }
-                        )
-                        setProdShopping(nameOrde)
-                    }}>ordem alfabetica</button>
-
-                    <button onClick={() => { prodShopping.sort(item => { return item.price - item.price }) }}>preco</button>
+                    <label htmlFor="sort">Ordenar por:</label>
+                    <select name="sort" value={sort} onChange={(e) => { setSort(e.target.value) }}>
+                        <option value="Title">Titulo</option>
+                        <option value="price">Preço</option>
+                    </select>
                 </StyledDivOrdem>
                 <button onClick={() => {
-                    setNumberMin(-Infinity)
-                    setNumberMax(Infinity)
+                    setNumberMin("")
+                    setNumberMax("")
                 }}>limpar filtros</button>
             </div>
         </StyledDiv>

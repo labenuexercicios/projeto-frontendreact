@@ -15,8 +15,8 @@ function App() {
   const [pages, setPages] = useState(1)
   const [name, setName] = useState("")
   const [priceTot, setPriceTot] = useState(0)
+  const [sort, setSort] = useState("Title")
 
-  console.log(numberMin)
   // /////////////////////////////////////////////////////
   const goHome = () => {
     /*Função que carrega pagina principal*/
@@ -56,10 +56,9 @@ function App() {
       //caso o produto ja esteja no carrinho, so e preciso alterar a quantidade
       item.quant = item.quant + 1
       item.price = prod.priceUni * item.quant
-      priceTotFunctionSum(copyProductsCart)
-      setLocalStorageCart(copyProductsCart)
-      setCart(copyProductsCart)
     }
+    priceTotFunctionSum(copyProductsCart)
+
   }
   // /////////////////////////////////////////////////////
   const removeProductToCart = (prod) => {
@@ -73,16 +72,14 @@ function App() {
       item.quant = item.quant - 1
       item.price = item.price - item.priceUni
       //SETANDO MUDANÇAS PARA SER RENDERIZADO A QUANTIDADE DE PRODUTOS
-      priceTotFunctionDecrease(item)
-      setCart(copyProductsCart)
-      setLocalStorageCart(copyProductsCart)
     } else {
       //CASO SO TENHA UM PRODUTO, E SE ESSE FOR REMOVIDO, O FILTER IRA EXCLUIR ESSE PRODUTO
       const arrayFilter = copyProductsCart.filter(products => products.id !== prod.id)
       setCart(arrayFilter)
-      priceTotFunctionDecrease(item)
-      setLocalStorageCart(arrayFilter)
     }
+    priceTotFunctionDecrease(item)
+    setLocalStorageCart(copyProductsCart)
+
   }
   // /////////////////////////////////////////////////////
 
@@ -148,6 +145,10 @@ function App() {
         numberMax={numberMax}
         setNumberMax={setNumberMax}
 
+        priceTot={priceTot}
+        removeProductToCart={removeProductToCart}
+
+
         cart={cart}
         setCart={setCart}
 
@@ -156,6 +157,9 @@ function App() {
 
         filterName={filterName}
         name={name}
+
+        sort={sort}
+        setSort={setSort}
       />}
       {pages === 2 && <CartPage
         cart={cart} setCart={setCart}

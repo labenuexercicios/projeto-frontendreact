@@ -1,11 +1,12 @@
 import React from "react";
+import Cart from "../../components/cart";
 import Filters from "../../components/filters";
 import Footer from "../../components/footer";
 import Header from "../../components/Header";
 import ShoppingProds from "../../components/shoppingProds";
 import { Main } from "./styled";
 
-const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowCart, cart, setCart, setPages, goCart, addProdInCart, filterName, name, setNumberMax, numberMax }) => {
+const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowCart, cart, setCart, setPages, goCart, addProdInCart, filterName, name, setNumberMax, numberMax, sort, setSort, removeProductToCart, priceTot }) => {
 
     return (
         <div>
@@ -26,6 +27,8 @@ const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowC
                     setNumberMax={setNumberMax}
                     prodShopping={prodShopping}
                     setProdShopping={setProdShopping}
+                    sort={sort}
+                    setSort={setSort}
 
 
                 />
@@ -42,8 +45,17 @@ const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowC
                     setCart={setCart}
                     setProdShopping={setProdShopping}
 
-                />
+                    sort={sort}
 
+
+                />
+                <Cart
+                    setShowCart={setShowCart}
+                    cart={cart}
+                    setCart={setCart}
+                    removeProductToCart={removeProductToCart}
+                    addProdInCart={addProdInCart}
+                    priceTot={priceTot} />
             </Main>
             <Footer />
         </div>

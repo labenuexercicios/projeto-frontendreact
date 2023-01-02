@@ -3,10 +3,10 @@ import styled from "styled-components"
 export const ContainerDiv = styled.div`
 display: flex;
 flex-direction: column;
-width: 70%;
-min-height: 60vh;
-margin-left:5vw;
-justify-content: space-between;
+width: 25%;
+/* justify-content: space-around; */
+padding: 1em;
+border: 2px solid;
 
 `
 export const Img = styled.img`

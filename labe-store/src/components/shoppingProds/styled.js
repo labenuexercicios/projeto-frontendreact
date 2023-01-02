@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const ContainerShopping = styled.div`
-    width: 70vw;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2em;
     align-items: stretch;
     padding: 2em;
-    border: 2px solid;
     min-height: 70vh;
 
 `;

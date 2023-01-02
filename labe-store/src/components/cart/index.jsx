@@ -38,14 +38,16 @@ const Cart = ({ cart, removeProductToCart, addProdInCart, priceTot }) => {
                                 </DivButtons>
 
                             </ProdCart>
+                            <div>
+                                <h2>valor total  {priceTot.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
+
+                            </div>
 
                         </ContainerCart>
                     )
                 })
             }
-            <div>
-                <h2>valor total  {priceTot.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
-            </div>
+
 
         </ContainerDiv>
     )
