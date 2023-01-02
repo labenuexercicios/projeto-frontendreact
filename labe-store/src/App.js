@@ -16,7 +16,6 @@ function App() {
   const [name, setName] = useState("")
   const [priceTot, setPriceTot] = useState(0)
   const [sort, setSort] = useState("Title")
-
   // /////////////////////////////////////////////////////
   const goHome = () => {
     /*Função que carrega pagina principal*/
@@ -48,17 +47,14 @@ function App() {
         priceUni: prod.price,
         imagem: prod.thumbnail
       })
-      // setCart(copyProductsCart)
-      // priceTotFunctionSum(copyProductsCart)
-      // setLocalStorageCart(copyProductsCart)
-      setCart(copyProductsCart)
     } else {
       //caso o produto ja esteja no carrinho, so e preciso alterar a quantidade
       item.quant = item.quant + 1
       item.price = prod.priceUni * item.quant
     }
-    priceTotFunctionSum(copyProductsCart)
+    setCart(copyProductsCart)
 
+    console.log(copyProductsCart)
   }
   // /////////////////////////////////////////////////////
   const removeProductToCart = (prod) => {
@@ -72,13 +68,14 @@ function App() {
       item.quant = item.quant - 1
       item.price = item.price - item.priceUni
       //SETANDO MUDANÇAS PARA SER RENDERIZADO A QUANTIDADE DE PRODUTOS
+      setCart(copyProductsCart)
+
     } else {
       //CASO SO TENHA UM PRODUTO, E SE ESSE FOR REMOVIDO, O FILTER IRA EXCLUIR ESSE PRODUTO
       const arrayFilter = copyProductsCart.filter(products => products.id !== prod.id)
       setCart(arrayFilter)
     }
-    priceTotFunctionDecrease(item)
-    setLocalStorageCart(copyProductsCart)
+
 
   }
   // /////////////////////////////////////////////////////
