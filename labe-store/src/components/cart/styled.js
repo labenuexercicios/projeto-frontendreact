@@ -1,38 +1,27 @@
 import styled from "styled-components"
 
-export const ContainerDiv = styled.div`
-display: flex;
-flex-direction: column;
-width: 25%;
-/* justify-content: space-around; */
-padding: 1em;
-border: 2px solid;
 
-`
-export const Img = styled.img`
-    width: 100%;
-`
-export const ProdCart = styled.div`
+export const ContainerPrincipal = styled.div`
     display: flex;
-    align-items: center;
-    gap: 1em;
-    justify-content: center;
-`
-export const DivImg = styled.div`
-    width: 15%;
-`
-
-export const DivInfoProd = styled(DivImg)`
-    display: flex;
-    gap: 1em;
-    align-items: center;
     width: 100%;
-    justify-content: space-between;
+    `
+export const ListContainer = styled.ul`
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 1em;
+    border: 2px solid;
+    width: 60%;
+    list-style: none;
+    text-align:justify;
+    padding: 1em;
+    align-items:center;
 `
-export const DivButtons = styled(DivImg)`
+export const ImagemCart = styled.img`
+    /* height: 30%; */
+    width: 25%;
 
 `
-
-export const ContainerCart = styled.div`
-
+export const ItensList = styled.li`
+    padding: 0;
 `

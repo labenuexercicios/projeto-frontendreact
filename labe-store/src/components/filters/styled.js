@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const StyledDiv = styled.div`
     height: auto;
-    width: 15%;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2em;
 `;
 
 export const StyledDivPrice = styled.form`
@@ -15,6 +16,7 @@ export const StyledDivPrice = styled.form`
     gap: 1em;
     justify-content: center;
     margin-top: 1em;
+    width: 100%;
 
 `
 
@@ -22,6 +24,23 @@ export const StyledDivOrdem = styled(StyledDivPrice)`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    justify-content: center;
+`
+export const ContainerDiv = styled.div`
+    width: 12em;
+`
+
+export const InputNumberMin = styled.input`
+    width: 80%;
+    height: 5vh;
+    padding: 1em;
+    font-size: 1em;
+`
+export const InputNumberMax = styled(InputNumberMin)``
+
+
+export const LabelInputNumber = styled.label`
+    font-size: 1.5em;
+`
+export const LabelInputOrdenacao = styled(LabelInputNumber)`
 `

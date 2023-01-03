@@ -1,22 +1,22 @@
 import React from "react";
-import { StyledDiv, StyledDivOrdem, StyledDivPrice } from "./styled";
+import { ContainerDiv, InputNumberMax, InputNumberMin, LabelInputNumber, LabelInputOrdenacao, StyledDiv, StyledDivOrdem, StyledDivPrice } from "./styled";
 
 const Filters = ({ numberMin, setNumberMin, setNumberMax, numberMax, cart, prodShopping, setProdShopping, sort, setSort }) => {
 
     return (
-        <StyledDiv>
-            <div>
+        <ContainerDiv>
+            <StyledDiv>
                 <StyledDivPrice action="">
-                    <label htmlFor="price">Filtrar por preço:</label>
-                    <input type="number" id="numberMin" name="numberMin" value={numberMin} placeholder="valor minimo" onChange={(e) => {
+                    <LabelInputNumber htmlFor="price">Filtrar por preço:</LabelInputNumber>
+                    <InputNumberMin type="number" id="numberMin" name="numberMin" value={numberMin} placeholder="valor minimo" onChange={(e) => {
                         setNumberMin(e.target.value)
                     }} />
-                    <input type="number" id="numberMax" value={numberMax} placeholder="valor maximo" onChange={(e) => {
+                    <InputNumberMax type="number" id="numberMax" value={numberMax} placeholder="valor maximo" onChange={(e) => {
                         setNumberMax(e.target.value)
                     }} />
                 </StyledDivPrice>
                 <StyledDivOrdem>
-                    <label htmlFor="sort">Ordenar por:</label>
+                    <LabelInputOrdenacao htmlFor="sort">Ordenar por:</LabelInputOrdenacao>
                     <select name="sort" value={sort} onChange={(e) => { setSort(e.target.value) }}>
                         <option value="Title">Titulo</option>
                         <option value="price">Preço</option>
@@ -26,8 +26,8 @@ const Filters = ({ numberMin, setNumberMin, setNumberMax, numberMax, cart, prodS
                     setNumberMin("")
                     setNumberMax("")
                 }}>limpar filtros</button>
-            </div>
-        </StyledDiv>
+            </StyledDiv>
+        </ContainerDiv>
     )
 }
 

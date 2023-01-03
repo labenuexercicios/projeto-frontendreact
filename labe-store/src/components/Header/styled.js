@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-    height: 10vh;
+    height: 18vh;
     display: flex;
     justify-content: space-between;
     padding: 2em;
-    background:linear-gradient(#212727 15%, #50aaaa 95%);
+    background:rgb(248, 0, 50);
 
 `
 

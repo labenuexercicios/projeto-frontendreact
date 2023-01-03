@@ -3,7 +3,7 @@ import Cart from "../../components/cart";
 import Header from "../../components/Header";
 import { Main } from "./styled";
 
-const CartPage = ({ setShowCart, cart, setCart, goHome, removeProductToCart, addProdInCart, priceTot }) => {
+const CartPage = ({ setShowCart, cart, setCart, goHome, removeProductToCart, addProdInCart, priceTot, somarPrecoTotal }) => {
     return (
         <div>
             <Header
@@ -16,6 +16,7 @@ const CartPage = ({ setShowCart, cart, setCart, goHome, removeProductToCart, add
                     removeProductToCart={removeProductToCart}
                     addProdInCart={addProdInCart}
                     priceTot={priceTot}
+                    somarPrecoTotal={somarPrecoTotal}
                 />
             </Main>
         </div>

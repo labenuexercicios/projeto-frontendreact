@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerProd, ContainerShopping, ImagemProd, NameProd, PriceProd } from "./styled";
+import { BtnAddCart, ContainerProd, ContainerShopping, ImagemProd, NameProd, PriceProd, TextButon } from "./styled";
 
 const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax, sort }) => {
     return (
@@ -13,17 +13,13 @@ const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax
                 })
                 .filter((item) => {
                     return item.name.toLowerCase().includes(name.toLowerCase())
-                })
-                .sort((currentItem, nextItem) => {
-
-                })
-                .map((item) => {
+                }).map((item) => {
                     return (
                         <ContainerProd key={item.id}>
                             <NameProd>{item.name}</NameProd>
                             <ImagemProd src={item.thumbnail} alt="" />
                             <PriceProd>R$ {item.price}</PriceProd>
-                            <button onClick={() => { addProdInCart(item) }}>adicionar ao carrinho</button>
+                            <BtnAddCart onClick={() => { addProdInCart(item) }}><TextButon><strong>adicionar ao carrinho</strong></TextButon></BtnAddCart>
                         </ContainerProd>
                     )
                 })}
