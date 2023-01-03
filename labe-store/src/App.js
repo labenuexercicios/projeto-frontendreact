@@ -15,8 +15,9 @@ function App() {
   const [pages, setPages] = useState(1)
   const [name, setName] = useState("")
   const [priceTot, setPriceTot] = useState(0)
-  const [sort, setSort] = useState("Title")
+  const [sortProd, setSort] = useState("")
   // /////////////////////////////////////////////////////
+
   const goHome = () => {
     /*Função que carrega pagina principal*/
     setPages(1)
@@ -116,7 +117,7 @@ function App() {
         filterName={filterName}
         name={name}
 
-        sort={sort}
+        sortProd={sortProd}
         setSort={setSort}
 
       />}

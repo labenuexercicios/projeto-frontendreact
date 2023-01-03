@@ -17,8 +17,8 @@ const Cart = ({ cart, removeProductToCart, addProdInCart, priceTot, somarPrecoTo
 
                             <div>
                                 <ListContainer>
-                                    <ItensList><ImagemCart src={item.imagem} alt="" /></ItensList>
-                                    {/* <li>{item.quant}</li> */}
+                                    <ImagemCart src={item.imagem} alt="" />
+                                    <ItensList>{item.quant}</ItensList>
                                     <ItensList>{item.name}</ItensList>
                                 </ListContainer>
                             </div>

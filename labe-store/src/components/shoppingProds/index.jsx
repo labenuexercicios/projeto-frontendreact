@@ -1,7 +1,10 @@
 import React from "react";
 import { BtnAddCart, ContainerProd, ContainerShopping, ImagemProd, NameProd, PriceProd, TextButon } from "./styled";
 
-const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax, sort }) => {
+const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax, sortProd }) => {
+
+
+
     return (
         <ContainerShopping>
             {prodShopping
@@ -13,7 +16,29 @@ const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax
                 })
                 .filter((item) => {
                     return item.name.toLowerCase().includes(name.toLowerCase())
-                }).map((item) => {
+                }).sort(function (a, b) {
+                    if (sortProd === "price") {
+                        if (a.price > b.price) {
+                            return 1;
+                        }
+                        if (a.price < b.price) {
+                            return -1;
+                        }
+                    }
+                    return 0;
+                })
+                .sort(function (a, b) {
+                    if (sortProd === "title") {
+                        if (a.name > b.name) {
+                            return 1;
+                        }
+                        if (a.name < b.name) {
+                            return -1;
+                        }
+                    }
+                    return 0;
+                })
+                .map((item) => {
                     return (
                         <ContainerProd key={item.id}>
                             <NameProd>{item.name}</NameProd>

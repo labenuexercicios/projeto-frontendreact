@@ -44,3 +44,31 @@ export const LabelInputNumber = styled.label`
 `
 export const LabelInputOrdenacao = styled(LabelInputNumber)`
 `
+
+export const StyledSelect = styled.select`
+    height: 5vh;
+    width: 7vw;
+    text-align: center;
+    font-size: 1.2rem;
+    background: rgb(248, 0, 50);
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    text-overflow: "";
+
+`
+export const StyledButton = styled.button`
+border-radius: 12px;
+    padding: 12px 19px;
+    background-color: rgb(248, 0, 50);
+    border:none;
+    color:white;
+    margin-top:5em;
+    &:hover{
+        transition: 1s;
+        opacity: 0.7;
+    }
+`
+export const StyledOption = styled.option`
+    width: 7vw;
+`

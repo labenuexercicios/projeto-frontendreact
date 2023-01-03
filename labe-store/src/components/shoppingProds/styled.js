@@ -21,7 +21,7 @@ export const ContainerProd = styled.div`
     width: 25% ;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     gap: 1em;
     justify-content: space-between;
 
@@ -29,9 +29,13 @@ export const ContainerProd = styled.div`
 
 
 export const NameProd = styled.h1`
-    font-size:1.2vw;
+    font-size:1vw;
     word-wrap: break-word;
     padding: 1em;
+    &:hover{
+        transition: 500ms;
+        color:#b0da09;
+    }
 `;
 
 export const PriceProd = styled.span`
@@ -48,7 +52,6 @@ export const BtnAddCart = styled.button`
         transition: 1s;
         opacity: 0.7;
     }
-
 `
 
 export const TextButon = styled.p`

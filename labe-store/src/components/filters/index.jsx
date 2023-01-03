@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerDiv, InputNumberMax, InputNumberMin, LabelInputNumber, LabelInputOrdenacao, StyledDiv, StyledDivOrdem, StyledDivPrice } from "./styled";
+import { ContainerDiv, InputNumberMax, InputNumberMin, LabelInputNumber, LabelInputOrdenacao, StyledButton, StyledDiv, StyledDivOrdem, StyledDivPrice, StyledOption, StyledSelect } from "./styled";
 
 const Filters = ({ numberMin, setNumberMin, setNumberMax, numberMax, cart, prodShopping, setProdShopping, sort, setSort }) => {
 
@@ -17,15 +17,17 @@ const Filters = ({ numberMin, setNumberMin, setNumberMax, numberMax, cart, prodS
                 </StyledDivPrice>
                 <StyledDivOrdem>
                     <LabelInputOrdenacao htmlFor="sort">Ordenar por:</LabelInputOrdenacao>
-                    <select name="sort" value={sort} onChange={(e) => { setSort(e.target.value) }}>
-                        <option value="Title">Titulo</option>
-                        <option value="price">Preço</option>
-                    </select>
+                    <StyledSelect placeholder="teste" name="sort" value={sort} onChange={(e) => { setSort(e.target.value) }}>
+                        <StyledOption value=""></StyledOption>
+                        <StyledOption value="title">Titulo</StyledOption>
+                        <StyledOption value="price">Preço</StyledOption>
+                    </StyledSelect>
                 </StyledDivOrdem>
-                <button onClick={() => {
+                <StyledButton onClick={() => {
                     setNumberMin("")
                     setNumberMax("")
-                }}>limpar filtros</button>
+                    setSort("")
+                }}>limpar filtros</StyledButton>
             </StyledDiv>
         </ContainerDiv>
     )

@@ -68,5 +68,14 @@
         "thumbnail": "https://github.com/MathMendesReis/projeto-frontendreact/blob/matheusBarbosaA/labe-store/src/img/imgProducts/11.jpg?raw=true",
         "prominence":false,
         "quantProdsCart":0
+    },
+    {
+        "name": "Capa de celular Astronauta Poco x3 m4",
+        "descripton":"",
+        "price": 21.12,
+        "id":10,
+        "thumbnail": "https://github.com/MathMendesReis/projeto-frontendreact/blob/matheusBarbosaA/labe-store/src/img/imgProducts/11.jpg?raw=true",
+        "prominence":false,
+        "quantProdsCart":0
     }
 ]

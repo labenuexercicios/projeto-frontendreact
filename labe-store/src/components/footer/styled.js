@@ -23,6 +23,8 @@ export const BoxMidia = styled.div`
     justify-content: center;
     align-items: center;
     padding: 2em;
+    flex-direction:column;
+    gap: 2em;
 `
 
 export const Title = styled.h1`
