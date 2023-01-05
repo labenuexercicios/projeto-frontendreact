@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "name":"Camiseta Espacial",
+        "imageUrl":"https://4429028l.ha.azioncdn.net/img/2019/10/produto/690/nasa-foguete-3.jpg?ims=225x225",
+        "imageAlt":"Camiseta Com estampa astronauta",
+        "price":34
+    },
+    {
+        "id":2,
+        "name":"Blusa Branca com estampa Planeta",
+        "imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgjKm_pEPwfmIAAsCYqCAag5zd_qjY3K2ecQ&usqp=CAU/",
+        "imageAlt":"Camiseta Com estampa Planeta",
+        "price":37.90
+    },
+    {
+        "id":3,
+        "name":"Cropped Nasa",
+        "imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRaLwst3GvFYjLqa842dD1m8l95NwhT5NbJBGwPeI_l5L7KkQTQTnt0S1vL3aAQOnW06Y&usqp=CAU/",
+        "imageAlt":"Camiseta Com estampa astronauta",
+        "price":30
+    },
+    {
+        "id":4,
+        "name":"Blusa Preta Com Estampa",
+        "imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKRAjAFdRmqYKY52yzqbk60-gzgB21fbWI78wTCiUu1fM_JCeIzY39NYQKFL-rgsWFEY&usqp=CAU/",
+        "imageAlt":"Camiseta Com estampa astronauta",
+        "price":39.99
+    },
+    {
+        "id":5,
+        "name":"Camiseta Sistema Solar",
+        "imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR86kpT3R8pcM_IJDQO2yLHrRXyh1kyhPmlQ&usqp=CAU/",
+        "imageAlt":"Camiseta Com estampa Sistema Solar",
+        "price":40
+    }
+]
