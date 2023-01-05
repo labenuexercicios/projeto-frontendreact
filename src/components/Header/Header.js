@@ -1,6 +1,6 @@
 import React from "react";
 import { HeaderContainer } from "./Header.styled";
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
 // import ShoppingCartIcon from '@material-ui/icons-material/ShoppingCart';
 // import HomeIcon from '@material-ui/icons-material/HomeIcon';
 
@@ -26,15 +26,15 @@ const Header = (props) => {
       <h1>{props.title}</h1>
 
       {isHomePage ? (
-        <Button color="primary" variant="contained" onClick={goToCartPage}>
+        <button onClick={goToCartPage}>
           Carrinho
           {/* <ShoppingCartIcon/> */}
-        </Button>
+        </button>
       ) : (
-        <Button color="primary" variant="contained" onClick={goToHomePage}>
+        <button onClick={goToHomePage}>
           Home
           {/* <HomeIcon/> */}
-        </Button>
+        </button>
       )}
     </HeaderContainer>
   );

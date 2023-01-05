@@ -4,15 +4,16 @@ import { productListData } from "./constants/productListData";
 import CartPage from "./pages/CartPage/CartPage";
 import Homepage from "./pages/Homepage/HomePage";
 import "./styles.css";
+import { useState } from "react";
 
 const App = () => {
-  const [itens, setItens] = React.useState([]);
-  const [activeScreen, setActiveScreen] = React.useState("HomePage");
-  const [cart, setCart] = React.useState([]);
+  const [itens, setItens] = useState([]);
+  const [activeScreen, setActiveScreen] = useState("HomePage");
+  const [cart, setCart] = useState([]);
   // Armazena a lista de produtos na variavel de estado products
   React.useEffect(() => {
     setItens(productListData);
-  });
+  },[]);
 
   const goToHomePage = () => {
     setActiveScreen("HomePage");
