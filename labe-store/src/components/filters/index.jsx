@@ -17,7 +17,7 @@ const Filters = ({ numberMin, setNumberMin, setNumberMax, numberMax, cart, prodS
                 </StyledDivPrice>
                 <StyledDivOrdem>
                     <LabelInputOrdenacao htmlFor="sort">Ordenar por:</LabelInputOrdenacao>
-                    <StyledSelect placeholder="teste" name="sort" value={sort} onChange={(e) => { setSort(e.target.value) }}>
+                    <StyledSelect placeholder="teste" name="sort" value={sort} onChange={(e) => { setSort(e.target.value) }}>{sort}
                         <StyledOption value=""></StyledOption>
                         <StyledOption value="title">Titulo</StyledOption>
                         <StyledOption value="price">Preço</StyledOption>

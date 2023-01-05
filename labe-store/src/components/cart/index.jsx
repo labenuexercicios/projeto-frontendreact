@@ -1,6 +1,6 @@
 import React from "react";
 import CartEmpty from "../cartEmpty";
-import { ContainerPrincipal, ListContainer, ImagemCart, ItensList } from "./styled"
+import { ContainerPrincipal, ImagemCart, BoxPrice, BoxName, BoxButtonsAddAndRemove, TxtName, Buttons, ContainerCartAndPrice } from "./styled"
 
 const Cart = ({ cart, removeProductToCart, addProdInCart, priceTot, somarPrecoTotal }) => {
 
@@ -13,31 +13,32 @@ const Cart = ({ cart, removeProductToCart, addProdInCart, priceTot, somarPrecoTo
                 :
                 cart.map((item, index) => {
                     return (
-                        <ContainerPrincipal key={index}>
-
+                        <ContainerCartAndPrice>
                             <div>
-                                <ListContainer>
-                                    <ImagemCart src={item.imagem} alt="" />
-                                    <ItensList>{item.quant}</ItensList>
-                                    <ItensList>{item.name}</ItensList>
-                                </ListContainer>
+                                <ContainerPrincipal key={index}>
+                                    <BoxName>
+                                        <ImagemCart src={item.imagem} alt="" />
+                                        <TxtName>{item.name}</TxtName>
+                                    </BoxName>
+                                    <BoxButtonsAddAndRemove>
+                                        <Buttons onClick={() => { addProdInCart(item) }} >+</Buttons>
+                                        <p>{item.quant}</p>
+                                        <Buttons onClick={() => { removeProductToCart(item) }} >-</Buttons>
+                                    </BoxButtonsAddAndRemove>
+                                    <BoxPrice>
+                                        <TxtName>{item.priceSingle.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</TxtName>
+                                    </BoxPrice>
+                                </ContainerPrincipal>
                             </div>
 
-                            <div>
-                                {/* <button onClick={() => {
-                                    addProdInCart(item)
-                                }} >+</button>
-                                <button onClick={() => { removeProductToCart(item) }} >-</button> */}
-                            </div>
-
-                        </ContainerPrincipal>
+                        </ContainerCartAndPrice>
                     )
                 })
 
             }
-            <div>
+            {/* <div>
                 <h2>valor total  {priceTot.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
-            </div>
+            </div> */}
 
 
         </div>

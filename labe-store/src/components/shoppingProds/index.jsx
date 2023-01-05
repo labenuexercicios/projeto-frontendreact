@@ -43,7 +43,7 @@ const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax
                         <ContainerProd key={item.id}>
                             <NameProd>{item.name}</NameProd>
                             <ImagemProd src={item.thumbnail} alt="" />
-                            <PriceProd>R$ {item.price}</PriceProd>
+                            <PriceProd>{item.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</PriceProd>
                             <BtnAddCart onClick={() => { addProdInCart(item) }}><TextButon><strong>adicionar ao carrinho</strong></TextButon></BtnAddCart>
                         </ContainerProd>
                     )

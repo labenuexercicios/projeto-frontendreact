@@ -53,17 +53,20 @@ export const StyledSelect = styled.select`
     background: rgb(248, 0, 50);
     color: white;
     border-radius: 12px;
+    border:none;
     cursor: pointer;
     text-overflow: "";
 
 `
 export const StyledButton = styled.button`
-border-radius: 12px;
+    border-radius: 12px;
     padding: 12px 19px;
     background-color: rgb(248, 0, 50);
     border:none;
     color:white;
     margin-top:5em;
+    border: none;
+    cursor: pointer;
     &:hover{
         transition: 1s;
         opacity: 0.7;
