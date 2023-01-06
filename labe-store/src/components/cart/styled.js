@@ -35,6 +35,11 @@ export const TxtName = styled.p`
 export const Buttons = styled.button`
     height: 3em;
     width: 3em;
+    border:none;
+    font-size: 2rem;
+    background: transparent;
+    font-style: italic;
+    color: rgb(248, 0, 50);
 `
 export const TxtPrice = styled(TxtName)`
 `
@@ -48,8 +53,9 @@ export const ContainerCartAndPrice = styled.div`
 `
 
 export const BoxCartEmpty = styled.div`
-    height: 80vh;
-    width: 100vw;
+    height: 100%;
+    width: 95vw;
     display: flex;
     justify-content: center;
+    align-items: center;
 `

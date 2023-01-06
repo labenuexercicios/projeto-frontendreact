@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyledDiv, StyledDivPrice, StyledDivQuant } from "./styled";
+import { StyledButton, StyledDiv, StyledDivPrice, StyledDivQuant } from "./styled";
 
 const PainelCart = ({ priceTot, cart }) => {
 
@@ -16,7 +16,7 @@ const PainelCart = ({ priceTot, cart }) => {
                 <h2>{priceTot.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h2>
             </StyledDivPrice>
             <div>
-                <button>CONTINUAR</button>
+                <StyledButton>COMPRAR</StyledButton>
             </div>
         </StyledDiv>
     )

@@ -20,7 +20,7 @@ const Cart = ({ cart, removeProductToCart, addProdInCart, priceTot, somarPrecoTo
                             </BoxName>
                             <BoxButtonsAddAndRemove>
                                 <Buttons onClick={() => { addProdInCart(item) }} >+</Buttons>
-                                <p>{item.quant}</p>
+                                <p><strong>{item.quant}</strong></p>
                                 <Buttons onClick={() => { removeProductToCart(item) }} >-</Buttons>
                             </BoxButtonsAddAndRemove>
                             <BoxPrice>

@@ -26,3 +26,15 @@ export const StyledDivPrice = styled(StyledDivQuant)`
     flex-direction:row;
 
 `;
+
+export const StyledButton = styled.button`
+        width: 18em;
+        height: 8vh;
+        border-radius: 20px;
+        border:none;
+        background: rgb(248, 0, 50);
+        color: white;
+        font-size: 1em;
+
+`
+    ;
