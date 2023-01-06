@@ -6,10 +6,10 @@ import Header from "../../components/Header";
 import ShoppingProds from "../../components/shoppingProds";
 import { Main } from "./styled";
 
-const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowCart, cart, setCart, setPages, goCart, addProdInCart, filterName, name, setNumberMax, numberMax, sortProd, setSort, removeProductToCart, priceTot }) => {
+const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowCart, cart, setCart, setPages, goCart, addProdInCart, filterName, name, setNumberMax, numberMax, sortProd, setSort, removeProductToCart, priceTot, saveItemLocasStorage, getCart }) => {
 
     return (
-        <div>
+        <div >
             <Header
                 setShowCart={setShowCart}
                 setPages={setPages}
@@ -46,6 +46,8 @@ const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowC
                     setProdShopping={setProdShopping}
 
                     sortProd={sortProd}
+
+                    saveItemLocasStorage={saveItemLocasStorage}
 
 
                 />

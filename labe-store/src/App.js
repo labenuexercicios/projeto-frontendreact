@@ -22,8 +22,6 @@ function App() {
     /*Função que carrega pagina principal*/
     setPages(1)
   }
-
-
   const goCart = () => {
     /*Função que carrega pagina com os produtos no carrinho */
     setPages(2)
@@ -44,9 +42,19 @@ function App() {
       item.quant = item.quant + 1
       item.price = item.priceSingle * item.quant
     }
-    setCart(copyProductsCart)
     priceTotFunctionSum(copyProductsCart)
+    localStorage.setItem("carrinho", JSON.stringify(copyProductsCart))
+    setCart(copyProductsCart)
   }
+
+
+
+  const getCart = () => {
+    const c = JSON.parse(localStorage.getItem("carrinho"))
+    setCart(c)
+  }
+
+
 
   const priceTotFunctionSum = (array) => {
     let p = 0
@@ -70,11 +78,14 @@ function App() {
       item.quant = item.quant - 1
       item.price = item.price - item.priceSingle
       setCart(copyProductsCart)
+      localStorage.setItem("carrinho", JSON.stringify(copyProductsCart))
     } else {
       const arrayFilter = copyProductsCart.filter(products => products.id !== prod.id)
+      localStorage.setItem("carrinho", JSON.stringify(arrayFilter))
       setCart(arrayFilter)
     }
     priceTotFunctionDecrease(item)
+
   }
 
   const priceTotFunctionDecrease = (item) => {
@@ -87,7 +98,6 @@ function App() {
     /*Função que guardar nome do produto digitado*/
     setName(e.target.value)
   }
-
 
 
   return (
@@ -120,6 +130,7 @@ function App() {
         sortProd={sortProd}
         setSort={setSort}
 
+        getCart={getCart}
       />}
       {pages === 2 && <CartPage
         cart={cart} setCart={setCart}

@@ -1,7 +1,7 @@
 import React from "react";
 import { BtnAddCart, ContainerProd, ContainerShopping, ImagemProd, NameProd, PriceProd, TextButon } from "./styled";
 
-const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax, sortProd }) => {
+const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax, sortProd, saveItemLocasStorage }) => {
 
 
 
@@ -44,7 +44,9 @@ const ShoppingProds = ({ prodShopping, name, numberMin, addProdInCart, numberMax
                             <NameProd>{item.name}</NameProd>
                             <ImagemProd src={item.thumbnail} alt="" />
                             <PriceProd>{item.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</PriceProd>
-                            <BtnAddCart onClick={() => { addProdInCart(item) }}><TextButon><strong>adicionar ao carrinho</strong></TextButon></BtnAddCart>
+                            <BtnAddCart onClick={() => {
+                                addProdInCart(item)
+                            }}><TextButon><strong>adicionar ao carrinho</strong></TextButon></BtnAddCart>
                         </ContainerProd>
                     )
                 })}

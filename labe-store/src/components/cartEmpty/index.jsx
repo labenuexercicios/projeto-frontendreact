@@ -1,10 +1,10 @@
 import React from "react";
-import { DivContainer } from "./styled";
+import { DivContainer, StyledText } from "./styled";
 
 const CartEmpty = () => {
     return (
         <DivContainer>
-            <h2>Seu carrinho de compras está vazio.</h2>
+            <StyledText>Seu carrinho de compras está vazio.</StyledText>
         </DivContainer>
     )
 }
