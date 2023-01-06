@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GlobalStyled } from './GlobalStyled';
 import Home from './pages/Home';
 import ListProds from "./components/data/data.json";
@@ -61,15 +61,10 @@ function App() {
     const priceProds = array.map((item) => { return item.price })
     for (let index = 0; index < priceProds.length; index++) {
       p = priceProds[index] + p
+      localStorage.setItem("price", JSON.stringify(p))
       setPriceTot(p)
     }
   }
-
-
-
-
-
-
   const removeProductToCart = (prod) => {
     /*Função que remove produtos do carrinho*/
     const copyProductsCart = [...cart]
@@ -92,6 +87,8 @@ function App() {
     const decrease = item.priceSingle
     const price = priceTot - decrease
     setPriceTot(price)
+    localStorage.setItem("price", JSON.stringify(price))
+
   }
 
   const filterName = (e) => {
@@ -99,6 +96,19 @@ function App() {
     setName(e.target.value)
   }
 
+
+  useEffect(() => {
+    const initial = window.localStorage.getItem("carrinho");
+    const arrayCart = JSON.parse(initial)
+    setCart(arrayCart)
+  }, []);
+
+
+  useEffect(() => {
+    const priceLocalStorage = window.localStorage.getItem("price")
+    const priceFloat = JSON.parse(priceLocalStorage)
+    setPriceTot(priceFloat)
+  }, [])
 
   return (
     <div >
