@@ -30,7 +30,6 @@ const Cart = ({ cart, removeProductToCart, addProdInCart, priceTot, somarPrecoTo
 
                     )
                 })
-
             }
         </div>
     )

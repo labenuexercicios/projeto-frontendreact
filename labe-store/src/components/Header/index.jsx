@@ -4,7 +4,7 @@ import { TiFilter } from "react-icons/ti";
 import { HiUser } from "react-icons/hi2";
 
 
-const Header = ({ goCart, goHome, filterName }) => {
+const Header = ({ goCart, goHome, filterName, cart }) => {
 
     return (
         <StyledHeader>
@@ -20,7 +20,6 @@ const Header = ({ goCart, goHome, filterName }) => {
             </BoxForm>
             <BoxButtons>
                 <Buttons onClick={goCart}><BsFillCartFill fontSize='25' color="white" /></Buttons>
-                <Buttons><TiFilter fontSize='25' color="white" /></Buttons>
                 <Buttons><HiUser fontSize='25' color="white" /></Buttons>
             </BoxButtons>
         </StyledHeader>

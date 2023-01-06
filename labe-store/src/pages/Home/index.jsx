@@ -15,6 +15,7 @@ const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowC
                 setPages={setPages}
                 goCart={goCart}
                 filterName={filterName}
+                cart={cart}
 
             />
             <Main>

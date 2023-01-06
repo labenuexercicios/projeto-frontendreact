@@ -5,5 +5,4 @@ export const Main = styled.main`
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
-
 `;
