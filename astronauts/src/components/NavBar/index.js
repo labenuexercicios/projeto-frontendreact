@@ -1,7 +1,7 @@
 import React from "react"
-import { NavBarContainer, NavLink, Menu, Filters } from "./styled"
+import { NavBarContainer, NavLink, Menu, Filters, InputTxt } from "./styled"
 
-export function NavBar({setType, setOrder}){
+export function NavBar({setType, setOrder, minPrice, setMinPrice, maxPrice, setMaxPrice}){
     const handleOrder=(event) =>{
         setOrder(event.target.value)
     }
@@ -9,6 +9,7 @@ export function NavBar({setType, setOrder}){
         setType(event.target.value)
 
     }
+
     return(
         <NavBarContainer>
             <Menu>
@@ -27,6 +28,19 @@ export function NavBar({setType, setOrder}){
                     <option value="helmet" onClick={handleTypeSearch}>Capacetes</option>
                     <option value="acessorio" onClick={handleTypeSearch}>Acessórios</option>
                 </Filters>
+                <InputTxt
+                placeholder="Preço mínimo"
+                type= "number"
+                value={minPrice}
+                onChange={(ev)=>{setMinPrice(ev.target.value)}}>
+                </InputTxt>
+                <InputTxt
+                placeholder="Preço máximo"
+                type= "number"
+                value={maxPrice}
+                onChange={(ev)=>{setMaxPrice(ev.target.value)}}>
+                
+                </InputTxt>
             </Menu>
         </NavBarContainer>
     )

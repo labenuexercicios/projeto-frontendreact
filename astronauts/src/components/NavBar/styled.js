@@ -29,3 +29,8 @@ margin-right: 6%;
 export const Filters = styled.select`
 margin-right: 2rem;
 `
+
+export const InputTxt = styled.input`
+background-color: #F5F5F5;
+border: none;
+`

@@ -19,7 +19,7 @@ export function Header({setName}){
                 <SearchInput placeholder="buscar" type="text" onChange={getName}>               
                 </SearchInput>
                 </SearchContainer>
-                <Icon src={bag} alt=""/>
+                <Icon src={bag} alt="" />
                 <Icon src={login} alt=""/>
                 <LoginTxt>Login</LoginTxt>
             </LoginContainer>

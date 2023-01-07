@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { MainContainer, CartContainer } from "./styled";
 import { ProductCard } from "../ProductCard";
 import { Cart } from "../Cart/index";
+import product from "../../data";
 
-export function Main({ products, name, order, type }) {
+export function Main({ products, name, order, type, minPrice, maxPrice }) {
 
   //Hook that stores the array of products that were inserted in the cart.
   const [cartProducts, setCartProducts] = useState([]);
@@ -69,12 +70,23 @@ export function Main({ products, name, order, type }) {
       </CartContainer>
 
       {products
+        //filter by search input
         .filter((product) => {
           return product.name.toLowerCase().includes(name.toLowerCase());
         })
+        // filter by type select
         .filter((product) => {
           return type ? product.type.includes(type) : product;
         })
+        // filter by min price
+        .filter((product)=>{
+          return product.price >= minPrice
+        })
+         // filter by max price
+         .filter((product)=>{
+          return product.price <= maxPrice
+        })
+        //order by price
         .sort((currentProduct, nextProduct)=>{
           if(order==="asc"){
             return currentProduct.price - nextProduct.price

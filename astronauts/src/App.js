@@ -11,14 +11,17 @@ function App() {
   const [name, setName] = useState("");
   const [type, setType] = useState("")
   const [order, setOrder] = useState("")
+  const [minPrice, setMinPrice] = useState(-Infinity)
+  const [maxPrice, setMaxPrice] = useState(Infinity)
+
   return (
     <div>
       <GlobalStyled />
       <Container> 
       <Header setName={setName}/>
-      <NavBar setType={setType} setOrder={setOrder}/>
+      <NavBar setType={setType} setOrder={setOrder} minPrice={minPrice} setMinPrice={setMinPrice} maxPrice={maxPrice} setMaxPrice={setMaxPrice}/>
       <Slide/>
-      <Main products={product} type={type} order={order} name={name}/>
+      <Main products={product} type={type} order={order} name={name} minPrice={minPrice} maxPrice={maxPrice}/>
       <Footer/>
       </Container>
     </div>

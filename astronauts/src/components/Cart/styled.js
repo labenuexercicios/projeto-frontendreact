@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ProductAdded = styled.ul`
 width:25vw;
 height: 5vw;
@@ -18,4 +17,3 @@ font-weight: 400;
 font-size: 12px;
 color:black;
 `
-//pesquisar modal para o carrinho pop-up modal
