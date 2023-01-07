@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
 display: flex;
 flex-direction: column;
-height: 10vw;
+height: 15vw;
 width: 100vw;
 background-color: #48586f;
 position: relative;
@@ -14,7 +14,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: flex-end;
-height: 3vw;
+height: 5vw;
 width: 100vw;
 background-color: #F5F5F5;
 

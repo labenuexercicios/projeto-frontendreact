@@ -25,3 +25,7 @@ font-size: 1rem;
 color: #283d3e;
 margin-right: 6%;
 `
+
+export const Filters = styled.select`
+margin-right: 2rem;
+`

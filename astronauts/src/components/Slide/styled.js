@@ -15,7 +15,7 @@ export const SlidePromo = styled.div`
 width: 65%;
 height: 80%;
 margin-top: 0.5%;
-background-image: url('https://static3.tcdn.com.br/files/482157/themes/212/img/settings/midnight-1.jpg');
+background-image: url('https://img.ibxk.com.br/2016/06/06/06200652863735.jpg?ims=704x');
 background-repeat: no-repeat;
 background-size: cover;
 border-radius: 5px;
