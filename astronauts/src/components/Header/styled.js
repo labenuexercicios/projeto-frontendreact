@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
 display: flex;
 flex-direction: column;
-height: 15vw;
+height: 10vw;
 width: 100vw;
 background-color: #48586f;
 position: relative;
@@ -22,6 +22,10 @@ background-color: #F5F5F5;
 
 export const Icon = styled.img`
 height: 1.5rem;
+:hover{
+    cursor: pointer;
+}
+
 `
 
 export const SearchContainer = styled.div`
@@ -59,16 +63,19 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 margin:auto;
+:hover{
+    cursor: pointer;
+}
 
 `
 
 export const LogoHome = styled.img`
-height: 4rem;
+height: 3rem;
 `
 export const LogoTxt = styled.h1`
 font-family: 'Notable', sans-serif;
 color:#ffffff;
 font-weight: 400;
-font-size: 50px;
+font-size: 2rem;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 `

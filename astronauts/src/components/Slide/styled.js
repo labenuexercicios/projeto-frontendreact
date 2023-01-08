@@ -5,16 +5,17 @@ order: 1;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-around;
+justify-content: flex-end;
 width: 100vw;
-height: 30vw;
+height: 44vw;
 background-color: #F5F5F5;
 `
 
 export const SlidePromo = styled.div`
-width: 65%;
-height: 80%;
+width: 65vw;
+height: 50vh;
 margin-top: 0.5%;
+margin-bottom: 0.8%;
 background-image: url('https://img.ibxk.com.br/2016/06/06/06200652863735.jpg?ims=704x');
 background-repeat: no-repeat;
 background-size: cover;

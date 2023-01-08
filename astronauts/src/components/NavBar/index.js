@@ -13,9 +13,9 @@ export function NavBar({setType, setOrder, minPrice, setMinPrice, maxPrice, setM
     return(
         <NavBarContainer>
             <Menu>
-                <NavLink>Novidades</NavLink>
-                <NavLink>Trajes</NavLink>
-                <NavLink>Acessórios</NavLink>
+                <NavLink onClick={(ev)=>{setType("")}}>Todos</NavLink>
+                <NavLink onClick={(ev)=>{setType("traje com capacete")}}>Trajes </NavLink>
+                <NavLink onClick={(ev)=>{setType("acessorio")}}>Acessórios </NavLink>
                 <Filters>
                     <option value="" onClick={handleOrder}>Filtrar</option>
                     <option value="asc" onClick={handleOrder}>Menor preço</option>

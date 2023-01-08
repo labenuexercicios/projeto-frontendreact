@@ -8,7 +8,7 @@ export function ProductCard({addProduct, product}){
         <ProductContainer key={product.key}>
         <SuitImage src={product.image} alt={product.name}/>
         <ProductTitle>{product.name}</ProductTitle>
-        <Price>R$ {product.price}</Price>
+        <Price>R$ {product.price.toFixed(3)}</Price>
         <BuyButton onClick={() => addProduct(product)}>Comprar</BuyButton>
         </ProductContainer>
     )
