@@ -52,13 +52,7 @@ const Home = ({ prodShopping, setProdShopping, numberMin, setNumberMin, setShowC
 
 
                 />
-                {/* <Cart
-                    setShowCart={setShowCart}
-                    cart={cart}
-                    setCart={setCart}
-                    removeProductToCart={removeProductToCart}
-                    addProdInCart={addProdInCart}
-                    priceTot={priceTot} /> */}
+
             </Main>
             <Footer />
         </div>
