@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: rgb(119, 202, 250);
+  padding-bottom: 125px;
+}
+
+button{
+  border-radius: 5px;
+
+}
+
