@@ -8,7 +8,7 @@ export function Header() {
             <img src="../../img/space's-store-logo.png" alt="logo space's store"/>
             <h1>Space's Store</h1>
             <p>Produtos Universais</p>
-            <span>só pra testar</span>
+            <span></span>
         </header>
     )
 }
