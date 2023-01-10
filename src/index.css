@@ -1,0 +1,170 @@
+*{
+  font-family: lato;
+  padding: 0;
+  margin: 0 ;
+  box-sizing: border-box;
+}
+
+
+.link {
+  text-decoration: none;
+  color: white;
+  gap: 4rem;
+  
+  
+}
+
+img.small {
+  /* max-height: 8rem; */
+  width: 150px;
+  height: 150px;
+}
+
+button {
+  padding: 0.3rem;
+  border: 0.1rem pink solid;
+  background-color: palevioletred;
+  width: 100%;
+  cursor: pointer;
+
+}
+
+button.add {
+  background-color: rgb(133, 188, 137);
+  width: 2rem;
+  border-radius: 10px;
+  
+  margin: 10px;
+}
+
+button.remove {
+  background-color: rgb(193, 146, 146);
+  width: 2rem;
+  border-radius: 10px;
+
+}
+
+.p-1 {
+  padding: 1rem;
+margin-left: 10px;
+}
+
+button.badge {
+  background-color: rgba(23, 6, 68, 0.229);
+  border: none;
+  color:white;
+  width: 1.5rem;
+  gap: 2px;
+ font-size: medium;
+
+}
+
+.card {
+  display: flex;
+  background-color: white;
+  padding: 1rem;
+  margin: 0.5rem;
+  align-items: center; 
+justify-content: space-between;
+
+} 
+
+.itens {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  /* antes estava space-between no justify content - são os itens do carrinho */
+  justify-content:center;
+  align-content: center;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* background: linear-gradient(68.15deg, #180435 16.62%, #2e244b 85.61%); */
+  background-image: url(https://2.bp.blogspot.com/-C1lzrGQdHkM/T78dxRvrmBI/AAAAAAAAEHw/dYWj8zg6TIg/s1600/Hdhut.blogspot.com+%252835%2529.jpg);
+
+  gap: 20px;
+}
+
+.row.center {
+  align-items: center;
+}
+
+.h2Carrinho {
+  color: white;
+  font-weight: bold;
+ margin-left: 2px;
+ display: flex;
+ gap: 10px;
+ align-items: center;
+
+}
+.col-1 {
+  display: flex;
+ justify-content:space-between;
+  background-color: blueviolet;
+  align-items: center;
+  align-content: center;
+  margin: 10px;
+  font-size: medium;
+  font-weight: bold;
+color: white;
+
+}
+
+
+.col-2 {
+ display: flex;
+ justify-content:space-between;
+  background-color: blue;
+  margin: 10px;
+  font-weight: bold;
+  color: white;
+
+
+}
+
+@media screen and (min-width: 800px) {
+  .col-1 {
+    flex: 1;
+  }
+
+  .col-2 {
+    flex: 2;
+  }
+
+}
+
+.header {
+  background-color: rgb(107, 107, 130);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  background-image: url(https://2.bp.blogspot.com/-C1lzrGQdHkM/T78dxRvrmBI/AAAAAAAAEHw/dYWj8zg6TIg/s1600/Hdhut.blogspot.com+%252835%2529.jpg);
+  color: white;
+}
+
+.linkBag {
+  font-size: large;
+  padding: 20px;
+
+}
+
+.block {
+  background-color: bisque;
+  padding: 1rem;
+  margin: 0.5rem;
+  justify-content: center;
+
+}
+
+
+.text-right {
+  text-align: right;
+}
