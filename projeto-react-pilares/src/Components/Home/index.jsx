@@ -1,23 +1,58 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Cart } from "../Cart";
 import { Filter } from "../Filter";
 import { Products } from "../Products";
 
 
-export function Home() {
-    const [pagina, setPagina] = useState(false)
+export function Home({pagina}) {
 
-    const mudaPagina = () => {
-        pagina === 1 ? setPagina(2) : setPagina(1)
+    const arrayProdutos = [{
+        "nome": "",
+        "valor": 0,
+        "img": "url"
+    },
+    {
+        "nome": "",
+        "valor": 0,
+        "img": "url"
+    },
+    {
+        "nome": "",
+        "valor": 0,
+        "img": "url"
+    },
+    {
+        "nome": "",
+        "valor": 0,
+        "img": "url"
+    },
+    {
+        "nome": "",
+        "valor": 0,
+        "img": "url"
+    },
+    {
+        "nome": "",
+        "valor": 0,
+        "img": "url"
+    }]
+    const [listaProdutos, setListaProduto] = useState(arrayProdutos)
+
+    const comprarProduto = () => {
+        useEffect(() => {
+            localStorage.setItem()
+        }, [])
     }
 
     return (
         <div>
-        !pagina === 1 ?
+        {pagina === 1 ?
+        <>
         <Filter/>
-        <Products/>
+        <Products listaProdutos={listaProdutos}/>
+        </>
         :
-        <Cart/>
+        <Cart listaProdutos={listaProdutos}/>}
         </div>
     )
 }

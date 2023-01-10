@@ -1,14 +1,15 @@
 import React from "react";
+import logo from "./spaces-store-logo.png"
 
 
-export function Header() {
+export function Header({mudaPagina}) {
 
     return (
         <header>
-            <img src="../../img/space's-store-logo.png" alt="logo space's store"/>
+            <img src={logo} alt="logo space's store" className="logo" onClick={()=>mudaPagina(1)}/>
             <h1>Space's Store</h1>
             <p>Produtos Universais</p>
-            <span></span>
+            <span>slide</span>
         </header>
     )
 }
