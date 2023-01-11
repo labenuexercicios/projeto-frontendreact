@@ -1,6 +1,6 @@
 //Dependencies
 import React from 'react'
-import styled from 'styled-components'
+import styled, {createGlobalStyle} from 'styled-components'
 // Components
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
@@ -8,13 +8,22 @@ import NavSearch from './components/NavSearch/NavSearch'
 import Cart from './components/Cart/Cart'
 import Footer from './components/Footer/Footer'
 
-const MainContaner = styled.main`
-display: flex
+const GlobalSyled = createGlobalStyle`
+  * {
+  margin: 0px;
+  padding: 0px;
+  font-family: Roboto;
+}
 `
+
+const MainContaner = styled.main`
+display: flex;
+`;
 
 function App() {
   return (
     <>
+    <GlobalSyled />
       <Header />
       <MainContaner>
         <NavSearch />
@@ -22,7 +31,6 @@ function App() {
         <Cart />
       </MainContaner>
       <Footer />
-
     </>
   );
 }
