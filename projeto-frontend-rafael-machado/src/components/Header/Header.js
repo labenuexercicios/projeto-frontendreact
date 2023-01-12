@@ -2,7 +2,20 @@ import React from "react"
 import { Container } from "./style"
 import logo from "../../assets/astrodev.logo.png"
 
-const Header = ({ pesquisa, setPesquisa }) => {
+const Header = ({ pesquisa, setPesquisa, carrinho, mudarTela }) => {
+    
+    let totalCarrinho = 0
+
+    const somaProdCarrinho = () => {
+        for (let i = 0; i < carrinho.length; i++) {
+            totalCarrinho += carrinho[i].precototal
+        }
+        return
+    }
+
+    somaProdCarrinho()
+
+
 
     return (
         <>
@@ -20,9 +33,17 @@ const Header = ({ pesquisa, setPesquisa }) => {
                     />
                 </div>
                 <div>
-                    <h2>Carrinho:</h2>
-                    <h3>Valor total: R$ </h3>
-                    <button>Concluir compras</button>
+                <h2>Carrinho:</h2>
+                    {carrinho.map((produto) => {
+                        return (
+                            <p> <span><b> {produto.quantidade}</b></span>
+                                <span><b> {produto.nome} </b></span>
+                                <span><b> R$ {produto.precototal.toFixed(2)}</b></span>
+                            </p>
+                        )
+                    })}
+                    <h3><b>Valor total: R$ {totalCarrinho.toFixed(2)}</b></h3>
+                    <button onClick={() => mudarTela(2)}>Concluir compra</button>
                 </div>
             </Container>
         </>
