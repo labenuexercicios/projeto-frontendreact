@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Footer from "../Footer/Footer"
 import Header from "../Header/Header"
 
@@ -52,6 +52,20 @@ const MainPage = ({ mudarTela, carrinho, setCarrinho }) => {
         }
     }
 
+    useEffect(() => {
+        if (carrinho.length > 0) {
+          const listaStringCarrinho = JSON.stringify(carrinho)
+          localStorage.setItem("carrinho", listaStringCarrinho)
+        }
+      }, [carrinho])
+
+   
+    useEffect(() => {
+        const novoCarrinho = JSON.parse(localStorage.getItem("carrinho"))
+        if (novoCarrinho !== null) {
+            setCarrinho(novoCarrinho)
+        }
+    }, [])
 
     return (
         <>
