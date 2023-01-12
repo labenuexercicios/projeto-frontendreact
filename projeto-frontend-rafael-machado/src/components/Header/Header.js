@@ -1,9 +1,11 @@
 import React from "react"
+import { Container } from "./style"
 
 const Header = () => {
 
     return(
         <> 
+        <Container>
         <div>
             <img/>
         </div>
@@ -21,6 +23,7 @@ const Header = () => {
             <h3>Valor total: R$ </h3>
             <button>Concluir compras</button>
         </div>
+        </Container>
         </>
     )
 }
