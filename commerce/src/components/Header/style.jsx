@@ -5,7 +5,7 @@ export const HeadContainer = styled.header`
   background-color: aqua;
   `
 export const HeadContent = styled.div`
-  width: 80vw;
   /* display: flex; */
+  width: 80vw;
   margin: auto;
 `
