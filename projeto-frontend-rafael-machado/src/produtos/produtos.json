@@ -1,0 +1,44 @@
+[
+    {
+        "id": "001",
+        "nome": "Camisa",
+        "preco": 100,
+        "data": "01/01/2022",
+        "imagem": "https://img.elo7.com.br/product/zoom/24E3438/kit-com-3-camisetas-astronauta-ciencia-nasa-camisa-blusa-kit.jpg"
+    },
+    {
+        "id": "002",
+        "nome": "Roupa Astropnauta",
+        "preco": 900,
+        "data": "02/02/2022",
+        "imagem": "https://i.pinimg.com/originals/8b/d5/58/8bd55896c37611f726e9ca5c91471c05.jpg"
+    },
+    {
+        "id": "003",
+        "nome": "Nave Espacial",
+        "preco": 800, 
+        "data": "03/03/2022",
+        "imagem":"https://th.bing.com/th/id/R.86589ed3c693b538f6d5e894ad13868a?rik=GHOYVxOVAxg7Eg&riu=http%3a%2f%2f2.bp.blogspot.com%2f-9g_pB8ns7x0%2fTWfipUmdmBI%2fAAAAAAAACwI%2f62bqOeS2II8%2fw1200-h630-p-k-no-nu%2f6a00d834527dd469e200e55390ee7c8833-800wi.jpg&ehk=dBZjuLJpEW4jfSDMx1b86x3oTj2z6K9JAQy%2bMTd3TCI%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "id": "004",
+        "nome": "Viagem para Marte",
+        "preco": 500,
+        "data": "04/04/2022",
+        "imagem": "https://espalhafactos.com/wp-content/uploads/2016/11/MARS-KeyArt-Vertical.jpg"
+    },
+    {
+        "id": "005",
+        "nome": "Veiculo explorador",
+        "preco": 300, 
+        "data": "05/05/2022",
+        "imagem": "https://www.jornalcidademg.com.br/wp-content/uploads/2020/07/MarsPerseveranceRover_SampleCollection.jpg"
+    },
+    {
+        "id": "006",
+        "nome": "Telecópio",
+        "preco": 700, 
+        "data": "06/06/2022",
+        "imagem": "https://4.bp.blogspot.com/-iyxFBkJVzlQ/VTVlYsCNt9I/AAAAAAAAPZA/ucMtKBxSskg/s1600/hubble-telescope-images-of-earth.jpg"
+    }
+]
