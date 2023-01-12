@@ -1,5 +1,7 @@
 import React from "react";
 import { Container } from "./style";
+import logo from "../../assets/astrodev.logo.png"
+import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 const Footer = () => {
     return (
@@ -7,7 +9,7 @@ const Footer = () => {
         <Container>
             <div className="footer-dados">
                 <div className="footer-introducao">
-                    <img />
+                    <img src={logo} alt="logo-footer" />
                     <br />
                 </div>
                 <div className="footer-contatos">
@@ -24,10 +26,11 @@ const Footer = () => {
             </div>
             <div className="footer-rafael">
                 <div>
+                    <FaGithub />
                     <a href="https://github.com/RafaelMachado1" >https://github.com/RafaelMachado1"</a>
                 </div>
                 <div>
-
+                    <FaLinkedinIn />
                     <a href="https://www.linkedin.com/in/rafael-m-machado-95305688/" >https://www.linkedin.com/in/rafael-m-machado-95305688/</a>
                 </div>
             </div>

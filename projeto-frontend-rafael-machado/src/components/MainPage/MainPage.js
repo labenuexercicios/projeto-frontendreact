@@ -8,7 +8,7 @@ import produtosList from "../../produtos/produtos.json"
 import { Card, Container, ContainerCard } from "./styleMainPage"
 import Filtros from "../Filtros/Filtros"
 
-const MainPage = () => {
+const MainPage = ({ mudarTela, carrinho, setCarrinho }) => {
 
     const [produtosFiltrados] = useState(produtosList)
     const [pesquisa, setPesquisa] = useState("")
@@ -17,13 +17,50 @@ const MainPage = () => {
     const [sortingParameter, setSortingParameter] = useState("nome")
     const [order, setOrder] = useState("asc")
 
+    const onChangeCarrinho = (event) => {
+        setCarrinho(event.target.value)
+    }
+
+
+    //função para adicionar produto ao carrinho
+   function addProdutosCarrinho(produto) {
+        const copyCarrinho = [...carrinho];
+        const produtoAdd = produto
+        const produtoExistente = copyCarrinho.find((produto) => {
+            return produto.id === produtoAdd.id
+        })
+        if (produtoExistente) {
+            produtoExistente.quantidade++
+            produtoExistente.precototal = produtoExistente.quantidade * produtoExistente.preco
+        } else {
+            copyCarrinho.push({ ...produtoAdd, quantidade: 1, precototal: produtoAdd.preco })
+        }
+
+        setCarrinho(copyCarrinho)
+    }
+
+    //função para excluir produto do carrinho
+    const excluiProdutoCarrinho = (produto) => {
+        const carrinhoDois = [...carrinho]
+        for (let i = 0; i < carrinhoDois.length; i++) {
+            if (carrinhoDois[i].id === produto.id) {
+                carrinhoDois[i].quantidade = carrinhoDois[i].quantidade - 1
+                carrinhoDois[i].precototal = carrinhoDois[i].precototal - carrinhoDois[i].preco
+            }
+            const buscaItem = carrinhoDois.filter((item) => item.quantidade > 0)
+            setCarrinho(buscaItem)
+        }
+    }
+
+
     return (
         <>
             <Container>
                 <Header 
                  pesquisa={pesquisa}
                  setPesquisa={setPesquisa}
-                 
+                 carrinho={carrinho}
+                 mudarTela={mudarTela}
                 />
                 <Filtros 
                  minPrice={minPrice}
@@ -77,8 +114,8 @@ const MainPage = () => {
                                         <span>{produto.nome}</span><br />
                                         <h3>R$ {produto.preco.toFixed(2)}</h3><br />
                                         <h4>{produto.data}</h4>
-                                        <button >Adicionar no carrinho</button>
-                                        <button >Remover do Carrinho</button>
+                                        <button onClick={() => addProdutosCarrinho(produto)} onChange={onChangeCarrinho}>Adicionar no carrinho</button>
+                                        <button onClick={() => excluiProdutoCarrinho(produto)} onChange={onChangeCarrinho} >Remover do Carrinho</button>
                                     </div>
                                 </Card>
                             )
