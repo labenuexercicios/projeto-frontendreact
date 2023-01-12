@@ -11,7 +11,7 @@ return (
   
     <div className="card">
 <img className="small" src={product.image} alt={product.name}/>
-<h3>{product.name}</h3>
+<h4 className=".h2-main">{product.name}</h4>
 <div>R${product.price.toFixed(2)}</div>
 <div>
     {item ? <div>

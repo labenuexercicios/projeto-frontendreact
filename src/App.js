@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import data from "./components/data";
 import { useEffect, useState } from "react";
+import Filters from "./components/Filters";
 
 
 function App() {
@@ -51,13 +52,30 @@ setCartItems (
   );
 }, []);
 
+const [query, setQuery]= useState("")
+const [minPrice, setMinPrice]= useState(-Infinity)
+const [maxPrice, setMaxPrice]= useState(Infinity)
+const [sortingParameter, setSortingParameter]=useState("title")
+const [order, setOrder]=useState("asc")
 
   return (
     
     <div>
          <Header countCartItems= {cartItems.length} />
       <div className="row">
-        <Main cartItems={cartItems} onAdd={onAdd} onRemove= {onRemove} products={products}/>
+        <Filters
+        query={query}
+        setQuery={setQuery}
+        minPrice={minPrice}
+        setMinPrice={setMinPrice}
+        maxPrice={maxPrice}
+        setMaxPrice={setMaxPrice}
+        sortingParameter={sortingParameter}
+        setSortingParameter={ setSortingParameter}
+        order={order}
+        setOrder={setOrder}
+        />
+        <Main cartItems={cartItems} onAdd={onAdd} onRemove= {onRemove} products={products} query={query} minPrice={minPrice}  maxPrice={maxPrice}  sortingParameter={sortingParameter} order={order} />
         <Basket cartItems={cartItems} onAdd={onAdd} onRemove= {onRemove} />
       </div>
      

@@ -1,7 +1,7 @@
-*{
+* {
   font-family: lato;
   padding: 0;
-  margin: 0 ;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -10,8 +10,8 @@
   text-decoration: none;
   color: white;
   gap: 4rem;
-  
-  
+
+
 }
 
 img.small {
@@ -33,7 +33,7 @@ button.add {
   background-color: rgb(133, 188, 137);
   width: 2rem;
   border-radius: 10px;
-  
+
   margin: 10px;
 }
 
@@ -46,28 +46,33 @@ button.remove {
 
 .p-1 {
   padding: 1rem;
-margin-left: 10px;
+  margin-left: 10px;
 }
 
 button.badge {
   background-color: rgba(23, 6, 68, 0.229);
   border: none;
-  color:white;
+  color: white;
   width: 1.5rem;
   gap: 2px;
- font-size: medium;
+  font-size: medium;
 
 }
 
 .card {
   display: flex;
+  flex-wrap: wrap;
   background-color: white;
   padding: 1rem;
   margin: 0.5rem;
-  align-items: center; 
-justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 220px;
+  min-height: 312px;
+  font-size: small;
 
-} 
+}
 
 .itens {
   width: 100%;
@@ -78,17 +83,17 @@ justify-content: space-between;
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   /* antes estava space-between no justify content - são os itens do carrinho */
-  justify-content:center;
+  justify-content: center;
   align-content: center;
   align-items: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   /* background: linear-gradient(68.15deg, #180435 16.62%, #2e244b 85.61%); */
   background-image: url(https://2.bp.blogspot.com/-C1lzrGQdHkM/T78dxRvrmBI/AAAAAAAAEHw/dYWj8zg6TIg/s1600/Hdhut.blogspot.com+%252835%2529.jpg);
-
   gap: 20px;
+
 }
 
 .row.center {
@@ -98,29 +103,60 @@ justify-content: space-between;
 .h2Carrinho {
   color: white;
   font-weight: bold;
- margin-left: 2px;
- display: flex;
- gap: 10px;
- align-items: center;
+  margin-left: 2px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 
 }
+
+.produtos-main {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  margin-left: 30px;
+
+}
+
+.h2-main {
+  color: white;
+  font-weight: bold;
+align-content:  center;
+
+}
+
+
+.row-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  font-size: small;
+  justify-content: space-around;
+
+}
+
 .col-1 {
   display: flex;
- justify-content:space-between;
+  justify-content: space-between;
   background-color: blueviolet;
   align-items: center;
   align-content: center;
   margin: 10px;
   font-size: medium;
   font-weight: bold;
-color: white;
+  color: white;
 
 }
 
 
 .col-2 {
- display: flex;
- justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
   background-color: blue;
   margin: 10px;
   font-weight: bold;
@@ -141,8 +177,9 @@ color: white;
 }
 
 .header {
-  background-color: rgb(107, 107, 130);
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
   align-items: center;
