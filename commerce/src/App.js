@@ -17,9 +17,11 @@ const GlobalSyled = createGlobalStyle`
 `
 
 const MainContaner = styled.main`
-height: 80vh;
+min-height: 80vh;
 display: flex;
 justify-content: center;
+margin-top: 10px;
+margin-bottom: 10px;
 /* flex-direction: column; */
 /* align-items: center; */
 `;
