@@ -1,7 +1,10 @@
 import React from 'react'
+import {NavSection} from './style'
 
 export default function Cart(props) {
   return(
-    <h1>Carrinho de compras</h1>
+    <NavSection>
+      <h2>Carrinho de compras</h2>
+    </NavSection>
   )
 }

@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 export const HeadContainer = styled.header`
-  height: 80px;
-  border: 1px solid black;
+  height: 15vh;
+  background-color: aqua;
+  `
+export const HeadContent = styled.div`
+  width: 80vw;
+  /* display: flex; */
+  margin: auto;
 `
