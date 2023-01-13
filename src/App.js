@@ -5,11 +5,13 @@ import Filtros from "./componentes/Filtros/Filtros";
 import Carrinho from "./componentes/Carrinho/Carrinho";
 import {
   ContainerPag,
-  Container,
+  Main,
   Header,
   H1,
+  NavBar,
   ButtonCart,
-  ContainerButton
+  ContainerButton,
+  Footer
 } from "./style";
 
 function App() {
@@ -32,21 +34,23 @@ function App() {
     <ContainerPag>
       <GlobalStyle />
       <Header>
-        <H1>SPACE STORE</H1>
-        <Filtros
-          pesquisa={pesquisa}
-          setPesquisa={setPesquisa}
-          orderFilter={orderFilter}
-          setOrderFilter={setOrderFilter}
-          valueMin={valueMin}
-          setValueMin={setValueMin}
-          valueMax={valueMax}
-          setValueMax={setValueMax}
-          category={category}
-          setCategory={setCategory}
-        />
+        <H1>SPACE STORE </H1> 
+        <NavBar>
+          <Filtros
+            pesquisa={pesquisa}
+            setPesquisa={setPesquisa}
+            orderFilter={orderFilter}
+            setOrderFilter={setOrderFilter}
+            valueMin={valueMin}
+            setValueMin={setValueMin}
+            valueMax={valueMax}
+            setValueMax={setValueMax}
+            category={category}
+            setCategory={setCategory}
+          />
+        </NavBar>
       </Header>
-      <Container>
+      <Main>
         <Home
           pesquisa={pesquisa}
           orderFilter={orderFilter}
@@ -72,7 +76,10 @@ function App() {
             />
           ) : null}
         </ContainerButton>
-      </Container>
+      </Main>
+      <Footer>
+        <div>footer</div>
+      </Footer>
     </ContainerPag>
   );
 }

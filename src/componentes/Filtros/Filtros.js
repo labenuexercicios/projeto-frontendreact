@@ -1,4 +1,4 @@
-import { Container, SelectOrder, Input, InputName, Label } from "./style";
+import { Container, ContainerSearch, ContainerFilters, SelectOrder, Input, InputName } from "./style";
 
 export default function Filtros(props) {
   const productsTypesArray = [
@@ -30,50 +30,53 @@ export default function Filtros(props) {
 
   return (
     <Container>
-      <Label htmlFor="Category">Categoria:</Label>
-      <SelectOrder
-        id="Category"
-        onChange={onChangeCategory}
-        value={props.category}
-      >
-        <option value="">Selecione uma Categoria</option>
-        {productsTypesArray.map((type) => {
-          return (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          );
-        })}
-      </SelectOrder>
-      <Label htmlFor="Order">Ordenação:</Label>
-      <SelectOrder
-        id="Order"
-        onChange={onChangeOrder}
-        value={props.orderFilter}
-      >
-        <option value="Escolha">-- Escolha --</option>
-        <option value="Crescente">Crescente</option>
-        <option value="Decrescente">Decrescente</option>
-      </SelectOrder>
+      <ContainerSearch>
+        <InputName id="SearchName" onChange={onChangeSearch} placeholder="Buscar..."></InputName>
+      </ContainerSearch>
+      <ContainerFilters>
+        <SelectOrder
+          id="Category"
+          onChange={onChangeCategory}
+          value={props.category}
+        >
+          <option value="">Busca por Categoria</option>
+          {productsTypesArray.map((type) => {
+            return (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            );
+          })}
+        </SelectOrder>
 
-      <Label htmlFor="ValueMin">Valor mínimo:</Label>
-      <Input
-        id="ValueMin"
-        type="number"
-        onChange={onChangeValueMin}
-        value={props.valueMin}
-      ></Input>
+        <SelectOrder
+          id="Order"
+          onChange={onChangeOrder}
+          value={props.orderFilter}
+        >
+          <option value="Escolha">Ordenação por preço</option>
+          <option value="Crescente">Crescente</option>
+          <option value="Decrescente">Decrescente</option>
+        </SelectOrder>
 
-      <Label htmlFor="ValueMax">Valor maxímo:</Label>
-      <Input
-        id="ValueMax"
-        type="number"
-        onChange={onChangeValueMax}
-        value={props.valueMax}
-      ></Input>
 
-      <Label htmlFor="SearchName">Busca por nome:</Label>
-      <InputName id="SearchName" onChange={onChangeSearch}></InputName>
+        <Input
+          id="ValueMin"
+          type="number"
+          onChange={onChangeValueMin}
+          value={props.valueMin}
+          placeholder="Valor minimo"
+        ></Input>
+
+
+        <Input
+          id="ValueMax"
+          type="number"
+          onChange={onChangeValueMax}
+          value={props.valueMax}
+          placeholder="Valor máximo"
+        ></Input>
+      </ContainerFilters>
     </Container>
   );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 20px 15px;
+  margin: 10px 0px 30px 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -11,6 +11,7 @@ export const Card = styled.div`
   padding: 10px 20px;
   border-radius: 20px;
   background-color: #1d1e1b;
+  justify-items: center;
   display: grid;
   height: 100%;
   width: 200px;
@@ -34,7 +35,7 @@ export const ButtonCart = styled.button`
   :hover {
     transition: 0.2s;
     color: white;
-    background-color: blue;
+    background-color: #282929;
     cursor: pointer;
   }
 `;
