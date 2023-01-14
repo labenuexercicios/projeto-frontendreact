@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  width: 430px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  
