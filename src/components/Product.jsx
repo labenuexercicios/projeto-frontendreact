@@ -11,8 +11,8 @@ return (
   
     <div className="card">
 <img className="small" src={product.image} alt={product.name}/>
-<h4 className=".h2-main">{product.name}</h4>
-<div>R${product.price.toFixed(2)}</div>
+<div className="produtos">{product.name}</div>
+<div className="produtos-preco">R${product.price.toFixed(2)}</div>
 <div>
     {item ? <div>
         <button onClick={() => onRemove(item)} className="remove">

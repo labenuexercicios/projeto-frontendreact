@@ -62,7 +62,7 @@ const [order, setOrder]=useState("asc")
     
     <div>
          <Header countCartItems= {cartItems.length} />
-      <div className="row">
+      <div className="app">
         <Filters
         query={query}
         setQuery={setQuery}

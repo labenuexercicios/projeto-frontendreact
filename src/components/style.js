@@ -5,5 +5,11 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
 color: white;
-gap: 5px;
+gap: 8px;
+margin-bottom: 20px;
+font-weight:bold;
+
+label{
+    margin-right: 10px;
+}
 `
