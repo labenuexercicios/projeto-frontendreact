@@ -1,31 +1,23 @@
 import React, { useState } from "react";
+import {Card} from "../Card/Card"
 
+export function Products({listaProdutos, comprarProduto}) {
 
-export function Products({listaProdutos}) {
-
-    const lista = listaProdutos.map((produto) => {
+    const renderizar = listaProdutos.map((produto) => {
         return (
-            <>
-                <ul>
-                    <li>
-                        {produto.nome}
-                    </li>
-                    <li>
-                        {produto.valor}
-                    </li>
-                    <li>
-                        {produto.img}
-                    </li>
-                </ul>
-                <button>Comprar</button>
-             </>
+            <Card>
+                <img src={produto.img} alt={produto.nome}/>
+                <h3>{produto.nome}</h3>
+                <p>{produto.preco}</p>
+                <button onClick={() => comprarProduto(produto)}>Comprar</button>
+             </Card>
         )
     })
 
     return (
         <div>
         <p>AQUI FICAM OS PRODUTOS</p>
-        {lista}
+        {renderizar}
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./spaces-store-logo.png"
+import logo from "../../img/spaces-store-logo.png"
 
 
 export function Header({mudaPagina}) {
@@ -8,7 +8,7 @@ export function Header({mudaPagina}) {
         <header>
             <img src={logo} alt="logo space's store" className="logo" onClick={()=>mudaPagina(1)}/>
             <h1>Space's Store</h1>
-            <p>Produtos Universais</p>
+            <p>Produtos Universais para ter mais Espaço na sua vida</p>
             <span>slide</span>
         </header>
     )

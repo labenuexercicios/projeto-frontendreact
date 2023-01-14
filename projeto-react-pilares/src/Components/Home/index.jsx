@@ -1,58 +1,37 @@
 import React, { useEffect, useState } from "react";
+import { Produtos } from "../../Data/Produtos";
 import { Cart } from "../Cart";
 import { Filter } from "../Filter";
 import { Products } from "../Products";
 
 
+
 export function Home({pagina}) {
 
-    const arrayProdutos = [{
-        "nome": "",
-        "valor": 0,
-        "img": "url"
-    },
-    {
-        "nome": "",
-        "valor": 0,
-        "img": "url"
-    },
-    {
-        "nome": "",
-        "valor": 0,
-        "img": "url"
-    },
-    {
-        "nome": "",
-        "valor": 0,
-        "img": "url"
-    },
-    {
-        "nome": "",
-        "valor": 0,
-        "img": "url"
-    },
-    {
-        "nome": "",
-        "valor": 0,
-        "img": "url"
-    }]
-    const [listaProdutos, setListaProduto] = useState(arrayProdutos)
+    const [listaProdutos, setListaProduto] = useState(Produtos)
+    const [listaCarrinho, setListaCarrinho] = useState([])
 
-    const comprarProduto = () => {
-        useEffect(() => {
-            localStorage.setItem()
-        }, [])
+    useEffect(() => {
+    }, [])
+
+    const comprarProduto = (item) => {
+            const comprado = JSON.stringify(localStorage.setItem("produto", item))
     }
+
+    useEffect(() => {
+
+    }, [])
+
 
     return (
         <div>
         {pagina === 1 ?
         <>
         <Filter/>
-        <Products listaProdutos={listaProdutos}/>
+        <Products listaProdutos={listaProdutos} comprarProduto={comprarProduto}/>
         </>
         :
-        <Cart listaProdutos={listaProdutos}/>}
+        <Cart listaProdutos={listaProdutos} listaCarrinho={listaCarrinho} setListaCarrinho={setListaCarrinho}/>}
         </div>
     )
 }
