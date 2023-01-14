@@ -1,0 +1,250 @@
+* {
+  font-family: lato;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.link {
+  text-decoration: none;
+  color: white;
+  gap: 4rem;
+
+
+}
+
+img.small {
+  /* max-height: 8rem; */
+  width: 150px;
+  height: 150px;
+}
+
+button {
+  padding: 0.3rem;
+  border: 0.1rem pink solid;
+  background-color: palevioletred;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: inset 0 2px 5px #fff, 0 2px 3px #666;
+  }
+
+button.add {
+  background-color: rgb(133, 188, 137);
+  width: 2rem;
+  border-radius: 10px;
+
+  margin: 10px;
+}
+
+button.remove {
+  background-color: rgb(193, 146, 146);
+  width: 2rem;
+  border-radius: 10px;
+
+}
+
+
+.p-1 {
+  padding: 1rem;
+  margin-left: 10px;
+}
+
+button.badge {
+  background-color: rgba(23, 6, 68, 0.229);
+  border: none;
+  color: white;
+  width: 1.5rem;
+  gap: 2px;
+  font-size: medium;
+
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 1rem;
+  margin-left: 0.5rem;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  width: 220px;
+  min-height: 338px;
+  max-height: 338px;
+  font-size: small;
+
+}
+
+.itens {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+}
+.produtos {
+font-size: 20px;
+margin: 10px;
+
+
+}
+
+.produtos-preco {
+  font-size: 15px;
+}
+
+.app {
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-image: url(https://2.bp.blogspot.com/-C1lzrGQdHkM/T78dxRvrmBI/AAAAAAAAEHw/dYWj8zg6TIg/s1600/Hdhut.blogspot.com+%252835%2529.jpg);
+  gap: 10px;
+
+}
+
+.row.center {
+  align-items: center;
+}
+
+.carrinho {
+  display: flex;
+  flex-direction: column;
+  background: rgb(17, 17, 37);
+}
+
+.carrinho-item{
+  display: flex;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: lato;
+
+}
+
+
+.carrinho-item-frete{
+  display: flex;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: lato;
+  margin-bottom: 1rem;
+
+}
+
+.carrinho-item-final{
+  display: flex;
+  gap:20px;
+   justify-content: center;
+  color: white;
+  font-family: lato;
+  font-size: 25px;
+  background: rgb(14, 14, 31);
+
+}
+
+.carrinho-item-qty{
+  display: flex;
+  justify-content: center;
+}
+
+.h2Carrinho {
+  color: white;
+  font-weight: bold;
+  margin-left: 2px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 23px;
+
+}
+
+.produtos-main {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  margin-left: 30px;
+
+}
+
+.h2-main {
+  color: white;
+  font-weight: bold;
+align-content:  center;
+
+}
+
+
+.row-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  font-size: small;
+  justify-content: space-around;
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 1rem;
+    margin-left: 4rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 220px;
+    min-height: 312px;
+    font-size: small;
+  
+  }
+  
+
+}
+
+.header {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  background-image: url(https://2.bp.blogspot.com/-C1lzrGQdHkM/T78dxRvrmBI/AAAAAAAAEHw/dYWj8zg6TIg/s1600/Hdhut.blogspot.com+%252835%2529.jpg);
+  color: white;
+}
+
+.linkBag {
+  font-size: large;
+  padding: 20px;
+
+}
+
+.block {
+  background-color: bisque;
+  padding: 1rem;
+  margin: 0.5rem;
+  justify-content: center;
+
+}
+
+
+.text-right {
+  text-align: right;
+}
