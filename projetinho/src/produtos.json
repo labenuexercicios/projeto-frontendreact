@@ -1,0 +1,88 @@
+[
+    {
+    "id":"1",
+    "nome":"Imperial TIE Fighter",
+    "imagem":"https://m.media-amazon.com/images/I/81qkzvK+HTL._AC_UL480_FMwebp_QL65_.jpg",
+    "valor":402,
+    "descricao":"LEGO 432 peças"
+},
+{
+    "id":"2",
+    "nome":"Millennium Falcon",
+    "imagem":"https://m.media-amazon.com/images/I/81PhO-kyPuL._AC_UL480_FMwebp_QL65_.jpg",
+    "valor":1600,
+    "descricao":"LEGO 7500 peças"
+},
+{
+    "id":"3",
+    "nome":"Transporte Inquisidor Scythe",
+    "imagem":"https://m.media-amazon.com/images/I/81cLSOyVXvL._AC_UL480_FMwebp_QL65_.jpg",
+    "valor":704,
+    "descricao":"LEGO 924 peças"
+},
+{
+    "id":"4",
+    "nome":"Star Wars Death Star",
+    "imagem":"https://m.media-amazon.com/images/I/91t6zed0IFL._AC_SX679_.jpg",
+    "valor":5678,
+    "descricao":"LEGO 4016 peças"
+},
+{
+    "id":"5",
+    "nome":"Milano",
+    "imagem":"https://m.media-amazon.com/images/I/81LFebNzhcL._AC_SX679_.jpg",
+    "valor":1003,
+    "descricao":"LEGO 1902 peças"
+},
+{
+    "id":"6",
+    "nome":"Saturno V Apollo",
+    "imagem":"https://m.media-amazon.com/images/I/81Nxv-zQGeL._AC_SX679_.jpg",
+    "valor":1278,
+    "descricao":"LEGO 1969 peças "
+},
+{
+    "id":"7",
+    "nome":"Discovery da NASA",
+    "imagem":"https://m.media-amazon.com/images/I/71D0J+Qm-US._AC_SX679_.jpg",
+    "valor":1999,
+    "descricao":"LEGO 2354 peças"
+},
+{
+    "id":"8",
+    "nome":"Lunar Lander",
+    "imagem":"https://m.media-amazon.com/images/I/81aOs1dk81L._AC_SX679_.jpg",
+    "valor":1278,
+    "descricao":"LEGO 10266 peças"
+},
+{
+    "id":"9",
+    "nome":"Centro de Lançamento",
+    "imagem":"https://m.media-amazon.com/images/I/81923FDpNtL._AC_SX679_.jpg",
+    "valor":1003,
+    "descricao":"LEGO 1010 peças"
+},
+{
+    "id":"10",
+    "nome":"Estação Espacial Lunar",
+    "imagem":"https://m.media-amazon.com/images/I/81qVXml1KgL._AC_SX679_.jpg",
+    "valor":449,
+    "descricao":"LEGO 500 peças"
+},
+{
+    "id":"11",
+    "nome":"Caça Estelar Jedi",
+    "imagem":"https://m.media-amazon.com/images/I/81dsPG1JP0L._AC_SX679_.jpg",
+    "valor":219,
+    "descricao":"LEGO 282 peças"
+},
+{
+    "id":"12",
+    "nome":"Baby Yoda",
+    "imagem":"https://m.media-amazon.com/images/I/81HGsmljBEL._AC_SX679_.jpg",
+    "valor":727,
+    "descricao":"LEGO 1073 peças"
+}
+
+
+]
