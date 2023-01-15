@@ -1,0 +1,151 @@
+[
+    {
+        "id":1,
+        "name":"Roupa Infatil Astronauta",
+        "value": 150.0,
+        "imageUrl":"https://www.useupdate.com.br/media/product/dae/camiseta-infantil-astronauta-espaco-a9b.jpg",
+        "quantity":1,
+        "favorited": false
+    },
+    {
+        "id":2,
+        "name":"zCamisa Tema Espacial",
+        "value": 80.0,
+        "imageUrl":"https://imgs.extra.com.br/1545450490/1xg.jpg?imwidth=500",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":3,
+        "name":"Camisa Astronauta",
+        "value": 200.0,
+        "imageUrl":"https://a-static.mlcdn.com.br/1500x1500/kit-com-3-camisetas-astronauta-camisa-espaco-planetas-darkwood/darkwoodshop2/11062583381/5280fe5e55e12ee91a50c0d9bb914049.jpeg",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":4,
+        "name":"Brinquedo Robô Astronauta",
+        "value": 250.0,
+        "imageUrl":"https://images-americanas.b2w.io/produtos/1910360945/imagens/astronauta-brinquedo-robo-danca-andando-luzes-piscando-soando-kids-toy/1910360945_1_large.jpg",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":5,
+        "name":"LEGO Buzz Lightyear",
+        "value": 300.0,
+        "imageUrl":"https://imgs.casasbahia.com.br/55051052/1g.jpg?imwidth=292",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":6,
+        "name":"Boneco Buzz Lightyear Coleção Original Toy Story",
+        "value": 3000.0,
+        "imageUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_870878-MLB53067933540_122022-F.webp",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":7,
+        "name":" Figura de ação Baby Yoda Star Wars",
+        "value": 300.0,
+        "imageUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_771773-MLA48532457533_122021-F.webp",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":8,
+        "name":"Projetor Noturno Astronauta",
+        "value": 200.0,
+        "imageUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_666789-MLB52949165662_122022-F.webp",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":10,
+        "name":"Luminaria com forma de Lua",
+        "value": 43.0,
+        "imageUrl":"https://cdn.awsli.com.br/800x800/257/257163/produto/34485680/8495bdd471.jpg",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":11,
+        "name":"Boneco Darth Vader Star Wars",
+        "value": 450.0,
+        "imageUrl":"https://m.media-amazon.com/images/I/71ra6IlgEKL._AC_SX679_.jpg",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":12,
+        "name":"Boneco Luke Skywalker StarWars",
+        "value": 60.0,
+        "imageUrl":"https://m.media-amazon.com/images/I/71zkB4RwbmL._AC_SX679_.jpg",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":13,
+        "name":"LEGO StarWars",
+        "value": 215.0,
+        "imageUrl":"https://m.media-amazon.com/images/I/81dsPG1JP0L._AC_SX679_.jpg",
+        "quantity":1,
+        "favorited": false
+
+
+    },
+    {
+        "id":14,
+        "name":"Fantasia Jedi",
+        "value": 150.0,
+        "imageUrl":"https://images-americanas.b2w.io/produtos/5474081949/imagens/conjunto-de-fantasia-de-tunica-de-halloween-para-cosplay-marrom-jedi-com-roupao-branco-com-capuz-gg-branco/5474081949_1_large.jpg",
+        "quantity":1,
+        "favorited": false
+
+    },
+    {
+        "id":15,
+        "name":"Fantasia Astronauta",
+        "value": 430.0,
+        "imageUrl":"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSglmKPRe_ae8uDrnC1hFhrTBwaMiRvA-wj3VD9S64hsi-oU3Fj7I-2c78SgiE7gDi_g57BzbD86bhAzz-Qtm3y1k3qlFUmWHFPuxP2anSbpzHMKBhPDlET&usqp=CAE",
+        "quantity":1,
+        "favorited": false
+
+    },
+    {
+        "id":16,
+        "name":"Fantasia Astronauta",
+        "value": 370.0,
+        "imageUrl":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTXpv9tUBccPuzf1pFk7nZfmf5-jwVbjM1kQfhAcXfJuVWnij8bCrb3ZILE1bUD7zEB6aCvPNE2bFskH0D8Npv02S93W27bwko5LewcAjbbWlxwgGVpATu0yg&usqp=CAE",
+        "quantity":1,
+        "favorited": false
+
+    }
+    
+
+    
+
+]
