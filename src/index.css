@@ -1,0 +1,132 @@
+*{
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a{
+  text-decoration: none;
+}
+
+img.small{
+  max-height: 8rem;
+  width: 100%;
+}
+
+button {
+  padding: 0.3rem;
+  border: 0.1rem #404040 solid;
+  background-color: #f0c040;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button.addRemove {
+  background-color: black;
+  border: none;
+  color: white;
+  width: 1.5rem;
+
+}
+
+.p-1{
+  padding: 1rem;
+}
+
+button.badge {
+  background-color: #404040;
+  border: none;
+  color: white;
+  width: 1.5rem;
+
+}
+
+.card{
+  background-color: white;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row.center {
+  align-items: center;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.column.center{
+  justify-content: center;
+}
+
+.col-1{
+  flex-basis: 100%;
+}
+
+.col-2{
+  flex-basis: 100%;
+}
+
+.col-3{
+  flex-basis: 100%;
+}
+
+.cart-col-1{
+  flex-basis: 100%;
+}
+
+.cart-col-2{
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 1000px){
+  .col-1{
+    flex: 1;
+  }
+  .col-2{
+    flex: 4;
+  }
+  .col-3{
+    flex:2;
+  }
+  .cart-col-1{
+    flex: 2;
+  }
+  
+  .cart-col-2{
+    flex-basis: 1;
+  }
+}
+
+.block {
+  background-color: lightsalmon;
+  border: none;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.text-right{
+  text-align: right;
+}
+
