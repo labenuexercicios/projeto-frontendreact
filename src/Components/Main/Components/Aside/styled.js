@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Aside = styled.aside`
-    width: 12.5vw;
+    width: auto;
     position: static;
     border: 1px solid black;
     margin-top: 9vh;
-    position:fixed;
     height: 45vh;
     background-color: blue;
     color: white;

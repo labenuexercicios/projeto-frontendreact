@@ -36,30 +36,12 @@ export const EstiloLista = styled.ul`
   gap: 5px;
 `;
 
-export const MainHome = styled.div`
-  width: 82vw;
-  height: auto;
-  margin-top: 9vh;
-  margin-left: 9vw;
-`;
-
-// STYLE DO CARRINHO
-export const StyleCarrinho = styled.div`
-  display: flex;
-  justify-content: center;
-  border: 1px solid black;
-  margin-top: 9vh;
-  background-color: white;
-  color: black;
-  width: 24vw;
-  height: auto;
-`;
-
 export const MainStyle = styled.main`
   display: flex;
-  justify-content: center;
-  margin: 20px;
-  gap: 20px;
   flex-wrap: wrap;
-  height: auto;
+  margin-top: 7vw;
+  margin-left: 7vw;
+  gap: 2vw;
+  width: auto;
+  height: 100vh;
 `;

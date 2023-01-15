@@ -7,12 +7,8 @@ import {
   MainSpace,
   DivProdutos,
   EstiloLista,
-  FormStyle,
   ImagemProduto,
-  StyleCarrinho,
-  MainHome,
   MainStyle,
-  BackgroundImage,
 } from "./styled";
 
 export function Main() {
@@ -99,78 +95,7 @@ export function Main() {
             abreCarrinho={abreCarrinho}
             setAbreCarrinho={setAbreCarrinho}
           />
-          <MainHome>
-            {/* Renderização dos produtos abaixo */}
-            <MainStyle>
-              {produtos
-                .sort((a, b) => {
-                  if (ordenacao.toLowerCase() === "crescente") {
-                    if (a.preco < b.preco) {
-                      return -1;
-                    }
-                  }
-                  if (ordenacao.toLowerCase() === "decrescente") {
-                    if (a.preco > b.preco) {
-                      return -1;
-                    }
-                  }
-                })
-                .filter((produto) => {
-                  return produto.nome
-                    .toLocaleLowerCase()
-                    .includes(verificaNome.toLocaleLowerCase());
-                })
-                .filter((produto) => {
-                  return produto.preco >= precoMin;
-                })
-                .filter((produto) => {
-                  return produto.preco <= precoMax || precoMax === "";
-                })
-                .map((produto, index) => {
-                  return (
-                      <DivProdutos key={index}>
-                        <EstiloLista>
-                          <ImagemProduto src={produto.imagem} />
-                          <li>{produto.nome}</li>
-                          <li>R$ {produto.preco},00</li>
-                        </EstiloLista>
-                        <button onClick={() => adicionaCarrinho(produto)}>
-                          Adicionar ao carrinho
-                        </button>
-                      </DivProdutos>
-                  );
-                })}
-            </MainStyle>
-          </MainHome>
-          <StyleCarrinho>
-            <Carro
-              valorTotal={valorTotal}
-              carrinho={carrinho}
-              setCarrinho={setCarrinho}
-            />
-          </StyleCarrinho>
-        </MainSpace>
-      </>
-    );
-  }
-
-  // RETORNA TELA COM CARRINHO FECHADO
-  if (abreCarrinho === 0) {
-    return (
-      <>
-        <Header abreCarrinho={abreCarrinho} setAbreCarrinho={setAbreCarrinho} />
-        <MainSpace>
-          <Filtro
-            ordenacao={ordenacao}
-            setOrdenacao={setOrdenacao}
-            precoMin={precoMin}
-            setPrecoMin={setPrecoMin}
-            precoMax={precoMax}
-            setPrecoMax={setPrecoMax}
-            verificaNome={verificaNome}
-            setVerificaNome={setVerificaNome}
-          />
-          <MainHome>
+          <>
             {/* Renderização dos produtos abaixo */}
             <MainStyle>
               {produtos
@@ -212,8 +137,79 @@ export function Main() {
                   );
                 })}
             </MainStyle>
-          </MainHome>
+          </>
+            <Carro
+              valorTotal={valorTotal}
+              carrinho={carrinho}
+              setCarrinho={setCarrinho}
+            />
         </MainSpace>
+
+      </>
+    );
+  }
+
+  // RETORNA TELA COM CARRINHO FECHADO
+  if (abreCarrinho === 0) {
+    return (
+      <>
+        <Header abreCarrinho={abreCarrinho} setAbreCarrinho={setAbreCarrinho} />
+        <MainSpace>
+          <Filtro
+            ordenacao={ordenacao}
+            setOrdenacao={setOrdenacao}
+            precoMin={precoMin}
+            setPrecoMin={setPrecoMin}
+            precoMax={precoMax}
+            setPrecoMax={setPrecoMax}
+            verificaNome={verificaNome}
+            setVerificaNome={setVerificaNome}
+          />
+          <>
+            {/* Renderização dos produtos abaixo */}
+            <MainStyle>
+              {produtos
+                .sort((a, b) => {
+                  if (ordenacao.toLowerCase() === "crescente") {
+                    if (a.preco < b.preco) {
+                      return -1;
+                    }
+                  }
+                  if (ordenacao.toLowerCase() === "decrescente") {
+                    if (a.preco > b.preco) {
+                      return -1;
+                    }
+                  }
+                })
+                .filter((produto) => {
+                  return produto.nome
+                    .toLocaleLowerCase()
+                    .includes(verificaNome.toLocaleLowerCase());
+                })
+                .filter((produto) => {
+                  return produto.preco >= precoMin;
+                })
+                .filter((produto) => {
+                  return produto.preco <= precoMax || precoMax === "";
+                })
+                .map((produto, index) => {
+                  return (
+                    <DivProdutos key={index}>
+                      <EstiloLista>
+                        <ImagemProduto src={produto.imagem} />
+                        <li>{produto.nome}</li>
+                        <li>R$ {produto.preco},00</li>
+                      </EstiloLista>
+                      <button onClick={() => adicionaCarrinho(produto)}>
+                        Adicionar ao carrinho
+                      </button>
+                    </DivProdutos>
+                  );
+                })}
+            </MainStyle>
+          </>
+        </MainSpace>
+
       </>
     );
   }

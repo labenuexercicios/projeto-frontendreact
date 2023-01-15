@@ -4,8 +4,9 @@ import {
   Carrinho,
   CarrinhoGap,
   ImgStyle,
-  ItemStyle,
   ListStyle,
+  ItemStyle,
+  ImgDiv,
 } from "./styled";
 
 export function Carro({ valorTotal, carrinho, setCarrinho }) {
@@ -25,18 +26,17 @@ export function Carro({ valorTotal, carrinho, setCarrinho }) {
   return (
     <>
       <Carrinho>
+        <div>
         <h1>Carrinho</h1>
+        </div>
         <CarrinhoGap>
           {carrinho.map((carro, index) => {
             return (
               <ItemStyle key={index}>
-                <div>
                 <ImgStyle src={carro.imagem}></ImgStyle>
-                </div>
                 <ListStyle>
                   <li> Produto: {carro.nome}</li>
                   <li> R$ {carro.preco},00</li>
-                  <li> {carro.descricao}</li>
                   <li> Quantidade: {carro.qtd}X</li>
                   <ButtonStyle onClick={() => toRemove(carro)}>
                     Remover

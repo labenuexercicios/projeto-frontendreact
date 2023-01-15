@@ -1,34 +1,24 @@
 import styled from "styled-components";
 
 export const Carrinho = styled.div`
-  height: 90vh;
   display: flex;
+  text-align: center;
   flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
-`;
-
-export const ListStyle = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 2px;
+  border: 1px solid black;
+  margin-top: 9vh;
+  background-color: white;
+  color: black;
+  width: auto;
+  min-height: 140vh;
 `;
 
 export const ItemStyle = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   border: 1px solid black;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 20vw;
-  height: 7.5vw;
-  color: black;
-  background-color: lightgrey;
-  text-align: center;
+  height: 15vh;
 `;
 
 export const ButtonStyle = styled.button`
@@ -42,14 +32,19 @@ export const ButtonStyle = styled.button`
 `;
 
 export const ImgStyle = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 10vh;
+  height: 10vh;
   border-radius: 100px;
 `;
 
 export const CarrinhoGap = styled.div`
   display: flex;
   flex-direction: column;
+  width: 25vw;
   gap: 10px;
+  align-items: center;
 `;
 
+export const ListStyle = styled.ul`
+  list-style-type: none;
+`;
