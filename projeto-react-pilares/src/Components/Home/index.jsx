@@ -14,8 +14,20 @@ export function Home({pagina}) {
     useEffect(() => {
     }, [])
 
+    const setItem = (item) => localStorage.setItem("produto", JSON.stringify(item))
+    const getItem = () => JSON.parse(localStorage.getItem("produto"))
+
     const comprarProduto = (item) => {
-            const comprado = JSON.stringify(localStorage.setItem("produto", item))
+        setItem(item)
+        getItem()
+        setListaCarrinho([...listaCarrinho, getItem()])
+        console.log(listaCarrinho);
+    }
+
+    const removerProduto = (produto) => {
+        const removeProduto = listaCarrinho.filter((item) => item !== produto)[0]
+        setListaCarrinho([removeProduto])
+        console.log(listaCarrinho);
     }
 
     useEffect(() => {
@@ -28,10 +40,10 @@ export function Home({pagina}) {
         {pagina === 1 ?
         <>
         <Filter/>
-        <Products listaProdutos={listaProdutos} comprarProduto={comprarProduto}/>
+        <Products listaProdutos={listaProdutos} comprarProduto={comprarProduto} removerProduto={removerProduto}/>
         </>
         :
-        <Cart listaProdutos={listaProdutos} listaCarrinho={listaCarrinho} setListaCarrinho={setListaCarrinho}/>}
+        <Cart listaProdutos={listaProdutos} listaCarrinho={listaCarrinho} setListaCarrinho={setListaCarrinho} removerProduto={removerProduto}/>}
         </div>
     )
 }
