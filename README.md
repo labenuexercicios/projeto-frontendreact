@@ -31,7 +31,6 @@ As possíveis linhas de produto são:
 
 Escolham uma linha dentre essas, e criem um e-commerce de acordo com a lista de requisitos.
 
-**O prazo é até sexta, 23h59.** 
 
 Att.
 ```
