@@ -1,0 +1,72 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aqua;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3{margin: 0.5rem 0 ;}
+h1{
+  font-size: 1.5rem;
+}
+h2{
+  font-size: 1.2rem;
+}
+h3{
+  font-size: 1rem;
+}
+a{
+  text-decoration: none;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+.main{
+  height: 80vh;
+}
+.col-1{
+  flex: 1;
+}
+.col-2{
+  flex: 2;
+}
+.block{
+  background-color: aquamarine;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.row.center{
+  align-items: center;
+ 
+}
+
+img.small{
+  max-height: 8rem;
+}
+button{
+  font-size: 0.8rem;
+  padding:0.2rem;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem blue solid;
+  background-color: cyan;
+  width: 100%;
+  cursor: pointer;
+}
+button.add{
+  background-color: greenyellow;
+  width: 1.5rem;
+}
+button.remove{
+  background-color: red;
+  width: 1.5rem;
+}
+button.badge{
+  background-color: red;
+  border: none;
+  color: whitesmoke;
+  width: 1.5rem;
+}
