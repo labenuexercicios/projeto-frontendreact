@@ -12,13 +12,13 @@ const Header = (props) => {
     if (props.currentPage == "HomePage") setIsHomePage(true);
     else setIsHomePage(false);
 
-    console.log("isHomePage", isHomePage);
+    // console.log("isHomePage", isHomePage);
   };
 
   React.useEffect(() => {
     changeButtonPage();
     // setCurrentPage(props.currentPage);
-    console.log("currentPage", props.currentPage);
+    // console.log("currentPage", props.currentPage);
   });
 
   return (

@@ -7,13 +7,20 @@ import "./styles.css";
 import { useState } from "react";
 
 const App = () => {
+
+  
   const [itens, setItens] = useState([]);
   const [activeScreen, setActiveScreen] = useState("HomePage");
-  const [cart, setCart] = useState([]);
+  const [productsList, setProductsList] = ([]);
+  const [cart, setCart] = ([]);
+
   // Armazena a lista de produtos na variavel de estado products
   React.useEffect(() => {
-    setItens(productListData);
-  },[]);
+    if (itens) {
+      setItens(productListData);
+      const data = localStorage.setItem('products', productListData);
+    }
+  }, [itens]);
 
   const goToHomePage = () => {
     setActiveScreen("HomePage");
@@ -23,47 +30,31 @@ const App = () => {
     setActiveScreen("CartPage");
   };
 
-  const addToCart = (productToAdd) => {
-    const newCart = [...cart]
-
-    const productFound = newCart.find(
-        (productInCart) => productInCart.id === productToAdd.id
-    )
-
-    if (!productFound) {
-        const newProduct = {...productToAdd, quantity: 1}
-        newCart.push(newProduct)
-    } else {
-        productFound.quantity++
-    }
-
-    setCart(newCart)
-  }
-
-
   const renderScreen = () => {
+    
     switch (activeScreen) {
+      // console.log(itens)
       case "HomePage":
-        return <Homepage addToCart={addToCart} products={itens} />;
+return <Homepage products={itens} setItens={setItens} />;
       case "CartPage":
-        return <CartPage cart={cart} />;
+return <CartPage />;
       default:
-        return <div>Tela não existe</div>;
+return <div>Tela não existe</div>;
     }
   };
 
 
-  return (
-    <div>
-      <Header
-        title="Gravidade ZERO"
-        currentPage={activeScreen}
-        goToHomePage={goToHomePage}
-        goToCartPage={goToCartPage}
-      />
-      {renderScreen()}
-    </div>
-  );
+return (
+  <div>
+    <Header
+      title="Gravidade ZERO"
+      currentPage={activeScreen}
+      goToHomePage={goToHomePage}
+      goToCartPage={goToCartPage}
+    />
+    {renderScreen()}
+  </div>
+);
 };
 
 export default App;
