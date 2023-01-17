@@ -63,6 +63,10 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
 	imageUrl: "https://picsum.photos/200/200",
 }
 ```
+#### Plus Do Projeto 
+- Link do surge : https://e-commerce-liberal.surge.sh/
+    
+
 
 ### Lista de Requisitos
 - Home (Lista de Produtos)
@@ -85,12 +89,7 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
     
  ### 
 
-O layout da página é escolha de vocês! O exemplo abaixo é só uma implementação bemmm simples das funcionalidades, não se atenham a ele.
 
-http://fluttering-coast.surge.sh/
- 
-
-https://user-images.githubusercontent.com/11279432/197185533-14582ca3-9eb0-4a5a-b57c-b94913ff2dd6.mp4
 
 
 
@@ -116,4 +115,3 @@ https://user-images.githubusercontent.com/11279432/197185533-14582ca3-9eb0-4a5a-
     </details>
 - Entregue o **link do repo** no [Formulário de entrega](https://forms.gle/S9XChPZravP3WdxL6) 
 - Utilize o **surge** para fazer o deploy do seu projeto.
-
