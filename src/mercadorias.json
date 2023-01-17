@@ -1,0 +1,170 @@
+
+ [
+  {
+    "id": 1,
+    "name": "Camisa Preta Austronauta",
+    "image": "./images/CamisaAstronauta.png",
+    "alt":"Camisa Preta Austronauta",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Preta"
+  },
+  {
+    "id": 2,
+    "name": "Camisa Austronauta Zen",
+    "image": "./images/CamisaAstronautaZen.png",
+    "alt":"Camisa Austronauta Zen",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Branca"
+  },
+  {
+    "id": 3,
+    "name": "Camisa Azul Divertida",
+    "image": "./images/CamisaAzulDivertida.png",
+    "alt":"CamisetaFull Design",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Azul"
+  },
+  {
+    "id": 4,
+    "name": "Camisa Austronauta WOW",
+    "image": "./images/CamisaBrancaWow.png",
+    "alt":"Camisa Austronauta WOW",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Branca"
+  },
+  {
+    "id": 5,
+    "name": "Camisa Darth Vader",
+    "image": "./images/CamisaDarthVader.png",
+    "alt":"Camisa Darth Vader",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Preta"
+  },
+  {
+    "id": 6,
+    "name": "Camisa - I need some space",
+    "image": "./images/CamisaCasal.png",
+    "alt":"Camisa Casal- I need some space",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Preta"
+  },
+  {
+    "id": 7,
+    "name": "Camisa do Sistema solar",
+    "image": "./images/CamisaSistemaSolar.png",
+    "alt":"Camisa do Sistema solar",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Preta"
+  },
+  {
+    "id": 8,
+    "name": "Camisa Full Design",
+    "image": "./images/CamisetaFull.png",
+    "alt":"CamisetaFull Design",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Rosa"
+  },
+  {
+    "id": 9,
+    "name": "Camisa Astronauta de Boa",
+    "image": "./images/CamisetaAstronautadeBoa.png",
+    "alt":"Camisa Astronauta de Boa",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Branca"
+  },
+  {
+    "id": 10,
+    "name": "Camisa Nasa",
+    "image": "./images/CamisetaNasa.png",
+    "alt":"Camisa Nasa",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Preta"
+  },
+  {
+    "id": 11,
+    "name": "Camisa do Rock n'Roll",
+    "image": "./images/CamisetaRock.png",
+    "alt":"Camisa Rock n'Roll",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Preta"
+  },
+  {
+    "id": 12,
+    "name": "Camisa Rosa Divertida",
+    "image": "./images/CamisetaRosaDivertida.png",
+    "alt":"Camisa Rosa Divertida",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Rosa"
+  }, 
+   {
+    "id": 13,
+    "name": "Camisa I dont believe...",
+    "image": "./images/Idontbelieve.png",
+    "alt":"Camisa I dont believe in humans",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 60,
+    "cor": "Verde"
+  },
+  {
+    "id": 14,
+    "name": "Moletom estampado",
+    "image": "./images/Moletom.png",
+    "alt":"Moletom estampado",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 140,
+    "cor": "Azul"
+  },
+  {
+    "id": 15,
+    "name": "Moleton Preto Unissex",
+    "image": "./images/MoletomPreto.png",
+    "alt":"CamisetaFull Design",
+    "size": ["PP","P", "M", "G", "GG", "EXG"],
+    "type": ["Masculina", "Feminina", "Babylook"],
+    "price": 139.90,
+    "cor": "Preto"
+  },
+  {
+    "id": 16,
+    "name": "Luminária Mão Espacial",
+    "image": "./images/LuminariaMaoEspacial.png",
+    "alt":"Luminária Mão Espacial",
+    "price": 99,
+    "cor": "Preto"
+  },
+  {
+    "id": 17,
+    "name": "Projetor para Crianças Céu estrelado",
+    "image": "./images/ProjetorParaCrianças.png",
+    "alt":"Luminária Mão Espacial",
+    "price": 149,
+    "cor": "Preto"
+  }
+]
+

@@ -1,0 +1,31 @@
+.header-container{
+    background-color: rgba(8, 162, 209, 0.935);
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 20px;
+    align-items: flex-end; 
+    height: 200px;
+}
+
+.logo{
+    flex: 1;
+
+
+}
+
+ul{
+  display: flex;
+  margin-right: 10px;
+}
+
+ul :hover{
+    background-color: rgba(245, 245, 7, 0.918);
+    
+   padding: 4px;
+    border-radius: 5px;
+}
+
+li{
+    list-style: none;
+    margin-left: 50px;
+}
