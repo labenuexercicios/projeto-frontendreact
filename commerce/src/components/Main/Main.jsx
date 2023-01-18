@@ -43,6 +43,7 @@ export default function Main(props) {
   }
 
   function removeProd(prod) {
+    console.log(prod)
     const productToRemove = carrinho.find(item => item.id === prod.id)
     if (productToRemove.amount > 1) {
       const novoCarrinho = carrinho.map(item => {
@@ -52,11 +53,11 @@ export default function Main(props) {
           return item
         }
       })
+      setCarrinho(novoCarrinho)
     }else {
       const novoCarrinho = carrinho.filter(item => item.id !== prod.id)
       setCarrinho(novoCarrinho)
     }
-    
   }
 
 
