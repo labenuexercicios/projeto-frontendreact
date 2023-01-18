@@ -4,13 +4,6 @@ import {useForm} from '../../functions/useForm'
 
 export default function NavSearch(props) {
 
-    const {form, onChange} = useForm({
-      nome: '',
-      vmin: '',
-      vmax: '',
-    })
-
-
   return(
     <NavSection>
       <h2>Filtros</h2>
@@ -20,24 +13,24 @@ export default function NavSearch(props) {
           <input type='text' 
             name='nome'
             id="nome"
-            value={form.nome}
-            onChange={onChange}
+            value={props.nome}
+            onChange={props.handleName}
           />
         <br />
         <label htmlFor="vmin">Valor Mínimo:</label><br />
           <input type='number' placeholder='R$'
             name='vmin'
             id="vmin"
-            value={form.vmin}
-            onChange={onChange}
+            value={props.vmin}
+            onChange={props.handleVmin}
           />
         <br />
         <label htmlFor="vmax">Valor Máximo</label><br />
           <input type='number' placeholder='R$'
             name='vmax'
             id="vmax"
-            value={form.vmax}
-            onChange={onChange}
+            value={props.vmax}
+            onChange={props.handleVmax}
           />
       </form>
 

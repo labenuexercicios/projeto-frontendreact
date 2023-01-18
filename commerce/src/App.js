@@ -4,8 +4,9 @@ import styled, {createGlobalStyle} from 'styled-components'
 // Components
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
-import NavSearch from './components/NavSearch/NavSearch'
-import Cart from './components/Cart/Cart'
+// import Products from './components/Products/Products'
+// import NavSearch from './components/NavSearch/NavSearch'
+// import Cart from './components/Cart/Cart'
 import Footer from './components/Footer/Footer'
 
 const GlobalSyled = createGlobalStyle`
@@ -32,9 +33,7 @@ function App() {
     <GlobalSyled />
       <Header />
       <MainContaner>
-        <NavSearch />
         <Main />
-        <Cart />
       </MainContaner>
       <Footer />
     </>
