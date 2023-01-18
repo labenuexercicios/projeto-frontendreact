@@ -9,7 +9,7 @@ export default function Card(props) {
       <CardImg src={props.img}/>
       <h3>Preço: R$ {props.preco.toFixed(2)}</h3>
 
-      <CardButton onClick={() => props.addProd(props.id)}>Adicionar ao carrinho</CardButton>
+      <CardButton onClick={() => props.addProd(props)}>Adicionar ao carrinho</CardButton>
     </CardBox>
   )
 }

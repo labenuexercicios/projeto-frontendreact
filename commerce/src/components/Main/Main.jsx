@@ -24,9 +24,39 @@ export default function Main(props) {
     setVmax(e.target.value)
   }
 
-  function addProd (e) {
-    setCarrinho([...carrinho, produtos[e]])
-    console.log(carrinho)
+  let soma = 0;
+
+  function addProd(prod) {
+    const newProduct = carrinho.find(item => item.id === prod.id)
+    if(newProduct === undefined) {
+      setCarrinho([...carrinho, {...prod, amount: 1}])
+    }else {
+      const novoCarrinho = carrinho.map(item => {
+        if(item.id === prod.id) {
+          return {...newProduct, amount: newProduct.amount + 1}
+        } else {
+          return item
+        }
+      })
+      setCarrinho(novoCarrinho)
+    }
+  }
+
+  function removeProd(prod) {
+    const productToRemove = carrinho.find(item => item.id === prod.id)
+    if (productToRemove.amount > 1) {
+      const novoCarrinho = carrinho.map(item => {
+        if(item.id === prod.id) {
+          return {...productToRemove, amount: productToRemove.amount - 1}
+        } else {
+          return item
+        }
+      })
+    }else {
+      const novoCarrinho = carrinho.filter(item => item.id !== prod.id)
+      setCarrinho(novoCarrinho)
+    }
+    
   }
 
 
@@ -41,8 +71,8 @@ export default function Main(props) {
       nome={nome}
       vmin={vmin}
       vmax={vmax}
-      produtos={produtos} addProd={addProd}/>
-      <Cart carrinho={carrinho} />
+      produtos={produtos} addProd={addProd} />
+      <Cart carrinho={carrinho} removeProd={removeProd} />
     </MainContainer>
   )
 }
