@@ -7,7 +7,7 @@ export default function CartItem(props) {
       {item.name}
       {item.price}
       {/* Tratar esse botão */}
-      <button onClick={props.removeProd}>Remover</button>
+      <button onClick={() => props.removeProd(item)}>Remover</button>
     </div>
   )
 }
