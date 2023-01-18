@@ -25,8 +25,16 @@ export default function Main(props) {
   }
 
   function addProd (e) {
-    setCarrinho([...carrinho, produtos[e]])
-    console.log(carrinho)
+
+    // carrinho.map(item => {
+    //   console.log(item.idProd, e)
+    // })
+
+    let control = 0;
+    setCarrinho([...carrinho, {id: Date.now(), name: produtos[e].name, idProd: produtos[e], price: produtos[e].price, quant: control += 1}])
+   
+    console.log(e, carrinho)
+    // console.log(produtos)
   }
 
 

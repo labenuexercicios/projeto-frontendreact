@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavSection} from './style'
-import CartItem from '../CartItem/style'
+import CartItem from '../CartItem/CartItem'
 
 export default function Cart(props) {
 
@@ -10,7 +10,7 @@ export default function Cart(props) {
     <NavSection>
       <h2>Carrinho de compras</h2>
 
-      {props.carrinho.length === 0 ? <p>O carrinho está vazio</p> : carrinho.map(e => <CartItem />)}
+      {props.carrinho.length === 0 ? <p>O carrinho está vazio</p> : <CartItem carrinho={carrinho} /> }
     </NavSection>
   )
 }
