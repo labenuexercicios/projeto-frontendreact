@@ -1,10 +1,13 @@
-import React from "react";
+import React from "react"
 
 export default function CartItem(props) {
-
-  const {carrinho} = props;
-
-  return(
-    carrinho.map(e => <div key={e.id}>{e.name}</div>)
+  const {item} = props
+  return (
+    <div>
+      {item.name}
+      {item.price}
+      {/* Tratar esse botão */}
+      <button onClick={props.removeProd}>Remover</button>
+    </div>
   )
 }
