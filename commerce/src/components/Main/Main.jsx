@@ -7,7 +7,8 @@ import { MainContainer } from './style'
 // import { useForm } from '../../functions/useForm'
 
 export default function Main() {
-  const [carrinho, setCarrinho] = useState([])
+
+  const [carrinho, setCarrinho] = useState(localStorage.getItem('Carrinho') === null ? [] : JSON.parse(localStorage.getItem('Carrinho')))
   const [nome, setNome] = useState('');
   const [vmin, setVmin] = useState('');
   const [vmax, setVmax] = useState(Infinity);
@@ -18,14 +19,14 @@ export default function Main() {
   function handleVmax(e) {setVmax(e.target.value)}
   function handleOrder(e) {setOrder(e.target.value)}
 
-  useEffect(() => {loadCart()},[])
+  useEffect(() => {saveCart(carrinho)},[carrinho])
+  // useEffect(() => {loadCart()},[])
   
   function addProd(prod) {
     console.log(prod)
     const newProduct = carrinho.find(item => item.id === prod.id)
     if(newProduct === undefined) {
       setCarrinho([...carrinho, {...prod, amount: 1}])
-      saveCart()
     }else {
       const novoCarrinho = carrinho.map(item => {
         if(item.id === prod.id) {
@@ -35,7 +36,6 @@ export default function Main() {
         }
       })
       setCarrinho(novoCarrinho)
-      saveCart()
     }
   }
 
@@ -50,27 +50,24 @@ export default function Main() {
         }
       })
       setCarrinho(novoCarrinho)
-      saveCart()
     }else {
       const novoCarrinho = carrinho.filter(item => item.id !== prod.id)
       setCarrinho(novoCarrinho)
-      saveCart()
     }
   }
 
-  function saveCart() {
-    const salvaCarrinho = JSON.stringify(carrinho)
-    localStorage.setItem('Carrinho', salvaCarrinho)
-    console.log('Salvo/removido')
+  function saveCart(carrinho) {
+    localStorage.setItem('Carrinho', JSON.stringify(carrinho))
   }
 
   function loadCart() {
-    if(localStorage.getItem('Carrinho') === null) {
-      setCarrinho([])
-      // localStorage.setItem('Carrinho', JSON.stringify([]))
-    } else {
-      setCarrinho(JSON.parse(localStorage.getItem('Carrinho')))
-    }
+    setCarrinho(JSON.parse(localStorage.getItem('Carrinho')))
+
+    // if(localStorage.getItem('Carrinho') === null) {
+    //   setCarrinho([])
+    // } else {
+    //   setCarrinho(JSON.parse(localStorage.getItem('Carrinho')))
+    // }
   }
 
   return(
@@ -86,7 +83,7 @@ export default function Main() {
       vmax={vmax}
       order={order}
       produtos={produtos} addProd={addProd} />
-      <Cart carrinho={carrinho} saveCart={saveCart} removeProd={removeProd} />
+      <Cart carrinho={carrinho} removeProd={removeProd} />
     </MainContainer>
   )
 }
