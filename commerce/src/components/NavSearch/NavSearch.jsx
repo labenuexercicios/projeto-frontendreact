@@ -32,6 +32,17 @@ export default function NavSearch(props) {
             value={props.vmax}
             onChange={props.handleVmax}
           />
+        <br />
+        <label htmlFor="order">Ordenar</label><br />
+          <select onChange={props.handleOrder}>
+            <option value="C">Crescente</option>
+            <option value="D">Decrescente</option>
+          </select>
+          {/* <input type='number' placeholder='R$'
+            name='order'
+            id="order"
+            value={props.order}
+          /> */}
       </form>
 
     </NavSection>
