@@ -4,9 +4,6 @@ import styled, {createGlobalStyle} from 'styled-components'
 // Components
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
-// import Products from './components/Products/Products'
-// import NavSearch from './components/NavSearch/NavSearch'
-// import Cart from './components/Cart/Cart'
 import Footer from './components/Footer/Footer'
 
 const GlobalSyled = createGlobalStyle`
@@ -21,8 +18,11 @@ const MainContaner = styled.main`
 min-height: 80vh;
 display: flex;
 justify-content: center;
-margin-top: 10px;
-margin-bottom: 10px;
+/* margin-top: 10px;
+margin-bottom: 10px; */
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: lavender;
 /* flex-direction: column; */
 /* align-items: center; */
 `;

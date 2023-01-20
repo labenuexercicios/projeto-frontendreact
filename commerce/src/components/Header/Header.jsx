@@ -1,11 +1,14 @@
 import React from 'react'
-import {HeadContainer, HeadContent} from './style'
+import {HeadContainer, HeadContent, Image} from './style'
+import img from '../../img/img.jpg'
 
 export default function Header(props) {
+
+  // https://img.ws.mms.shopee.com.br/11aee61a51c8275b568d515dd9420f88
   return(
     <HeadContainer>
       <HeadContent>
-        <h1>Cabeçalho</h1>
+        <Image src={img}/>
       </HeadContent>
     </HeadContainer>
   )

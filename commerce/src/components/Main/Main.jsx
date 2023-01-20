@@ -4,7 +4,7 @@ import NavSearch from '../NavSearch/NavSearch'
 import Products from '../Products/Products'
 import Cart from '../Cart/Cart'
 import { MainContainer } from './style'
-// import { useForm } from '../../functions/useForm'
+
 
 export default function Main() {
 

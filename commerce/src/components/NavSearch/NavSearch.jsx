@@ -1,6 +1,5 @@
 import React from 'react'
 import {NavSection} from './style'
-import {useForm} from '../../functions/useForm'
 
 export default function NavSearch(props) {
 
@@ -38,11 +37,6 @@ export default function NavSearch(props) {
             <option value="C">Crescente</option>
             <option value="D">Decrescente</option>
           </select>
-          {/* <input type='number' placeholder='R$'
-            name='order'
-            id="order"
-            value={props.order}
-          /> */}
       </form>
 
     </NavSection>
