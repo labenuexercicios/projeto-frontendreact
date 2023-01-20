@@ -23,8 +23,18 @@ export default function Products(props) {
         .filter(e => min === '' ? e : e.price > min)
         .filter(e=> max === '' ? e : e.price < max)
         .filter(e=> nome === '' ? e : e.name.toLowerCase().includes(nome.toLowerCase()))
-        .map(e => {
-          return(<Card addProd={props.addProd} key={e.id} id={e.id} name={e.name} img={e.imageUrl} preco={e.price}/>)
+        .sort((x, y) => {
+          switch(props.order) {
+            case 'C':
+              return x.name > y.name;
+            case 'D':
+              return x.name < y.name;
+            default: 
+              return x.name > y.name;
+          }
+        })
+        .map(produto => {
+          return(<Card addProd={props.addProd} key={produto.id} id={produto.id} name={produto.name} imageUrl={produto.imageUrl} price={produto.price}/>)
         })}
       </MainProdContainer>
 

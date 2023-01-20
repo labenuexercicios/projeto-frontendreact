@@ -24,13 +24,13 @@ export const CardImg = styled.img`
 `
 
 export const CardButton = styled.button`
-  background-color: #0ddf0d;
+  background-color: #ff5e00;
   height: 30px;
   border-radius: 10px;
   border: none;
 
   :hover {
-    background-color: #09bb09;
+    background-color: #ff0000;
     font-weight: bold;
     color: white;
   }

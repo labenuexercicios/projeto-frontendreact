@@ -14,7 +14,7 @@ export default function Cart(props) {
       ?
       <p>O carrinho está vazio</p>
       :
-      carrinho.map(e => <CartItem key={e.id} item={e} removeProd={props.removeProd} />)}
+      carrinho.map(e => <CartItem key={e.id} item={e} removeProd={props.removeProd} carrinho={props.carrinho} />)}
     </NavSection>
   )
 }
