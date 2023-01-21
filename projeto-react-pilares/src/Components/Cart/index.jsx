@@ -1,30 +1,55 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Card } from "../Card/Card";
 
 
-export function Cart({listaProdutos, listaCarrinho, setListaCarrinho, removerProduto}) {
+export function Cart({listaCarrinho, setListaCarrinho, setItem}) {
 
-    // const getItem = JSON.parse(localStorage.getItem("produto"))
+    const removerDoCarrinho = (produto) => {
+        setItem()
+        const noCarrinho = listaCarrinho.find((item)=> item.id === produto.id)
+        if (noCarrinho.quantidade > 1) {
+          const removerProduto = listaCarrinho.map((item)=>{
+            if (item.id === produto.id) {
+              return {...noCarrinho, quantidade: noCarrinho.quantidade-1}
+            } else {
+              return item
+            }
+          })
+          setListaCarrinho(removerProduto)
+        } 
+        else {
+          const removerProduto = listaCarrinho.filter((item)=> {
+            return item.id !== produto.id
+          })
+          setListaCarrinho(removerProduto)
+          // localStorage.setItem("produto", JSON.stringify({}))
+        }
+      };    
 
-    // useEffect(()=>{
-    //     setListaCarrinho([...listaCarrinho, getItem])
-    // }, [])
+    let total = 0;
+
+    listaCarrinho.map((item) => {
+      total += item.valor*item.quantidade
+    });
+
+    console.log(listaCarrinho);
 
     const renderizarCarrinho = listaCarrinho.map((produto) => {
         return (
-            <Card>
-                <img src={produto.img} alt={produto.nome}/>
+            <Card key={produto.id}>
+                <img src={produto.img} alt={produto.nome} />
                 <h3>{produto.nome}</h3>
-                <p>{produto.preco}</p>
-                <button onClick={() => removerProduto(produto)}>Remover</button>
+                <p>{produto.valor}</p>
+                <p>Quantidade: {produto.quantidade}</p>
+                <button onClick={() => removerDoCarrinho(produto)}>Remover</button>
             </Card>
         )
     })
 
     return (
         <div>
-        <p>ISTO É UM CARRINHO</p>
         {renderizarCarrinho}
+        <p>Total: R${total.toFixed(2)}</p>
         </div>
     )
 }

@@ -6,4 +6,8 @@ export const Card = styled.div `
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    img{
+        max-width: 30vw;
+        max-height: 33vh;
+    }
 `

@@ -72,10 +72,10 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
     - [x]  O usuário deve ser capaz de adicionar um produto no carrinho
 - Carrinho
     - [x]  O usuário deve ser capaz de visualizar os produtos adicionados
-    - [ ]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
-    - [ ]  O usuário deve ser capaz de remover itens do carrinho
-    - [ ]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
-    - [x]  Quando a página é atualizada, os itens devem continuar no carrinho
+    - [x]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
+    - [x]  O usuário deve ser capaz de remover itens do carrinho
+    - [x]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
+    - [ ]  Quando a página é atualizada, os itens devem continuar no carrinho
 - Filtros e Ordenação
     - [ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
     - [ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
