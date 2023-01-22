@@ -1,0 +1,92 @@
+[
+    {
+        "id": "1",
+        "name": "Camiseta babylook Nasa",
+        "value": 50,
+        "imageUrl": "imgId01.webp"
+    },
+    {
+        "id": "2",
+        "name": "Camiseta Agencia Espacial Nerd",
+        "value": 48.90,
+        "imageUrl": "imgId02.webp"
+    },
+    {
+        "id": "3",
+        "name": "Camiseta Astronauta",
+        "value": 45.2,
+        "imageUrl": "imgId03.webp"
+    },
+    {
+        "id": "4",
+        "name": "Camiseta Masculina Nasa",
+        "value": 39.90,
+        "imageUrl": "imgId04.webp"
+    },
+    {
+        "id": "5",
+        "name": "Camiseta Menina Sistema Solar",
+        "value": 37.99,
+        "imageUrl": "imgId05.webp"
+    },
+    {
+        "id": "6",
+        "name": "Camiseta Sistema Solar",
+        "value": 35.99,
+        "imageUrl": "imgId06.webp"
+    },
+    {
+        "id": "7",
+        "name": "Camisa Astronauta Universo Planeta",
+        "value": 43.99,
+        "imageUrl": "imgId07.webp"
+    },
+    {
+        "id": "8",
+        "name": "Camiseta Astronauta Galaxia",
+        "value": 57.99,
+        "imageUrl": "imgId08.webp"
+    },
+    {
+        "id": "9",
+        "name": "Camiseta Basica Astronauta Flutuando",
+        "value": 55.9,
+        "imageUrl": "imgId09.webp"
+    },
+    {
+        "id": "10",
+        "name": "Camisa Astronauta Universo Planeta",
+        "value": 53.2,
+        "imageUrl": "imgId10.webp"
+    },
+    {
+        "id": "11",
+        "name": "Camiseta Planetas Color",
+        "value": 54.00,
+        "imageUrl": "imgId11.webp"
+    },
+    {
+        "id": "12",
+        "name": "Camiseta Feminina Astronauta",
+        "value": 48.80,
+        "imageUrl": "imgId12.webp"
+    },
+    {
+        "id": "13",
+        "name": "Camiseta Branca  Planetas",
+        "value": 56.00,
+        "imageUrl": "imgId13.webp"
+    },
+    {
+        "id": "14",
+        "name": "Camiseta Branca Estampada",
+        "value": 38.80,
+        "imageUrl": "imgId14.webp"
+    },
+    {
+        "id": "15",
+        "name": "Camiseta Color",
+        "value": 52.00,
+        "imageUrl": "imgId11.webp"
+    }
+]
