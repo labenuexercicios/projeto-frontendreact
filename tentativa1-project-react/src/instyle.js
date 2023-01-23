@@ -10,9 +10,11 @@ export const Mudadisplaydetudo = styled.body`
 /* Boas praticas */
 
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 100px 1fr;
     height: 100vh;
+    background-image: url("space6.jpg");
+    background-size: 1705px 858px;
 
 `
 
@@ -25,12 +27,33 @@ export const Estilodopesquisar = styled.header`
 `
 // Montando o estilo do filtro
 export const Estilodofiltro = styled.nav`
-    background-image: url("space1.png");
+    /* background-image: url("space7.jpg"); */
+    /* background-size: 30000px 760px; */
+    color: aliceblue;
     display: grid;
     border-radius: 9px;
     border: 1px solid black;
     grid-column: 1/2;
     grid-row: 2/3;
+    /* background-blend-mode: luminosity; */
+    /* grid-column-gap: 200px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* justify-items: center; */
+    /* align-content: center; */
+
+`
+export const Estilodocarrinho = styled.nav`
+    /* background-image: url("space7.jpg"); */
+    /* background-size: 30000px 760px; */
+    color: white;
+    display: grid;
+    border-radius: 9px;
+    border: 1px solid black;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    /* background-blend-mode: luminosity; */
+    /* grid-column-gap: 200px; */
     /* align-items: center; */
     /* justify-content: center; */
     /* justify-items: center; */
