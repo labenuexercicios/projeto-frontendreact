@@ -1,6 +1,7 @@
 import React from 'react';
-import { Estilodofiltro, Estilodopesquisar, Mudadisplaydetudo } from './instyle';
+import { Estilodocarrinho, Estilodofiltro, Estilodopesquisar, Mudadisplaydetudo } from './instyle';
 import { Filtro } from './Componentes/Filtro';
+import { Carrinho } from './Componentes/Carrinho';
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -22,7 +23,9 @@ function App() {
 
       </Estilodofiltro>
 
-
+      <Estilodocarrinho>
+        <Carrinho/>
+      </Estilodocarrinho>
     
     
     
