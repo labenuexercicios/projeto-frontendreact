@@ -6,8 +6,9 @@ import ProductsScreen from "./screens/products/ProductsScreen";
 function App() {
   const [activeScreen, setActiveScreen] = useState("ProductsScreen");
   const [cart, setCart] = useState([]);
-  const [filterText, setFilterText] = useState("");
-  const [filterOrder, setFilterOrder] = useState(1);
+  const [query, setQuery] = useState("");
+  const [valorMin, setValorMin]= useState(0)
+  const [valorMax, setValorMax]= useState(Infinity)
 
   const goToProductsScreen = () => setActiveScreen("ProductsScreen");
   const goToCartScreen = () => setActiveScreen("CartScreen");
@@ -24,7 +25,7 @@ function App() {
     } else {
       productFound.quantity++;
     }
-
+    
     setCart(newCart);
   };
 
@@ -59,18 +60,30 @@ function App() {
     setCart(newCart);
   };
 
-  const onChangeFilterText = (e) => {
-    setFilterText(e.target.value);
+  const onChangequery = (ev) => {
+    setQuery(ev.target.value);
   };
+  const onChangeValorMin = (e)=> {
+    setValorMin(e.target.value)
+  }
+  const onChangeValorMax = (e)=> {
+    setValorMax(e.target.value)
+  }
+
 
   const renderScreen = () => {
     switch (activeScreen) {
       case "ProductsScreen":
         return (
           <ProductsScreen
+            onChangeValorMin={onChangeValorMin}
+            valorMax={valorMax}
+            valorMin={valorMin}
             goToCartScreen={goToCartScreen}
             addToCart={addToCart}
-            filterText={filterText}
+            query={query}
+            setQuery={setQuery}
+
           />
         );
       case "CartScreen":
@@ -91,10 +104,14 @@ function App() {
   return (
     <>
       <Header
+        onChangeValorMax={onChangeValorMax}
+        onChangeValorMin={onChangeValorMin}
+        onChangequery={onChangequery}
         goToProductsScreen={goToProductsScreen}
         goToCartScreen={goToCartScreen}
         itemInCart={cart.length}
-        onChangeFilterText={onChangeFilterText}
+        setQuery={setQuery}
+        query={query}
       />
       {renderScreen()}
     </>

@@ -2,13 +2,19 @@ import { HeaderContainer } from "./Header.styled";
 import SearchIcon from "../../assets/Search.svg";
 import ProductsIcon from "../../assets/ProductsIcon.svg";
 import cartIcon from "../../assets/Cart.svg";
+import { queryAllByAltText } from "@testing-library/react";
 
 function Header(props) {
   const {
+    onChangequery,
+    onChangeValorMin,
+    onChangeValorMax,
+    valorMax,
+    valorMin,
     goToCartScreen,
     goToProductsScreen,
-    filterText,
-    onChangeFilterText,
+    query,
+    setQuery,
     itemsInCart,
   } = props;
 
@@ -18,14 +24,33 @@ function Header(props) {
 
       <div>
         <input placeholder="Search"
-          value={filterText}
-          onChange={onChangeFilterText}
+          type= "text"
+          value={props.query}
+          onChange={onChangequery}
         
         />
         <button>
           <img src={SearchIcon} alt="Search" />
         </button>
       </div>
+
+      <div>
+        <input
+          placeholder= "Minimo"
+          type= "number"
+          value= {props.valorMin}
+          onChange={onChangeValorMin}
+        />
+      </div>
+      <div>
+        <input
+          placeholder= "Maximo"
+          type= "number"
+          value= {props.valorMax}
+          onChange={onChangeValorMax}
+        />
+      </div>
+
       <div className="buttonGroup">
         <button onClick={goToProductsScreen}>
           <img src={ProductsIcon} alt="Products icon" />

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Moletom de astronauta chibi",
+        "name": "moletom de astronauta chibi",
         "value": 90.00,
         "imageUrl": "https://img.ltwebstatic.com/images3_pi/2022/06/20/1655718608183080987437a49d24dcf56158c53b95_thumbnail_600x.webp",
         "imageAlt":"Moletom preto astronauta"
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "name": "Camiseta manga longa",
+        "name": "camiseta manga longa",
         "value": 75,
         "imageUrl": "https://img.ltwebstatic.com/images3_pi/2022/09/15/1663208304ac04433c9cd3923bc979298c25fdf148_thumbnail_600x.webp",
         "imageAlt":"Camiseta manga longa cinza astronauta"
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "name": "Moletom Nasa",
+        "name": "moletom nasa",
         "value": 80,
         "imageUrl": "https://img.ltwebstatic.com/images3_pi/2022/10/12/166553666334aed20a88e0a91dc7287cfeaba4d99a_thumbnail_600x.webp",
         "imageAlt":"Moletom branco Nasa astronauta"
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "name": "Moletom com capuz",
+        "name": "moletom com capuz",
         "value": 100,
         "imageUrl": "https://img.ltwebstatic.com/images3_pi/2022/07/18/1658107153edd0345672ff3894893fae4495bdd89a_thumbnail_600x.webp",
         "imageAlt":" Moletom preto lua astronauta"
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "name": "Camiseta unknown",
+        "name": "camiseta unknown",
         "value": 65,
         "imageUrl": "https://img.ltwebstatic.com/images3_pi/2022/07/20/1658283130d23e90d1f1c8c6b56dda96eacb2e5687_thumbnail_600x.webp",
         "imageAlt":"Camiseta preta nasa astronauta"
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "name": "Moletom feminino lua e sol",
+        "name": "moletom feminino lua e sol",
         "value": 95,
         "imageUrl": "https://img.ltwebstatic.com/images3_pi/2022/08/02/1659408373f25624d9e2e4449ec3f145b203290b3e_thumbnail_600x.webp",
         "imageAlt":"Moletom preto planetas astronauta"
