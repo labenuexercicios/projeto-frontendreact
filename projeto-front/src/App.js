@@ -82,7 +82,9 @@ function App() {
      
 
       {RenderTela()}
-      <Footer />
+
+      <Footer/>
+     
     </BodyContainer>
   )
 }

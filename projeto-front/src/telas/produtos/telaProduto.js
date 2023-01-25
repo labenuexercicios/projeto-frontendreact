@@ -24,6 +24,7 @@ function TelaProduto(props) {
                         className="pesquisar"
                         value={query}
                         onChange={(ev) => { setQuery(ev.target.value) }}
+                        placeholder="Pesquisar"
 
 
                     ></input>
@@ -51,6 +52,7 @@ function TelaProduto(props) {
                         value={sort}
                         onChange={(ev) => { setSort(ev.target.value) }}
                         name="sort"
+                        className="crescente"
                     >
 
                         <option

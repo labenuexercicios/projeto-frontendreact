@@ -8,7 +8,7 @@ width: 100%;
 height: 20vh;
 justify-content: space-between;
 align-items: center;
-background-color: #00ebff;
+background-color: #0C8CE9;
 
 
 
@@ -52,12 +52,12 @@ button {
     margin: 3px;
     padding: 0 1rem;
     gap:11px;
-    background-color: #00ebff;
+    background-color: #0C8CE9;
     img{
         width: 64px;
         height: 64px;
         background-color: darkgray;
-        box-shadow: 0 0 10px gray;
+        box-shadow: 0 0 15px black;
         border-radius: 10px;
     }
    

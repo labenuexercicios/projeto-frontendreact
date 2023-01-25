@@ -9,8 +9,8 @@ margin: 10px;
 width: 260px;
 height: 360px;
 background-color: white;
-border-radius: 5px;
-box-shadow: 0 0 4px gray;
+border-radius: 10px;
+box-shadow: 0 0 10px #575752;
 
 .card-name {
     display: flex;
@@ -32,7 +32,7 @@ span{
 }
 
 button{
-    background-color: yellow;
+    background-color: #3E82BE;
     border: none;
     border-radius: 2px;
     box-shadow: 0 0 5px gray;

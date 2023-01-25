@@ -8,6 +8,6 @@ export const FooterContainer = styled.footer`
   width: 100%;
   height: 15vh;
  
-  background-color : #00ebff;
+  background-color : #0C8CE9;
  
  `
