@@ -4,15 +4,18 @@ import Footer from '../../components/Footer/Footer'
 import ProductCard from '../../components/ProductCard/ProductsCard';
 import { spaceBackground } from '../../constants/imgURL.js';
 
+
 const Homepage = (props) => {
     const [ search, setSearch ] = React.useState('');
-    const { addToCart, filterText } = props
+    
+
 
     // Filtra o valor digitado no input e armazena na variavel filteredProducts
     const searchLowerCase = search.toLocaleLowerCase();
     const filteredProducts = props.products.filter((product) =>  
         product.name.toLowerCase().includes(searchLowerCase)
     );
+    
 
     return (
         <HomePageContainer>
@@ -43,8 +46,7 @@ const Homepage = (props) => {
                                 url={product.imageUrl}
                                 name={product.name}
                                 value={product.value}
-                                addToCart={addToCart}
-                            />
+                                />
                         );
                     }) 
                 }

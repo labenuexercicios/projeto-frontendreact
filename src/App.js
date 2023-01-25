@@ -5,10 +5,11 @@ import CartPage from "./pages/CartPage/CartPage";
 import Homepage from "./pages/Homepage/HomePage";
 import "./styles.css";
 
+
 const App = () => {
   const [itens, setItens] = React.useState([]);
   const [activeScreen, setActiveScreen] = React.useState("HomePage");
-  const [cart, setCart] = React.useState([]);
+  
   // Armazena a lista de produtos na variavel de estado products
   React.useEffect(() => {
     setItens(productListData);
@@ -22,30 +23,30 @@ const App = () => {
     setActiveScreen("CartPage");
   };
 
-  const addToCart = (productToAdd) => {
-    const newCart = [...cart]
+  // const addToCart = (productToAdd) => {
+  //   const newCart = [...cart]
 
-    const productFound = newCart.find(
-        (productInCart) => productInCart.id === productToAdd.id
-    )
+  //   const productFound = newCart.find(
+  //       (productInCart) => productInCart.id === productToAdd.id
+  //   )
 
-    if (!productFound) {
-        const newProduct = {...productToAdd, quantity: 1}
-        newCart.push(newProduct)
-    } else {
-        productFound.quantity++
-    }
+  //   if (!productFound) {
+  //       const newProduct = {...productToAdd, quantity: 1}
+  //       newCart.push(newProduct)
+  //   } else {
+  //       productFound.quantity++
+  //   }
 
-    setCart(newCart)
-  }
+  //   setCart(newCart)
+  // }
 
 
   const renderScreen = () => {
     switch (activeScreen) {
       case "HomePage":
-        return <Homepage addToCart={addToCart} products={itens} />;
+        return <Homepage products={itens} />;
       case "CartPage":
-        return <CartPage cart={cart} />;
+        return <CartPage />;
       default:
         return <div>Tela não existe</div>;
     }

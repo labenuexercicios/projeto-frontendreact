@@ -1,4 +1,5 @@
 import React from 'react';
+import { getItem } from '../../services/LocalStorageFuncs.js';
 import { CartPageContainer } from './CartPage.styled.js';
 // import Header from '../../components/Header/Header'
 // import Footer from '../../components/Footer/Footer'
@@ -16,18 +17,21 @@ const CartPage = (props) => {
 
     const { cart, removeItem } = props
 
+    const [data, setData] = React.useState(getItem('carrinhoYt') || [])
+    console.log(data)
+
     return (
         <CartPageContainer>
             
             <section>
                 {
-                    cart.map((product) => {
+                    data.map((e) => {
                         return (
                             <section>
-                               <p>Produto escolhido: {product.name}</p>
-                                <p>Preço: {product.value}</p>
-                                <p>Qtd: {product.quantity}</p>
-                                <button onClick={() => removeItem(product.id)}>Remover ítem</button> 
+                               <p>Produto escolhido: {e.name}</p>
+                                <p>Preço: {e.value}</p>
+                                <p>Qtd: {e.quantity}</p>
+                                <button onClick={() => removeItem(e.id)}>Remover ítem</button> 
                             </section>
                         
                         );
