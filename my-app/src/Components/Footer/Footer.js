@@ -15,7 +15,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-contatos">
-                    <p><h3>Fale Conosco:</h3></p><br/>
+                    <p>Fale Conosco:</p>
                     <p><b>Telefone Quantico</b></p>
                     <p>9999-XVII | 0800-CXC-32CX</p>
                     <br/>
@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="footer-juliano">
+            <div className="footer-perfil">
 
                 <p>Powered by Juliano Amaral</p>
                 <div>

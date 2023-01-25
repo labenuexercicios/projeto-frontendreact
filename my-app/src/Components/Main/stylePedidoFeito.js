@@ -4,11 +4,11 @@ export const ContainerFinalizado = styled.div`
     width: 60%;
     min-height: 400px;
     border-radius: 8px;
-    box-shadow: 1px 1px 4px rgb(191,191,191);
+    box-shadow: 1px 1px 4px;
     display: flex;
     flex-direction: column;
-    background-color: #FFFE91;
-    color: #5A2455;
+    background-color: smokewhite;
+    color: black;
     justify-content: space-around;
   
     h1,h2,h3{
@@ -21,7 +21,7 @@ export const ContainerFinalizado = styled.div`
     }
 
     button{
-        background-color: #A94DF3;
+        background-color: orange;
         border-radius: 8px;
         font-size: 16px;
         color: white;
@@ -32,6 +32,6 @@ export const ContainerFinalizado = styled.div`
 
     button:hover{
         cursor: pointer;
-        background-color: #AA7DFC;
+        background-color: blue;
     }
 `

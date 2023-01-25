@@ -19,11 +19,9 @@ function Filtro(props){
         <>
         <BoxLateral>
         <h2>Filtrar por:</h2>
-        <p>Menor Preço:</p>
+        <p>Valor:</p>
         <input type="text" className="Input-Dados" value={props.minimo} onChange={handleMinSearch} placeholder="R$ 0.00"/>
-        <p>Maior Preço:</p>
-        <input type="text" className="Input-Dados" value={props.maximo} onChange={handleMaxSearch} placeholder="R$ 0.00" />
-        <p>Busca por nome:</p>
+        <p>Nome:</p>
         <input type="text" className="Input-Dados" value={props.pesquisa} onChange={handleNomeSearch} placeholder="Produto"/>
         </BoxLateral>
         </>

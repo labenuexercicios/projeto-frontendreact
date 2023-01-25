@@ -31,7 +31,7 @@ export const BoxPedido = styled.div`
 
     button{
         margin-top: 30px;
-        background-color: #A94DF3;
+        background-color: orange;
         border-radius: 8px;
         color: white;
         width: 300px;
@@ -45,7 +45,7 @@ export const BoxPedido = styled.div`
 
     button:hover{
         cursor: pointer;
-        background-color: #AA7DFC;
+        background-color: orange;
         font-weight: light;
         transform: scale(1.05)
     }
@@ -91,7 +91,7 @@ export const BoxPedidoProdutosItens = styled.p`
 
             h4{
                 border-radius: 50%;
-                background-color: #A94DF3;
+                background-color: orange;
                 color: white;
                 width: 16px;
                 text-align: center;
@@ -104,7 +104,6 @@ export const BoxPedidoProdutosItens = styled.p`
     }
 `
 
-//Menu Lateral Direito da Tela de Pedido, resumo de pagto
 export const ResumoPedido = styled.div`
     width: 30%;
     background-color: #EAEAEA;
@@ -128,7 +127,7 @@ export const ResumoPedido = styled.div`
 
         button{
             margin-top: 30px;
-            background-color: #A94DF3;
+            background-color: orange;
             border-radius: 8px;
             color: white;
             width: 100%;
@@ -142,7 +141,7 @@ export const ResumoPedido = styled.div`
 
         button:hover{
             cursor: pointer;
-            background-color: #AA7DFC;
+            background-color: blue;
             font-weight: light;
             transform: scale(1.05)
         }

@@ -1,25 +1,25 @@
 import styled from 'styled-components'
 
 export const MainFooter = styled.div`
-    background-color: #EAEAEA;  
+    background-color: orange;  
 
     .footer-dados{
         display: flex;
         justify-content: space-between;
-        height: 40vh;
+        height: 20vh;
         width: 80%;
         padding-top: 12px;
     }
 
-    .footer-daniel{
-        border-top: 1px solid #D4D4D4;
+    .footer-perfil{
+        border-top: 1px blue;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         height: 8vh;
 
         img{
-            height: 30px;
+            height: 20px;
             margin-left: 8px;
         }
 
@@ -31,5 +31,5 @@ export const MainFooter = styled.div`
 
 export const Imagem = styled.img` 
     min-height: 60px;
-    height: 40vh; 
+    height: 20vh; 
 `

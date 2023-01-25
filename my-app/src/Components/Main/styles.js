@@ -140,9 +140,9 @@ export const BoxLateralCarrinho = styled.div`
 `
 
 export const BoxCentral = styled.div`
-    width: 65%;
+    width: 60%;
     display: flex;
-    flex-direction: column;
+    flex-direction: flex;
     align-center: center;
     justify-content: center;
     gap: 10px;

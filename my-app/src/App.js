@@ -13,7 +13,7 @@ li{
   list-style: none;
 }`
 
-function App() {
+const App = () => {
   return (
     <>
     <GlobalStyled/>
