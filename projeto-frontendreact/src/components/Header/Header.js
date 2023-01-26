@@ -1,16 +1,17 @@
 import React from "react";
+import {Cabecalho, ListaHeader, EspacoEntreLi} from "./style"
 
 export default function Header() {
     return(
-        <header>
-            loja
+        <Cabecalho>
+            <h1>loja</h1>
             <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Sobre</li>
-                    <li>Contato</li>
-                </ul>
+                <ListaHeader >
+                    <EspacoEntreLi>Home</EspacoEntreLi>
+                    <EspacoEntreLi>Sobre</EspacoEntreLi>
+                    <EspacoEntreLi>Contato</EspacoEntreLi>
+                </ListaHeader>
             </nav>
-        </header>
+        </Cabecalho>
     )
 }

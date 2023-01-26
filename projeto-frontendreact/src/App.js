@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./components/Header/Header"
+import Main from "./components/Main/Main"
 import Footer from "./components/Footer/Footer"
 
 const GlobalStyle = createGlobalStyle`
@@ -20,8 +21,10 @@ const ContainerGeral = styled.div`
 function App() {
   return (
     <ContainerGeral>
-      <Header>Logo</Header>
-      <main>assunto</main>
+      <Header />
+      <AsideFiltro />
+      <Main />
+      <AsideCarrinho />
       <Footer />
 
       <GlobalStyle />
