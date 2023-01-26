@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ZipCodeImgStyled = styled.img`
     width: 20px;
-    height: 20px;
+    height: 20px; 
 `
 export const ZipCodeButtonStyled = styled.button`
   display: flex;
@@ -23,4 +23,7 @@ export const ContainerStyled = styled.div`
     align-self: flex-start;
     gap: 10px;
     align-items: center;
+    @media screen and (max-width: 500px) {
+        display: none;
+    }      
 `

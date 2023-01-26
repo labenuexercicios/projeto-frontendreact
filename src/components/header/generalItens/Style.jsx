@@ -8,12 +8,9 @@ export const Container = styled.div`
     gap: 10px;
     padding-left: 20px;
     @media screen and (max-width: 500px) {
-        display: flex;
-        justify-content: center;
-    }  
-
+        display: none;
+    }          
 `
-
 export const Favorite = styled.img`
     width: 30px;
     height: 30px;     

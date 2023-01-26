@@ -3,20 +3,16 @@ import styled from "styled-components"
 export const ContainerStyled = styled.div` 
     width: 35%; 
     display: flex;
-    justify-content: flex-end;
-    @media screen and (max-width: 500px) {
-        width: 100%;  
-        justify-content: center;  
-    }
+    justify-content: flex-end;  
 `
 export const LogoImgStyled = styled.img`
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     grid-column: 1;
     grid-row: 1;
     display: flex;   
     justify-self: center;
-    border-radius: 50%;
+    border-radius: 50%;   
 `
 export const LogoTextStyled = styled.div`
     display: flex;

@@ -1,10 +1,10 @@
 import { MainStyled } from "./Style" 
-import Nav from "./nav/Nav"
+import Promotions from "./promotions/Promotions"
 
-export default function Main() {
+export default function Main(props) {
     return (
         <MainStyled>
-            <Nav/>
+            <Promotions products={ props.products.filter(function(item) {return item.discount > 0} ) }/>
         </MainStyled>
     )
 }

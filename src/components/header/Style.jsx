@@ -2,17 +2,20 @@ import styled from "styled-components"
 
 export const HeaderStyled = styled.header`
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 150px;
-    background-color: blue;
-    gap: 30px;
-    @media screen and (max-width: 500px) {
-        display: flex;
-        flex-direction: column;
-        height: 450px;
-        align-items: center;
-        justify-content: center;
-    }
+    background-color: #5967e8;    
+`
+export const ItensStyled = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 30px; 
+`
+export const NavStyled = styled.div`
+    display: flex;
+    width: 100vw;
+    gap: 30px; 
 `
 export const HeaderCenterDiv = styled.div`
     display: flex;
