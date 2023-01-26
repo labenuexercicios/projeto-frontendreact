@@ -15,7 +15,7 @@ export const Carrinho = (props) => {
         <button onClick={() => props.setPagina(1)}>Home</button>
         </ButtonContainer>
         <MapContainer>
-            <p>Compro a nave</p>
+            <p>Total</p>
             ${ListaCarrinho.reduce((acumula , item)=> acumula + item.quantidade * item.preco , 0)}M
            
         
