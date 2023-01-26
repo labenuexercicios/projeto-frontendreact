@@ -1,0 +1,142 @@
+[
+    {
+        "id": "001",
+        "nome": "Apollo",
+        "modelo": "Exploração",
+        "imagem": "https://v5j9q4b5.rocketcdn.me/wp-content/uploads/2020/06/apollo-11-origem-e-missao-que-levou-o-homem-a-lua-1.jpg",
+        "preco": 180
+    },
+    {
+        "id": "002",
+        "nome": "Cubo Borg",
+        "modelo": "Exploração",
+        "imagem": "https://vejasp.abril.com.br/wp-content/uploads/2017/10/cubo.jpg?quality=70&strip=info&w=650",
+        "preco": 250
+    },
+    {
+        "id": "003",
+        "nome": "Daileon",
+        "modelo": "Guerra",
+        "imagem": "https://media.kapowtoys.co.uk/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/j/u/juspion4.jpeg",
+        "preco":  350
+    },
+    {
+        "id": "004",
+        "nome": "Destroyer.webp",
+        "modelo": "Guerra",
+        "imagem": "https://th.bing.com/th/id/R.3f075a861293c31277c48b26edf786dd?rik=%2fZuJmn6u%2fsaTjg&riu=http%3a%2f%2fstatic4.wikia.nocookie.net%2f__cb20130320005859%2fstarwars%2fimages%2f4%2f4b%2fStalker.png&ehk=z8bLYu3m0IqtHaoTQbykvN3Hin2084gR6ObKJrRQcZk%3d&risl=&pid=ImgRaw&r=0",
+        "preco": 280
+    },
+    {
+        "id": "005",
+        "nome": "Disco Voador",
+        "modelo": "Exploração",
+        "imagem": "https://th.bing.com/th/id/R.1c2e211129b00a8191f141ceb8a42420?rik=AwpgedeybZo6Pg&riu=http%3a%2f%2flh6.ggpht.com%2f_PM3RRwmYDL8%2fTPQLgiDP1jI%2fAAAAAAAAB7s%2fzuZ2exsIjNk%2fw1200-h630-p-k-no-nu%2fdisco-voador.jpg&ehk=PTcQY8TdyAqWUWxgd3utTN7OFxH4vTFQHE5tKY%2fKKlw%3d&risl=&pid=ImgRaw&r=0",
+        "preco": 190
+    },
+    {
+        "id": "006",
+        "nome": "Discovery",
+        "modelo": "Colonização",
+        "imagem": "https://beta.alphafm.com.br/uploads/blog/0690c58986c77a65ec7d72f2a38fd19e.jpg",
+        "preco": 280
+    },
+    {
+        "id": "007",
+        "nome": "Enterprise",
+        "modelo": "Exploração",
+        "imagem": "https://cdn3.whatculture.com/images/2020/09/c94c1bb04c56d0f8-1200x675.jpg",
+        "preco": 300
+    },
+    {
+        "id": "008",
+        "nome": "Estrela da Morte",
+        "modelo": "Guerra",
+        "imagem": "https://i.ytimg.com/vi/74q3zvyYM20/hqdefault.jpg",
+        "preco":  500
+    },
+    {
+        "id": "009",
+        "nome": "Interestelar",
+        "modelo": "Colonização",
+        "imagem": "https://bk.ibxk.com.br/2014/12/17/17145638540738.jpg",
+        "preco": 350
+    },
+    {
+        "id": "010",
+        "nome": "Jupiter",
+        "modelo": "Exploração",
+        "imagem": "https://vejasp.abril.com.br/wp-content/uploads/2017/10/jupiter2.jpg?quality=70&strip=info&w=650",
+        "preco": 200
+    },
+    {
+        "id": "011",
+        "nome": "Colonia",
+        "modelo": "Colonização",
+        "imagem": "https://img2.cgtrader.com/items/2794100/f010e9ff0c/sci-fi-space-station-3d-model-obj-3ds-fbx-c4d.jpg",
+        "preco": 500
+    },
+    {
+        "id": "012",
+        "nome": "Millennium Falcon",
+        "modelo": "Guerra",
+        "imagem": "https://s2.glbimg.com/coHwdDkMeRVO9T2A_v1EIWLuHTE=/e.glbimg.com/og/ed/f/original/2019/08/27/31618033034_1dcde167ed_k.jpg",
+        "preco": 250
+    },
+    {
+        "id": "013",
+        "nome": "Nabuco de Nozor",
+        "modelo": "Exploração",
+        "imagem": "https://steamuserimages-a.akamaihd.net/ugc/433778373732846936/2AD5B4484D5C54549C600FF57A99DA86F65930AB/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+        "preco": 190
+    },
+    {
+        "id": "014",
+        "nome": "Onibus Espacial",
+        "modelo": "Exploração",
+        "imagem": "https://houseofpostcards.pl/userdata/public/gfx/26110/Space-shuttle.jpg",
+        "preco": 190
+    },
+    {
+        "id": "015",
+        "nome": "Prometheus",
+        "modelo": "Guerra",
+        "imagem": "https://3.bp.blogspot.com/-FExMHrAEDcU/Tswfc9YDllI/AAAAAAAACls/7anxb-Op4uk/s1600/PrometheusSPace11.jpg",
+        "preco": 200
+    },
+    {
+        "id": "016",
+        "nome": "Protector",
+        "modelo": "Guerra",
+        "imagem": "https://vejasp.abril.com.br/wp-content/uploads/2017/10/protector.jpg?quality=70&strip=info&w=650",
+        "preco": 200
+    },
+    {
+        "id": "017",
+        "nome": "Q-Nave",
+        "modelo": "Guerra",
+        "imagem": "https://i.redd.it/ptft8li7enx11.jpg",
+        "preco":280
+    },
+    {
+        "id": "018",
+        "nome": "The Benatar",
+        "modelo": "Guerra",
+        "imagem": "https://i.pinimg.com/736x/e8/54/11/e854117883b12774a78a5fc55ad123cb.jpg",
+        "preco": 250
+    },
+    {
+        "id": "019",
+        "nome": "Uss-Orville",
+        "modelo": "Exploração",
+        "imagem": "https://tnn-blog.s3.us-west-2.amazonaws.com/wp-content/uploads/2017/09/USS-Orville.jpg",
+        "preco": 280
+    },
+    {
+        "id": "020",
+        "nome": "Xwing",
+        "modelo": "Guerra",
+        "imagem": "https://staticdelivery.nexusmods.com/mods/2229/images/1226/1226-1552777915-1220483943.png",
+        "preco": 190
+    }
+]
