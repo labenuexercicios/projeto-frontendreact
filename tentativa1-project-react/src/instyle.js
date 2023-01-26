@@ -23,6 +23,7 @@ export const Estilodopesquisar = styled.header`
     display: grid;
     grid-column: 2/3;
     grid-row: 1/2;
+    color: white;
 
 `
 // Montando o estilo do filtro
@@ -59,4 +60,30 @@ export const Estilodocarrinho = styled.nav`
     /* justify-items: center; */
     /* align-content: center; */
 
+`
+
+export const Estilodositens = styled.main`
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    /* justify-items: start; */
+    /* display: flex;*/
+    /* flex-direction: column; */
+    color: white;
+
+`
+
+export const Escopodositens = styled.div`
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border: 3px solid white;
+    background-color: blueviolet;
+    /* position: static; */
+    /* align-items: center; */
+    width: 17vw;
+    height: 55vh;
+    gap: 3px;
 `
