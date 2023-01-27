@@ -8,22 +8,31 @@ import SearshInput from "./searshInput/SearshInput";
 import Nav from "./nav/Nav";
 import { ItensStyled } from "./Style";
 import { NavStyled } from "./Style";
+import { ItensContainerStyled } from "./Style";
 
 export default function Header(props) {
   return (
     <HeaderStyled>
-      <ItensStyled>
-        <BrandLogo />
-        <HeaderCenterDiv>
-          <SearshInput />
-          <ZipCode />
-        </HeaderCenterDiv>
-        <UserLogin />
-        <GeneralItens />
-      </ItensStyled>
-      <NavStyled>
-        <Nav categories={props.categories} />
-      </NavStyled>
+      <BrandLogo />
+
+      <ItensContainerStyled>
+        <ItensStyled>
+          <HeaderCenterDiv>
+            <SearshInput />
+            <ZipCode />
+          </HeaderCenterDiv>
+          <UserLogin />
+          <GeneralItens />
+        </ItensStyled>
+
+        <NavStyled>
+          <Nav
+            pageFlow={props.pageFlow}
+            setPageFlow={props.setPageFlow}
+            categories={props.categories}
+          />
+        </NavStyled>
+      </ItensContainerStyled>
     </HeaderStyled>
   );
 }

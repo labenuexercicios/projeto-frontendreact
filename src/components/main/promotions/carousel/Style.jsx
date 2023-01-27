@@ -19,6 +19,7 @@ export const CarouselStyled = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+  pointer-events: none;
 `;
 export const ButtonAction = styled.img`
   display: flex;
@@ -41,7 +42,7 @@ export const NameStyled = styled.span`
   display: flex;
   justify-content: center;
   width: 240px;
-  height: 10px;
+  height: 40px;
   font-size: medium;
   margin: 10px;
   font-family: Arial, Helvetica, sans-serifs;

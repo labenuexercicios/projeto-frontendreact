@@ -1,14 +1,22 @@
-import { Navigation } from "./Style"
-import { A } from "./Style"
-import { Container } from "./Style"
-
+import { useEffect, useState } from "react";
+import { Navigation } from "./Style";
+import { A } from "./Style";
+import { Container } from "./Style";
 
 export default function Nav(props) {
-    return (
-        <Container>
-            <Navigation>
-                {props.categories.map(item => (<A key={item.name} href="">{item.name}</A>))}
-            </Navigation>
-        </Container>
-    )       
+  const handleClick = () => {
+    props.setPageFlow("products");
+  };
+
+  return (
+    <Container>
+      <Navigation>
+        {props.categories.map((item) => (
+          <A key={item.id} href="" onClick={handleClick}>
+            {item.name}
+          </A>
+        ))}
+      </Navigation>
+    </Container>
+  );
 }

@@ -18,23 +18,34 @@ import { SpecialPromotionsStyled } from "./Style";
 
 export default function Carrousel(props) {
   const [intervalId, setIntervalId] = useState(null);
-  useEffect(() => {
-    if (!intervalId) {
-      const id = setInterval(() => {
-        handleRightClick();
-      }, 10000);
-      setIntervalId(id);
-    }
-    return () => clearInterval(intervalId);
-  }, [intervalId]);
+
+  props.setPageFlow("promotions");
+
+  const startInterval = (interval) => {
+    useEffect(() => {
+      if (!intervalId) {
+        const id = setInterval(() => {
+          handleRightClick();
+        }, interval);
+        setIntervalId(id);
+      }
+      return () => clearInterval(intervalId);
+    }, [intervalId]);
+  };
+
+  startInterval(1000);
+
+  const stopInterval = () => {
+    clearInterval(intervalId);
+  };
 
   const carousel = useRef(null);
 
-  const handleLeftClick = (e) => {
+  const handleLeftClick = () => {
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
   };
 
-  const handleRightClick = (e) => {
+  const handleRightClick = () => {
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
 
@@ -52,7 +63,11 @@ export default function Carrousel(props) {
           onClick={handleLeftClick}
         ></ButtonAction>
 
-        <CarouselStyled ref={carousel}>
+        <CarouselStyled
+          ref={carousel}
+          onMouseOver={startInterval}
+          onMouseOut={stopInterval}
+        >
           {props.products.map((item) => {
             return (
               <GeneralDataStyled key={item.id}>
