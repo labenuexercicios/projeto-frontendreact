@@ -14,8 +14,6 @@ export function Filtro(props){
     }
     else{
       alert("O valor que voce digito é maior doque 1000.")
-      // props.setVlmax(0)
-      // console(props.vlmax)
     }
   }
 
@@ -33,6 +31,7 @@ export function Filtro(props){
     }
   }
 
+  // const itensFiltrados = props.arraydositens.filter((objeto) => objeto.startsWith(props.vlmax))
 
   function vlNome(){
 
@@ -55,6 +54,9 @@ export function Filtro(props){
         <br></br>
         <input type="text" placeholder="Digite o nome" id="campoDeBusca" />
         <button onChange={vlNome} >Filtrar</button>
+{/* 
+        itensFiltrados.map((objeto)) */}
+
       </ol>
     )
 
