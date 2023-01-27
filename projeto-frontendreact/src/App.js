@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./components/Header/Header"
-import Main from "./components/Main/Main"
+import Conteudo from "./components/Conteudo/Conteudo"
 import Footer from "./components/Footer/Footer"
 
 const GlobalStyle = createGlobalStyle`
@@ -22,9 +22,7 @@ function App() {
   return (
     <ContainerGeral>
       <Header />
-      <AsideFiltro />
-      <Main />
-      <AsideCarrinho />
+      <Conteudo />
       <Footer />
 
       <GlobalStyle />
