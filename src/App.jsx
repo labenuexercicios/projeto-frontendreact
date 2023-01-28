@@ -9,6 +9,7 @@ import { useState } from "react";
 function App() {
   const [pageFlow, setPageFlow] = useState("promotions");
 
+  console.log("App");
   return (
     <div className="App">
       <GlobalStyle />

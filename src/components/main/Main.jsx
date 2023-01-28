@@ -1,17 +1,15 @@
 import { MainStyled } from "./Style";
-import Promotions from "./promotions/Promotions";
 import Products from "./products/Products";
+import Home from "./home/Home";
 
 export default function Main(props) {
   return (
     <MainStyled>
       {props.pageFlow === "promotions" ? (
-        <Promotions
+        <Home
           pageFlow={props.pageFlow}
           setPageFlow={props.setPageFlow}
-          products={props.products.filter(function (item) {
-            return item.discount > 0;
-          })}
+          products={props.products}
         />
       ) : (
         <Products

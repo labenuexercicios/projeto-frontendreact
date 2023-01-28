@@ -7,8 +7,8 @@ import { DataStyled } from "./Style";
 import { NameStyled } from "./Style";
 import { Img } from "./Style";
 import { DataDescription } from "./Style";
-import NextBtn from "../../../../../img/General/Next.png";
-import PrevBtn from "../../../../../img/General/Prev.png";
+import NextBtn from "../../../../../../img/General/Next.png";
+import PrevBtn from "../../../../../../img/General/Prev.png";
 import { DiscountStyled } from "./Style";
 import React, { useState, useEffect } from "react";
 import { TytleStyled } from "./Style";
@@ -37,7 +37,7 @@ export default function Carrousel(props) {
 
   startInterval(10000000);
 
-  console.log("start");
+  console.log("carrosel");
 
   const stopInterval = () => {
     clearInterval(intervalId);

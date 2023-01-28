@@ -3,7 +3,8 @@ import { A } from "./Style";
 import { Container } from "./Style";
 
 export default function Nav(props) {
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     props.setPageFlow("products");
   };
 
