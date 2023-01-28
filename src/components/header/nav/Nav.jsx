@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Navigation } from "./Style";
 import { A } from "./Style";
 import { Container } from "./Style";

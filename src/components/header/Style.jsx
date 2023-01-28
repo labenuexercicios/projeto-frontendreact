@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import HeaderImg from "../../../img/General/Header.png";
 
 export const HeaderStyled = styled.header`
+  background-image: url(HeaderImg);
   display: flex;
   align-items: center;
   width: 100vw;
@@ -15,7 +17,7 @@ export const ItensStyled = styled.div`
 `;
 export const NavStyled = styled.div`
   display: flex;
-  width: 40vw;
+  width: 740px;
 `;
 export const HeaderCenterDiv = styled.div`
   display: flex;

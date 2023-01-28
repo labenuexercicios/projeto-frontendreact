@@ -10,11 +10,13 @@ import { DataDescription } from "./Style";
 import NextBtn from "../../../../../img/General/Next.png";
 import PrevBtn from "../../../../../img/General/Prev.png";
 import { DiscountStyled } from "./Style";
-import { DiscountDiv } from "./Style";
 import React, { useState, useEffect } from "react";
 import { TytleStyled } from "./Style";
 import { BodyCarouselStyed } from "./Style";
 import { SpecialPromotionsStyled } from "./Style";
+import { InnerPriceStyled } from "./Style";
+import { PriceStyled } from "./Style";
+import { PriceDescount } from "./Style";
 
 export default function Carrousel(props) {
   const [intervalId, setIntervalId] = useState(null);
@@ -33,7 +35,9 @@ export default function Carrousel(props) {
     }, [intervalId]);
   };
 
-  startInterval(1000);
+  startInterval(10000000);
+
+  console.log("start");
 
   const stopInterval = () => {
     clearInterval(intervalId);
@@ -63,32 +67,35 @@ export default function Carrousel(props) {
           onClick={handleLeftClick}
         ></ButtonAction>
 
-        <CarouselStyled
-          ref={carousel}
-          onMouseOver={startInterval}
-          onMouseOut={stopInterval}
-        >
+        <CarouselStyled ref={carousel}>
           {props.products.map((item) => {
             return (
-              <GeneralDataStyled key={item.id}>
-                <NameStyled>{item.name}</NameStyled>
+              <GeneralDataStyled
+                key={item.id}
+                onMouseOver={startInterval(10000000)}
+                onMouseOut={stopInterval(0)}
+              >
                 <DataStyled>
                   <Img src={item.images[0]} alt={item.description} />
                   <DataDescription>
-                    <DiscountDiv>
-                      <DiscountStyled>{item.discount}% OFF</DiscountStyled>
-                    </DiscountDiv>
+                    <NameStyled>{item.name}</NameStyled>
                     <br />
                     <span>{item.description}</span>
                     <br />
-                    <br />
-                    <span>Price: U$ {item.price}</span>
-                    <br />
-                    <br />
                     <span>Branb: {item.brand}</span>
                     <br />
-                    <br />
                     <span>Stock: {item.quantity} iten(s)</span>
+                    <br />
+                    <DiscountStyled>{item.discount}% OFF</DiscountStyled>
+                    <br />
+                    <PriceStyled>
+                      <div>Price:</div>
+                      <InnerPriceStyled>U$ {item.price}</InnerPriceStyled>
+                      <PriceDescount>
+                        U${" "}
+                        {item.price - item.price * Number("0." + item.discount)}
+                      </PriceDescount>
+                    </PriceStyled>
                   </DataDescription>
                 </DataStyled>
               </GeneralDataStyled>

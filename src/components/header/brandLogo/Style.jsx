@@ -26,16 +26,18 @@ export const MainLogoTextStyled = styled.label`
   font-size: x-large;
   font-style: italic;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serifs;
 `;
 export const SecondaryLogoTextStyled = styled.label`
   color: white;
   font-size: medium;
+  font-family: Arial, Helvetica, sans-serifs;
 `;
 export const InnerContainerStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  width: 190px;
+  width: 200px;
   justify-content: center;
   align-items: center;
   text-align: center;
