@@ -4,11 +4,14 @@ import { LogoTextStyled } from "./Style";
 import { MainLogoTextStyled } from "./Style";
 import { SecondaryLogoTextStyled } from "./Style";
 import { InnerContainerStyled } from "./Style";
-import logo from "../../../../img/Logo/Logo.gif";
+import logo from "../../../Img/Logo/Logo.gif";
+import { goToHome } from "../../../Router/Cordenator";
+import { useNavigate } from "react-router-dom";
 
 export default function BrandLogo() {
+  const navigate = useNavigate();
   return (
-    <ContainerStyled>
+    <ContainerStyled onClick={() => goToHome(navigate)}>
       <InnerContainerStyled>
         <LogoImgStyled src={logo} alt=""></LogoImgStyled>
 

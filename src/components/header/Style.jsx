@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import HeaderImg from "../../../img/General/Header.png";
 
 export const HeaderStyled = styled.header`
   background-image: url(HeaderImg);

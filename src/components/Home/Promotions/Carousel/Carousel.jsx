@@ -7,8 +7,8 @@ import { DataStyled } from "./Style";
 import { NameStyled } from "./Style";
 import { Img } from "./Style";
 import { DataDescription } from "./Style";
-import NextBtn from "../../../../../../img/General/Next.png";
-import PrevBtn from "../../../../../../img/General/Prev.png";
+import NextBtn from "../../../../Img/General/Next.png";
+import PrevBtn from "../../../../Img/General/Prev.png";
 import { DiscountStyled } from "./Style";
 import React, { useState, useEffect } from "react";
 import { TytleStyled } from "./Style";
@@ -18,10 +18,10 @@ import { InnerPriceStyled } from "./Style";
 import { PriceStyled } from "./Style";
 import { PriceDescount } from "./Style";
 
-export default function Carrousel(props) {
-  const [intervalId, setIntervalId] = useState(null);
+export default function Carrousel() {
+  const products = JSON.parse(localStorage.getItem("products"));
 
-  props.setPageFlow("promotions");
+  const [intervalId, setIntervalId] = useState(null);
 
   const startInterval = (interval) => {
     useEffect(() => {
@@ -36,8 +36,6 @@ export default function Carrousel(props) {
   };
 
   startInterval(10000000);
-
-  console.log("carrosel");
 
   const stopInterval = () => {
     clearInterval(intervalId);
@@ -68,7 +66,7 @@ export default function Carrousel(props) {
         ></ButtonAction>
 
         <CarouselStyled ref={carousel}>
-          {props.products.map((item) => {
+          {products.map((item) => {
             return (
               <GeneralDataStyled
                 key={item.id}

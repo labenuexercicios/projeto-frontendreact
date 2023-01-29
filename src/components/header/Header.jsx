@@ -26,11 +26,7 @@ export default function Header(props) {
         </ItensStyled>
 
         <NavStyled>
-          <Nav
-            pageFlow={props.pageFlow}
-            setPageFlow={props.setPageFlow}
-            categories={props.categories}
-          />
+          <Nav />
         </NavStyled>
       </ItensContainerStyled>
     </HeaderStyled>

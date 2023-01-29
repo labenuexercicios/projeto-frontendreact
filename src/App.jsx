@@ -1,29 +1,19 @@
 import { GlobalStyle } from "./GlobalStyle";
-import Header from "./components/header/Header";
-import Main from "./components/main/Main";
-import Footer from "./components/footer/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import categoriesDB from "../data/categories.json";
+import { Router } from "./Router/Router";
 import productsDB from "../data/space-products.json";
-import { useState } from "react";
 
 function App() {
-  const [pageFlow, setPageFlow] = useState("promotions");
+  localStorage.setItem("categories", JSON.stringify(categoriesDB.categories));
+  localStorage.setItem("products", JSON.stringify(productsDB.products));
 
-  console.log("App");
   return (
     <div className="App">
       <GlobalStyle />
-      <Header
-        pageFlow={pageFlow}
-        setPageFlow={setPageFlow}
-        categories={categoriesDB.categories}
-      />
-      <Main
-        pageFlow={pageFlow}
-        setPageFlow={setPageFlow}
-        categories={categoriesDB.categories}
-        products={productsDB.products}
-      />
+      <Header />
+      <Router />
       <Footer />
     </div>
   );
