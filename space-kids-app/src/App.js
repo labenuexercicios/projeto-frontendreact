@@ -1,28 +1,35 @@
-import React from "react";
-
-//import react router dom
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-//import pages
-import Home from "./pages/Home";
-import ProductDetails from "./pages/ProductDetails";
+import React, { useState } from "react";
+import { GlobalStyle } from "./GlobalStyle";
+import styled from "styled-components";
 
 //impor components
-import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import MainPage from "./components/MainPage";
 import Footer from "./components/Footer";
+import ProductDetails from "./components/ProductDetails";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+`;
 
 const App = () => {
+  const [screen, setScreen] = useState(1);
+  const handleScreen = (screen) => setScreen(screen);
+
+  const showScreen = screen === 1 ? <MainPage /> : <ProductDetails />;
+
   return (
-    <Router>
+    <Container>
+      <GlobalStyle />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/produto/:id" element={<ProductDetails />} />
-      </Routes>
       <Sidebar />
+      {showScreen}
       <Footer />
-    </Router>
+    </Container>
   );
 };
 
