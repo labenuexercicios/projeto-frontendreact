@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
-import Cart from "./components/Cart";
+import CartProduct from "./components/CartProduct";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 import ProductsSection from "./components/Sections/ProductsSection";
 import Sidebar from "./components/Sidebar";
+import Menu from "./components/Menu";
+import ProductDescription from "./pages/ProductDescription";
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/product" element={<ProductDetails />} />
+          <Route path="/product/:id" element={<ProductDescription />} />
         </Routes>
         <Sidebar />
+        <Menu />
         <Footer />
       </Router>
     </div>
