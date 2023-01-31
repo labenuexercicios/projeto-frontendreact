@@ -37,15 +37,8 @@ const TopSection = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="w-screen  lg:flex lg:justify-end">
-        <input
-          className="z-40 w-full lg:w-1/6 relative px-2 focus:outline-none border-b py-2 lg:fixed lg:top-2 lg:right-20 "
-          placeholder="Buscar"
-        ></input>
-        <FiSearch className="absolute right-2 top-[76px] lg:top-6 lg:right-20 lg:fixed z-40" />
-      </div>
       <img
-        className="md-h-auto h-56 w-screen lg:h-auto xl:h-auto"
+        className="md:h-auto h-56 w-screen lg:h-auto xl:h-auto"
         src={cover}
       />
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-32 lg:pt-8">
