@@ -1,18 +1,17 @@
 import { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 import { CartContext } from "../contexts/CartContext";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const ProductDescription = () => {
   const { products } = useContext(ProductContext);
   const { addToCart } = useContext(CartContext);
+  const { id } = useParams();
 
-  const location = useLocation();
-  const productId = location.pathname.split("");
   const product = products.find((item) => {
-    if (item.id == productId[9]) {
+    if (item.id == id) {
       return item;
     }
   });

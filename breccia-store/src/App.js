@@ -8,6 +8,8 @@ import ProductsSection from "./components/Sections/ProductsSection";
 import Sidebar from "./components/Sidebar";
 import Menu from "./components/Menu";
 import ProductDescription from "./pages/ProductDescription";
+import NotFound from "./pages/NotFound";
+import FilteredProducts from "./components/Sections/FilteredProducts";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<ProductDetails />} />
           <Route path="/product/:id" element={<ProductDescription />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Sidebar />
         <Menu />
