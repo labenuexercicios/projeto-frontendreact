@@ -39,7 +39,9 @@ const Header = () => {
             className="flex items-center gap-1 cursor-pointer"
           >
             <AiOutlineShoppingCart className="text-xl font-bold" />{" "}
-            <span className="text-xs font-semibold">({cartAmount(cart)})</span>
+            <span className="text-white bg-black rounded-full px-[6px] text-xs font-semibold">
+              {cartAmount(cart)}
+            </span>
           </div>
 
           <div
