@@ -1,0 +1,50 @@
+[
+  {
+  "id": "1",
+  "nome": "The Legend of Zelda: Breath of the Wild",
+  "preco": 69.90,
+  "url": "https://w7.pngwing.com/pngs/903/646/png-transparent-the-legend-of-zelda-breath-of-the-wild-zelda-ii-the-adventure-of-link-the-legend-of-zelda-twilight-princess-hd-the-legend-of-zelda-a-link-to-the-past-the-legend-of-zelda-game-text-trademark-thumbnail.png"
+  },
+  {
+  "id": "2",
+  "nome": "Super Mario Odyssey",
+  "preco": 59.90,
+  "url": "https://spng.pngfind.com/pngs/s/12-125583_amiibo-super-mario-odyssey-super-mario-odyssey-amiibo.png"
+  },
+  {
+  "id": "3",
+  "nome": "Red Dead Redemption 2",
+  "preco": 79.90,
+  "url": "https://e7.pngegg.com/pngimages/616/732/png-clipart-red-dead-redemption-2-grand-theft-auto-v-xbox-360-grand-theft-auto-iv-redemption-game-text-thumbnail.png"
+  },
+  {
+  "id": "4",
+  "nome": "Minecraft",
+  "preco": 26.90,
+  "url": "https://w7.pngwing.com/pngs/703/212/png-transparent-minecraft-minecraft-pocket-edition-tynker-miner-minecraft-miner-minecraft-others-thumbnail.png"
+  },
+  {
+  "id": "5",
+  "nome": "Final Fantasy VII Remake",
+  "preco": 49.90,
+  "url": "https://www.pngall.com/wp-content/uploads/4/Final-Fantasy-VII-Remake-Logo-PNG-Clipart.png"
+  },
+  {
+  "id": "6",
+  "nome": "GTA V",
+  "preco": 59.90,
+  "url": "https://img1.gratispng.com/20180606/vq/kisspng-grand-theft-auto-v-grand-theft-auto-san-andreas-g-rockstar-5b1855aee53840.3076021015283214549389.jpg"
+  },
+  {
+  "id": "7",
+  "nome": "Soulsborne games (Demon's Souls, Dark Souls, Bloodborne)",
+  "preco": 69.90,
+  "url": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/08/Bloodborne-Dark-Souls-1-Dark-Souls-3-Logos.jpg"
+  },
+  {
+  "id": "8",
+  "nome": "Animal Crossing: New Horizons",
+  "preco": 59.90,
+  "url": "https://i.pinimg.com/474x/cc/07/9b/cc079bd096b40ec64f8845173e546b00.jpg"
+  }
+  ]
