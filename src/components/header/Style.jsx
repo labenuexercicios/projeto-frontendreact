@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-  background-image: url(HeaderImg);
+  background-size: cover;
   display: flex;
   align-items: center;
-  width: 100vw;
   background-color: #5967e8;
   gap: 20px;
 `;

@@ -3,23 +3,22 @@ import styled from "styled-components";
 export const ContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 10px;
-  width: 100vw;
   height: 400px;
   gap: 10px;
+  overflow: hidden;
 `;
 export const CarouselStyled = styled.div`
+  background-size: cover;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  width: 1000px;
   height: 300px;
   ::-webkit-scrollbar {
     display: none;
   }
   pointer-events: none;
+  background-color: #5967e8;
 `;
 export const ButtonAction = styled.img`
   width: 30px;
@@ -27,15 +26,12 @@ export const ButtonAction = styled.img`
 `;
 export const GeneralDataStyled = styled.div`
   display: flex;
-  background-color: #5967e8;
 `;
 export const DataStyled = styled.div`
   display: flex;
-
-  width: 1000px;
   gap: 10px;
+  width: 1000px;
 `;
-
 export const NameStyled = styled.span`
   display: flex;
   width: 675px;
@@ -50,14 +46,12 @@ export const DataDescription = styled.div`
   color: white;
   justify-content: center;
 `;
-
 export const DiscountStyled = styled.div`
   font-size: 3rem;
   color: yellow;
   grid-column: 1;
   grid-row: 1;
 `;
-
 export const Img = styled.img`
   grid-column: 1;
   grid-row: 1;
@@ -66,11 +60,11 @@ export const Img = styled.img`
   margin: 10px;
   box-shadow: 5px 5px black;
 `;
-
 export const TytleStyled = styled.div`
   background-color: #5967e8;
-  width: 1000px;
   height: 70px;
+  width: 1000px;
+  align-self: center;
   color: white;
   font-size: xx-large;
   display: flex;

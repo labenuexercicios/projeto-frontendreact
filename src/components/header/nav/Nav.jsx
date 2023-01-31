@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Navigation } from "./Style";
 import { A } from "./Style";
 import { Container } from "./Style";
-import { goToProducts } from "../../../Router/Cordenator";
+import { goToProducts } from "../../../Router/Coordinator";
 
 export default function Nav() {
   const navigate = useNavigate();

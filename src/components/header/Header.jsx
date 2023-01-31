@@ -10,7 +10,7 @@ import { ItensStyled } from "./Style";
 import { NavStyled } from "./Style";
 import { ItensContainerStyled } from "./Style";
 
-export default function Header(props) {
+export default function Header() {
   return (
     <HeaderStyled>
       <BrandLogo />

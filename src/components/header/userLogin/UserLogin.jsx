@@ -1,4 +1,4 @@
-import loginImg from "../../../Img/General/Login.png";
+import loginImg from "../../../../public/Img/General/Login.png";
 import { LoginImgStyled } from "./style";
 import { LoginContainer } from "./style";
 import { LoginButtons } from "./style";

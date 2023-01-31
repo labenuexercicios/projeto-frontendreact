@@ -9,9 +9,11 @@
       "color": "White",
       "brand": "NASA",
       "quantity": 10,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 1,
-      "discount": 30
+      "discount": 30,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 2,
@@ -22,9 +24,11 @@
       "color": "Orange",
       "brand": "NASA",
       "quantity": 20,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 1,
-      "discount": 10
+      "discount": 10,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 3,
@@ -35,9 +39,11 @@
       "color": "Blue",
       "brand": "Russian Space Agency (Roscosmos)",
       "quantity": 13,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 1,
-      "discount": 30
+      "discount": 30,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 4,
@@ -48,9 +54,11 @@
       "color": "Black",
       "brand": "SpaceX",
       "quantity": 24,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 1,
-      "discount": 80
+      "discount": 80,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 5,
@@ -61,9 +69,11 @@
       "color": "White",
       "brand": "NASA",
       "quantity": 30,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 2,
-      "discount": 10
+      "discount": 10,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 6,
@@ -74,9 +84,11 @@
       "color": "Orange",
       "brand": "NASA",
       "quantity": 32,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 2,
-      "discount": 30
+      "discount": 30,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 7,
@@ -87,9 +99,11 @@
       "color": "Blue",
       "brand": "Russian Space Agency (Roscosmos)",
       "quantity": 25,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 2,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 8,
@@ -100,9 +114,11 @@
       "color": "Black",
       "brand": "SpaceX",
       "quantity": 40,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 2,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 9,
@@ -113,9 +129,11 @@
       "color": "White",
       "brand": "NASA",
       "quantity": 10,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 3,
-      "discount": 30
+      "discount": 30,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 10,
@@ -126,9 +144,11 @@
       "color": "Orange",
       "brand": "NASA",
       "quantity": 32,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 3,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 11,
@@ -139,9 +159,11 @@
       "color": "Blue",
       "brand": "Russian Space Agency (Roscosmos)",
       "quantity": 3,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 3,
-      "discount": 40
+      "discount": 40,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 12,
@@ -152,61 +174,71 @@
       "color": "Black",
       "brand": "SpaceX",
       "quantity": 40,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 3,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 13,
-      "name": "Apollo A7L Spacesuit Lower Torso",
-      "description": "The lower torso of the A7L spacesuit worn by astronauts during the Apollo program provided life support and mobility.",
+      "name": "Apollo A7L Spacesuit Legs",
+      "description": "The Legs of the A7L spacesuit worn by astronauts during the Apollo program provided life support and mobility.",
       "price": 12000,
       "size": "Medium",
       "color": "White",
       "brand": "NASA",
       "quantity": 11,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 4,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 14,
-      "name": "Z-2 Spacesuit Lower Torso",
-      "description": "The lower torso of the Z-2 spacesuit is a prototype currently being developed by NASA for use on future missions to Mars.",
+      "name": "Z-2 Spacesuit Legs",
+      "description": "The Legs of the Z-2 spacesuit is a prototype currently being developed by NASA for use on future missions to Mars.",
       "price": 9000,
       "size": "Large",
       "color": "Orange",
       "brand": "NASA",
       "quantity": 22,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 4,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 15,
-      "name": "Orlan Space Suit Lower Torso",
-      "description": "The lower torso of the Orlan space suit is a Russian-made used for spacewalks outside the International Space Station.",
+      "name": "Orlan Space Suit Legs",
+      "description": "The Legs of the Orlan space suit is a Russian-made used for spacewalks outside the International Space Station.",
       "price": 10000,
       "size": "Small",
       "color": "Blue",
       "brand": "Russian Space Agency (Roscosmos)",
       "quantity": 30,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 4,
-      "discount": 40
+      "discount": 40,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 16,
-      "name": "XEMU Spacesuit Lower Torso",
-      "description": "The lower torso of the XEMU spacesuit is a prototype being developed by SpaceX for use on future missions to Mars.",
+      "name": "XEMU Spacesuit Legs",
+      "description": "The Legs of the XEMU spacesuit is a prototype being developed by SpaceX for use on future missions to Mars.",
       "price": 11000,
       "size": "Medium",
       "color": "Black",
       "brand": "SpaceX",
       "quantity": 2,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 4,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 17,
@@ -217,9 +249,11 @@
       "color": "White",
       "brand": "NASA",
       "quantity": 50,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 5,
-      "discount": 20
+      "discount": 20,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 18,
@@ -230,9 +264,11 @@
       "color": "Orange",
       "brand": "NASA",
       "quantity": 25,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 5,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 19,
@@ -243,9 +279,11 @@
       "color": "Blue",
       "brand": "Russian Space Agency (Roscosmos)",
       "quantity": 35,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 5,
-      "discount": 15
+      "discount": 15,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 20,
@@ -256,9 +294,11 @@
       "color": "Black",
       "brand": "SpaceX",
       "quantity": 12,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 5,
-      "discount": 50
+      "discount": 50,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 21,
@@ -269,9 +309,11 @@
       "color": "White",
       "brand": "NASA",
       "quantity": 1,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 6,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 22,
@@ -282,9 +324,11 @@
       "color": "Orange",
       "brand": "NASA",
       "quantity": 6,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 6,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 23,
@@ -295,9 +339,11 @@
       "color": "Blue",
       "brand": "Russian Space Agency (Roscosmos)",
       "quantity": 36,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 6,
-      "discount": 30
+      "discount": 30,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 24,
@@ -308,9 +354,11 @@
       "color": "Black",
       "brand": "SpaceX",
       "quantity": 45,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 6,
-      "discount": 20
+      "discount": 20,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 25,
@@ -321,9 +369,11 @@
       "color": "White",
       "brand": "NASA",
       "quantity": 15,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 7,
-      "discount": 30
+      "discount": 30,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 26,
@@ -334,9 +384,11 @@
       "color": "Orange",
       "brand": "NASA",
       "quantity": 25,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 7,
-      "discount": 20
+      "discount": 20,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 27,
@@ -347,9 +399,11 @@
       "color": "Blue",
       "brand": "Russian Space Agency (Roscosmos)",
       "quantity": 35,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 7,
-      "discount": 0
+      "discount": 0,
+      "rating": 3,
+      "installment": 8
     },
     {
       "id": 28,
@@ -360,9 +414,11 @@
       "color": "Black",
       "brand": "SpaceX",
       "quantity": 4,
-      "images": ["src/Img/Products/visor/3.png"],
+      "images": ["/Img/Products/visor/3.png"],
       "idCategory": 7,
-      "discount": 10
+      "discount": 10,
+      "rating": 3,
+      "installment": 8
     }
   ]
 }

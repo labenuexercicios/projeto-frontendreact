@@ -4,8 +4,8 @@ import { LogoTextStyled } from "./Style";
 import { MainLogoTextStyled } from "./Style";
 import { SecondaryLogoTextStyled } from "./Style";
 import { InnerContainerStyled } from "./Style";
-import logo from "../../../Img/Logo/Logo.gif";
-import { goToHome } from "../../../Router/Cordenator";
+import logo from "../../../../public/Img/Logo/Logo.gif";
+import { goToHome } from "../../../Router/Coordinator";
 import { useNavigate } from "react-router-dom";
 
 export default function BrandLogo() {

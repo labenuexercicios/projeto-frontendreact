@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import ProductsViewer from "../components/products/ProductsViewer";
+import ProductsViewer from "../components/Products/ProductsViewer";
 
 export default function Products() {
   const pathParams = useParams();

@@ -2,7 +2,7 @@ import { ContainerStyled } from "./Style";
 import { ZipCodeImgStyled } from "./Style";
 import { ZipCodeButtonStyled } from "./Style";
 
-import ZipCodeImg from "../../../Img/General/ZipCode.png";
+import ZipCodeImg from "../../../../public/Img/General/ZipCode.png";
 
 export default function ZipCode() {
   return (

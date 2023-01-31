@@ -7,8 +7,8 @@ import { DataStyled } from "./Style";
 import { NameStyled } from "./Style";
 import { Img } from "./Style";
 import { DataDescription } from "./Style";
-import NextBtn from "../../../../Img/General/Next.png";
-import PrevBtn from "../../../../Img/General/Prev.png";
+import NextBtn from "../../../../../public/Img/General/Next.png";
+import PrevBtn from "../../../../../public/Img/General/Prev.png";
 import { DiscountStyled } from "./Style";
 import React, { useState, useEffect } from "react";
 import { TytleStyled } from "./Style";
@@ -37,10 +37,6 @@ export default function Carrousel() {
 
   startInterval(10000000);
 
-  const stopInterval = () => {
-    clearInterval(intervalId);
-  };
-
   const carousel = useRef(null);
 
   const handleLeftClick = () => {
@@ -68,11 +64,7 @@ export default function Carrousel() {
         <CarouselStyled ref={carousel}>
           {products.map((item) => {
             return (
-              <GeneralDataStyled
-                key={item.id}
-                onMouseOver={startInterval(10000000)}
-                onMouseOut={stopInterval(0)}
-              >
+              <GeneralDataStyled key={item.id}>
                 <DataStyled>
                   <Img src={item.images[0]} alt={item.description} />
                   <DataDescription>
@@ -84,8 +76,6 @@ export default function Carrousel() {
                     <br />
                     <span>Stock: {item.quantity} iten(s)</span>
                     <br />
-                    <DiscountStyled>{item.discount}% OFF</DiscountStyled>
-                    <br />
                     <PriceStyled>
                       <div>Price:</div>
                       <InnerPriceStyled>U$ {item.price}</InnerPriceStyled>
@@ -94,6 +84,8 @@ export default function Carrousel() {
                         {item.price - item.price * Number("0." + item.discount)}
                       </PriceDescount>
                     </PriceStyled>
+                    <br />
+                    <DiscountStyled>{item.discount}% OFF</DiscountStyled>
                   </DataDescription>
                 </DataStyled>
               </GeneralDataStyled>
