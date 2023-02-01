@@ -9,7 +9,7 @@ function App() {
   const [cartItems,setCartItems]=useState([]);
   const [query,setQuery] = useState("")
   const [orderParam,setOrderParam] = useState("")
-  const handleInputQuery =(event) =>setQuery(event.target.value)
+  const handleInputQuery =(event) => setQuery(event.target.value)
   const handleInputOrderParam =(event) =>setOrderParam(event.target.value)
 
 

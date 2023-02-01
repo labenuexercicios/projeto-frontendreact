@@ -61,10 +61,7 @@ export default function Basket(props) {
       <hr></hr>
       <div> 
         <h3>busca</h3>
-        <input 
-        type="text"
-        value={query}
-        onChange={handleInputQuery}
+        <input type="text" value={query} onChange={handleInputQuery}
         />
         <h3>ordenar</h3>
         <select 
