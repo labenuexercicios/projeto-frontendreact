@@ -1,17 +1,27 @@
 import { IoMdClose, IoMdRemove, IoMdAdd } from "react-icons/io";
 import { CartContext } from "../contexts/CartContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { SidebarContext } from "../contexts/SidebarContext";
 
 const CartProduct = ({ product }) => {
   const { removeProduct, plusAmount, menusAmount } = useContext(CartContext);
   const { name, id, img, price, amount, category } = product;
+  const { handleClose } = useContext(SidebarContext);
 
   return (
     <div className="justify-between items-center flex gap-2 px-2 py-4 relative group">
       <div className="flex items-center gap-1">
         <img className="w-20" src={img} />
         <div className="flex flex-col gap-1">
-          <p className="font-semibold text-sm">{name}</p>
+          <Link to={`/product/${product.id}`}>
+            <p
+              onClick={handleClose}
+              className="cursor-pointer font-semibold text-sm"
+            >
+              {name}
+            </p>
+          </Link>
           <p className="font-thin text-xs">{category}</p>
           <div className="flex items-center gap-3 pt-1">
             <IoMdRemove

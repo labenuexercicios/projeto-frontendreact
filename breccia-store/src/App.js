@@ -9,7 +9,6 @@ import Sidebar from "./components/Sidebar";
 import Menu from "./components/Menu";
 import ProductDescription from "./pages/ProductDescription";
 import NotFound from "./pages/NotFound";
-import FilteredProducts from "./components/Sections/FilteredProducts";
 
 function App() {
   return (

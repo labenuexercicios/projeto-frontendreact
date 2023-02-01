@@ -4,7 +4,7 @@ export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const { setOpen } = useContext(SidebarContext);
+  const { setOpen, handleClose } = useContext(SidebarContext);
 
   const addToCart = (product, id) => {
     setOpen(true);
@@ -35,6 +35,7 @@ const CartProvider = ({ children }) => {
 
   const clearCart = () => {
     setCart([]);
+    handleClose();
   };
 
   const plusAmount = (id) => {

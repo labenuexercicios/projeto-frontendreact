@@ -4,11 +4,11 @@ import productList from "../products.json";
 export const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(productList);
 
-  useEffect(() => {
-    setProducts(productList);
-  });
+  // useEffect(() => {
+  //   setProducts(productList);
+  // });
 
   return (
     <ProductContext.Provider value={{ products }}>
