@@ -7,25 +7,25 @@ export const data = {
   products:[
   {
     id: "1",
-    name: "Camisa_1",
+    name: "Camisa 1",
     image: img1,
     preco: 20,
   },
   {
     id: "2",
-    name: "camisa_2",
+    name: "camisa 2",
     image: img2,
     preco: 30,
   },
   {
     id: "3",
-    name: "Camisa_3",
+    name: "Camisa 3",
     image: img3,
     preco: 25,
   },
   {
     id: "4",
-    name: "Camisa_4",
+    name: "Camisa 4",
     image: img4,
     preco: 50,
   },
