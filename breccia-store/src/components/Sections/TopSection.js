@@ -37,9 +37,9 @@ const TopSection = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="w-screen  lg:flex lg:justify-end"></div>
+
       <img
-        className="md-h-auto h-56 w-screen lg:h-auto xl:h-auto"
+        className="md:h-auto h-56 w-screen lg:h-auto xl:h-auto"
         src={cover}
       />
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-32 lg:pt-8">
