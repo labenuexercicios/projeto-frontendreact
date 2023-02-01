@@ -12,18 +12,6 @@ const ProductsSection = () => {
 
   const [filter, setFilter] = useState("");
 
-  const filterProducts = (products) => {
-    if (filter === "Cheap") {
-      return products.sort((a, b) => a.price - b.price);
-    } else if (filter === "Expensive") {
-      return products.sort((a, b) => b.price - a.price);
-    } else {
-      return products;
-    }
-  };
-
-  filterProducts(products);
-
   return (
     <div className="container mx-auto">
       <div className="flex flex-col items-center">
@@ -44,7 +32,7 @@ const ProductsSection = () => {
             onChange={(e) => setFilter(e.target.value)}
             className="focus:outline-none active:outline-none"
           >
-            <option defaultValue=""></option>
+            <option>Order</option>
             <option>Cheap</option>
             <option>Expensive</option>
           </select>
@@ -52,6 +40,15 @@ const ProductsSection = () => {
       </div>
       <div className="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-sm mx-auto md:max-w-none md:mx-0 ">
         {products
+          .sort((a, b) => {
+            if (filter === "Cheap") {
+              return a.price - b.price;
+            } else if (filter === "Expensive") {
+              return b.price - a.price;
+            } else if (filter === "Order") {
+              return a, b;
+            }
+          })
           .filter((product) => {
             if (
               product.category.toLowerCase().includes(search.toLowerCase()) ||
