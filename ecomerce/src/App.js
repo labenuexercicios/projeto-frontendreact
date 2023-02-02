@@ -1,10 +1,14 @@
+import { Home } from "./Componentes/ListaProdutos/Home/Home"
+import { Filtros } from "./Componentes/Filtros/Filtros"
+import { Carrinho } from "./Componentes/CarrinhoCompras/Carrinho/Carrinho"
+
 export default function App() {
 
   return(
     <div>
-      <header>
-        <h1>AstroDev Compras</h1>
-      </header>
+      <Filtros />
+      <Home />
+      <Carrinho />
     </div>
   )
 }
