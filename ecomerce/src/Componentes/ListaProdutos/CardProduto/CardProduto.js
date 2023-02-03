@@ -1,5 +1,12 @@
+import {Produto} from "./style"
+
 export function CardProduto() {
     return(
-        <p>Produto</p>
+        <Produto>
+            <img></img>
+            <p>Nome do Produto</p>
+            <p>Valor</p>
+            <button>Adicionar ao Carrinho</button>
+        </Produto>
     )
 }

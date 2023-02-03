@@ -1,10 +1,12 @@
 import { Items } from "../Items/Items"
+import {CarrinhoContainer} from "./style"
 
 export function Carrinho() {
     return (
-        <div>
-            <p>Carrinho</p>
+        <CarrinhoContainer>
+            <h2>Carrinho</h2>
+            <button>Remover</button>
             <Items />
-        </div>
+        </CarrinhoContainer>
     )
 }

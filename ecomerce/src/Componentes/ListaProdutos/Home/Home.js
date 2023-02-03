@@ -1,10 +1,25 @@
 import { CardProduto } from "../CardProduto/CardProduto"
+import { HomeContainer } from "./style"
 
 export function Home() {
     return (
-        <div>
-            <p>Home</p>
+        <HomeContainer>
+            <div id="input">
+            <label>Ordenação:</label>
+            <select></select>
+            </div>
+            <div id="containerProdutos">
             <CardProduto />
-        </div>
+            <CardProduto />
+            <CardProduto />
+            <CardProduto />
+            <CardProduto />
+            <CardProduto />
+            <CardProduto />
+            <CardProduto />
+            <CardProduto />
+            
+            </div>
+        </HomeContainer>
     )
 }
