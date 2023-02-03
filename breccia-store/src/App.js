@@ -9,6 +9,8 @@ import Sidebar from "./components/Sidebar";
 import Menu from "./components/Menu";
 import ProductDescription from "./pages/ProductDescription";
 import NotFound from "./pages/NotFound";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/product" element={<ProductDetails />} />
           <Route path="/product/:id" element={<ProductDescription />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Sidebar />
         <Menu />

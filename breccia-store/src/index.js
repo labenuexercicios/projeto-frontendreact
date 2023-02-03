@@ -6,17 +6,23 @@ import ProductProvider from "./contexts/ProductContext";
 import SidebarProvider from "./contexts/SidebarContext";
 import CartProvider from "./contexts/CartContext";
 import MenuProvider from "./contexts/MenuContext";
+import CheckoutProvider from "./contexts/CheckoutContext";
+import RegistrationProvider from "./contexts/RegistrationContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <SidebarProvider>
-    <MenuProvider>
-      <CartProvider>
-        <ProductProvider>
-          <React.StrictMode>
-            <App />
-          </React.StrictMode>
-        </ProductProvider>
-      </CartProvider>
-    </MenuProvider>
-  </SidebarProvider>
+  <CheckoutProvider>
+    <RegistrationProvider>
+      <SidebarProvider>
+        <MenuProvider>
+          <CartProvider>
+            <ProductProvider>
+              <React.StrictMode>
+                <App />
+              </React.StrictMode>
+            </ProductProvider>
+          </CartProvider>
+        </MenuProvider>
+      </SidebarProvider>
+    </RegistrationProvider>
+  </CheckoutProvider>
 );

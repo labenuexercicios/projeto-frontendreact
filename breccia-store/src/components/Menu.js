@@ -21,23 +21,23 @@ const Menu = () => {
           {" "}
           <div
             onClick={handleCloseMenu}
-            className="uppercase text-xl border-b w-screen text-center py-8 border-t"
+            className="uppercase text-xl border-b w-full text-center py-8 border-t"
           >
             Home
           </div>
         </Link>
-        <div className="uppercase text-xl border-b w-screen text-center py-8">
+        <div className="uppercase text-xl border-b w-full text-center py-8">
           About
         </div>
         <Link to="/product">
           <div
             onClick={handleCloseMenu}
-            className="uppercase text-xl border-b w-screen text-center py-8"
+            className="uppercase text-xl border-b w-full text-center py-8"
           >
             Products
           </div>
         </Link>
-        <div className="uppercase text-xl border-b w-screen text-center py-8">
+        <div className="uppercase text-xl border-b w-full text-center py-8">
           Contact
         </div>
       </div>

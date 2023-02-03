@@ -8,7 +8,7 @@ import { BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="mt-12 lg:justify-center lg:gap-32 flex justify-between px-12 py-12 text-white bg-[#1b1b1b] w-screen">
+    <footer className="mt-12 lg:justify-center lg:gap-32 flex justify-between px-12 py-12 text-white bg-[#1b1b1b] w-full">
       <div className="flex flex-col gap-5 lg:flex-row lg:gap-32 justify-center ">
         <div className="flex flex-col gap-2 ">
           <p className="uppercase font-semibold">Navegation</p>

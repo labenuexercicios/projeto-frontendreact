@@ -37,11 +37,7 @@ const TopSection = () => {
 
   return (
     <div className="flex flex-col items-center">
-
-      <img
-        className="md:h-auto h-56 w-screen lg:h-auto xl:h-auto"
-        src={cover}
-      />
+      <img className=" h-auto w-full " src={cover} />
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-32 lg:pt-8">
         {cardList.map((card, index) => (
           <Cards

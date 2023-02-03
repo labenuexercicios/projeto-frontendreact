@@ -25,7 +25,7 @@ const ProductDescription = () => {
         </p>
       </Link>
 
-      <div className="w-screen py-24 items-center justify-center flex ">
+      <div className="w-full py-24 items-center justify-center flex ">
         <div className="justify-center items-center flex flex-col gap-2 max-w-3xl lg:flex-row">
           <img className="max-w-[320px]" src={product.img} />
           <div className="px-10 flex flex-col gap-2">

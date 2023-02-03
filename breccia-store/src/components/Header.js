@@ -14,12 +14,13 @@ const Header = () => {
   return (
     <div className="sticky top-0 bg-white z-30">
       <div className="flex px-4 py-2 justify-between border-b pb-1">
-        <div className="flex flex-col items-center">
-          <Link to="/">
+        <Link to="/">
+          <div className="flex flex-col items-center">
             <p className="uppercase font-bold text-3xl">Breccia</p>
             <p className="uppercase text-xs">s t o r e</p>
-          </Link>
-        </div>
+          </div>
+        </Link>
+
         <div className="lg:flex lg:gap-12 lg:items-center lg:pr-36 hidden">
           <Link to="/">
             <p className="cursor-pointer uppercase text-sm">home</p>
