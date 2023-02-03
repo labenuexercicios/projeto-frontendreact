@@ -4,6 +4,7 @@ export const HomeContainer = styled.main`
     display: flex;
     flex-direction: column;
     padding: 50px;
+    flex-shrink: 5000;
     gap: 10px;
     #input{
         display: flex;

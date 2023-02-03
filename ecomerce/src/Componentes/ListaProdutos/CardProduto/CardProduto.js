@@ -1,11 +1,11 @@
 import {Produto} from "./style"
 
-export function CardProduto() {
+export function CardProduto(props) {
     return(
         <Produto>
-            <img></img>
-            <p>Nome do Produto</p>
-            <p>Valor</p>
+            <img src={props.produto.img}/>
+            <p>{props.produto.nome}</p>
+            <p>{props.produto.valor.toFixed(2)} R$</p>
             <button>Adicionar ao Carrinho</button>
         </Produto>
     )
