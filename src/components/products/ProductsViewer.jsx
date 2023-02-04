@@ -1,31 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import { goToProduct } from "../../Router/Coordinator";
-import { StarsRating } from "../starsRating/StarsRating";
+
 import {
   ProductsListStyled,
   ContainerStyled,
   ProductsStyled,
-  ProductTitleStyled,
-  ProductPriceStyled,
-  ProductDescriptionStyled,
   OrdenationAndSelected,
 } from "./Style";
 import { CarouselStyled } from "./Style";
-import { DataStyled } from "./Style";
-import { Img } from "./Style";
 import Filter from "./filter/Filter";
 import SelectedFilters from "./filter/selectedFilter/SelectedFilters";
 import { useState } from "react";
 import Ordenation from "./ordenation/Ordenation";
+import ProductCard from "./productCard/ProductCard";
 
 export default function ProductsViewer(props) {
   let products = JSON.parse(localStorage.getItem("products"));
-
-  const navigate = useNavigate();
-
-  function handleProductClick(id) {
-    goToProduct(navigate, id);
-  }
 
   const categories = JSON.parse(localStorage.getItem("categories")).filter(
     (item) => {
@@ -148,23 +138,8 @@ export default function ProductsViewer(props) {
               })
               .map((item) => {
                 return (
-                  <div
-                    key={item.id}
-                    onClick={() => handleProductClick(item.id)}
-                  >
-                    <DataStyled>
-                      <ProductTitleStyled>{item.name}</ProductTitleStyled>
-                      <Img src={item.images[0]} alt={item.description} />
-                      <StarsRating rating={item.rating} />
-                      <ProductDescriptionStyled>
-                        <div>{item.description}</div>
-                        <br />
-                        <ProductPriceStyled>
-                          U$ {item.price} ({item.installment} X{" "}
-                          {Number(item.price) / Number(item.installment)})
-                        </ProductPriceStyled>
-                      </ProductDescriptionStyled>
-                    </DataStyled>
+                  <div key={item.id}>
+                    <ProductCard product={item} />
                   </div>
                 );
               })}

@@ -23,14 +23,24 @@ import {
   FavoriteImage,
   ProductFavoriteContainer,
   SimilarContainer,
+  ProductCardContainer,
+  SimilarTitle,
+  SimilarProducts,
 } from "./Style";
 import { StarsRating } from "../../starsRating/StarsRating";
 import favorite from "/Img/general/Favorite.png";
+import ProductCard from "../productCard/ProductCard";
 export default function ProductViewer(props) {
   const product = JSON.parse(localStorage.getItem("products")).filter(
     (item) => item.id == props.idProduct
   );
+
+  const similarProducts = JSON.parse(localStorage.getItem("products")).filter(
+    (item) =>
+      item.idCategory == product[0].idCategory && item.id !== product[0].id
+  );
   const [mainImage, setMainImage] = useState(product[0]?.images[0]);
+  alert(mainImage);
   return (
     <ContainerStyled>
       <ProductDescription>{product[0].description}</ProductDescription>
@@ -91,7 +101,19 @@ export default function ProductViewer(props) {
           </PurchaseButtonContainer>
         </ProductLeftDv>
       </ProductContainer>
-      <SimilarContainer></SimilarContainer>
+
+      <SimilarContainer>
+        <SimilarTitle>Similar products</SimilarTitle>
+        <SimilarProducts>
+          {similarProducts.map((item, index) => {
+            return (
+              <ProductCardContainer key={index}>
+                <ProductCard product={item} />
+              </ProductCardContainer>
+            );
+          })}
+        </SimilarProducts>
+      </SimilarContainer>
     </ContainerStyled>
   );
 }

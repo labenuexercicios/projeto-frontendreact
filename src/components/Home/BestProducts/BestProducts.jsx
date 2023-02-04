@@ -1,16 +1,7 @@
 import { useRef } from "react";
-import { StarsRating } from "../../starsRating/StarsRating";
-import {
-  ContainerStyled,
-  ProductsStyled,
-  TitleStyled,
-  ProductTitleStyled,
-  ProductPriceStyled,
-  ProductDescriptionStyled,
-} from "./Style";
+import ProductCard from "../../products/productCard/ProductCard";
+import { ContainerStyled, ProductsStyled, TitleStyled } from "./Style";
 import { CarouselStyled } from "./Style";
-import { DataStyled } from "./Style";
-import { Img } from "./Style";
 
 export default function BestProducts() {
   const carousel = useRef(null);
@@ -25,20 +16,7 @@ export default function BestProducts() {
           {products.map((item) => {
             return (
               <div key={item.id}>
-                <DataStyled>
-                  <ProductTitleStyled>{item.name}</ProductTitleStyled>
-                  <Img src={item.images[0]} alt={item.description} />
-                  <StarsRating rating={item.rating} />
-
-                  <ProductDescriptionStyled>
-                    <div>{item.description}</div>
-                    <br />
-                    <ProductPriceStyled>
-                      U$ {item.price} ({item.installment} X{" "}
-                      {Number(item.price) / Number(item.installment)})
-                    </ProductPriceStyled>
-                  </ProductDescriptionStyled>
-                </DataStyled>
+                <ProductCard product={item} />
               </div>
             );
           })}

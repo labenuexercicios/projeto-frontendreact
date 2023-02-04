@@ -6,8 +6,8 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   margin-top: 20px;
   align-items: flex-start;
-  width: 800px;
-  height: 800px;
+  width: 850px;
+  height: 1000px;
   gap: 20px;
 `;
 
@@ -129,7 +129,19 @@ export const FavoriteImage = styled.img`
   justify-self: flex-end;
 `;
 export const SimilarContainer = styled.div`
-  width: 300px;
-  height: 200px;
-  background-color: yellow;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+export const ProductCardContainer = styled.div``;
+export const SimilarTitle = styled.div`
+  color: black;
+  font-size: xx-large;
+  font-weight: bold;
+`;
+export const SimilarProducts = styled.div`
+  display: flex;
+  gap: 65px;
 `;
