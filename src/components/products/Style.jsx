@@ -4,6 +4,7 @@ export const ContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 1000px;
   height: 800px;
   margin-top: 20px;
 `;
@@ -16,6 +17,8 @@ export const CarouselStyled = styled.div`
     display: none;
   }
   gap: 20px;
+  max-width: 745px;
+  min-width: 745px;
 `;
 export const DataStyled = styled.div`
   background-color: #b3b3e6;
@@ -71,4 +74,7 @@ export const ProductsListStyled = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+`;
+export const OrdenationAndSelected = styled.div`
+  display: flex;
 `;

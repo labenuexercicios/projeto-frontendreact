@@ -1,0 +1,19 @@
+{
+    "brands": [
+        {
+            "id": 1,
+            "name": "NASA",
+            "description": "The National Aeronautics and Space Administration (NASA) is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research."
+        },
+        {
+            "id": 2,
+            "name": "Roscosmos",
+            "description": "The Russian Space Agency, also known as Roscosmos, is a state corporation responsible for the Russian space program and general aerospace research."
+        },
+        {
+            "id": 3,
+            "name": "SpaceX",
+            "description": "SpaceX is an American aerospace manufacturer and space transportation services company founded by entrepreneur Elon Musk with the goal of reducing space transportation costs and enabling the colonization of Mars."
+        }
+    ]
+}
