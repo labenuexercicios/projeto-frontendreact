@@ -29,10 +29,38 @@ const [montante, setMontante] = useState("")
   return(
     
     <MainContainer>
+
       <GlobalStyled />
-      <Filtros />
-      <Home listaProdutos={listaProdutos}/>
-      <Carrinho />
+
+      <Filtros
+      filtroMin={filtroMin}
+      setFiltroMin={setFiltroMin}
+
+      filtroMax={filtroMax}
+      setFiltroMax={setFiltroMax}
+
+      filtroBusca={filtroBusca}
+      setFiltroBusca={setFiltroBusca}
+      />
+
+      <Home
+      carrinho={carrinho}
+      setCarrinho={setCarrinho}
+
+      montante={montante}
+      setMontante={setMontante}
+      
+      listaProdutos={listaProdutos}
+      />
+
+      <Carrinho
+      carrinho={carrinho}
+      setCarrinho={setCarrinho}
+
+      montante={montante}
+      setMontante={setMontante}
+      />
+
     </MainContainer>
   )
 }
