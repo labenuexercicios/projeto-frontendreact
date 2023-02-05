@@ -3,6 +3,7 @@ import { Filtros } from "./Componentes/Filtros/Filtros"
 import { Carrinho } from "./Componentes/CarrinhoCompras/Carrinho/Carrinho"
 import styled, { createGlobalStyle } from "styled-components";
 import {listaProdutos} from "./assets/listaProdutos"
+import { useState } from "react";
 
 const GlobalStyled = createGlobalStyle`
   *{
@@ -18,6 +19,12 @@ const MainContainer = styled.main`
 `
 
 export default function App() {
+
+const [filtroMin, setFiltroMin] = useState("")
+const [filtroMax, setFiltroMax] = useState("")
+const [filtroBusca, setFiltroBusca] = useState("")
+const [carrinho, setCarrinho] = useState("")
+const [montante, setMontante] = useState("")
 
   return(
     
