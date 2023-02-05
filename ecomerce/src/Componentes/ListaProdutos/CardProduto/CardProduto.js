@@ -5,7 +5,7 @@ export function CardProduto(props) {
         <Produto>
             <img src={props.produto.img}/>
             <p>{props.produto.nome}</p>
-            <p>{props.produto.valor.toFixed(2)} R$</p>
+            <p>R$ {props.produto.valor.toFixed(2)}</p>
             <button>Adicionar ao Carrinho</button>
         </Produto>
     )
