@@ -7,12 +7,12 @@ import Payment from "../components/Payment";
 import PurchaseDone from "../components/PurchaseDone";
 
 const Checkout = () => {
-  const { formPage, setFormPage } = useContext(CheckoutContext);
+  const { formPage } = useContext(CheckoutContext);
 
   const handleCheckoutPage = () => {
     switch (formPage) {
       case 0:
-        return <Login setFormPage={setFormPage} />;
+        return <Login />;
       case 1:
         return <CreateAccount />;
       case 2:

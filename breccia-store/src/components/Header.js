@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 bg-white z-30">
-      <div className="flex px-4 py-2 justify-between border-b pb-1">
+      <div className="flex px-5 py-2 justify-between border-b pb-1">
         <Link to="/">
           <div className="flex flex-col items-center">
             <p className="uppercase font-bold text-3xl">Breccia</p>
@@ -39,8 +39,8 @@ const Header = () => {
             }}
             className="flex items-center gap-1 cursor-pointer"
           >
-            <AiOutlineShoppingCart className="text-xl font-bold" />{" "}
-            <span className="text-white bg-black rounded-full px-[6px] text-xs font-semibold">
+            <AiOutlineShoppingCart className="text-xl font-bold relative" />{" "}
+            <span className="text-white bg-black rounded-full px-[5px] text-xs font-semibold absolute lg:right-2 right-[84px] top-[18px]">
               {cartAmount(cart)}
             </span>
           </div>

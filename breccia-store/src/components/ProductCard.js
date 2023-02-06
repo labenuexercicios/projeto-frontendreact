@@ -23,7 +23,9 @@ const ProductCard = ({ product }) => {
       </div>
       <div className="flex flex-col items-center">
         <Link to={`/product/${product.id}`}>
-          <h2 className="uppercase">{product.name}</h2>
+          <h2 className="hover:font-semibold cursor-pointer uppercase">
+            {product.name}
+          </h2>
         </Link>
         <p className="font-semibold">${product.price.toFixed(2)}</p>
         <p className="font-thin text-sm">{product.category}</p>

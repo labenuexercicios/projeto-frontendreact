@@ -9,7 +9,7 @@ const CreateAccount = () => {
       <div>
         <h1 className="py-2 font-semibold text-3xl">Create Account</h1>
       </div>
-      <form>
+      <form onSubmit={sendRegistration}>
         {inputs.map((input, index) => {
           return (
             <>
@@ -36,7 +36,7 @@ const CreateAccount = () => {
         </ul>
 
         <button
-          onClick={sendRegistration}
+          type="submit"
           className="uppercase bg-black py-3 w-full  text-white"
         >
           Create Account

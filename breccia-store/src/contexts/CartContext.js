@@ -1,5 +1,4 @@
 import { useEffect, createContext, useState, useContext } from "react";
-import { useLocation } from "react-router-dom";
 
 import { SidebarContext } from "../contexts/SidebarContext";
 export const CartContext = createContext();
@@ -7,6 +6,19 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const { setOpen, handleClose } = useContext(SidebarContext);
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  }, [cart]);
+
+  useEffect(() => {
+    const cartStorage = localStorage.getItem("cart");
+    if (cartStorage) {
+      setCart(JSON.parse(cartStorage));
+    }
+  }, []);
 
   const addToCart = (product, id) => {
     setOpen(true);
@@ -23,7 +35,6 @@ const CartProvider = ({ children }) => {
         }
       });
       setCart(newCart);
-      //@TODO: salvar cart no localStorage
     } else {
       setCart([...cart, newProduct]);
     }
@@ -34,13 +45,14 @@ const CartProvider = ({ children }) => {
       return item.id !== id;
     });
     setCart(newCart);
-    //@TODO: remover item id do carrinho
+
+    localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
   const clearCart = () => {
     setCart([]);
+    localStorage.removeItem("cart");
     handleClose();
-    //@TODO: remover localStorage de cart
   };
 
   const plusAmount = (id) => {
@@ -58,7 +70,6 @@ const CartProvider = ({ children }) => {
         }
       });
       setCart(newCart);
-      //@TODO: salvar cart no localStorage
     } else {
       setCart([...cart, newProduct]);
     }

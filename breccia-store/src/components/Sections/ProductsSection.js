@@ -11,15 +11,15 @@ const ProductsSection = () => {
   return (
     <div className="container">
       <div className="flex flex-col items-center">
-        <div className="pt-4 w-full  lg:flex lg:justify-center">
+        <div className="pt-4 w-full  lg:flex lg:justify-center relative">
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="z-20 w-full lg:w-[260px] relative px-2 focus:outline-none border-b  "
+            className="z-20 w-full lg:w-[260px]  px-2 focus:outline-none border-b  "
             placeholder="Search"
           ></input>
 
-          <FiSearch className="cursor-pointer absolute right-2 -bottom-[44px] lg:sticky z-20" />
+          <FiSearch className="cursor-pointer absolute right-2 bottom-1 lg:sticky z-20" />
         </div>
         <div className="pt-4 text-sm flex items-center gap-1 ">
           <p>Select by:</p>
