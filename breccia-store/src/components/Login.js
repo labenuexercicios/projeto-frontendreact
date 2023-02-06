@@ -20,7 +20,7 @@ const Login = () => {
   ];
 
   return (
-    <div className=" flex flex-col gap-5 justify-center pt-8 mb-32">
+    <div className=" flex flex-col gap-5 justify-center py-8 px-4 mb-32">
       <div>
         <h1 className="py-2 font-semibold text-3xl">Login</h1>
         <div className="flex gap-1 text-sm flex-wrap">
