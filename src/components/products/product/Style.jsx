@@ -140,7 +140,6 @@ export const SimilarTitle = styled.div`
   color: black;
   font-size: xx-large;
   font-weight: bold;
-  text-decoration: line-through;
 `;
 export const SimilarProducts = styled.div`
   display: flex;

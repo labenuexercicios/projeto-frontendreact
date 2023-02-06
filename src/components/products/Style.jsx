@@ -5,20 +5,17 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   align-items: center;
   width: 1000px;
-  height: 800px;
   margin-top: 20px;
+  margin-bottom: 20px;
 `;
 export const CarouselStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
   overflow-x: auto;
-  height: 750px;
   ::-webkit-scrollbar {
     display: none;
   }
   gap: 20px;
-  max-width: 745px;
-  min-width: 745px;
 `;
 export const TitleStyled = styled.div`
   height: 50px;
@@ -32,7 +29,7 @@ export const TitleStyled = styled.div`
 `;
 export const ProductsStyled = styled.div`
   display: flex;
-  height: 800px;
+  gap: 10px;
 `;
 export const ProductStyled = styled.div`
   display: flex;
@@ -42,6 +39,7 @@ export const ProductsListStyled = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 `;
 export const OrdenationAndSelected = styled.div`
   display: flex;

@@ -4,9 +4,9 @@ export const ConteinerStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 1000px;
-  height: 800px;
   margin-top: 20px;
   gap: 20px;
+  margin-bottom: 20px;
 `;
 export const ProductsGeneral = styled.div`
   display: flex;

@@ -5,7 +5,6 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   margin-top: 10px;
   width: 230px;
-  height: 400px;
   gap: 10px;
 `;
 export const FilterTitleStyled = styled.div`

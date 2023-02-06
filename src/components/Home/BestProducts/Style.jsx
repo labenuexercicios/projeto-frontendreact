@@ -4,7 +4,6 @@ export const ContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 800px;
 `;
 export const CarouselStyled = styled.div`
   background-color: azure;

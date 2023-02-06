@@ -1,6 +1,3 @@
-import { useNavigate } from "react-router-dom";
-import { goToProduct } from "../../Router/Coordinator";
-
 import {
   ProductsListStyled,
   ContainerStyled,

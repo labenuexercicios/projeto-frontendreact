@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import { ContainerStyled } from "./GlobalStyle";
 
 function App() {
-  localStorage.setItem("shoppingcart", JSON.stringify(ShoppingCartDB.products));
   localStorage.setItem("categories", JSON.stringify(categoriesDB.categories));
   localStorage.setItem("products", JSON.stringify(productsDB.products));
   localStorage.setItem("brands", JSON.stringify(brandsDB.brands));

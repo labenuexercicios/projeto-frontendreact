@@ -1,5 +1,5 @@
 import {
-  SelectedFiltersStyled,
+  Line,
   ContainerStyled,
   ButtonFilterStyled,
   ButtonsStyled,
@@ -124,7 +124,7 @@ export default function SelectedFilters(props) {
           <div></div>
         )}
       </ButtonsStyled>
-      <SelectedFiltersStyled></SelectedFiltersStyled>
+      <Line></Line>
     </ContainerStyled>
   );
 }
