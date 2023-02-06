@@ -24,7 +24,9 @@ const Payment = () => {
               <div className="flex items-center gap-1">
                 <img className="w-20" src={product.img} />
                 <div className="flex flex-col gap-1">
-                  <p className=" font-semibold text-sm">{product.name}</p>
+                  <p className=" font-semibold text-sm">
+                    {product.name} ({product.amount})
+                  </p>
 
                   <p className="font-thin text-xs">{product.category}</p>
                   <div className="flex items-center gap-3 pt-1">

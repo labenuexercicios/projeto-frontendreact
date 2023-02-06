@@ -9,7 +9,6 @@ const SidebarProvider = ({ children }) => {
 
   const handleClose = () => {
     setOpen(false);
-    setFormPage(0);
   };
 
   return (
