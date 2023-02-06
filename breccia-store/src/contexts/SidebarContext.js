@@ -5,7 +5,6 @@ export const SidebarContext = createContext();
 
 const SidebarProvider = ({ children }) => {
   const [open, setOpen] = useState(false);
-  const { setFormPage } = useContext(CheckoutContext);
 
   const handleClose = () => {
     setOpen(false);
