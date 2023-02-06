@@ -30,6 +30,8 @@ import {
 import { StarsRating } from "../../starsRating/StarsRating";
 import favorite from "/Img/general/Favorite.png";
 import ProductCard from "../productCard/ProductCard";
+import { goToShoppingCart } from "../../../Router/Coordinator";
+import { useNavigate } from "react-router-dom";
 export default function ProductViewer(props) {
   const product = JSON.parse(localStorage.getItem("products")).filter(
     (item) => item.id == props.idProduct
@@ -40,7 +42,12 @@ export default function ProductViewer(props) {
       item.idCategory == product[0].idCategory && item.id !== product[0].id
   );
   const [mainImage, setMainImage] = useState(product[0]?.images[0]);
-  alert(mainImage);
+
+  const navigate = useNavigate();
+  function handlePurchaseClick() {
+    goToShoppingCart(navigate, props.idProduct);
+  }
+
   return (
     <ContainerStyled>
       <ProductDescription>{product[0].description}</ProductDescription>
@@ -79,6 +86,7 @@ export default function ProductViewer(props) {
             ) : (
               <div></div>
             )}
+
             <ProductPriceContainer>
               {"U$ " +
                 (Number(product[0].price) -
@@ -97,7 +105,9 @@ export default function ProductViewer(props) {
             </CredCardInstallment>
           </ProductPriceDiscount>
           <PurchaseButtonContainer>
-            <PurchaseButton>Purchase</PurchaseButton>
+            <PurchaseButton onClick={handlePurchaseClick}>
+              Purchase
+            </PurchaseButton>
           </PurchaseButtonContainer>
         </ProductLeftDv>
       </ProductContainer>

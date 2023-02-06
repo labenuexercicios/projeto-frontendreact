@@ -7,7 +7,7 @@ export const ContainerStyled = styled.div`
   margin-top: 20px;
   align-items: flex-start;
   width: 850px;
-  height: 1000px;
+  height: 950px;
   gap: 20px;
 `;
 
@@ -140,6 +140,7 @@ export const SimilarTitle = styled.div`
   color: black;
   font-size: xx-large;
   font-weight: bold;
+  text-decoration: line-through;
 `;
 export const SimilarProducts = styled.div`
   display: flex;

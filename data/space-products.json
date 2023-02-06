@@ -101,7 +101,7 @@
       "quantity": 25,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 2,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -116,7 +116,7 @@
       "quantity": 40,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 2,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -146,7 +146,7 @@
       "quantity": 32,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 3,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -176,7 +176,7 @@
       "quantity": 40,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 3,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -191,7 +191,7 @@
       "quantity": 11,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 4,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -206,7 +206,7 @@
       "quantity": 22,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 4,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -236,7 +236,7 @@
       "quantity": 2,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 4,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -266,7 +266,7 @@
       "quantity": 25,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 5,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -311,7 +311,7 @@
       "quantity": 1,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 6,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -326,7 +326,7 @@
       "quantity": 6,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 6,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -408,7 +408,7 @@
       "size": "Small",
       "color": "Blue",
       "idBrand": 2,
-      "quantity": 35,
+      "quantity": 5,
       "images": [
         "/Img/Products/space suit/5.png",
         "/Img/Products/space suit/6.png",
@@ -416,7 +416,7 @@
         "/Img/Products/space suit/8.png"
       ],
       "idCategory": 7,
-      "discount": 0,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
