@@ -9,7 +9,7 @@ const ProductsSection = () => {
   const [filter, setFilter] = useState("");
 
   return (
-    <div className="container">
+    <div className="mx-auto container">
       <div className="flex flex-col items-center">
         <div className="pt-4 w-full  lg:flex lg:justify-center relative">
           <input
