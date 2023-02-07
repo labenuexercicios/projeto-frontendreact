@@ -24,5 +24,5 @@ export const A = styled.a`
   font-size: medium;
   padding: 15px;
   text-decoration: none;
-  color: white;
+  color: black;
 `;

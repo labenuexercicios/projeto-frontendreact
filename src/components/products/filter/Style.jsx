@@ -42,14 +42,12 @@ export const LineBrand = styled.div`
   font-size: 1px;
 `;
 
-export const ButtonItemStyled = styled.button`
+export const ButtonItemStyled = styled.div`
   padding-left: 15px;
   padding-right: 15px;
   text-align: left;
   width: fit-content;
   height: 20px;
-  background-color: #fff;
-  border: 0 solid #e2e8f0;
   box-sizing: border-box;
   color: #0d172a;
   cursor: pointer;
@@ -67,14 +65,12 @@ export const PriceImputStyled = styled.input`
   width: 50px;
   height: 20px;
 `;
-export const ConfirmationButton = styled.button`
+export const ConfirmationButton = styled.div`
   padding-left: 5px;
   padding-right: 5px;
   text-align: left;
   width: fit-content;
   height: 20px;
-  background-color: #fff;
-  border: 0 solid #e2e8f0;
   box-sizing: border-box;
   color: #0d172a;
   cursor: pointer;

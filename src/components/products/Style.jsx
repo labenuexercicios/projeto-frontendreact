@@ -4,7 +4,7 @@ export const ContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1000px;
+  width: 800px;
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -15,7 +15,7 @@ export const CarouselStyled = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
-  gap: 20px;
+  gap: 45px;
 `;
 export const TitleStyled = styled.div`
   height: 50px;

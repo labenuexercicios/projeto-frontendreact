@@ -12,7 +12,7 @@ export const ContainerStyled = styled.div`
   justify-content: flex-end;
   height: 88px;
   min-height: 88px;
-  width: 595px;
+  width: 500px;
   gap: 12px;
 `;
 export const ButtonFilterStyled = styled.div`

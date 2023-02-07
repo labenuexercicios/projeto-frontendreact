@@ -21,7 +21,7 @@ export default function SelectedFilters(props) {
     });
   }
 
-  function DeleteBrand(index) {
+  function deleteBrand(index) {
     const brands = [...props.filters.brands];
     const categorys = [...props.filters.Category];
     const price = props.filters.price;
@@ -63,11 +63,17 @@ export default function SelectedFilters(props) {
   let priceDescription = "";
   if (props.filters.price !== null && props.filters.price !== undefined) {
     if (props.filters.price.min !== "" && props.filters.price.max !== "")
-      priceDescription = `Price between ${props.filters.price.min} and ${props.filters.price.max}`;
+      priceDescription = `Price between U$ ${Number(
+        props.filters.price.min
+      ).toFixed(2)} and U$ ${Number(props.filters.price.max).toFixed(2)}`;
     if (props.filters.price.min == "" && props.filters.price.max !== "")
-      priceDescription = `price less than ${props.filters.price.max}`;
+      priceDescription = `price less than U$ ${Number(
+        props.filters.price.max
+      ).toFixed(2)}`;
     if (props.filters.price.min !== "" && props.filters.price.max == "")
-      priceDescription = `Price greater than ${props.filters.price.min}`;
+      priceDescription = `Price greater than U$ ${Number(
+        props.filters.price.min
+      ).toFixed(2)}`;
   }
 
   return (
@@ -96,7 +102,7 @@ export default function SelectedFilters(props) {
             return (
               <ButtonFilterStyled
                 key={index}
-                onClick={() => DeleteBrand(index)}
+                onClick={() => deleteBrand(index)}
               >
                 {item.name}
               </ButtonFilterStyled>

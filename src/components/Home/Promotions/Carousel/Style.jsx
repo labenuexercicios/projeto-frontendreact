@@ -5,11 +5,11 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   margin-top: 10px;
   height: 400px;
+  width: 1033.8px;
   gap: 10px;
   overflow: hidden;
 `;
 export const CarouselStyled = styled.div`
-  background-size: cover;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -18,7 +18,7 @@ export const CarouselStyled = styled.div`
     display: none;
   }
   pointer-events: none;
-  background-color: #5967e8;
+  background-color: #dadac6;
 `;
 export const ButtonAction = styled.img`
   width: 30px;
@@ -26,11 +26,14 @@ export const ButtonAction = styled.img`
 `;
 export const GeneralDataStyled = styled.div`
   display: flex;
+  background-size: cover;
 `;
 export const DataStyled = styled.div`
   display: flex;
   gap: 10px;
-  width: 1000px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 export const NameStyled = styled.span`
   display: flex;
@@ -43,12 +46,12 @@ export const DataDescription = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
-  color: white;
+  color: black;
   justify-content: center;
 `;
 export const DiscountStyled = styled.div`
   font-size: 3rem;
-  color: yellow;
+  color: #3f3f04;
   grid-column: 1;
   grid-row: 1;
 `;
@@ -61,15 +64,16 @@ export const Img = styled.img`
   box-shadow: 5px 5px black;
 `;
 export const TytleStyled = styled.div`
-  background-color: #5967e8;
+  background-color: #dadac6;
   height: 70px;
   width: 1000px;
   align-self: center;
-  color: white;
+  color: black;
   font-size: xx-large;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
   gap: 10px;
 `;
 export const BodyCarouselStyed = styled.div`
@@ -77,7 +81,7 @@ export const BodyCarouselStyed = styled.div`
   align-items: center;
 `;
 export const SpecialPromotionsStyled = styled.div`
-  color: yellow;
+  color: #3f3f04;
   font-size: 3rem;
 `;
 export const InnerPriceStyled = styled.div`

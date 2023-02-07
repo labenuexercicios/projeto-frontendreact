@@ -3,37 +3,44 @@
     {
       "id": 1,
       "name": "Gloves",
-      "description": "Protective gloves designed for use in a vacuum environment."
+      "description": "Protective gloves designed for use in a vacuum environment.",
+      "image": "/Img/Products/gloves/1.jpg"
     },
     {
       "id": 2,
       "name": "Helmet",
-      "description": "A protective head covering designed for use in a vacuum environment."
+      "description": "A protective head covering designed for use in a vacuum environment.",
+      "image": "/Img/Products/helmets/6.png"
     },
     {
       "id": 3,
       "name": "Boots",
-      "description": "Protective footwear designed for use in a vacuum environment."
+      "description": "Protective footwear designed for use in a vacuum environment.",
+      "image": "/Img/Products/boots/5.png"
     },
     {
       "id": 4,
       "name": "Legs",
-      "description": "Protective leg coverings designed for use in a vacuum environment."
+      "description": "Protective leg coverings designed for use in a vacuum environment.",
+      "image": "/Img/Products/legs/2.png"
     },
     {
       "id": 5,
-      "name": "Life Support System",
-      "description": "A system of equipment that provides life support for an astronaut in a vacuum environment."
+      "name": "Life Support",
+      "description": "A system of equipment that provides life support for an astronaut in a vacuum environment.",
+      "image": "/Img/Products/life suport system/1.png"
     },
     {
       "id": 6,
       "name": "Visor",
-      "description": "A protective covering for the face designed for use in a vacuum environment."
+      "description": "A protective covering for the face designed for use in a vacuum environment.",
+      "image": "/Img/Products/visor/12.png"
     },
     {
       "id": 7,
       "name": "Space Suit",
-      "description": "A full body suit designed for use in a vacuum environment that includes all necessary life support systems and protective coverings."
+      "description": "A full body suit designed for use in a vacuum environment that includes all necessary life support systems and protective coverings.",
+      "image": "/Img/Products/space suit/7.png"
     }
   ]
 }

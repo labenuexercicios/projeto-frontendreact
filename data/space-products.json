@@ -11,7 +11,7 @@
       "quantity": 10,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 1,
-      "discount": 30,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -26,7 +26,7 @@
       "quantity": 20,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 1,
-      "discount": 10,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -41,7 +41,7 @@
       "quantity": 13,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 1,
-      "discount": 30,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -56,7 +56,7 @@
       "quantity": 24,
       "images": ["/Img/Products/visor/3.png"],
       "idCategory": 1,
-      "discount": 80,
+      "discount": 5,
       "rating": 3,
       "installment": 8
     },
@@ -69,7 +69,12 @@
       "color": "White",
       "idBrand": 1,
       "quantity": 30,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/helmets/5.png",
+        "/Img/Products/helmets/6.png",
+        "/Img/Products/helmets/7.png",
+        "/Img/Products/helmets/8.png"
+      ],
       "idCategory": 2,
       "discount": 10,
       "rating": 3,
@@ -84,7 +89,12 @@
       "color": "Orange",
       "idBrand": 1,
       "quantity": 32,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/helmets/13.png",
+        "/Img/Products/helmets/14.png",
+        "/Img/Products/helmets/15.png",
+        "/Img/Products/helmets/16.png"
+      ],
       "idCategory": 2,
       "discount": 30,
       "rating": 3,
@@ -99,7 +109,12 @@
       "color": "Blue",
       "idBrand": 2,
       "quantity": 25,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/helmets/9.png",
+        "/Img/Products/helmets/10.png",
+        "/Img/Products/helmets/11.png",
+        "/Img/Products/helmets/12.png"
+      ],
       "idCategory": 2,
       "discount": 5,
       "rating": 3,
@@ -114,7 +129,12 @@
       "color": "Black",
       "idBrand": 3,
       "quantity": 40,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/helmets/1.png",
+        "/Img/Products/helmets/2.png",
+        "/Img/Products/helmets/3.png",
+        "/Img/Products/helmets/4.png"
+      ],
       "idCategory": 2,
       "discount": 5,
       "rating": 3,
@@ -129,7 +149,12 @@
       "color": "White",
       "idBrand": 1,
       "quantity": 10,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/boots/5.png",
+        "/Img/Products/boots/6.png",
+        "/Img/Products/boots/7.png",
+        "/Img/Products/boots/8.png"
+      ],
       "idCategory": 3,
       "discount": 30,
       "rating": 3,
@@ -144,7 +169,12 @@
       "color": "Orange",
       "idBrand": 1,
       "quantity": 32,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/boots/13.png",
+        "/Img/Products/boots/14.png",
+        "/Img/Products/boots/15.png",
+        "/Img/Products/boots/16.png"
+      ],
       "idCategory": 3,
       "discount": 5,
       "rating": 3,
@@ -159,7 +189,12 @@
       "color": "Blue",
       "idBrand": 2,
       "quantity": 3,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/boots/9.png",
+        "/Img/Products/boots/10.png",
+        "/Img/Products/boots/11.png",
+        "/Img/Products/boots/12.png"
+      ],
       "idCategory": 3,
       "discount": 40,
       "rating": 3,
@@ -174,7 +209,12 @@
       "color": "Black",
       "idBrand": 3,
       "quantity": 40,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/boots/1.png",
+        "/Img/Products/boots/2.png",
+        "/Img/Products/boots/3.png",
+        "/Img/Products/boots/4.png"
+      ],
       "idCategory": 3,
       "discount": 5,
       "rating": 3,
@@ -189,7 +229,12 @@
       "color": "White",
       "idBrand": 1,
       "quantity": 11,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/legs/1.png",
+        "/Img/Products/legs/2.png",
+        "/Img/Products/legs/3.png",
+        "/Img/Products/legs/4.png"
+      ],
       "idCategory": 4,
       "discount": 5,
       "rating": 3,
@@ -204,7 +249,12 @@
       "color": "Orange",
       "idBrand": 1,
       "quantity": 22,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/legs/5.png",
+        "/Img/Products/legs/6.png",
+        "/Img/Products/legs/7.png",
+        "/Img/Products/legs/8.png"
+      ],
       "idCategory": 4,
       "discount": 5,
       "rating": 3,
@@ -219,7 +269,12 @@
       "color": "Blue",
       "idBrand": 2,
       "quantity": 30,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/legs/9.png",
+        "/Img/Products/legs/10.png",
+        "/Img/Products/legs/11.png",
+        "/Img/Products/legs/12.png"
+      ],
       "idCategory": 4,
       "discount": 40,
       "rating": 3,
@@ -234,7 +289,12 @@
       "color": "Black",
       "idBrand": 3,
       "quantity": 2,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/legs/13.png",
+        "/Img/Products/legs/14.png",
+        "/Img/Products/legs/15.png",
+        "/Img/Products/legs/16.png"
+      ],
       "idCategory": 4,
       "discount": 5,
       "rating": 3,
@@ -309,7 +369,12 @@
       "color": "White",
       "idBrand": 1,
       "quantity": 1,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/visor/5.png",
+        "/Img/Products/visor/6.png",
+        "/Img/Products/visor/7.png",
+        "/Img/Products/visor/8.png"
+      ],
       "idCategory": 6,
       "discount": 5,
       "rating": 3,
@@ -324,7 +389,12 @@
       "color": "Orange",
       "idBrand": 1,
       "quantity": 6,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/visor/13.png",
+        "/Img/Products/visor/14.png",
+        "/Img/Products/visor/15.png",
+        "/Img/Products/visor/16.png"
+      ],
       "idCategory": 6,
       "discount": 5,
       "rating": 3,
@@ -339,7 +409,12 @@
       "color": "Blue",
       "idBrand": 2,
       "quantity": 36,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/visor/9.png",
+        "/Img/Products/visor/10.png",
+        "/Img/Products/visor/11.png",
+        "/Img/Products/visor/12.png"
+      ],
       "idCategory": 6,
       "discount": 30,
       "rating": 3,
@@ -354,7 +429,12 @@
       "color": "Black",
       "idBrand": 3,
       "quantity": 45,
-      "images": ["/Img/Products/visor/3.png"],
+      "images": [
+        "/Img/Products/visor/1.png",
+        "/Img/Products/visor/2.png",
+        "/Img/Products/visor/3.png",
+        "/Img/Products/visor/4.png"
+      ],
       "idCategory": 6,
       "discount": 20,
       "rating": 3,

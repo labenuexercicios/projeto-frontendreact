@@ -24,10 +24,6 @@ export default function Header() {
           <UserLogin />
           <GeneralItens />
         </ItensStyled>
-
-        <NavStyled>
-          <Nav />
-        </NavStyled>
       </ItensContainerStyled>
     </HeaderStyled>
   );

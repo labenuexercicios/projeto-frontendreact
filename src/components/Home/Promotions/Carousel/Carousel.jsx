@@ -19,7 +19,9 @@ import { PriceStyled } from "./Style";
 import { PriceDescount } from "./Style";
 
 export default function Carrousel() {
-  const products = JSON.parse(localStorage.getItem("products"));
+  const products = JSON.parse(localStorage.getItem("products")).filter(
+    (e) => e.discount > 20
+  );
 
   const [intervalId, setIntervalId] = useState(null);
 
@@ -35,7 +37,7 @@ export default function Carrousel() {
     }, [intervalId]);
   };
 
-  startInterval(10000000);
+  startInterval(2000);
 
   const carousel = useRef(null);
 
@@ -78,10 +80,15 @@ export default function Carrousel() {
                     <br />
                     <PriceStyled>
                       <div>Price:</div>
-                      <InnerPriceStyled>U$ {item.price}</InnerPriceStyled>
+                      <InnerPriceStyled>
+                        U$ {item.price.toFixed(2)}
+                      </InnerPriceStyled>
                       <PriceDescount>
                         U${" "}
-                        {item.price - item.price * Number("0." + item.discount)}
+                        {(
+                          item.price -
+                          item.price * Number("0." + item.discount)
+                        ).toFixed(2)}
                       </PriceDescount>
                     </PriceStyled>
                     <br />

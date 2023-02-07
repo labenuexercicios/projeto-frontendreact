@@ -10,8 +10,8 @@ export default function Ordenation(props) {
         }}
       >
         <option></option>
-        <option>Rising price</option>
-        <option>Decreasing price</option>
+        <option>Sort by lowest price </option>
+        <option>Sort by highest price</option>
       </DropDowOrdenation>
       <Line></Line>
     </ContainerStyled>

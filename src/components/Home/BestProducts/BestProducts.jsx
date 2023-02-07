@@ -6,7 +6,9 @@ import { CarouselStyled } from "./Style";
 export default function BestProducts() {
   const carousel = useRef(null);
 
-  const products = JSON.parse(localStorage.getItem("products")).slice(0, 8);
+  const products = JSON.parse(localStorage.getItem("products"))
+    .filter((e) => e.idCategory !== 1)
+    .slice(0, 6);
 
   return (
     <ContainerStyled>

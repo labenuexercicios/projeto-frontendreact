@@ -7,7 +7,6 @@ export const ContainerStyled = styled.div`
   margin-top: 20px;
   align-items: flex-start;
   width: 850px;
-  height: 950px;
   gap: 20px;
 `;
 
@@ -32,7 +31,7 @@ export const ProductDescription = styled.div`
 `;
 export const ProductContainer = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 30px;
 `;
 export const ProductPrice = styled.div`
   color: black;
@@ -130,9 +129,9 @@ export const FavoriteImage = styled.img`
 `;
 export const SimilarContainer = styled.div`
   width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
   gap: 20px;
 `;
 export const ProductCardContainer = styled.div``;
@@ -143,5 +142,5 @@ export const SimilarTitle = styled.div`
 `;
 export const SimilarProducts = styled.div`
   display: flex;
-  gap: 65px;
+  gap: 15px;
 `;

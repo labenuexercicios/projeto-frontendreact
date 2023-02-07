@@ -7,7 +7,7 @@ import {
 import { CarouselStyled } from "./Style";
 import Filter from "./filter/Filter";
 import SelectedFilters from "./filter/selectedFilter/SelectedFilters";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Ordenation from "./ordenation/Ordenation";
 import ProductCard from "./productCard/ProductCard";
 
@@ -30,33 +30,40 @@ export default function ProductsViewer(props) {
     price: {},
   });
 
+  useEffect(() => {
+    setFilters({
+      searchKey: props.searchKey,
+      Category:
+        categories == ""
+          ? []
+          : [{ id: props.idCategory, name: categories[0].name }],
+      brands: [],
+      price: {},
+    });
+  }, [props.searchKey]);
+
   function filterProducts(product) {
     let categories = true;
     let brands = true;
     let price = true;
     let searchKey = true;
 
-    searchKey =
-      filters.searchKey !== null &&
-      filters.searchKey !== undefined &&
-      filters.searchKey !== ""
-        ? product.name.toUpperCase().includes(filters.searchKey.toUpperCase())
-        : true;
-
-    categories =
-      filters.Category !== null &&
-      filters.Category !== undefined &&
-      filters.Category.length > 0
-        ? filters.Category.some(
-            (el) => Number(el.id) == Number(product.idCategory)
-          )
-        : true;
-    brands =
-      filters.brands !== null &&
-      filters.brands !== undefined &&
-      filters.brands.length > 0
-        ? filters.brands.some((el) => Number(el.id) == Number(product.idBrand))
-        : true;
+    if (product.name.trim() !== "") {
+      searchKey = product.name
+        .trim()
+        .toUpperCase()
+        .includes(filters.searchKey.toUpperCase());
+    }
+    if (filters.Category.length > 0) {
+      categories = filters.Category.some(
+        (el) => Number(el.id) == Number(product.idCategory)
+      );
+    }
+    if (filters.brands.length > 0) {
+      brands = filters.brands.some(
+        (el) => Number(el.id) == Number(product.idBrand)
+      );
+    }
 
     if (
       filters.price !== null &&
@@ -77,24 +84,14 @@ export default function ProductsViewer(props) {
     }
 
     return (
-      searchKey &&
       categories &&
       brands &&
+      searchKey &&
       price &&
-      !(
-        (filters.Category == null &&
-          filters.brands == null &&
-          filters.price == null &&
-          filters.searchKey == null) ||
-        (filters.Category == undefined &&
-          filters.brands == undefined &&
-          filters.price == undefined &&
-          filters.searchKey == undefined) ||
-        (filters.Category.length == 0 &&
-          filters.brands.length == 0 &&
-          JSON.stringify(filters.price) == "{}" &&
-          filters.searchKey == "")
-      )
+      (filters.Category.length !== 0 ||
+        filters.brands.length !== 0 ||
+        JSON.stringify(filters.price) !== "{}" ||
+        filters.searchKey.trim() !== "")
     );
   }
 
@@ -113,7 +110,7 @@ export default function ProductsViewer(props) {
             {products
               .filter(filterProducts)
               .sort((atual, proximo) => {
-                if (ordena === "Rising price") {
+                if (ordena === "Sort by lowest price") {
                   if (atual.price < proximo.price) {
                     return -1;
                   } else if (atual.price > proximo.price) {
@@ -123,7 +120,7 @@ export default function ProductsViewer(props) {
                   }
                 }
 
-                if (ordena === "Decreasing price") {
+                if (ordena === "Sort by highest price") {
                   if (atual.price > proximo.price) {
                     return -1;
                   } else if (atual.price < proximo.price) {

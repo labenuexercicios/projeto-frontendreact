@@ -3,10 +3,8 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import categoriesDB from "../data/categories.json";
 import productsDB from "../data/space-products.json";
-import ShoppingCartDB from "../data/shoppingCart.json";
 import brandsDB from "../data/Brands.json";
 import { Router } from "./Router/Router";
-import { useEffect } from "react";
 import { ContainerStyled } from "./GlobalStyle";
 
 function App() {

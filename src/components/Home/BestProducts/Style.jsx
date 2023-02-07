@@ -4,17 +4,16 @@ export const ContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 `;
 export const CarouselStyled = styled.div`
-  background-color: azure;
   display: flex;
   flex-wrap: wrap;
   overflow-x: auto;
-  height: 750px;
   ::-webkit-scrollbar {
     display: none;
   }
-  gap: 20px;
+  gap: 50px;
 `;
 export const DataStyled = styled.div`
   background-color: #e1e1eb;
@@ -41,8 +40,7 @@ export const TitleStyled = styled.div`
   text-align: start;
 `;
 export const ProductsStyled = styled.div`
-  margin-left: 30px;
-  height: 800px;
+  margin-left: 15px;
 `;
 export const ProductTitleStyled = styled.div`
   color: black;

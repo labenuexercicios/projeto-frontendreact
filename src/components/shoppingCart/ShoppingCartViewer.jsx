@@ -38,6 +38,7 @@ import {
   SummaryInstallment,
   SummaryTotalInstallmentConteiner,
   PurchaseButton,
+  ButtonCancel,
 } from "./Style";
 import subtraction from "/Img/general/Subtraction.png";
 import addition from "/Img/general/Addition.png";
@@ -93,8 +94,6 @@ export default function ShoppingCartViewer(props) {
           Number(product[0].price) * Number("0." + product[0].discount),
       },
     ]);
-
-    console.log(shoppingCart);
   }
 
   function handleIncrement(product, index, increment) {
@@ -124,6 +123,14 @@ export default function ShoppingCartViewer(props) {
         return updatedItems;
       });
     }
+  }
+
+  function handleCalcelClick(e, index) {
+    setShoppingCart(
+      shoppingCart.filter((e) => {
+        return e.idProduct !== shoppingCart.slice(index, 1).idProduct;
+      })
+    );
   }
 
   return (
@@ -176,18 +183,26 @@ export default function ShoppingCartViewer(props) {
 
                   <PriceConteiner>
                     <PriceWithoutDiscount>
-                      U$ {item.price * item.quantity}
+                      U$ {(item.price * item.quantity).toFixed(2)}
                     </PriceWithoutDiscount>
                     <PriceWithDiscount>
-                      {Number(item.priceWithDiscount) * Number(item.quantity)}
+                      U${" "}
+                      {(
+                        Number(item.priceWithDiscount) * Number(item.quantity)
+                      ).toFixed(2)}
                     </PriceWithDiscount>
                     <PriceInstallment>
-                      {item.installment} x{" "}
-                      {(item.priceWithDiscount * Number(item.quantity)) /
-                        Number(item.installment)}{" "}
+                      {item.installment} x U${" "}
+                      {(
+                        (item.priceWithDiscount * Number(item.quantity)) /
+                        Number(item.installment)
+                      ).toFixed(2)}{" "}
                       on cred card
                     </PriceInstallment>
                   </PriceConteiner>
+                  <ButtonCancel onClick={() => handleCalcelClick(item, index)}>
+                    Remove
+                  </ButtonCancel>
                 </ProductConteiner>
               </ProductGeneral>
             </ProductsConteiner>
@@ -209,13 +224,15 @@ export default function ShoppingCartViewer(props) {
           </SummaryQuantity>
 
           <SummaryPrice>
-            U$ {console.log(shoppingCart)}
-            {shoppingCart.reduce(
-              (accumulator, currentValue) =>
-                accumulator +
-                currentValue.priceWithDiscount * currentValue.quantity,
-              0
-            )}
+            U$
+            {shoppingCart
+              .reduce(
+                (accumulator, currentValue) =>
+                  accumulator +
+                  currentValue.priceWithDiscount * currentValue.quantity,
+                0
+              )
+              .toFixed(2)}
           </SummaryPrice>
         </SummaryTotalPrducts>
         <Line></Line>
@@ -224,12 +241,14 @@ export default function ShoppingCartViewer(props) {
             <SummaryTotalTitle>Total</SummaryTotalTitle>
             <SummaryTotalPrice>
               U${" "}
-              {shoppingCart.reduce(
-                (accumulator, currentValue) =>
-                  accumulator +
-                  currentValue.priceWithDiscount * currentValue.quantity,
-                0
-              )}
+              {shoppingCart
+                .reduce(
+                  (accumulator, currentValue) =>
+                    accumulator +
+                    currentValue.priceWithDiscount * currentValue.quantity,
+                  0
+                )
+                .toFixed(2)}
             </SummaryTotalPrice>
           </SummaryTotalConteiner>
 
@@ -237,12 +256,14 @@ export default function ShoppingCartViewer(props) {
             <SummaryInstallment>
               {Math.min(...shoppingCart.map((obj) => obj.installment))} x U$
             </SummaryInstallment>
-            {shoppingCart.reduce(
-              (accumulator, currentValue) =>
-                accumulator +
-                currentValue.priceWithDiscount * currentValue.quantity,
-              0
-            ) / Math.min(...shoppingCart.map((obj) => obj.installment))}{" "}
+            {(
+              shoppingCart.reduce(
+                (accumulator, currentValue) =>
+                  accumulator +
+                  currentValue.priceWithDiscount * currentValue.quantity,
+                0
+              ) / Math.min(...shoppingCart.map((obj) => obj.installment))
+            ).toFixed(2)}{" "}
             on cred card
           </SummaryInstallmentConteiner>
         </SummaryTotalInstallmentConteiner>

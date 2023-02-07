@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ContainerStyled,
   ProductContainer,
@@ -41,7 +41,12 @@ export default function ProductViewer(props) {
     (item) =>
       item.idCategory == product[0].idCategory && item.id !== product[0].id
   );
-  const [mainImage, setMainImage] = useState(product[0]?.images[0]);
+
+  const [mainImage, setMainImage] = useState(product[0].images[0]);
+
+  useEffect(() => {
+    setMainImage(product[0].images[0]);
+  }, [product[0].images[0]]);
 
   const navigate = useNavigate();
   function handlePurchaseClick() {
@@ -78,7 +83,9 @@ export default function ProductViewer(props) {
           <ProductPriceDiscount>
             {product[0].discount > 0 ? (
               <ProductDiscountContainer>
-                <ProductPrice>{"U$ " + product[0].price}</ProductPrice>
+                <ProductPrice>
+                  {"U$ " + product[0].price.toFixed(2)}
+                </ProductPrice>
                 <ProductDiscount>
                   {product[0].discount + "% OFF"}
                 </ProductDiscount>
@@ -89,9 +96,10 @@ export default function ProductViewer(props) {
 
             <ProductPriceContainer>
               {"U$ " +
-                (Number(product[0].price) -
-                  Number(product[0].price) *
-                    Number("0." + product[0].discount))}
+                (
+                  Number(product[0].price) -
+                  Number(product[0].price) * Number("0." + product[0].discount)
+                ).toFixed(2)}
             </ProductPriceContainer>
             <CredCardInstallment>
               <CredCard src="/Img/general/CredCard.png"></CredCard>
@@ -100,7 +108,7 @@ export default function ProductViewer(props) {
                 {(Number(product[0].price) -
                   Number(product[0].price) *
                     Number("0." + product[0].discount)) /
-                  Number(product[0].installment)}
+                  Number(product[0].installment).toFixed(2)}
               </InstallmentContainer>
             </CredCardInstallment>
           </ProductPriceDiscount>

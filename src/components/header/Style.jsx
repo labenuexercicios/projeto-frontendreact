@@ -4,7 +4,12 @@ export const HeaderStyled = styled.header`
   background-size: cover;
   display: flex;
   align-items: center;
-  background-color: #5967e8;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(16, 41, 255, 1) 1%,
+    rgba(255, 255, 255, 1) 100%
+  );
   gap: 20px;
 `;
 export const ItensStyled = styled.div`

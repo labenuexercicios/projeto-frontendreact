@@ -121,7 +121,7 @@ export const PriceWithDiscount = styled.div`
 export const PriceInstallment = styled.div`
   color: black;
   font-size: small;
-  width: 130px;
+  width: 140px;
   text-align: right;
 `;
 export const ColunmProductPrice = styled.div`
@@ -188,4 +188,7 @@ export const PurchaseButton = styled.button`
   color: white;
   font-size: x-large;
   border: none;
+`;
+export const ButtonCancel = styled.div`
+  text-decoration: underline;
 `;
