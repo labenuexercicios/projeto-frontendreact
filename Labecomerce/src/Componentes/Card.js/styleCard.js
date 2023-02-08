@@ -19,6 +19,8 @@ export const StyledCard = styled.div(({produto})=>`
 
 export const StyledH1 = styled.h1`
     color: white;
+    font-family: "Kanit";
+    font-weight: 500;
     /* position: relative; */
     /* opacity: 1; */
 `

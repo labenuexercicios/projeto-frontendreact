@@ -1,22 +1,36 @@
-import { StyledMain, StyledSelect } from "./styleMain"
+import { StyledMain, StyledSelect, StyledButton, StyledCondicionais } from "./styleMain"
 import React from "react"
 import { Card } from "../Card.js/Card"
 import { useState } from "react"
 
 
-export const Main = ({ popUpHandler, produtos }) => {
+export const Main = ({ popUpHandler, produtos, filterHandler, valorMax, valorMin, buscaNome }) => {
 
     const [inputOrdem, setIputOrdem] = useState("")
-    console.log(inputOrdem)
 
     return (
         <StyledMain>
+            <StyledCondicionais>
             <StyledSelect value = {inputOrdem} onChange={(e)=>setIputOrdem(e.target.value)}>
                 <option>Ordenar</option>
                 <option>Mais barato primeiro</option>
                 <option>Mais caro primeiro</option>
             </StyledSelect>
-            {produtos.sort((a,b)=>{
+            <StyledButton onClick={filterHandler}>Filtro</StyledButton>
+            </StyledCondicionais>
+            {produtos.filter((satelite)=>{
+                if(satelite.preco<=valorMax && satelite.preco>=valorMin && satelite.nome.toLowerCase().includes(buscaNome.toLowerCase())){
+                    return satelite
+                }
+                else{
+                if(valorMax == 0 && satelite.preco>=valorMin && satelite.nome.toLowerCase().includes(buscaNome.toLowerCase())){
+                    return satelite
+                }
+                if(satelite.preco<=valorMax && satelite.nome.toLowerCase().includes(buscaNome.toLowerCase())){
+                    return satelite
+                }}
+        
+            }).sort((a,b)=>{
                 if(inputOrdem=="Mais barato primeiro"){
                 if(a.preco>b.preco){
                     return 1

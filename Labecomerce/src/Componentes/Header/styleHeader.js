@@ -12,6 +12,7 @@ export const StyledHeader = styled.header`
     color: black;
     /* background-image: url(${fundo}) ; */
     background-color: white;
+    font-family: 'Kanit', sans-serif;
 `
 
 export const StyledCart = styled.img`

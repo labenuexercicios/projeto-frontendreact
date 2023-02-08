@@ -17,5 +17,21 @@ export const StyledSelect = styled.select`
     border: none;
     border-radius:2px;
     background-color: white;
-    font-family: "Espacial";
+    font-family: 'Kanit', sans-serif;
+`
+
+export const StyledButton = styled.button`
+    margin: 20px;
+    padding: 5px;
+    width: 30vw;
+    align-self: center;
+    border: none;
+    border-radius:2px;
+    background-color: white;
+    font-family: 'Kanit', sans-serif;
+`
+
+export const StyledCondicionais = styled.div`
+    display: flex;
+    justify-content: center;
 `

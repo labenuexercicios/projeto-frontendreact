@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const StyledPopUp = styled.div`
-  display: flex;
+export const StyledPopUpFilter = styled.div`
+display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   width: 80vw;
-  height: 30vh;
+  height: 40vh;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -18,19 +18,12 @@ export const StyledPopUp = styled.div`
   z-index: 10;
   font-family: 'Kanit', sans-serif;
   font-weight: 500;
-
-
-@font-face {
-  font-family: "Espacial";
-  src: url("/../../src/assets/Quantum.otf") format("opentype");
-}
-
 `
 
 export const StyledButton = styled.button`
-  margin: 20px;
+    margin: 20px;
     padding: 5px;
-    width: 38vw;
+    width: 30vw;
     align-self: center;
     border: none;
     border-radius:2px;
@@ -39,3 +32,7 @@ export const StyledButton = styled.button`
     font-family: 'Kanit', sans-serif;
 `
 
+export const StyledButtonSection = styled.div`
+    display: flex;
+    justify-content: center;
+`
