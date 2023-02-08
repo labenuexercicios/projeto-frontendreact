@@ -10,7 +10,7 @@ import { ItensStyled } from "./Style";
 import { NavStyled } from "./Style";
 import { ItensContainerStyled } from "./Style";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <HeaderStyled>
       <BrandLogo />
@@ -22,7 +22,7 @@ export default function Header() {
             <ZipCode />
           </HeaderCenterDiv>
           <UserLogin />
-          <GeneralItens />
+          <GeneralItens shopingCartNumber={props.shopingCartNumber} />
         </ItensStyled>
       </ItensContainerStyled>
     </HeaderStyled>

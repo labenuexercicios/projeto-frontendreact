@@ -23,8 +23,6 @@ export default function ProductCard(props) {
       <ProductTitleStyled>{props.product.name}</ProductTitleStyled>
       <StarsRating rating={props.product.rating} />
       <ProductDescriptionStyled>
-        <div>{props.product.description}</div>
-        <br />
         <ProductPriceStyled>
           <ProductPrice>U$ {props.product.price.toFixed(2)}</ProductPrice>for{" "}
           <ProductPriceDiscount>

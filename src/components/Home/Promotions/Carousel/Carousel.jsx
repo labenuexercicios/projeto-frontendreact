@@ -11,9 +11,7 @@ import NextBtn from "../../../../../public/Img/General/Next.png";
 import PrevBtn from "../../../../../public/Img/General/Prev.png";
 import { DiscountStyled } from "./Style";
 import React, { useState, useEffect } from "react";
-import { TytleStyled } from "./Style";
 import { BodyCarouselStyed } from "./Style";
-import { SpecialPromotionsStyled } from "./Style";
 import { InnerPriceStyled } from "./Style";
 import { PriceStyled } from "./Style";
 import { PriceDescount } from "./Style";
@@ -37,7 +35,7 @@ export default function Carrousel() {
     }, [intervalId]);
   };
 
-  startInterval(2000);
+  startInterval(2000000);
 
   const carousel = useRef(null);
 
@@ -51,18 +49,12 @@ export default function Carrousel() {
 
   return (
     <ContainerStyled>
-      <TytleStyled>
-        Take advantage of our
-        <SpecialPromotionsStyled>SPECIAL PROMOTIONS</SpecialPromotionsStyled>
-        today
-      </TytleStyled>
       <BodyCarouselStyed>
         <ButtonAction
           src={PrevBtn}
           alt="Scroll Left"
           onClick={handleLeftClick}
         ></ButtonAction>
-
         <CarouselStyled ref={carousel}>
           {products.map((item) => {
             return (
@@ -99,7 +91,6 @@ export default function Carrousel() {
             );
           })}
         </CarouselStyled>
-
         <ButtonAction
           src={NextBtn}
           alt="Scroll Right"

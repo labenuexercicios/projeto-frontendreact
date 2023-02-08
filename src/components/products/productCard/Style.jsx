@@ -12,39 +12,35 @@ export const ProductPriceStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5967e8;
+  background-color: black;
+  color: white;
   height: 30px;
-  width: 100%;
   gap: 10px;
 `;
 export const ProductDescriptionStyled = styled.div`
-  width: 95%;
+  width: 100%;
   text-align: center;
-  padding: 10px;
 `;
 export const DataStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 500px;
-  border-radius: 10px;
-  box-shadow: 5px 5px #b6b6b6;
-  background-color: #ececb1;
+  width: 242px;
+  background-color: white;
+  border: 1px solid yellow;
 `;
 export const Img = styled.img`
-  width: 95%;
-  margin: 5px 10px 0 10px;
-  border-radius: 10px;
+  width: 200px;
+  margin: 20px 0px 0px 0px;
 `;
 export const ProductPrice = styled.div`
-  color: black;
+  color: white;
   font-size: large;
   text-decoration: line-through;
 `;
 export const ProductPriceDiscount = styled.div`
-  color: black;
+  color: white;
   font-size: large;
   font-weight: bold;
 `;

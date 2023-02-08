@@ -15,3 +15,6 @@ export const Line = styled.div`
   height: 0.5px;
   width: 150px;
 `;
+export const OrdenationTitle = styled.div`
+  color: white;
+`;

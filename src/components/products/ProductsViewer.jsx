@@ -111,9 +111,17 @@ export default function ProductsViewer(props) {
               .filter(filterProducts)
               .sort((atual, proximo) => {
                 if (ordena === "Sort by lowest price") {
-                  if (atual.price < proximo.price) {
+                  if (
+                    atual.price - atual.price * Number("0." + atual.discount) <
+                    proximo.price -
+                      proximo.price * Number("0." + proximo.discount)
+                  ) {
                     return -1;
-                  } else if (atual.price > proximo.price) {
+                  } else if (
+                    atual.price - atual.price * Number("0." + atual.discount) >
+                    proximo.price -
+                      proximo.price * Number("0." + proximo.discount)
+                  ) {
                     return 1;
                   } else {
                     return 0;
@@ -121,9 +129,17 @@ export default function ProductsViewer(props) {
                 }
 
                 if (ordena === "Sort by highest price") {
-                  if (atual.price > proximo.price) {
+                  if (
+                    atual.price - atual.price * Number("0." + atual.discount) >
+                    proximo.price -
+                      proximo.price * Number("0." + proximo.discount)
+                  ) {
                     return -1;
-                  } else if (atual.price < proximo.price) {
+                  } else if (
+                    atual.price - atual.price * Number("0." + atual.discount) <
+                    proximo.price -
+                      proximo.price * Number("0." + proximo.discount)
+                  ) {
                     return 1;
                   } else {
                     return 0;

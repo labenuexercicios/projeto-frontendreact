@@ -8,7 +8,7 @@ export default function BestProducts() {
 
   const products = JSON.parse(localStorage.getItem("products"))
     .filter((e) => e.idCategory !== 1)
-    .slice(0, 6);
+    .slice(0, 8);
 
   return (
     <ContainerStyled>

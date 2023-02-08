@@ -25,7 +25,7 @@ export const ImagesContainer = styled.div`
   gap: 5px;
 `;
 export const ProductDescription = styled.div`
-  color: black;
+  color: white;
   font-size: x-large;
   font-weight: bold;
 `;
@@ -34,7 +34,7 @@ export const ProductContainer = styled.div`
   gap: 30px;
 `;
 export const ProductPrice = styled.div`
-  color: black;
+  color: white;
   font-size: large;
   font-weight: bold;
   text-decoration: line-through;
@@ -64,12 +64,12 @@ export const ProductPriceContainer = styled.div`
   font-weight: bold;
 `;
 export const ProductName = styled.div`
-  color: black;
+  color: white;
   font-size: xx-large;
   font-weight: bold;
 `;
 export const ProductPriceDiscount = styled.div`
-  color: black;
+  color: white;
 `;
 export const ProductDiscountContainer = styled.div`
   display: flex;
@@ -88,7 +88,7 @@ export const CredCardInstallment = styled.div`
   gap: 10px;
 `;
 export const PurchaseButton = styled.button`
-  width: 300px;
+  width: 250px;
   height: 50px;
   border-radius: 20px;
   background-color: #5967e8;
@@ -98,9 +98,9 @@ export const PurchaseButton = styled.button`
   background-image: url(${purchaseImg});
   background-size: 20px;
   background-repeat: no-repeat;
-  background-position: left 80px center;
+  background-position: left 50px center;
   text-align: right;
-  padding-right: 85px;
+  padding-right: 60px;
 `;
 export const PurchaseButtonContainer = styled.div`
   height: 200px;
@@ -136,11 +136,11 @@ export const SimilarContainer = styled.div`
 `;
 export const ProductCardContainer = styled.div``;
 export const SimilarTitle = styled.div`
-  color: black;
+  color: white;
   font-size: xx-large;
   font-weight: bold;
 `;
 export const SimilarProducts = styled.div`
   display: flex;
-  gap: 15px;
+  gap: 35px;
 `;

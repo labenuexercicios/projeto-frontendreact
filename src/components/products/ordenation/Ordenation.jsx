@@ -1,9 +1,14 @@
-import { ContainerStyled, DropDowOrdenation, Line } from "./Style";
+import {
+  ContainerStyled,
+  DropDowOrdenation,
+  Line,
+  OrdenationTitle,
+} from "./Style";
 
 export default function Ordenation(props) {
   return (
     <ContainerStyled>
-      <div>Ordenation</div>
+      <OrdenationTitle>Ordenation</OrdenationTitle>
       <DropDowOrdenation
         onChange={(e) => {
           props.setOrdena(e.target.value);

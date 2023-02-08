@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import Backgroud from "/Img/general/Background.png";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -12,10 +13,9 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   align-items: centrer;
   justify-content: center;
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(16, 41, 255, 1) 1%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background-color: black;
+  background-image: url(${Backgroud});
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 30px;
 `;

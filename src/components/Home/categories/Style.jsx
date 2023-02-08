@@ -1,17 +1,16 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  height: 60px;
+export const Container = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  height: fit-content;
 `;
 export const Navigation = styled.nav`
   display: flex;
   width: fit-content;
-  height: 15px;
-  gap: 10px;
+  gap: 13px;
   font-family: Arial, Helvetica, sans-serifs;
   font-weight: bold;
 `;
@@ -24,13 +23,18 @@ export const A = styled.a`
   font-size: medium;
   padding: 15px;
   text-decoration: none;
-  color: black;
+  color: white;
 `;
 export const CategoryConteiner = styled.div`
-  width: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  border: 1px solid yellow;
 `;
 export const Img = styled.img`
-  width: 135px;
-  height: 135px;
-  border-radius: 50%;
+  width: 130px;
+  height: 130px;
 `;

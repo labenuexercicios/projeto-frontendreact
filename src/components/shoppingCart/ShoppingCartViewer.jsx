@@ -24,7 +24,6 @@ import {
   ColunmProductPrice,
   PaymentConteiner,
   ProductsGeneral,
-  Line,
   ProductGeneral,
   SummaryTitle,
   Title,
@@ -39,17 +38,24 @@ import {
   SummaryTotalInstallmentConteiner,
   PurchaseButton,
   ButtonCancel,
+  ContainerProducts,
+  Line,
 } from "./Style";
 import subtraction from "/Img/general/Subtraction.png";
 import addition from "/Img/general/Addition.png";
 
 export default function ShoppingCartViewer(props) {
+  window.scrollTo(0, 0);
   const product = JSON.parse(localStorage.getItem("products")).filter(
     (e) => e.id == props.idProduct
   );
 
   const [shoppingCart, setShoppingCart] = useState(
-    JSON.parse(localStorage.getItem("shoppingcart"))
+    JSON.parse(
+      localStorage.getItem("shoppingcart") !== null
+        ? localStorage.getItem("shoppingcart")
+        : "[]"
+    )
   );
 
   if (
@@ -94,6 +100,7 @@ export default function ShoppingCartViewer(props) {
           Number(product[0].price) * Number("0." + product[0].discount),
       },
     ]);
+    props.setShopingCartNumber(props.shopingCartNumber + 1);
   }
 
   function handleIncrement(product, index, increment) {
@@ -120,99 +127,114 @@ export default function ShoppingCartViewer(props) {
             product.price -
             Number(product.price) * Number("0." + product.discount),
         };
+
+        props.setShopingCartNumber(
+          props.shopingCartNumber +
+            Number(product.quantity) +
+            Number(increment == "-" ? -1 : +1)
+        );
+
         return updatedItems;
       });
     }
   }
 
   function handleCalcelClick(e, index) {
+    const deletedItem = shoppingCart.slice(index, 1);
+    localStorage.setItem(
+      "shoppingcart",
+      shoppingCart.filter((e) => e.idProduct !== deletedItem[0].idProduct)
+    );
+
     setShoppingCart(
-      shoppingCart.filter((e) => {
-        return e.idProduct !== shoppingCart.slice(index, 1).idProduct;
-      })
+      shoppingCart.filter((e) => e.idProduct !== deletedItem[0].idProduct)
     );
   }
 
   return (
     <ConteinerStyled>
-      <Title>Shopping Cart</Title>
-
-      <ProductsGeneral>
+      <ContainerProducts>
+        <Title>Shopping Cart</Title>
+        <br />
+        <br />
         <ColumnsConteiner>
           <ColunmProductName>Product</ColunmProductName>
           <ColunmProductQuantity>Quantity</ColunmProductQuantity>
           <ColunmProductPrice>Price</ColunmProductPrice>
         </ColumnsConteiner>
-        {shoppingCart.map((item, index) => {
-          return (
-            <ProductsConteiner key={index}>
-              <Line></Line>
-              <ProductGeneral>
-                <Img src={item.image}></Img>
-                <ProductConteiner>
-                  <ProductDescriptionConteiner>
-                    <ProductName>{item.name}</ProductName>
-                    <ProductDescription>{item.description}</ProductDescription>
-                    <DeliveredBy>Delivered by OUTER SPACE</DeliveredBy>
-                  </ProductDescriptionConteiner>
+        <br />
+        <ProductsGeneral>
+          {shoppingCart.map((item, index) => {
+            return (
+              <ProductsConteiner key={index}>
+                <ProductGeneral>
+                  <Img src={item.image}></Img>
+                  <ProductConteiner>
+                    <ProductDescriptionConteiner>
+                      <ProductName>{item.name}</ProductName>
+                      <ProductDescription>
+                        {item.description}
+                      </ProductDescription>
+                      <DeliveredBy>Delivered by OUTER SPACE</DeliveredBy>
+                    </ProductDescriptionConteiner>
 
-                  <QuantityConteiner>
-                    <StockQuantityConteiner>
-                      <StockConteiner>
-                        Stock:{" "}
-                        {
-                          JSON.parse(localStorage.getItem("products")).filter(
-                            (e) => e.id == item.idProduct
-                          )[0].quantity
-                        }
-                      </StockConteiner>
+                    <QuantityConteiner>
+                      <StockQuantityConteiner>
+                        <StockConteiner>
+                          Stock:{" "}
+                          {
+                            JSON.parse(localStorage.getItem("products")).filter(
+                              (e) => e.id == item.idProduct
+                            )[0].quantity
+                          }
+                        </StockConteiner>
 
-                      <QuantityIncrementConteiner>
-                        <QuantityIncrement
-                          src={subtraction}
-                          onClick={() => handleIncrement(item, index, "-")}
-                        ></QuantityIncrement>
-                        <Quantity>{item.quantity}</Quantity>
-                        <QuantityIncrement
-                          src={addition}
-                          onClick={() => handleIncrement(item, index, "+")}
-                        ></QuantityIncrement>
-                      </QuantityIncrementConteiner>
-                    </StockQuantityConteiner>
-                  </QuantityConteiner>
+                        <QuantityIncrementConteiner>
+                          <QuantityIncrement
+                            src={subtraction}
+                            onClick={() => handleIncrement(item, index, "-")}
+                          ></QuantityIncrement>
+                          <Quantity>{item.quantity}</Quantity>
+                          <QuantityIncrement
+                            src={addition}
+                            onClick={() => handleIncrement(item, index, "+")}
+                          ></QuantityIncrement>
+                        </QuantityIncrementConteiner>
+                      </StockQuantityConteiner>
+                      <ButtonCancel
+                        onClick={() => handleCalcelClick(item, index)}
+                      >
+                        Remove
+                      </ButtonCancel>
+                    </QuantityConteiner>
 
-                  <PriceConteiner>
-                    <PriceWithoutDiscount>
-                      U$ {(item.price * item.quantity).toFixed(2)}
-                    </PriceWithoutDiscount>
-                    <PriceWithDiscount>
-                      U${" "}
-                      {(
-                        Number(item.priceWithDiscount) * Number(item.quantity)
-                      ).toFixed(2)}
-                    </PriceWithDiscount>
-                    <PriceInstallment>
-                      {item.installment} x U${" "}
-                      {(
-                        (item.priceWithDiscount * Number(item.quantity)) /
-                        Number(item.installment)
-                      ).toFixed(2)}{" "}
-                      on cred card
-                    </PriceInstallment>
-                  </PriceConteiner>
-                  <ButtonCancel onClick={() => handleCalcelClick(item, index)}>
-                    Remove
-                  </ButtonCancel>
-                </ProductConteiner>
-              </ProductGeneral>
-            </ProductsConteiner>
-          );
-        })}
-        <Line></Line>
-      </ProductsGeneral>
+                    <PriceConteiner>
+                      <PriceWithoutDiscount>
+                        U$ {(item.price * item.quantity).toFixed(2)}
+                      </PriceWithoutDiscount>
+                      <PriceWithDiscount>
+                        U${" "}
+                        {(
+                          Number(item.priceWithDiscount) * Number(item.quantity)
+                        ).toFixed(2)}
+                      </PriceWithDiscount>
+                      <PriceInstallment>
+                        {item.installment} x U${" "}
+                        {(
+                          (item.priceWithDiscount * Number(item.quantity)) /
+                          Number(item.installment)
+                        ).toFixed(2)}{" "}
+                        on cred card
+                      </PriceInstallment>
+                    </PriceConteiner>
+                  </ProductConteiner>
+                </ProductGeneral>
+              </ProductsConteiner>
+            );
+          })}
+        </ProductsGeneral>
+      </ContainerProducts>
       <PaymentConteiner>
-        <SummaryTitle>Summary</SummaryTitle>
-
         <SummaryTotalPrducts>
           <SummaryQuantity>
             {shoppingCart.reduce(
@@ -235,7 +257,6 @@ export default function ShoppingCartViewer(props) {
               .toFixed(2)}
           </SummaryPrice>
         </SummaryTotalPrducts>
-        <Line></Line>
         <SummaryTotalInstallmentConteiner>
           <SummaryTotalConteiner>
             <SummaryTotalTitle>Total</SummaryTotalTitle>
@@ -267,7 +288,6 @@ export default function ShoppingCartViewer(props) {
             on cred card
           </SummaryInstallmentConteiner>
         </SummaryTotalInstallmentConteiner>
-        <Line></Line>
         <PurchaseButton>Purchase</PurchaseButton>
       </PaymentConteiner>
     </ConteinerStyled>

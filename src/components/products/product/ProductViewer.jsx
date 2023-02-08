@@ -33,6 +33,8 @@ import ProductCard from "../productCard/ProductCard";
 import { goToShoppingCart } from "../../../Router/Coordinator";
 import { useNavigate } from "react-router-dom";
 export default function ProductViewer(props) {
+  window.scrollTo(0, 0);
+
   const product = JSON.parse(localStorage.getItem("products")).filter(
     (item) => item.id == props.idProduct
   );

@@ -4,7 +4,7 @@ export const ContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;
 export const CarouselStyled = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const CarouselStyled = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
-  gap: 50px;
+  gap: 10px;
 `;
 export const DataStyled = styled.div`
   background-color: #e1e1eb;
@@ -36,12 +36,11 @@ export const TitleStyled = styled.div`
   justify-content: flex-start;
   color: black;
   font-family: Arial, Helvetica, sans-serifs;
+  font-weight: bold;
   font-size: xx-large;
   text-align: start;
 `;
-export const ProductsStyled = styled.div`
-  margin-left: 15px;
-`;
+export const ProductsStyled = styled.div``;
 export const ProductTitleStyled = styled.div`
   color: black;
   font-weight: bold;

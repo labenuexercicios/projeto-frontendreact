@@ -9,14 +9,14 @@ export const ContainerStyled = styled.div`
 `;
 export const FilterTitleStyled = styled.div`
   text-align: start;
-  color: black;
+  color: white;
   font-size: x-large;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 `;
 export const CategoriesStyled = styled.div`
   text-align: start;
-  color: black;
+  color: white;
   font-size: large;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
@@ -49,7 +49,7 @@ export const ButtonItemStyled = styled.div`
   width: fit-content;
   height: 20px;
   box-sizing: border-box;
-  color: #0d172a;
+  color: white;
   cursor: pointer;
   :hover {
     background-color: #1e293b;
@@ -72,7 +72,7 @@ export const ConfirmationButton = styled.div`
   width: fit-content;
   height: 20px;
   box-sizing: border-box;
-  color: #0d172a;
+  color: white;
   cursor: pointer;
   :hover {
     background-color: #1e293b;
