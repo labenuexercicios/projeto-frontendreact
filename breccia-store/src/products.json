@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Campo del Cielo",
+    "price": 149.9,
+    "img": "https://i.shgcdn.com/bc0e5df7-bafc-4f7f-95f9-b47118704fd7/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+    "description": "The name Campo del Cielo – which is Spanish for “Field of Heaven” refers to a group of iron meteorites and area where they were found northwest of Buenos Aires, Argentina. These meteorites, the heaviest group ever discovered on earth, were first reported in 1576. However, today we know these stones are 100% from space and definitely something worth revering!",
+    "category": "necklace"
+  },
+
+  {
+    "id": 3,
+    "name": "Gibeon",
+    "price": 139.9,
+    "img": "https://i.shgcdn.com/fece9d24-eec4-437c-b2a5-0aaf576ad71a/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+    "description": " Gibeon meteorites are composed of an iron-nickel alloy containing significant amounts of cobalt and phosphorus. The crystal structure of this meteorite provides a classic example of fine octahedrite and the Widmanstatten pattern is appreciated for its beauty both by collectors and designers of jewelry.",
+    "category": "ring"
+  },
+  {
+    "id": 4,
+    "name": "Mimetic",
+    "price": 169.9,
+    "img": "https://i.shgcdn.com/2dbea591-5a71-4a8b-b53a-9dd2bdf5788d/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+    "description": "Price should never get between you and the beauty of Meteorite’s pattern. Gibeon Meteorite’s pattern, the Widmanstatten figures, has found its way onto a cheaper product also offered by us. What you see isn’t actually meteorite, but titanium engraved to mimic the Widmanstatten pattern found on Gibeon meteorite. Mimetic meteorite is an affordable alternative to our signature Gibeon Meteorite rings. This titanium band shines with a polished finish.",
+    "category": "ring"
+  },
+  {
+    "id": 5,
+    "name": "Moldavite",
+    "price": 149.9,
+    "img": "https://i.shgcdn.com/5787a8c3-cc20-453a-9e48-491a71eb47fc/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+    "description": "Moldavite isn’t like the others – it’s actually a glass formed by a meteorite impact 14,700,000 years ago! With its brownish-green tint, Moldavite looks a lot like bottle-glass but is far more prized, of course. Forming in beautiful “flower-bursts” of glass, this type of meteorite exudes natural beauty! As seen in the ring shown here, moldavite can also be cut to have facets and comes in a variety of shapes, including round and pear.",
+    "category": "ring"
+  },
+  {
+    "id": 6,
+    "name": "Muonionalusta",
+    "price": 189.9,
+    "img": "https://i.shgcdn.com/8214a067-66ab-474c-a6f0-a1d053366498/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+    "description": "The oldest meteorite known to man, 4.5653 billion years old, was found in Scandinavia near the Muonio river. This meteorite has experienced four ice ages! While crashing through the atmosphere it broke into forty pieces, with some of them keeping most of their original gargantuan size. Because it was exposed to cosmic rays while in space and a heavy shock while colliding with earth, the Muonionalusta has an extremely rare mineral within it – formed only by extremely high pressure. ",
+    "category": "necklace"
+  },
+  {
+    "id": 7,
+    "name": "Sikhotealin",
+    "price": 209.9,
+    "img": "https://i.shgcdn.com/60e57f81-61bf-4c90-bf0f-fe2e31452b77/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+    "description": "In 1947 this meteorite crashed through the earth’s atmosphere violently just north of the Russian city Vladivostok. No other meteorite with this big of an explosive magnitude had been witnessed ever before. Shrapnel from this great explosion can now be worn by you – where anyone can visibly see the catastrophic effects of the atmosphere on this storied stone!",
+    "category": "necklace"
+  }
+]
