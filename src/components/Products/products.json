@@ -1,0 +1,114 @@
+[
+    {
+        "id": "001",
+        "name": "Milenium Falcon",
+        "price": 100000,
+        "type": "nave",
+        "description": "Usada por Han Solo em suas fantásticas aventuras!!",
+        "imageUrl": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Imagem-Millennium-Falcon-Star-Wars-PNG.png"
+    },
+    {
+        "id": "002",
+        "name": "Tie Fighter",
+        "price": 1000000,
+        "type": "nave",
+        "description": "As naves dos guerreiros do Império",
+        "imageUrl": "https://www.pngmart.com/files/22/Star-Wars-TIE-Fighter-Transparent-Isolated-Background.png"
+    },
+    {
+        "id": "003",
+        "name": "X-Wing",
+        "price": 5000000,
+        "type": "nave",
+        "description": "O caça dos rebeldes ",
+        "imageUrl": "https://www.pngmart.com/files/12/X-Wing-Starfighter-PNG-HD.png"
+    },
+    {
+        "id": "004",
+        "name": "Cube of Borg",
+        "price": 50500000,
+        "type": "nave",
+        "description": "Elas são o flagelo do Universo de Star Trek",
+        "imageUrl": "https://w3ask.com/img/borg_cube.png"
+    },
+    {
+        "id": "005",
+        "name": "Milano",
+        "price": 12000000,
+        "type": "nave",
+        "description": "Transporte e lar do Star-Lord",
+        "imageUrl": "https://www.imagensempng.com.br/wp-content/uploads/2021/08/01-50.png"
+    },
+    {
+        "id": "006",
+        "name": "Nimbus",
+        "price": 20500021,
+        "type": "nave",
+        "description": "De Matt Groening FUTURAMA",
+        "imageUrl": "https://assets.webiconspng.com/uploads/2017/09/Futurama-PNG-Image-84162.png"
+    },
+    {
+        "id": "007",
+        "name": "Estrela da Morte",
+        "price": 9999999,
+        "type": "nave",
+        "description": "Contemplem a ESTRELA DA MORTE",
+        "imageUrl": "https://www.pngkey.com/png/full/124-1240061_death-star-2-png-graphic-death-star-star.png"
+    },
+    {
+        "id": "008",
+        "name": "Jupter 2",
+        "price": 9999999,
+        "type": "nave",
+        "description": "Contemplem a ESTRELA DA MORTE",
+        "imageUrl": "https://pbs.twimg.com/media/EV5AwlhXsAAW9Wk.jpg"
+    },
+    {
+        "id": "009",
+        "name": "Traje classico",
+        "price": 5000,
+        "type": "roupas espaciais",
+        "description": "O classico da primeira ida a lua",
+        "imageUrl": "https://assets.stickpng.com/images/5c73f83ae595af020568c255.png"
+    },
+    {
+        "id": "010",
+        "name": "Traje Buzz Lightyear",
+        "price": 10000,
+        "type": "roupas espaciais",
+        "description": "ao infinito, e ALÉM",
+        "imageUrl": "http://cdn2.dineroenimagen.com/media/dinero/styles/xlarge/public/images/2021/10/peliculalightyear.jpg"
+    },
+    {
+        "id": "011",
+        "name": "Armadura Halo",
+        "price": 350000,
+        "type": "roupas espaciais",
+        "description": "Para uma batalha no espaço",
+        "imageUrl": "https://www.haloprojectbrasil.com.br/wp-content/uploads/2017/12/H5G_Render_John117-Close3.png"
+    },
+    {
+        "id": "012",
+        "name": "Marte",
+        "price": 350000000,
+        "type": "viagens espaciais",
+        "description": "Uma viagem ao planeta vermelho",
+        "imageUrl": "https://www.pngall.com/wp-content/uploads/13/Mars-PNG-Picture.png"
+    },
+    {
+        "id": "013",
+        "name": "Traje Senhor das estrelas",
+        "price": 350000000,
+        "type": "roupas espaciais",
+        "description": "Uma viagem ao planeta vermelho",
+        "imageUrl": "https://i.pinimg.com/originals/6e/a8/45/6ea8454b8bb6dd678e3009650a834d58.png"
+    },
+    {
+        "id": "014",
+        "name": "Kriptonita",
+        "price": 1350000000,
+        "type": "meteoritos",
+        "description": "A fraqueza de superman",
+        "imageUrl": "http://2.bp.blogspot.com/_RYh7B1B798Q/S2lJ2AUKXLI/AAAAAAAAAUU/qUY9U0GqXdo/s320/Kritponita01.gif"
+    }
+]
