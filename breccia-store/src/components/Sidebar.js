@@ -1,19 +1,26 @@
-import CartProduct from "./CartProduct";
-import { SidebarContext } from "../contexts/SidebarContext";
-import { useContext } from "react";
-import { IoMdArrowForward } from "react-icons/io";
-import { CartContext } from "../contexts/CartContext";
-import { Link } from "react-router-dom";
-import CartDetails from "./CartDetails";
+import CartProduct from './CartProduct';
+import { SidebarContext } from '../contexts/SidebarContext';
+import { useContext } from 'react';
+import { IoMdArrowForward } from 'react-icons/io';
+import { CartContext } from '../contexts/CartContext';
+import { Link } from 'react-router-dom';
+import CartDetails from './CartDetails';
+import { CheckoutContext } from '../contexts/CheckoutContext';
 
 const Sidebar = () => {
   const { open, handleClose } = useContext(SidebarContext);
   const { cart, cartAmount } = useContext(CartContext);
+  const { setFormPage } = useContext(CheckoutContext);
+
+  const handleFormPage = () => {
+    setFormPage(0);
+    handleClose();
+  };
 
   return (
     <div
       className={`${
-        open ? "right-0" : "-right-full"
+        open ? 'right-0' : '-right-full'
       } overflow-auto fixed w-full bg-white top-0 h-full shadow-2xl md:w-[35vw] lg:max-w-[30vw] transition-all duration-300 z-40 px-2`}
     >
       <div className="flex justify-between py-4 px-2 border-b">
@@ -31,7 +38,7 @@ const Sidebar = () => {
           <div className="flex flex-wrap justify-center py-6">
             <Link to="/checkout">
               <button
-                onClick={handleClose}
+                onClick={handleFormPage}
                 className="font-semibold border-2 border-black text-white bg-black uppercase w-40 py-2 "
               >
                 Checkout

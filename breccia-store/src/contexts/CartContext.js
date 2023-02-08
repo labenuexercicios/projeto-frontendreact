@@ -1,20 +1,28 @@
-import { useEffect, createContext, useState, useContext } from "react";
+import { useEffect, createContext, useState, useContext } from 'react';
 
-import { SidebarContext } from "../contexts/SidebarContext";
+import { SidebarContext } from '../contexts/SidebarContext';
+import { CheckoutContext } from './CheckoutContext';
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const { setOpen, handleClose } = useContext(SidebarContext);
+  const { formPage } = useContext(CheckoutContext);
+
+  useEffect(() => {
+    if (formPage === 4) {
+      clearCart();
+    }
+  }, [formPage]);
 
   useEffect(() => {
     if (cart.length > 0) {
-      localStorage.setItem("cart", JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(cart));
     }
   }, [cart]);
 
   useEffect(() => {
-    const cartStorage = localStorage.getItem("cart");
+    const cartStorage = localStorage.getItem('cart');
     if (cartStorage) {
       setCart(JSON.parse(cartStorage));
     }
@@ -46,12 +54,12 @@ const CartProvider = ({ children }) => {
     });
     setCart(newCart);
 
-    localStorage.setItem("cart", JSON.stringify(newCart));
+    localStorage.setItem('cart', JSON.stringify(newCart));
   };
 
   const clearCart = () => {
     setCart([]);
-    localStorage.removeItem("cart");
+    localStorage.removeItem('cart');
     handleClose();
   };
 

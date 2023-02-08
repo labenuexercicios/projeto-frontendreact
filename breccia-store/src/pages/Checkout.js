@@ -1,13 +1,15 @@
-import { useContext } from "react";
-import Login from "../components/Login";
-import Shipping from "../components/Shipping";
-import CreateAccount from "../components/Sections/CreateAccount";
-import { CheckoutContext } from "../contexts/CheckoutContext";
-import Payment from "../components/Payment";
-import PurchaseDone from "../components/PurchaseDone";
+import { useContext } from 'react';
+import Login from '../components/Login';
+import Shipping from '../components/Shipping';
+import CreateAccount from '../components/Sections/CreateAccount';
+import { CheckoutContext } from '../contexts/CheckoutContext';
+import Payment from '../components/Payment';
+import PurchaseDone from '../components/PurchaseDone';
+import { CartContext } from '../contexts/CartContext';
 
 const Checkout = () => {
   const { formPage } = useContext(CheckoutContext);
+  const { clearCart } = useContext(CartContext);
 
   const handleCheckoutPage = () => {
     switch (formPage) {
@@ -21,6 +23,8 @@ const Checkout = () => {
         return <Payment />;
       case 4:
         return <PurchaseDone />;
+      default:
+        return <Login />;
     }
   };
 

@@ -1,34 +1,35 @@
-import { createContext, useState, useContext } from "react";
-import { CheckoutContext } from "./CheckoutContext";
-import validator from "validator";
+import { createContext, useState, useContext } from 'react';
+import { CheckoutContext } from './CheckoutContext';
+import validator from 'validator';
+import { CartContext } from './CartContext';
 
 export const RegistrationContext = createContext();
 
 const RegistrationProvider = ({ children }) => {
   const { setFormPage } = useContext(CheckoutContext);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [passwordCondition, setPasswordCondition] = useState(false);
   const [firstNameValid, setFirstNameValid] = useState(0);
   const [lastNameValid, setLastNameValid] = useState(0);
   const [emailValid, setEmailValid] = useState(0);
   const [passwordValid, setPasswordValid] = useState(0);
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
-  const [state, setState] = useState("");
-  const [postCode, setPostCode] = useState("");
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+  const [state, setState] = useState('');
+  const [postCode, setPostCode] = useState('');
   const [addressValid, setAddressValid] = useState(0);
   const [cityValid, setCityValid] = useState(0);
   const [codeValid, setCodeValid] = useState(0);
   const [stateValid, setStateValid] = useState(0);
   const [countryValid, setCountryValid] = useState(0);
-  const [cardNumber, setCardNumber] = useState("");
-  const [cardName, setCardName] = useState("");
-  const [cardDate, setCardDate] = useState("");
-  const [cardCode, setCardCode] = useState("");
+  const [cardNumber, setCardNumber] = useState('');
+  const [cardName, setCardName] = useState('');
+  const [cardDate, setCardDate] = useState('');
+  const [cardCode, setCardCode] = useState('');
   const [cardNumberValid, setCardNumberValid] = useState(0);
   const [cardNameValid, setCardNameValid] = useState(0);
   const [cardDateValid, setCardDateValid] = useState(0);
@@ -36,7 +37,9 @@ const RegistrationProvider = ({ children }) => {
 
   const sendPayment = (e) => {
     e.preventDefault();
-    validator.isCreditCard(cardNumber)
+
+    const isCreditCardNumberValid = /\d{16}/;
+    isCreditCardNumberValid.test(cardNumber)
       ? setCardNumberValid(1)
       : setCardNumberValid(2);
 
@@ -49,12 +52,16 @@ const RegistrationProvider = ({ children }) => {
     const isCardCodeValid = /^\d{3}$/;
     isCardCodeValid.test(cardCode) ? setCardCodeValid(1) : setCardCodeValid(2);
 
-    cardNumberValid === 1 &&
-    cardNameValid === 1 &&
-    cardDateValid === 1 &&
-    cardCodeValid === 1
-      ? setFormPage(4)
-      : setFormPage(3);
+    if (
+      cardNumberValid === 1 &&
+      cardNameValid === 1 &&
+      cardDateValid === 1 &&
+      cardCodeValid === 1
+    ) {
+      setFormPage(4);
+    } else {
+      setFormPage(3);
+    }
   };
 
   const sendAddress = (e) => {
@@ -120,131 +127,131 @@ const RegistrationProvider = ({ children }) => {
 
   const inputs = [
     {
-      type: "name",
-      placeholder: "First Name",
+      type: 'name',
+      placeholder: 'First Name',
       value: firstName,
       onChange: (e) => setFirstName(e.target.value),
-      onClick: "",
-      message: "Your name must have 1-15 characters.",
+      onClick: '',
+      message: 'Your name must have 1-15 characters.',
       validation: firstNameValid,
     },
     {
-      type: "name",
-      placeholder: "Last Name",
+      type: 'name',
+      placeholder: 'Last Name',
       value: lastName,
       onChange: (e) => setLastName(e.target.value),
-      onClick: "",
-      message: "Your last name must have 1-15 characters.",
+      onClick: '',
+      message: 'Your last name must have 1-15 characters.',
       validation: lastNameValid,
     },
     {
-      type: "email",
-      placeholder: "Email",
+      type: 'email',
+      placeholder: 'Email',
       value: email,
       onChange: (e) => setEmail(e.target.value),
-      onClick: "",
-      message: "E-mail not valid.",
+      onClick: '',
+      message: 'E-mail not valid.',
       validation: emailValid,
     },
     {
-      type: "password",
-      placeholder: "Password",
+      type: 'password',
+      placeholder: 'Password',
       value: password,
       onChange: (e) => setPassword(e.target.value),
       onClick: handlePasswordCondition,
-      message: "Password not valid.",
+      message: 'Password not valid.',
       validation: passwordValid,
     },
   ];
 
   const addressInputs = [
     {
-      type: "text",
-      placeholder: "Address",
+      type: 'text',
+      placeholder: 'Address',
       value: address,
       onChange: (e) => setAddress(e.target.value),
-      message: "Enter a valid address",
+      message: 'Enter a valid address',
       validation: addressValid,
     },
     {
-      type: "text",
-      placeholder: "City",
+      type: 'text',
+      placeholder: 'City',
       value: city,
       onChange: (e) => setCity(e.target.value),
-      message: "Enter a valid city",
+      message: 'Enter a valid city',
       validation: cityValid,
     },
     {
-      type: "text",
-      placeholder: "Postcode",
+      type: 'text',
+      placeholder: 'Postcode',
       value: postCode,
       onChange: (e) => setPostCode(e.target.value),
-      message: "Enter a valid ZIP code",
+      message: 'Enter a valid ZIP code',
       validation: codeValid,
     },
   ];
 
   const states = [
-    "Acre",
-    "Alagoas",
-    "Amazonas",
-    "Amapá",
-    "Bahia",
-    "Ceará",
-    "Distrito Federal",
-    "Espírito Santo",
-    "Goiás",
-    "Maranhão",
-    "Mato Grosso",
-    "Mato Grosso do Sul",
-    "Minas Gerais",
-    "Pará",
-    "Paraíba",
-    "Paraná",
-    "Pernambuco",
-    "Piauí",
-    "Rio de Janeiro",
-    "Rio Grande do Norte",
-    "Rondônia",
-    "Rio Grande do Sul",
-    "Roraima",
-    "Santa Catarina",
-    "Sergipe",
-    "São Paulo",
-    "Tocantins",
+    'Acre',
+    'Alagoas',
+    'Amazonas',
+    'Amapá',
+    'Bahia',
+    'Ceará',
+    'Distrito Federal',
+    'Espírito Santo',
+    'Goiás',
+    'Maranhão',
+    'Mato Grosso',
+    'Mato Grosso do Sul',
+    'Minas Gerais',
+    'Pará',
+    'Paraíba',
+    'Paraná',
+    'Pernambuco',
+    'Piauí',
+    'Rio de Janeiro',
+    'Rio Grande do Norte',
+    'Rondônia',
+    'Rio Grande do Sul',
+    'Roraima',
+    'Santa Catarina',
+    'Sergipe',
+    'São Paulo',
+    'Tocantins',
   ];
 
   const cardInputs = [
     {
-      type: "number",
-      placeholder: "Card number",
+      type: 'number',
+      placeholder: 'Card number',
       value: cardNumber,
       onChange: (e) => setCardNumber(e.target.value),
-      message: "Enter a valid credit card number",
+      message: 'Enter a valid credit card number',
       validator: cardNumberValid,
     },
     {
-      type: "text",
-      placeholder: "Cardholder name",
+      type: 'text',
+      placeholder: 'Cardholder name',
       value: cardName,
       onChange: (e) => setCardName(e.target.value),
-      message: "Enter a valid name",
+      message: 'Enter a valid name',
       validator: cardNameValid,
     },
     {
-      type: "text",
-      placeholder: "Expiration date (MM / YY)",
+      type: 'text',
+      placeholder: 'Expiration date (MM / YY)',
       value: cardDate,
       onChange: (e) => setCardDate(e.target.value),
-      message: "Enter a valid date",
+      message: 'Enter a valid date',
       validator: cardDateValid,
     },
     {
-      type: "number",
-      placeholder: "Security code",
+      type: 'number',
+      placeholder: 'Security code',
       value: cardCode,
       onChange: (e) => setCardCode(e.target.value),
-      message: "Enter a valid security code",
+      message: 'Enter a valid security code',
       validator: cardCodeValid,
     },
   ];

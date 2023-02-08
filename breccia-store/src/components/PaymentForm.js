@@ -1,9 +1,11 @@
-import { useContext } from "react";
-import { RegistrationContext } from "../contexts/RegistrationContext";
-import credict from "../img/credict.png";
+import { useContext } from 'react';
+import { CartContext } from '../contexts/CartContext';
+import { RegistrationContext } from '../contexts/RegistrationContext';
+import credict from '../img/credict.png';
 
 const PaymentForm = () => {
   const { cardInputs, sendPayment } = useContext(RegistrationContext);
+  const { clearCart } = useContext(CartContext);
 
   return (
     <div className=" flex flex-col gap-5 justify-center pt-8 mb-32 max-w-xl">
@@ -26,7 +28,7 @@ const PaymentForm = () => {
                   className="px-2 py-2 focus:ouline-none w-full lg:w-[580px] border mb-2 border-gray"
                 />
                 <p className="font-thin text-sm text-red-600 pb-2">
-                  {input.validator === 2 ? input.message : ""}
+                  {input.validator === 2 ? input.message : ''}
                 </p>
               </div>
             );
