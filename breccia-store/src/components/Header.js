@@ -1,13 +1,13 @@
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { AiOutlineMenu } from "react-icons/ai";
-import { useContext } from "react";
-import { SidebarContext } from "../contexts/SidebarContext";
-import { MenuContext } from "../contexts/MenuContext";
-import { CartContext } from "../contexts/CartContext";
-import { Link } from "react-router-dom";
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { useContext } from 'react';
+import { SidebarContext } from '../contexts/SidebarContext';
+import { MenuContext } from '../contexts/MenuContext';
+import { CartContext } from '../contexts/CartContext';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const { open, setOpen } = useContext(SidebarContext);
+  const { open, setOpen, handleClose } = useContext(SidebarContext);
   const { openMenu, setOpenMenu } = useContext(MenuContext);
   const { cartAmount, cart } = useContext(CartContext);
 
@@ -15,7 +15,7 @@ const Header = () => {
     <div className="sticky top-0 bg-white z-30">
       <div className="flex px-5 py-2 justify-between border-b pb-1">
         <Link to="/">
-          <div className="flex flex-col items-center">
+          <div onClick={handleClose} className="flex flex-col items-center">
             <p className="uppercase font-bold text-3xl">Breccia</p>
             <p className="uppercase text-xs">s t o r e</p>
           </div>
@@ -23,11 +23,21 @@ const Header = () => {
 
         <div className="lg:flex lg:gap-12 lg:items-center lg:pr-36 hidden">
           <Link to="/">
-            <p className="cursor-pointer uppercase text-sm">home</p>
+            <p
+              onClick={handleClose}
+              className="cursor-pointer uppercase text-sm"
+            >
+              home
+            </p>
           </Link>
           <p className="cursor-pointer uppercase text-sm">about</p>
           <Link to="/product">
-            <p className="cursor-pointer uppercase text-sm">products</p>
+            <p
+              onClick={handleClose}
+              className="cursor-pointer uppercase text-sm"
+            >
+              products
+            </p>
           </Link>
           <p className="cursor-pointer uppercase text-sm">contact</p>
         </div>
@@ -39,7 +49,7 @@ const Header = () => {
             }}
             className="flex items-center gap-1 cursor-pointer"
           >
-            <AiOutlineShoppingCart className="text-xl font-bold relative" />{" "}
+            <AiOutlineShoppingCart className="text-xl font-bold relative" />{' '}
             <span className="text-white bg-black rounded-full px-[5px] text-xs font-semibold absolute lg:right-2 right-[84px] top-[18px]">
               {cartAmount(cart)}
             </span>
@@ -51,7 +61,7 @@ const Header = () => {
             }}
             className=" lg:hidden cursor-pointer flex items-center justify-center uppercase gap-1"
           >
-            <AiOutlineMenu className=" text-2xl font-bold" />{" "}
+            <AiOutlineMenu className=" text-2xl font-bold" />{' '}
             <span className="text-xs">Menu</span>
           </div>
         </div>

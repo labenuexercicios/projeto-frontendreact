@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
-import { BsPlus } from "react-icons/bs";
-import { CartContext } from "../contexts/CartContext";
-import { useContext } from "react";
+import { Link } from 'react-router-dom';
+import { BsPlus } from 'react-icons/bs';
+import { CartContext } from '../contexts/CartContext';
+import { useContext } from 'react';
+import { SidebarContext } from '../contexts/SidebarContext';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useContext(CartContext);
+  const { handleClose } = useContext(SidebarContext);
   return (
     <div key={product.id}>
       <div className=" w-full h-[300px] relative overflow-hidden group transition">
@@ -23,7 +25,10 @@ const ProductCard = ({ product }) => {
       </div>
       <div className="flex flex-col items-center">
         <Link to={`/product/${product.id}`}>
-          <h2 className="hover:font-semibold cursor-pointer uppercase">
+          <h2
+            onClick={handleClose}
+            className="hover:font-semibold cursor-pointer uppercase"
+          >
             {product.name}
           </h2>
         </Link>
