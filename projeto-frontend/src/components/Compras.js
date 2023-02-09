@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "./Product";
 
 export default function Basket(props) {
-  const { cartItems, onAdd, onRemove,query,orderParam } = props;
-  const {handleInputOrderParam,handleInputQuery}=props
+  const { cartItems, onAdd, onRemove,setQuery,orderParam,min,max } = props;
   const itemsPreco = cartItems.reduce((a, c) => a + c.preco * c.qty, 0);
   const taxPreco = itemsPreco * 0.14;
-  const totalPreco = itemsPreco + taxPreco ;
+  const totalPreco = itemsPreco + taxPreco;
+  const {handleInputOrderParam,onChangeMax,onChangeMin}=props  
+
+  const onChangeProduto = (event) =>{
+    setQuery(event.target.value)
+  };
+
+  console.log("aqui e max ",max)
+  console.log("aqui e min",min)
+  
   return (
     <aside className="block col-1">
       <h2>Cart itens</h2>
@@ -26,7 +34,6 @@ export default function Basket(props) {
           <div className="col-2 text-right">
             {item.qty} x ${item.preco.toFixed(2)}
           </div>
-        
         </div>
       ))}
       {cartItems.length !== 0 && (
@@ -42,42 +49,51 @@ export default function Basket(props) {
             <div className="col-1 text-right">${taxPreco.toFixed(2)}</div>
           </div>
 
-          
-
           <div className="row">
             <div className="col-2">
               <strong>total preco</strong>
             </div>
             <div className="col-1 text-right">
-             <strong>${totalPreco.toFixed(2)}</strong>
-              </div>
+              <strong>${totalPreco.toFixed(2)}</strong>
+            </div>
           </div>
-          <hr/>
+          <hr />
           <div className="row">
-            <button onClick={()=> alert('Compra efetuada')}>clique para finalizar </button>
+            <button onClick={() => alert("Compra efetuada")}>clique para finalizar </button>
           </div>
         </>
       )}
       <hr></hr>
-      <div> 
-        <h3>busca</h3>
-        <input type="text" value={query} onChange={handleInputQuery}
-        />
-        <h3>ordenar</h3>
-        <select 
-        name="" 
-        id=""
-        value={orderParam}
-        onChange={handleInputOrderParam}
-        >
-          <option value="">selecione</option>
-          <option value="asc">Crescente</option>
-          <option value="desc">Decrescente</option>
+      <div>
+        <h3>Busca</h3>
+        <input 
+        type="text" 
+        value={props.query} 
+        placeholder="Buscar por nome" 
+        onChange={(event) => onChangeProduto(event)} />
+        <h3>Ordenar</h3>
+        <select name="" id="" 
+        value={orderParam} 
+        onChange={handleInputOrderParam}>
+
+          <option value="ordenar">Ordenar</option>
+          <option value="Crescente">A-Z</option>
+          <option value="Decrescente">Z-A</option>
+          
         </select>
-        {/* <h3>filtrat preco</h3>
-        <input type="text" /> */}
+
+        <h3>filtrat preco</h3>
+        <p>Min</p>
+        <input type="text"
+        value={min}
+        onChange={onChangeMin}
+        />
+        <p>Max</p>
+        <input type="text"
+        value={max}
+        onChange={onChangeMax}
+        />
       </div>
     </aside>
-   
   );
 }
