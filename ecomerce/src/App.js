@@ -87,6 +87,10 @@ export default function App() {
 
         listaProdutos={listaProdutos}
         addCarrinho={addCarrinho}
+
+        filtroMin={filtroMin}
+        filtroMax={filtroMax}
+        filtroBusca={filtroBusca}
       />
 
       <Carrinho

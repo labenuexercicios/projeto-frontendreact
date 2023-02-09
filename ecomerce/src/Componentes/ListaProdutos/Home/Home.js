@@ -16,13 +16,22 @@ export function Home(props) {
             <div id="input">
             <label>Ordenação:</label>
             <select onChange={handleOrdem} value={ordem}>
-                <option>Ordenar</option>
+                <option value="">Ordenar</option>
                 <option value="crescente">Crescente</option>
                 <option value="decrescente">Decrescente</option>
             </select>
             </div>
             <div id="containerProdutos">
-            <CardProduto listaProdutos={props.listaProdutos} addCarrinho={props.addCarrinho}/>
+            <CardProduto 
+            listaProdutos={props.listaProdutos}
+            addCarrinho={props.addCarrinho}
+
+            ordem={ordem}
+
+            filtroMax={props.filtroMax}
+            filtroMin={props.filtroMin}
+            filtroBusca={props.filtroBusca}
+            />
             </div>
         </HomeContainer>
     )
