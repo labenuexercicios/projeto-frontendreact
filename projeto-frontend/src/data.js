@@ -12,13 +12,13 @@ export const data = {
     preco: 20,
   },
   {
-    id: "2",
+    id: "3",
     name: "camisa 2",
     image: img2,
     preco: 30,
   },
   {
-    id: "3",
+    id: "2",
     name: "Camisa 3",
     image: img3,
     preco: 25,
