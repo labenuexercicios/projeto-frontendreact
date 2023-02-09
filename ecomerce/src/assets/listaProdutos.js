@@ -19,13 +19,13 @@ export const listaProdutos = [
     },
     {
         id: 4,
-        nome: "produto 3",
+        nome: "produto 4",
         valor: 50,
         img: "https://picsum.photos/400/400?a=4"
     },
     {
         id: 5,
-        nome: "produto 3",
+        nome: "produto 5",
         valor: 300,
         img: "https://picsum.photos/400/400?a=5"
     }

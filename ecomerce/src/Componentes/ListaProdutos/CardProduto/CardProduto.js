@@ -1,12 +1,17 @@
-import {Produto} from "./style"
+import { Produto } from "./style"
 
 export function CardProduto(props) {
-    return(
-        <Produto>
-            <img src={props.produto.img}/>
-            <p>{props.produto.nome}</p>
-            <p>R$ {props.produto.valor.toFixed(2)}</p>
-            <button>Adicionar ao Carrinho</button>
-        </Produto>
+
+    return (
+        props.listaProdutos.map((produto) => {
+            return (
+                <Produto key={produto.id}>
+                    <img src={produto.img} />
+                    <p>{produto.nome}</p>
+                    <p>R$ {produto.valor.toFixed(2)}</p>
+                    <button onClick={() => props.addCarrinho(produto)}>Adicionar ao Carrinho</button>
+                </Produto>
+            )
+        })
     )
 }
