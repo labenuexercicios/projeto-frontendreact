@@ -1,26 +1,26 @@
 
 import './App.css';
+import Filters from './Components/Filters/Filters';
+import Home from './Components/ProductList/Home/Home';
+import Cart from './Components/ShoppingCart/Cart/Cart';
+import Items from './Components/ShoppingCart/Items/Items';
+import { productList } from './assents/productList';
+import styled from 'styled-components';
 
-function App() {
+
+
+ function App() {
   return (
     <>
       < div className="struct">
         <nav>
-          
-            <p>Menu</p>
-          
+            <Filters/>
         </nav>
-
-        <main>
-          
-            <p>Principal</p>
-           
-        </main>
-
+        <Home/>
         <aside>
-          
             <p>Aside</p>
-          
+            <Cart/>
+            <Items />
         </aside>
       </div>
 
