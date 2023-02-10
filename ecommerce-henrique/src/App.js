@@ -1,29 +1,28 @@
 import Data from "./Data/Data";
-import "./App.css";
 import { CardContainer, Container, MainContainer, Header, Footer, Image } from "./Style";
 /// componentes
 import Home from "./Components/Pages/Home";
 import Aside from "./Components/Aside/Aside";
 /// Hooks
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GlobalStyle } from "./Components/GlobalStyle";
 
 function App() {
   // Estados de armezenamento
-  //Filtro por nome
+  //Estado de Nome
   const [nameFilter, setNameFilter] = useState("");
-  //Filtro pelo preco
+  //Estado de preço
   const [priceFilter, setPriceFilter] = useState("");
-  //Filtro pela ordem
+  //Estado de ordenação
   const [orderFilter, setOrderFilter] = useState("");
-  // Estado que armazena compras
+  //estado do carrinho de compras
   const [cart, setCart] = useState([]);
 
-  // funcao busca pelo nome
+  // Função que busca nome
   const handleName = (Data) => {
     return Data.name.toLowerCase().includes(nameFilter.toLowerCase());
   };
-  // funcao busca pelo preco
+  // funcao que busca pelo preço
   const handleFilterPrice = (Data) => {
     return priceFilter ? Data.value <= priceFilter : true;
   };
@@ -44,6 +43,22 @@ function App() {
       setCart([...cart, { ...produtos, quantity: 1 }]);
     }
   };
+
+  //localStorage e useEffect
+  useEffect(() => {
+    const stringProduct = JSON.stringify(cart);
+    if (cart.length > 0) {
+        localStorage.setItem('cart', stringProduct);
+    }
+}, [cart]);
+
+useEffect(() => {
+    const getCart = localStorage.getItem('cart');
+    const arrayCart = JSON.parse(getCart);
+    if (arrayCart) {
+        setCart(arrayCart);
+    }
+  }, []);
 
  
   return (

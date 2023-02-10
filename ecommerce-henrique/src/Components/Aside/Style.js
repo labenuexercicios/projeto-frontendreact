@@ -12,4 +12,5 @@ padding: 0.5rem;
 box-shadow: 1px 1px 20px white;
 background-color:#C5B4E3;
 height: 50%;
+border-radius:1rem;
 `

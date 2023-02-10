@@ -10,7 +10,7 @@ export const Card = styled.div`
     gap: 0.6rem;
     width: 100%;
     background-color:#C5B4E3;
-    border-radius: 2lsrem;
+    border-radius: 1rem;
     box-shadow: 1px 1px 20px white;
     :hover{
         box-shadow: none !important;
