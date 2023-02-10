@@ -1,10 +1,8 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React, { useEffect, useState } from "react";
-import Card from "../Card/Card";
-import kits from "../Database/Database.json"
 import { Itemdocarrinho } from "./Carrinhostyle";
 
 function Carrinho(props) {
+
 
     const [salvaItens, setSalvaitens] = useState([]);
 
@@ -32,20 +30,18 @@ function Carrinho(props) {
         localStorage.setItem("Lista dos itens",itensstring)
     }
 
-    
-
-
+    //Ficou faltando ajustar o carrinho
     return (
 
         <div>
-            {salvaItens.map((item)=>{
+            {salvaItens.map(item=>{
                 return (<section>
                     <Itemdocarrinho>
                         <p>{item.contador}x - kit: 00{item.id}</p>
                         <p>Painel:{item.nome}</p>
                         <button onClick={()=> removeitem(item.id)}>Remover</button>
                     </Itemdocarrinho>
-                </section>)
+                        </section>)
             })}
     
     </div>
