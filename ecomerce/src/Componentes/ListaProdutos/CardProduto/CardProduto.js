@@ -44,9 +44,11 @@ export function CardProduto(props) {
                 return (
                     <Produto key={produto.id}>
                         <img src={produto.img} />
+                        <div id="info">
                         <p>{produto.nome}</p>
                         <p>R$ {produto.valor.toFixed(2)}</p>
                         <button onClick={() => props.addCarrinho(produto)}>Adicionar ao Carrinho</button>
+                        </div>
                     </Produto>
                 )
             })

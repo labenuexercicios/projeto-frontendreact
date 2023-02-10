@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const CarrinhoContainer = styled.aside`
-    //display: flex;
-    border: 1px solid black;
-    width: 200px;
+    padding: 10px;
+    width: 300px;
+    background-color: lightslategray;
+    >p{
+        padding-top: 50px;
+    }
 `

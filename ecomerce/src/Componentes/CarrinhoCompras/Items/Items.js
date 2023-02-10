@@ -1,13 +1,14 @@
-export function Itens(props) {
+import {Card} from "./style"
+
+export function Items(props) {
 
     return (
         props.carrinho.map((item, index) => {
             return (
-                <div key={index}>
-                    <span>x {item.quantidade}</span>
-                    <span>{item.nome}</span>
+                <Card key={index}>
+                    <p>{item.quantidade}x {item.nome}</p>
                     <button onClick={() => props.subCarrinho(item)}>Remover</button>
-                </div>
+                </Card>
             )
         })
     )

@@ -1,9 +1,10 @@
+import React, { useEffect, useState } from "react"
+import { Header } from "./Componentes/Header/Header"
 import { Home } from "./Componentes/ListaProdutos/Home/Home"
 import { Filtros } from "./Componentes/Filtros/Filtros"
 import { Carrinho } from "./Componentes/CarrinhoCompras/Carrinho/Carrinho"
 import styled, { createGlobalStyle } from "styled-components";
 import { listaProdutos } from "./assets/listaProdutos"
-import { useState } from "react";
 
 const GlobalStyled = createGlobalStyle`
   *{
@@ -16,6 +17,7 @@ const MainContainer = styled.main`
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  background-color: gainsboro;
 `
 
 export default function App() {
@@ -25,6 +27,26 @@ export default function App() {
   const [filtroBusca, setFiltroBusca] = useState("")
   const [carrinho, setCarrinho] = useState([])
   const [montante, setMontante] = useState(0)
+
+    if (carrinho.length > 0) {
+    
+      const carrinhoJson = JSON.stringify(carrinho)
+      const montanteJson = JSON.stringify(montante)
+      localStorage.setItem("carrinho", carrinhoJson)
+      localStorage.setItem("montante", montanteJson)
+    }
+  
+  useEffect(() => {
+    const carrinhoJson = JSON.parse(localStorage.getItem("carrinho"))
+    const montanteJson = JSON.parse(localStorage.getItem("montante"))
+
+    if (carrinhoJson) {
+      setCarrinho(carrinhoJson)
+    }
+    if (montanteJson) {
+      setMontante(montanteJson)
+    }
+  }, [])
 
   function addCarrinho(item) {
     const itemAdicionado = listaProdutos.find((produto) => produto === item)
@@ -46,63 +68,66 @@ export default function App() {
 
   function subCarrinho(item) {
     const itemRemovido = carrinho.find((produto) => produto === item)
-    
+
     if (itemRemovido.quantidade >= 1) {
 
       itemRemovido.quantidade--
 
       setMontante(montante - itemRemovido.valor)
-      
-    }if(itemRemovido.quantidade === 0){
+
+    } if (itemRemovido.quantidade === 0) {
 
       const itemRemovido = carrinho.find((produto) => produto === item)
-      
+
       carrinho.splice(carrinho.indexOf(itemRemovido), 1)
     }
   }
 
   return (
-
-    <MainContainer>
-
+    <div>
       <GlobalStyled />
 
-      <Filtros
-        filtroMin={filtroMin}
-        setFiltroMin={setFiltroMin}
+      <Header />
 
-        filtroMax={filtroMax}
-        setFiltroMax={setFiltroMax}
+      <MainContainer>
 
-        filtroBusca={filtroBusca}
-        setFiltroBusca={setFiltroBusca}
-      />
+        <Filtros
+          filtroMin={filtroMin}
+          setFiltroMin={setFiltroMin}
 
-      <Home
-        carrinho={carrinho}
-        setCarrinho={setCarrinho}
+          filtroMax={filtroMax}
+          setFiltroMax={setFiltroMax}
 
-        montante={montante}
-        setMontante={setMontante}
+          filtroBusca={filtroBusca}
+          setFiltroBusca={setFiltroBusca}
+        />
 
-        listaProdutos={listaProdutos}
-        addCarrinho={addCarrinho}
+        <Home
+          carrinho={carrinho}
+          setCarrinho={setCarrinho}
 
-        filtroMin={filtroMin}
-        filtroMax={filtroMax}
-        filtroBusca={filtroBusca}
-      />
+          montante={montante}
+          setMontante={setMontante}
 
-      <Carrinho
-        carrinho={carrinho}
-        setCarrinho={setCarrinho}
+          listaProdutos={listaProdutos}
+          addCarrinho={addCarrinho}
 
-        montante={montante}
-        setMontante={setMontante}
+          filtroMin={filtroMin}
+          filtroMax={filtroMax}
+          filtroBusca={filtroBusca}
+        />
 
-        subCarrinho={subCarrinho}
-      />
+        <Carrinho
+          carrinho={carrinho}
+          setCarrinho={setCarrinho}
 
-    </MainContainer>
+          montante={montante}
+          setMontante={setMontante}
+
+          subCarrinho={subCarrinho}
+        />
+
+      </MainContainer>
+    </div>
   )
 }
