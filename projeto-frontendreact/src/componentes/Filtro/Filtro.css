@@ -1,0 +1,15 @@
+.filtro-container {
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filtro-container p {
+  margin: 0;
+}
+
+.filtro {
+  display: flex;
+  margin: 0 16px;
+}

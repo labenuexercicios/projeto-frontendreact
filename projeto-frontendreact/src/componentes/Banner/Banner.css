@@ -1,0 +1,26 @@
+.banner {
+  text-align: center;
+}
+.banner img {
+  max-width: 100%;
+  width: 1163.54px;
+  height: 250px;
+  left: 35.46px;
+  top: 55px;
+  border-radius: 1rem;
+}
+
+.nome-loja {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(225, 52, 196);
+  font-family: "Franklin Gothic Medium";
+  font-size: 60px;
+}
+.subtitulo {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(225, 52, 196);
+  font-family: "Franklin Gothic Medium";
+}
