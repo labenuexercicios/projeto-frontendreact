@@ -1,10 +1,10 @@
+import React, { useEffect, useState } from "react"
 import { Header } from "./Componentes/Header/Header"
 import { Home } from "./Componentes/ListaProdutos/Home/Home"
 import { Filtros } from "./Componentes/Filtros/Filtros"
 import { Carrinho } from "./Componentes/CarrinhoCompras/Carrinho/Carrinho"
 import styled, { createGlobalStyle } from "styled-components";
 import { listaProdutos } from "./assets/listaProdutos"
-import { useState } from "react";
 
 const GlobalStyled = createGlobalStyle`
   *{
@@ -27,6 +27,26 @@ export default function App() {
   const [filtroBusca, setFiltroBusca] = useState("")
   const [carrinho, setCarrinho] = useState([])
   const [montante, setMontante] = useState(0)
+
+    if (carrinho.length > 0) {
+    
+      const carrinhoJson = JSON.stringify(carrinho)
+      const montanteJson = JSON.stringify(montante)
+      localStorage.setItem("carrinho", carrinhoJson)
+      localStorage.setItem("montante", montanteJson)
+    }
+  
+  useEffect(() => {
+    const carrinhoJson = JSON.parse(localStorage.getItem("carrinho"))
+    const montanteJson = JSON.parse(localStorage.getItem("montante"))
+
+    if (carrinhoJson) {
+      setCarrinho(carrinhoJson)
+    }
+    if (montanteJson) {
+      setMontante(montanteJson)
+    }
+  }, [])
 
   function addCarrinho(item) {
     const itemAdicionado = listaProdutos.find((produto) => produto === item)
