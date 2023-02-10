@@ -1,0 +1,177 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.App {
+    max-width: 90rem;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    align-items: flex-start;
+    background-color: black;
+    background-image: url("background.jpg");
+    background-position: 100%;
+    background-repeat: repeat;
+    background-size:contain, cover;
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    font-style: oblique;
+    
+}
+
+.textoHeader {
+    margin-left: 100px;
+    font-size: 100px;
+}
+
+Main {
+    display: flex;
+    flex-direction: row;
+}
+
+img.Logo {
+    width: 10vw;
+    height: 17vh;
+    border-style: none;
+    margin: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr 200px 1fr 150px ;
+    width: 350px;
+    height:500px;
+    margin: 0.5rem;
+    box-shadow: 1px 1px 20px white;
+    border-radius: 40px;
+    padding: 1rem;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    font-size: large;
+    justify-items: center;
+    align-items: start;
+    object-fit: contain;
+    text-align: justify;
+}
+
+.cardContainer {
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+    justify-content: center;
+    align-self: center;
+}
+
+button {
+    padding: 10px;
+    border-radius: 20px;
+    height: 40px;
+    box-shadow: 1px 1px 20px white;
+    border-style: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.addButton, .removeButton {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 100px;
+    border-style: none;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 20px white;
+}
+
+button:hover {
+    filter: contrast(5%);
+    transition: all 0.5s;
+}
+
+.imgCard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.imgCart {
+    width: 10vw;
+    height: 17vh;
+    border-radius: 100%;
+}
+
+nav {
+    display: flex;
+    flex: 20%;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 20px white;
+    border-radius: 20px;
+    max-width: 200px;
+    color: white;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 1rem;
+    padding: 0.7rem;
+    
+}
+
+.Footer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 0;
+    justify-content: flex-end;
+    height: 8vh;
+    width: 100%;
+    box-shadow: 1px 1px 20px white;
+    border-radius: 20px;
+    color: white;
+}
+
+.github{
+    background-image: url(./github.png);
+    background-color: transparent;
+    object-fit: contain;
+    border-style: none;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 7vh;
+    width: 3.5vw;
+    align-self:center;
+    margin-right: 50px;
+  }
+
+  .texto{
+    display:flex;
+    flex-direction: row;
+    align-self: center;
+    margin: 20px;
+  }
