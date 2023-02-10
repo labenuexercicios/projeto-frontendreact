@@ -2,6 +2,7 @@ import React from "react";
 
 function Filtro(props){
 
+    //Pega os valores do onchange
     function maxInput (event){
         props.setVlmax(event.target.value);
     }    

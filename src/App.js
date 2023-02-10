@@ -8,7 +8,7 @@ import Header from "./Componentes/Header/Header";
 import { StyleofHeader, Styleofheaderright } from "./Componentes/Header/Headerstyle";
 import Main from "./Componentes/Main/Main";
 import { Mainstyle, Mainstylebody, Mainstylecontador, Mainstyleordena, Mainstyletitle } from "./Componentes/Main/Mainstyle";
-import Maintcontador from "./Componentes/Main/Mainstylecontador";
+
 import Maintitle from "./Componentes/Main/Maintitle";
 import { BonsModosapp, StyleOfApp } from "./Styleapp";
 
@@ -29,7 +29,6 @@ function App() {
   const [vetorQueguardaositens, setVetorqueguardaositens] = useState([]);
   const [chamaCarrinho, setChamacarrinho] = useState(0)
 
-  const [chamaCarrinho2, setChamacarrinho2] = useState(0);
 
   useEffect(() =>{
     //Pega os itens que foram criados no localstorage
@@ -41,6 +40,7 @@ function App() {
     }
   }, [])
 
+  //Faz filtro e retornar os itens q vao mostrar na main
   const variavelteste = kits.filter((kit) =>{
             return kit.nome.toLowerCase().includes(vlnome.toLowerCase())
           })

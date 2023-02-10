@@ -1,12 +1,6 @@
-import React, { useState } from "react";
-import Carrinho from "../Carrinho/Carrinho";
 import { Button, Styledositens } from "./Mainstyle";
 
 function Main (props){
-    // const pegaContador = props.pegaosvaloresdovetor.map(function(kit){
-    //     return kit.contador;
-    // })
-
 
     function compraitempreco(){
         
@@ -14,6 +8,8 @@ function Main (props){
         props.setPegavlcompra(props.pegavlcompra + props.kit.preco)
         props.setContadorcarrinho(props.contadorcarrinho + 1)
         // props.setContadordouseeffect(props.kit.contador)
+
+
 
         //Copia o vetor dos itens
         const vetorKits = [...props.vetorQueguardaositens, {nome: props.kit.nome,
@@ -24,19 +20,7 @@ function Main (props){
         id: props.kit.id,
         contador: props.kit.contador}]
 
-        console.log(typeof(props.kit.nome))
-
-
-        //Pega os valores
-        props.setpegaosvaloresdovetor([...props.vetorQueguardaositens, {nome: props.kit.nome,
-            geracao: props.kit.geracao,
-            saf: props.kit.saf,
-            preco: props.kit.preco,
-            imagem: props.kit.imagem,
-            id: props.kit.id,
-            contador: props.kit.contador}])
-
-        console.log("aqui",props.vetorQueguardaositens)
+        props.kit.contador ++;
 
         //Adiciona o vetor no localstorage
         const listaDoskits = JSON.stringify(vetorKits);
