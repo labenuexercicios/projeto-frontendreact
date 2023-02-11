@@ -23,7 +23,7 @@ function App() {
   const [sortOrder, setSortOrder] = useState("");
   const [maxPriceSearch, setMaxPriceSearch] = useState("");
   const [minPriceSearch, setMinPriceSearch] = useState("");
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart"))||[]);
 
   // Local Storage
   useEffect(() => {
@@ -33,11 +33,11 @@ function App() {
     }
   }, [cart]);
 
-  useEffect(() => {
-    const cartString = localStorage.getItem("cart");
-    const cartSafeStorage = JSON.parse(cartString);
-    setCart(cartSafeStorage);
-  }, []);
+  // useEffect(() => {
+  //   const cartString = localStorage.getItem("cart");
+  //   const cartSafeStorage = JSON.parse(cartString);
+  //   setCart(cartSafeStorage);
+  // }, []);
 
   // Switch Screen Function
   const switchScreen = () => {
@@ -86,6 +86,7 @@ function App() {
     }
   };
 
+  console.log(cart)
   return (
     <div>
       <GlobalStyled />
