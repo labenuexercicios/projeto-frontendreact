@@ -1,0 +1,26 @@
+[
+    {
+        "ID": 1,
+        "Name": "Space Y Astronaut",
+        "Price": 12.99,
+        "Image": "Ast.png",
+        "Brand": "SPACE Y POP TOYS Co.",
+        "Description": "A detailed plastic figurine of an astronaut, complete with spacesuit and accessories."
+    },
+    {
+        "ID": 2,
+        "Name": "Space Y Shuttle Model",
+        "Price": 29.99,
+        "Image": "Shu.png",
+        "Brand": "SPACE Y POP TOYS Co.",
+        "Description": "A highly detailed plastic model of the space shuttle, complete with launch pad and accessories."
+    },
+    {
+        "ID": 3,
+        "Name": "Space Y Station Playset",
+        "Price": 39.99,
+        "Image": "Sta.png",
+        "Brand": "SPACE Y POP TOYS Co.",
+        "Description": "A detailed playset of a space station, complete with astronauts, equipment, and accessories."
+    }
+]
