@@ -1,0 +1,607 @@
+:root {
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233, 187, 2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+/** Header **/
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+}
+/** Footer **/
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto {
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+}
+/** Navegacion **/
+.navegacion {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+}
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--secundario);
+}
+
+/** Grid **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/** Productos **/
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.producto__nombre {
+    font-size: 4rem;
+}
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/** Graficos **/
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.grafico--camisas {
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.grafico--node {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+
+@media (min-width: 768px) {
+    .grafico--node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/** Nosotros **/
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.nosotros__imagen {
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen {
+       grid-column: 2 / 3;
+    }
+}
+
+/** Bloques **/
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque {
+    text-align: center;
+}
+
+.bloque__titulo {
+    margin: 0;
+}
+
+/** Pagina del Producto **/
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.formulario__campo {
+   border: 1rem solid var(--primarioOscuro);
+   background-color: transparent;
+   color: var(--blanco);
+   font-size: 2rem;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 1rem;
+   appearance: none;
+}
+.formulario__submit {
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+.formulario__submit:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
+
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.App {
+  text-align: center;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  width: 90%;
+  height: 100%;
+  min-height: 300px;
+  align-self: center;
+  justify-content:center;
+  margin-bottom: 10px;
+  margin-top: 80px;
+background-position: top center;
+  background-repeat: repeat;
+    background-color: coral;
+}
+
+nav{
+  background-color: rgb(3, 17, 1);
+  display: flex;
+  width: 100%;
+  min-height: 85px;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+  border-bottom: 1px solid #fff;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+top: 0;
+  position: fixed;}
+h1 {
+  width: 100%;
+  align-self: flex-end;
+  text-align: center;
+  text-shadow: 4px 3px 2px #fff, 9px 3px 0px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  background-color: coral;
+  font-size: 4rem;
+}
+.App-logo {
+  height: 90px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+  
+  footer {
+
+display: flex;
+flex-flow: column wrap;
+    background-color: black;
+    min-height: 80px;
+    flex-flow: column wrap;
+    padding: 2rem;
+    color: orangered;
+    justify-content: space-around;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+main{
+   background-color: #f6ae2d;
+   display: flex;
+   flex-direction: column wrap;
+   width: 100%;
+height: 100%;
+min-height: 80vh;
+   align-items: stretch;
+   color: wheat;
+}
+
+main section{
+    background-color: #2F4858;
+   display: flex;
+   flex-flow: column wrap ;
+
+    max-width: 80%;
+
+}
+.tres, section{
+    background-color: #2F4858;
+   display: flex;
+   flex-flow: row wrap;
+    width: 100%;
+
+    padding: 20px;
+        display: flex;
+    flex-flow: column wrap;
+    max-width: 714px;
+    min-height: 614px;
+    justify-content: center;
+    align-items: center;
+    background-color: #e48080;
+}
+aside{
+    background-color: #33658a;
+     display: flex;
+   flex-direction: column;
+   width: 20%;
+    padding: 20px;
+}
+img, video{
+    height: 90%;
+}
+
+.quatro{
+    background-color: #86bbd8;
+display: flex;
+flex-flow: row wrap;
+    color: black;
+width: 100%;
+max-width: 240px;
+height: 200px;
+}
+
+.quatro, article{
+    background-color: #86bbd8;
+
+    height: 410px;
+    margin: 10px auto;
+    color: black;
+width: 100%;
+}
+
+@media  screen  and (max-width: 769px){
+.dois{
+display: flex;
+flex-flow: column wrap;
+width: 100%;
+max-width: 769px;
+}
+.cinco{
+    background-color: #33658a;
+     display: flex;
+   flex-direction: row wrap ;
+   width: 100%;
+   
+   max-width: 769px;
+   
+    max-height: 400px;
+}
+.cinco .quatro{
+display: flex;
+flex-flow: column wrap;
+width: 40%;
+
+min-width: 200px;
+
+
+}
+.dois section{
+width: 100%;
+max-width: 769px;
+flex-direction: column;
+}
+}
+
+import React from 'react'
+
+
+import Contador from './components/Contador/index'
+
+import {Garagem} from './components/Garagem/index'
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+             <nav> 
+        
+        <button>btn1</button>
+        
+        <button>btn1</button>
+        
+        <button>btn1</button>
+            </nav>
+
+
+      <header>
+ 
+        <h1>
+   Header       
+        </h1>
+
+<img src={logo} className="App-logo " alt="logo" />
+</header>
+
+     
+
+<div className="dois">
+     <main class="dois">
+
+  
+     
+
+        <aside  class="cinco">
+            <h2>Aside</h2>
+            <Garagem
+   
+              />
+       <article class="quatro">
+        
+            </article>
+</aside>
+<section class="tres">  <h2>Section</h2>
+              <Garagem
+   
+              />
+        <Garagem
+   
+              />
+        <Garagem
+   
+              />
+        <Garagem
+   
+              />
+
+            </section>
+<section class="tres">  <h2>Section</h2>
+              <Garagem
+   
+              />
+        <Garagem
+   
+              />
+        <Garagem
+   
+              />
+        <Garagem
+   
+              />
+
+            </section>
+    </main>
+    </div>
+    <footer>
+    
+  
+        <p>Footer</p>
+        <p>Envie sua notícia pra gente clicando aqui</p>
+
+
+    </footer>
+              </div>
+  );
+}
+
+export default App;
+
+import React from 'react'
+
+
+import Contador from './components/Contador/index'
+
+import {Garagem} from './components/Garagem/index'
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+function apresentaApp(){
+return alert('Bem vindo a ASTRO  SIDE STORE')
+}
+  return (
+    <div classNameName="App">
+  <nav className="navbar navbar-default">
+    <div className="container">
+      <div className="navbar-header">
+      </div>
+      <nav>
+          <button><a href="/">HOME</a></button>
+          <button><a href="/about">ABOUT US</a></li>
+          <button><a href="/contact">CONTACT US</a></button>
+      
+
+        
+          </nav>
+          
+    </div>
+  </nav>
+<div className="container">
+      <header>
+
+        <h1>
+   Header       
+        </h1>
+
+
+                <input type="search"/>
+
+        </header>
+</div>
+     <div className="container">
+   <sec class="div50">
+              <Garagem
+   
+              />
+</sec>
+<div classNameName="dois">
+     <main className="dois">
+
+  
+     
+
+        <aside  className="cinco">
+            <h2>Aside</h2>
+            <Garagem
+   
+              />
+
+</aside>
+<section className="tres">  <h2>Section</h2>
+              <Garagem
+   
+              />
+    <Garagem
+   
+            
+              />
+            </section>
+    <section className="tres">  <h2>Section</h2>
+              <Garagem
+   
+            
+              />
+                  <Garagem
+   
+            
+              />
+            </section>
+                <section className="tres">  <h2>Section</h2>
+              
+               <Garagem
+   
+              />    <Garagem
+   
+            
+              />
+            </section>
+            
+    </main>
+    </div>
+    </div>
+    <footer>
+    
+  
+        <p>Footer</p>
+        <p>Envie sua notícia pra gente clicando aqui</p>
+
+
+    </footer>
+              </div>
+  );
+}
+
+export default App;

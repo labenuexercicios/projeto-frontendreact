@@ -1,0 +1,415 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ */
+header{
+  display: flex;
+    justify-content: center;
+}
+/*header{
+  display: flex;
+  flex-grow: column wrap;
+  height: calc(100vh - 100%);
+  min-height: 50vh;
+  margin-top: 20px;
+  width: 100%;
+  background: #e5e5e5;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  padding: 5%;
+  align-self: center;
+  padding: 1rem;
+
+
+  margin-top: 100px;
+}*/
+
+nav, nav ul {
+	padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+	background-color: rgb(90, 2, 102);
+
+}
+
+nav button {
+width: 120px;
+height: 40px;
+    background-color: #7dff03;
+    border: 2px solid #000002;
+    color: #15010f;
+    transition: background-color 5s;
+    border-radius: 15px;
+}
+div h2{
+  width: 100%;
+  align-self: flex-end;
+  text-align: center;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+ font-size: 2rem;
+  background-color: coral;
+}
+
+
+
+
+
+h2 {
+width: 100%;
+    margin: 30px 0;
+    display: block;
+}
+.submenu {
+    position: relative;
+}
+
+.submenu .carrito{
+    display: none;
+}
+/*.active:hover .carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 10;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+/*@media (max-width: 1000px) {
+
+
+    header h1{
+        float: none;
+    }
+
+    header a{
+        margin-top: 25px;
+        float: none;
+    }
+
+}*/
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*
+main section{
+    background-color: #2F4858;
+   display: flex;
+   flex-flow: column wrap ;
+
+    max-width: 80%;
+
+}*/
+/*.tres, section{
+    background-color: #2F4858;
+   display: flex;
+   flex-flow: row wrap;
+    width: 100%;
+
+    padding: 20px;
+        display: flex;
+    flex-flow: column wrap;
+    max-width: 714px;
+    min-height: 614px;
+    justify-content: center;
+    align-items: center;
+    background-color: #e48080;
+}*/
+/*aside{
+    background-color: #33658a;
+     display: flex;
+   flex-direction: row wrap ;
+   width: 100%;
+    padding-bottom: 190px;
+   max-width: 769px;
+   
+    max-height: 400px;
+}
+img, video{
+    height: 90%;
+}
+
+.quatro{
+    background-color: #86bbd8;
+display: flex;
+flex-flow: row wrap;
+    color: black;
+width: 100%;
+max-width: 240px;
+height: 200px;
+}*/*/
+
+/*.quatro, article{
+    background-color: #86bbd8;
+
+    height: 410px;
+    margin: 10px auto;
+    color: black;
+width: 100%;
+}*/
+/*main section article , main section article {
+width: 100%;
+  max-width: 318px;
+  max-height: 434px;
+  background: #fffe97;
+  list-style-position: inside;
+  margin: 30px auto;
+  align-content: space-around;
+  justify-content: space-around;
+      border-radius: 5px;
+    box-shadow: 5px 6px 11px 0px rgba(20,18,20,0.75);
+}*/
+@media  screen  and (max-width: 769px){
+.dois{
+display: flex;
+flex-flow: column wrap;
+width: 100%;
+max-width: 769px;
+}
+.cinco{
+    background-color: #33658a;
+     display: flex;
+   flex-direction: row wrap ;
+   width: 100%;
+    padding-bottom: 190px;
+   max-width: 769px;
+   
+    max-height: 400px;
+}
+}
+article {
+display:inline-block;
+width: 100%;
+height: 100%;
+  max-width: 318px;
+  min-height: 434px;
+  padding: 2rem;
+  background: #fffe97;
+  list-style-position: inside;
+  margin: 10px auto;
+  align-content: space-around;
+  justify-content: center;
+      border-radius: 5px;
+    box-shadow: 5px 6px 11px 0px rgba(20,18,20,0.75);
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+section {
+   background-color: #000002;
+   display: flex;
+   flex-flow: column wrap;
+   align-items: center;
+   justify-content: center;
+   color: black;
+   padding: 2rem;
+}
+
+section div {
+    display:  flex;
+    width: 90%;
+    flex-flow: row wrap;
+       align-items: center;
+   justify-content: center;
+    
+}
+
+/*section{
+    background-color: #2F4858;
+   display: flex;
+   flex-flow: row wrap ;
+
+    max-width: 80%;
+
+}
+.tres, section{
+    background-color: #2F4858;
+   display: flex;
+   flex-flow: row wrap;
+    width: 100%;
+
+    padding: 20px;
+        display: flex;
+    flex-flow: column wrap;
+    max-width: 714px;
+    min-height: 614px;
+    justify-content: center;
+    align-items: center;
+    background-color: #e48080;
+}*/
+
+  
+
+
+ /*article {
+width: 33%;
+  max-width: 318px;
+  min-height: 634px;
+  background: #fffe97;
+  list-style-position: inside;
+  margin: 30px auto;
+  align-content: space-around;
+  justify-content: space-around;
+      border-radius: 5px;
+    box-shadow: 5px 6px 11px 0px rgba(20,18,20,0.75);
+}*/
+
+.active{
+width: 120px;
+height: 40px;
+    background-color: #7dff03;
+    border: 2px solid #000002;
+    color: #15010f;
+    transition: background-color 5s;
+    border-radius: 15px;
+
+}
+
+
+.banner{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-height: 40vh;
+    background-color: #a9ec8a;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 80px;
+    overflow-y: auto;
+    
+}
+
+
+.Banner input {
+    display: inline;
+    max-width: 300px;
+}
+
+
+.card {
+
+    margin: 10px 10px;
+    padding: 1rem;
+    border: 2px groove #0f0c0d;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 0;
+  max-width: 300px;
+max-height: 450px;
+  object-fit: contain;
+}
+
+.colorStrong {
+    color: #ff0086;
+}
+
+
+/* Flip Cards CSS */
+
+.card-container {
+    display: grid;
+    perspective: 700px;
+}
+
+.card-flip {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+.card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.front {
+    grid-area: frontAndBack;
+}
+
+.back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+        background: url('./../public//assets/img/bgcard.png');
+}
+
+.card-container:hover .card-flip {
+    transform: rotateY(180deg);
+}
+
+.card-title {
+    background-color: #bbbbbb;
+    font-size: 1.6rem;
+    vertical-align: middle;
+    padding-left: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: lighter;
+}
+
+.card-block {
+    padding: 1rem;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+.card-text {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 1.3rem;
+}
+
+.btn-primary {
+    background-color: #c3c3c3;
+    border: 2px solid #bababa;
+    border-radius: 15px;
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: #939393;
+    border: 2px solid #000000;
+    border-radius: 15px;
+}
+
+.card-header {
+    background-color: #a4a2a3;
+    color: rgb(25, 24, 24);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
