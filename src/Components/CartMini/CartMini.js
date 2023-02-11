@@ -1,7 +1,15 @@
 import React from "react";
-import { CartMiniDisplay, CartCard } from "./styled";
+import {
+  CartMiniDisplay,
+  CartCard,
+  CartItemValue,
+  CartButtonAmount,
+  CartItemInteraction,
+  CartTotalPrice,
+  CartContainer,
+} from "./styled";
 
-export default function CartMini({cart, setCart}){
+export default function CartMini({ cart, setCart }) {
   // Functions
   const handleRemoveAll = (index) => {
     setCart((remove) => remove.filter((_, i) => i !== index));
@@ -54,51 +62,65 @@ export default function CartMini({cart, setCart}){
   };
 
   const handleTotalPrice = () => {
-    return (cart.reduce((acc, item) => acc + item.price * item.amount, 0)).toLocaleString("en", {
-      style: "currency",
-      currency: "USD",
-    });
+    return cart
+      .reduce((acc, item) => acc + item.price * item.amount, 0)
+      .toLocaleString("en", {
+        style: "currency",
+        currency: "USD",
+      });
   };
 
-    return(
-        <CartMiniDisplay>
-            <h2>Cart</h2>
-            {cart.map((product, index) => (
+  return (
+    <CartMiniDisplay>
+      <h2>Cart</h2>
+      <CartContainer>
+      {cart.map((product, index) => (
         <CartCard key={product.id}>
           <img src={product.image} alt={product.name} width={"32px"} />
-          <p>{product.name}</p>
-          <p>
-            {product.price.toLocaleString("en", {
-              style: "currency",
-              currency: "USD",
-            })}
-          </p>
-          <button onClick={() => handleAddOne(product, product.id)}>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/32/32339.png"
-              alt="Add One"
-              width={"25px"}
-            />
-          </button>
-          <p>{product.amount}</p>
-          <button onClick={() => handleRemoveOne(product, product.id, index)}>
-            {" "}
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/1828/1828901.png"
-              alt="Delete One"
-              width={"25px"}
-            />{" "}
-          </button>
-          <button onClick={() => handleRemoveAll(index)}>
-            {" "}
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/542/542724.png"
-              alt="Delete All"
-              width={"25px"}
-            />{" "}
-          </button>
+          <CartItemValue>
+            <p>{product.name}</p>
+            <p>
+              {product.price.toLocaleString("en", {
+                style: "currency",
+                currency: "USD",
+              })}
+            </p>
+          </CartItemValue>
+          <CartItemInteraction>
+            <CartButtonAmount onClick={() => handleAddOne(product, product.id)}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/32/32339.png"
+                alt="Add One"
+                width={"15px"}
+                height={"15px"}
+              />
+            </CartButtonAmount>
+            <h1>{product.amount}</h1>
+            <CartButtonAmount
+              onClick={() => handleRemoveOne(product, product.id, index)}
+            >
+              {" "}
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1828/1828901.png"
+                alt="Delete One"
+                width={"15px"}
+                height={"15px"}
+              />{" "}
+            </CartButtonAmount>
+            <CartButtonAmount onClick={() => handleRemoveAll(index)}>
+              {" "}
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/542/542724.png"
+                alt="Delete All"
+                width={"15px"}
+                height={"15px"}
+              />{" "}
+            </CartButtonAmount>
+          </CartItemInteraction>
         </CartCard>
       ))}
-      <h3>Total:{handleTotalPrice()}</h3>
-        </CartMiniDisplay>
-    );}
+      </CartContainer>
+      <CartTotalPrice>Total:{handleTotalPrice()}</CartTotalPrice>
+    </CartMiniDisplay>
+  );
+}

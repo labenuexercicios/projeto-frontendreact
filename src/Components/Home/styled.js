@@ -16,13 +16,19 @@ export const Produto = styled.div`
   justify-content: center;
   margin-bottom: 2rem;
   max-width: 30vw;
+  border: 1px solid gray;
+  border-radius: 3rem;
+  margin: 20px;
+  padding: 10px;
 `;
 
 export const Botao = styled.button`
   padding: 10px;
+  margin: 10px;
+  width: 100px;
   border-radius: 4px;
   &:hover {
-    filter: contrast(10%);
+    filter: contrast(70%);
     transition: all 1s;
   }
 `;
