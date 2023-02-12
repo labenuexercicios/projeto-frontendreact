@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Filters from "./Components/Filters/Filters"
+import Home from "./Components/ProductList/Home/Home"
+import ProductCard from "./Components/ProductList/ProductCard/ProductCard"
+import Cart from "./Components/ShoppingCart/Cart/Cart"
+import Items from "./Components/ShoppingCart/Items/Items"
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <h1>Olá mundo ! vamos a mais um projeto. Eu vou conseguir !!!!</h1>
-    </div>
+   <div>
+    <Filters/>
+    <Home/>
+    <Cart/>
+   </div>
   )
 }
 
