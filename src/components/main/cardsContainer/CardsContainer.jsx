@@ -6,7 +6,7 @@ export default function CardsContainer({ filterByName, setFilterByName, filterSo
         <CardsContainerStyled>
             {toys
                 .filter((toy) => {
-                    return toy.Name.toLowerCase().includes(filterByName) ? true : false
+                    return toy.Name.toLowerCase().includes(filterByName.toLowerCase()) ? true : false
                 })
                 .filter((toy) => {
                     return toy.Price > filterPriceMin;
