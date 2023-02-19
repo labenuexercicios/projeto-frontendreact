@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Header } from './components/Header/Header'
 import { Filter } from './components/Filter/Filter'
 import { Home } from './components/Home/Home'
-import { CartContainer } from './components/Cart/styled'
+import { Cart } from './components/Cart/Cart'
 import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -24,15 +24,9 @@ function App() {
       <GlobalStyle/>
       <Header/>
       <Container>
-        <Filter>
-
-        </Filter>
-        <Home>
-
-        </Home>
-        <CartContainer>
-          
-        </CartContainer>
+        <Filter/>
+        <Home/>
+        <Cart/>
       </Container>
     </>
       
