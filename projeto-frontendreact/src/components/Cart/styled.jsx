@@ -5,3 +5,8 @@ export const CartContainer = styled.div`
     width: 20%;
     background-color: lightcoral;
 `
+
+export const CartTitle = styled.h2`
+    margin-left: 1vw;
+    
+`
