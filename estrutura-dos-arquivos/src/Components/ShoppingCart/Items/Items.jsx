@@ -2,7 +2,9 @@
 function Items (){
     return(
         <div>
-            <p>Items</p>
+            <p>x0 Nome do produto</p>
+            <button>Remover</button>
+            <p>Valor total = 0</p>
         </div>
     )
 }

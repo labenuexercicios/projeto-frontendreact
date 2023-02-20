@@ -1,13 +1,14 @@
 
 import Items from "../Items/Items"
+import { Carts, Title} from "./CartStyle"
 
 
 function Cart (){
     return(
-        <div>
-            <p>Cart</p>
+        <Carts>
+            <Title>Cart</Title>
             <Items/>
-        </div>
+        </Carts>
     )
 }
 
