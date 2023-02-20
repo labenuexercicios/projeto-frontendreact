@@ -1,13 +1,13 @@
 import React from "react";
-import { HomeContainer, HeadHome, HeadBlock, TextHeadHome, SelectOrder } from "./styled";
-import { ProductCard} from "../ProductCard/ProductCard";
+import { HomeContainer, HeadHome, HeadBlock, TextHeadHome, SelectOrder, CardDiv } from "./styled";
+import { ProductCard } from "../ProductCard/ProductCard";
 
-export function Home(){
+export function Home({products}){
     return(
         <HomeContainer>
             <HeadHome>
             <HeadBlock>
-                <TextHeadHome>Quantidade de produtos:</TextHeadHome>
+                <TextHeadHome>Quantidade de produtos: {products.length}</TextHeadHome>
             </HeadBlock>
             <HeadBlock>
                 <TextHeadHome>Ordenação:</TextHeadHome>           
@@ -17,7 +17,12 @@ export function Home(){
                 </SelectOrder>
             </HeadBlock>               
             </HeadHome>
-            <ProductCard/>
+            <CardDiv>
+                {products.map((product) => (
+                    <ProductCard key={product.id} product={product}/>
+                ))}  
+            </CardDiv>
+            
         </HomeContainer>
     )
 }

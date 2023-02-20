@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-    height: 80vh;
+    height: 105vh;
     width: 20%;
-    background-color: lightcoral;
+    border: 1px solid black;
 `
 
 export const CartTitle = styled.h2`

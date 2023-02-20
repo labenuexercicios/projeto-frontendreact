@@ -3,6 +3,9 @@ import { Header } from './components/Header/Header'
 import { Filter } from './components/Filter/Filter'
 import { Home } from './components/Home/Home'
 import { Cart } from './components/Cart/Cart'
+import productsList from './assets/producstList'
+
+
 import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -18,14 +21,16 @@ const Container = styled.div`
   width: 100vw;   
 `;
 
+
 function App() {
+
   return (
     <>
       <GlobalStyle/>
       <Header/>
       <Container>
         <Filter/>
-        <Home/>
+        <Home products={productsList}/>
         <Cart/>
       </Container>
     </>

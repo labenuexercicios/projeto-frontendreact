@@ -4,6 +4,8 @@ export const Card = styled.div`
     height: 45vh;
     width: 15vw;
     border: 1px solid black;
+    margin: 0 auto;
+    margin-bottom: 2vh;
 `
 
 export const ImageCard = styled.img`
