@@ -2,7 +2,7 @@
 
 export default function Filter() {
     return(
-        <p>Filter</p>
+        <h1>Filter</h1>
     )
 
 }
