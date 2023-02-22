@@ -1,7 +1,9 @@
 import ProductCard from "../ProductCard/ProductCard"
 import { HomeStyle, Ordination } from "./HomeStyle"
 
-export default function Home() {
+export default function Home(props) {
+
+    console.log(props.productsList1)
     return (
         <HomeStyle>
             <Ordination>
@@ -13,7 +15,11 @@ export default function Home() {
                 </p>
             </Ordination>
             <div>
-            <ProductCard />
+            <ProductCard
+            product1 = {props.productsList1}
+            product2 = {props.productsList2}
+            product3 = {props.productsList3}
+            />
             </div>
         </HomeStyle>
     )

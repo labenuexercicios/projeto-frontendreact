@@ -14,11 +14,16 @@ export const ContainerCard = styled.div`
     width: 15rem;
     height: 22rem;
     border: 2px solid rgba(255, 255, 255, 0.87);
+
+    /* :hover{
+        flex-direction: row;
+        width: 50rem;
+        height: 22rem;
+    } */
 `
 
 export const Image = styled.img`
-    max-width: 256px;
-    max-height: 256px;
+
 `
 
 export const Button = styled.button`
