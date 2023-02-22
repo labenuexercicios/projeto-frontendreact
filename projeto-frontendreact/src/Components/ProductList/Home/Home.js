@@ -1,16 +1,19 @@
+import { useState } from "react"
 import ProductCard from "../ProductCard/ProductCard"
 import { HomeStyle, Ordination } from "./HomeStyle"
 
 export default function Home(props) {
-
-    console.log(props.productsList1)
+    const [ordination, setOrdination] = useState('')
+    
     return (
         <HomeStyle>
             <Ordination>
-                <p>Quantidade de produtos:</p>
+                <p>Quantidade de produtos: {props.productList}</p>
                 <p>Ordenação:
                     <select>
-                        <option></option>
+                        <option>Crescente</option>
+                        <option>Decrescente</option>
+                        <option>Valor</option>
                     </select>
                 </p>
             </Ordination>
