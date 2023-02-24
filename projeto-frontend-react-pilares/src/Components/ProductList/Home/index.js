@@ -6,67 +6,23 @@ import { HomeCtn1, Homecard, CircleDiv , CircleImg, TitleCategory} from './style
 
 
 
-
-export function Home(){
+export function Home({product},{setProduct}){
 const img1 = "https://i.ebayimg.com/images/g/jYwAAOSwVFpfcpOo/s-l400.jpg"
-    return(
+console.log(product)
+const productFinalPrice = (a, b)=>{
+    return Number(a) * Number(b)
+}
+return(
 
-
-    <Homecard>
-        <TitleCategory>TOYS e LEGOS</TitleCategory>
-
-<HomeCtn1>
-    <h2>LEGO</h2>
-
-<CircleDiv>
-<CircleImg src={img1} alt="img1" />
-
-
-
-</CircleDiv>
-</HomeCtn1>
-<HomeCtn1>
-    <h2>LEGO</h2>
-
-<CircleDiv>
-<CircleImg src={img1} alt="img1" />
-
-</CircleDiv>
-</HomeCtn1>
-
-<HomeCtn1>
-    <h2>LEGO</h2>
-
-<CircleDiv>
-<CircleImg src={img1} alt="img1" />
-
-</CircleDiv>
-
-    <h2>LEGO</h2>
-
-<CircleDiv>
-<CircleImg src={img1} alt="img1" />
-
-
-
-</CircleDiv>
-
-    <h2>LEGO</h2>
-
-<CircleDiv>
-<CircleImg src={img1} alt="img1" />
-
-</CircleDiv>
-
-    <h2>LEGO</h2>
-
-<CircleDiv>
-<CircleImg src={img1} alt="img1" />
-
-</CircleDiv>
-</HomeCtn1>
-</Homecard>
-
+<div>
+<CircleDiv />
+<CircleImg src={product.img} alt="img1" />
+    <ul>
+        <li>{product.name}</li>
+        <li>{product.priceBase}</li>
+        <li>{productFinalPrice(product.priceBase, product.discountBase)}</li>
+    </ul>
+</div>
 
 
 

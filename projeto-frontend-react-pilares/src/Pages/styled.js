@@ -47,11 +47,11 @@ export const Section = styled.ul`
   display: flex;
   flex-direction: column wrap;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   height: 100%;
   min-height: 45vh;
   align-self: center;
-justify-content: center;
+justify-content: space-around;
 
 
 @media screen and (max-width: 769px){
@@ -71,3 +71,20 @@ justify-content: center;
 }
 }
 `
+
+export const CardItem = styled.div`
+padding: 16px;
+min-width: 400px;
+max-width: 440px;
+background-color: ${(props) => props.color};
+border-radius: 12px;
+display: flex;
+position: relative;
+margin: 50px;
+color: #efefef;
+box-shadow: #ffffff 2px 0px 2px 1px inset, black 0px 0px 0px 1px;
+
+
+
+`
+

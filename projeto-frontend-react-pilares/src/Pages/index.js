@@ -1,90 +1,69 @@
 import React from 'react'
 import {Fragments, Components, useState } from 'react'
 import styled from 'styled-components'
-import {Centered, Aside, Section} from './styled'
+import {Centered, Aside, Section , CardItem} from './styled'
 
 
 import logo1 from './../assets/logo1.png'
 import {Cart} from './../Components/ShoppingCart/Cart/index'
 import {Home} from './../Components/ProductList/Home/index'
-
+import dataProducts from './../Data/dataProducts.json'
 
 export function Main(){
 const [section, setSection] = useState('BEM-VINDO')
 const [content, setContent] =useState(Cart)
-console.log(section)
-const changeSection1 = ()=>{
-  setSection("Home")
-  setContent(Home)
-}
-console.log(section)
-console.log(content)
+const [products, setProducts] = useState(dataProducts)
+const [product, setProduct] = useState({})
+const [searchName, setSearchName] = useState(
+  [...dataProducts].map(product=>products.name))
 
-const changeSection2 = ()=>{
-  setSection("PRODUTOS")
-  setContent(Cart)
-}
-console.log(section)
-const changeSection3 = ()=>{
-  setSection("COMPRAS")
-}
-console.log(section)
-const changeSection4 = ()=>{
-  setSection("RESULTADOS")
-}
-console.log(section)
+console.log(products)
 return(
-<div className="App">
-<Centered>
-
- 
-<nav  class="menu">
-    
 <div>
-<img src={logo1} alt="logo astro-side" class="logoBrand" />
 
-</div>
-      <nav>
- <button onClick={changeSection1}>HOME</button>
-    <button  onClick={changeSection2}>PRODUTOS</button>   
-    <button  onClick={changeSection3}>COMPRAS</button> 
-    </nav><div>
-      <input/> <button onClick={changeSection4}>
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
  
 
-   
-      </div>
+    
+
+
+<main><header> 
+<nav className="menu">
+<img src={logo1} alt="logo astro-side" class="logoBrand" />
 </nav>
-
-<main><header>  <h1>Astro.SIDE</h1>
-
+ 
   <img src={logo1} alt="logo astro-side" class="logoBrand" />
-   <h2>{section}</h2> 
+   <h1>{section}</h1> 
+   <span>
+    <input type="text" 
+    value={searchName} 
+    onChange={(e)=>{setSearchName(e.target.value)}}
+    />
+   </span>
 </header>
   </main>
 
-
-
-<Aside>
+<Centered>
 
 
 
-</Aside>
+    <Section >
 
+      {products.map(product=>
+   <li key={product.id}>
+    <CardItem color={product.hHx}>
+      <div>
+      <span><strong>Modelo </strong>#{product.id}</span>
+      <hr/>
+        <span><strong>Nome</strong></span>
+        <h2>{product.name}</h2>
+      </div>
+    <div>
+      <img src={product.img} alt={product.name} />
+    </div>
+    </CardItem>
+  </li>
+)}
 
-    <Section>
-      <li>
-      {content}
-    </li>
-    <li>
-      {content}
-    </li>
-
-    <li>
-      {content}
-    </li>
     </Section>
 
  

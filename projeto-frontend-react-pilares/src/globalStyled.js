@@ -241,15 +241,15 @@ aside{background: #900C3F}
 }
 main{
 display: flex;
-flex-flow: column wrap;
+flex-flow: row wrap;
 width: 95%;
 
-margin-left: 2.5%;
 height: 34vh;
 align-items: center;
 justify-content: flex-start;
-background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.wallpapersafari.com%2Fdesktop%2F1600%2F900%2F37%2F1%2Fejotvq.jpg&f=1&nofb=1&ipt=b41f38d1adfeab94cae2a1f82614a05fe7dad8194f6eeafc84302670dddb26d3&ipo=images");
+background: url("https://pa1.narvii.com/7877/2a9b2faf72a95d2d80c1f188cbaf8ddbf4c89af5r1-500-500_hq.gif");
 background-size: cover;
+background-repeat: repeat;
 background-position: top center;
 color:  #e6e6e6;
 font-size: 2.5rem;
@@ -259,17 +259,14 @@ overflow: hidden;
 
 
 header {
-display: flex;
-flex-flow: row wrap;
+display: block;
 width: 100%;
-height: 100%;
-align-items: center;
-justify-content: center;
-text-align: center;
-font-size: 1.3rem;
+height:50%;
+font-size: 2.3rem;
+color: crimson;
+background: whitesmoke;
+text-shadow: #000 2px 2px 2px;
 
-margin-left:0;
-justify-content: center;
 }
 
 /*
