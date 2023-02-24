@@ -8,13 +8,12 @@ function Home() {
         <div>
             <Header>
                 <p>Quantidade de produtos</p>
-                <p>Ordenação</p>
-                <select>
+                <p>Ordenação<select>
                     <option value="crescente">Crescente</option>
                     <option value="Decrescente">Decrescente</option>
-                </select>
+                </select></p>
             </Header>
-            <ProductCard />
+            <ProductCard/>
         </div>
     )
 }

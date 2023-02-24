@@ -1,31 +1,41 @@
-import { Main, Section1, Section2, Section3 } from "./productStyle"
-function Home() {
+import { Main, Section1, Section2, Section3, Img1, Img2, Img3,Button} from "./productStyle"
+
+function ProductCard() {
+
+    
     return (
         <Main>
             <Section1>
-                <p>ProductCard</p>
+                <Img1 src={"https://picsum.photos/300/335?a=1"}/>
                 <p>Nome do produto</p>
                 <p>valor</p>
-                <button>Adiconar ao carrinho</button>
+                <Button>
+                    <button>Adiconar ao carrinho</button>
+                </Button>
             </Section1>
 
             <Section2>
-                <p>ProductCard</p>
+                <Img2 src={"https://picsum.photos/300/335?a=2"}/>
                 <p>Nome do produto</p>
                 <p>valor</p>
-                <button>Adiconar ao carrinho</button>
+                <Button>
+                    <button>Adiconar ao carrinho</button>
+                </Button>
+                
             </Section2>
 
             <Section3>
-                <p>ProductCard</p>
+                <Img3 src="https://picsum.photos/300/335?a=3"/>
                 <p>Nome do produto</p>
                 <p>valor</p>
-                <button>Adiconar ao carrinho</button>
+                <Button>
+                    <button>Adiconar ao carrinho</button>
+                </Button>
             </Section3>
 
         </Main>
     )
 }
 
-export default Home
+export default ProductCard
 

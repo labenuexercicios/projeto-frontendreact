@@ -1,9 +1,8 @@
 import styled from "styled-components"
 
 export const Carts = styled.div`
-    
     height: auto;
-    width: 14vw;
+    width: 15vw;
     border: 1px solid black;
     
 `

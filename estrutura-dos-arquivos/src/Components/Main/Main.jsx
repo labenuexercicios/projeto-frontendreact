@@ -2,8 +2,7 @@ import { Main } from "./mainStyle"
 
 const Principal = ()=>{
     return(
-        <Main>  
-            
+        <Main>     
         </Main>
     )
 }
