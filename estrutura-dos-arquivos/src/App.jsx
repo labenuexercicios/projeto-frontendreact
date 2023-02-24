@@ -5,7 +5,7 @@ import ProductCard from "./Components/ProductList/ProductCard/ProductCard"
 import Cart from "./Components/ShoppingCart/Cart/Cart"
 import Items from "./Components/ShoppingCart/Items/Items"
 import { GlobalStyle } from "./globalStyle"
-import productList from "./Components/assents/productsList"
+
 
 
 
@@ -16,7 +16,7 @@ function App() {
     <Main>
       <GlobalStyle/>
       <Filters />
-      <Home productList id={productList.id} name={productList.name} value={productList.value} imageUrl={productList.imageUrl} />
+      <Home/>
       <Cart/>
     </Main>
   )

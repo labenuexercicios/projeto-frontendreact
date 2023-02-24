@@ -1,6 +1,6 @@
 
-
 const productList = [{
+
     id:1,
     name:"product 1",
     value:10000.0,
@@ -21,3 +21,5 @@ const productList = [{
 ];
 
 export default productList
+
+console.log(productList)

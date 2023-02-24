@@ -1,4 +1,5 @@
 
+import productList from "../../assents/productsList"
 import ProductCard from "../ProductCard/ProductCard"
 import { Header } from "./HomeStyle"
 
@@ -13,7 +14,7 @@ function Home() {
                     <option value="Decrescente">Decrescente</option>
                 </select></p>
             </Header>
-            <ProductCard/>
+            <ProductCard productList = {productList}/>
         </div>
     )
 }
