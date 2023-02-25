@@ -31,3 +31,24 @@ export const OptionsList = styled.ul`
     height: 100%;
     align-items: center;
 `
+export const Login = styled.a`
+ cursor: pointer;
+    :hover{
+        background-color: black;
+        color: white;
+    }
+`
+export const Car = styled.a`
+ cursor: pointer;
+    :hover{
+        background-color: black;
+        color: white;
+    }
+`
+export const Contact = styled.a`
+ cursor: pointer;
+    :hover{
+        background-color: black;
+        color: white;
+    }
+`

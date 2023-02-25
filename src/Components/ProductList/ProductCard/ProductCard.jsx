@@ -8,11 +8,11 @@ const ShowCard = ({ cards }) => {
   return (
     <>      
       <Card>
-        <p>Onde você encontra seu melhor trage</p>
+        <h1>Onde você encontra seu melhor trage</h1>
         {
           cards.map(element =>(
           <Item>
-            <Image src={element.imge} alt='Trage para Astronauta'/>
+            <Image src={element.image} alt='Trage para Astronauta'/>
             <Code>Código:{element.code}</Code>
             <Title>{element.title}</Title>
             <Price>{element.price}</Price>

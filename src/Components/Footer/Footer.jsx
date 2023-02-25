@@ -4,7 +4,7 @@ import {AllRightsReserved} from './styles'
 
 const Footer = () => {
   return (
-    <AllRightsReserved>All rights reserved</AllRightsReserved>
+    <AllRightsReserved>All rights reserved @Bruno Nascimento Moura</AllRightsReserved>
   )
 }
 
