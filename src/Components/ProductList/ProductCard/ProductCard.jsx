@@ -6,9 +6,8 @@ import { Card, Item, Image, Code, Title, Price, SendButton } from "./styles"
 const ShowCard = ({ cards }) => {
 
   return (
-    <>      
-      <Card>
-        <h1>Onde você encontra seu melhor trage</h1>
+    <>       
+      <Card>        
         {
           cards.map(element =>(
           <Item>
@@ -20,7 +19,7 @@ const ShowCard = ({ cards }) => {
           </Item>
           ))
         }
-      </Card>
+      </Card>      
     </>
   )
 

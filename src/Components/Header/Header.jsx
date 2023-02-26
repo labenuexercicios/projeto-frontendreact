@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
 
 import {HeaderContainer, Logo, NavBar, OptionsList,Login, Car, Contact} from './styles'
-import logo from '../../Components/img -projeto/logo.ASTRODEV.logo.png'
-import login from '../img -projeto/perfil.gif'
-import shoppingCar from '../img -projeto/shopping-cart.gif'
-import support from '../img -projeto/support.gif'
+import logo from '../../Components/img -project/logo.ASTRODEV.logo.png'
+import login from '../img -project/perfil.gif'
+import shoppingCar from '../img -project/shopping-cart.gif'
+import support from '../img -project/support.gif'
 
-const Header = () => {
+const Header = (props) => {
 
 
   return (
     <HeaderContainer>
-        <Logo>
+        <Logo >
             <img src={logo} alt='Logo Labenu' height={45}/>
             <p>Astrodev </p>            
         </Logo>
         <NavBar>
             <OptionsList>
                 <li>
-                  <Login>
+                  <Login onClick={() => props.changePage(2)}>
                     <img src={login} alt='Login' height={38}/>
                   </Login>
                 </li>

@@ -1,36 +1,31 @@
 import styled from 'styled-components'
 
 export const Card = styled.div`
-  width:52%;
-  height: 85%; 
+  width:90%;
+  /* padding:5% 18%; */
   overflow-y: auto; 
-  position:fixed;
-  left: 50%;
-  top:50%; 
-  min-width: 350px;
-  transform:translate(-50%, -50%); 
-  display:flex;  
-  border:1px solid black;
-  gap:5%;
+  display:flex;    
+  gap:5%;  
   flex-wrap:wrap; 
   justify-content:center;
 `;
 
 export const Item = styled.div`
-width:200px;
-height:400px;
+width:55%; 
+height:60%;
 gap:5%;
 background-color:black;
-border-radius:5px;
+border-radius:15px;
 display:flex;
 flex-direction:column;
 align-items:center;
-padding:2%;
+padding:15%;
 `
 
 export const Image = styled.img`
 width:100px;
 height:200px;
+border-radius:5px;
 `
 
 export const Code = styled.p` 
@@ -59,3 +54,12 @@ export const SendButton = styled.button`
         color: black
     }
 `
+
+
+
+/*   height: 85%;  */  
+ /*  position:relative; */
+  /* left: 50%;
+  top:50%;  */
+  /* min-width: 350px;
+  transform:translate(-50%, -50%);  */

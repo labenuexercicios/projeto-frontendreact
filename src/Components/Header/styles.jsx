@@ -31,7 +31,7 @@ export const OptionsList = styled.ul`
     height: 100%;
     align-items: center;
 `
-export const Login = styled.a`
+export const Login = styled.button`
  cursor: pointer;
     :hover{
         background-color: black;

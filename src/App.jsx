@@ -6,6 +6,10 @@ import ShowCard from "./Components/ProductList/ProductCard/ProductCard";
 import ShoppingCar from "./Components/ShoppingCart/Cart/Cart";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
+import LoginPage from "./Components/LoginPage/LoginPage";
+import RegisterPage from "./Components/RegisterPage/RegisterPage";
+import AddressRegisterPage from "./Components/AddressRegister/AddressRegister";
+import RegisterUserPage from "./Components/RegisterUser/RegisterUser";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -82,12 +86,35 @@ const products = [
 function App() {
 
   const [cards, setCards] = useState(products)
+
+  const [valueConditional, setValueConditional] = useState(1)
+
+  const changePage = (values) => {
+    setValueConditional(values)
+  }
+
+  const renderPage = () => {
+    switch (valueConditional) {
+      case 1:
+        return <Header changePage={changePage}/>;
+      case 2:
+        return <LoginPage changePage={changePage} />;
+      case 3:
+        return <RegisterPage changePage={changePage}/>;
+      case 4:
+        return <AddressRegisterPage changePage={changePage}/>
+      case 5:
+        return <RegisterUserPage/>
+         
+    }
+  }
  
   return (
     <>
      <GlobalStyle/>
     <Container>
-      <Header/>      
+      <Header/>     
+      {renderPage()}      
       <Filter/>      
       <ShowCard cards={cards} setCards={setCards}/>
       <ShoppingCar/>      
