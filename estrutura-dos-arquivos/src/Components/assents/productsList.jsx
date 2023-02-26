@@ -22,4 +22,4 @@ const productList = [{
 
 export default productList
 
-console.log(productList)
+//console.log(productList)

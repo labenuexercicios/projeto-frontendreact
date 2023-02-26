@@ -2,18 +2,29 @@
 import productList from "../../assents/productsList"
 import ProductCard from "../ProductCard/ProductCard"
 import { Header } from "./HomeStyle"
-import  { useState } from "react"
+import { useState } from "react"
 
 
 function Home() {
 
-    const [ordination, setOdination] = useState('') 
-    
-    const onChangeOrdination =(e)=>{
+    const [ordination, setOdination] = useState('')
+    const [cart, setCart] = useState('sdsd')
+    const [amount, setAmount] = useState('dsdsd')
+
+
+    const onChangeOrdination = (e) => {
         setOdination(e.target.valeu)
+        //console.log(e.target.valeu);
+    }
+    const onChangeCart = (e) => {
+        setCart(e.target.value)
+    }
+    const onChangeAmount = (e) => {
+        setAmount(e.target.value)
     }
 
-    //console.log(ordination)
+
+    //console.log(ordination, cart, amount)
 
     return (
         <div>
@@ -24,7 +35,13 @@ function Home() {
                     <option value={ordination} onChange={onChangeOrdination}>Decrescente</option>
                 </select></p>
             </Header>
-            <ProductCard productList = {productList}/>
+            <ProductCard
+                productList={productList}
+                amount={amount}
+                onChangeAmount={onChangeAmount}
+                cart={cart}
+                onChangeCart={onChangeCart}
+            />
         </div>
     )
 }

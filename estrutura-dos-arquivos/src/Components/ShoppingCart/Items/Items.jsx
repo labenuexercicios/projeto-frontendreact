@@ -1,10 +1,15 @@
 
-function Items (){
+function Items (props){
+    console.log(props);
+
+
     return(
         <div>
-            <p>x0 Nome do produto</p>
+            <p>{props.cart}</p>
             <button>Remover</button>
-            <p>Valor total = 0</p>
+            <p>{props.amount}</p>
+            <button>Remover</button>
+            
         </div>
     )
 }
