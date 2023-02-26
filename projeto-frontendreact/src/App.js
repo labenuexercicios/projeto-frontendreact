@@ -3,7 +3,7 @@ import Header from './Components/Header/Header'
 import Filter from './Components/Filters/Filter'
 import Home from './Components/ProductList/Home/Home'
 import Cart from './Components/ShoppingCart/Cart/Cart'
-import { GlobalStyled } from './GlobalStyled'
+import {Application, GlobalStyled } from './GlobalStyled'
 import { ProductsList } from './Assents/ProductsList'
 import { useState } from 'react'
 
@@ -15,21 +15,35 @@ function App() {
   const [searchFilter, setSearchFilter] = useState('')
   const [cart, setCart] = useState('')
   const [amount, setAmount] = useState('')
-  
+
   return (
     <>
     <GlobalStyled/>
     <div>
       <Header />
-      <div className="App">
-        <Filter />
+      <Application>
+        <Filter 
+        minFilter = {minFilter}
+        setMinFilter = {setMinFilter}
+        maxFilter = {maxFilter}
+        setMaxFilter = {setMaxFilter}
+        searchFilter = {searchFilter}
+        setSearchFilter = {setSearchFilter}
+        />
         <Home
-        productList = {ProductsList.length}
-        productsList1 = {ProductsList[0]}
-        productsList2 = {ProductsList[1]}
-        productsList3 = {ProductsList[2]}/>
-        <Cart />
-      </div>
+        amount = {amount}
+        setAmount = {setAmount}
+        cart = {cart}
+        setCart = {setCart}
+        productsList = {ProductsList}
+        />
+        <Cart 
+        amount = {amount}
+        setAmount = {setAmount}
+        cart = {cart}
+        setCart = {setCart}
+        />
+      </Application>
     </div>
     </>
   )

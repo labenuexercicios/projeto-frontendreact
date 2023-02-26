@@ -10,7 +10,7 @@ export const ProductsList = [
         id: 2,
         name: "Spaceship THC-95",
         value: 25000000.0,
-        imageUrl: "https://cdn.discordapp.com/attachments/989268395302223913/1078093826499039303/grid_0.webp",
+        imageUrl: "https://uploaddeimagens.com.br/images/004/368/358/original/grid_0.jpg?1677422535",
         description: ""
       },
       {

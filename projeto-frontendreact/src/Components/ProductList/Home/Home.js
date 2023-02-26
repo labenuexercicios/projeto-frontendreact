@@ -3,12 +3,16 @@ import ProductCard from "../ProductCard/ProductCard"
 import { HomeStyle, Ordination } from "./HomeStyle"
 
 export default function Home(props) {
+    const [productsList1, productsList2, productsList3] = props.productsList
+
     const [ordination, setOrdination] = useState('')
+
+
     
     return (
         <HomeStyle>
             <Ordination>
-                <p>Quantidade de produtos: {props.productList}</p>
+                <p>Quantidade de produtos: {props.productsList.length}</p>
                 <p>Ordenação:
                     <select>
                         <option>Crescente</option>
@@ -19,9 +23,9 @@ export default function Home(props) {
             </Ordination>
             <div>
             <ProductCard
-            product1 = {props.productsList1}
-            product2 = {props.productsList2}
-            product3 = {props.productsList3}
+            product1 = {productsList1}
+            product2 = {productsList2}
+            product3 = {productsList3}
             />
             </div>
         </HomeStyle>

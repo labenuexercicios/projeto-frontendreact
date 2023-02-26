@@ -1,9 +1,10 @@
-
+import { Button
+ } from "../../ProductList/ProductCard/ProductCardStyle"
 export default function Items () {
     return(
         <div>
         <p>x0 Nome do produto</p>
-        <button>Remover</button>
+        <Button>Remover</Button>
         </div>
     )
 }

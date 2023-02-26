@@ -11,8 +11,8 @@ export const ContainerCard = styled.div`
     display: flex;
     gap: .5rem;
     flex-direction: column;
-    width: 15rem;
-    height: 22rem;
+    width: 18rem;
+    height: 25rem;
     border: 2px solid rgba(255, 255, 255, 0.87);
 
     /* :hover{
@@ -29,6 +29,7 @@ export const Image = styled.img`
 export const Button = styled.button`
     align-self: center;
     max-width: 10rem;
+    border-radius: 8px;
 `
 
 export const Paragraph = styled.p`
