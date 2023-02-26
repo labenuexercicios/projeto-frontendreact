@@ -14,4 +14,5 @@ export const FilterStyle = styled.aside`
     align-items: right;
     padding: 1rem;
     border: 2px solid rgba(255, 255, 255, 0.87) ;
+    gap: .5rem;
 `
