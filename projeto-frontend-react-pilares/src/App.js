@@ -8,19 +8,18 @@ import { Products } from './Views/Store/Products/index';
 import { Cart } from './Views/Store/Cart/index';
 import { GlobalStyled } from './globalStyled.js';
 import { useState } from'react'
-import { NavButton } from './Partials/HeaderNav/styled';
+
 
 function App() {
 
 const  [views, setViews] = useState(1)
-const handleClick = ()=>{
-  if(handleClick === 1){
-    setViews(2)
-    console.log(setViews)
-  }
+
+
+const handleClick = () => {
+  setViews(views + 1)
 }
 
-console.log(handleClick(1))
+
      return (
 
   <div>
