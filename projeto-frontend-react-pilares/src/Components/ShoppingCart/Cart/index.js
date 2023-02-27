@@ -1,21 +1,33 @@
-import React from 'react'
+import React from 'react';
 
-import {Fragments, useState, Components} from 'react'
-
-import {CartCtn} from './styledCart.js'
+import {CartCtn} from './styled'    
 
 
 
+export function Cart1(){
+    return 
+    (
+    <CartCtn>
 
-export function Cart(){
-return(
-<CartCtn>
 
-    <div>
-<h2>CART</h2>
-    </div>
+<ul>
+<li>
+<article>
+<h2>HELLO</h2>
+ </article> 
+ </li>
+ <li>
+<article>
+
+ </article> 
+ </li>
+  <li>
+<article>
+
+ </article> 
+ </li>
+</ul>
+    
 </CartCtn>
-
-
 )
 }
