@@ -163,3 +163,131 @@ text-align: center;
    }
 
 `
+
+
+
+export const HeaderCtn = styled.header`
+display: grid;
+margin-left: 5%;
+width: 90%;
+height: 100%;
+  min-height: 100%;
+background-color: aliceblue;
+grid-auto-rows: repeat(2 , 1fr);
+grid-template-columns: 100% ;
+border: 2px solid blue;
+min-height: 40vh;
+margin-top: 4rem;
+`
+export const HeaderComponent = styled.header`
+display: flex;
+margin-left: 5%;
+width: 90%;
+height: 100%;
+  min-height: 100%;
+background-color: black;
+grid-auto-rows: repeat(2 , 1fr);
+grid-template-columns: 100% ;
+border: 2px solid blue;
+min-height: 500px;
+margin-top: 4rem;
+`
+export const NavButton = styled.button`
+width: 100px;
+height: 40px;
+background: navy;
+color: white;
+align-content: center;
+`
+
+
+export const NavLogo = styled.img`
+display: inline-block;
+    width: 30%;
+    height: 60px;
+    align-self: flex-start;
+
+`
+
+
+export const NavBrand = styled.h1`
+    font-size: 1rem;
+    color: black;
+
+    display: inline-block;
+
+`
+
+export const NavList = styled.ul`
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  background-color: rgb(10, 0, 32);
+color: #48ff00;
+  text-align: center;
+  align-self: center;
+  border-radius: 5px ;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  -webkit-border-radius: 25px ;
+  -moz-border-radius: 25px ;
+  -ms-border-radius: 25px ;
+  -o-border-radius: 25px ;
+  justify-content: space-around;
+min-height: 7vh;
+`
+
+
+export const Box1 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+`
+
+export const Box2 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+`
+
+export const Box3 = styled.div`
+  text-align: center;
+  display: flex;
+  width: 100%;
+  background-color: #ffdc00;
+  height: 100%;
+  justify-content: center;
+  align-self: flex-end;
+`
+export const Box4 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+`
+export const Box5 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+`
+
+export const CircleButton = styled.button`
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 2px groove gold;
+  border-radius: 75px;
+  overflow: hidden;
+`

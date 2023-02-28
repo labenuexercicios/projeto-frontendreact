@@ -59,3 +59,52 @@ color: #48ff00;
   justify-content: space-around;
 min-height: 7vh;
 `
+
+
+export const Box1 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+`
+
+export const Box2 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+`
+
+export const Box3 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+      display: flex;
+    width: 70%;
+    background-color: #ffdc00;
+    height: 100%;
+    padding: 2rem;
+`
+export const Box4 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+`
+export const Box5 = styled.div`
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+`
