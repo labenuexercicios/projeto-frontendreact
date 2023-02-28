@@ -23,10 +23,34 @@ align-self: center;
 
 `
 export const Footer1 = styled.footer`
-width: 100%;
-height: 40px;
-background: navy;
-color: white;
+position: fixed;
+top: 95vh;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  background-color: rgb(10, 0, 32);
+color: #48ff00;
+  text-align: center;
+  align-self: center;
+  border-radius: 5px ;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  -webkit-border-radius: 25px ;
+  -moz-border-radius: 25px ;
+  -ms-border-radius: 25px ;
+  -o-border-radius: 25px ;
+  justify-content: space-around;
+max-height: 5vh;
+
+a {
+  width: 100%;
+  background: #48ff00;
+  padding: 0.62rem;
+  color: brown;
+  font-weight: bolder;
+  border-radius: 15px;
+}
 
 `
 

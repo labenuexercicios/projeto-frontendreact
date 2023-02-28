@@ -3,10 +3,10 @@ import styled from 'styled-components'
 export const Page = styled.div`
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap");
 
-  margin: 10vh auto;
+  margin: 50px auto;
   display: flex;
   font-family: "Raleway", sans-serif !important;
-  height: 50vh;
+  max-height: 72vh;
   justify-content: space-around;
   align-items: center;
   background: rgb(255, 157, 9);
@@ -19,20 +19,13 @@ main{
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0px 6px 10px 0px rgba(27, 71, 71, 0.4);
-    width: 80vw;
-    min-height: 30vh;
+    min-height: 60vh;
+  
 }
-@media screen (max-width: 720px){
-section{
-    display: flex;
-    min-width: 100%;
-    max-height: 50%;
-  }
 
-}
 
  section{
-  width: 100%;
+  width: 40%;
   min-height: 80%;
   background: crimson;
   box-shadow: 0px 6px 10px 0px rgba(39, 1, 36, 0.4);
@@ -67,7 +60,13 @@ article{
     margin: 30px auto;
   }
 }
-
+@media screen (max-width: 720px){
+section{
+    display: flex;
+    max-width: 90%;
+    max-height: 40%;
+  }
+}
 
 .s2{
   width: 90%;

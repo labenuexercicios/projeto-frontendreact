@@ -202,7 +202,6 @@ const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
           /> 
 </SectionTitle>
 
-{products.filter(product=>{})}
 {products.map(product=>
         <ArticleBox key={product.id}>
            

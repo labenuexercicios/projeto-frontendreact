@@ -10,7 +10,6 @@ flex-flow: column wrap;
    width: 100%;
    height: 30px;
    justify-content: center;
-   align-itens: space-evenly;
    margin:auto;
    border-radius: 5px;
    align-self: flex-start;

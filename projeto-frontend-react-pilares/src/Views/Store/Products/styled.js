@@ -19,7 +19,7 @@ width: 80%;
 `
 export const MainCtn = styled.main`
 flex-grow: 1;
-background: #efefef;
+
 display: flex;
 flex-direction: row;
 justify-content: flex-start;
@@ -39,7 +39,7 @@ justify-content: space-around;
 width:80%;
 height: 100%;
 flex-grow: 1;
-background: #dbe1fd;
+
 @media screen and (max-width: 720px){
     width: 100%;
 
@@ -73,13 +73,12 @@ display: flex;
     height: 100%;
     min-width: 375px;
     max-width: 400px;
-
+    box-shadow: 0 8px 10px rgba(66,66,66, .5);
 min-height: 505px;
     max-height: 550px;
 
     margin: 30px auto;
-    background-color: #fffaef;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+ 
     border-radius: 25px;
     align-items: center;
     margin: 0px auto;
@@ -100,7 +99,7 @@ align-content: center;
 width: 20%;
 max-height: 100%;
 padding: auto;
-background:rgb(134, 142, 255);
+
 border-radius: 15px;
 -webkit-border-radius: 15px;
 -moz-border-radius: 15px;
@@ -140,7 +139,7 @@ export const FormContainer = styled.div`
 width: 80%;
 margin:30px auto;
 justify-content: center;
-text-align:: center;
+text-align: center;
 align-self: center;
 `
 

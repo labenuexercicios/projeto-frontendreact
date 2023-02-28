@@ -4,28 +4,22 @@ import styled from 'styled-components'
 
 export const HeaderCtn = styled.header`
 display: flex;
-flex-flow: row wrap;
+flex-flow: column wrap;
 width: 100%;
-margin-top: 100px;
+
 list-style-type: none;
 display: flex;
-max-height: 100px;
-align-self: flex-end;
-justify-content: space-around;
-`
+max-height: 60px;
 
-export const NavItem = styled.li`
-width: 20%;
-align-self: center;
-
+justify-content: flex-end;
 `
 
 export const NavButton = styled.button`
-width: 100%;
+width: 100px;
 height: 40px;
 background: navy;
 color: white;
-
+margin-top: 10px;
 `
 
 
@@ -47,25 +41,21 @@ export const NavBrand = styled.h1`
 `
 
 export const NavList = styled.ul`
-display: flex;
-width: 100%;
-height: 55px;
-justify-content: space-around;
-align-items: center;
-align-self: center;
-border-bottom: 1px solid #fff;
-box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
-top: 0;
-left: 0;
-position: fixed;
-background: rgb(18, 254, 108);
-font-weight: bolder;
-font-size: 1.4rem;
-border-left: 4px solid rgb(6, 43, 0);
-border-radius: 15px;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
--ms-border-radius: 15px;
--o-border-radius: 15px;
-list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  background-color: rgb(10, 0, 32);
+color: #48ff00;
+  text-align: center;
+  align-self: center;
+  border-radius: 5px ;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  -webkit-border-radius: 25px ;
+  -moz-border-radius: 25px ;
+  -ms-border-radius: 25px ;
+  -o-border-radius: 25px ;
+  justify-content: space-around;
+min-height: 7vh;
 `
