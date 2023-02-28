@@ -24,12 +24,14 @@ align-self: center;
 `
 export const Footer1 = styled.footer`
 position: fixed;
-top: 95vh;
+top: 93vh;
+left: 5%;
+right: 5%;
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  width: 90%;
   height: 100%;
-  height: 100%;
+
   background-color: rgb(10, 0, 32);
 color: #48ff00;
   text-align: center;

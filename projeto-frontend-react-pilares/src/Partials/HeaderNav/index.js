@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Box1, HeaderComponent, HeaderCtn, NavList  , NavButton} from './styled'
 
-export function HeaderNav({modalDisplay, setModalDispay}){
+export function HeaderNav({modalDisplay, setModalDispay, setPages, pages}){
     const navTitle = "ASTRO-SIDE SHOP"
 
 
@@ -11,14 +11,24 @@ export function HeaderNav({modalDisplay, setModalDispay}){
       
     }
     
+    
+    const showPage1 = (pages) =>{
+        setPages(1) 
+      
+    }
+    
+    const showPage2 = (pages) =>{
+        setPages(2) 
+      
+    }
 
 return(
   <div>
 <NavList>
-        <NavButton onClick={showModal}>BTN1</NavButton>
-        <NavButton >BTN1</NavButton>
+        <NavButton onClick={showModal}>Carrinho</NavButton>
+        <NavButton onClick={showPage1}>Home</NavButton>
 
-        <NavButton >BTN1</NavButton>
+        <NavButton onClick={showPage2}>Detalhes</NavButton>
 
     </NavList>
      

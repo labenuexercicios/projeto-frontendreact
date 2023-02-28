@@ -5,8 +5,9 @@ import styled from 'styled-components'
 export const HeaderCtn = styled.header`
 display: flex;
 flex-flow: column wrap;
-width: 100%;
-
+width: 90%;
+left: 5%;
+right: 5%;
 list-style-type: none;
 display: flex;
 max-height: 60px;
@@ -42,8 +43,13 @@ export const NavBrand = styled.h1`
 
 export const NavList = styled.ul`
   display: flex;
+  position: fixed;
   flex-flow: row wrap;
-  width: 100%;
+  width: 90%;
+  top:0;
+  left: 5%;
+right: 5%;
+
   height: 100%;
   height: 100%;
   background-color: rgb(10, 0, 32);
@@ -56,8 +62,8 @@ color: #48ff00;
   -moz-border-radius: 25px ;
   -ms-border-radius: 25px ;
   -o-border-radius: 25px ;
-  justify-content: space-around;
-min-height: 7vh;
+
+max-height: 7vh;
 `
 
 

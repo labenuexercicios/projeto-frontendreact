@@ -40,7 +40,9 @@ article{
   width: 80%;
   align-items: center;
   justify-content: center;
-
+  background: #fff;
+    padding: 25px 25px 0px 25px;
+    box-shadow: 3px 0 62px rgb(13 3 3 / 20%);
   background: white;
   margin-left: 10%;
   margin-top: 10%;

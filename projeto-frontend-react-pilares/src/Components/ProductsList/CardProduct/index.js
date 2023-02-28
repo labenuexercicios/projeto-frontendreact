@@ -3,9 +3,9 @@ export function CardProduct( {product}) {
 
 return(
 
-<div>
+<div> <h2>{product.name}</h2>
             <img src={product.img} alt="termo 1" />           
- <h2>{product.name}</h2>
+
 
 <p><strong>Preco: </strong>{product.price}</p>
 <p>{product.description}
@@ -13,7 +13,7 @@ return(
 <strong>Cor: </strong>{product.color}</p>
 
 <p><strong>Tamanhos em STOCK: </strong></p>
-<div>
+
     <p>
 <span><strong>PP: {product.sizeInStock.pp}</strong></span>
   <span><strong>P: {product.sizeInStock.p}</strong></span>
@@ -23,5 +23,5 @@ return(
   <span><strong>M: {product.sizeInStock.m}</strong></span>
 </p>
 </div>
-</div>
+
 )}

@@ -68,21 +68,16 @@ text-align: center;
 
 export const ArticleBox = styled.article`
 display: flex;
-    flex-flow: column wrap;
-    width: 33.5%;
-    height: 100%;
-    min-width: 375px;
-    max-width: 400px;
-    box-shadow: 0 8px 10px rgba(66,66,66, .5);
-min-height: 505px;
-    max-height: 550px;
-
-    margin: 30px auto;
- 
-    border-radius: 25px;
-    align-items: center;
-    margin: 0px auto;
-    padding: 2rem;
+margin: 10px 10px;
+    padding: 1rem;
+    border: 2px groove #ff0086;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 0;
+  width: 300px;
+height: 450px;
+  object-fit: contain;
     margin: 10px auto;
     img{
         width: 90%;

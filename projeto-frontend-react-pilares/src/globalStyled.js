@@ -8,5 +8,10 @@ export const GlobalStyled = createGlobalStyle`
     list-style: none;
   }
 
+
+  body{
+    display: block;
+    padding: 1rem;
+  }
   
   `

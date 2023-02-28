@@ -112,13 +112,15 @@ const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
         <HeaderNav
         modalDisplay={modalDisplay}
         setModalDispay={setModalDisplay}
+        pages={pages}
+        setPages={setPages}
         />
  
  
  <DivModal modalDisplay={modalDisplay} >
- <button onClick={closeModal}>X</button>
 
- <Div50>
+
+ <Div50> <button onClick={closeModal}>X</button>
 <table>
   <thead>
     <tr>
@@ -174,12 +176,15 @@ const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
                   </table>	</Div50>
                   
                   
-                  <Div50></Div50>
+                  <Div50>
+          <h2>Total do</h2>
+
+                  </Div50>
     </DivModal>
    
   
 
-          {pages === 2?
+          {pages === 1?
           (
             <MainCtn>            
   
@@ -209,7 +214,7 @@ Filtros
       <InputText type="text" id="productName"  placeholder="Astro Basket" onChange={(e)=>filterName(e.target.value)}
         />   
         
-      </FormFilter>
+  </FormFilter>
     
 
 </FormContainer>
@@ -254,10 +259,22 @@ Filtros
                     </Div50>
                     <Div50>
                     <h2>
-                      DETALHES
+                      ASTRO.SIDE CLUB
                     </h2>
-                    <p>Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.</p>
-                   
+                    <form >
+                    <label htmlFor='userEmail'>Email Usuario</label>
+
+                      <InputText type="email" name="userEmail" id="userEmail" />
+
+                      <label htmlFor='userName'>Email Usuario</label>
+
+<InputText type="text" name="userName" id="userName" />
+
+<label htmlFor='firstPassword'>Email Usuario</label>
+
+<InputText id="firstPassword" name="firstPassword" type="text" />
+                    
+                    </form>
                   </Div50>
                
               </DivRow>
