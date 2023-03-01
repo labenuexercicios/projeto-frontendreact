@@ -1,15 +1,15 @@
 import React from 'react';
 
 import {CartCtn} from './styled'    
-
+import { FilterPanel } from '../../Filter/FilterPanel';
 
 
 export function Cart1(){
     return 
     (
     <CartCtn>
-
-
+      <FilterPanel/>
+{/*
 <ul>
 <li>
 <article>
@@ -27,7 +27,7 @@ export function Cart1(){
  </article> 
  </li>
 </ul>
-    
+    */}   
 </CartCtn>
 )
 }

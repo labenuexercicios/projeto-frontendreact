@@ -166,7 +166,7 @@ align-self: center;
 export const  InputText = styled.input`
 display: flex;
 flex-flow: column wrap;
-   width: 100%;
+   width: 50%;
    height: 30px;
    justify-content: center;
 
@@ -186,7 +186,7 @@ text-align: center;
 export const  InputNumber = styled.input`
 display: flex;
 flex-flow: column wrap;
-   width: 80%;
+   width: 60%;
    height: 30px;
    justify-content: center;
 
@@ -206,49 +206,47 @@ text-align: center;
 export const Div50 = styled.div`
 width: 40%;
 min-width: 400px;
-height: 413px;
+min-height: 60vh;
 
-
+margin: 30px auto;
 background: #FFFFFF;
 
 box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
 border-radius: 16px;
 `
 
+
+
+export const DivCtn = styled.div`
+
+display: flex;
+font-family: "Raleway", sans-serif !important;
+min-height: 72vh;
+justify-content: space-around;
+align-items: space-around;
+background: rgb(255, 157, 9);
+width: 100%;
+
+`
 export const DivRow = styled.div`
 display: flex;
 flex-flow: row wrap;
-width: 100%;
-min-width: 500px;
-min-height: 460px;
-background: #FFFFFF;
-box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
-border-radius: 16px;
-justify-content: space-around;
-align-items: center;
-align-self: center;
-`
+    background-color: #dedede;
+    height: 100%;
+    width: 100%;
 
-export const DivCtn = styled.div`
-margin: 5px auto;
-display: flex;
-font-family: "Raleway", sans-serif !important;
-max-height: 72vh;
-justify-content: space-around;
-align-items: center;
-background: rgb(255, 157, 9);
 `
-
 export const DivModal  = styled.div`
 position: fixed;
-left: 5%;
-right: 5%;
-top: 10%;
+left: 0;
+right: 0;
+top: 60px;
+bottom: 0px;
 display:flex;
-flex-flow: column nowrap;
-width: 100%;
-min-width: 510px;
-min-height: 460px;
+flex-flow: row nowrap;
+
+
+
 background: #efefef;
 box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
 border-radius: 16px;

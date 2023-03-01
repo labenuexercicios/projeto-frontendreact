@@ -10,18 +10,20 @@ import { useState } from 'react';
 import { CardProduct } from './Components/ProductsList/CardProduct/index';
 import { Box3 } from './Partials/HeaderNav/styled';
 
+import {ShopList} from './Views/Shop/index'
+
 
 function App() {
   const [modalDisplay, setModalDisplay] = useState(0);
   console.log(modalDisplay)
   const [products , setProducts] = useState([...dataProducts]) 
 const [pages , setPages] = useState(1)
-  const [minPrice, setMinPrice] = useState(30)
+  const [minValue, setMinValue] = useState(1)
 
-  const [maxPrice, setMaxPrice] = useState(300)
+  const [maxValue, setMaxValue] = useState(200)
   
  const [carrito, setCarrito] = useState([]);
-
+const img1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWdSs4pkmV1WIkoIJT5drPxc8tFc2H98hIw&usqp=CAU"
 
  const [total, setTotal] = useState(0);
  
@@ -73,38 +75,28 @@ return a * b
   console.log(products, value);
    setProducts([...dataProducts].filter((product) => product.name.toLowerCase().includes(value.toLowerCase())));
  }
-
- const filterPriceMin = (value) => {
-  console.log(value);
-minPrice !== value ?
-
-   setProducts([...dataProducts].filter((product) =>
-    product.price >= value)  )
-    :
-  
-setMinPrice(30)
-  
-  }
-  const filterPriceMax = (value) => {
-    console.log( value);
- (maxPrice && maxPrice !== value) ?
-  
-     setProducts([...dataProducts].filter((product) =>
-      product.price <= value)  )
-      :
-    
-  setMinPrice(200)
-    
+  const filterPriceMin = (value) => {
+    if(Number(value) < maxValue){
+      setMinValue(Number(value))
+      setProducts([...dataProducts].filter((product) => product.price <= maxValue && product.price > minValue))
     }
+  }
+ const filterPriceMax = (value) => {
+  if(Number(value) > minValue){
+    setMaxValue(Number(value))
+  }
+ }
+
+
   const closeModal = (modalDisplay)=>{
     setModalDisplay(0)
   }
-const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
+/*const handleFiltrados = (maxPrice, minValue, nameProducts) =>{
   filterName(nameProducts);
-  filterPriceMin(minPrice);
+  filterPriceMin(minValue);
   filterPriceMax(maxPrice);
-}
-  return (
+}*/
+ return (
     
       <Page>  
         <GlobalStyled/>
@@ -198,16 +190,17 @@ const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
                 <SectionTitle>
 Filtros
 </SectionTitle>
-  <FormFilter onChange={handleFiltrados}>
+
+<FormFilter>
 
 
         
-        <label htmlFor="minPrice" class="form-label">  Preco Minimo:</label>
-      <InputNumber type="number" id="minPrice"  min="30" placeholder="R$30" onChange={(e)=>filterPriceMin(e.target.value)}
+        <label htmlFor="minValue" class="form-label">  Preco Minimo:</label>
+      <InputNumber type="number" id="minValue" name="minValue" min="1" placeholder="R$30" value={minValue} onChange={(e)=>filterPriceMin(e.target.value)}
         />  
 
 <label htmlFor="maxPrice" class="form-label">  Preco Maximo:</label>
-    <InputNumber type="number" id="maxPrice"  min="30" max="200" placeholder="R$200" onChange={(e)=>filterPriceMax(e.target.value)}
+    <InputNumber type="number" id="maxValue" name="maxValue"  value={maxValue}  placeholder="R$200" onChange={(e)=>filterPriceMax(e.target.value)}
         />  	
         <label htmlFor="productName" class="form-label"> Modelo:</label>
 
@@ -249,38 +242,33 @@ Filtros
 
           </SectionCtn>
           </MainCtn>):
-          (
-            <MainCtn>
-            <DivCtn>
+          ( <ShopList/>
+          )
+  
               <DivRow>
                
+               
                     <Div50>
+      
+        <h2>React JS</h2>
 
-                    </Div50>
-                    <Div50>
-                    <h2>
-                      ASTRO.SIDE CLUB
-                    </h2>
-                    <form >
-                    <label htmlFor='userEmail'>Email Usuario</label>
+        <div class="camisa">
+            
+            <div class="camisa__contenido">
+                <p>Maecenas consectetur ultricies mi vel venenatis. Curabitur risus tellus, congue non tellus at, semper dapibus turpis. Duis pellentesque, risus sit amet placerat porttitor, tortor augue volutpat ante, non dignissim odio ligula at arcu.</p>
 
-                      <InputText type="email" name="userEmail" id="userEmail" />
-
-                      <label htmlFor='userName'>Email Usuario</label>
-
-<InputText type="text" name="userName" id="userName" />
-
-<label htmlFor='firstPassword'>Email Usuario</label>
-
-<InputText id="firstPassword" name="firstPassword" type="text" />
-                    
-                    </form>
+              
+                    <select class="formulario__campo">
+                        <option disabled="" selected="">-- Seleccionar Talla --</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1"/>
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito"/>
+</div></div>
                   </Div50>
                
-              </DivRow>
-            </DivCtn>  
-
-            </MainCtn>          )
 }<Footer/>
   </Page>
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Box1, HeaderComponent, HeaderCtn, NavList  , NavButton} from './styled'
 
-export function HeaderNav({modalDisplay, setModalDispay, setPages, pages}){
+export function HeaderNav({modalDisplay, setModalDispay, setPages}){
     const navTitle = "ASTRO-SIDE SHOP"
 
 
