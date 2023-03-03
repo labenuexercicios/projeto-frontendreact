@@ -1,10 +1,16 @@
+import { ItemsStyle } from "./styled";
 
 
-function Items() {
+const Items = () => {
     return (
-      <div>
-        <p>Items</p>
-      </div>
+      <ItemsStyle>
+
+          <p>Items</p>
+          <p>x0 Nome do Produto</p>
+          <button>Remover</button>
+          <p>Valor Total:0</p>
+      </ItemsStyle>
+      
     );
 }
 

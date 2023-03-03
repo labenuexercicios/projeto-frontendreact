@@ -1,11 +1,13 @@
 import Items from '../Items/Items'
+import { CartStyle } from './styled';
 
-function Cart() {
+const Cart = () => {
     return (
-      <div>
-        <p>Cart</p>
+      <CartStyle>
+        <h2>Carrinho</h2>
         <Items/>
-      </div>
+      </CartStyle>
+      
     );
 }
 

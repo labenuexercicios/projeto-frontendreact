@@ -1,10 +1,20 @@
 
+import { ProductCardStyle, ProductCardImage, ProductCardDetails } from "./styled";
 
-function ProductCard() {
+
+
+const ProductCard = () => {
     return (
-      <div>
-        <p>ProductCard</p>
-      </div>
+      <ProductCardStyle>
+        
+          <ProductCardImage/>
+          <ProductCardDetails>
+            <p>Nome do Produto:</p>
+            <p>Valor:</p>
+            <button>Adicionar ao carrinho</button>
+          </ProductCardDetails>
+         
+      </ProductCardStyle>
     );
 }
 

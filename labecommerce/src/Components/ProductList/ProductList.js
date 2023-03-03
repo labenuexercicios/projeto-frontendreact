@@ -1,10 +1,12 @@
+import { ProductListStyle } from "./styled";
 
-
-function ProductList() {
+const ProductList = () => {
     return (
-      <div>
-        <p>ProductList</p>
-      </div>
+        <ProductListStyle>
+
+            <p>ProductList</p>
+        </ProductListStyle>
+      
     );
 }
 

@@ -1,16 +1,24 @@
+import React from 'react';
 import Filters from './Components/Filters/Filters'
 import Home from './Components/ProductList/Home/Home'
 import Cart from './Components/ShoppingCart/Cart/Cart'
-import './App.css';
+import { GlobalStyles } from './GlobalStyles';
+import styled from 'styled-components';
 
+
+const Principal = styled.section`
+  display: flex;
+  justify-content: space-between;
+`
 
 function App() {
   return (
-    <div className="App">
+    <Principal>
+      <GlobalStyles/>
       <Filters/>
       <Home/>
       <Cart/>
-    </div>
+    </Principal>
   );
 }
 

@@ -1,10 +1,12 @@
+import { ShoppingCartStyle } from "./styled";
 
-
-function ShoppingCart() {
+const ShoppingCart = () => {
     return (
-      <div>
+      <ShoppingCartStyle>
+
         <p>ShoppingCart</p>
-      </div>
+      </ShoppingCartStyle>
+      
     );
 }
 
