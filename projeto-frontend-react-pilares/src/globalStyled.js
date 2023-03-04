@@ -9,10 +9,18 @@ export const GlobalStyled = createGlobalStyle`
   }
 
   :root{
+
+    /*Border Radius*/
     --rounded: 15px; 
     --roundedLight: 10px; 
+    --roundedMedium: 20px;
+
+    /* Colors*/
+    --cyan-400: #CEF5FD;
     --red-400: #FF4F53;
     --red-900: #A90E0E;
+
+    /*font size span*/
     --small: 20px;
   }
 

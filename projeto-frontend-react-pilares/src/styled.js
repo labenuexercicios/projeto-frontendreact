@@ -203,17 +203,26 @@ text-align: center;
    }
 
 `
-
+export const CtnType = styled.div`
+width: 90%;
+height: 100%;
+min-width: 400px;
+text-align: center;
+`
 export const Div50 = styled.div`
 width: 40%;
 min-width: 400px;
-min-height: 60vh;
-
-margin: 30px auto;
+min-height: 10vh;
+max-height: 40vh;
+overflow-y: auto;
+margin: 10px auto;
 background: #FFFFFF;
 
 box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
 border-radius: 16px;
+
+
+
 `
 
 
@@ -221,12 +230,14 @@ border-radius: 16px;
 export const DivCtn = styled.div`
 
 display: flex;
+width: 100%;
+height: 100%;
 font-family: "Raleway", sans-serif !important;
 min-height: 72vh;
 justify-content: space-around;
 align-items: space-around;
 background: rgb(255, 157, 9);
-width: 100%;
+
 
 `
 export const DivRow = styled.div`
@@ -238,23 +249,18 @@ flex-flow: row wrap;
 
 `
 export const DivModal  = styled.div`
-position: fixed;
+position: sticky;
 left: 0;
 right: 0;
-top: 60px;
-bottom: 0px;
-display:flex;
-flex-flow: row nowrap;
+top: 0vh;
+padding: 1rem;
+overflow: auto;
+display: ${({modalDisplay})=>(modalDisplay === 0) ? "none" : "flex"};
+background: navy;
+flex-flow: row wrap;
+border-radius: var(--roundedMedium);
 
 
-
-background: #efefef;
-box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
-border-radius: 16px;
-justify-content: space-around;
-align-items: center;
-align-self: center;
-visibility: ${({modalDisplay})=>(modalDisplay === 0) ? "hidden" : "show"}
 
 `
 export const ButtonCard1 = styled.button`
@@ -270,4 +276,27 @@ display: block;
 font-size: var(--small);
 text-align: center;
 
+`
+
+export const TableRow = styled.tr`
+background: #FFFFFF;
+box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.15);
+border: 2px solid #efefef;
+border-radius: 10px;
+
+text-align:center;
+
+`
+
+
+export const DivTotal = styled.div`
+align-content: space-around;
+height: 100%;
+padding: 2rem`
+
+export const DivOffers = styled.div`
+width: 80%;
+height: 100%;
+min-height: 50vh;
+max-height: 67vh;
 `

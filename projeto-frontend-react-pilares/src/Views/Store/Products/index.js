@@ -5,6 +5,7 @@ import { Checkbox } from './../../../Components/Filter/checkbox';
 import dataProducts from './../../../Data/dataProducts'
 import { useState } from 'react';
 import { CardProduct } from '../../../Components/ProductsList/CardProduct/index';
+import { CartClient } from '../../../Components/Client/CartClient';
 
 
 export function Products({img1}, {product}) {
@@ -134,11 +135,14 @@ const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
               
                 carrito.map((cartProduct) => ( <
                     tr key = { cartProduct.id } >
-                    <td> { cartProduct.name } </td>	
-                    <td> { cartProduct.quantity } </td>	 
+            
                     <td>R$ {productTotal( cartProduct.quantity,  cartProduct.price)}</td>
-                    <td>
-                    <button onClick = {
+             
+                     <td>  
+                      <CartClient/>
+                      </td>
+                      <td>
+                          <button onClick = {
                         () => lessProduct(cartProduct)
                     } >Deletar 1</button>
                     </td><td>	 <button onClick = {
@@ -190,7 +194,7 @@ const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
           </AsideRight> 
           <SectionCtn> 
             <SectionTitle>
- <h2>(TOTAL DE PRODUTOS :{products.length} )</h2>
+(TOTAL DE PRODUTOS :{products.length} )
 <SectionTitle>
 
 

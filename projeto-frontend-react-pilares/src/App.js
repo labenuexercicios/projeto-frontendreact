@@ -1,16 +1,16 @@
 import React from 'react';
 
 import { GlobalStyled } from './globalStyled';
-import  {DivModal, DivCtn, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText} from './styled'
-import { OrderCategories } from './Components/Order/OrderCategories/index';
+import { OrderCategories } from './Components/Order/OrderCategories';
+import  {DivOffers, DivTotal, DivModal, CtnType, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText} from './styled'
 import { HeaderNav } from './Partials/HeaderNav/index';
 import { Footer } from './Partials/Footer/index';
 import dataProducts from './Data/dataProducts'
 import { useState } from 'react';
 import { CardProduct } from './Components/ProductsList/CardProduct/index';
 import { Box3 } from './Partials/HeaderNav/styled';
-
 import {ShopList} from './Views/Shop/index'
+import { CartClient } from './Components/Client/CartClient';
 
 
 function App() {
@@ -23,8 +23,7 @@ const [pages , setPages] = useState(1)
   const [maxValue, setMaxValue] = useState(200)
   
  const [carrito, setCarrito] = useState([]);
-const img1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWdSs4pkmV1WIkoIJT5drPxc8tFc2H98hIw&usqp=CAU"
-
+ const [cartList , setCartList] = useState([]) 
  const [total, setTotal] = useState(0);
  
  const productTotal = (a, b)=>{
@@ -84,6 +83,8 @@ return a * b
  const filterPriceMax = (value) => {
   if(Number(value) > minValue){
     setMaxValue(Number(value))
+    setProducts([...dataProducts].filter((product) => product.price <= maxValue && product.price > minValue))
+
   }
  }
 
@@ -106,13 +107,22 @@ return a * b
         setModalDispay={setModalDisplay}
         pages={pages}
         setPages={setPages}
+        carrito={carrito}
+        setCarrito={setCarrito}
         />
  
  
  <DivModal modalDisplay={modalDisplay} >
+ <Div50>
+     
 
+ <DivTotal> 
+  <button onClick={closeModal}>X Fechar</button>  
+    <h2>Total do</h2>
+    </DivTotal>
+                  </Div50>
 
- <Div50> <ButtonCard1 onClick={closeModal}>X</ButtonCard1>
+ <Div50>
 <table>
   <thead>
     <tr>
@@ -122,11 +132,9 @@ return a * b
   <tbody>
   <tr>
                     <td>Produto </td>	
-                    <td> Quantidade: </td>	 
+                    <td colSpan={3}> Quantidade </td>	 
                     <td>TOTAL </td>
-                    <td colSpan="2">
-                   EDITAR
-                   </td>
+             
       </tr>
     {
             carrito.length >= 1 ? (
@@ -134,18 +142,17 @@ return a * b
                 carrito.map((cartProduct) => ( <
                     tr key = { cartProduct.id } >
                     <td> { cartProduct.name } </td>	
-                    <td> { cartProduct.quantity } </td>	 
-                    <td>R$ {productTotal( cartProduct.quantity,  cartProduct.price)}</td>
-                    <td>
+                    <td colSpan={3}> 
                     <button onClick = {
-                        () => lessProduct(cartProduct)
-                    } >Deletar 1</button>
-                    </td><td>	 <button onClick = {
-                        () => addCart(cartProduct)
-                    } > <i className = "fa-solid fa-cart-plus" > </i>+1</button >
-                  
-                  </td>
-                  
+                      () => lessProduct(cartProduct)
+                  } >  -</button>
+                    { cartProduct.quantity }
+                    <button onClick = {
+                      () => addCart(cartProduct)
+                  } > +</button >
+                    </td>	 
+                    <td>R$ {productTotal( cartProduct.quantity,  cartProduct.price)}</td>
+                   
                   </tr>
                 )
                 )
@@ -168,10 +175,7 @@ return a * b
                   </table>	</Div50>
                   
                   
-                  <Div50>
-          <h2>Total do</h2>
-
-                  </Div50>
+ 
     </DivModal>
    
   
@@ -193,10 +197,9 @@ Filtros
 
 <FormFilter>
 
-        <OrderCategories/>
-        
-        <label htmlFor="minValue" class="form-label">  Preco Minimo:</label>
-      <InputNumber type="number" id="minValue" name="minValue" min="1" placeholder="R$30" value={minValue} onChange={(e)=>filterPriceMin(e.target.value)}
+
+<label htmlFor="minValue" class="form-label">  Preco Minimo:</label>
+<InputNumber type="number" id="minValue" name="minValue" min="1" placeholder="R$30" value={minValue} onChange={(e)=>filterPriceMin(e.target.value)}
         />  
 
 <label htmlFor="maxPrice" class="form-label">  Preco Maximo:</label>
@@ -215,7 +218,7 @@ Filtros
 </FormContainer>
         </AsideRight> 
           <SectionCtn> 
- 
+
 <SectionTitle>
 
 
@@ -226,16 +229,21 @@ Filtros
       <br/>  
       
 	
-</SectionTitle>
 
+</SectionTitle>
+<CtnType><p>Ordenar por TIPO</p>
+
+<OrderCategories/><br/></CtnType> 
 {products.map(product=>
         <ArticleBox key={product.id}>
            
+
+
 <CardProduct product={product}/>
 
 
-<button onClick = {() => addCart(product)}>
-  <i className = "fa-solid fa-cart-plus" > </i>+1Produto</button >
+<ButtonCard1 onClick = {() => addCart(product)}>
+  <i className = "fa-solid fa-cart-plus" > </i>+1Produto</ButtonCard1 >
 
 
 
@@ -250,7 +258,7 @@ Filtros
           <DivRow>
                
                
-                    <Div50>
+                    <DivOffers>
       
         <h2>React JS</h2>
 
@@ -269,7 +277,7 @@ Filtros
                     <input class="formulario__campo" type="number" placeholder="Cantidad" min="1"/>
                     <input class="formulario__submit" type="submit" value="Agregar al Carrito"/>
 </div></div>
-                  </Div50>
+                  </DivOffers>
                   </DivRow>
                )
 }<Footer/>
