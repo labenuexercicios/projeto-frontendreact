@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import {Box1, HeaderComponent,  Slider, NavList  , NavButton} from './styled'
+import {  Hero, NavList  , NavButton} from './styled'
 
-export function HeaderNav({carrito, setCarrito, modalDisplay, setModalDispay, setPages}){
+export function HeaderNav({ modalDisplay, setModalDispay, setPages}){
 const [titlePage, setTitlePage] = useState("Bem Vindo")
 
 
@@ -28,14 +28,15 @@ return(
 <NavList>
      
         <NavButton onClick={showPage1}>
-          Produtos</NavButton>
+          Produtos
+          </NavButton>
         <NavButton onClick={showPage2}>Ofertas</NavButton>
         <NavButton onClick={showModal}>Carrinho</NavButton>
     </NavList>
     
-     <Slider>
+     <Hero>
             <h1>{titlePage}</h1>
-     </Slider>
+     </Hero>
 
 </div>
 )

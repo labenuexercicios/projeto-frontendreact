@@ -28,25 +28,4 @@
  * Text.................Text helpers.
  */
 
- .b{
-    height: 90vh;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-  }
-  
-.c{
-    background-color: #d4d4d4;
-    width: 100%;
-    padding: 20px 20px 0 20px;
-  }
-  
-.d{
-    background-color: #dedede;
-    height: 25%;
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 2%;
-    padding-left: 1%;
-  }
-  
+ 

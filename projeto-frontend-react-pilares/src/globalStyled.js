@@ -9,16 +9,21 @@ export const GlobalStyled = createGlobalStyle`
   }
 
   :root{
+    /* Colors*/
+    --cyan-400: #CEF5FD;
+    --red-400: #FF4F53;
+    --red-900: #A90E0E;
 
+
+    /*Gradients*/
+    --gradient-header: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    
     /*Border Radius*/
     --rounded: 15px; 
     --roundedLight: 10px; 
     --roundedMedium: 20px;
 
-    /* Colors*/
-    --cyan-400: #CEF5FD;
-    --red-400: #FF4F53;
-    --red-900: #A90E0E;
+
 
     /*font size span*/
     --small: 20px;
@@ -27,8 +32,4 @@ export const GlobalStyled = createGlobalStyle`
   body{
     display: block;
     padding: 1rem;
-  }
-  
-
-  
-  `
+  }`

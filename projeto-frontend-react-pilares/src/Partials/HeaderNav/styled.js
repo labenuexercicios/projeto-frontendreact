@@ -116,20 +116,20 @@ export const Box5 = styled.div`
   text-align: center;
 `
 
-export const Slider = styled.header`
+export const Hero = styled.header`
 display: flex;
 flex-flow: row wrap;
 align-self: flex-start;
 justify-content: center;
 align-content: center;
 width: 100%;
+border-radius: var(--roundedMedium);
 min-height: 200px;
-/*line-height: 320px;*/
+line-height: 220px;
 color: white;
 text-shadow: 0px 0px 5px #444;
-
 /*DEGRADADO CSS*/
 background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+background: var(--gradient-header);
 }
 `

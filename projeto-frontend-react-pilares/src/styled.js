@@ -55,7 +55,7 @@ export const SectionCtn = styled.section`
 display: flex;
 flex-flow: row wrap;
 justify-content: space-around;
-width: 30%;
+width:80%;
 height: 100%;
 flex-grow: 1;
 
@@ -227,13 +227,13 @@ border-radius: 16px;
 
 
 
-export const DivTop = styled.div`
+export const DivCtn = styled.div`
 
 display: flex;
 width: 100%;
 height: 100%;
 font-family: "Raleway", sans-serif !important;
-min-height: 42vh;
+min-height: 72vh;
 justify-content: space-around;
 align-items: space-around;
 background: rgb(255, 157, 9);

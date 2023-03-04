@@ -2,7 +2,7 @@ import React from 'react';
 
 import { GlobalStyled } from './globalStyled';
 import { OrderCategories } from './Components/Order/OrderCategories';
-import  {DivTop, DivTotal, DivModal, CtnType, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText, HeaderCtn2} from './styled'
+import  {DivOffers, DivTotal, DivModal, CtnType, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText, HeaderCtn2} from './styled'
 import { HeaderNav } from './Partials/HeaderNav/index';
 import { Footer } from './Partials/Footer/index';
 import dataProducts from './Data/dataProducts'
@@ -251,19 +251,19 @@ Filtros
           (
             <MainCtn>
      
-
+            <h2>Oferta</h2>
 
           <DivRow>
                    <button> <i class="fas fa-arrow-left"></i> </button>
-                     <button> <i class="fas fa-arrow-right"></i> </button>
-                    <DivTop>
-                  <SectionCtn>
+               
+                    <DivOffers>
+                
                   <p>PREÇO</p>
-                  <p>DISCONTO: 10%</p>
-              </SectionCtn>
-                  </DivTop>
+                  <p>DISCONTO: 10%;</p>
+              
+                  </DivOffers>
                   
-            
+                  <button> <i class="fas fa-arrow-right"></i> </button>
              </DivRow>
              </MainCtn>
                )     
