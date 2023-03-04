@@ -1,6 +1,8 @@
 
 import { createGlobalStyle } from "styled-components";
 export const GlobalStyled = createGlobalStyle`
+
+
   *{
     margin: 0;
     padding: 0;
@@ -32,4 +34,10 @@ export const GlobalStyled = createGlobalStyle`
   body{
     display: block;
     padding: 1rem;
-  }`
+  }
+  
+  h1, h2, h3 , h4, h5, h6, input, select, option, button{
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  `

@@ -215,7 +215,14 @@ Filtros
 
       <InputText type="text" id="productName"  placeholder="Astro Basket" onChange={(e)=>filterName(e.target.value)}
         />   
-        
+        <CtnType><p>Ordenar por TIPO</p>
+
+<OrderCategories
+filterType={filterType}
+/>
+
+
+<br/></CtnType>
   </FormFilter>
     <hr/>
     <Small>TOTAL DE PRODUTOS :{products.length} </Small>
@@ -237,14 +244,7 @@ Filtros
 	
 
 </SectionTitle>
-<CtnType><p>Ordenar por TIPO</p>
-
-<OrderCategories
-filterType={filterType}
-/>
-
-
-<br/></CtnType> 
+ 
 {products.map(product=>
         <ArticleBox key={product.id}>
            

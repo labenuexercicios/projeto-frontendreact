@@ -17,7 +17,7 @@ width: 90%;
 height: 100%;
 height: 120px;
 grid-template-rows: 60px 60px ;
-grid-template-columns: repeat(2 , 1fr);
+
 border: 2px solid blue;
 `
 
@@ -206,12 +206,12 @@ text-align: center;
 export const CtnType = styled.div`
 width: 90%;
 height: 100%;
-min-width: 400px;
+max-width: 400px;
 text-align: center;
 `
 export const Div50 = styled.div`
 width: 40%;
-min-width: 400px;
+max-width: 400px;
 min-height: 10vh;
 max-height: 40vh;
 overflow-y: auto;

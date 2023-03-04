@@ -14,12 +14,12 @@ const [titlePage, setTitlePage] = useState("Bem Vindo")
     
     const showPage1 = (pages) =>{
         setPages(1) 
-        setTitlePage("Ofertas")
+        setTitlePage("Produtos")
     }
     
     const showPage2 = (pages) =>{
         setPages(2) 
-        setTitlePage("Produtos")
+        setTitlePage("Ofertas")
         
     }
 

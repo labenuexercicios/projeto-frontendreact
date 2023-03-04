@@ -1,7 +1,7 @@
 [
    {
      "id":0,
-     "name":"Camiseta Astro BASKET",
+     "name":"Astro BASKET",
      "description":"Camiseta Astronauta Basketeiro",
      "price":80,
      "typeCategory": 1,
@@ -36,7 +36,7 @@
    },
    {
      "id":1,
-     "name":"Camiseta Purple Space Galaxy",
+     "name":"Purple Space Galaxy",
      "description":"Camiseta Algodao com estampa via-lactea",
      "price": 180,
      "typeCategory": 1,
@@ -71,7 +71,7 @@
    },
    {
      "id":2,
-     "name":"Camiseta Pizza on Galaxy",
+     "name":"Pizza on Galaxy",
      "description":"Camiseta Algodao com estampa Pizza Galaxy",
      "price":30,
      "typeCategory": 1,
@@ -106,7 +106,7 @@
    },
    {
      "id":3,
-     "name":"Camiseta Astro Blaster",
+     "name":"Astro Blaster",
      "description":"Camiseta Algodao com estampa Astro Blaster",
      "price": 50,
      "typeCategory": 1,
@@ -141,7 +141,7 @@
    },
    {
      "id":4,
-     "name":"Camiseta Astro DJ pizza",
+     "name":"Astro DJ pizza",
      "description":"Camiseta Astro DJ and pizzas",
      "price": 50,
      "typeCategory": 1,
@@ -176,7 +176,7 @@
    },
    {
      "id":5,
-     "name":"Camiseta ASTRO BEGE FEMININ0",
+     "name":"ASTRO BEGE FEMININ0",
      "description":"Camiseta Algodao com ASTRO BEGE",
      "price": 100,
      "typeCategory": 1,
@@ -212,7 +212,7 @@
    },
    {
      "id":6,
-     "name":"Camiseta Astro Rainbow Pride",
+     "name":"Astro Rainbow Pride",
      "description":"Camiseta Algodao com estampa Rainbow Pride",
      "price":80,
      "typeCategory": 1,
@@ -248,7 +248,7 @@
    },
    {
      "id":7,
-     "name":"Camiseta Astro Gorilla Feminino",
+     "name":"Astro Gorilla Feminino",
      "description":"Camiseta Algodao com estampa Astro Gorilla Feminino",
      "price":80,
      "typeCategory": 1,
@@ -284,7 +284,7 @@
    },
    {
      "id":8,
-     "name":"Camiseta Astro AstroLiberty",
+     "name":"Astro AstroLiberty",
      "description":"Camiseta Astronauta and Liberty",
      "price":80,
      "typeCategory": 1,
@@ -319,7 +319,7 @@
    },
    {
      "id":9,
-     "name":"Camiseta Astro Stan Lee",
+     "name":"Astro Stan Lee",
      "description":"Camiseta Algodao com estampa Stan Lee",
      "price":80,
      "typeCategory": 1,
@@ -354,7 +354,7 @@
    },
    {
      "id":10,
-     "name":"Camiseta ASTRO MISSION",
+     "name":"ASTRO MISSION",
      "description":"Camiseta Algodao com estampa Astro Mission",
      "price":80,
      "typeCategory": 1,
@@ -389,7 +389,7 @@
    },
    {
      "id":11,
-     "name":"Camiseta Astro Eternity",
+     "name":"Astro Eternity",
      "description":"Camiseta Algodao com estampa Astro Eternity",
      "price":80,
      "typeCategory": 1,
@@ -424,7 +424,7 @@
    },
    {
      "id":12,
-     "name":"Camiseta Astro Alien",
+     "name":"Astro Alien",
      "description":"Camiseta estampa Alien",
      "price":80,
      "typeCategory": 1,
@@ -460,7 +460,7 @@
    },
    {
      "id":13,
-     "name":"Camiseta Astro Ballons",
+     "name":"Astro Ballons",
      "description":"Camiseta Algodao com estampa Astro Ballons",
      "price":80,
      "typeCategory": 1,
@@ -495,7 +495,7 @@
    },
    {
      "id":14,
-     "name":"Camiseta AMONG US",
+     "name":"AMONG US",
      "description":"Camiseta Algodao com estampa AMONG US",
      "price":80,
      "typeCategory": 1,
@@ -530,7 +530,7 @@
    },
    {
      "id":15,
-     "name":"Camiseta Alien DONT!",
+     "name":"Alien DONT!",
      "description":"Camiseta Algodao com estampa Alien DONT BELIEVE HUMANS! ",
      "price":80,
      "typeCategory": 1,
