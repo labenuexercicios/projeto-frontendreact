@@ -2,16 +2,13 @@ import React from 'react';
 
 import { GlobalStyled } from './globalStyled';
 import { OrderCategories } from './Components/Order/OrderCategories';
-import  {DivOffers, DivTotal, DivModal, CtnType, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText} from './styled'
+import  {DivTop, DivTotal, DivModal, CtnType, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText, HeaderCtn2} from './styled'
 import { HeaderNav } from './Partials/HeaderNav/index';
 import { Footer } from './Partials/Footer/index';
 import dataProducts from './Data/dataProducts'
 import { useState } from 'react';
 import { CardProduct } from './Components/ProductsList/CardProduct/index';
-import { Box3 } from './Partials/HeaderNav/styled';
-import {ShopList} from './Views/Shop/index'
-import { CartClient } from './Components/Client/CartClient';
-
+import './App.js'
 
 function App() {
   const [modalDisplay, setModalDisplay] = useState(0);
@@ -52,6 +49,7 @@ return a * b
              {...product, quantity: 1 },
          ]);
      }
+     
  };
  const lessProduct = (product) => {
      if (product.quantity <= 1) {
@@ -70,10 +68,6 @@ return a * b
      }
  };
 
- const filterName = (value) => {
-  console.log(products, value);
-   setProducts([...dataProducts].filter((product) => product.name.toLowerCase().includes(value.toLowerCase())));
- }
   const filterPriceMin = (value) => {
     if(Number(value) < maxValue){
       setMinValue(Number(value))
@@ -88,6 +82,10 @@ return a * b
   }
  }
 
+ const filterName = (value) => {
+  console.log(products, value);
+   setProducts([...dataProducts].filter((product) => product.name.toLowerCase().includes(value.toLowerCase())));
+ }
 
   const closeModal = (modalDisplay)=>{
     setModalDisplay(0)
@@ -126,30 +124,27 @@ return a * b
 <table>
   <thead>
     <tr>
-      <th rowSpan="4">Produtos</th>
+    <th >Item </th>	
+                    <th colSpan="4"> Qtd </th>	 
+                    <th>Total </th>
     </tr>
   </thead>
   <tbody>
-  <tr>
-                    <td>Produto </td>	
-                    <td colSpan={3}> Quantidade </td>	 
-                    <td>TOTAL </td>
-             
-      </tr>
+
     {
             carrito.length >= 1 ? (
               
                 carrito.map((cartProduct) => ( <
                     tr key = { cartProduct.id } >
                     <td> { cartProduct.name } </td>	
-                    <td colSpan={3}> 
+                    <td colSpan="4"> 
                     <button onClick = {
                       () => lessProduct(cartProduct)
-                  } >  -</button>
+                  } > <i class="fa-solid fa-circle-minus"></i> </button>
                     { cartProduct.quantity }
                     <button onClick = {
                       () => addCart(cartProduct)
-                  } > +</button >
+                  } > <i class="fa-solid fa-circle-plus"></i></button >
                     </td>	 
                     <td>R$ {productTotal( cartProduct.quantity,  cartProduct.price)}</td>
                    
@@ -158,7 +153,7 @@ return a * b
                 )
            ) : ( 
               <tr>
-              <td Span="4">
+              <td colSpan="6">
                Carrinho Vazio... 
             </td>
                </tr>
@@ -254,32 +249,24 @@ Filtros
           </SectionCtn>
           </MainCtn>):
           (
-          
+            <MainCtn>
+     
+
+
           <DivRow>
-               
-               
-                    <DivOffers>
-      
-        <h2>React JS</h2>
-
-        <div class="camisa">
+                   <button> <i class="fas fa-arrow-left"></i> </button>
+                     <button> <i class="fas fa-arrow-right"></i> </button>
+                    <DivTop>
+                  <SectionCtn>
+                  <p>PREÇO</p>
+                  <p>DISCONTO: 10%</p>
+              </SectionCtn>
+                  </DivTop>
+                  
             
-            <div class="camisa__contenido">
-                <p>Maecenas consectetur ultricies mi vel venenatis. Curabitur risus tellus, congue non tellus at, semper dapibus turpis. Duis pellentesque, risus sit amet placerat porttitor, tortor augue volutpat ante, non dignissim odio ligula at arcu.</p>
-
-              
-                    <select class="formulario__campo">
-                        <option disabled="" selected="">Seleccionar Talla</option>
-                        <option>Chica</option>
-                        <option>Mediana</option>
-                        <option>Grande</option>
-                    </select>
-                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1"/>
-                    <input class="formulario__submit" type="submit" value="Agregar al Carrito"/>
-</div></div>
-                  </DivOffers>
-                  </DivRow>
-               )
+             </DivRow>
+             </MainCtn>
+               )     
 }<Footer/>
   </Page>
 

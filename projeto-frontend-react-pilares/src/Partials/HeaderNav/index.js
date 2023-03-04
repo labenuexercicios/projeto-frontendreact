@@ -30,7 +30,7 @@ return(
         <NavButton onClick={showPage1}>
           Produtos</NavButton>
         <NavButton onClick={showPage2}>Ofertas</NavButton>
-        <NavButton onClick={showModal}>Compras</NavButton>
+        <NavButton onClick={showModal}>Carrinho</NavButton>
     </NavList>
     
      <Slider>

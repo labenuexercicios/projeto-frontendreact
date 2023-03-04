@@ -14,8 +14,13 @@ align-content: flex-end;
 `
 
 export const IconsList = styled.li`
-width: 20%;
+width: 50%;
 align-self: center;
+
+a{
+  font-size: 0.8rem;
+  
+}
 
 `
 export const IconsAnchor = styled.a`
@@ -82,7 +87,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
 top: 0;
 left: 0;
 position: fixed;
-background: rgb(18, 254, 108);
+
 font-weight: bolder;
 font-size: 1.4rem;
 border-left: 4px solid rgb(6, 43, 0);

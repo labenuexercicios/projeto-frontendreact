@@ -8,10 +8,10 @@ return(
 <Footer1>
     <FooterCtn>
       <IconsList>
-          <IconsAnchor href="#" ><i class="fab fa-facebook-f"></i></IconsAnchor>
+          <IconsAnchor href="mailto:botechiaeri@gmail.com" ><i class="fa-solid fa-envelope"></i>botechiaeri@gmail.com</IconsAnchor>
       </IconsList>
       <IconsList>
-          <IconsAnchor href="#" ><i class="fab fa-facebook-f"></i></IconsAnchor>
+          <IconsAnchor href="https:/www.linkedin.com/in/botechia-erika" ><i class="fa-brands fa-linkedin"></i>/botechia-erika </IconsAnchor>
       </IconsList>
       
   </FooterCtn>
