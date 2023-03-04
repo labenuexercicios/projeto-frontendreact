@@ -24,7 +24,7 @@ display: flex;
 flex-direction: row;
 justify-content: flex-start;
 height: 100%;
-margin-top: 10vh;
+margin-top:  5vh;
 padding: 2rem;
 @media screen and (max-width: 720px){
     flex-flow: column wrap;
@@ -35,48 +35,33 @@ export const SectionCtn = styled.section`
 
 display: flex;
 flex-flow: row wrap;
-justify-content: space-around;
+justify-content: center;
 width:80%;
 height: 100%;
 flex-grow: 1;
 
 @media screen and (max-width: 720px){
-    width: 100%;
+  display: column wrap;
+    width: 80%;
 
     
 }
 `
 
 
-export const InputSelect = styled.option`
-height: 30px;
-display: flex;
-flex-flow: column wrap;
-   width: 80%;
-   height: 40px;
-   justify-content: center;
-
-margin-left: 10%;
-   border-radius: 15px;
-   align-self:center;
-text-align: center;
-   display: flex;
-   font-size: 2rem;
-`
-
 
 
 export const ArticleBox = styled.article`
 display: flex;
-margin: 10px 10px;
+margin: 10px auto;
     padding: 1rem;
     border: 2px groove #ff0086;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 0;
-  width: 300px;
-height: 450px;
+  max-width: 270px;
+max-height: 650px;
   object-fit: contain;
     margin: 10px auto;
     img{
@@ -87,24 +72,7 @@ height: 450px;
     }
     `
 
-export const AsideRight = styled.aside`
-display: flex;
-flex-flow: column wrap;
-align-content: center;
-width: 20%;
-max-height: 100%;
-padding: auto;
 
-border-radius: 15px;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
--ms-border-radius: 15px;
--o-border-radius: 15px;
-
-@media screen and (max-width: 720px){
-    width: 100%;
-}
-`
 export const Label = styled.label`
 display: flex;
 flex-flow: row wrap;
@@ -118,7 +86,7 @@ border-radius: 15px;
 
 export const SectionTitle = styled.h2`
 display: flex;
-flex-flow: row wrap;
+flex-flow: column wrap;
 width: 80%;
 justify-content: center;
 padding: 10px;
@@ -139,6 +107,7 @@ align-self: center;
 `
 
 
+
 export const  InputText = styled.input`
 display: flex;
 flex-flow: column wrap;
@@ -157,42 +126,6 @@ text-align: center;
     background-color: gold;
    }
 
-`
-
-
-
-export const HeaderCtn = styled.header`
-display: grid;
-margin-left: 5%;
-width: 90%;
-height: 100%;
-  min-height: 100%;
-background-color: aliceblue;
-grid-auto-rows: repeat(2 , 1fr);
-grid-template-columns: 100% ;
-border: 2px solid blue;
-min-height: 40vh;
-margin-top: 4rem;
-`
-export const HeaderComponent = styled.header`
-display: flex;
-margin-left: 5%;
-width: 90%;
-height: 100%;
-  min-height: 100%;
-background-color: black;
-grid-auto-rows: repeat(2 , 1fr);
-grid-template-columns: 100% ;
-border: 2px solid blue;
-min-height: 500px;
-margin-top: 4rem;
-`
-export const NavButton = styled.button`
-width: 100px;
-height: 40px;
-background: navy;
-color: white;
-align-content: center;
 `
 
 

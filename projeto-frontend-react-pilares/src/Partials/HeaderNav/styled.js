@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 
 
-export const HeaderCtn = styled.header`
+export const HeaderCtn = styled.div`
 display: flex;
 flex-flow: column wrap;
 width: 90%;
@@ -21,6 +21,7 @@ height: 40px;
 background: navy;
 color: white;
 margin-top: 10px;
+border-radius: 16px;
 `
 
 
@@ -62,7 +63,7 @@ color: #48ff00;
   -moz-border-radius: 25px ;
   -ms-border-radius: 25px ;
   -o-border-radius: 25px ;
-
+justify-content: space-around;
 max-height: 7vh;
 `
 
@@ -113,4 +114,21 @@ export const Box5 = styled.div`
   align-content: center;
   justify-content: space-around;
   text-align: center;
+`
+
+export const Slider = styled.header`
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+align-content: center;
+width: 100%;
+height: 150px;
+/*line-height: 320px;*/
+color: white;
+text-shadow: 0px 0px 5px #444;
+margin-top: 15vh;
+/*DEGRADADO CSS*/
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
 `

@@ -189,6 +189,7 @@ const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
 </FormContainer>
           </AsideRight> 
           <SectionCtn> 
+            <SectionTitle>
  <h2>(TOTAL DE PRODUTOS :{products.length} )</h2>
 <SectionTitle>
 
@@ -208,8 +209,9 @@ const handleFiltrados = (maxPrice, minPrice, nameProducts) =>{
 <CardProduct product={product}/>
 
 
-<button onClick = {() => addCart(product)}>
-  <i className = "fa-solid fa-cart-plus" > </i>+1Produto</button >
+<ButtonCard1 onClick = {() => addCart(product)}>
+  <i className = "fa-solid fa-cart-plus" > </i>+1Produto
+  </ButtonCard1>
 
 
 

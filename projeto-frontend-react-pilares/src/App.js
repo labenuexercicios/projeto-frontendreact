@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { GlobalStyled } from './globalStyled';
-import  {DivModal, DivCtn, Div50, DivRow, HeaderCtn2, HeaderCtn, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText} from './styled'
-
+import  {DivModal, DivCtn, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText} from './styled'
+import { OrderCategories } from './Components/Order/OrderCategories/index';
 import { HeaderNav } from './Partials/HeaderNav/index';
 import { Footer } from './Partials/Footer/index';
 import dataProducts from './Data/dataProducts'
@@ -112,7 +112,7 @@ return a * b
  <DivModal modalDisplay={modalDisplay} >
 
 
- <Div50> <button onClick={closeModal}>X</button>
+ <Div50> <ButtonCard1 onClick={closeModal}>X</ButtonCard1>
 <table>
   <thead>
     <tr>
@@ -193,7 +193,7 @@ Filtros
 
 <FormFilter>
 
-
+        <OrderCategories/>
         
         <label htmlFor="minValue" class="form-label">  Preco Minimo:</label>
       <InputNumber type="number" id="minValue" name="minValue" min="1" placeholder="R$30" value={minValue} onChange={(e)=>filterPriceMin(e.target.value)}
@@ -208,7 +208,9 @@ Filtros
         />   
         
   </FormFilter>
-    
+    <hr/>
+    <Small>TOTAL DE PRODUTOS :{products.length} </Small>
+
 
 </FormContainer>
         </AsideRight> 
@@ -217,12 +219,13 @@ Filtros
 <SectionTitle>
 
 
-    <span>(TOTAL DE PRODUTOS :{products.length} )</span>
+    <span>PRODUTOS</span>
+
 
  
       <br/>  
       
-		
+	
 </SectionTitle>
 
 {products.map(product=>
@@ -242,10 +245,9 @@ Filtros
 
           </SectionCtn>
           </MainCtn>):
-          ( <ShopList/>
-          )
-  
-              <DivRow>
+          (
+          
+          <DivRow>
                
                
                     <Div50>
@@ -259,7 +261,7 @@ Filtros
 
               
                     <select class="formulario__campo">
-                        <option disabled="" selected="">-- Seleccionar Talla --</option>
+                        <option disabled="" selected="">Seleccionar Talla</option>
                         <option>Chica</option>
                         <option>Mediana</option>
                         <option>Grande</option>
@@ -268,7 +270,8 @@ Filtros
                     <input class="formulario__submit" type="submit" value="Agregar al Carrito"/>
 </div></div>
                   </Div50>
-               
+                  </DivRow>
+               )
 }<Footer/>
   </Page>
 

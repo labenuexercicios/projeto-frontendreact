@@ -11,7 +11,7 @@
      ],
      "sizeInStock":{
        "pp":[
-         1
+         0
        ],
        "p":[
          1
@@ -563,5 +563,41 @@
      "numReviews":0,
      "color":"BRANCO",
      "img":"https://i.ibb.co/BwL69Wj/p15-Alien-Dont.jpg"
-   }
+   },
+   {
+    "id":15,
+    "name":"Calça Moletom Slim",
+    "description":"Calça JOGIN masculina hardcore ",
+    "price": 90,
+    "collection": 2,
+    "category":[
+      "Calca",
+      "Adulto"
+    ],
+    "sizeInStock":{
+      "pp":[
+        2
+      ],
+      "p":[
+        1
+      ],
+      "m":[
+        3
+      ],
+      "g":[
+        4
+      ],
+      "gg":[
+        1
+      ],
+      "xl":[
+        1
+      ]
+    },
+    "rating":5,
+    "numReviews":0,
+    "color":"CINZA",
+    "img":"https://http2.mlstatic.com/calca-de-moletom-slim-moleton-masculina-hardcore-D_NQ_NP_909826-MLB31150583963_062019-F.jpg"
+  }
+
  ]

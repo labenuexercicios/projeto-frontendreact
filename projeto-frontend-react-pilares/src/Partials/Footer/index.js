@@ -13,13 +13,7 @@ return(
       <IconsList>
           <IconsAnchor href="#" ><i class="fab fa-facebook-f"></i></IconsAnchor>
       </IconsList>
-      <IconsList>
-          <IconsAnchor href="#" ><i class="fab fa-facebook-f"></i></IconsAnchor>
-      </IconsList>
-      <IconsList>
-          <IconsAnchor href="#" ><i class="fab fa-facebook-f"></i></IconsAnchor>
-      </IconsList>
-
+      
   </FooterCtn>
   </Footer1>
 )

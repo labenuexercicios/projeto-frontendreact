@@ -19,10 +19,9 @@ export const CardFlip = styled.div`
 `
 
 export const CardContent = styled.div`
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
     padding: 1rem;
-    text-align: center;
+    height: 90%;
+    text-align:  flex-start;
     vertical-align: center;
 `
 
@@ -30,10 +29,18 @@ export const CardFront = styled.div`
 grid-area: frontAndBack;
 `
 
-export const CardBack = styled.div`
+export const SizeBox = styled.span`
+width: 30px;
+height: 15px; 
+border: 2px solid white;
+border-color: ${(props) => props.size == 0 ? "var(--red-900)" : "blue" };
+padding: 0.8px;
+margin: 10px 5px ;
+color: white;
+border-radius: var(--roundedLight);
+background: ${(props) => props.size == 0 ? "var(--red-400)" : "blue" } ;
 
-    grid-area: frontAndBack;
-    transform: rotateY(-180deg);
+
 `
 
 

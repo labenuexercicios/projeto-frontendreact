@@ -92,7 +92,8 @@ display: flex;
     height: 100%;
     min-width: 325px;
     max-width: 350px;
-    height: 480px;
+    height: 100%;
+    min-height: 480px;
     box-shadow: 0 8px 10px rgba(66,66,66, .5);
     background: #fff;
     padding: 25px 25px 0px 25px;
@@ -254,5 +255,19 @@ justify-content: space-around;
 align-items: center;
 align-self: center;
 visibility: ${({modalDisplay})=>(modalDisplay === 0) ? "hidden" : "show"}
+
+`
+export const ButtonCard1 = styled.button`
+display: flex;
+width: 70%;  
+min-width: 80px;
+max-width: 110px;
+
+`
+
+export const Small = styled.span`
+display: block;
+font-size: var(--small);
+text-align: center;
 
 `
