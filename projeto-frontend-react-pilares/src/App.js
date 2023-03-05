@@ -127,10 +127,10 @@ const filterType = (value)=>{
 
  <DivTotal> 
  <button onClick={closeModal}>X Fechar</button>  
-
-<h2>Total do {[...carrito].reduce((cartList , cartProduct)=>
-    (CardProduct.price * cartProduct.quantity), 0)  
-  }</h2>
+ <SectionTitle>Valor Total
+<span>R$ {[...carrito].reduce((productTotal , cartProduct)=>
+    Number(productTotal += (cartProduct.price * cartProduct.quantity)), 0)  
+  }</span></SectionTitle>
     </DivTotal>
                   </Div50>
 
@@ -216,6 +216,7 @@ filterType={filterType}
 <br/></CtnType>
   </FormFilter>
     <hr/>
+
     <Small>TOTAL DE PRODUTOS :{products.length} </Small>
 
 
