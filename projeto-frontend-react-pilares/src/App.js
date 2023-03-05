@@ -20,7 +20,7 @@ const [pages , setPages] = useState(1)
   const [maxValue, setMaxValue] = useState(200)
   
  const [carrito, setCarrito] = useState([]);
- const [cartList , setCartList] = useState([]) 
+ const [cartList , setCartList] = useState() 
  const [total, setTotal] = useState(0);
  
  const productTotal = (a, b)=>{
@@ -126,59 +126,50 @@ const filterType = (value)=>{
      
 
  <DivTotal> 
-  <button onClick={closeModal}>X Fechar</button>  
-    <h2>Total do</h2>
+ <button onClick={closeModal}>X Fechar</button>  
+
+<h2>Total do {[...carrito].reduce((cartList , cartProduct)=>
+    (CardProduct.price * cartProduct.quantity), 0)  
+  }</h2>
     </DivTotal>
                   </Div50>
 
  <Div50>
-<table>
-  <thead>
-    <tr>
-    <th >Item </th>	
-                    <th colSpan="4"> Qtd </th>	 
-                    <th>Total </th>
-    </tr>
-  </thead>
-  <tbody>
+
+  <ul>
 
     {
             carrito.length >= 1 ? (
               
-                carrito.map((cartProduct) => ( <
-                    tr key = { cartProduct.id } >
-                    <td> { cartProduct.name } </td>	
-                    <td colSpan="4"> 
+                carrito.map((cartProduct) => ( 
+                  <li key={ cartProduct.id } >
+            <div>
+                    <h2> { cartProduct.name } </h2>	
+             
                     <button onClick = {
                       () => lessProduct(cartProduct)
                   } > <i class="fa-solid fa-circle-minus"></i> </button>
-                    { cartProduct.quantity }
+                   <span> { cartProduct.quantity }</span>
                     <button onClick = {
                       () => addCart(cartProduct)
                   } > <i class="fa-solid fa-circle-plus"></i></button >
-                    </td>	 
-                    <td>R$ {productTotal( cartProduct.quantity,  cartProduct.price)}</td>
-                   
-                  </tr>
+            
+      
+                <p>R$ {productTotal( cartProduct.quantity,  cartProduct.price)}</p>
+       </div>
+                  </li>
+  
                 )
                 )
            ) : ( 
-              <tr>
-              <td colSpan="6">
+           <li>
                Carrinho Vazio... 
-            </td>
-               </tr>
-
+            </li>
+          
                )
         }
-        </tbody>
-                  <tfoot>
-                    <tr>
-                   
-
-                    </tr>
-                  </tfoot>
-                  </table>	</Div50>
+        </ul>
+	</Div50>
                   
                   
  
