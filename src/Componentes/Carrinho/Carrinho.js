@@ -10,7 +10,7 @@ function Carrinho(props) {
 
     function removeitem(preco, id) {
         const kit = props.salvaItens && props.salvaItens.find((item) => item.id === id)
-        console.log(kit);
+        // console.log(kit);
         if(props.pegavlcompra >= 0){
             props.setPegavlcompra(props.pegavlcompra - preco)
         }
@@ -28,11 +28,11 @@ function Carrinho(props) {
         const carrinhoSemItem = props.salvaItens.filter((item) => item.id !== id);
         props.setSalvaitens(carrinhoSemItem);
     }
-    console.log(props.setSalvaitens.length)
-    if(props.setSalvaitens.length === 0){
-        console.log("e pra apaga tudo")
-        localStorage.removeItem("Lista dos itens");
-    }
+    // console.log(props.setSalvaitens.length)
+    // if(props.setSalvaitens.length === 0){
+    //     console.log("e pra apaga tudo")
+    //     localStorage.removeItem("Lista dos itens");
+    // }
 }
 
 
