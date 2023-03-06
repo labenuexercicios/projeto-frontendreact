@@ -10,7 +10,7 @@ import Main from "./Componentes/Main/Main";
 import { Mainstyle, Mainstylebody, Mainstylecontador, Mainstyleordena, Mainstyletitle } from "./Componentes/Main/Mainstyle";
 
 import Maintitle from "./Componentes/Main/Maintitle";
-import { BonsModosapp, StyleOfApp } from "./Styleapp";
+import { StyleOfApp } from "./Styleapp";
 
 function App() {
 
@@ -23,18 +23,20 @@ function App() {
   const [pegaosvaloresdovetor, setpegaosvaloresdovetor] = useState([]);
   
   const [pegavlcompra, setPegavlcompra] = useState(0);
-  const [contadorcarrinho, setContadorcarrinho] = useState(0);
+  // const [contadorcarrinho, setContadorcarrinho] = useState(0);
+  // console.log(pegavlcompra)
   
+  const [salvaItens, setSalvaitens] = useState([]);
+  console.log(salvaItens)
 
   const [vetorQueguardaositens, setVetorqueguardaositens] = useState([]);
   const [chamaCarrinho, setChamacarrinho] = useState(0)
 
+  const [guardaid, setGuardaid] = useState(0)
+  
 
   useEffect(() =>{
-    //Pega os itens que foram criados no localstorage
     const listaDeitensstorage = JSON.parse(localStorage.getItem("Lista dos itens"))
-    // console.log(listaDeitensstorage)
-    //Coloca ele dentro do vetor que guarda os itens
     if(listaDeitensstorage){
       setVetorqueguardaositens(listaDeitensstorage)
     }
@@ -84,17 +86,22 @@ function App() {
               vlmax = {vlmax}
               vlmin = {vlmin}
               vlnome = {vlnome}
+              kits = {kits}
               kit = {kit}
               pegavlcompra = {pegavlcompra}
               setPegavlcompra = {setPegavlcompra}
-              contadorcarrinho = {contadorcarrinho}
-              setContadorcarrinho = {setContadorcarrinho}
+              // contadorcarrinho = {contadorcarrinho}
+              // setContadorcarrinho = {setContadorcarrinho}
               vetorQueguardaositens = {vetorQueguardaositens}
               setVetorqueguardaositens = {setVetorqueguardaositens}
               chamaCarrinho = {chamaCarrinho}
               setChamacarrinho = {setChamacarrinho}
               pegaosvaloresdovetor = { pegaosvaloresdovetor}
               setpegaosvaloresdovetor = {setpegaosvaloresdovetor}
+              guardaid = {guardaid}
+              setGuardaid = {setGuardaid}
+              salvaItens = {salvaItens}
+              setSalvaitens = {setSalvaitens}
 
               />
             )
@@ -102,14 +109,12 @@ function App() {
 
 
   return (
-    <BonsModosapp>
+    <div>
       <StyleOfApp>
         <StyleofHeader>
           <Styleofheaderright>
             <div>
-              <a href="#">home</a>
-              <a href="#">Contact us</a>
-              <a href="#">About us</a>
+                header3
             </div>
           </Styleofheaderright>
           <Header/>
@@ -141,20 +146,25 @@ function App() {
           </Mainstylebody>
         </Mainstyle>
         <Carrinhostyle>
+
           <Carrinho
-          pegavlcompra = {pegavlcompra}
-          setPegavlcompra = {setPegavlcompra}
-          contadorcarrinho = {contadorcarrinho}
-          chamaCarrinho = {chamaCarrinho}
-          setChamacarrinho = {setChamacarrinho}
-          vetorQueguardaositens = {vetorQueguardaositens}
-          setVetorqueguardaositens = {setVetorqueguardaositens}
-          pegaosvaloresdovetor = { pegaosvaloresdovetor}
-          setpegaosvaloresdovetor = {setpegaosvaloresdovetor}
+            pegavlcompra = {pegavlcompra}
+            setPegavlcompra = {setPegavlcompra}
+            // contadorcarrinho = {contadorcarrinho}
+            chamaCarrinho = {chamaCarrinho}
+            setChamacarrinho = {setChamacarrinho}
+            vetorQueguardaositens = {vetorQueguardaositens}
+            setVetorqueguardaositens = {setVetorqueguardaositens}
+            pegaosvaloresdovetor = { pegaosvaloresdovetor}
+            setpegaosvaloresdovetor = {setpegaosvaloresdovetor}
+            guardaid = {guardaid}
+            setGuardaid = {setGuardaid}
+            salvaItens = {salvaItens}
+            setSalvaitens = {setSalvaitens}
           />
         </Carrinhostyle>
       </StyleOfApp>
-    </BonsModosapp>
+    </div>
 
   );
 }
