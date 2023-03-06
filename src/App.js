@@ -27,7 +27,7 @@ function App() {
   // console.log(pegavlcompra)
   
   const [salvaItens, setSalvaitens] = useState([]);
-  console.log(salvaItens)
+  // console.log(salvaItens)
 
   const [vetorQueguardaositens, setVetorqueguardaositens] = useState([]);
   const [chamaCarrinho, setChamacarrinho] = useState(0)
