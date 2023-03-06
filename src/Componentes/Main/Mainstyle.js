@@ -6,8 +6,6 @@ export const Mainstyle = styled.main`
     grid-column: 2/3;
     grid-row: 2/3;
     flex-wrap: wrap;
-    /* grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
-    justify-items: center; */
 
 `
 
@@ -15,7 +13,6 @@ export const Mainstyletitle = styled.header`
     display: grid;
     grid-row: 1/2;
     grid-template-columns: 1fr 4fr 1fr;
-    border-bottom: 1px solid black;
 `
 
 export const Mainstylebody = styled.main`
@@ -29,17 +26,15 @@ export const Mainstylebody = styled.main`
 export const Mainstyleordena = styled.div`
     display: grid;
     grid-column: 3/4;
-    border: 1px solid black;
-
 `
 export const Mainstylecontador = styled.div`
     display: grid;
     grid-row: 1/2;
     grid-column: 1/2;
-    /* border: 1px solid black; */
 `
 
 export const Styledositens = styled.div`
+    margin-top: 20px;
     margin-left: 90px;
     border: 1px solid black;
     border-radius: 20px;

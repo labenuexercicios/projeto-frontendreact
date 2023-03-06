@@ -1,50 +1,55 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Itemdocarrinho } from "./Carrinhostyle";
 
 function Carrinho(props) {
 
 
-    const [salvaItens, setSalvaitens] = useState([]);
 
-    //Parse para transformar em 1 array de objetos de volta
-    useEffect(()=>{
-        const listaDeitensstorage2 = JSON.parse(localStorage.getItem("Lista dos itens"))
-        if(listaDeitensstorage2){
-            setSalvaitens(listaDeitensstorage2)
+////////->->->->->->Fico faltando apaga tudo do localstorage<-<-<-<-<-<-
+
+
+    function removeitem(preco, id) {
+        const kit = props.salvaItens && props.salvaItens.find((item) => item.id === id)
+        console.log(kit);
+        if(props.pegavlcompra >= 0){
+            props.setPegavlcompra(props.pegavlcompra - preco)
         }
-    },[props.vetorQueguardaositens])
-
-
-    function removeitem(id) {
-        
-        const novoarray = salvaItens.filter((tirar)=>{
-            if(tirar.id !== id){
-                return tirar
-            }
-        
-        })
-        setSalvaitens(novoarray);
-        //stringify pra transformar em string
-        const itensstring = JSON.stringify(novoarray)
-        //localstorage.setitem pra adicionar no localstorage
-        localStorage.setItem("Lista dos itens",itensstring)
+        if (kit.amount > 1) {
+            const novoCarrinho = props.salvaItens.map((item) => {
+              if (kit.id === item.id && item.amount >= 1) {
+                return { ...item, amount: item.amount - 1 };
+              } else {
+                return item;
+              }
+            });
+        props.setSalvaitens(novoCarrinho)
     }
+    if (kit.amount === 1) {
+        const carrinhoSemItem = props.salvaItens.filter((item) => item.id !== id);
+        props.setSalvaitens(carrinhoSemItem);
+    }
+    console.log(props.setSalvaitens.length)
+    if(props.setSalvaitens.length === 0){
+        console.log("e pra apaga tudo")
+        localStorage.removeItem("Lista dos itens");
+    }
+}
 
-    //Ficou faltando ajustar o carrinho
+
     return (
-
         <div>
-            {salvaItens.map(item=>{
-                return (<section>
+            <h1>Carrinho:</h1>
+            <h5>Preço total:{props.pegavlcompra}</h5>
+            {props.salvaItens.map((item) =>{
+                return(
                     <Itemdocarrinho>
-                        <p>{item.contador}x - kit: 00{item.id}</p>
-                        <p>Painel:{item.nome}</p>
-                        <button onClick={()=> removeitem(item.id)}>Remover</button>
+                    <h3>{item.nome}</h3>
+                    <p>{item.amount}x - Valor:{item.preco}</p>
+                    <button onClick={()=>removeitem(item.preco, item.id)}>Remover</button>
                     </Itemdocarrinho>
-                        </section>)
+                )
             })}
-    
-    </div>
+        </div>
     )
 
 }
