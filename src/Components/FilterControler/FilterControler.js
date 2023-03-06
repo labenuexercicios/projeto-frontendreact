@@ -1,44 +1,40 @@
-import React, { useState } from "react";
-import { Div, H3, Label, Input, Button } from "./styled";
+import React from "react";
+import { Div3, H3, Label, Input, Button, Select, Option } from "./styled";
 
 const FilterControler = (props) => {
-  //LOS ESTADOS
-  /*  const [minValue, setMinValue] = useState(0)
-    const [maxValue, setMaxValue] = useState(1000)
-    const [searchName, setSearchName] = useState("")*/
-
 
   return (
 
-    <Div>
+    <Div3>
       <H3>Filtro</H3>
-      <Label htmlFor="minValue">Valor minimo:</Label>
-      <Input type="number" id="minValue" value={props.minValue} onChange={(e) => {
-        //setMinValue(e.target.value)
-        //aqui iniciamos invocando las funciones
-        props.handleChangeMinValue(e.target.value)
+      <Label htmlFor="minValue">Valor mínimo:</Label>
+      <Input type="number" id="minValue" value={Number(props.minValue)} onChange={(e) => {
+        props.handleChangeMinValue(Number(e.target.value))
       }} />
-      <Label htmlFor="maxValue">Valor maximo:</Label>
-      <Input type="number" id="maxValue" value={props.maxValue} onChange={(e) => {
-        //setMaxValue(e.target.value)
-        props.handleChangeMaxValue(e.target.value)
+      <Label htmlFor="maxValue">Valor máximo:</Label>
+      <Input type="number" id="maxValue" value={Number(props.maxValue)} onChange={(e) => {
+        props.handleChangeMaxValue(Number(e.target.value))
       }} />
-      <Label htmlFor="buscador">Buscar por nome:</Label>
+      <Label htmlFor="buscador">Procurar por nome:</Label>
       <Input type="text" id="buscador" value={props.searchProduct} onChange={(e) => {
-        //setSearchName(e.target.value)
         props.handleSearchProduct(e.target.value)
       }} />
+      <Label htmlFor="buscador">Procurar por orden:</Label>
+      <Select value={props.ordenar} onChange={(e) => 
+        props.handleOrdenar(e.target.value)}>
+        <Option value="Ordenar">Ordem</Option>
+        <Option value="Crescente">Crescente</Option>
+        <Option value="Decrescente">Decrescente</Option>
+      </Select>
+
 
       <Button onClick={() => {
         props.handleReset()
-        /*      setMinValue(0)
-                setMaxValue(1000)
-                setSearchName("")*/
       }}>RESET</Button>
 
-    </Div>
+    </Div3>
   )
 };
 
-//handle lo utilizamos como nombre caracteriztico para darle una funcion a mi input o a botones
+
 export default FilterControler;

@@ -1,5 +1,4 @@
 import React from "react";
-//import { Header, Nav } from "./styled";
 import { Div, Titulo } from "./styled";
 
 function Footer() {
@@ -11,16 +10,4 @@ function Footer() {
 }
 
 export default Footer;
-/**
- * app.jsx>>
- * <Header title={"rojo"} />
-      <Header title={"azul"} />
-       */
-/**
-const Header = ({ title }) => {
-  return (
 
-
-  )
-}
-export default Header; */

@@ -1,47 +1,74 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import FilterControler from "./Components/FilterControler/FilterControler.js";
 import ProductCard from "./Components/ProductCard/ProductCard.js";
 import Cart from "./Components/Cart/Cart.js";
 import Footer from "./Components/Footer/Footer.js";
-//import Header from "./Components/Header/Header.js";
-//import { GlobalStyled } from './GlobalStyled'
-//import { GlobalStyled } from './GlobalStyled'
-//import Header from "./Components/Header/Header.js";
+
+
 const GlobalStyle = createGlobalStyle`
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    body {
+      background-color: #EEE8B8;
+      background-image: url("https://images7.alphacoders.com/939/939560.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+    }
 }`;
 
+const Div = styled.div`
+display: flex;
+flex-direction: column;
+gap: 8rem;
+`
+   
+const Page = styled.div`
+display: block;
+padding: 1rem;
+`
+const Content = styled.div`
+display:flex;
+flex-flow: row wrap;
+width: 90%;
+margin-left:5%;
+`
+
 const CardContainer = styled.div`
-display: grid;
-grid-template-columns: repeat(auto-fill, 240px);
-gap: 26px;
-place-content: center;`;
+display: flex;
+flex-flow: row wrap;
+width: 60%;
+margin: 0 auto;
+`
 
 export const Header = styled.header`
     display: flex;
     gap: 16px;
     padding: 16px;
     border: 1px solid #000;
-`;
+    background-size: 2%;
+    background-color: black;
+    background-position: top-center;
+    `;
+
+
 const App = () => {
 
 
   const data = [
 
     {
-      nome: "camiseta uno",
+      nome: "Camiseta et",
       id: 1,
       preco: 17,
-      img: "https://a-static.mlcdn.com.br/800x560/camiseta-aliens-camisa-nave-espacial-darkwood/darkwoodshop2/11107445889/017a4920c46b48765635d052c4f3c106.jpeg"
+      img: "https://d2r9epyceweg5n.cloudfront.net/stores/001/582/668/products/mockup-of-a-basic-tee-hanging-on-a-concrete-wall-33689-111-a731affe0927b1e26d16303303420218-1024-1024.png"
     },
 
     {
-      nome: "camiseta dos",
+      nome: "Camiseta galáxia roxa",
       id: 2,
       preco: 30,
       img: "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/overfame/media/uploads/produtos/foto/bf17c87c95c3masculina-galaxia-chuva-meteoros-md05a.jpg"
@@ -49,128 +76,106 @@ const App = () => {
 
 
     {
-      nome: "camiseta tres",
+      nome: "Camiseta planeta",
       id: 3,
-      preco: 20,
+      preco: 62,
       img: "https://img.ltwebstatic.com/images3_pi/2021/03/12/1615543534b8b26b70a8b0876205168898e89c185b.webp"
     },
 
 
     {
-      nome: "camiseta cuatro",
+      nome: "Camiseta galáxia céu azul",
       id: 4,
-      preco: 20,
+      preco: 60,
       img: "https://img.ltwebstatic.com/images3_pi/2021/08/25/1629872794ee03da84a93cad7575b9a561b196636b.webp"
     },
 
     {
-      nome: "camiseta cinco",
+      nome: "Camiseta sete planetas",
       id: 5,
-      preco: 20,
+      preco: 50,
       img: "https://www.useupdate.com.br/media/product/ede/camiseta-astronauta-in-love-10f.jpg"
     }
 
   ]
 
-  //set para camiarle el valor, y productos llamo a mi var
   const [productos, setProductos] = useState(data);
 
-
-  const handleClick = (nome) => {
-    alert("hola" + nome)
-  }
-
-  const handleChange = (event) => {
-    setInputValue(event.target.value)
-    //cuando hago el evet.taget.value accedo a ese string
-    console.log(event.target.value)
-    //console.log(event)
-    console.log(event.target)
-  }
-  //estado + su seter
-  const [inputValue, setInputValue] = useState(" ")
   const [carrito, setCarrito] = useState([])
   const [minValue, setMinValue] = useState(0)
-  const [maxValue, setMaxValue] = useState(1000)
+  const [maxValue, setMaxValue] = useState(50)
   const [searchProduct, setSearchProduct] = useState("")
   const [total, setTotal] = useState(0);
+  const [ordenar, setOrdenar] = useState("Ordenar");
 
+  
+  const filterProducts = (producto ) => {
 
-  // estoy creando las funciones que ejecuta mi componente
+    return producto.preco < maxValue && producto.preco > minValue && producto.nome.toUpperCase().includes(searchProduct.toUpperCase())
+  
+    }
+   
   const handleChangeMinValue = (value) => {
-    //console.log(value)
     setMinValue(value)
     setProductos(
-      //data hace ref. a el estado actual
-      [...data].filter(producto => producto.preco > minValue)
+      [...data].filter((products) => filterProducts(products))
     )
   }
 
   const handleChangeMaxValue = (value) => {
     setMaxValue(value)
-    //console.log(value)
     setProductos(
-      //data hace ref. a el estado actual
-      [...data].filter(producto => producto.preco < maxValue)
+      [...data].filter((products) => filterProducts(products))
     )
   }
 
   const handleSearchProduct = (value) => {
     setSearchProduct(value)
-    //console.log(value)
     setProductos(
-      //data hace ref. a el estado actual
-      [...data].filter(producto => producto.nome.toUpperCase().includes(searchProduct.toUpperCase()))
+      [...data].filter((products) => filterProducts(products))
     )
-    console.log(productos)
   }
 
+  const handleOrdenar = (action) => {
+   setOrdenar(action)
+  } 
+
   const handleReset = () => {
-    console.log("reseteado")
     setMinValue(0)
-    setMaxValue(1000)
+    setMaxValue(50)
     setSearchProduct("")
     setProductos(data)
   }
-
-  const handleAddCard = (product) => {
-    console.log(product.nome)
+  
+ const handleAddCard = (product) => {
     if (carrito.some((producto) => producto.id == product.id)) {
-      console.log("ya existe")
-      setCarrito((currentState) =>
-        currentState.map(
-          producto => {
-            const result = (Number(producto.id) === Number(product.id) ? { ...producto, quantity: producto.quantity + 1 } : product)
-            result.finalPrice = result.quantity * result.preco
-            return result
+      setCarrito((currentState) => [...currentState].map( producto => {
+           if(Number(producto.id) == Number(product.id)){
+            producto.quantity = producto.quantity + 1
+            producto.finalPrice = producto.quantity * producto.preco 
           }
-        ))
-
-    } else {
-
-      setCarrito(
-        (currentState) => {
-          currentState.push({ ...product, quantity: 1 })
-          return currentState
+          return producto
         }
-      )
-    }
+        ))
+    } else {
+      setCarrito( [...carrito, {...product , quantity: 1, finalPrice: product.preco}] )
+ }}
+    useEffect(()=> {
+       actualizarTotal()
+  }, [carrito])
 
-    //actualizar un estado de un array
-
-
-  }
-  console.log(carrito)
   const actualizarTotal = () => {
+
     let resultado = 0;
-    if (carrito.length > 1) {
-      carrito.forEach(producto => {
-        resultado += producto.preco * producto.quantity
+    if (carrito.length >= 1) {
+      [...carrito].forEach(producto => {
+        resultado += producto.finalPrice 
       });
     }
+    
     setTotal(resultado)
-    console.log(resultado)
   }
+
 
   const handleDeleteProduct = (id) => {
     setCarrito((currentState) => {
@@ -179,79 +184,102 @@ const App = () => {
         if (producto.id == id) {
           if (!(producto.quantity == 1)) {
             producto.quantity--
+            producto.finalPrice = producto.quantity * producto.preco 
             result.push(producto)
           }
         } else {
           result.push(producto)
         }
       })
+      actualizarTotal()
       return result
     })
-    console.log(carrito)
   }
 
-
+  useEffect(() =>{   
+    setProductos(productos.sort((a,b) => {
+      const producto = a.preco
+      const productoProximo = b.preco
+      if(ordenar === "Crescente"){
+        return producto > productoProximo ? 1 : -1
+      }else if (ordenar === "Decrescente"){
+        return producto < productoProximo ? 1 : -1
+      }else{
+        return a.id - b.id
+      }
+    })
+)
+  } , [ordenar])
 
   return (
     <>
-      {/*<Header />*/}
-      {/*<GlobalStyled />*/}
-      {/*aqui estamos pasando las ref. por propiedades (props)*/}
       <GlobalStyle />
       <Header />
-      <Cart
-        carrito={carrito}
-        total={total}
-        handleDeleteProduct={
-          handleDeleteProduct
-        }
-        actualizarTotal={
-          actualizarTotal
-        }
-      />
 
-      <FilterControler
+      <Page>
+        <Content>
+
+        <Div>
+          <FilterControler
 
 
-        handleChangeMaxValue={
-          handleChangeMaxValue
-        }
-        handleChangeMinValue={
-          handleChangeMinValue
-        }
-        handleSearchProduct={
-          handleSearchProduct
-        }
-        handleReset={
-          handleReset
-        }
-        maxValue={
-          maxValue
-        }
-        minValue={
-          minValue
-        }
-        searchProduct={
-          searchProduct
-        }
-      />
-      <CardContainer>
-        {productos.map((producto) => <ProductCard
-          key={producto.id}
-          product={
-            producto
-          }
+            handleChangeMaxValue={
+              handleChangeMaxValue
+            }
+            handleChangeMinValue={
+              handleChangeMinValue
+            }
+            handleSearchProduct={
+              handleSearchProduct
+            }
+            handleReset={
+              handleReset
+            }
 
-          handleAddCard={
-            handleAddCard
-          }
-          actualizarTotal={
-            actualizarTotal
-          }
+            handleOrdenar={
+              handleOrdenar
+            }
 
-        />
-        )}</CardContainer>
+            maxValue={
+              maxValue
+            }
+            minValue={
+              minValue
+            }
+            searchProduct={
+              searchProduct
+            }
+          />
 
+          <Cart
+            carrito={carrito}
+            total={total}
+            handleDeleteProduct={
+              handleDeleteProduct
+            }
+    
+          />
+         </Div> 
+
+          <CardContainer>
+            {productos.map((producto) => <ProductCard
+              key={producto.id}
+              product={
+                producto
+              }
+
+              handleAddCard={
+                handleAddCard
+              }
+        
+
+            />
+            )}</CardContainer>
+
+     
+
+        </Content>
+      </Page>
 
       <Footer />
     </>

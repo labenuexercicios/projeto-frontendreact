@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Div, H3, Button } from "./styled";
+import React from "react";
+import { Div1, H2, Button } from "./styled";
 
 
 const Cart = (props) => {
@@ -7,23 +7,21 @@ const Cart = (props) => {
 
   return (
 
-    <Div>
-      <H3>Carrito</H3>
-      <H3>Valor Total:{props.total}</H3>
+    <Div1>
+      <H2>Carrinho</H2>
+      <H2>Valor Total: R$ {props.total}</H2>
       {props.carrito.map((producto) => (
         <div key={producto.id}>
-          <H3>Nome</H3>
-          {producto.nome}
-          <H3>Preco</H3>
-          {producto.preco}
+          <H2>Nome {producto.nome}</H2>
+          <H2>Preco
+          R$ {producto.preco}</H2>
           <Button onClick={() => {
             props.handleDeleteProduct(producto.id)
-            props.actualizarTotal()
-          }}>Restar</Button>
-          <H3>Cantidad: {producto.quantity}</H3>
+         }}>Restar</Button>
+          <H2>Cantidad: {producto.quantity}</H2>
         </div>
       ))}
-    </Div>
+    </Div1>
 
   )
 }

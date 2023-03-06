@@ -1,23 +1,20 @@
 import React from "react";
-import { Div, Button, Img } from "./styled";
-//import cloro from "../Imagenes/cloro.PNG"
+import { Div2, Button, Img, H2, P } from "./styled";
 
 const ProductCard = (props) => {
 
-
-  console.log(props.product.finalPrice)
   return (
-    //  <Container>
-    <Div>
-      <h2>{props.product.nome}</h2>
-      <p>{props.product.finalPrice ? props.product.finalPrice : props.product.preco}</p>
+
+    <Div2>
+      <H2>{props.product.nome}</H2>
+      <P>{props.product.finalPrice ? 
+      props.product.finalPrice : "R$ " + props.product.preco}</P>
       <Img src={props.product.img} />
       <Button onClick={() => {
         props.handleAddCard(props.product)
-        props.actualizarTotal()
       }}>Comprar</Button>
-    </Div>
-    //  </Container>
+    </Div2>
+
   )
 }
 
