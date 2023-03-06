@@ -1,10 +1,19 @@
-import { Button
- } from "../../ProductList/ProductCard/ProductCardStyle"
-export default function Items () {
-    return(
-        <div>
-        <p>x0 Nome do produto</p>
-        <Button>Remover</Button>
-        </div>
+import { Button, CartList, ItemsCart } from "./ItemsStyle"
+
+export default function Items(props) {
+
+    const itemTotalValue = props.item.value * props.item.quantity;
+
+    return (
+        <CartList>
+            <ItemsCart >
+                <p>{props.item.quantity}x</p>
+                <p>{props.item.name}</p>
+                <p>Valor Unitário: {props.item.value}</p>
+                <p>Valor Total: {itemTotalValue}</p>
+                <Button onClick={props.removeOneItem}>Remover</Button>
+                <Button onClick={props.removeItemCart}>Remover Todos</Button>
+            </ItemsCart>
+        </CartList>
     )
 }

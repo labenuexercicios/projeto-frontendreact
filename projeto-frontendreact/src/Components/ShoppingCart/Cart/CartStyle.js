@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CartStyle = styled.aside`
     display: flex;
-    width: 15vw;
+    width: 30vw;
     height: 50vh;
     flex-direction: column;
     justify-content: start;

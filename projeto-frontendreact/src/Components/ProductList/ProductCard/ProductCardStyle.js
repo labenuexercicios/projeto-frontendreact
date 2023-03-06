@@ -1,18 +1,11 @@
 import styled from "styled-components";
 
-export const ProductCardStyle = styled.main`
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 1rem;
-`
-
 export const ContainerCard = styled.div`
     display: flex;
     gap: .5rem;
     flex-direction: column;
-    width: 18rem;
-    height: 25rem;
+    width: 15rem;
+    height: 22rem;
     border: 2px solid rgba(255, 255, 255, 0.87);
 
     /* :hover{
