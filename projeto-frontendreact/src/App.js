@@ -20,9 +20,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="nome-loja">ASTRODEV STORE</h1>
+      <h1 className="nome-loja">NAVE STORE</h1>
 
-      <h2 className="subtitulo">Fantasias espaciais</h2>
+      <h1 className="subtitulo">FANTASIAS ESPACIAIS</h1>
       <Banner />
 
       <Catalogo carrinho={carrinho} adicionarAoCarrinho={adicionarAoCarrinho} />

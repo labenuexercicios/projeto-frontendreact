@@ -1,13 +1,18 @@
 .banner {
-  text-align: center;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner img {
-  max-width: 100%;
-  width: 1163.54px;
-  height: 250px;
-  left: 35.46px;
-  top: 55px;
-  border-radius: 1rem;
+ 
+ width: 50%;
+ height: auto;
+ border-radius: 24rem;
+
+
 }
 
 .nome-loja {
@@ -16,11 +21,36 @@
   text-align: center;
   color: rgb(225, 52, 196);
   font-family: "Franklin Gothic Medium";
-  font-size: 60px;
+  font-size: 100px;
+  animation: piscar 1s infinite;
 }
+
+@keyframes piscar {
+  0% {
+    color: rgb(225, 52, 196);
+  }
+  50% {
+    color: rgb(30, 133, 198)
+  }
+  100% {
+    color: rgb(185, 225, 52)
+  }
+}
+
 .subtitulo {
   text-align: center;
   font-size: 30px;
   color: rgb(225, 52, 196);
   font-family: "Franklin Gothic Medium";
+  animation: piscar 1s infinite;
 }
+@keyframes piscar {
+  0% {
+    color: rgb(225, 52, 196);
+  }
+  50% {
+    color: rgb(30, 133, 198)
+  }
+  100% {
+    color: rgb(185, 225, 52)
+  }}

@@ -39,7 +39,7 @@ const Catalogo = (props) => {
   const [ordemLista, setOrdemLista] = useState("crescente");
 
   const buscarLista = (nome) => {
-    if (nome === "") {
+    if (nome === "crescente") {
       setListaFantasia(listaOrdenadaPadrao);
     } else {
       setListaFantasia(() =>

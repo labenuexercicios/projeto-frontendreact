@@ -4,12 +4,14 @@
   width: 400px;
   border: 1px solid blue;
   padding: 0 16px;
+  border-radius: 2rem;
+  background-color: blueviolet;
 }
 
 .carrinho-container h4 {
   color: #fff;
   margin: 8px 0;
-  font-size: 24px;
+  font-size: 44px;
 }
 
 .carrinho-lista {
@@ -35,4 +37,9 @@
 
 .valor-total {
   font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
 }

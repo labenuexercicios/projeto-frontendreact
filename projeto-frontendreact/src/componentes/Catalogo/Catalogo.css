@@ -6,23 +6,28 @@
   display: grid;
   text-align: center;
   list-style-type: none;
-  font-family: monospace;
-  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:30px;
 }
 
 .catalogo img {
-  border: 4px solid rgb(216, 89, 180);
+  border: 23px solid rgb(98, 217, 38);
   border-style: groove;
-  border-radius: 2rem;
+  border-radius: 24rem;
   gap: 10px;
 }
 
 .lista-produtos {
   display: flex;
   flex-direction: column;
-  font-family: fantasy;
-  color: blueviolet;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  font-family: cursive;
+  color: rgb(21, 233, 10);
   list-style-type: none;
+  margin: 10px;
+
 }
 
 .ordernar-container {
