@@ -1,7 +1,11 @@
 import { useEffect} from "react";
 import { Button, Styledositens } from "./Mainstyle";
+import imagemtrina from "../../Imagens/trina.jpg"
+import imagemcanadian from "../../Imagens/canadian.jpg"
+import imagemjinko from "../../Imagens/Jinko.jpg"
 
 function Main (props){
+    let vardeimagem = ""
 
     useEffect(()=>{
         const listaDeitensstorage2 = JSON.parse(localStorage.getItem("Lista dos itens"))
@@ -10,8 +14,19 @@ function Main (props){
         }
    },[props.vetorQueguardaositens])
 
+   if(props.kit.nome === "Trina"){
+    vardeimagem = imagemtrina
+}
+
+if(props.kit.nome === "Canadian"){
+    vardeimagem = imagemcanadian
+}
+
+if(props.kit.nome === "Jinko"){
+    vardeimagem = imagemjinko
+}
+
     function Compraitempreco(id){
-        
 
         // props.setPegavlcompra(props.pegavlcompra + props.kit.preco)
 
@@ -44,14 +59,12 @@ function Main (props){
         props.setSalvaitens(novaLista)
 
     }
-
-
     }
     return(
         <div>
             <Styledositens>
             <div>
-            <img src={props.kit.imagem} width = "225px" height={225} alt="ImgJinko"></img>
+            <img src={vardeimagem} width = "225px" height={225} alt="ImgJinko"></img>
             <p><b>Marca: {props.kit.nome}</b></p>
             <p><b>Geração: {props.kit.geracao}w</b></p>
             <p><b>Sistema contra surto: {props.kit.saf}</b></p>
