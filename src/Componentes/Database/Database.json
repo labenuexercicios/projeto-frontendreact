@@ -3,7 +3,7 @@
     "geracao": 565,
     "saf": "Não",
     "preco": 13500,
-    "imagem": "trina.jpg",
+    "imagem": "./Imagens/trina.jpg",
     "id": 1,
     "contador": 1
 },
@@ -12,7 +12,7 @@
     "geracao": 450,
     "saf": "Sim",
     "preco": 14000,
-    "imagem": "jinko.jpg",
+    "imagem": "../../Imagens/jinko.jpg",
     "id": 2,
     "contador": 1
 },
@@ -21,7 +21,7 @@
     "geracao": 465,
     "saf": "Sim",
     "preco": 12500,
-    "imagem": "canadian.jpg",
+    "imagem": "../../Imagens/canadian.jpg",
     "id": 3,
     "contador": 1
 }
