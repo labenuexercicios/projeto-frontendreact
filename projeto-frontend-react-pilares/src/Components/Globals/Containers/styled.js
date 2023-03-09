@@ -150,7 +150,7 @@ padding: 10px;
 background: white;
 border: 2px solid gray;
 border-radius: 15px;
-margin: 30px auto;
+margin: 10px auto;
 font-size: 2rem;
 text-align: center;
 `
@@ -206,7 +206,7 @@ text-align: center;
 export const CtnType = styled.div`
 width: 90%;
 height: 100%;
-max-width: 400px;
+max-width: 300px;
 text-align: center;
 `
 export const Div50 = styled.div`

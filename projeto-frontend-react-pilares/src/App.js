@@ -1,18 +1,20 @@
-import React from 'react';
-
-import { GlobalStyled } from './globalStyled';
-import { OrderCategories } from './Components/Order/OrderCategories';
-import  {DivOffers, DivTotal, DivModal, CtnType, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText, HeaderCtn2} from './styled'
-import { HeaderNav } from './Partials/HeaderNav/index';
-import { Footer } from './Partials/Footer/index';
+import { GlobalStyled } from './Components/Globals/globalStyled';
+import { OrderCategories } from './Components/Content/Filter/OrderCategories';
+import {Project} from './Views/Project/index'
+import  {DivOffers, DivTotal, DivModal, CtnType, Div50, DivRow, ButtonCard1, Small, InputNumber, Page, FormFilter, MainCtn, SectionCtn, SectionTitle, AsideRight, Label, ArticleBox, FormContainer, InputText, HeaderCtn2} from './Components/Globals/Containers/styled'
+import { HeaderNav } from './Components/Globals/HeaderNav/index';
+import { Footer } from './Components/Globals/Footer/index';
 import dataProducts from './Data/dataProducts'
 import { useState } from 'react';
-import { CardProduct } from './Components/ProductsList/CardProduct/index';
-import './App.js'
+import { CardProduct } from './Components/Content/ProductsList/CardProduct/index';
+import { OrderPriceCategory } from './Components/Content/Filter/OrderPriceCategory/index';
 
 function App() {
   const [modalDisplay, setModalDisplay] = useState(0);
-  console.log(modalDisplay)
+
+
+  const [productsPrice, setProductsPrice] = useState([...dataProducts]);
+
   const [products , setProducts] = useState([...dataProducts]) 
 const [pages , setPages] = useState(1)
   const [minValue, setMinValue] = useState(1)
@@ -29,8 +31,16 @@ return a * b
 
 }
 
+const ordenarCrescente =()=>{
+  [...dataProducts].sort(({ price: previousID }, { id: currentID }) => previousID - currentID)
+}
 
 
+const handleOrdenarPreco = (value)=>{
+  if(value === "Asc"){
+    setProducts(ordenarCrescente())
+  }
+}
  const addCart = (product) => {
      if (carrito.some((productCart) => productCart.id === product.id)) {
          setCarrito(
@@ -219,7 +229,11 @@ filterType={filterType}
 
     <Small>TOTAL DE PRODUTOS :{products.length} </Small>
 
-
+ <OrderPriceCategory
+ products={products} 
+ setProducts={setProducts} 
+ dataProducts={dataProducts}
+ />
 </FormContainer>
         </AsideRight> 
           <SectionCtn> 
@@ -227,17 +241,17 @@ filterType={filterType}
 <SectionTitle>
 
 
-    <span>PRODUTOS</span>
+  PRODUTOS
+</SectionTitle>
 
 
- 
       <br/>  
       
 	
 
-</SectionTitle>
- 
-{products.map(product=>
+
+
+{[...products].map(product=>
         <ArticleBox key={product.id}>
            
 
@@ -256,6 +270,7 @@ filterType={filterType}
 
           </SectionCtn>
           </MainCtn>):
+          (pages === 2? 
           (
             <MainCtn>
      
@@ -274,7 +289,11 @@ filterType={filterType}
                   <button> <i class="fas fa-arrow-right"></i> </button>
              </DivRow>
              </MainCtn>
-               )     
+               ):
+               (
+                <Project/>
+               ) 
+          )    
 }<Footer/>
   </Page>
 
