@@ -3,12 +3,21 @@ import { Itens } from "./Itens"
 
 
 export function Cart({AllProducts, cart, amount, onChangeAmount, onChangeCart}) {
+   
     return (
+
+       
         <div>
              <CartMenu>
                 <H1Cart><b>Carrinho</b></H1Cart>
 
-                <Itens/>
+                <Itens
+                amount={amount}
+                onChangeAmount = {onChangeAmount}
+                cart = {cart}
+                onChangeCart = {onChangeCart}
+                AllProducts = {AllProducts}
+                />
              </CartMenu>
             
         </div>

@@ -3,7 +3,7 @@ import { ProductCard, ButtonProducts, ImageProducts, ImageP } from "./styled"
 
 
 export function Produtos(props) {
-console.log(props)
+
     return (
         <div>
             
