@@ -2,39 +2,41 @@ import { HomeMain, Order, OrderSelect, QuantidadeDeItens, Div } from "./styled"
 import { Produtos } from "./Produtos"
 
 
-export function Home (props){
+export function Home({ onChangeOrder, order, AllProducts }) {
 
-   
 
-    return(
+
+    return (
 
         <div>
-                
-                <Div>
+
+            <Div>
                 <QuantidadeDeItens>Quantidade de produtos:</QuantidadeDeItens>
 
 
-               <Order> Ordenação : <OrderSelect>
-               <option value="crescente">Crescente</option> 
-               
-               <option value="decrescente">Decrescente</option>
-               </OrderSelect></Order>
-               
-               </Div>
-        <HomeMain>
-            
-            <Produtos Products={props.Products}/>
-            <Produtos Products={props.Products1}/>
-            <Produtos Products={props.Products2}/>
-            <Produtos Products={props.Products3}/>
-            <Produtos Products={props.Products4}/>
-            <Produtos Products={props.Products5}/>
-            <Produtos Products={props.Products6}/>
-            <Produtos Products={props.Products7}/>
-           
-       
-        
-        </HomeMain>
+                <Order> Ordenação :
+                    <OrderSelect onChange={onChangeOrder}>
+                        <option value="">Ordenar</option>
+                        <option value="crescente">Crescente</option>
+
+                        <option value="decrescente">Decrescente</option>
+                    </OrderSelect></Order>
+
+            </Div>
+            <HomeMain>
+                {AllProducts.sort((a, b) => {
+                    if (order === "crescente") {
+                        return a.value - b.value
+                    }
+                    if (order === "decrescente") {
+                        return b.value - a.value
+                    }
+                }).map((Search) => {
+                    return <Produtos Products={Search}
+                    />
+                }
+                )}
+            </HomeMain>
 
 
 
@@ -44,7 +46,7 @@ export function Home (props){
 
 
 
-        
+
     )
 
 

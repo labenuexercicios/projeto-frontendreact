@@ -14,54 +14,63 @@ export const Products = [
     id: 1,
     name: "Nave Espacial Fun",
     value: 40,
-    imageUrl: <ImageProducts src={Nave} />
+    imageUrl: <ImageProducts src={Nave} />,
+    type: "SellItem"
+    
   },
 
   {
     id: 2,
     name: "Arma Espacial DM",
     value: 50,
-    imageUrl: <ImageProducts src={Arma} />
+    imageUrl: <ImageProducts src={Arma} />,
+    type: "SellItem"
   },
 
   {
     id: 3,
     name: "Ufogin",
     value: 75.00,
-    imageUrl: <ImageProducts src={Ufogin} />
+    imageUrl: <ImageProducts src={Ufogin} />,
+    type: "SellItem"
   },
 
   {
     id: 4,
     name: "Lego Espacial",
     value: 150.00,
-    imageUrl: <ImageProducts src={Lego} />
+    imageUrl: <ImageProducts src={Lego} />,
+    type: "SellItem"
   },
   {
     id: 5,
     name: "Boneco Astronauta",
     value: 70.00,
-    imageUrl: <ImageProducts src={Astronauta} />
+    imageUrl: <ImageProducts src={Astronauta} />,
+    type: "SellItem"
   },
 
   {
     id: 6,
     name: "Jogo Astronomia",
     value: 170.00,
-    imageUrl: <ImageProducts src={Astronomia} />
+    imageUrl: <ImageProducts src={Astronomia} />,
+    type: "SellItem"
   },
   {
     id: 6,
     name: "Quebra-Cabeça",
     value: 150.00,
-    imageUrl: <ImageProducts src={Discovery} />
+    imageUrl: <ImageProducts src={Discovery} />,
+    type: "SellItem"
   },
 
   {
     id: 6,
     name: "Arma Espacial IM",
     value: 55.00,
-    imageUrl: <ImageProducts src={Arma2} />
+    imageUrl: <ImageProducts src={Arma2} />,
+    type: "SellItem"
   },
 
 

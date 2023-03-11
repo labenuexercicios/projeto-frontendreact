@@ -2,7 +2,7 @@ import React from "react"
 import { LabelFilter, Form, InputFilter, H1Filter, ButtonFilter } from "./styled"
 
 
-export function Filtros() {
+export function Filtros({minFilter, maxFilter, onChangeMinFilter,onChangeMaxFilter, AllProducts}) {
 
 
     

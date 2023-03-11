@@ -13,10 +13,34 @@ import { Products } from "./assents/productsList"
 
 export default function App() {
 
-  const [minFilter, onChangeMinFilter] = useState("")
-  const [maxFilter, onChangeMaxFilter] = useState("")
-  const [cart, onChangeCart] = useState("")
-  const [amount, onChangeAmount] = useState("")
+  const [minFilter, setMinFilter] = useState("")
+  const [maxFilter, setMaxFilter] = useState("")
+  const [cart, setCart] = useState("")
+  const [amount, setAmount] = useState("")
+  const [order, setOrder] =useState("")
+
+
+  const onChangeOrder=(event)=>{
+
+    setOrder(event.target.value)
+  }
+
+  const onChangeMinFilter=(event)=>{
+    setMinFilter(event.target.value)
+  }
+
+  const onChangeMaxFilter=(event)=>{
+    setMaxFilter(event.target.value)
+  }
+
+  const onChangeCart=(event)=>{
+    setCart(event.target.value)
+  }
+
+  const onChangeAmount=(event)=>{
+    setAmount(event.target.value)
+  }
+
 
 
   return (
@@ -26,19 +50,26 @@ export default function App() {
       <GlobalStyle/>
       <Header />
       <Main>
-      <Filtros/>
-      
-      <Home 
-      Products={Products[0]}
-      Products1={Products[1]}
-      Products2={Products[2]}
-      Products3={Products[3]}
-      Products4={Products[4]}
-      Products5={Products[5]}
-      Products6={Products[6]}
-      Products7={Products[7]}
+      <Filtros
+      minFilter = {minFilter}
+      onChangeMinFilter = {onChangeMinFilter}
+      maxFilter = {maxFilter}
+      onChangeMaxFilter = {onChangeMaxFilter}
+      AllProducts = {Products}
       />
-      <Cart/>
+      
+      <Home   
+      order = {order}
+      onChangeOrder = {onChangeOrder}
+      AllProducts = {Products}
+      />
+      <Cart
+      cart = {cart}
+      onChangeCart = {onChangeCart}
+      amount = {amount}
+      onChangeAmount = {onChangeAmount}
+      AllProducts = {Products}
+      />
       </Main>
       
     </div>
