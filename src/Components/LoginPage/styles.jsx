@@ -1,23 +1,19 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-  height: 100vh;
+  height: 80%;
+  width:20%;
   position:absolute;
-  left:65%;
-  top:10%;     
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-`;
+  left:80%;
+  top:10%; 
+  `;
 
 export const H1 = styled.h1`   
-    text-align:center;
-`
+    text-align:center;`
 
 export const Form = styled.div`
-  width: 40vw;
-  height: 60vh;
+ width: 70%;
+  height: 60%; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,36 +22,45 @@ export const Form = styled.div`
 `;
 
 export const Input = styled.input`
-  padding: 8px;
-  margin-left: 16px;
+  padding: 9px;  
+  border-radius:8px;
 `;
 
 export const SendButton = styled.button`
   background-color: #ff4400;
   border-radius: 8px;
-  padding: 16px;
+  padding: 10px;
   width: 200px;
   border: none;
-  color: white;
-  margin-top: 32px;
+  color: white;  
   cursor: pointer;
+  box-shadow:4px 4px 0px gray;
+  transition: transform 200ms ease-in-out;
+    :hover{
+        background-color: white;
+        color: black;
+        transform: scale(1.08);
+    }
 `;
 
 export const RegisterButton = styled.button`
     background-color:  #ff4400;
     border-radius: 8px;
-    cursor: pointer;
     width: 200px;
     padding: 10px;
+    cursor: pointer;
+    box-shadow:4px 4px 0px gray;
+    transition: transform 200ms ease-in-out;
     :hover{
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
+        transform: scale(1.08);
     }
 `
-
 export const StyledLabel = styled.label`
   width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
+

@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
     width: 100vw;
-    height: 8vh;
+    height: 10%;
     background-color: #513d3d;
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
-    position:fixed;
+    position:fixed;    
 `
 
 export const Logo = styled.div`
@@ -32,23 +32,33 @@ export const OptionsList = styled.ul`
     align-items: center;
 `
 export const Login = styled.button`
- cursor: pointer;
+ cursor: pointer;  
+  transition: transform 200ms ease-in-out; 
+    
+
     :hover{
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
+        transform: scale(1.08);
     }
 `
-export const Car = styled.a`
- cursor: pointer;
+export const Car = styled.button`
+ cursor: pointer; 
+  transition: transform 200ms ease-in-out;
+
     :hover{
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
+        transform: scale(1.08);
     }
 `
-export const Contact = styled.a`
- cursor: pointer;
+export const Contact = styled.button`
+ cursor: pointer;  
+  transition: transform 200ms ease-in-out;
+
     :hover{
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
+        transform: scale(1.08);
     }
 `

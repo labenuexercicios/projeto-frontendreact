@@ -12,7 +12,7 @@ const Header = (props) => {
   return (
     <HeaderContainer>
         <Logo >
-            <img src={logo} alt='Logo Labenu' height={45}/>
+            <img src={logo} alt='Logo Labenu' height={58}/>
             <p>Astrodev </p>            
         </Logo>
         <NavBar>
@@ -23,12 +23,12 @@ const Header = (props) => {
                   </Login>
                 </li>
                 <li>
-                  <Car>
+                  <Car onClick={() => props.changePage(7)}>
                     <img src={shoppingCar} alt='Carrinho' height={38}/>
                   </Car>
                   </li>
                 <li>
-                  <Contact>
+                  <Contact onClick={() => props.changePage(6)}>
                     <img src={support} alt='Suporte' height={38}/>
                   </Contact>
                 </li>

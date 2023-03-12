@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-export const ContainerFilter = styled.div`    
+export const ContainerFilter = styled.div`
+    height:55vh;
+    width:15vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    border-right:1px solid black;
-    padding:0% 0 0 2%;
+    flex-direction: column;    
+    padding:10% 0 0 2%;
 `
 
-export const FilterForm = styled.form`
-    height: 60vh;
+export const FilterForm = styled.form`    
     display: flex;
     flex-direction: column;
     justify-content: center;
