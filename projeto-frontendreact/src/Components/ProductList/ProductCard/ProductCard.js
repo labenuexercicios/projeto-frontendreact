@@ -1,31 +1,15 @@
-import { ProductCardStyle, ContainerCard, Image, Button, Paragraph } from "./ProductCardStyle"
+import { useState } from "react"
+import { ContainerCard, Image, Button, Paragraph } from "./ProductCardStyle"
 
 
 export default function ProductCard(props) {
-    return(
-        <ProductCardStyle>
 
+    return (
         <ContainerCard>
-            <Image src={props.product1.imageUrl} alt="produto1"/>
-            <Paragraph>{props.product1.name}</Paragraph>
-            <Paragraph>R${props.product1.value}</Paragraph>
-            <Button>Adicionar ao Carrinho</Button>
+            <Image src={props.product.imageUrl} alt="product" />
+            <Paragraph>{props.product.name}</Paragraph>
+            <Paragraph>R${props.product.value}</Paragraph>
+            <Button onClick={()=>(props.addItemCart())}>Adicionar ao Carrinho</Button>
         </ContainerCard>
-
-        <ContainerCard>
-            <Image src={props.product2.imageUrl} alt="produto2"/>
-            <Paragraph>{props.product2.name}</Paragraph>
-            <Paragraph>R${props.product2.value}</Paragraph>
-            <Button>Adicionar ao Carrinho</Button>
-        </ContainerCard>
-
-        <ContainerCard>
-            <Image src={props.product3.imageUrl} alt="produto3"/>
-            <Paragraph>{props.product3.name}</Paragraph>
-            <Paragraph>R${props.product3.value}</Paragraph>
-            <Button>Adicionar ao Carrinho</Button>
-        </ContainerCard>
-
-        </ProductCardStyle>
     )
 }

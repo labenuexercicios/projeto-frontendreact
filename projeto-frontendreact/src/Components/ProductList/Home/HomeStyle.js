@@ -12,3 +12,16 @@ export const Ordination = styled.div`
     justify-content: space-between;
     padding-bottom: 1rem;
 `
+
+export const ProductCardStyle = styled.li`
+    display: flex;
+`
+
+export const List = styled.ul`
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-grow: 2;
+
+`
