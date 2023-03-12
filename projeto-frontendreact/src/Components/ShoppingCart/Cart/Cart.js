@@ -1,36 +1,28 @@
 import Items from "../Items/Items"
 import { CartStyle, Amount } from "./CartStyle"
-export default function Cart(props) {
 
+export default function Cart(props) {
 
     const removeItemCart = (index) => {
         const filteredList = props.cart.filter((item, i) => i !== index)
-      
-        const cartValue = filteredList.reduce((acc, item) => acc + item.value * item.quantity, 0)
-      
-        const totalValue = cartValue
-      
+        const totalValue = filteredList.reduce((acc, item) => acc + item.value * item.quantity, 0)
         props.setCart(filteredList);
-        props.setCartValue(cartValue);
-        props.setTotalValue(totalValue);
-      }
-      
-      const removeOneItem = (index) => {
+        props.setAmount(totalValue);
+    }
+
+    const removeOneItem = (index) => {
         const updatedCart = [...props.cart];
         updatedCart[index].quantity--;
         if (updatedCart[index].quantity === 0) {
-          updatedCart.splice(index, 1)
+            updatedCart.splice(index, 1)
         }
-        const cartValue = updatedCart.reduce((acc, item) => acc + item.value * item.quantity, 0)
         const totalValue = updatedCart.reduce((acc, item) => acc + item.value * item.quantity, 0)
         props.setCart(updatedCart);
-        props.setCartValue(cartValue);
-        props.setTotalValue(totalValue);
-      }
+        props.setAmount(totalValue);
+    }
 
     const itemsCart = props.cart.map((item, index) => {
 
-        const itemTotalValue = item.value * item.quantity;
 
         return (
             <Items
@@ -40,16 +32,12 @@ export default function Cart(props) {
                 removeOneItem={() => removeOneItem(index)}
                 item={item}
                 cart={props.cart}
-                setCart={props.setCart}
-                cartValue={props.cartValue}
-                setCartValue={props.setCartValue}
-                totalValue={props.totalValue}
-                setTotalValue={props.setTotalValue} />
+                setCart={props.setCart} />
         )
     })
 
 
-    const totalValue = Number(props.totalValue)
+    const totalValue = Number(props.amount)
 
     return (
         <CartStyle>
