@@ -1,8 +1,9 @@
 # projeto-frontendreact
 
 ## DEPLOY ATUALIZADO !! https://pilares-funcional-sur.surge.sh/
-Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce
 
+
+### TEMAS ABORDADOS
 - JSX
 - Componentes
 - Props
@@ -12,60 +13,110 @@ Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar
 - Renderização condicional
 - localStorage
 
-## Instruções
+# PROJETO PILARES REACT
+<img src="https://i.ibb.co/vQv2WpG/TOTAL1.jpg" alt="TOTAL1" border="0" />
+## FUNCIONALIDADES ADERIDAS 
 
-O Astrodev deixou um testamento e essa foi a herança deixada pra vocês:
+#### FILTROS E ORDENAÇÃO
+- FILTRAR PREÇO (MINIMO E MAXIMO escolha usuario)
+- FILTRAR CATEGORIA (Tipo de roupa Calça, Camiseta e Meias)
+- FILTRAR MODELO (Ingresando texto com nome de modelo)
+- ORDENAR POR PREÇO (Desde de Maior ou Desde Menor preço)
+- MOSTRAR TODOS PRODUTOS (RESET dos FILTROS DE PRODUTOS que mostra novamente catalogo completo)
 
-```
-Estudantes do meu coração,
-Estou querendo montar um e-commerce de itens espaciais e vocês serão responsáveis por essa construção. 
-Pretendo montar diferentes linhas de produtos. 
-
-As possíveis linhas de produto são:
-- Satélites antigos;
-- Roupas espaciais;
-- Camisetas com estampas divertidas relacionadas ao espaço;
-- Viagens espaciais;
-- Meteoritos / aerolitos como pedras preciosas;
-- Brinquedos e produtos infantis temáticos;
-- Naves / Foguetes / Ônibus espaciais;
-
-Escolham uma linha dentre essas, e criem um e-commerce de acordo com a lista de requisitos.
+### CARD PRODUTO
+- Permite BOTÃO AGREGAR ao CARRINHO DE COMPRAS segundo a quantidade de clicks que o cliente faça
+__Nota__ Futuramente podera escolher o tamanho de produto em stock desde o card
 
 
-Att.
-```
+### CARRINHO CLIENTE
+**CARRINHO VISUALIZADO AO APERTAR BOTÃO CARRINHO EM NAVBAR (Funciona como MODAL)**
+- Visualiza produtos agregados desde CARD PRODUTO
+- Permite ADMINISTRAÇÃO de PRODUTOS ADICIONADOS
+    a. AUMENTAR ou DIMINUIR item individual
+    b. VISUALIZAR PREÇO TOTAL ITEM (unidades * valor )
+    c. DELETAR ITEM ao chegar a 1 produto se deleta o item em sua totalidade
+    d. PREÇO TOTAL CARRINHO inclue o preço total de todos os produtos agregados 
+    c. Visualizacao de CARRINHO VAZIO com 0 produtos e VALOR 00,00 exibindo mensagem de Carrinho VAZIO 
+----
 
-# Requisitos
+### FUNCIONALIDADES EXTRAS EM CONSTRUÇÃO
 
-O projeto consistirá em 3 grandes partes:
+Carteira Cliente 
+- Digital Wallet
+- Crediario Cliente (Valida CEP por API e Segundo salario declarado inicialmente retorna bonus ou possibilidade de Parcelamento ou Desconto para fidelizar cliente)
 
-1. Home
-    - Mostrando todos os produtos
-    - Deve haver alguma forma de ordenar os produtos por ordem crescente ou decrescente de preço (pode ser na home em si ou junto dos filtros)
-    - Produtos:
-        - Devem ter um botão que permita adicioná-los ao carrinho
-        - Devem exibir o nome, preço e imagem em um card
-2. Carrinho
-    - Mostrar todos os produtos e quantidades adicionadas
-    - Capacidade de remover itens do carrinho
-    - Mostrar o valor total do carrinho
-3. Filtro
-    - Por valor mínimo e máximo
-    - Por nome do produto
 
-Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma lista contendo todos):
+Info Tecnica
+## Available Scripts
 
-```jsx
-{
-	id: 1,
-	name: "Foguete da Missão Apollo 11",
-	value: 10000.0,
-	imageUrl: "https://picsum.photos/200/200",
-}
-```
+In the project directory, you can run:
 
-### Lista de Requisitos
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Lista de Requisitos Completados
 - Home (Lista de Produtos)
     - [x]  O usuário deve ser capaz de visualizar uma lista de produtos
     - [x]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
@@ -86,35 +137,4 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
     
  ### 
 
-O layout da página é escolha de vocês! O exemplo abaixo é só uma implementação bemmm simples das funcionalidades, não se atenham a ele.
-
-http://fluttering-coast.surge.sh/
- 
-
-https://user-images.githubusercontent.com/11279432/197185533-14582ca3-9eb0-4a5a-b57c-b94913ff2dd6.mp4
-
-
-
-    
-  ### Conseguiu terminar? Aqui temos alguns **desafios**
-  1. Salvar e Recuperar conteúdo do carrinho usando o `LocalStorage`;
-  2. Dediquem um tempo para melhorar o layout e a usabilidade do seu site! Se baseiem em outros e-commerces que vocês gostam para chegar em um resultado   mais próximo do padrão de design visto no mercado;
-  3. Se TODO O RESTO DO SITE  e os dois desafios anteriores estiverem funcionando, pensem: qual outra funcionalidade está faltando? Decidam o que vocês concordam que poderia ser uma boa adição à loja virtual (pode ser qualquer funcionalidade, desde que vocês consigam implementá-la). Todas as funcionalidades extras implementadas devem ser listadas e explicadas no readme do projeto para que possam ser avaliadas.
-  
-  ## Entrega
-  
-- Faça o fork desse repositório e realize o clone da sua cópia `seu-nome-de-usuario/projeto-frontendreact`.
-   <details>
-   <summary>Quer uma dica?</summary>
-   <img src="https://firebasestorage.googleapis.com/v0/b/assets-conteudo.appspot.com/o/gerais%2Ffork.png?alt=media&token=7030e997-246a-41fe-a75f-2a2ced61e54d" alt="Como adicionar o projeto no repositório"/>
-   </details>
-- Crie os arquivos do projeto dentro deste repo;
-- Execute o fluxo de entrega do git. **Lembre-se de abrir os PRs para seu próprio repositório.**
-- Para isso, você precisará fazer o projeto utilizando **branches**. Evite fazer as alterações direto na branch ```main```
-    <details>
-       <summary>Dúvidas sobre o Git & Github?</summary>
-       <p>Adiciomos um vídeo explicando o <strong>processo de entrega</strong> [do fork ao pull request] no Material Assincrono da <a href="https://classroom.google.com/w/NTM0NjA2NDg3MjIx/tc/NTM2NDg5NTQyODg4">A005 - Git e Github</a>. Esse vídeo também exemplifica situações que podem acontecer durante o fluxo de utilização do Git.</p>
-    </details>
-- Entregue o **link do repo** no [Formulário de entrega](https://forms.gle/S9XChPZravP3WdxL6) 
-- Utilize o **surge** para fazer o deploy do seu projeto.
 
