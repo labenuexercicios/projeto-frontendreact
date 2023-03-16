@@ -6,7 +6,7 @@ export const CardContainer = styled.main`
     gap: 2vw;
 `
 
-export const Photo = styled.div`
+export const Photo = styled.img`
     width: 17vw;
     height: 50vh;
     border: 1px solid black;

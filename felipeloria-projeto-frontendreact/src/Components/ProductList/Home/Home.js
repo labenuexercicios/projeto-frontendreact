@@ -1,10 +1,11 @@
 import ProductCard from "../ProductCard/ProductCard"
 import { HomeContainer, Produtos, Ordenação, Title, Cards } from "./HomeStyled"
 
-export function Home () {
+export function Home ({productList}) {
+
     return (
         <HomeContainer>
-            <Title>Quantidade de produtos</Title>
+            <Title>Quantidade de produtos: {productList.length}</Title>
             <Produtos>
                 <Ordenação>
                     <p>Ordenação</p>
@@ -12,9 +13,14 @@ export function Home () {
                 </Ordenação>
             </Produtos>
             <Cards>
-                <ProductCard></ProductCard>
-                <ProductCard></ProductCard>
-                <ProductCard></ProductCard>
+                {productList.map((productList)=>{
+                    return (
+                        <ProductCard
+                            key={productList.id}
+                            productList={productList}
+                        ></ProductCard>
+                    )
+                })}
             </Cards>
         </HomeContainer>
     )

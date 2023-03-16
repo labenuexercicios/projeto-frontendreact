@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "name": "Item 1",
+      "value": 10000.0,
+      "imageUrl": "https://imgs.ponto.com.br/1546859159/1xg.jpg?imwidth=500"
+    },
+    {
+      "id": 2,
+      "name": "Item 2",
+      "value": 5000.0,
+      "imageUrl": "https://rlv.zcache.com.br/sistema_solar_camisas_espaciais_exteriores_acampam-r54cb2cdac81d4797a53aa477bcda9bcf_k2gm8_307.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Item 3",
+      "value": 500.0,
+      "imageUrl": "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_unissex_nasa_agencia_governamental_exploracao_espacial_espaco_preta_cd_106127_1_ffa24179546f02375d726b72d392d2a4.jpg"
+    }]
