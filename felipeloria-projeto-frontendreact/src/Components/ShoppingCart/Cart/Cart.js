@@ -1,11 +1,12 @@
 import Items from "../Items/Items"
+import { CartContainer } from "./CartStyle"
 
 export function Cart () {
     return (
-        <div>
-            <p>Cart</p>
+        <CartContainer>
+            <h1>Cart</h1>
             <Items></Items>
-        </div>
+        </CartContainer>
     )
 }
 

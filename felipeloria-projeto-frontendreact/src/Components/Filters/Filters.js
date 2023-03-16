@@ -7,15 +7,15 @@ function Filters () {
             <Form>
                 <label>
                     Valor Mínimo:
-                    <Input> </Input>
+                    <Input />
                 </label>
                 <label>
                     Valor Máximo:
-                    <Input> </Input>
+                    <Input />
                 </label>
                 <label>
                     Busca por nome:
-                    <Input></Input>
+                    <Input />
                 </label>
             </Form>
         </ContainerFilter>

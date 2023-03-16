@@ -6,8 +6,10 @@ export const ContainerFilter = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 64px;
+    width: 20vw;
+    border: 1px solid black;
 `
 
 export const Form = styled.div`
@@ -17,6 +19,6 @@ export const Form = styled.div`
 `
 
 export const Input = styled.input`
-    width: 100%;
+    width: 10vw;
     padding: 8px;
 `

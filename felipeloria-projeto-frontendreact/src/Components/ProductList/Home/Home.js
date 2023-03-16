@@ -1,17 +1,21 @@
 import ProductCard from "../ProductCard/ProductCard"
-import { HomeContainer, Produtos, Ordenação } from "./HomeStyled"
+import { HomeContainer, Produtos, Ordenação, Title, Cards } from "./HomeStyled"
 
 export function Home () {
     return (
         <HomeContainer>
+            <Title>Quantidade de produtos</Title>
             <Produtos>
-                <p>Quantidade de produtos</p>
                 <Ordenação>
                     <p>Ordenação</p>
                     <button>Crescente</button>
                 </Ordenação>
             </Produtos>
-            <ProductCard></ProductCard>
+            <Cards>
+                <ProductCard></ProductCard>
+                <ProductCard></ProductCard>
+                <ProductCard></ProductCard>
+            </Cards>
         </HomeContainer>
     )
 }

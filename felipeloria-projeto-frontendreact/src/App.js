@@ -11,7 +11,6 @@ function App() {
       <GlobalStyle/>
 {/*       <Header></Header> */}
       <Container>
-        <h3>Mid</h3>
         <Filters></Filters>
         <Home></Home>
         <Cart></Cart>
