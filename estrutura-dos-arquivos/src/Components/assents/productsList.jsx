@@ -18,8 +18,8 @@ const productList = [{
     value:500.0,
     imageUrl: "https://picsum.photos/300/335?a=3"
 }
+
 ];
 
 export default productList
 
-//console.log(productList)

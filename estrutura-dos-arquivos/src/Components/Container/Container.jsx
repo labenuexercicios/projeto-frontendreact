@@ -1,10 +1,12 @@
-import { Container, Main } from "./containerStyle"
+import { Main } from "./containerStyle"
+const Container = () => {
+    
+    
+    return (
+        <Main>
+            
+        </Main>
 
-const Principal = ()=>{
-    return(
-        <Container>     
-        </Container>
     )
 }
-
-export default Main
+export default Container 

@@ -1,36 +1,44 @@
-import { Container, Title } from "./filtersStyle"
 
+import { Form } from "./FiltersStyle"
 
-const Filters = (props) => { 
-    console.log(props);
+const Filters = (props) => {
+    
+    
     return (
-        <div>
-            <Container>
-                <Title>Filters</Title>
-                <form>
-                    <aside>
-                        <label htmlFor="valor minimo">
-                            Valor minimo:
-                        </label>
-                    </aside>
-                    <input type="text" name="name" id="valor minimo" value={props.minFilter} onChange={props.onChangeMinFilter} />
-                    <aside>
-                        <label htmlFor="valor maximo">
-                            Valor máximo:
-                        </label>                        
-                    </aside>
-                    <input type="text" name="name" id="valor maximo"  value={props.maxFilter} onChange={props.onChangeMaxFilter} />
-                    <aside>
-                        <label htmlFor="busca por nome">
-                            Busca por nome:
-                        </label>
-                    </aside>
-                    <input type="text" name="name" id="busca por nome"  value={props.searchFilter} onChange={props.onChangeSearchFilter} />
-
-                </form>
-            </Container>
-
-        </div>
+        
+        <Form>
+            <h2>Filters</h2>
+           <label htmlFor="Valor Minino"> Valor Minimo:
+            <br/>
+            <input 
+            name="valor" 
+            id="Valor Minino" 
+            value={props.minFilter}
+            onChange={(e)=>props.setMinFilter(e.target.value)}
+            ></input>
+           </label>
+           <br/>
+           <label htmlFor="Valor maximo"> Valor Máximo:
+            <br/>
+            <input 
+            name="valor" 
+            id="Valor maximo"
+            value={props.maxFilter}
+            onChange={(e)=>props.setMaxFilter(e.target.value)}
+            ></input>
+           </label>
+           <br/>
+           <label htmlFor="Busca por nome"> Busca por nome:
+            <br/>
+            <input 
+            name="nome" 
+            id="Busca por nome"
+            value={props.searchFilter}
+            onChange={(e)=>props.setSearchFilter(e.target.value)}
+            
+            ></input>
+           </label>
+        </Form>
 
     )
 }

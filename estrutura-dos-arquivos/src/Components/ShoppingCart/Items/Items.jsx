@@ -1,17 +1,16 @@
 
-function Items (props){
-    console.log(props);
 
-
-    return(
+const Items = (props) => {
+    
+    
+    return (
         <div>
-            <p>{props.cart}</p>
-            <button>Remover</button>
-            <p>{props.amount}</p>
-            <button>Remover</button>
-            
+           <p>{props.name}</p>
+           <button>remover</button>
+           <p>Valor Total</p>
+           
         </div>
+
     )
 }
-
 export default Items

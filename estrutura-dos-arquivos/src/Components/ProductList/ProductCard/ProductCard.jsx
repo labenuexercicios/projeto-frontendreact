@@ -1,41 +1,24 @@
+import { ContainerCards } from "./ProductStyle"
+import { Img, Button } from "./ProductStyle"
 
-import { Main, Section1, Section2, Section3, Img1, Img2, Img3,Button} from "./productStyle"
 
-function ProductCard(props) {
-    console.log(props)
+const ProductCard = (props) => {
+
+
     return (
-        <Main>
-            <Section1>
-                <Img1 src={props.productList[0].imageUrl}/>
-                <p>{props.amount}</p>
-                <p>{props.cart}</p>
-                <Button>
-                    <button>Adiconar ao carrinho</button>
-                </Button>
-            </Section1>
+        <ContainerCards>
 
-            <Section2>
-                <Img2 src={props.productList[1].imageUrl}/>
-                <p>{props.amount}</p>
-                <p>{props.cart}</p>
-                <Button>
-                    <button>Adiconar ao carrinho</button>
-                </Button>
-                
-            </Section2>
+            <div>
+                <Img src={props.image} />
+                <p>{props.name}</p>
+                <p>{props.value}</p>
+                <Button >Adiconar ao carrinho</Button>
+            </div>
 
-            <Section3>
-                <Img3 src={props.productList[2].imageUrl}/>
-                <p>{props.amount}</p>
-                <p>{props.cart}</p>
-                <Button>
-                    <button>Adiconar ao carrinho</button>
-                </Button>
-            </Section3>
 
-        </Main>
+
+        </ContainerCards>
+
     )
 }
-
 export default ProductCard
-

@@ -1,42 +1,63 @@
-import { useState } from "react"
+import { Main} from "./Components/Container/containerStyle"
 import Filters from "./Components/Filters/Filters"
-import { Container } from "./Components/Container/containerStyle"
 import Home from "./Components/ProductList/Home/Home"
 import Cart from "./Components/ShoppingCart/Cart/Cart"
-import { GlobalStyle } from "./globalStyle"
+import { GlobalStyle } from "./GlobalStyle"
+import productList from "./Components/assents/productsList"
+import { useState } from "react"
+
 
 
 function App() {
-
-  const [minFilter, setMinFilter] = useState('')
-  const [maxFilter, setMaxFilter] = useState('')
+  const [minFilter, setMinFilter] = useState(0)
+  const [maxFilter, setMaxFilter] = useState(0)
+  const [cart, setCart] = useState([])
+  const [amount, setAmount] = useState([]) 
   const [searchFilter, setSearchFilter] = useState('')
- 
-  const onChangeMinFilter = (e) => {
-    setMinFilter(e.target.value)
-  }
-  const onChangeMaxFilter = (e) => {
-    setMaxFilter(e.target.value)
-  }
-  const onChangeSearchFilter = (e) => {
-    setSearchFilter(e.target.value)
-  }
-  //console.log(minFilter, maxFilter, searchFilter)
+  const [product] = useState(productList)
   
+
+ /*  function adicionarItem (index){
+    const novoProduto ={
+      name: props.product[index].name,
+      value: props.product[index].value,
+      amount:1
+      
+      
+    }
+    props.setCart([...props.cart, novoProduto])
+  }
+  */
+  
+
   return (
-    <Container>
-      <GlobalStyle />
+    <Main>
+      
+      <GlobalStyle/>
       <Filters
-        minFilter={minFilter}
-        onChangeMinFilter={onChangeMinFilter}
-        maxFilter={maxFilter}
-        onChangeMaxFilter={onChangeMaxFilter}
-        searchFilter={searchFilter}
-        onChangeSearchFilter={onChangeSearchFilter}
+      minFilter={minFilter}
+      setMinFilter={setMinFilter}
+      maxFilter={maxFilter}
+      setMaxFilter={setMaxFilter}
+      searchFilter={searchFilter}
+      setSearchFilter={setSearchFilter}
       />
-      <Home/>
-      <Cart />
-    </Container>
+      <Home 
+      product={product}
+      amount={amount}
+      setAmount={setAmount}
+      cart={cart}
+      setCart={setCart}
+      
+      />
+      <Cart 
+      amount={amount}
+      setAmount={setAmount}
+      cart={cart}
+      setCart={setCart}
+      product={product}
+      />
+    </Main>
   )
 }
 

@@ -1,13 +1,12 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const Carts = styled.div`
-    height: auto;
-    width: 15vw;
+export const ContainerCarts = styled.div`
+    background-color: aquamarine;
+    flex-grow:1;
     border: 1px solid black;
-    
 `
-
-export const Title = styled.h2`
-    color: black;
+export const Carrinho = styled.h3`
+    background-color: red;
+    
     
 `
