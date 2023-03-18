@@ -1,4 +1,3 @@
-import { useState } from "react"
 import ProductCard from "../ProductCard/ProductCard"
 import { HomeStyle, Ordination, ProductCardStyle, List } from "./HomeStyle"
 
@@ -50,23 +49,6 @@ export default function Home(props) {
             <ProductCardStyle>
                 <List>
                     {props.filteredList
-                   /*  .filter((product) => {
-                        if(product.value >= props.minFilter){
-                          return product
-                        }
-                      })
-                      .filter((product) => {
-                        if(product.value <= props.maxFilter){
-                          return product
-                        }
-                      })
-                    .filter((product) => {
-                        if(props.searchFilter){
-                          return product.name.toLowerCase().includes(props.searchFilter.toLowerCase())
-                        }else{
-                          return props.productsList
-                        }  
-                      }) */
                     .sort((a, b) => {
                         if (props.order === "incrising") {
                             return a.name.localeCompare(b.name)

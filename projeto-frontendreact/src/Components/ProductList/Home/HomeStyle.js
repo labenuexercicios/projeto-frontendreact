@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const HomeStyle = styled.div`
     padding: 1rem;
     flex-grow: 2;

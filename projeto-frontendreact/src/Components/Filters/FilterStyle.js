@@ -11,8 +11,7 @@ export const FilterStyle = styled.aside`
     height: 50vh;
     flex-direction: column;
     justify-content: start;
-    align-items: right;
+    align-items: center;
     padding: 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.87) ;
     gap: .5rem;
 `

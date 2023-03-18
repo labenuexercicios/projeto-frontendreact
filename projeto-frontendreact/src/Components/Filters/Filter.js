@@ -19,11 +19,11 @@ export default function Filter(props) {
                 value={props.maxFilter}
                 onChange={(e) => props.setMaxFilter(e.target.value)}
             />
-            <p>Busca por nome:</p>
+            {/* <p>Busca por nome:</p>
             <Input
                 value={props.searchFilter}
                 onChange={(e) => props.setSearchFilter(e.target.value)}
-            />
+            /> */}
         </FilterStyle>
     )
 
