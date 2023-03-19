@@ -21,8 +21,25 @@ export const PHeader = styled.p`
 
 color: rgb(161,109,177);
 
-margin-right: 10vw;
+font-size: 0.8rem;
 `
 
+export const HeaderMenu = styled.aside`
 
+width: 40vh;
+
+`
+
+export const MenuEntrar = styled.h1`
+font-family: "Poppins";
+color: rgb(161,109,177);
+margin-left: 0vw;
+font-size: 20px;
+width: 10vw;
+padding-left: 20px;
+margin-bottom: 10px;
+
+border: solid 1px rgb(161,109,177);;
+
+`
 

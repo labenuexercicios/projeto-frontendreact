@@ -1,5 +1,5 @@
 import React from "react"
-import { HeaderStyle, ImageHeader, PHeader } from "./styled"
+import { HeaderStyle, ImageHeader, PHeader,HeaderMenu, MenuEntrar } from "./styled"
 import logo from "../Image/Logo.png"
 
 
@@ -12,8 +12,12 @@ return(
         <HeaderStyle>
             <ImageHeader src={logo}/>
 
+            
+            <HeaderMenu>
+            <MenuEntrar>ENTRAR</MenuEntrar>
+            <PHeader>Não tem conta?</PHeader>
             <PHeader>Clique aqui para se cadastrar!</PHeader>
-         
+            </HeaderMenu>
         
         </HeaderStyle>
     </div>

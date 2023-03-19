@@ -13,7 +13,7 @@ export const Products = [
   {
     id: 1,
     name: "Nave Espacial Fun",
-    value: 40,
+    value: 40.00,
     imageUrl: <ImageProducts src={Nave} />,
     type: "SellItem",
     quantity: 1
@@ -23,7 +23,7 @@ export const Products = [
   {
     id: 2,
     name: "Arma Espacial DM",
-    value: 50,
+    value: 50.00,
     imageUrl: <ImageProducts src={Arma} />,
     type: "SellItem",
     quantity: 1

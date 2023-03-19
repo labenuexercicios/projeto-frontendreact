@@ -16,7 +16,7 @@ background-color: rgb(21,31,66);
 
 export const LabelFilter = styled.label`
 margin-left: 1vw;
-margin-top: 10px;
+margin-top: 4vh;
 margin-bottom: 10px;
 color:gainsboro;
 `
@@ -41,3 +41,7 @@ border-radius: 5px;
 background-color: gainsboro;
 `
 
+export const AstroImage = styled.img`
+width: 40vh;
+margin-left: 2vw;
+`

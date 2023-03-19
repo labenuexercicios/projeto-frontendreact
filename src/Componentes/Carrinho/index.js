@@ -2,7 +2,7 @@ import { CartMenu, H1Cart, H1Total } from "./styled"
 import { Itens } from "./Itens"
 
 
-export function Cart({AllProducts,setAmount, cart, amount, onChangeAmount, onChangeCart, setCart}) {
+export function Cart({AllProducts, cart, amount, onChangeCart, setCart}) {
    
     amount = cart.reduce ((total, i)=>{
         return total + (i.value * i.quantity)
@@ -23,9 +23,8 @@ export function Cart({AllProducts,setAmount, cart, amount, onChangeAmount, onCha
                     {cart    
                     .map((Search) => {
                     return <Itens
-                    amount={amount}
-                    onChangeAmount = {onChangeAmount}
-                    setAmount = {setAmount}
+                    name="item"
+                    htmlFor="item"
                     cart = {cart}
                     Products = {Search}
                     setCart = {setCart}
@@ -40,7 +39,7 @@ export function Cart({AllProducts,setAmount, cart, amount, onChangeAmount, onCha
 
 
              </CartMenu>
-                  <H1Total><b>Total R$ : {amount}</b></H1Total>  
+                  <H1Total><b>Total R$ : {amount},00</b></H1Total>  
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Filtros } from "./Componentes/Filtros"
 import { Home } from "./Componentes/Home"
 import { Cart } from "./Componentes/Carrinho"
@@ -6,6 +6,7 @@ import { Main} from "./styled"
 import { Header } from "./Componentes/Header"
 import { GlobalStyle } from "./GlobalStyle"
 import { Products } from "./assents/productsList"
+import { Footer } from "./Componentes/Footer"
 
 
 
@@ -49,8 +50,28 @@ export default function App() {
     setAmount(event.target.value)
   }
 
- 
 
+
+
+
+  
+
+  const getItem = ()=>{
+  const localItem = localStorage.getItem("cart item")
+  
+  if(localItem){
+
+    const get = JSON.parse(localItem)
+    setCart(get)}
+  
+
+  }
+
+
+  useEffect(()=>{
+    
+     getItem() 
+  }, [])
 
   return (
 
@@ -96,6 +117,8 @@ export default function App() {
       AllProducts = {Products}
       />
       </Main>
+
+      <Footer/>
       
     </div>
   )

@@ -12,26 +12,41 @@ export function Produtos({setCart, cart, Products}) {
         if(!item){
             copyCart.push(Products)
             
+            setCart(copyCart)
+
+            
         }
+
+        
         else{
           
           item.quantity = item.quantity + 1;
+
+          setCart(copyCart)
+        
         }
          
-        setCart(copyCart)
         
 
+        const teste = JSON.stringify(cart)
+        localStorage.setItem("cart item", teste)
+
      };
+
+
+     
+    
+
 
          
     return (
         <div>
             
-            <ProductCard>
+            <ProductCard name="item" id="item" htmlFor="item">
             <ImageProducts>{Products.imageUrl}</ImageProducts>
             <ImageP> {Products.name}</ImageP>
-                <ImageP><b>Valor:</b> R$ {Products.value}</ImageP>
-                <ButtonProducts onClick={addItem}    >Adicionar</ButtonProducts>
+                <ImageP><b>Valor:</b> R$ {Products.value},00</ImageP>
+                <ButtonProducts onClick={addItem}     >Adicionar</ButtonProducts>
             </ProductCard>
             
             

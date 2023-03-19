@@ -1,8 +1,9 @@
 import React from "react"
-import { LabelFilter, Form, InputFilter, H1Filter, ButtonFilter } from "./styled"
+import { LabelFilter, Form, InputFilter, H1Filter, AstroImage } from "./styled"
+import Astro from "../Image/Astro2.png"
 
 
-export function Filtros({minFilter, maxFilter, searchFilter, onChangeSearchFilter, onChangeMinFilter,onChangeMaxFilter, AllProducts, setSearchFilter}) {
+export function Filtros({minFilter, maxFilter, searchFilter, onChangeSearchFilter, onChangeMinFilter,onChangeMaxFilter}) {
 
 
     console.log(searchFilter)
@@ -11,11 +12,10 @@ export function Filtros({minFilter, maxFilter, searchFilter, onChangeSearchFilte
 
     console.log(minFilter)
 
+
     
 
-
-
-
+    
    
     return (
        
@@ -32,13 +32,10 @@ export function Filtros({minFilter, maxFilter, searchFilter, onChangeSearchFilte
 
             <LabelFilter>Buscar por nome:</LabelFilter>
             <InputFilter onChange={onChangeSearchFilter} value={searchFilter}></InputFilter>
-
-            <ButtonFilter  >Buscar</ButtonFilter>
-            
             </Form>
 
             
-               
+          <AstroImage src={Astro}/>
         </div>
         
         
