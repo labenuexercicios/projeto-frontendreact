@@ -2,9 +2,11 @@ import { HomeMain, Order, OrderSelect, QuantidadeDeItens, Div } from "./styled"
 import { Produtos } from "./Produtos"
 
 
-export function Home({ onChangeOrder, order, AllProducts }) {
+export function Home({ onChangeOrder, order, AllProducts, cart, setCart, minFilter, maxFilter, searchFilter}) {
 
 
+   
+    
 
     return (
 
@@ -23,8 +25,26 @@ export function Home({ onChangeOrder, order, AllProducts }) {
                     </OrderSelect></Order>
 
             </Div>
+           
+
+   
             <HomeMain>
-                {AllProducts.sort((a, b) => {
+                {AllProducts.filter((nomeQualquer)=>{return searchFilter? nomeQualquer.name.toLowerCase().includes(searchFilter.toLowerCase()) :nomeQualquer})
+
+                .filter((valueFilter)=>{
+
+                    if(minFilter <= valueFilter.value && maxFilter ===""){
+                        return valueFilter
+                    }else
+                    if(minFilter <= valueFilter.value && maxFilter >= valueFilter.value){
+
+                        return valueFilter
+                    }else if (minFilter === "" && maxFilter === ""){
+                        return valueFilter
+
+                    }}            
+                )                                              
+                .sort((a, b) => {
                     if (order === "crescente") {
                         return a.value - b.value
                     }
@@ -32,12 +52,15 @@ export function Home({ onChangeOrder, order, AllProducts }) {
                         return b.value - a.value
                     }
                 }).map((Search) => {
-                    return <Produtos Products={Search}
+                    return <Produtos
+                    setCart = {setCart}
+                    cart={cart}
+                    AllProducts={AllProducts}
+                    Products={Search}
                     />
                 }
                 )}
             </HomeMain>
-
 
 
 

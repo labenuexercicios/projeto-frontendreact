@@ -16,9 +16,11 @@ export default function App() {
   const [minFilter, setMinFilter] = useState("")
   const [maxFilter, setMaxFilter] = useState("")
   const [searchFilter, setSearchFilter] = useState("")
-  const [cart, setCart] = useState("")
+  const [cart, setCart] = useState([])
   const [amount, setAmount] = useState("")
   const [order, setOrder] =useState("")
+
+
 
 
 
@@ -28,8 +30,7 @@ export default function App() {
   }
 
   const onChangeMinFilter=(event)=>{
-  
-    setMinFilter(event.target.value)
+  setMinFilter(event.target.value)
   }
 
   const onChangeSearchFilter = (event)=>{
@@ -48,8 +49,7 @@ export default function App() {
     setAmount(event.target.value)
   }
 
-
-
+ 
 
 
   return (
@@ -67,17 +67,31 @@ export default function App() {
       searchFilter = {searchFilter}
       onChangeSearchFilter = {onChangeSearchFilter}
       AllProducts = {Products}
+      setSearchFilter = {setSearchFilter}
+      
       />
       
       <Home   
       order = {order}
       onChangeOrder = {onChangeOrder}
+      cart = {cart}
+      setCart = {setCart}
+      searchFilter = {searchFilter}
+      maxFilter = {maxFilter}
+      minFilter = {minFilter}
       AllProducts = {Products}
-      />
+      > 
+      
+      
+      </Home>
+
+
       <Cart
       cart = {cart}
       onChangeCart = {onChangeCart}
       amount = {amount}
+      setAmount = {setAmount}
+      setCart = {setCart}
       onChangeAmount = {onChangeAmount}
       AllProducts = {Products}
       />

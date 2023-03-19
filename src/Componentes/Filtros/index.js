@@ -2,11 +2,21 @@ import React from "react"
 import { LabelFilter, Form, InputFilter, H1Filter, ButtonFilter } from "./styled"
 
 
-export function Filtros({minFilter, maxFilter, searchFilter, onChangeSearchFilter, onChangeMinFilter,onChangeMaxFilter, AllProducts}) {
+export function Filtros({minFilter, maxFilter, searchFilter, onChangeSearchFilter, onChangeMinFilter,onChangeMaxFilter, AllProducts, setSearchFilter}) {
 
 
     console.log(searchFilter)
 
+    console.log(maxFilter)
+
+    console.log(minFilter)
+
+    
+
+
+
+
+   
     return (
        
         <div>
@@ -23,7 +33,7 @@ export function Filtros({minFilter, maxFilter, searchFilter, onChangeSearchFilte
             <LabelFilter>Buscar por nome:</LabelFilter>
             <InputFilter onChange={onChangeSearchFilter} value={searchFilter}></InputFilter>
 
-            <ButtonFilter >Buscar</ButtonFilter>
+            <ButtonFilter  >Buscar</ButtonFilter>
             
             </Form>
 
@@ -31,6 +41,9 @@ export function Filtros({minFilter, maxFilter, searchFilter, onChangeSearchFilte
                
         </div>
         
+        
                 )
+
+              
 
 }

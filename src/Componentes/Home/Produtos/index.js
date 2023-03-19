@@ -1,18 +1,40 @@
 import { ProductCard, ButtonProducts, ImageProducts, ImageP } from "./styled"
 
 
+export function Produtos({setCart, cart, Products}) {
 
-export function Produtos(props) {
+    
+    const addItem = () => {
+        const copyCart  = [...cart]
 
+        const item = copyCart.find((product)=>product.id === Products.id)
+        
+        if(!item){
+            copyCart.push(Products)
+            
+        }
+        else{
+          
+          item.quantity = item.quantity + 1;
+        }
+         
+        setCart(copyCart)
+        
+
+     };
+
+         
     return (
         <div>
             
             <ProductCard>
-            <ImageProducts>{props.Products.imageUrl}</ImageProducts>
-            <ImageP> {props.Products.name}</ImageP>
-                <ImageP><b>Valor:</b> R$ {props.Products.value}</ImageP>
-                <ButtonProducts>Adicionar</ButtonProducts>
+            <ImageProducts>{Products.imageUrl}</ImageProducts>
+            <ImageP> {Products.name}</ImageP>
+                <ImageP><b>Valor:</b> R$ {Products.value}</ImageP>
+                <ButtonProducts onClick={addItem}    >Adicionar</ButtonProducts>
             </ProductCard>
+            
+            
         </div>
     )
 }
