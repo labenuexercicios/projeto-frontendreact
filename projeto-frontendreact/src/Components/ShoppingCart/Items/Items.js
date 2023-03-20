@@ -7,8 +7,8 @@ export default function Items(props) {
     return (
         <CartList>
             <ItemsCart >
-                <p>{props.item.quantity}x</p>
                 <p>{props.item.name}</p>
+                <p>{props.item.quantity}x</p>
                 <p>Valor Unitário: {props.item.value}</p>
                 <p>Valor Total: {itemTotalValue}</p>
                 <Button onClick={props.removeOneItem}>Remover</Button>

@@ -18,7 +18,7 @@ export default function Slider () {
                 count = 1
             }
         
-            document.getElementById("radio"+count).checked = true
+            const radio = document.getElementById("radio"+count).checked = true
         }
   
     }, [])

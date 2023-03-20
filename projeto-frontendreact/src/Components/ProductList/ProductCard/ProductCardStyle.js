@@ -4,39 +4,45 @@ export const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 20vw;
-  height: 50vh;
-  padding: 35px;
-  border-radius: 20px;
+  width: 15rem;
+  height: 25rem;
+  min-height: 30vh;
+  padding: 1rem;
+  margin-left: -1rem;
+  border-radius: 10px;
   border: 2px solid #DCDCDC;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(5px);
   :hover{
   border: 1px solid rgba(255, 255, 255, .25);
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px);
+  }
+
+  :hover Image{
+    transform: scale(1.5);
   }
   
 
 `
 
 export const Image = styled.img`
-    border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  transition: transform .25s;
+  z-index: -1;
 `
 
 export const Button = styled.button`
-  width: 160px;
-  font-size: 16px;
-  font-weight: 600;
+  width: 7rem;
+  height: 2rem;
   color: #fff;
   cursor: pointer;
-  margin: 20px;
-  height: 55px;
   text-align:center;
   align-self: center;
   border: none;
   background-size: 300% 100%;
-  border-radius: 50px;
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -66,6 +72,6 @@ export const Button = styled.button`
 export const Paragraph = styled.p`
     align-self: center;
     color: #10262d;
-    padding-top: 0.5rem;
+
     
 `
