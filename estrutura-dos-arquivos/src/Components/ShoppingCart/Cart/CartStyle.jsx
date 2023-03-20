@@ -4,6 +4,7 @@ export const ContainerCarts = styled.div`
     background-color: aquamarine;
     flex-grow:1;
     border: 1px solid black;
+    width: 22vw;
 `
 export const Carrinho = styled.h3`
     background-color: red;

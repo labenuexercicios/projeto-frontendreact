@@ -7,6 +7,7 @@ export const Main = styled.main`
     background-color: pink;
     border: 1px solid black;
     
+    
    
    
 `   

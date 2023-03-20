@@ -8,12 +8,12 @@ const ProductCard = (props) => {
     return (
         <ContainerCards>
 
-            <div>
+            <section>
                 <Img src={props.image} />
                 <p>{props.name}</p>
                 <p>{props.value}</p>
-                <Button >Adiconar ao carrinho</Button>
-            </div>
+                <Button>Adiconar ao carrinho</Button>
+            </section>
 
 
 

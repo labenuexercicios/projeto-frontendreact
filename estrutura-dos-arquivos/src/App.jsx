@@ -15,6 +15,8 @@ function App() {
   const [amount, setAmount] = useState([]) 
   const [searchFilter, setSearchFilter] = useState('')
   const [product] = useState(productList)
+  const [ordination, setOrdination] = useState("")
+  
   
 
  /*  function adicionarItem (index){
@@ -48,6 +50,11 @@ function App() {
       setAmount={setAmount}
       cart={cart}
       setCart={setCart}
+      searchFilter={searchFilter}
+      setSearchFilter={setSearchFilter}
+      ordination={ordination}
+      setOrdination={setOrdination}
+      
       
       />
       <Cart 

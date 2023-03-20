@@ -7,13 +7,13 @@ const Cart = (props) => {
     return (
         <ContainerCarts>
             <Carrinho>carrinho</Carrinho>
-            {props.product.map((prod, index)=>{
+            {/* {props.product.map((prod, index)=>{
                 return (<Items
                     key={index}
                     name={prod.name}
 
                 />)
-            }) }
+            }) } */}
           
         </ContainerCarts>
 
