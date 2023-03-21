@@ -57,20 +57,21 @@ export default function App() {
   
 
   const getItem = ()=>{
-  const localItem = localStorage.getItem("cart item")
+  
+ const localItem = localStorage.getItem("cart item")
   
   if(localItem){
 
     const get = JSON.parse(localItem)
-    setCart(get)}
+    setCart(get)
   
-
+  }
+  
   }
 
 
   useEffect(()=>{
-    
-     getItem() 
+  getItem() 
   }, [])
 
   return (

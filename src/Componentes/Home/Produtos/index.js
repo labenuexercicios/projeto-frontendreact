@@ -11,13 +11,10 @@ export function Produtos({setCart, cart, Products}) {
         
         if(!item){
             copyCart.push(Products)
-            
-            setCart(copyCart)
-
-            
+                      
+            setCart(copyCart)          
         }
 
-        
         else{
           
           item.quantity = item.quantity + 1;
@@ -28,9 +25,9 @@ export function Produtos({setCart, cart, Products}) {
          
         
 
-        const teste = JSON.stringify(cart)
-        localStorage.setItem("cart item", teste)
-
+        const stringChange = JSON.stringify(cart)
+        localStorage.setItem("cart item", stringChange)
+ 
      };
 
 

@@ -12,33 +12,28 @@ export function Itens({ cart, setCart, Products }) {
     const removeItem = () => {
 
         const copyCart = [...cart]
+
+
         const item = copyCart.find((product) => product.id === Products.id)
 
         if (item.quantity > 1) {
             item.quantity = item.quantity - 1
+            setCart(copyCart)}
 
-
-
-            setCart(copyCart)
-
-
-        }
+       
 
         else {
             const filterRemove = copyCart.filter((product) => product.id !== Products.id)
-
-            setCart(filterRemove)
-
-
+            
+            setCart(filterRemove)      
+            
         }
+          
 
-
-
-        console.log(copyCart)
-
-
+     
         const teste = JSON.stringify(cart)
-        localStorage.setItem("cart item", teste)
+        localStorage.setItem("cart item", teste) 
+        
     }
 
 
