@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-export const Div = styled.div`
-    width: 15vw;        
-    height: 50vh;
-    margin: 0 2rem 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 0.2rem;
-    color: white;
+export const DivFilter = styled.div`
+    width: 20vw;
+    line-height: 2rem;
+`
+
+export const InputFilter = styled.input`
+    width: 15vw;
+    margin-top: 0;
 `

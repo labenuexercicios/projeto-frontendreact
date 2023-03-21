@@ -1,17 +1,13 @@
-import React from "react";
-import { DivContainer, H1, Img, InputHeader, P, DivUser } from "./headerStyle";
+import { HeaderContainer, InputHeader, P } from "./headerStyle"
 
-export default function Header(){
+
+export default function Header (){
     return(
-        <DivContainer>
-            <H1>LabeStore</H1>
-            <Img/>
-            <InputHeader className="input-header" placeholder="Olá, o que você procura?"></InputHeader>
-
-            <DivUser>
-                <img/>
-                <P>Minha conta</P>
-            </DivUser>
-        </DivContainer>
+        <HeaderContainer>
+            <h1>LabeStore</h1>
+            <InputHeader 
+            placeholder="    O que você procura?"
+            type="text"/>
+        </HeaderContainer>
     )
 }

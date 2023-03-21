@@ -1,11 +1,11 @@
-import React from "react";
-import { DivCart } from "./cartStyle";
 import Items from "../Items/Items";
+import { DivCart } from "./cartStyle";
+
 
 export default function Cart(){
     return(
         <DivCart>
-            <h1>Carrinho</h1>
+            <h2>Carrinho</h2>
             <Items/>
         </DivCart>
     )

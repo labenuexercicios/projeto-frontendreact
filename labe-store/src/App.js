@@ -1,49 +1,36 @@
-import { useState } from "react";
-import { Main, Div} from "./AppStyle";
 import Filters from "./Components/Filters/Filters";
 import Header from "./Components/Header/Header";
 import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
+import { GlobalStyle } from "./GlobalStyle";
 
 
 
-function App() {
+function App() { 
+    return (
+      <div>
+        <GlobalStyle/>
 
-    const [searchFilter, setSearchFilter] = useState("");
-    const [minFilter, setMinFilter] = useState("");
-    const [maxFilter, setMaxFilter] = useState("");
-    
+        <header>
+          <Header/>
+        </header>
 
-  return (
-   <Div>
-      <header>
-        <Header/>
-      </header>
+        <main>
+          <nav>
+            <Filters/>
+          </nav>
 
-      <Main>
-        <nav>
-          <Filters
-          search={searchFilter}
-          setSearch={setSearchFilter}
-          minFilter={minFilter}
-          setMinFilter={setMinFilter}
-          maxFilter={maxFilter}
-          setMaxFilter={setMaxFilter}/>
-        </nav> 
-        <article>
-          <Home/> 
-        </article>   
-         
-        <Cart/>  
-      </Main>
-      
-      
-      
-     
-      
-      
-   </Div>
-  );
+          <article>
+            <Home/>
+          </article>
+
+          <section>
+            <Cart/>
+          </section>
+
+        </main>
+      </div>
+    ) 
 }
 
 export default App;

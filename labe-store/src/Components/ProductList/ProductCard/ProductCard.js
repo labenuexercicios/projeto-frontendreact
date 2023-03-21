@@ -1,16 +1,12 @@
-import React from "react";
-import { DivCard, Button, H4 } from "./productCardStyle"
+import { DivCard, P } from "./productCardStyle"
 
-
-export default function ProductCard(props){
-
-
+export default function ProductList(){
     return(
         <DivCard>
-            {props.product.imageUrl}
-            <H4>{props.product.name}</H4>
-            <H4> R$ {props.product.value.toFixed(2)}</H4>
-            <Button>ADICIONAR</Button>
+            <P>ProductList</P>
+            <p>Nome</p>
+            <p>Valor</p>
+            <button>ADICIONAR</button>
         </DivCard>
     )
 }

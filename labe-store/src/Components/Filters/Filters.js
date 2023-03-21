@@ -1,41 +1,19 @@
-import React from "react";
-import { Div } from "./filtersStyle";
+import { DivFilter, InputFilter } from "./filtersStyle";
 
-export default function Filters ({searchFilter, setSearchFilter, minFilter, setMinFilter, maxFilter, setMaxFilter}){
 
-    const handleSearch = (e) => {
-        setSearchFilter(e.target.value)
-    };
+export default function Filters(){
+    return (
+        <DivFilter>
+            <h2>Pesquisar</h2>
 
-    const handleMinFilter = (e) => {
-        setMinFilter(e.target.value)
-    };
-
-    const handleMaxFilter =(e) => {
-        setMaxFilter(e.target.value)
-    };
-    
-
-    return(
-        <Div>
-            <h1>Filtro</h1>
             <p>Valor mínimo:</p>
-            <input
-            type="number"
-            value={minFilter}
-            onChange={handleMinFilter}/>
+            <InputFilter
+            type="number"/>
 
             <p>Valor máximo:</p>
-            <input
-            type="number"
-            value={maxFilter}
-            onChange={handleMaxFilter}/>
+            <InputFilter
+            type="number"/>
 
-            <p>Busca por nome:</p>
-            <input
-            type="text"
-            value={searchFilter}
-            onChange={handleSearch}/>
-        </Div>
+        </DivFilter>
     )
 }
