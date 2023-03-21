@@ -7,14 +7,21 @@ const ContactUs = (props) => {
       <H1>Fale conosco</H1>
       <Form>
         <StyledLabel>Nome:
-          <Input />
+          <Input 
+          value={props.names}
+          onChange={(e)=>{props.setNames(e.target.value)}}
+          />
         </StyledLabel>
         <StyledLabel>E-mail:
-          <Input type={"email"}/>
+          <Input 
+          value={props.email}
+          onChange={(e)=>{props.setEmail(e.target.value)}}
+          type={"email"}
+          />
         </StyledLabel>
         <b>Mensagem:</b>
         <StyledTextArea></StyledTextArea>        
-        <RegisterButton onClick={() => props.changePage(1)}>Enviar</RegisterButton>
+        <RegisterButton onClick={() => props.changePage(7)}>Enviar</RegisterButton>
       </Form>
     </FormContainer>
   );

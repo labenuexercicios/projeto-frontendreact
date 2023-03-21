@@ -27,6 +27,7 @@ export const Form = styled.div`
 export const Input = styled.input`
   padding: 8px;
   border-radius:8px;
+  color:black;
 `;
 
 export const SendButton = styled.button`

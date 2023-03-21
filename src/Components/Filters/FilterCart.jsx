@@ -3,9 +3,12 @@ import { ContainerFilter, FilterForm, ValuesInput, StyledLabel } from "./styles"
 import Money from "../img -project/money-bag.gif"
 import Search from "../img -project/search.gif"
 
-const Filter = (props) => {
+const FilterCart = (props) => {
+    const handleFilterClick = () => {
+        const filtered = props.cards.filter(item => item.value >= minValue && item.value <= maxValue);
+         props.setFilterItem(filtered); 
     return (
-        <ContainerFilter>
+        <ContainerFilter>            
             <h1>Filtros</h1>
             <FilterForm>
                 <StyledLabel htmlFor="minimum">
@@ -40,9 +43,15 @@ const Filter = (props) => {
                         onChange={(e) => props.setQuery(e.target.value)}
                     />
                 </StyledLabel>
+                <button type="button" onClick={handleFilterClick}>Filtrar</button>
             </FilterForm>
+           {/*  <ul>
+        {props.filterItem.map(item => (
+          <li key={item.id}>{item.name}: {item.value}</li>
+        ))}
+      </ul> */} 
         </ContainerFilter >
     )
-}
+}}
 
-export default Filter
+export default FilterCart

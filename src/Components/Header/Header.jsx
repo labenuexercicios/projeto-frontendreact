@@ -8,7 +8,6 @@ import support from '../img -project/support.gif'
 
 const Header = (props) => {
 
-
   return (
     <HeaderContainer>
         <Logo >
@@ -23,7 +22,7 @@ const Header = (props) => {
                   </Login>
                 </li>
                 <li>
-                  <Car onClick={() => props.changePage(7)}>
+                  <Car onClick={() => props.changePage(8)}>
                     <img src={shoppingCar} alt='Carrinho' height={38}/>
                   </Car>
                   </li>

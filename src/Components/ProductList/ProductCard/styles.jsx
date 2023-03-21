@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const Card = styled.div` 
-width:200vw;
-height:80vh;  
+width:50vw;
+height:60vh;  
   overflow-y: auto; 
   display:flex; 
   flex-wrap:wrap; 
-  justify-content:center;  
+  justify-content:center;
+  gap: 5%;  
 `;
 
 export const Item = styled.div`

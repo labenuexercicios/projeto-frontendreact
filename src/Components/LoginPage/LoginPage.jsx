@@ -11,10 +11,17 @@ const LoginPage = (props) => {
       <H1>LOGIN</H1>
       <Form>
         <StyledLabel>E-mail:
-          <Input />
+          <Input 
+          value={props.email}
+          onChange={(e)=>{props.setEmail(e.target.value)}}
+          />
         </StyledLabel>
         <StyledLabel>Senha:
-          <Input type={"password"}/>
+          <Input 
+          value={props.password}
+          onChange={(e)=>{props.setPassword(e.target.value)}}
+          type={"password"}
+          />
         </StyledLabel>
         <SendButton onClick={loginSend}>Entrar</SendButton>
         <RegisterButton onClick={() => props.changePage(3)}>Cadastre-se</RegisterButton>
