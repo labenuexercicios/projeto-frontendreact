@@ -17,11 +17,19 @@ export const Input = styled.input`
 
 export const FilterStyle = styled.aside`
     display: flex;
-    width: 50vw;
+    width: 70vw;
     justify-content: center;
+    align-items: center;
     gap: 7px;
 `
 
 export const Paragraph = styled.p`
     font-size: 13px;
+`
+
+export const FilterImage = styled.img`
+position: absolute;
+padding-left: 11rem;
+    height: 2rem;
+    mix-blend-mode : color-burn;
 `

@@ -17,18 +17,13 @@ export const Container = styled.div`
   height: 230vh;
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  flex-grow: 1;
   background-color: silver;
 `
 
-export const Banner = styled.section`
-  display: flex;
-  height: 60vh;
-  justify-content: center;
-  align-items: center;
-`
 
-export const Pagination = styled.div`
+
+export const PaginationDiv = styled.div`
   display: flex;
   justify-content: center;
 `

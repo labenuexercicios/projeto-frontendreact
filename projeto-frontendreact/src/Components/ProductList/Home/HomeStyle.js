@@ -4,15 +4,15 @@ import styled from "styled-components";
 export const HomeStyle = styled.div`
     padding: 1rem;
     flex-grow: 2;
-    width: 20vw;
-    height: 90vh;
+    height: 100vh;
 `
 
 export const Ordination = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 1rem;
-    padding-top: 10px;
+    padding-top: 1rem;
 `
 
 export const ProductCardStyle = styled.li`
@@ -25,7 +25,7 @@ export const List = styled.ul`
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem 4rem;
+    gap: 2rem 6rem;
 `
 
 export const Option = styled.option`

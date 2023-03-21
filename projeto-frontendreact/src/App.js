@@ -5,7 +5,7 @@ import Cart from './Components/ShoppingCart/Cart/Cart'
 import Login from './Components/Login/Login'
 import Items from "../src/Components/ShoppingCart/Items/Items"
 import PaginationQuantity from './Components/Pagination/Pagination'
-import { Application, GlobalStyled, Container, Banner, Pagination } from './AppStyle'
+import { Application, GlobalStyled, Container, PaginationDiv } from './AppStyle'
 import { ProductsList } from './Assents/ProductsList'
 import { useState, useEffect } from 'react'
 import Slider from './Components/Slider/Slider'
@@ -101,9 +101,7 @@ function App() {
     switch (screen) {
       case 1:
         return <>
-          <Banner>
-            <Slider />
-          </Banner>
+          <Slider />
           <Application>
             <Home
               addItemCart={addItemCart}
@@ -121,17 +119,19 @@ function App() {
               order={order}
               setOrder={setOrder} />
           </Application>
-          <Pagination>
+          <PaginationDiv>
             <PaginationQuantity
               totalPosts={ProductsList.length}
               postsPerPage={postsPerPage}
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-          </Pagination>
+          </PaginationDiv>
         </>
       case 2:
         return <Cart
+          changeScreen={changeScreen}
+          cartQuantity={cartQuantity}
           itemsCart={itemsCart}
           amount={amount}
           setAmount={setAmount}
@@ -143,9 +143,7 @@ function App() {
         return <Login />
       default:
         return <>
-          <Banner>
-            <Slider />
-          </Banner>
+          <Slider />
           <Application>
             <Home
               addItemCart={addItemCart}
@@ -163,22 +161,25 @@ function App() {
               order={order}
               setOrder={setOrder} />
           </Application>
-          <Pagination>
+          <PaginationDiv>
             <PaginationQuantity
               totalPosts={ProductsList.length}
               postsPerPage={postsPerPage}
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-          </Pagination>
-          
+          </PaginationDiv>
+
         </>
     }
   }
 
   const filteredList = ProductsList.filter((product) => {
+
     const filteredList = product.value >= minFilter && product.value <= maxFilter
+
     const containsSearchTerm = product.name.toLowerCase().includes(searchFilter.toLowerCase())
+
     if (minFilter && maxFilter) {
       return filteredList && containsSearchTerm
     } else if (minFilter) {
