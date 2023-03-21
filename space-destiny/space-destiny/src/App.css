@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Bungee+Spice&family=Chela+One&family=Eagle+Lake&family=Lobster&family=Rampart+One&family=Rye&family=Titan+One&display=swap');
+
+/* reset browser default */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --card-bg-01: #71ccf9;
+  --card-bg-02: #602bd3;
+  --card-bg-03: #21189f;
+  --card-bg-04: #0e0643;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+section{
+  padding: 60px 0px;
+}
+
+.section__title{
+  color: #0e0643;
+  font-weight: 650;
+  margin-left: 42%;
+  margin-top: 7%;
+  font-family: 'Rampart One', cursive;
+  font-size: 2.0rem;
+}
+
+@media only screen and (max-width: 768px){
+  .section{
+    padding: 40px 0px;
+  }
+}
