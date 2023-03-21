@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     body{
-        background: var(--deep-blue)
+        background-color: rgb(58,14,128);
     }
 
     main{

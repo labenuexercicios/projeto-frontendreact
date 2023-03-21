@@ -1,12 +1,13 @@
-import { DivCard, P } from "./productCardStyle"
+import { DivCard, P, Button } from "./productCardStyle"
 
-export default function ProductList(){
+export default function ProductCard({product}){   
+
     return(
         <DivCard>
-            <P>ProductList</P>
-            <p>Nome</p>
-            <p>Valor</p>
-            <button>ADICIONAR</button>
+            {product.imageUrl}
+            <P>{product.name}</P>
+            <P> R${product.value.toFixed(2)}</P>
+            <Button>ADICIONAR</Button>
         </DivCard>
     )
 }

@@ -18,3 +18,7 @@ export const InputHeader = styled.input`
 export const P = styled.p`
     color: var(--yellow);
 ` 
+
+export const Img = styled.img`
+    width: 8vw;
+`

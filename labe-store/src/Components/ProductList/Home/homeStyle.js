@@ -9,6 +9,12 @@ export const DivHome = styled.div`
 
 export const Select = styled.select`
     height: 3.5vh;
-    width: 10vw;
+    width: 15vw;
     border-radius: 8px;
+`
+
+export const DivSelect = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
 `
