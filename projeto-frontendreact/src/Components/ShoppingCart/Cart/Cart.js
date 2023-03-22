@@ -1,8 +1,43 @@
 import { Amount, CartDiv } from "./CartStyle"
+import Items from "../Items/Items"
 
 export default function Cart(props) {
+    
+    const removeItemCart = (index) => {
+        const filteredList = props.cart.filter((item, i) => i !== index)
+        const totalValue = filteredList.reduce((acc, item) => acc + item.value * item.quantity, 0)
+        props.setCart(filteredList);
+        props.setAmount(totalValue);
+    }
+
+    const removeOneItem = (index) => {
+        const updatedCart = [...props.cart];
+        updatedCart[index].quantity--;
+        if (updatedCart[index].quantity === 0) {
+            updatedCart.splice(index, 1)
+        }
+        const totalValue = updatedCart.reduce((acc, item) => acc + item.value * item.quantity, 0)
+        props.setCart(updatedCart);
+        props.setAmount(totalValue);
+    }
 
     const totalValue = Number(props.amount)
+
+    const itemsCart = props.cart.map((item, index) => {
+        return (
+            <Items
+                key={index}
+                productsList={props.productsList}
+                removeItemCart={() => removeItemCart(index)}
+                removeOneItem={() => removeOneItem(index)}
+                item={item}
+                cart={props.cart}
+                setCart={props.setCart} />
+        )
+    })
+
+    const formatedAmount = props.amount.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
 
     return (
         <div
@@ -21,7 +56,7 @@ export default function Cart(props) {
                             </div>
                             <CartDiv
                                 className="cart_items">
-                                {props.itemsCart}
+                                {itemsCart}
                             </CartDiv>
                             <div className="order_total">
                                 <div className="order_total_content text-md-right">
@@ -30,7 +65,7 @@ export default function Cart(props) {
                                     </div>
                                     <Amount
                                         className="order_total_amount">
-                                        R${totalValue.toFixed(2)}
+                                        {formatedAmount}
                                     </Amount>
                                 </div>
                             </div>

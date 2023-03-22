@@ -1,10 +1,14 @@
-import { Button, CartList, ItemsCart} from "./ItemsStyle"
+import { Button, CartList, ItemsCart } from "./ItemsStyle"
 
 export default function Items(props) {
 
+    
+
     const itemTotalValue = props.item.value * props.item.quantity;
 
-    console.log(props.imageUrl)
+    const formatedAmount = props.item.value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+    const formatedTotalAmount = itemTotalValue.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 
     return (
         <CartList
@@ -47,7 +51,7 @@ export default function Items(props) {
                         </div>
                         <div
                             className="cart_item_text">
-                            R${props.item.value}
+                            {formatedAmount}
                         </div>
                     </div>
                     <div
@@ -57,10 +61,10 @@ export default function Items(props) {
                             Total</div>
                         <div
                             className="cart_item_text">
-                            R${itemTotalValue}</div>
+                            {formatedTotalAmount}</div>
                     </div>
-                    <Button onClick={props.removeOneItem}>Remover</Button>
-                    <Button onClick={props.removeItemCart}>Remover Todos</Button>
+                    <Button onClick={() => props.removeOneItem()}>Remover</Button>
+                    <Button onClick={() => props.removeItemCart()}>Remover Todos</Button>
                 </div>
             </ItemsCart>
         </CartList>

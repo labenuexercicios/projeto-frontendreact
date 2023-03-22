@@ -3,8 +3,10 @@ import styled from "styled-components";
 
 export const HomeStyle = styled.div`
     padding: 1rem;
-    flex-grow: 2;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10vw 0 7vw;
 `
 
 export const Ordination = styled.div`

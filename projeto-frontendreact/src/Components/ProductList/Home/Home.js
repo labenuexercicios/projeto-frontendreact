@@ -5,6 +5,33 @@ import { HomeStyle, Ordination, ProductCardStyle, List, Option, Paragraph, Selec
 
 export default function Home(props) {
 
+    const addItemCart = (index) => {
+        const existingItemIndex = props.cart.findIndex(item => item.name === props.productsList[index].name)
+
+        console.log(existingItemIndex)
+    
+        if (existingItemIndex !== -1) {
+          const updatedCart = [...props.cart]
+          updatedCart[existingItemIndex].quantity += 1
+          props.setCart(updatedCart)
+    
+          const totalValue = updatedCart.reduce((acc, item) => acc + item.value * item.quantity, 0)
+          props.setAmount(totalValue)
+    
+        } else {
+          const newItem = {
+            id: props.productsList[index].id,
+            name: props.productsList[index].name,
+            value: props.productsList[index].value,
+            quantity: 1
+          }
+    
+          const updatedCart = [...props.cart, newItem]
+          props.setCart(updatedCart)
+    
+        }
+      }
+
     return (
         <HomeStyle>
             <Ordination>
@@ -17,8 +44,8 @@ export default function Home(props) {
                 <Paragraph>Ordenação:
                     <Select onChange={(e) => props.setOrder(e.target.value)}>
                         <Option value={""}>Selecione</Option>
-                        <Option value={"incrising"}>Crescente</Option>
-                        <Option value={"decresing"}>Decrescente</Option>
+                        <Option value={"incrising"}>A-Z</Option>
+                        <Option value={"decresing"}>Z-A</Option>
                         <Option value={"price-incrising"}>Valor Crescente</Option>
                         <Option value={"price-decresing"}>Valor Decrescente</Option>
                     </Select>
@@ -46,7 +73,7 @@ export default function Home(props) {
                                 <ProductCard
                                     key={index}
                                     product={product}
-                                    addItemCart={() => props.addItemCart(index)} />
+                                    addItemCart={() => addItemCart(index)} />
                             )
                         })}
                 </List>
