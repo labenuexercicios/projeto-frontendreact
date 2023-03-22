@@ -26,7 +26,7 @@ export default function Footer() {
     }, []);
 
     return isFooterVisible ? <FooterStyle>
-        Conteúdo criado por Miguel Alves
+        <h6>Conteúdo criado por Miguel Alves</h6>
 
         <IconDiv>
         <a href="https://www.linkedin.com/in/miguelbitz/" target={"blank"}>

@@ -6,7 +6,7 @@ export const HomeStyle = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 0 10vw 0 7vw;
+    margin: 0 12vw 0 7vw;
 `
 
 export const Ordination = styled.div`
@@ -33,7 +33,11 @@ export const List = styled.ul`
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem 6rem;
+    gap: 2rem 15rem;
+
+    @media screen and (max-width: 1300px) {  
+        gap: 2rem 10rem;
+    }
 `
 
 export const Option = styled.option`
