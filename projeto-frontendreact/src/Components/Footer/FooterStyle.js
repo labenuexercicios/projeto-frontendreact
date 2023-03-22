@@ -4,12 +4,19 @@ export const FooterStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
+    flex-direction: column;
+    height: 7vh;
     width: 100%;
     background-color: #040f14;
     color: white;
     position: fixed;
     bottom: 0;
     font-size: 10px;
+    gap: 5px
 
+`
+
+export const IconDiv = styled.div`
+    display: flex;
+    gap: 10px;
 `
