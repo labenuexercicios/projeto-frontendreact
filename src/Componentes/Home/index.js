@@ -16,7 +16,7 @@ export function Home({ onChangeOrder, order, AllProducts, cart, setCart, minFilt
                 <QuantidadeDeItens>Quantidade de produtos:</QuantidadeDeItens>
 
 
-                <Order> Ordenação :
+                <Order> Ordenação : 
                     <OrderSelect onChange={onChangeOrder}>
                         <option value="">Ordenar</option>
                         <option value="crescente">Crescente</option>

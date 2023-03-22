@@ -18,7 +18,10 @@ export function Itens({ cart, setCart, Products }) {
 
         if (item.quantity > 1) {
             item.quantity = item.quantity - 1
-            setCart(copyCart)}
+            setCart(copyCart)
+        
+            const teste = JSON.stringify(copyCart)
+            localStorage.setItem("cart item", teste) }
 
        
 
@@ -26,13 +29,13 @@ export function Itens({ cart, setCart, Products }) {
             const filterRemove = copyCart.filter((product) => product.id !== Products.id)
             
             setCart(filterRemove)      
-            
+            const teste = JSON.stringify(filterRemove)
+        localStorage.setItem("cart item", teste) 
         }
           
 
      
-        const teste = JSON.stringify(cart)
-        localStorage.setItem("cart item", teste) 
+      
         
     }
 
@@ -44,7 +47,7 @@ export function Itens({ cart, setCart, Products }) {
         <div>
 
             <ItensP>{Products.quantity}x {Products.name}  </ItensP>
-            <ValorP>Preço: {Products.value * Products.quantity},00
+            <ValorP>Preço: {(Products.value * Products.quantity).toFixed(2).replace(".",",")}
                 <ItensButton
                     onClick={removeItem}
                 ><b>X</b></ItensButton></ValorP>

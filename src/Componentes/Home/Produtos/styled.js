@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 export const ProductCard = styled.div`
 
-background-color: white;
+background-color: rgb(21,31,66);
+color: white;
 border: 1px solid black;
 width: 12vw;
 height: 33vh;
@@ -14,6 +15,8 @@ display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 align-items: center;
+border-radius: 10px;
+
 
 
 
@@ -22,7 +25,8 @@ align-items: center;
 export const ButtonProducts = styled.button`
 margin-top: 1vh;
 width: 8vw;
-height: 4vh;
+height: 5vh;
+
 align-items: center;
 `
 
@@ -44,6 +48,11 @@ margin-left: 0.4vw;
 font-size: 13px;
 
 
+
+`
+
+export const ImageCart = styled.img`
+width: 1.8vh;
 
 `
 

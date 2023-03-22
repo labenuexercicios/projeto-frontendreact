@@ -1,4 +1,4 @@
-import { CartMenu, H1Cart, H1Total } from "./styled"
+import { CartMenu, H1Cart, H1Total, BuyButton } from "./styled"
 import { Itens } from "./Itens"
 
 
@@ -39,7 +39,9 @@ export function Cart({AllProducts, cart, amount, onChangeCart, setCart}) {
 
 
              </CartMenu>
-                  <H1Total><b>Total R$ : {amount},00</b></H1Total>  
+                  <H1Total><b>Total R$ : {amount.toFixed(2).replace(".",",")}</b></H1Total>  
+
+                  <H1Total> <BuyButton> <b>COMPRAR</b> </BuyButton></H1Total> 
         </div>
     )
 }

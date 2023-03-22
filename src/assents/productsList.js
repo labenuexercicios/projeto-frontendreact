@@ -13,7 +13,7 @@ export const Products = [
   {
     id: 1,
     name: "Nave Espacial Fun",
-    value: 40.00,
+    value: 40.50,
     imageUrl: <ImageProducts src={Nave} />,
     type: "SellItem",
     quantity: 1
@@ -23,7 +23,7 @@ export const Products = [
   {
     id: 2,
     name: "Arma Espacial DM",
-    value: 50.00,
+    value: 50.75,
     imageUrl: <ImageProducts src={Arma} />,
     type: "SellItem",
     quantity: 1
@@ -32,7 +32,7 @@ export const Products = [
   {
     id: 3,
     name: "Ufogin",
-    value: 75.00,
+    value: 75.99,
     imageUrl: <ImageProducts src={Ufogin} />,
     type: "SellItem",
     quantity: 1
@@ -41,7 +41,7 @@ export const Products = [
   {
     id: 4,
     name: "Lego Espacial",
-    value: 150.00,
+    value: 150.20,
     imageUrl: <ImageProducts src={Lego} />,
     type: "SellItem",
     quantity: 1
@@ -58,7 +58,7 @@ export const Products = [
   {
     id: 6,
     name: "Jogo Astronomia",
-    value: 170.00,
+    value: 173.00,
     imageUrl: <ImageProducts src={Astronomia} />,
     type: "SellItem",
     quantity: 1
@@ -66,7 +66,7 @@ export const Products = [
   {
     id: 7,
     name: "Quebra-Cabeça",
-    value: 150.00,
+    value: 154.00,
     imageUrl: <ImageProducts src={Discovery} />,
     type: "SellItem",
     quantity: 1

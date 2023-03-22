@@ -1,4 +1,6 @@
-import { ProductCard, ButtonProducts, ImageProducts, ImageP } from "./styled"
+import { ProductCard, ButtonProducts, ImageProducts, ImageP, ImageCart } from "./styled"
+import imageCart from "../cart.png"
+import { ImageCard } from "../../Footer/styled";
 
 
 export function Produtos({setCart, cart, Products}) {
@@ -30,21 +32,17 @@ export function Produtos({setCart, cart, Products}) {
  
      };
 
-
-     
-    
-
-
-         
     return (
         <div>
             
             <ProductCard name="item" id="item" htmlFor="item">
             <ImageProducts>{Products.imageUrl}</ImageProducts>
             <ImageP> {Products.name}</ImageP>
-                <ImageP><b>Valor:</b> R$ {Products.value},00</ImageP>
-                <ButtonProducts onClick={addItem}     >Adicionar</ButtonProducts>
+                <ImageP><b>Valor:</b> R$ {Products.value.toFixed(2).replace(".",",")}</ImageP>
+                <ButtonProducts  onClick={addItem}>Adicionar <ImageCart src={imageCart}/></ButtonProducts>
+               
             </ProductCard>
+
             
             
         </div>

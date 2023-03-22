@@ -70,11 +70,6 @@ margin-right: 5vw;
 export const UlFooter = styled.ul`
 
 margin-top: 2vh;
-
+text-decoration-line: none;
 color: white;
-
-
-
-
-
 `

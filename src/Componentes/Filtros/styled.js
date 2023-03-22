@@ -18,7 +18,7 @@ export const LabelFilter = styled.label`
 margin-left: 1vw;
 margin-top: 4vh;
 margin-bottom: 10px;
-color:gainsboro;
+color:white;
 `
 
 export const InputFilter = styled.input`
@@ -27,7 +27,7 @@ margin-left: 1vw;
 width: 17vw;
 `
 export const H1Filter = styled.div`
-color:gainsboro;
+color:white;
 margin-left: 1vw;
 margin-top: 3vh;
 
@@ -38,7 +38,7 @@ margin-top: 8vh;
 width: 18vw;
 margin-left: 1vw;
 border-radius: 5px;
-background-color: gainsboro;
+background-color: white;
 `
 
 export const AstroImage = styled.img`

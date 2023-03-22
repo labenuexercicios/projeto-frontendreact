@@ -21,8 +21,8 @@ export function Footer (){
             
             <FooterContainer1>
             <UlFooter><b>Atendimento</b></UlFooter>
-            <UlFooter>Meus Pedidos</UlFooter>
-            <UlFooter>Central de atendimento</UlFooter>
+            <a href="#"><UlFooter>Meus Pedidos</UlFooter></a>
+            <a href="#"><UlFooter>Central de atendimento</UlFooter></a>
             
             </FooterContainer1>
 
@@ -39,9 +39,9 @@ export function Footer (){
             
             <UlFooter><b>Siga-nos nas redes sociais</b></UlFooter>
            
-            <ImageCardWhats src={whats} />   
-            <ImageCardInsta src={insta}/>   
-            <ImageCardFace src={face}/>
+            <a href="https://web.whatsapp.com/"><ImageCardWhats src={whats} /></a>
+            <a href="https://www.instagram.com/"><ImageCardInsta src={insta}/></a>   
+            <a href="https://pt-br.facebook.com/"><ImageCardFace src={face}/></a>
 
 
 
