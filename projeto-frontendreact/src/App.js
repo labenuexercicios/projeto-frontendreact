@@ -17,7 +17,10 @@ function App() {
   const [minFilter, setMinFilter] = useState(0)
   const [maxFilter, setMaxFilter] = useState(0)
   const [searchFilter, setSearchFilter] = useState('')
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(() => {
+    const cartFromStorage = localStorage.getItem("cart");
+    return cartFromStorage ? JSON.parse(cartFromStorage) : [];
+  })
   const [amount, setAmount] = useState('')
   const [order, setOrder] = useState('')
   const [screen, setScreen] = useState(1)
@@ -25,15 +28,34 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1)
   const [postsPerPage, setPostsPerPage] = useState(6)
 
+  const setCartLocalStorage = () =>{
+    const cartToString = JSON.stringify(cart)
+    localStorage.setItem("cart", cartToString)
+  }
+
+  const getCartLocalStorage = () => {
+    const cartExist = localStorage.getItem("cart")
+    if (cartExist !== null) {
+      const cartToArray = JSON.parse(cartExist)
+      setCart(cartToArray)
+    }
+  }
+
   useEffect(() => {
     const totalValue = cart.reduce((acc, item) => acc + item.value * item.quantity, 0)
     setAmount(totalValue)
 
     const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0)
     setCartQuantity(totalQuantity)
+
+    setCartLocalStorage()
   }, [cart])
 
-  
+  useEffect(() => {
+    getCartLocalStorage()
+  }, [])
+
+
 
   const changeScreen = (value) => {
     setScreen(value)
