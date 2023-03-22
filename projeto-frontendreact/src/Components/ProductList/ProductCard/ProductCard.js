@@ -1,5 +1,5 @@
 import { ContainerCard, Image, Button, Paragraph } from "./ProductCardStyle"
-import cart from "../../../images/cart.png"
+import cart from "../../../Images/cart.png"
 
 
 export default function ProductCard(props) {

@@ -21,8 +21,6 @@ export default function Cart(props) {
         props.setAmount(totalValue);
     }
 
-    const totalValue = Number(props.amount)
-
     const itemsCart = props.cart.map((item, index) => {
         return (
             <Items

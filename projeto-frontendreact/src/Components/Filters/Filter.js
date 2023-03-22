@@ -1,5 +1,5 @@
 import { Input, FilterStyle, Paragraph, FilterImage } from "./FilterStyle"
-import filter from "../../images/filter.png"
+import filter from "../../Images/filter.png"
 
 export default function Filter(props) {
 
@@ -7,12 +7,14 @@ export default function Filter(props) {
         <FilterStyle>
             <nav className="nav">
 
-                <FilterImage src={filter} className="sm-header"/>
+                <FilterImage src={filter} className="sm-header" />
 
                 <ul className="nav-list">
                     <li className="nav-item">
                         <Paragraph>Valor mínimo:</Paragraph>
                         <Input
+                            type={"number"}
+                            min={0}
                             value={props.minFilter}
                             onChange={(e) => props.setMinFilter(e.target.value)}
                         />
@@ -20,6 +22,8 @@ export default function Filter(props) {
                     <li className="nav-item">
                         <Paragraph>Valor máximo:</Paragraph>
                         <Input
+                            type={"number"}
+                            min={0}
                             value={props.maxFilter}
                             onChange={(e) => props.setMaxFilter(e.target.value)}
                         />

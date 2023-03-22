@@ -33,28 +33,7 @@ function App() {
     setCartQuantity(totalQuantity)
   }, [cart])
 
-  const filteredList = ProductsList.filter((product) => {
-
-    const filteredList = product.value >= minFilter && product.value <= maxFilter
-
-    const containsSearchTerm = product.name.toLowerCase().includes(searchFilter.toLowerCase())
-
-    if (minFilter && maxFilter) {
-      return filteredList && containsSearchTerm
-    } else if (minFilter) {
-      return product.value >= minFilter && containsSearchTerm
-    } else if (maxFilter) {
-      return product.value <= maxFilter && containsSearchTerm
-    } else {
-      return ProductsList && containsSearchTerm
-    }
-  })
-
-  const currentProductsList = [...filteredList]
-
-  const lastPostIndex = currentPage * postsPerPage
-  const firstPostIndex = lastPostIndex - postsPerPage
-  const currentPost = currentProductsList.slice(firstPostIndex, lastPostIndex)
+  
 
   const changeScreen = (value) => {
     setScreen(value)
@@ -71,7 +50,8 @@ function App() {
               maxFilter={maxFilter}
               setMaxFilter={setMaxFilter}
               searchFilter={searchFilter}
-              filteredList={currentPost}
+              currentPage={currentPage}
+              postsPerPage={postsPerPage}
               amount={amount}
               setAmount={setAmount}
               cart={cart}
@@ -103,34 +83,6 @@ function App() {
       case 3:
         return <Login />
       default:
-        return <>
-          <Slider />
-          <Application>
-            <Home
-              minFilter={minFilter}
-              setMinFilter={setMinFilter}
-              maxFilter={maxFilter}
-              setMaxFilter={setMaxFilter}
-              searchFilter={searchFilter}
-              filteredList={currentPost}
-              amount={amount}
-              setAmount={setAmount}
-              cart={cart}
-              setCart={setCart}
-              productsList={ProductsList}
-              order={order}
-              setOrder={setOrder} />
-          </Application>
-          <PaginationDiv>
-            <PaginationQuantity
-              totalPosts={ProductsList.length}
-              postsPerPage={postsPerPage}
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
-            />
-          </PaginationDiv>
-
-        </>
     }
   }
 

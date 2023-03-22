@@ -2,8 +2,6 @@ import { Button, CartList, ItemsCart } from "./ItemsStyle"
 
 export default function Items(props) {
 
-    
-
     const itemTotalValue = props.item.value * props.item.quantity;
 
     const formatedAmount = props.item.value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})

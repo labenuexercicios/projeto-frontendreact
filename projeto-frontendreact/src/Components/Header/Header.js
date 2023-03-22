@@ -1,7 +1,7 @@
 import { HeaderStyle, Input, Img, IconsHeader, Navbar, Quantity } from "./HeaderStyle"
-import cartwhite from "../../images/cartwhite.png"
-import account from "../../images/account2.png"
-import logo from "../../images/logo-light.png"
+import cartwhite from "../../Images/cartwhite.png"
+import account from "../../Images/account2.png"
+import logo from "../../Images/logo-light.png"
 
 export default function Header(props) {
 
