@@ -1,4 +1,4 @@
-/* HOME - image transform */
+/* HOME - IMAGE TRANSFORM */
 
 .card {
     position: relative;
@@ -50,7 +50,7 @@
     margin-top: 20rem;
 }
 
-/* cart animation */
+/* CART BOOTSTRAP */
 * {
     -webkit-font-smoothing: antialiased;
     -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
@@ -233,7 +233,7 @@ ul {
 }
 
 
-/* filter */
+/* FILTER MIN-MAX VALUE */
 
 .nav {
     max-width: 80rem;
@@ -292,4 +292,22 @@ ul {
     transform: translateY(0);
 }
 
+/* SLIDER */
 
+.carousel{
+    max-height: 60vh;
+}
+
+.carousel-item{
+    max-height: 60vh;
+}
+
+.carousel-caption{
+    margin: 7rem 10rem;
+}
+
+@media screen and (max-width: 400px) {  
+    .carousel-caption{
+        margin: 0; 
+    }
+}

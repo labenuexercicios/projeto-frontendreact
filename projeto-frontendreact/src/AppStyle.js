@@ -19,6 +19,10 @@ export const Container = styled.div`
   flex-direction: column;
   flex-grow: 1;
   background-color: silver;
+
+  @media screen and (max-width: 400px) {  
+    height: 500vh;
+  }
 `
 
 
@@ -26,4 +30,8 @@ export const Container = styled.div`
 export const PaginationDiv = styled.div`
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 400px) {  
+    padding-top: 270vh;
+  }
 `

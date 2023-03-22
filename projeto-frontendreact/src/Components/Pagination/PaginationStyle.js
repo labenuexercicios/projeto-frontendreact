@@ -11,10 +11,6 @@ export const PaginationButton = styled.div`
         background-color: #8707ff;
         
     }
-
-    @media screen and (max-width: ) {
-        
-    }
 `
 
 export const Button = styled.button`

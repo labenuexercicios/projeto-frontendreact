@@ -139,5 +139,26 @@ export const ProductsList = [
         imageUrl: "https://uploaddeimagens.com.br/images/004/403/115/full/space-helmet2.png?1679516683",
         description: ""
       },
+      {
+        id: 20,
+        name: "Luva Espacial GalaxyGrip",
+        value: 1200,
+        imageUrl: "https://uploaddeimagens.com.br/images/004/403/248/full/gloves1.png?1679523095",
+        description: ""
+      },
+      {
+        id: 21,
+        name: "Traje Espacial Masculino OrbitFit",
+        value: 5000,
+        imageUrl: "https://uploaddeimagens.com.br/images/004/403/265/full/outfit2.png?1679524253",
+        description: ""
+      },
+      {
+        id: 22,
+        name: "Traje Espacial Feminino StellarSilhouette",
+        value: 7000,
+        imageUrl: "https://uploaddeimagens.com.br/images/004/403/268/full/outfit1.png?1679524341",
+        description: ""
+      },
 
 ]

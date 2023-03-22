@@ -15,6 +15,12 @@ export const Ordination = styled.div`
     align-items: center;
     padding-bottom: 1rem;
     padding-top: 1rem;
+
+    @media screen and (max-width: 400px) {  
+    padding-bottom: 0;
+    padding-top: 0;
+    flex-direction: column;
+    }
 `
 
 export const ProductCardStyle = styled.li`

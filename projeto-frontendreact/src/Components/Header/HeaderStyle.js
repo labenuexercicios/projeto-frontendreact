@@ -7,7 +7,7 @@ export const HeaderStyle = styled.div`
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 400px) {
-        height: 15vh;
+        height: 10vh;
     }
 
 `
@@ -27,6 +27,11 @@ export const Input = styled.input`
 :active {
     box-shadow: 2px 2px 15px #8707ff inset;
 }
+
+@media screen and (max-width: 400px) {
+    width: 7rem;
+    margin: 0;
+    }
 `
 
 export const Img = styled.img`
