@@ -1,0 +1,16 @@
+.filterGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+
+    
+}
+
+.filtros{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10%;
+
+    background-color: rgb(200,200,200);
+}

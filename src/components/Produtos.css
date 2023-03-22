@@ -1,0 +1,19 @@
+.listaProdutos{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    gap: 2rem;
+
+    padding: 2rem;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-around;
+}
+
+.produtos{
+    padding-top: 1.5rem;
+}

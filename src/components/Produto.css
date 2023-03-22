@@ -1,0 +1,7 @@
+.produto{
+    display: flex;
+    flex-direction: column;   
+    gap: 0.5rem;
+    border: solid 1px black;    
+    padding: 1rem;
+}
