@@ -74,11 +74,19 @@ function App() {
   const changePage = (values) => {
     setValueConditional(values)
   }
+  function currencyBrazil(value, symbol) {
+    if (!value) return null
+    if (symbol) {
+      return value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+    }
+    return value.toLocaleString('pt-br', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
   
   const renderPage = () => {
     switch (valueConditional) {
       case 1:
-        return <Header changePage={changePage}/>
+        return <Header        
+        changePage={changePage} />
       case 2:
         return <LoginPage        
         email={email}
@@ -138,7 +146,8 @@ function App() {
           setCartItems={setCartItems}
           changePage={changePage}          
           cards={cards}
-          setCards={setCards} 
+          setCards={setCards}
+          currencyBrazil={currencyBrazil} 
           /> 
     }
   }
@@ -146,7 +155,9 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        <Header />
+        <Header
+        cartItems={cartItems} 
+        />
         {renderPage()}
         <ConteinerMain>
           <FilterCart
@@ -180,6 +191,7 @@ function App() {
                   setCards={setCards}
                   cartItems={cartItems}
                   setCartItems={setCartItems}
+                  currencyBrazil={currencyBrazil}
                   />
           </CardsContainer>
         </ConteinerMain>

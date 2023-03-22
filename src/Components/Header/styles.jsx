@@ -43,9 +43,14 @@ export const Login = styled.button`
     }
 `
 export const Car = styled.button`
+display:flex;
  cursor: pointer; 
+ background-color:#ff4400;
+ padding:0 18% 0 0; 
+ align-items:center;
+ gap:9%;
   transition: transform 200ms ease-in-out;
-
+  
     :hover{
         background-color: white;
         color: black;

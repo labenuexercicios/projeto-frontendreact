@@ -7,7 +7,6 @@ import shoppingCar from '../img -project/shopping-cart.gif'
 import support from '../img -project/support.gif'
 
 const Header = (props) => {
-
   return (
     <HeaderContainer>
         <Logo >
@@ -24,7 +23,9 @@ const Header = (props) => {
                 <li>
                   <Car onClick={() => props.changePage(8)}>
                     <img src={shoppingCar} alt='Carrinho' height={38}/>
+                    {!props.cartItems ? <p>0</p> : <p>{props.cartItems.length}</p>}
                   </Car>
+                  
                   </li>
                 <li>
                   <Contact onClick={() => props.changePage(6)}>

@@ -1,42 +1,55 @@
 import React from "react";
-import {ConteinerCar,FormContainer, H1, Form, SetButton,RegisterButton,  } from "./styles"
-
-
+import {ConteinerCar,Carrinho,P,FormContainer, H1, Form, SetButton,RegisterButton,Bin  } from "./styles"
+import bin from "./bin.png"
 
 const ShoppingCar = (props)=>{
-
-  props.cards.amount=index
+  
   const increaseQuantity = (index) => {
-    const newCartItems = [...props.cartItems];
-    newCartItems[index].quantity += 1;
-    props.setCartItems(newCartItems);
-  }
-  const decreaseQuantity = (index) => {
-    const newCartItems = [...props.cartItems];
-    newCartItems[index].quantity -= 1;
+    const newCartItems = [...props.cartItems];    
+    newCartItems[index].amount += 1;    
     props.setCartItems(newCartItems);
   }
   const removeItem = (index) => {
     const newCartItems = [...props.cartItems];
     newCartItems.splice(index, 1);
     props.setCartItems(newCartItems);
+  }   
+
+  const decreaseQuantity = (index, removeItem) => {
+    const newCartItems = [...props.cartItems];
+    if(newCartItems[index].amount === 0){
+    removeItem(index)    
+    }else{ 
+    newCartItems[index].amount -= 1;
   }
-      
-    return(
-      
+    props.setCartItems(newCartItems);
+  }
+
+  // usar for para fazer o total
+       
+    return(      
         <ConteinerCar>
             <FormContainer >
       <H1>Carrinho</H1>     
       {props.cartItems.map((item,index)=>{
         return (  
       <Form key={index}>
-        <p>{item.name}</p >       
-        <p>{item.price}</p >       
-        <SetButton onClick={() => increaseQuantity(index)}>+</SetButton>
+        <Carrinho>
+        <img src={item.image} width={55}/>
+        <P>
+        <p>{item.title}</p >       
+        <p>{props.currencyBrazil(item.price, true)}</p >
+        <p>Quantidade:{item.amount}</p>
+        <div> 
+       <SetButton onClick={() => increaseQuantity(index)}>+</SetButton>
         <SetButton onClick={() => decreaseQuantity(index)}>-</SetButton>
-        <SetButton onClick={() => removeItem(index)}>Remover</SetButton>         
-        <RegisterButton onClick={() => props.changePage(1)}>Concluir Compra</RegisterButton>
-        <RegisterButton onClick={() => props.changePage(1)}>Continuar Comprando</RegisterButton>
+        <Bin onClick={() => removeItem(index)}><img src={bin} alt="" width="16px" /></Bin>
+        </div>         
+        </P> 
+       </Carrinho>
+       <div>      
+        <RegisterButton onClick={() => props.changePage(1)}>Concluir Compra</RegisterButton>       
+        </div> 
       </Form>)})}     
     </FormContainer>
         </ConteinerCar>        

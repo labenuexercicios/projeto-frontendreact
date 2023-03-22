@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 
 export const Card = styled.div` 
-width:50vw;
-height:60vh;  
+width:45vw;
+height: 60vh;  
   overflow-y: auto; 
-  display:flex; 
+  position:relative;
+  right:15%;
+  display:flex;
   flex-wrap:wrap; 
-  justify-content:center;
-  gap: 5%;  
+  gap: 5%;    
 `;
 
 export const Item = styled.div`
 width:30%; 
-height:80%;
+height:95%;
 gap:2%;
 background-color:black;
 border-radius:15px;
@@ -41,7 +42,7 @@ export const Price = styled.p`
 `;
 
 export const SendButton = styled.button`
-    background-color:purple;
+    background-color:#ff4400;
     border-radius: 8px;
     padding:2%;    
     border: none;
