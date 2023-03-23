@@ -6,7 +6,7 @@ export const FooterStyle = styled.div`
     align-items: center;
     flex-direction: column;
     height: 10vh;
-    width: 100%;
+    width: 100vw;
     background-color: #040f14;
     color: white;
     position: fixed;

@@ -1,7 +1,10 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyled = createGlobalStyle`
-background-color: silver;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: silver;
 `
 
 export const Application = styled.main`
@@ -9,18 +12,15 @@ export const Application = styled.main`
   flex-direction: column;
   background-color: silver;
   height: 140vh;
-  width: 100%;
+  width: 100vw;
   gap: 2rem;
 
-  @media screen and (max-width: 1300){
-    width: 120vw;
-  }
 `
 
 export const Container = styled.div`
   line-height: 1.5;
   font-weight: 600;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   background-color: silver;

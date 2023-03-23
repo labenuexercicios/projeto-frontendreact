@@ -32,6 +32,8 @@ export const Paragraph = styled.p`
 `
 
 export const FilterImage = styled.img`
-    height: 2rem;
+    position: absolute;
+    padding-left: 1.5rem;
+    height: 2.5rem;
     mix-blend-mode : color-burn;
 `
