@@ -7,7 +7,7 @@ export const DivCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 1rem 2rem 1.1rem;
+    margin: 2rem 0 2rem 1.1rem;
     line-height: 2rem;
     background-color: white;
     border-radius: 8px;

@@ -11,8 +11,74 @@ import { useState } from "react";
 function App() { 
 
   const [ search, setSearch] = useState("");
-  const [ order, setOrder] = useState("")
+  const [ order, setOrder] = useState("");
+  const [addCart, setAddCart] = useState([]);
 
+  
+
+  
+  
+  const addToCart = (product) => {
+
+    const newProduct = addCart.find((item)=>item.id === product.id)
+    if(newProduct === undefined){
+      setAddCart([... addCart, {...product, amount:1}])
+    }else{
+      const newCart = addCart.map((item)=>{
+        if(item.id === product.id){
+          return {...newProduct, amount: newProduct.amount+1}
+        }else{
+          return item
+        }
+
+      })
+      setAddCart(newCart)
+    }
+
+  }
+
+  const deleteProductCart = (product) => {
+
+    const productDeleted = addCart.find((item)=> item.id === product.id)
+    if(productDeleted.amount > 1){
+      const newCart = addCart.map((item)=>{
+        if(item.id === product.id){
+          return {... productDeleted, amount:productDeleted.amount-1}
+        }else{
+          return item
+        }
+      })
+      setAddCart(newCart)
+    
+    }else{
+      const newCart = addCart.filter((item) =>{
+        return item.id !== product.id
+      })
+      setAddCart(newCart)
+    }
+  }
+
+  const getTotal = () => {
+    let sum = 0;
+
+    for (let item of addCart) {
+      sum += item.value * item.amount;
+    }
+    return sum;
+  }
+  const cartTotal = getTotal()
+
+  const endCart = () => {
+    if(addCart.length === 0){
+      alert ("Carrinho está vazio")
+    }else{
+      setAddCart([])
+      alert("Compra finalizada com sucesso!")
+    }
+  }
+
+  
+  
     return (
       <div>
         <GlobalStyle/>
@@ -33,11 +99,20 @@ function App() {
             Products={Products}
             search={search}
             order={order}
-            setOrder={setOrder}/>
+            setOrder={setOrder}
+            addToCart={addToCart}
+            />
           </article>
 
           <section>
-            <Cart/>
+            <Cart
+            Products={Products}
+            addCart={addCart}
+            setAddCart={setAddCart}
+            deleteProductCart={deleteProductCart}
+            cartTotal={cartTotal}
+            endCart={endCart}
+          />
           </section>
 
         </main>

@@ -8,7 +8,8 @@ export default function Filters(){
 
             <p>Valor mínimo:</p>
             <InputFilter
-            type="number"/>
+            type="number"
+            min={0}/>
 
             <p>Valor máximo:</p>
             <InputFilter

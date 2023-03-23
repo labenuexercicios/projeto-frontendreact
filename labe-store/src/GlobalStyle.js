@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     
     body{
         background-color: rgb(58,14,128);
+        height:100vh
     }
 
     main{
@@ -35,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     h2{
         font-family: 'Shrikhand', cursive;
         color: var(--yellow);
+        
     }
 
     p{
@@ -42,8 +44,10 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--green)
     }
 
-
-
+    h4{
+        font-family: 'Shrikhand', cursive; 
+    }
+    
 
 
 `

@@ -1,7 +1,7 @@
 import ProductCard from "../ProductCard/ProductCard";
-import { DivHome, Select, DivSelect } from "./homeStyle";
+import { DivHome, Select, DivSelect, DivTotal } from "./homeStyle";
 
-export default function Home({Products, search, order, setOrder}){
+export default function Home({Products, search, order, setOrder, addCart,setAddCart, addToCart}){
 
     const handleOrder = (e) =>{
         setOrder(e.target.value)
@@ -9,7 +9,7 @@ export default function Home({Products, search, order, setOrder}){
     console.log(handleOrder)
 
     return(
-        <>
+        <DivTotal>
             <DivSelect>
                 <Select 
                 onChange={handleOrder}
@@ -29,7 +29,7 @@ export default function Home({Products, search, order, setOrder}){
             <DivHome>
 
                 {Products.filter((product)=>{
-                    return product.name.toLowerCase().includes(search)
+                    return product.name.toLowerCase().includes(search.toLowerCase())
                 
                 }).sort((a,b)=> order === "" || order === "crescente" &&
                 a.name > b.name ? 1 : -1                    
@@ -50,11 +50,15 @@ export default function Home({Products, search, order, setOrder}){
                     return(
                         <ProductCard
                         key={Products.id}
-                        product={product}/>
+                        product={product}
+                        addCart={addCart}
+                        setAddCart={setAddCart}
+                        addToCart={addToCart}
+                        />
                     )
                 })
                 }
             </DivHome>
-        </>
+        </DivTotal>
     )
 }

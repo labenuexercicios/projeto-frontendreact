@@ -17,4 +17,10 @@ export const DivSelect = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    gap: 1rem;
+`
+
+export const DivTotal = styled.div`
+    height: 100vh;
+    
 `
