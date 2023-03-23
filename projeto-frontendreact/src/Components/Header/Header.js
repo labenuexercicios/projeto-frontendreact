@@ -12,7 +12,6 @@ export default function Header(props) {
                     className="icon"
                     src={logo}
                     alt="home"
-                    width="130px"
                     onClick={() => props.changeScreen(1)} />
                 <Input
                     value={props.searchFilter}
@@ -23,12 +22,12 @@ export default function Header(props) {
                     <Img
                         src={account}
                         alt="account-header"
-                        width="27px"
+                        width="32px"
                         onClick={() => props.changeScreen(3)} />
                     <Img
                         src={cartwhite}
                         alt="cart-header"
-                        width="32px"
+                        width="40px"
                         onClick={() => props.changeScreen(2)} />
                     <Quantity 
                     cartQuantity={props.cartQuantity}

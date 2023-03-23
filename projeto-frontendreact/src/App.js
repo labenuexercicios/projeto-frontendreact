@@ -4,7 +4,7 @@ import Home from './Components/ProductList/Home/Home'
 import Cart from './Components/ShoppingCart/Cart/Cart'
 import Login from './Components/Login/Login'
 import PaginationQuantity from './Components/Pagination/Pagination'
-import { Application, GlobalStyled, Container, PaginationDiv } from './AppStyle'
+import { Application, GlobalStyled, Container, PaginationDiv, ProductDiv } from './AppStyle'
 import { ProductsList } from './Assents/ProductsList'
 import { useState, useEffect } from 'react'
 import Slider from './Components/Slider/Slider'
@@ -28,7 +28,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1)
   const [postsPerPage, setPostsPerPage] = useState(6)
 
-  const setCartLocalStorage = () =>{
+  const setCartLocalStorage = () => {
     const cartToString = JSON.stringify(cart)
     localStorage.setItem("cart", cartToString)
   }
@@ -66,23 +66,24 @@ function App() {
         return <>
           <Slider />
           <Application>
-            <Home
-              minFilter={minFilter}
-              setMinFilter={setMinFilter}
-              maxFilter={maxFilter}
-              setMaxFilter={setMaxFilter}
-              searchFilter={searchFilter}
-              currentPage={currentPage}
-              postsPerPage={postsPerPage}
-              amount={amount}
-              setAmount={setAmount}
-              cart={cart}
-              setCart={setCart}
-              productsList={ProductsList}
-              order={order}
-              setOrder={setOrder} />
-          </Application>
-          <PaginationDiv>
+            <ProductDiv>
+              <Home
+                minFilter={minFilter}
+                setMinFilter={setMinFilter}
+                maxFilter={maxFilter}
+                setMaxFilter={setMaxFilter}
+                searchFilter={searchFilter}
+                currentPage={currentPage}
+                postsPerPage={postsPerPage}
+                amount={amount}
+                setAmount={setAmount}
+                cart={cart}
+                setCart={setCart}
+                productsList={ProductsList}
+                order={order}
+                setOrder={setOrder} />
+            </ProductDiv>
+            <PaginationDiv>
             <PaginationQuantity
               totalPosts={ProductsList.length}
               postsPerPage={postsPerPage}
@@ -90,6 +91,8 @@ function App() {
               setCurrentPage={setCurrentPage}
             />
           </PaginationDiv>
+          </Application>
+          
         </>
       case 2:
         return <Cart

@@ -56,16 +56,16 @@ export const Navbar = styled.nav`
 `
 
 export const Quantity = styled.button`
-    height: 13px;
-    width: 13px;
-    font-size: 10px;
+    height: 15px;
+    width: 15px;
+    font-size: 12px;
     font-weight: 700;
     border-radius: 50%;
     background-color: #e40d7c;
     border: none;
     position: absolute;
     cursor: default;
-    margin-left: 3.7rem;
+    margin-left: 4.4rem;
     display: ${props => props.cartQuantity === 0 ? "none" : "flex"};
     justify-content: center;
     align-items: center;

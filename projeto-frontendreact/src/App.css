@@ -19,6 +19,12 @@
 
 .icon {
     animation: anim 1s forwards;
+    width: 170px
+}
+@media screen and (max-width: 400px) {
+    .icon{
+        width: 130px
+    }
 }
 
 .icon::before {
@@ -47,7 +53,6 @@
 
 .pagination {
     position: absolute;
-    margin-top: 20rem;
 }
 
 /* CART BOOTSTRAP */
@@ -90,7 +95,8 @@ ul {
 .cart_section {
     width: 100%;
     padding-top: 5rem;
-    padding-bottom: 10rem
+    padding-bottom: 10rem;
+    height: 100vh;
 }
 
 .cart_title {
@@ -236,9 +242,10 @@ ul {
 /* FILTER MIN-MAX VALUE */
 
 .nav {
-    max-width: 80rem;
+    max-width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     pointer-events: none;
 }
 
@@ -247,10 +254,9 @@ ul {
 }
 
 .sm-header {
-    font-size: 2.6rem;
-    text-transform: uppercase;
     cursor: pointer;
     pointer-events: auto;
+    justify-self: center;
 }
 
 .line {
@@ -274,7 +280,11 @@ ul {
 }
 
 .nav-item {
-    margin-inline: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 3rem;
     opacity: 0;
     transition: transform 0.5s, opacity 0.5s;
 }

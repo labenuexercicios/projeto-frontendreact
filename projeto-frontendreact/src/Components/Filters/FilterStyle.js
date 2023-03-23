@@ -15,7 +15,7 @@ export const Input = styled.input`
 }
 `
 
-export const FilterStyle = styled.aside`
+export const FilterStyle = styled.div`
     display: flex;
     width: 70vw;
     justify-content: center;
@@ -24,12 +24,14 @@ export const FilterStyle = styled.aside`
 `
 
 export const Paragraph = styled.p`
-    font-size: 13px;
+    font-size: 14px;
+
+    @media screen and (min-width: 1200px){
+        font-size: 19px;
+    }
 `
 
 export const FilterImage = styled.img`
-position: absolute;
-padding-left: 11rem;
     height: 2rem;
     mix-blend-mode : color-burn;
 `

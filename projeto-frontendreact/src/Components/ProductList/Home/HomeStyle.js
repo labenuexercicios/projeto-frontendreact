@@ -41,11 +41,11 @@ export const List = styled.ul`
 `
 
 export const Option = styled.option`
-    font-size: 13px;
+    font-size: 19px;
     font-weight: 600;
 `
 export const Paragraph = styled.p`
-    font-size: 13px;
+    font-size: 19px;
 `
 export const Select = styled.select`
     font-weight: 600;

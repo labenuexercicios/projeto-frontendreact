@@ -6,9 +6,6 @@ export default function Filter(props) {
     return (
         <FilterStyle>
             <nav className="nav">
-
-                <FilterImage src={filter} className="sm-header" />
-
                 <ul className="nav-list">
                     <li className="nav-item">
                         <Paragraph>Valor mínimo:</Paragraph>
@@ -18,6 +15,9 @@ export default function Filter(props) {
                             value={props.minFilter}
                             onChange={(e) => props.setMinFilter(e.target.value)}
                         />
+                    </li>
+                    <li>
+                        <FilterImage src={filter} className="sm-header" />
                     </li>
                     <li className="nav-item">
                         <Paragraph>Valor máximo:</Paragraph>
