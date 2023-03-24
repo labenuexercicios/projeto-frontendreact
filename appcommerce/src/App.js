@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import Home from "./pages/Home/index";
 import CategoryPage from "./pages/CategoryPage";
+import ProductDetails from "./pages/ProductDetails/index";
 import Login from "./pages/LoginPage";
 import Register from "./pages/RegisterPage";
 import Purchased from "./pages/Purchased";
