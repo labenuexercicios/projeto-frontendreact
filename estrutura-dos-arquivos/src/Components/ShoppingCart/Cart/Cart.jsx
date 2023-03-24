@@ -3,20 +3,27 @@ import Items from "../Items/Items"
 import { Carrinho } from "./CartStyle"
 const Cart = (props) => {
     
-    
+   
     return (
+        
         <ContainerCarts>
             <Carrinho>carrinho</Carrinho>
-            {/* {props.product.map((prod, index)=>{
+            {props.cart.map((item, index) => {
                 return (<Items
                     key={index}
-                    name={prod.name}
+                    item={item}
+                    cart={props.cart}
+                    setCart={props.setCart}
+                    amount={props.amount}
+                    setAmount={props.setAmount}
+                    product={props.product}
+                    currencyBrazil={props.currencyBrazil}
 
                 />)
-            }) } */}
-          
-        </ContainerCarts>
 
+            })}
+        </ContainerCarts>
+    
     )
 }
 export default Cart

@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 export const ContainerCarts = styled.div`
-    background-color: aquamarine;
+    
     flex-grow:1;
-    border: 1px solid black;
-    width: 22vw;
+    border: none;
+    min-height: 100vh;
 `
 export const Carrinho = styled.h3`
-    background-color: red;
+        font-style: bold;
+		font-weight: bold;
+		font-size: 30px;
+		font-family: arial, sans-serif;
+        font-style: normal
     
     
 `
