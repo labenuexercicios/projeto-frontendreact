@@ -4,12 +4,8 @@ import Money from "../img -project/money-bag.gif"
 import Search from "../img -project/search.gif"
 
 const FilterCart = (props) => {
-    const handleFilterClick = () => {
-        const filtered = props.cards.filter(item => item.value >= minValue && item.value <= maxValue);
-         props.setFilterItem(filtered);
-        }
     return (
-        <ContainerFilter>            
+        <ContainerFilter>
             <h1>Filtros</h1>
             <FilterForm>
                 <StyledLabel htmlFor="minimum">
@@ -19,6 +15,7 @@ const FilterCart = (props) => {
                         placeholder="R$"
                         type='number'
                         id="minimum"
+                        min="0"
                         value={props.minValue}
                         onChange={(e) => props.setMinValue(e.target.value)}
                     />
@@ -30,6 +27,7 @@ const FilterCart = (props) => {
                         placeholder="R$"
                         type='number'
                         id="maximum"
+                        min="0"
                         value={props.maxValue}
                         onChange={(e) => props.setMaxValue(e.target.value)}
                     />
@@ -44,13 +42,7 @@ const FilterCart = (props) => {
                         onChange={(e) => props.setQuery(e.target.value)}
                     />
                 </StyledLabel>
-                <Filtrar type="button" onClick={handleFilterClick}>Filtrar</Filtrar>
             </FilterForm>
-           {/*  <ul>
-        {props.filterItem.map(item => (
-          <li key={item.id}>{item.name}: {item.value}</li>
-        ))}
-      </ul> */} 
         </ContainerFilter >
     )
 }

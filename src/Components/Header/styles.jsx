@@ -10,6 +10,14 @@ export const HeaderContainer = styled.header`
     position:fixed;    
 `
 
+export const SelectOrder = styled.select`
+    color:black;
+`
+
+export const Order = styled.option`
+    color:black;    
+`
+
 export const Logo = styled.div`
     display: flex;    
     width:100vw;
@@ -44,15 +52,15 @@ export const Login = styled.button`
 `
 export const Car = styled.button`
 display:flex;
- cursor: pointer; 
+ cursor: pointer;  
  background-color:#ff4400;
- padding:0 18% 0 0; 
+ padding:0 18% 0 0;
+ border-radius:30%; 
  align-items:center;
  gap:9%;
   transition: transform 200ms ease-in-out;
   
-    :hover{
-        background-color: white;
+    :hover{        
         color: black;
         transform: scale(1.08);
     }

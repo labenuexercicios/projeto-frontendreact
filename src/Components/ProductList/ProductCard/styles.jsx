@@ -5,10 +5,11 @@ width:45vw;
 height: 60vh;  
   overflow-y: auto; 
   position:relative;
-  right:15%;
+  right:20%;
   display:flex;
   flex-wrap:wrap; 
-  gap: 5%;    
+  gap: 3%; 
+  padding: 3%;;   
 `;
 
 export const Item = styled.div`

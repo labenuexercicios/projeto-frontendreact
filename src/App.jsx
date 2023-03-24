@@ -13,6 +13,7 @@ import RegisterUserPage from "./Components/RegisterUser/RegisterUser";
 import RegisterTextMessage from "./Components/RegisterTextMessage/RegisterTextMessage"
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Products from "./Components/ProductList/ProductCard/product.json"
+import SummaryCart from "./Components/Summary/Summary";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -27,8 +28,9 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.div`
   display: flex;
   flex-direction:column;
-  height: 100vh;
+  min-height: 100vh;
   width:100vw; 
+  background-size: contain;
   background-image:url("https://images.pexels.com/photos/1499627/pexels-photo-1499627.jpeg?auto=compress&cs=tinysrgb&w=600");
 
 `;
@@ -41,7 +43,7 @@ const ConteinerMain = styled.main`
 `
 
 const CardsContainer = styled.div`
- width:200vw;
+ width:100vw;
 height:80vh;
   padding:5% 0;
   overflow-y: auto; 
@@ -53,17 +55,17 @@ height:80vh;
 
 function App() {
 
-  const[names, setNames]=useState("")
-  const[email, setEmail] = useState("")
-  const[password, setPassword] = useState("")
-  const[confirmPassword, setConfirmPassword]=useState("")
-  const[address, setAddress]=useState("")
-  const[number, setNumber]=useState("")
-  const[complement, setComplement]=useState("")
+  const [ordenacao, setOrdenacao] = useState("")
+  const [names, setNames] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+  const [address, setAddress] = useState("")
+  const [number, setNumber] = useState("")
+  const [complement, setComplement] = useState("")
 
-  const [minValue, setMinValue] = useState()
-  const [maxValue, setMaxValue] = useState()
-  const [filterItem, setFilterItem] = useState([])
+  const [minValue, setMinValue] = useState(0)
+  const [maxValue, setMaxValue] = useState(0)
   const [query, setQuery] = useState("")
   const [cartItems, setCartItems] = useState([]);
 
@@ -81,82 +83,119 @@ function App() {
     }
     return value.toLocaleString('pt-br', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
-  
+  const addToCart = (product) => {
+    const newProd = cartItems.find((item) => item.id === product.id)
+    if (newProd === undefined) {
+      setCartItems([...cartItems, product])
+    } else {
+      const newCart = cartItems.map((item) => {
+        if (item.id === product.id) {
+          return { ...newProd, amount: newProd.amount + 1 }
+        } else {
+          return item
+        }
+      })
+      setCartItems(newCart);
+    }/* else{
+      props.setCartItems ([...props.cards, {...index, amount:1}])
+    } */
+  }
+
   const renderPage = () => {
     switch (valueConditional) {
       case 1:
-        return <Header        
-        changePage={changePage} />
+        return <Header
+          changePage={changePage}
+          cartItems={cartItems}
+          ordenacao={ordenacao}
+          setOrdenacao={setOrdenacao}
+        />
       case 2:
-        return <LoginPage        
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        changePage={changePage}        
+        return <LoginPage
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          changePage={changePage}
         />
       case 3:
         return <RegisterPage
-        names={names} 
-        setNames={setNames}
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        confirmPassword={confirmPassword}
-        setConfirmPassword={setConfirmPassword}
-        changePage={changePage}
+          names={names}
+          setNames={setNames}
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          confirmPassword={confirmPassword}
+          setConfirmPassword={setConfirmPassword}
+          changePage={changePage}
         />
       case 4:
         return <AddressRegisterPage
-        address={address}
-        setAddress={setAddress}
-        number={number}
-        setNumber={setNumber}
-        complement={complement}
-        setComplement={setComplement}
-        changePage={changePage}
+          address={address}
+          setAddress={setAddress}
+          number={number}
+          setNumber={setNumber}
+          complement={complement}
+          setComplement={setComplement}
+          changePage={changePage}
         />
       case 5:
-        return <RegisterUserPage 
-        names={names}
-        email={email}
-        address={address}
-        number={number}
-        complement={complement}
-        changePage={changePage}
+        return <RegisterUserPage
+          names={names}
+          email={email}
+          address={address}
+          number={number}
+          complement={complement}
+          changePage={changePage}
         />
       case 6:
-        return <ContactUs 
-        names={names}
-        setNames={setNames}
-        email={email}
-        setEmail={setEmail}
-        changePage={changePage}
+        return <ContactUs
+          names={names}
+          setNames={setNames}
+          email={email}
+          setEmail={setEmail}
+          changePage={changePage}
         />
       case 7:
         return <RegisterTextMessage
-        names={names}
-        email={email}
-        changePage={changePage}
-         />
+          names={names}
+          email={email}
+          changePage={changePage}
+        />
       case 8:
         return <ShoppingCar
           cartItems={cartItems}
           setCartItems={setCartItems}
-          changePage={changePage}          
+          changePage={changePage}
           cards={cards}
           setCards={setCards}
-          currencyBrazil={currencyBrazil} 
-          /> 
+          currencyBrazil={currencyBrazil}
+          addToCart={addToCart}
+        />
+      case 9:
+        return <SummaryCart
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+          changePage={changePage}
+          cards={cards}
+          setCards={setCards}
+          currencyBrazil={currencyBrazil}
+          addToCart={addToCart}
+        />
     }
   }
+
+
+
   return (
     <>
       <GlobalStyle />
       <Container>
         <Header
-        cartItems={cartItems} 
+          ordenacao={ordenacao}
+          setOrdenacao={setOrdenacao}
+          cartItems={cartItems}
         />
         {renderPage()}
         <ConteinerMain>
@@ -164,35 +203,25 @@ function App() {
             cards={cards}
             minValue={minValue}
             maxValue={maxValue}
-            filerItem={filterItem}            
             setMinValue={setMinValue}
             setMaxValue={setMaxValue}
-            setFilterItem={setFilterItem}
             query={query}
             setQuery={setQuery}
+            ordenacao={ordenacao}
           />
           <CardsContainer>
-            
-            {/*  filterItem
-                 .filter((item) => {
-                  return item.title.toLowerCase().includes(query.toLowerCase())
-                })
-                .filter((item) => {
-
-                  return item ? item.price.includes(minValue) : item
-                })
-                .filter((item) => {
-
-                  return item ? item.price.includes(maxValue) : item
-                })  
-                */}
-                  <ProductCard
-                  cards={cards}
-                  setCards={setCards}
-                  cartItems={cartItems}
-                  setCartItems={setCartItems}
-                  currencyBrazil={currencyBrazil}
-                  />
+            <ProductCard
+              addToCart={addToCart}
+              cards={cards}
+              setCards={setCards}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              currencyBrazil={currencyBrazil}
+              query={query}
+              minValue={minValue}
+              maxValue={maxValue}
+              ordenacao={ordenacao}
+            />
           </CardsContainer>
         </ConteinerMain>
         <Footer />
