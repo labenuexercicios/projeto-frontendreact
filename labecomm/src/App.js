@@ -26,7 +26,7 @@ const products = [
   },
   {
     id: 4,
-    name: 'ET Doidão',
+    name: 'ET Doidão 01',
     price: 120,
     photo: 'https://tse2.mm.bing.net/th?id=OIP._IFPEljR703jqfHMmT2l4gHaHa&pid=Api&P=0'
   }
