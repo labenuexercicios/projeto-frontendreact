@@ -1,0 +1,31 @@
+.busca{
+  display: flex;
+  
+}
+.qtde{
+  color: black;
+  padding: 5px;
+
+}
+.rede{
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  text-decoration: none;
+  list-style: none;
+}
+
+.buscar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 8rem;
+  padding: 140px;
+}
+
+.carrin{
+  display: flex;
+  padding: 20px;
+  gap: 1rem;
+}
