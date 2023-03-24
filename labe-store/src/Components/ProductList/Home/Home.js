@@ -1,7 +1,7 @@
 import ProductCard from "../ProductCard/ProductCard";
-import { DivHome, Select, DivSelect, DivTotal } from "./homeStyle";
+import { DivHome, Select, DivSelect, DivTotal, H3 } from "./homeStyle";
 
-export default function Home({Products, search, order, setOrder, addCart,setAddCart, addToCart}){
+export default function Home({Products, search, order, setOrder, addCart,setAddCart, addToCart, minValue, maxValue}){
 
     const handleOrder = (e) =>{
         setOrder(e.target.value)
@@ -11,6 +11,7 @@ export default function Home({Products, search, order, setOrder, addCart,setAddC
     return(
         <DivTotal>
             <DivSelect>
+                <H3>Quantidade de produtos: {Products.length}</H3>
                 <Select 
                 onChange={handleOrder}
                 value={order}>
@@ -31,7 +32,11 @@ export default function Home({Products, search, order, setOrder, addCart,setAddC
                 {Products.filter((product)=>{
                     return product.name.toLowerCase().includes(search.toLowerCase())
                 
-                }).sort((a,b)=> order === "" || order === "crescente" &&
+                }).filter((product) => 
+                    product.value > Number(minValue)
+                ).filter((product) =>
+                    product.value < Number(maxValue)
+                ).sort((a,b)=> order === "" || order === "crescente" &&
                 a.name > b.name ? 1 : -1                    
                 
                 ).sort((a,b) => order === "decrescente" && 

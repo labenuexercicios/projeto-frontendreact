@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const DivCard = styled.div`
     border: 1px solid white;
-    width: 17.6vw;
-    height: 48vh;
+    width: 10w;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0 2rem 1.1rem;
+    margin: 2rem 0 1rem 1.1rem;
     line-height: 2rem;
     background-color: white;
     border-radius: 8px;
@@ -22,7 +22,8 @@ export const DivCard = styled.div`
 export const P = styled.p`
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    
+    font-size: 0.8em;
+    font-weight: 500;
 `
 
 export const Button = styled.button`

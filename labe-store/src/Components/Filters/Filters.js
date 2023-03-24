@@ -1,7 +1,10 @@
 import { DivFilter, InputFilter, Img } from "./filtersStyle";
 
 
-export default function Filters(){
+export default function Filters({minValue, setMinValue, maxValue, setMaxValue}){
+
+    
+
     return (
         <DivFilter>
             <h2>Pesquisar</h2>
@@ -9,13 +12,17 @@ export default function Filters(){
             <p>Valor mínimo:</p>
             <InputFilter
             type="number"
-            min={0}/>
+            min="0"
+            value={minValue}
+            onChange={(e) => setMinValue(e.target.value)}/>
 
             <p>Valor máximo:</p>
             <InputFilter
-            type="number"/>
+            type="number"
+            min="100"
+            value={maxValue}
+            onChange={(e) => setMaxValue(e.target.value)}/>
 
-            <Img src="https://i.pinimg.com/736x/19/55/d6/1955d6d5362a4ba9e925ad98ed0a48eb.jpg" width={200}/>
 
         </DivFilter>
     )

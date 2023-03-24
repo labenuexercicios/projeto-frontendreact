@@ -9,9 +9,11 @@ export const DivItens = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 15vh;
-    width: 14vw;
+    height: 22vh;
+    width: 8vw;
     border-radius: 10px;
+    gap: 0.7rem;
+    text-align: center;
     :hover{
         transform: scale(1.1);
         border: 4px solid black;
@@ -26,4 +28,12 @@ export const ButtonRemove = styled.button`
     :active{
         font-size: 12px;
     }
+`
+
+export const NameProduct = styled.h3`
+    text-align: center;
+`
+
+export const H3 = styled.h3`
+  font-size: 0.8em;
 `

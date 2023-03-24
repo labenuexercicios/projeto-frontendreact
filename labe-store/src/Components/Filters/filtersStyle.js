@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const DivFilter = styled.div`
     width: 20vw;
     line-height: 2rem;
+    margin-top: 8rem;
 `
 
 export const InputFilter = styled.input`

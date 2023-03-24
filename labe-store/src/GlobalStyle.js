@@ -17,26 +17,26 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     body{
-        background-color: rgb(58,14,128);
-        height:100vh
+        background-color: #4F4F4F;
+        border-right: 1px solid white;
     }
 
     main{
         display:flex;
         justify-content: space-between;
         padding: 1rem;
+        border: 1px solid white;
+        height: 160vh;
     }
 
     h1{
         font-family: 'Jolly Lodger', cursive;
-        color: var(--yellow);
+
         font-size: 5em;
     }
 
     h2{
         font-family: 'Shrikhand', cursive;
-        color: var(--yellow);
-        
     }
 
     p{
@@ -49,5 +49,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     
 
-
+    footer{
+        border: 1px solid white;
+        background-color: #A9A9A9;
+        color: black;
+    }
 `

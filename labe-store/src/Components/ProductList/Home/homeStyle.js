@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const DivHome = styled.div`
-    width: 60vw;
+    width: 59vw;
     display: flex;
     flex-wrap: wrap;
 `
@@ -22,5 +22,9 @@ export const DivSelect = styled.div`
 
 export const DivTotal = styled.div`
     height: 100vh;
-    
+`
+
+export const H3 = styled.h3`
+    color: white;
+    margin-right: 6rem;
 `

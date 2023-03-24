@@ -5,6 +5,7 @@ import Cart from "./Components/ShoppingCart/Cart/Cart";
 import { GlobalStyle } from "./GlobalStyle";
 import {Products} from "./Components/assents/ProductsList"
 import { useState } from "react";
+import Footer from "./Components/Footer/Footer";
 
 
 
@@ -13,6 +14,8 @@ function App() {
   const [ search, setSearch] = useState("");
   const [ order, setOrder] = useState("");
   const [addCart, setAddCart] = useState([]);
+  const [minValue, setMinValue] = useState("");
+  const [maxValue, setMaxValue] = useState(500);
 
   
 
@@ -91,7 +94,11 @@ function App() {
 
         <main>
           <nav>
-            <Filters/>
+            <Filters
+            minValue={minValue}
+            setMinValue={setMinValue}
+            maxValue={maxValue}
+            setMaxValue={setMaxValue}/>
           </nav>
 
           <article>
@@ -101,7 +108,10 @@ function App() {
             order={order}
             setOrder={setOrder}
             addToCart={addToCart}
-            />
+            minValue={minValue}
+            setMinValue={setMinValue}
+            maxValue={maxValue}
+            setMaxValue={setMaxValue}/>
           </article>
 
           <section>
@@ -116,6 +126,9 @@ function App() {
           </section>
 
         </main>
+        <footer>
+          <Footer/>
+        </footer>
       </div>
     ) 
 }
