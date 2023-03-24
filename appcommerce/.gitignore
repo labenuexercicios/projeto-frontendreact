@@ -1,0 +1,76 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+  return (
+    <div>
+      {showModal ? (
+        <Background onClick={closeModal} ref={modalRef}>
+            <ModalWrapper showModal={showModal}>
+              <Card key={product.key}>
+              <ModalImg /* src={require('../../assets/imgs/SpaceKids_Cart.svg')} alt='produto' */  src={product.imageUrl}
+            alt={product.imageAlt}/>
+              <ModalContent>
+              <h2>{product.name}</h2>
+              <h1>R$ {product.value.toFixed(2).replace(".", ",")}</h1>
+              <h4>
+                Ou em 3x de{" "}
+                {(product.value / 3).toFixed(2).replace(".", ",")}
+              </h4>
+              <p>{product.description}</p>
+              <small>
+                <strong>Categoria:</strong> {product.category}
+              </small>
+              <Button
+                onClick={() => {addProductCart(product, product.id);
+                setCartIsOpen("0")}}>
+
+                </Button>
+              </ModalContent>
+              </Card>
+              <CloseModalButton
+                aria-label='Close modal'
+                onClick={() => setShowModal(prev => !prev)}
+              />
+            </ModalWrapper>
+        </Background>
+      ) : null}
+    </div>
+  );
+};
+
+return (
+    <div>
+      {showModal ? (
+        <Background onClick={closeModal} ref={modalRef}>
+            <ModalWrapper showModal={showModal}>
+              <ModalImg src={require('../../assets/imgs/SpaceKids_Cart.svg')} alt='produto' />
+              <ModalContent>
+              <h2>nome produto</h2>
+              <p>descrição</p>
+              </ModalContent>
+              <CloseModalButton
+                aria-label='Close modal'
+                onClick={() => setShowModal(prev => !prev)}
+              />
+            </ModalWrapper>
+        </Background>
+      ) : null}
+    </div>
+  );
+};
