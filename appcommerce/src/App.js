@@ -23,7 +23,6 @@ const Container = styled.div`
 `;
 
 const App = () => {
-  const [productModal, setProductModal] = useState({});
   const [screen, setScreen] = useState(1);
   const [titleCategory, setTitleCategory] = useState("Produtos");
   const [arrayProducts, setArrayProducts] = useState(products);
@@ -40,11 +39,6 @@ const App = () => {
   const [itemAmount, setItemAmount] = useState(0);
   const [menuMobileIsOpen, setMenuMobileIsOpen] = useState("-120%");
 
-  const [showModal, setShowModal] = useState(false)
-  const openModal = (product) => {
-    setShowModal(prev => !prev) 
-    setProductModal(product)
-  } 
   const handleScreen = (number) => setScreen(number);
   const handleTitleCategory = (title) => setTitleCategory(title);
   const handleArrayProducts = (array) => setArrayProducts(array);
@@ -138,11 +132,6 @@ const App = () => {
             setCartIsOpen={setCartIsOpen}
             handleScreen={handleScreen}
             addProductToDetails={addProductToDetails}
-            openModal ={openModal}
-            showModal ={showModal}
-            setShowModal ={setShowModal}
-            productModal ={productModal}
-
           />
         );
       });

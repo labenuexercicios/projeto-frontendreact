@@ -47,6 +47,7 @@ const ShoppingCart = ({
 
   const cartItemRender = () =>
     cart.map((product) => {
+      console.log(product)
       return (
         <CartItem
           key={product.id}
