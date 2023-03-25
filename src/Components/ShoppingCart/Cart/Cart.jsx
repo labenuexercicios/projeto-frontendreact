@@ -3,11 +3,6 @@ import { ConteinerCar, Carrinho, P, FormContainer, H1, Form, SetButton, Register
 import bin from "./bin.png"
 
 const ShoppingCar = (props) => {
-
-  /* const increaseQuantity = (index) => {
-    const newCartItems = [...props.cartItems];
-    newCartItems[index].amount += 1;
-    props.setCartItems(newCartItems);} */
   
   const removeItem = (index) => {
     const newCartItems = [...props.cartItems];
@@ -25,12 +20,6 @@ const ShoppingCar = (props) => {
     props.setCartItems(newCartItems);
   }
 
-  let allValue = 0
-
-  for (let prod of props.cartItems){
-    const multiProd = prod.price * prod.amount
-    allValue = allValue + multiProd
-  } 
   
   return (
     <ConteinerCar>
@@ -46,8 +35,7 @@ const ShoppingCar = (props) => {
                   <p>{item.amount===1?props.currencyBrazil(item.price,true): props.currencyBrazil(item.price*item.amount,true)}</p >
                   <p>Quantidade:{item.amount}</p>
                   <div>
-                    <SetButton onClick={() => {props.addToCart(item)}}>+</SetButton>
-                    {/* <SetButton onClick={() => decreaseQuantity(index, removeItem)}>-</SetButton> */}
+                    <SetButton onClick={() => {props.addToCart(item)}}>+</SetButton>                   
                     <Bin onClick={() => decreaseQuantity(index, removeItem)}><img src={bin} alt="" width="16px" /></Bin>
                   </div>
                 </P>
@@ -55,7 +43,7 @@ const ShoppingCar = (props) => {
               <div>
                 <RegisterButton onClick={() => props.changePage(9)}>Concluir Compra</RegisterButton>
               </div>
-             <p>Valor Total:{allValue}</p>
+             
             </Form>)
         })}
              

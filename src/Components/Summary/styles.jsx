@@ -20,7 +20,7 @@ gap:5%;
 
 export const FormContainer = styled.div`  
   width:45%;
-  min-height:100vh;
+  max-height:80vh;
   position:absolute;
   left:65%;
   top:15%;
@@ -71,16 +71,3 @@ export const SetButton = styled.button`
         transform: scale(1.08);
     }
 `
-export const Bin = styled.button`
-background-color:  #ff4400;
-    border-radius: 8px;    
-    cursor: pointer;
-    width: 30px;
-    padding: 5px;    
-  box-shadow:4px 4px 0px gray;
-  transition: transform 200ms ease-in-out;
-      :hover{
-        background-color: white;
-        color: black;
-        transform: scale(1.08);
-    }`

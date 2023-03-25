@@ -8,8 +8,8 @@ const ContactUs = (props) => {
       <Form>
         <StyledLabel>Nome:
           <Input 
-          value={props.names}
-          onChange={(e)=>{props.setNames(e.target.value)}}
+          value={props.name}
+          onChange={(e)=>{props.setName(e.target.value)}}
           />
         </StyledLabel>
         <StyledLabel>E-mail:

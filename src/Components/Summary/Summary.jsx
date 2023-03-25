@@ -1,25 +1,9 @@
 import React from "react";
-import { ConteinerCar, Carrinho, P, FormContainer, H1, Form, SetButton, RegisterButton, Bin } from "./styles"
-import bin from "../ShoppingCart/Cart/bin.png"
+import { ConteinerCar, Carrinho, P, FormContainer, H1, Form, RegisterButton,  } from "./styles"
 
 
 const SummaryCart = (props) => {
 
-    const removeItem = (index) => {
-        const newCartItems = [...props.cartItems];
-        newCartItems.splice(index, 1);
-        props.setCartItems(newCartItems);
-    }
-
-    const decreaseQuantity = (index, removeItem) => {
-        const newCartItems = [...props.cartItems];
-        if (newCartItems[index].amount === 1) {
-            return removeItem(index)
-        } else {
-            newCartItems[index].amount -= 1;
-        }
-        props.setCartItems(newCartItems);
-    }
     let allValue = 0
 
     for (let prod of props.cartItems) {
@@ -27,34 +11,25 @@ const SummaryCart = (props) => {
         allValue = allValue + multiProd
     }
 
+
     return (
         <>
             <ConteinerCar>
                 <FormContainer >
-                    <H1>Resumo do pedido</H1>
-                    {props.cartItems.map((item, index) => {
-                        return (
-                            <Form key={index}>
+                    <H1>Resumo do pedido</H1>                  
+                            <Form>
                                 <Carrinho>
                                     <P>
-                                        <p>{item.title}</p >
-                                        <p>{item.amount === 1 ? props.currencyBrazil(item.price, true) : props.currencyBrazil(item.price * item.amount, true)}</p >
-                                        <p>Quantidade:{item.amount}</p>
-                                        <div>
-                                            <SetButton onClick={() => { props.addToCart(item) }}>+</SetButton>
-                                            <Bin onClick={() => decreaseQuantity(index, removeItem)}><img src={bin} alt="" width="16px" /></Bin>
-                                        </div>
+                                        <p>Valor Total: {props.currencyBrazil(allValue, true)}</p>
                                     </P>
                                 </Carrinho>
-                                <div>
-                                    <RegisterButton onClick={() => props.changePage(1)}>Concluir Compra</RegisterButton>
-                                </div>
-                            </Form>)
-                    })}
-
-
+                                <P>
+                                    <RegisterButton onClick={() => props.changePage(8)}>Voltar Carrinho</RegisterButton>
+                                    <RegisterButton onClick={() => props.changePage(10)}>Concluir Compra</RegisterButton>
+                                </P>
+                            </Form>
+                    
                 </FormContainer>
-
             </ConteinerCar>
             <p>Valor Total:{allValue}</p>
         </>

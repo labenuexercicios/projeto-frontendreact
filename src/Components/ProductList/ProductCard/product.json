@@ -10,7 +10,7 @@
   {
     "image": "https://uploaddeimagens.com.br/images/004/364/124/original/Berkut.jpg?1677110846",
     "code": "002",
-    "title": "Berkut",
+    "title": "Berkut ",
     "price": 200,
     "id": 1,
     "amount": 1
@@ -18,7 +18,7 @@
   {
     "image": "https://uploaddeimagens.com.br/images/004/364/126/original/gemini.jpg?1677110890",
     "code": "003",
-    "title": "Gemini G4C",
+    "title": "Gemini G4C ",
     "price": 250,
     "id": 2,
     "amount": 1
@@ -26,7 +26,7 @@
   {
     "image": "https://uploaddeimagens.com.br/images/004/364/125/original/Apollo.jpg?1677110864",
     "code": "004",
-    "title": "Apollo A7L",
+    "title": "Apollo A7L ",
     "price": 500,
     "id": 3,
     "amount": 1
@@ -34,7 +34,7 @@
   {
     "image": "https://uploaddeimagens.com.br/images/004/364/127/original/EMU.jpg?1677110907",
     "code": "005",
-    "title": "EMU",
+    "title": "EMU ",
     "price": 750,
     "id": 4,
     "amount": 1
@@ -50,7 +50,7 @@
   {
     "image": "https://uploaddeimagens.com.br/images/004/364/128/original/Mark-III.jpg?1677110931",
     "code": "007",
-    "title": "Mark III",
+    "title": "Mark III ",
     "price": 3000,
     "id": 6,
     "amount": 1
@@ -58,7 +58,7 @@
   {
     "image": "https://uploaddeimagens.com.br/images/004/364/960/original/download_%283%29.jpg?1677171429",
     "code": "008",
-    "title": "Z1",
+    "title": "Z1 ",
     "price": 380,
     "id": 7,
     "amount": 1

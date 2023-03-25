@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import FilterCart from "./Components/Filters/FilterCart";
 import ProductCard from "./Components/ProductList/ProductCard/ProductCard";
@@ -14,6 +14,7 @@ import RegisterTextMessage from "./Components/RegisterTextMessage/RegisterTextMe
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Products from "./Components/ProductList/ProductCard/product.json"
 import SummaryCart from "./Components/Summary/Summary";
+import Finished from "./Components/Finished/Finished";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -28,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.div`
   display: flex;
   flex-direction:column;
-  min-height: 100vh;
+  height: 100vh;
   width:100vw; 
   background-size: contain;
   background-image:url("https://images.pexels.com/photos/1499627/pexels-photo-1499627.jpeg?auto=compress&cs=tinysrgb&w=600");
@@ -56,7 +57,7 @@ height:80vh;
 function App() {
 
   const [ordenacao, setOrdenacao] = useState("")
-  const [names, setNames] = useState("")
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
@@ -67,8 +68,7 @@ function App() {
   const [minValue, setMinValue] = useState(0)
   const [maxValue, setMaxValue] = useState(0)
   const [query, setQuery] = useState("")
-  const [cartItems, setCartItems] = useState([]);
-
+  const [cartItems, setCartItems] = useState([]);  
   const [cards, setCards] = useState(Products)
 
   const [valueConditional, setValueConditional] = useState(1)
@@ -76,6 +76,22 @@ function App() {
   const changePage = (values) => {
     setValueConditional(values)
   }
+
+  /* useEffect(() => {
+    const listCart = localStorage.getItem("Items")
+    if (listCart) {
+      const loadingArray = JSON.parse(cartItems)
+      setCartItems(loadingArray)
+    }
+  }, []);
+
+  useEffect(() => {
+    const listCart = JSON.stringify(cartItems)
+    if (listCart) {
+      localStorage.setItem("Items", listCart)
+    }    
+  },[]) */
+
   function currencyBrazil(value, symbol) {
     if (!value) return null
     if (symbol) {
@@ -96,9 +112,7 @@ function App() {
         }
       })
       setCartItems(newCart);
-    }/* else{
-      props.setCartItems ([...props.cards, {...index, amount:1}])
-    } */
+    }
   }
 
   const renderPage = () => {
@@ -120,8 +134,8 @@ function App() {
         />
       case 3:
         return <RegisterPage
-          names={names}
-          setNames={setNames}
+          name={name}
+          setName={setName}
           email={email}
           setEmail={setEmail}
           password={password}
@@ -142,7 +156,7 @@ function App() {
         />
       case 5:
         return <RegisterUserPage
-          names={names}
+          name={name}
           email={email}
           address={address}
           number={number}
@@ -151,15 +165,15 @@ function App() {
         />
       case 6:
         return <ContactUs
-          names={names}
-          setNames={setNames}
+          name={name}
+          setName={setName}
           email={email}
           setEmail={setEmail}
           changePage={changePage}
         />
       case 7:
         return <RegisterTextMessage
-          names={names}
+          name={name}
           email={email}
           changePage={changePage}
         />
@@ -171,7 +185,7 @@ function App() {
           cards={cards}
           setCards={setCards}
           currencyBrazil={currencyBrazil}
-          addToCart={addToCart}
+          addToCart={addToCart}  
         />
       case 9:
         return <SummaryCart
@@ -182,6 +196,12 @@ function App() {
           setCards={setCards}
           currencyBrazil={currencyBrazil}
           addToCart={addToCart}
+        />
+      case 10:
+        return <Finished
+          cartItems={cartItems}
+          name={name}
+          changePage={changePage}
         />
     }
   }
@@ -220,7 +240,7 @@ function App() {
               query={query}
               minValue={minValue}
               maxValue={maxValue}
-              ordenacao={ordenacao}
+              ordenacao={ordenacao}              
             />
           </CardsContainer>
         </ConteinerMain>

@@ -20,7 +20,7 @@ gap:5%;
 
 export const FormContainer = styled.div`  
   width:45%;
-  min-height:100vh;
+  max-height:80vh;
   position:absolute;
   left:65%;
   top:15%;
@@ -37,7 +37,7 @@ export const Form = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;  
+  gap: 5%;  
 `;
 
 export const Input = styled.input` 

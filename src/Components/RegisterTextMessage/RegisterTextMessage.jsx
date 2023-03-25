@@ -7,7 +7,7 @@ const RegisterTextMessage = (props)=>{
    
     return (
         <FormContainer>
-       <h1>{props.names} sua mensagem foi enviada com sucesso!</h1>       
+       <h1>{props.name} sua mensagem foi enviada com sucesso!</h1>       
        <SendButton onClick={() => props.changePage(1)}>Voltar as Compras</SendButton>
        </FormContainer>
     )
