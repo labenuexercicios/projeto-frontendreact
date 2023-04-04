@@ -1,0 +1,866 @@
+[
+    {
+        "id": "001",
+        "type": "spaceship",
+        "title": "Cosmic Voyager",
+        "img": "/img/space1.png",
+        "img2": "",
+        "oldPrice": 999899,
+        "price": 412312,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "002",
+        "type": "spaceship",
+        "title": "Galactic Odyssey",
+        "img": "/img/space2.png",
+        "img2": "/img/space4.png",
+        "oldPrice": false,
+        "price": 321412,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "003",
+        "type": "spaceship",
+        "title": "Gravity Explorer",
+        "img": "/img/space3.png",
+        "img2": "",
+        "oldPrice": 555555,
+        "price": 555554,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "004",
+        "type": "spaceship",
+        "title": "Hyperion Sentinel",
+        "img": "/img/space4.png",
+        "img2": "",
+        "oldPrice": 555152,
+        "price": 124123,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "005",
+        "type": "spaceship",
+        "title": "Orion's Fury",
+        "img": "/img/space5.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 23012,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "006",
+        "type": "spaceship",
+        "title": "Solar Wind Chaser",
+        "img": "/img/space6.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 42331,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "007",
+        "type": "spaceship",
+        "title": "Cosmos Destroyer",
+        "img": "/img/space7.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 99322,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "008",
+        "type": "spaceship",
+        "title": "Andromeda V2 1331AC",
+        "img": "/img/space8old.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 344221,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "009",
+        "type": "spaceship",
+        "title": "Nova Watchdog",
+        "img": "/img/space9.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 32331,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "010",
+        "type": "spaceship",
+        "title": "Nova Watchdog v2",
+        "img": "/img/space9v2.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 87442,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "011",
+        "type": "spaceship",
+        "title": "Blue Celestial Nomad",
+        "img": "/img/space10.png",
+        "img2": "",
+        "oldPrice": 555151,
+        "price": 312412,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "012",
+        "type": "spaceship",
+        "title": "Milky Way Express",
+        "img": "/img/space11.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 412314,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "013",
+        "type": "spaceship",
+        "title": "Infinity Runner",
+        "img": "/img/space12.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 194325,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "014",
+        "type": "spaceship",
+        "title": "Golden Kamuy",
+        "img": "/img/space13.png",
+        "img2": "",
+        "oldPrice": 1000000,
+        "price": 999999,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "015",
+        "type": "spaceship",
+        "title": "Tera Centurion",
+        "img": "/img/space14.png",
+        "img2": "",
+        "oldPrice": 122299,
+        "price": 98999,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "016",
+        "type": "spaceship",
+        "title": "Green Moon",
+        "img": "/img/spaceAnime1.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 43222,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "017",
+        "type": "spaceship",
+        "title": "SRALRL AA Blueprint",
+        "img": "/img/spaceblueprint4.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 31000,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "018",
+        "type": "spaceship",
+        "title": "SLLIRAIC SS Blueprint",
+        "img": "/img/spaceblueprint1.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 1991,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "019",
+        "type": "creatures",
+        "title": "",
+        "img": "/img/creatureHero2.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 20000,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "020",
+        "type": "creatures",
+        "title": "Celestiphid",
+        "img": "/img/creatureHero.png",
+        "img2": "",
+        "oldPrice": 53613,
+        "price": 32182,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "021",
+        "type": "creatures",
+        "title": "Chitinus",
+        "img": "/img/creature1.png",
+        "img2": "",
+        "oldPrice": 223499,
+        "price": 123299,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "022",
+        "type": "creatures",
+        "title": "Rootrunner",
+        "img": "/img/creature2.png",
+        "img2": "",
+        "oldPrice": 37828,
+        "price": 23415,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "023",
+        "type": "creatures",
+        "title": "Fernback",
+        "img": "/img/creature3.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 878732,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "024",
+        "type": "creatures",
+        "title": "Quicksandmole",
+        "img": "/img/creat4.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 788868,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "025",
+        "type": "creatures",
+        "title": "Siltcrawler",
+        "img": "/img/creat5.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 677442,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "026",
+        "type": "creatures",
+        "title": "Spacepillar",
+        "img": "/img/creat6.png",
+        "img2": "",
+        "oldPrice": 77673,
+        "price": 56674,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "027",
+        "type": "creatures",
+        "title": "SpringDesert",
+        "img": "/img/creat7.png",
+        "img2": "",
+        "oldPrice": 897793,
+        "price": 599999,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "028",
+        "type": "creatures",
+        "title": "Meu tio",
+        "img": "/img/creat8.png",
+        "img2": "",
+        "oldPrice": 199,
+        "price": 199,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "029",
+        "type": "creatures",
+        "title": "MechaMilk",
+        "img": "/img/creat9.png",
+        "img2": "",
+        "oldPrice": 67897,
+        "price": 32441,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "030",
+        "type": "creatures",
+        "title": "TamanduaQuiBrilha",
+        "img": "/img/creat10.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 7732,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "031",
+        "type": "creatures",
+        "title": "MechaTiger",
+        "img": "/img/creat11.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 999999,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "032",
+        "type": "creatures",
+        "title": "Gatinho",
+        "img": "/img/creat12.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 1000000,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "033",
+        "type": "creatures",
+        "title": "Jolteon",
+        "img": "/img/creat13.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 889238,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "034",
+        "type": "creatures",
+        "title": "BrightScale",
+        "img": "/img/creat14.png",
+        "img2": "",
+        "oldPrice": 893218,
+        "price": 799239,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "035",
+        "type": "creatures",
+        "title": "ChromaShift",
+        "img": "/img/creat15.png",
+        "img2": "",
+        "oldPrice": 32442,
+        "price": 22314,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "036",
+        "type": "creatures",
+        "title": "Emberspark",
+        "img": "/img/creat16.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 32441,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "037",
+        "type": "creatures",
+        "title": "Cyanocub",
+        "img": "/img/creat17.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 87742,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "038",
+        "type": "creatures",
+        "title": "Astrothrix",
+        "img": "/img/creat18.png",
+        "img2": "",
+        "oldPrice": 998923,
+        "price": 500000,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "039",
+        "type": "spacesuits",
+        "title": "Ramn Robot Fighter",
+        "img": "/img/suit.png",
+        "img2": "",
+        "oldPrice": 32712,
+        "price": 19999,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "040",
+        "type": "spacesuits",
+        "title": "SpaceGoomTech",
+        "img": "/img/suitHero.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 55421,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "041",
+        "type": "spacesuits",
+        "title": "Twins Thunme",
+        "img": "/img/suit1.png",
+        "img2": "",
+        "oldPrice": 292121,
+        "price": 199412,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "042",
+        "type": "spacesuits",
+        "title": "OrchestryGodSuit",
+        "img": "/img/suit2.png",
+        "img2": "",
+        "oldPrice": 32188,
+        "price": 19988,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "043",
+        "type": "spacesuits",
+        "title": "TechSuit Nimbus9000",
+        "img": "/img/suit3.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 321788,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "044",
+        "type": "spacesuits",
+        "title": "Nature Airtechgod",
+        "img": "/img/suit4.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 321881,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "045",
+        "type": "spacesuits",
+        "title": "Forest Seeker",
+        "img": "/img/suit5.png",
+        "img2": "",
+        "oldPrice": 898921,
+        "price": 879721,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "046",
+        "type": "spacesuits",
+        "title": "Police K0 Nighter",
+        "img": "/img/suit6.png",
+        "img2": "",
+        "oldPrice": 89831,
+        "price": 89231,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "047",
+        "type": "spacesuits",
+        "title": "Space7k00",
+        "img": "/img/suit7.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 99213,
+        "isNew": false,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "048",
+        "type": "spacesuits",
+        "title": "Scavenger-98",
+        "img": "/img/suit8.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 898913,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "049",
+        "type": "spacesuits",
+        "title": "PilotSuit-42",
+        "img": "/img/suit9.png",
+        "img2": "",
+        "oldPrice": 899329,
+        "price": 344241,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "050",
+        "type": "spacesuits",
+        "title": "PilotSuit-91",
+        "img": "/img/suit10.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 89832,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "051",
+        "type": "spacesuits",
+        "title": "K880-War",
+        "img": "/img/suit11.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 893241,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "052",
+        "type": "spacesuits",
+        "title": "Bee-811-Seeker",
+        "img": "/img/suit12.png",
+        "img2": "",
+        "oldPrice": false,
+        "price": 412432,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "053",
+        "type": "spacesuits",
+        "title": "LSA-M21-Sand",
+        "img": "/img/suit13.png",
+        "img2": "",
+        "oldPrice": 123311,
+        "price": 21332,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    },
+    {
+        "id": "054",
+        "type": "spacesuits",
+        "title": "XRP-42-Desert",
+        "img": "/img/suit14.png",
+        "img2": "",
+        "oldPrice": 24142,
+        "price": 32132,
+        "isNew": true,
+        "seller": "blablablaIndustry",
+        "tags": [
+            "spaceship",
+            "space"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, exercitationem unde corporis assumenda officia placeat voluptatum voluptate tempore cum itaque, dicta et nisi laboriosam."
+    }
+]

@@ -1,0 +1,222 @@
+@font-face {
+    font-family: "Abrashe";
+    src: local("Abrashe"),
+        url("../../fonts/Abrashe/Abrashe.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Shanders";
+    src: local("Shanders"),
+        url("../../fonts/Shanders/Shanders\ free.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Dune_Rise";
+    src: local("Dune_Rise"),
+        url("../../fonts/Dune/Dune_Rise.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "High Jersey";
+    src: local("High Jersey"),
+        url("../../fonts/High/High\ Jersey.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Logirent";
+    src: local("Logirent"),
+        url("../../fonts/Logirent/Logirent-Regular\ Demo.otf") format("truetype");
+    font-weight: bold;
+}
+
+
+.navbar {
+    height: 160px;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+}
+
+.backgroundnav1 {
+    height: 60%;
+}
+
+.wrapper {
+    margin-top: 0px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    position: relative;
+}
+
+.left {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 50px;
+    width: 10vw;
+    left: 40vw;
+    top: 30px;
+}
+
+.imglogo span {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    font-size: 40px;
+    font-family: "Logirent";
+    text-decoration: none;
+    color: #2879fe;
+    margin-left: -60px;
+}
+
+
+
+.mid img {
+    margin-top: 40px;
+    transform: scaleX(-1);
+    width: 150px;
+    height: auto;
+    z-index: -1;
+}
+
+.mid img:first-child {
+    z-index: 1;
+}
+
+.right {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.itemNavBar {
+    margin-left: 20px;
+    display: flex;
+    letter-spacing: 0.05em;
+    font-size: clamp(0.75rem, 2.8vw + 0.2rem, 1.1rem);
+    font-weight: 600;
+}
+
+.itemNavBar span {
+    font-family: "High Jersey";
+    color: black;
+    font-size: 24px;
+}
+
+.itemNobu span {
+    font-family: "Shanders";
+    font-size: 48px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.item1 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    cursor: pointer;
+
+}
+
+.cartIcon {
+    position: relative;
+}
+
+.spanIcon {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(0, 213, 255);
+    background: linear-gradient(50deg, rgba(0, 213, 255, 1) 24%, rgba(104, 0, 255, 1) 100%);
+    color: white;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapperSearch {
+    text-align: center;
+}
+
+.search {
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 50px;
+    transition: 0.4s;
+    margin-right: -10px;
+}
+
+.search:hover {
+    background: rgba(100, 64, 108, 0.328);
+}
+
+.search:hover input {
+    max-width: 400px;
+}
+
+.search input {
+    background: transparent;
+    border: 0;
+    max-width: 0;
+    padding: 0;
+    text-indent: 12px;
+    color: #f9f9f9;
+    font-size: 22px;
+    font-family: "Poppins";
+    outline: none;
+    transition: 0.4s;
+}
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.903);
+}
+
+.searchIcon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    background: #8f44fd;
+    color: #f9f9f9;
+    border-radius: inherit;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.cartIcon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    background: #8f44fd;
+    color: #f9f9f9;
+    border-radius: inherit;
+    font-size: 18px;
+    pointer-events: none;
+}

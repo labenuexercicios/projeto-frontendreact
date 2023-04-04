@@ -1,0 +1,427 @@
+:root {
+
+    --glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
+    --duration: 6.0s;
+
+}
+
+@font-face {
+    font-family: "High Jersey";
+    src: local("High Jersey"),
+        url("../../fonts/High/High\ Jersey.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Tabela";
+    src: local("Tabela"),
+        url("../../fonts/Tabela/TABELA\ Regular.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Shodo";
+    src: local("Shodo"),
+        url("../../fonts/Shodo/Shodo_font190430-Regular.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Sigilos";
+    src: local("Sigilos"),
+        url("../../fonts/Sigilos/Sigilos\ de\ Conhecimento.ttf") format("truetype");
+    font-weight: bold;
+}
+
+.creaturesBody {
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: static;
+    z-index: -2;
+}
+
+.creaturesHome {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.backgroundCreaturesHome {
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+
+.creaturesDesc {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 600px;
+}
+
+.creaturesTopDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.title-fade {
+    font-family: "Tabela";
+    font-size: 120px;
+    color: white;
+    text-shadow: -2px -2px 2px rgba(255, 255, 255, 0.5), 2px -2px 0px rgba(255, 255, 255, 0.5), 1px 1px 0px rgba(0, 0, 0, 0.5), 1px -1px 0px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 30%;
+    left: -30%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.show {
+    opacity: 1;
+    z-index: 2;
+}
+
+.creaturesBottomDesc {
+    color: white;
+    font-family: "Sigilos";
+    font-size: 48px;
+    text-align: center;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.194));
+}
+
+
+.fade-in {
+    animation: fade 0.5s ease-in-out;
+}
+
+
+.imgCreaturesHome {
+    height: 100%;
+    display: flex;
+    margin-top: 10vh;
+
+}
+
+
+
+
+@keyframes tilt {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0.01px) rotateY(-23deg) rotateX(11deg);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0.01px) rotateY(23deg) rotateX(11deg);
+    }
+
+}
+
+@keyframes bg {
+
+    0%,
+    100% {
+        background-position: 50% 50%, calc(50% + 1px) calc(50% + 1px), 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 50%, calc(50% - 1px) calc(50% - 1px), 100% 50%;
+    }
+
+}
+
+.shadow {
+    filter: drop-shadow(10px 10px 200px #ff00ff) drop-shadow(-10px -10px 50px #ff00ff);
+    position: absolute;
+    z-index: -2;
+}
+
+.triangle-wrapper {
+    width: 30vw;
+    height: calc(30vw / (1/ 1));
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #ff00ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -2;
+}
+
+.triangle {
+    position: relative;
+    z-index: -2;
+    width: calc(30vw - 30px);
+    height: calc(30vw - 30px);
+    background-color: black;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin-top: 10px;
+    filter: blur(115px) drop-shadow(-10px -10px 75px #ff00ff);
+}
+
+.iconsHome {
+    display: flex;
+    gap: 0 20px;
+}
+
+.first {
+    color: white;
+    font-family: "Shodo";
+    font-size: 52px;
+    cursor: pointer;
+}
+
+
+
+
+.card-front {
+    --image-src: url(/public/img/creat15.png);
+}
+
+.card-front {
+
+    margin-top: 26vh;
+    max-height: 600px;
+    transform: translate3d(0, 0, 0.01px);
+    max-width: 400px;
+    aspect-ratio: 2/3;
+    transition: background 2s;
+    border-radius: 7% 7% 7% 7% / 5% 5% 5% 5%;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-image: var(--image-src) !important;
+    box-shadow: 0 30px 40px -25px rgba(15, 5, 20, 1), 0 20px 50px -15px rgba(15, 5, 20, 1);
+    overflow: hidden;
+    animation: tilt var(--duration) ease infinite;
+    image-rendering: optimizequality;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.185));
+}
+
+.card-front:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: translate3d(0, 0, 0.01px);
+    background-image: var(--glitter), var(--glitter),
+        linear-gradient(120deg, black 25%, white, black 75%);
+    background-size: 100% 100%, 80% 80%, 200% 200%;
+    background-blend-mode: multiply, multiply, overlay;
+    background-position: 50% 50%, 50% 50%, 50% 50%;
+    mix-blend-mode: color-dodge;
+    filter: brightness(2) contrast(0.8);
+    animation: bg var(--duration) ease infinite;
+}
+
+.card-front:after {
+    content: "";
+    background: none, none, linear-gradient(125deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 0.1%, rgba(255, 255, 255, 0) 60%);
+    background-size: 200% 200%;
+    mix-blend-mode: hard-light;
+    animation: bg var(--duration) ease infinite;
+}
+
+.card-front:hover {
+    background: url("/public/img/creat15.png") right center no-repeat;
+    background-size: 900px;
+}
+
+.card-front1 {
+    --image-src: url(/public/img/suit12.png);
+}
+
+.card-front1 {
+    margin-top: 26vh;
+    max-height: 600px;
+    transform: translate3d(0, 0, 0.01px);
+    max-width: 400px;
+    aspect-ratio: 2/3;
+    transition: background 2s;
+    border-radius: 7% 7% 7% 7% / 5% 5% 5% 5%;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-image: var(--image-src) !important;
+    box-shadow: 0 30px 40px -25px rgba(15, 5, 20, 1), 0 20px 50px -15px rgba(15, 5, 20, 1);
+    overflow: hidden;
+    animation: tilt var(--duration) ease infinite;
+    image-rendering: optimizequality;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.185));
+}
+
+.card-front1:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: translate3d(0, 0, 0.01px);
+    background-image: var(--glitter), var(--glitter),
+        linear-gradient(120deg, black 25%, white, black 75%);
+    background-size: 100% 100%, 80% 80%, 200% 200%;
+    background-blend-mode: multiply, multiply, overlay;
+    background-position: 50% 50%, 50% 50%, 50% 50%;
+    mix-blend-mode: color-dodge;
+    filter: brightness(2) contrast(0.8);
+    animation: bg var(--duration) ease infinite;
+}
+
+.card-front1:after {
+    content: "";
+    background: none, none, linear-gradient(125deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 0.1%, rgba(255, 255, 255, 0) 60%);
+    background-size: 200% 200%;
+    mix-blend-mode: hard-light;
+    animation: bg var(--duration) ease infinite;
+}
+
+.card-front1:hover {
+    background: url("/public/img/suit12.png") right center no-repeat;
+    background-size: 900px;
+}
+
+.card-front2 {
+    --image-src: url(/public/img/space8old.png);
+}
+
+.card-front2 {
+    margin-top: 26vh;
+    max-height: 600px;
+    transform: translate3d(0, 0, 0.01px);
+    max-width: 400px;
+    aspect-ratio: 2/3;
+    transition: background 2s;
+    border-radius: 7% 7% 7% 7% / 5% 5% 5% 5%;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-image: var(--image-src) !important;
+    box-shadow: 0 30px 40px -25px rgba(15, 5, 20, 1), 0 20px 50px -15px rgba(15, 5, 20, 1);
+    overflow: hidden;
+    animation: tilt var(--duration) ease infinite;
+    image-rendering: optimizequality;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.185));
+}
+
+.card-front2:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: translate3d(0, 0, 0.01px);
+    background-image: var(--glitter), var(--glitter),
+        linear-gradient(120deg, black 25%, white, black 75%);
+    background-size: 100% 100%, 80% 80%, 200% 200%;
+    background-blend-mode: multiply, multiply, overlay;
+    background-position: 50% 50%, 50% 50%, 50% 50%;
+    mix-blend-mode: color-dodge;
+    filter: brightness(2) contrast(0.8);
+    animation: bg var(--duration) ease infinite;
+}
+
+.card-front2:after {
+    content: "";
+    background: none, none, linear-gradient(125deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 0.1%, rgba(255, 255, 255, 0) 60%);
+    background-size: 200% 200%;
+    mix-blend-mode: hard-light;
+    animation: bg var(--duration) ease infinite;
+}
+
+.card-front2:hover {
+    background: url("/public/img/space8old.png") top center no-repeat;
+    background-size: 900px;
+}
+
+@media (min-height: 900px) and (min-width: 1600px) {
+    .card-front {
+        margin-top: 16vh;
+        margin-left: 4vw;
+    }
+    .card-front1 {
+        margin-top: 16vh;
+        margin-left: 4vw;
+    }
+    .card-front2 {
+        margin-top: 16vh;
+        margin-left: 4vw;
+    }
+
+    .title-fade {
+        font-size: 90px;
+        left: -5%;
+    }
+
+    .creaturesBottomDesc {
+        margin-bottom: -40px;
+    }
+}
+
+@media (min-height: 1080px) and (min-width: 1920px) {
+    .card-front {
+        margin-top: 28vh;
+    }
+    .card-front1 {
+        margin-top: 28vh;
+    }
+    .card-front2 {
+        margin-top: 28vh;
+    }
+
+    .title-fade {
+        font-size: 120px;
+        left: -20%;
+    }
+
+    .creaturesBottomDesc {
+        margin-bottom: -50px;
+    }
+}
+
+@media (min-height: 1199px) and (min-width: 1899px) {
+    .card-front {
+        margin-top: 39vh;
+    }
+    .card-front1 {
+        margin-top: 39vh;
+    }
+    .card-front2 {
+        margin-top: 39vh;
+    }
+
+    .creaturesBottomDesc {
+        margin-bottom: -70px;
+    }
+}
+
+@media (min-height: 1400px) and (min-width: 2400px) {
+    .card-front {
+        margin-top: 46vh;
+    }
+    .card-front1 {
+        margin-top: 46vh;
+    }
+    .card-front2 {
+        margin-top: 46vh;
+    }
+
+    .creaturesBottomDesc {
+        margin-bottom: -70px;
+    }
+}

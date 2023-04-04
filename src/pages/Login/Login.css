@@ -1,0 +1,156 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+::selection {
+    background: #2D2F36;
+}
+
+::-webkit-selection {
+    background: #2D2F36;
+}
+
+::-moz-selection {
+    background: #2D2F36;
+}
+
+.bodyLogin {
+
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background: #333844;
+    font-family: "Heebo", sans-serif;
+    background: url("/public/img/backgroundLogin2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageLogin {
+    display: flex;
+    flex-direction: column;
+    height: calc(60% - 40px);
+    position: absolute;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .pageLogin {
+        height: auto;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.containerLogin {
+    display: flex;
+    height: 320px;
+    margin: 0 auto;
+    width: 640px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media (max-width: 767px) {
+    .containerLogin {
+        flex-direction: column;
+        height: 630px;
+        width: 320px;
+    }
+}
+
+.login {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 50px 40px 40px;
+}
+
+.eula {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 40px;
+}
+
+.rightLogin {
+    background: #000000;
+    box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+    color: #F1F1F2;
+    position: relative;
+    width: 50%;
+    height: 110%;
+    border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+    .rightLogin {
+        flex-shrink: 0;
+        height: 100%;
+        width: 100%;
+        max-height: 350px;
+    }
+}
+
+.svgLogin {
+    position: absolute;
+    width: 320px;
+}
+
+.pathLogin {
+    fill: none;
+    stroke: url(#linearGradient);
+    ;
+    stroke-width: 4;
+    stroke-dasharray: 240 1386;
+}
+
+.formLogin {
+    margin: 40px;
+    position: absolute;
+}
+
+.labelLogin {
+    color: #c2c2c5;
+    display: block;
+    font-size: 14px;
+    height: 16px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.inputLogin {
+    background: transparent;
+    border: 0;
+    color: #f2f2f2;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    outline: none !important;
+    width: 100%;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+}
+
+#submit {
+    color: #ffffff;
+    margin-top: 45px;
+    transition: color 300ms;
+}
+
+#submit:focus {
+    color: #f2f2f2;
+}
+
+#submit:active {
+    color: #d0d0d2;
+}

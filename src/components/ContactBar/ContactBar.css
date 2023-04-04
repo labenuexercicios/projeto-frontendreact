@@ -1,0 +1,42 @@
+.contactBar {
+    background-color: #8f44fd;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapperContactBar {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapperContactBar span {
+    color: white;
+}
+
+.wrapperContactBar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.wrapperContactBar button {
+    padding: 10px;
+    color: white;
+    background-color: #333;
+    border-radius: 0 5px 5px 0;
+    border: none;
+}
+
+.contactBarIcons {
+    display: flex;
+    gap: 10px;
+}
+
+.mail input {
+    border: 0;
+    outline: none !important;
+}

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap');
+
+@font-face {
+    font-family: 'Monoton';
+    src: url(/public/img/Monoton-Regular.ttf);
+}
+
+/* OPACITY */
+
+.home {
+    width: 100vw;
+}
+
+#menu-items:hover~#menu-background-pattern {
+    opacity: 1;
+}
+
+#menu-items:hover~#menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.1;
+}
+
+#menu-items:hover>.menu-item {
+    opacity: 0.3;
+}
+
+#menu-items:hover>.menu-item:hover {
+    opacity: 1;
+}
+
+/* STYLE */
+
+body {
+    width: 100vw;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(15deg, rgb(255, 255, 255) 31%, rgb(255, 255, 255) 80%);
+    margin: 0px;
+    position: relative;
+}
+
+#menu {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 330vh;
+    width: 100vw;
+}
+
+#menu-items {
+    height: 110vh;
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
+    font-family: 'Bungee Shade', cursive;
+}
+
+.menu-item {
+    color: rgb(194, 155, 13);
+    cursor: pointer;
+    display: block;
+    font-family: 'Monoton';
+    font-size: clamp(2rem, 6vw, 6rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+}
+
+#menu-background-pattern {
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-left: 300px;
+    width: 35.9%;
+    height: 70%;
+    left: 0px;
+    top: 0px;
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+    z-index: 0;
+}
