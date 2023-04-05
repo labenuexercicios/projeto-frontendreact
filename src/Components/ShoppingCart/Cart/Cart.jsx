@@ -29,7 +29,7 @@ const ShoppingCar = (props) => {
           return (
             <Form key={index}>
               <Carrinho>
-                <img src={item.image} width={55} />
+                {/* <img src={item.image} width={55} /> */}
                 <P>
                   <p>{item.title}</p >
                   <p>{item.amount===1?props.currencyBrazil(item.price,true): props.currencyBrazil(item.price*item.amount,true)}</p >

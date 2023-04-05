@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import FilterCart from "./Components/Filters/FilterCart";
-import ProductCard from "./Components/ProductList/ProductCard/ProductCard";
+import ProductCard from "./Components/ProductList/Home/ProductCard";
 import ShoppingCar from "./Components/ShoppingCart/Cart/Cart";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
@@ -12,7 +12,7 @@ import AddressRegisterPage from "./Components/AddressRegister/AddressRegister";
 import RegisterUserPage from "./Components/RegisterUser/RegisterUser";
 import RegisterTextMessage from "./Components/RegisterTextMessage/RegisterTextMessage"
 import ContactUs from "./Components/ContactUs/ContactUs";
-import Products from "./Components/ProductList/ProductCard/product.json"
+import Products from "./Components/ProductList/Home/product.json"
 import SummaryCart from "./Components/Summary/Summary";
 import Finished from "./Components/Finished/Finished";
 
@@ -54,6 +54,12 @@ height:80vh;
   justify-content:center;   
 `;
 
+const P = styled.h1`
+  position:absolute;
+  left:23%;
+  top:13%;
+`;
+
 function App() {
 
   const [ordenacao, setOrdenacao] = useState("")
@@ -77,20 +83,21 @@ function App() {
     setValueConditional(values)
   }
 
-  /* useEffect(() => {
+  useEffect(() => {
     const listCart = localStorage.getItem("Items")
-    if (listCart) {
-      const loadingArray = JSON.parse(cartItems)
-      setCartItems(loadingArray)
+    if (listCart) {     
+      setCartItems(JSON.parse(listCart))
     }
   }, []);
 
   useEffect(() => {
-    const listCart = JSON.stringify(cartItems)
-    if (listCart) {
+    if(cartItems.length>0){
+      const listCart = JSON.stringify(cartItems)
       localStorage.setItem("Items", listCart)
-    }    
-  },[]) */
+    }else{
+      localStorage.removeItem("Items")
+    }   
+  },[cartItems])
 
   function currencyBrazil(value, symbol) {
     if (!value) return null
@@ -200,6 +207,7 @@ function App() {
       case 10:
         return <Finished
           cartItems={cartItems}
+          setCartItems
           name={name}
           changePage={changePage}
         />
@@ -228,8 +236,9 @@ function App() {
             query={query}
             setQuery={setQuery}
             ordenacao={ordenacao}
-          />
+          />          
           <CardsContainer>
+          <P>Aqui Você Encontra seu melhor Trage</P>
             <ProductCard
               addToCart={addToCart}
               cards={cards}
