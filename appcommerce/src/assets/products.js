@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    name: "Aerospace",
+    name: "Réplica Aerospace",
     value: 2850,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/aerospace.png",
@@ -13,7 +13,7 @@ export const products = [
   },
   {
     id: 2,
-    name: "Block 1",
+    name: "Réplica Block 1",
     value: 1500,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/block1+(1).png",
@@ -25,7 +25,7 @@ export const products = [
   },
   {
     id: 3,
-    name: "New Shepard",
+    name: "Réplica New Shepard",
     value: 2490,
     imageUrl: "https://labenucommerce.s3.sa-east-1.amazonaws.com/blue-origin.png",
     imageAlt:
@@ -36,7 +36,7 @@ export const products = [
   },
   {
     id: 4,
-    name: "Columbia",
+    name: "Réplica Columbia",
     value: 1225,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/columbia.png",
@@ -48,7 +48,7 @@ export const products = [
   },
   {
     id: 5,
-    name: "Dream Chaser",
+    name: "Réplica Dream Chaser",
     value: 1700,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/dream-chaser.png",
@@ -60,7 +60,7 @@ export const products = [
   },
   {
     id: 6,
-    name: "Falcon Heavy",
+    name: "Réplica Falcon Heavy",
     value: 3867,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/falcon-heavy+(1).png",
@@ -71,18 +71,18 @@ export const products = [
   },
   {
     id: 7,
-    name: "Estação Espacial Internacional",
+    name: "Réplica Estação Espacial Internacional",
     value: 5349,
     imageUrl: "https://labenucommerce.s3.sa-east-1.amazonaws.com/international-spaceship.png",
     imageAlt:
       "iss",
     description:
-      "A Estação Espacial Internacional (ISS) é a maior estação espacial modular em órbita baixa da Terra. O projeto envolve cinco agências espaciais: a NASA dos Estados Unidos, a Roscosmos da Rússia, a JAXA do Japão, a ESA da Europa e a CSA do Canadá. A estação serve como um laboratório de pesquisa em microgravidade e ambiente espacial no qual pesquisas científicas são conduzidas em astrobiologia, astronomia, meteorologia, física e outros campos. A ISS é adequada para testar os sistemas e equipamentos de espaçonaves necessários para possíveis futuras missões de longa duração à Lua e a Marte.",
+      "A Estação Espacial Internacional (ISS) é a maior estação espacial modular em órbita baixa da Terra. O projeto envolve cinco agências espaciais: a NASA dos Estados Unidos, a Roscosmos da Rússia, a JAXA do Japão, a ESA da Europa e a CSA do Canadá. A estação serve como um laboratório de pesquisa em microgravidade e ambiente espacial no qual pesquisas científicas são conduzidas em astrobiologia, astronomia, meteorologia, física e outros campos.",
     category: "Space Shuttle",
   },
   {
     id: 8,
-    name: "MX-1E",
+    name: "Réplica MX-1E",
     value: 1050,
     imageUrl: "https://labenucommerce.s3.sa-east-1.amazonaws.com/mx-1e.png",
     imageAlt: "mx1e",
@@ -92,7 +92,7 @@ export const products = [
   },
   {
     id: 9,
-    name: "Saturn V",
+    name: "Réplica Saturn V",
     value: 2099,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/saturnV.png",
@@ -104,7 +104,7 @@ export const products = [
   },
   {
     id: 10,
-    name: "Skylon",
+    name: "Réplica Skylon",
     value: 3550,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/skylon.png",
@@ -116,7 +116,7 @@ export const products = [
   },
   {
     id: 11,
-    name: "Challenger",
+    name: "Réplica Challenger",
     value: 1269,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/space-shuttle.png",
@@ -124,21 +124,21 @@ export const products = [
       "challenger",
     description:
       "O Space Shuttle Challenger (OV-099) foi um orbitador do Ônibus Espacial fabricado pela Rockwell International e operado pela NASA. O Challenger foi o segundo orbitador do Ônibus Espacial a voar para o espaço depois do Columbia, e foi lançado em seu voo inaugural em abril de 1983.",
-    category: "Space Shutttle",
+    category: "Space Shuttle",
   },
   {
     id: 12,
-    name: "SpaceShipTwo",
+    name: "Réplica SpaceShipTwo",
     value: 1940,
     imageUrl: "https://labenucommerce.s3.sa-east-1.amazonaws.com/spaceship2.png",
     imageAlt: "spaceshiptwo",
     description:
-      "O veículo da  Virgin Galactic se parece com um avião com asas excepcionalmente longas que são dobradas para cima e para trás. A embarcação tem 18,3 metros de comprimento e 8,3 metros de envergadura. A empresa planeja usar a nave para viagens turísticas curtas ao espaço suborbital. A espaçonave é transportada por um avião, também construído pela empresa, a uma altitude de cerca de 50.000 pés. Nesse ponto, os foguetes da espaçonave entram em ação e os passageiros (seis deles, mais os dois pilotos) irão para a borda do espaço. Após um curto período em que os passageiros experimentarão ausência de peso, a espaçonave desliza de volta para a Terra, semelhante ao ônibus espacial da NASA.",
+      "O veículo da  Virgin Galactic se parece com um avião com asas excepcionalmente longas que são dobradas para cima e para trás. A embarcação tem 18,3 metros de comprimento e 8,3 metros de envergadura. A empresa planeja usar a nave para viagens turísticas curtas ao espaço suborbital. A espaçonave é transportada por um avião, também construído pela empresa, a uma altitude de cerca de 50.000 pés.",
     category: "Naves Espaciais",
   },
   {
     id: 13,
-    name: "Sputinik",
+    name: "Réplica Sputinik",
     value: 3250,
     imageUrl: "https://labenucommerce.s3.sa-east-1.amazonaws.com/sputinik.png",
     imageAlt: "sputinik",
@@ -148,29 +148,29 @@ export const products = [
   },
   {
     id: 14,
-    name: "Starliner",
+    name: "Réplica Starliner",
     value: 1020,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/starliner-.png",
     imageAlt: "starliner",
     description:
-      "A cápsula de tripulação CST-100 Starliner da Boeing foi projetada para transportar astronautas de e para a Estação Espacial Internacional e a órbita baixa da Terra. Ele foi projetado para sete passageiros. A Boeing diz que o design da cápsula remonta aos designs das cápsulas da tripulação da era Apollo, para aproveitar a tecnologia comprovada, de acordo com o site da empresa. Ele também foi projetado para ser reutilizável, embora para apenas 10 voos, de acordo com a Boeing. Como a espaçonave russa Soyuz, ela pode fazer pousos no solo com um pára-quedas e airbags. Também pode espirrar em emergências.",
+      "A cápsula de tripulação CST-100 Starliner da Boeing foi projetada para transportar astronautas de e para a Estação Espacial Internacional e a órbita baixa da Terra. Ele foi projetado para sete passageiros. A Boeing diz que o design da cápsula remonta aos designs das cápsulas da tripulação da era Apollo, para aproveitar a tecnologia comprovada, de acordo com o site da empresa.",
     category: "Naves Espaciais",
   },
   {
     id: 15,
-    name: "Starship",
+    name: "Réplica Starship",
     value: 5284.9,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/starship.png",
     imageAlt: "starship",
     description:
-      "O SpaceX Starship é um veículo de lançamento superpesado totalmente reutilizável em desenvolvimento pela SpaceX. Com 120 m (390 pés) de altura, ele foi projetado para ser o veículo de lançamento mais alto e poderoso já construído e o primeiro capaz de reutilização total. A espaçonave está planejada para ser reabastecida em órbita antes de viajar para destinos que exigem mais mudanças na velocidade (orçamento delta-v), como a Lua e Marte. As aplicações propostas para o Starship incluem lançamentos tripulados e de carga regulares, construção da constelação da Internet Starlink e realização de voos suborbitais ponto a ponto na Terra.",
+      "O SpaceX Starship é um veículo de lançamento superpesado totalmente reutilizável em desenvolvimento pela SpaceX. Com 120 m (390 pés) de altura, ele foi projetado para ser o veículo de lançamento mais alto e poderoso já construído e o primeiro capaz de reutilização total. As aplicações propostas para o Starship incluem lançamentos tripulados e de carga regulares, construção da constelação da Internet Starlink e realização de voos suborbitais ponto a ponto na Terra.",
     category: "Foguetes",
   },
   {
     id: 16,
-    name: "Taepodog",
+    name: "Réplica Taepodog",
     value: 1284.9,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/taepodong.png",
@@ -182,7 +182,7 @@ export const products = [
   },
   {
     id: 17,
-    name: "Dragon",
+    name: "Réplica Dragon",
     value: 4685,
     imageUrl:
       "https://labenucommerce.s3.sa-east-1.amazonaws.com/dragon-spaceship.png",

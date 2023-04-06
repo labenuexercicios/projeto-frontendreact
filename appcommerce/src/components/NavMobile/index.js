@@ -38,7 +38,7 @@ const NavMobile = ({
           handleScreen(1);
           handleTitleCategory("Produtos");
           setLowestPrice(0);
-          setBiggestPrice(1000);
+          setBiggestPrice(10000);
           setOrdination("");
         }}
       />
@@ -51,7 +51,7 @@ const NavMobile = ({
             handleScreen(2);
             setSearch("");
             setLowestPrice(0);
-            setBiggestPrice(1000);
+            setBiggestPrice(10000);
             setOrdination("");
           }}
         />

@@ -81,7 +81,7 @@ const MenuMobile = ({
               handleArrayProducts(products);
               handleTitleCategory("Produtos");
               setLowestPrice(0);
-              setBiggestPrice(1000);
+              setBiggestPrice(10000);
               setOrdination("");
             }}
           >
@@ -93,7 +93,7 @@ const MenuMobile = ({
               handleScreen(2);
               handleTitleCategory("Foguetes");
               setLowestPrice(0);
-              setBiggestPrice(1000);
+              setBiggestPrice(10000);
               setOrdination("");
               setMenuMobileIsOpen("-120%");
             }}
@@ -106,7 +106,7 @@ const MenuMobile = ({
               handleScreen(2);
               handleTitleCategory("Naves Espacias");
               setLowestPrice(0);
-              setBiggestPrice(1000);
+              setBiggestPrice(10000);
               setOrdination("");
               setMenuMobileIsOpen("-120%");
             }}
@@ -120,7 +120,7 @@ const MenuMobile = ({
               handleTitleCategory("Space Shuttle");
               setMenuMobileIsOpen("-120%");
               setLowestPrice(0);
-              setBiggestPrice(1000);
+              setBiggestPrice(10000);
               setOrdination("");
             }}
           >

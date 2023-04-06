@@ -32,6 +32,7 @@ const Footer = ({
   setBiggestPrice,
   setOrdination,
 }) => {
+  console.log(products)
   return (
     <FooterStyled>
       <InfoStore>
@@ -41,25 +42,14 @@ const Footer = ({
             <p>
               <strong>Loja</strong>
             </p>
-            <li
-              onClick={() => {
-                handleArrayProducts(products);
-                handleScreen(1);
-                handleTitleCategory("Produtos");
-                setLowestPrice(0);
-                setBiggestPrice(10000);
-                setOrdination("");
-              }}
-            >
-              Home
-            </li>
+            <li>Home</li>
             <li
               onClick={() => {
                 handleArrayProducts(rocketsCategory);
                 handleScreen(2);
                 handleTitleCategory("Foguetes");
                 setLowestPrice(0);
-                setBiggestPrice(1000);
+                setBiggestPrice(10000);
                 setOrdination("");
               }}
             >
@@ -71,7 +61,7 @@ const Footer = ({
                 handleScreen(2);
                 handleTitleCategory("Naves Espaciais");
                 setLowestPrice(0);
-                setBiggestPrice(1000);
+                setBiggestPrice(10000);
                 setOrdination("");
               }}
             >
@@ -83,7 +73,7 @@ const Footer = ({
                 handleScreen(2);
                 handleTitleCategory("Space Shuttles");
                 setLowestPrice(0);
-                setBiggestPrice(1000);
+                setBiggestPrice(10000);
                 setOrdination("");
               }}
             >

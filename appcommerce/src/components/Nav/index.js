@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import Logo from "../../assets/imgs/logo.png";
+import LoginModal from "../Login";
 import { FiShoppingBag, FiUser } from "react-icons/fi";
 import {
   LogoDiv,
@@ -31,7 +32,9 @@ const Nav = ({
   setCartIsOpen,
   itemAmount,
 }) => {
-  
+
+  const[openLoginModal, setOpenLoginModal] = useState(false);
+
   return (
     <NavBar>
       <LogoDiv
@@ -55,7 +58,7 @@ const Nav = ({
             handleScreen(2);
             setSearch("");
             setLowestPrice(0);
-            setBiggestPrice(1000);
+            setBiggestPrice(10000);
             setOrdination("");
           }}
         />
@@ -122,13 +125,15 @@ const Nav = ({
       </OptionsList>
 
       <Icons>
-        <Icon
-          onClick={() => {
-            handleScreen(4);
-          }}
-        >
+        <Icon onClick={() => setOpenLoginModal(true)}>
           <FiUser />
         </Icon>
+        
+        <LoginModal
+          openLoginModal={openLoginModal}
+          setOpenLoginModal={() => setOpenLoginModal(!openLoginModal)}>
+        </LoginModal>
+
         <Icon onClick={() => setCartIsOpen("0")}>
           <FiShoppingBag />
           <p>{itemAmount}</p>

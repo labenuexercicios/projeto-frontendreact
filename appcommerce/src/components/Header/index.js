@@ -32,7 +32,7 @@ const Header = ({
       handleScreen(2);
       setSearch("");
       setLowestPrice(0);
-      setBiggestPrice(1000);
+      setBiggestPrice(10000);
       setOrdination("");
     }
   };
