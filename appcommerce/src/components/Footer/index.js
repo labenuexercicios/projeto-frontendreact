@@ -126,7 +126,7 @@ const Footer = ({
         </NavBar>
       </InfoStore>
       <Copyright>
-        <p>Frontier Explorer 2023 © Caren Murai.</p>
+        <p>Frontier Explorer 2023 Desenvolvido para fins de estudo © Caren Murai.</p>
         <div>
           <a href="https://github.com/suuzanemoura/" target={"blank"}>
           </a>
