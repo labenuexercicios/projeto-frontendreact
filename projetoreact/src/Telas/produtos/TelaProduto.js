@@ -112,7 +112,7 @@ function TelaProduto(props) {
               <div className="card" key={item.id}>
                 <img className="imagens" src={item.imageUrl} /*alt={Produtos.imageAlt}*/ />
                 <div>
-                  <h2>{item.name}</h2>
+                  <h2 className="nomeBrinquedo">{item.name}</h2>
                   <span>{produtos.rating}</span>
                 </div>
                 <div className="precoCompra">

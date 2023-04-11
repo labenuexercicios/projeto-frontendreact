@@ -26,9 +26,9 @@ export const Cards= styled.section`
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    align-content: center;
     min-width:100vh;
+  
+   
     
 .precoCompra{
     margin-top:15px;
@@ -64,6 +64,12 @@ export const Cards= styled.section`
     border-radius: 50px;
     box-shadow: 10px 10px 10px 5px black;
 
+}
+
+.nomeBrinquedo{
+    margin-left: 2rem;
+    margin-right:2rem;
+    margin-top: 15px;
 }
 
     .botaoCompra{

@@ -22,13 +22,13 @@ function TelaCarrinho(props) {
 
           <div className="card" key={item.id}>
             <img className="imagens" src={item.imageUrl} /*alt={Produtos.imageAlt}*/ />
-            <div>
+            <div className="nomeBrinquedo">
               <h2>{item.name}</h2>
               {/* <span>{produtos.rating}</span> */}
             </div>
-            <div>
-              <span>{item.price}</span>
-              <button onClick={() => removerProduto(item)}>Remover</button>
+            <div className="informacoes">
+              <span>R$ {item.price},00</span>
+              <button className="remover" onClick={() => removerProduto(item)}>Remover</button>
               <span>x{item.quantidade}</span>
              
 
