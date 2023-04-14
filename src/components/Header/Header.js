@@ -21,11 +21,11 @@ function Header(props) {
   return (
     <HeaderContainer>
       <Logo className="img" src={Image} alt="image-logo" />
-
+      {/* 
       <MenuCenter className="nav">
         <OptionsMenu>Brinquedos</OptionsMenu>
         <OptionsMenu>Produtos Infantis</OptionsMenu>
-      </MenuCenter>
+      </MenuCenter> */}
 
       <DivRight className="div-right">
         <BagImage src={Bag} />

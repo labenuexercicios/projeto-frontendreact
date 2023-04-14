@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   width: 100%;
-  max-width: 1200px; 
+  max-width: 1700px; 
   font-size: 130%;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  margin: 0px 100px 0px 0px;
 
   @media screen and (max-device-width:450px) {
     display: flex;
@@ -34,6 +35,7 @@ export const MenuCenter = styled.div`
     flex-direction: column;
     gap: 5px;
     }
+  
 `;
 
 export const OptionsMenu = styled.div`
