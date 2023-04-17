@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "name": "Telescopio 50mm Astronomical",
+      "price": 140,
+      "rating": "4",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/503495-Telescope-50mm-Astronomical-1_044028d8-7980-420d-ac59-8adb19baaf13_720x.jpg?v=1639583096",
+      "description": "Imagem de um telescopio de brinquedo"
+    },
+    {
+      "id": 2,
+      "name": "Traje Espacial Infantil Branco",
+      "price": 210,
+      "rating": "3",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/Astronautsuit_009_SQUARE_1080x.jpg?v=1650972952",
+      "description": "Imagem de um traje espacial infantil branco"
+    },
+    {
+      "id": 3,
+      "name": "Space Adventure Estação Espacial",
+      "price": 55,
+      "rating": "3",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/508438-SetSpaceAdventureSpaceStation-1_1080x.jpg?v=1651053957",
+      "description": "Imagem de uma estação espacial de brinquedo"
+    },
+    {
+      "id": 4,
+      "name": "Space Adventure Capsúla Espacial",
+      "price": 45,
+      "rating": "3",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/508391-SetSpaceAdventureSpaceCapsule-1_1080x.jpg?v=1651053942",
+      "description": "Imagem de uma capsúla espacial de brinquedo"
+    },
+    {
+      "id": 5,
+      "name": "Traje Espacial Infantil Laranja",
+      "price": 210,
+      "rating": "3",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/Astronautsuit_001_SQUARE_1080x.jpg?v=1650973294",
+      "description": "Imagem de um traje espacial infantil laranja"
+    },
+    {
+      "id": 6,
+      "name": "Blocos Centro Espacial",
+      "price": 75,
+      "rating": "3",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/417181_NanoblockSpaceCentre_002_SQUARE_1080x.jpg?v=1652787563",
+      "description": "Imagem de blocos de construir"
+    },
+    {
+      "id": 7,
+      "name": "Ônibus Espacial da NASA",
+      "price": 110,
+      "rating": "3",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/508421-NASAFloatingSpaceShuttle-7_1080x.jpg?v=1650973237",
+      "description": "Imagem de um ônibus espacial de brinquedo"
+    },
+    {
+      "id": 8,
+      "name": "Mochila JetPack",
+      "price": 265,
+      "rating": "3",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/417563_1.2_59541b78-fed8-4f6b-a89b-097eb039a91a_1080x.jpg?v=1627303433",
+      "description": "Imagem de uma mochila jetpack"
+    },
+    {
+      "id": 9,
+      "name": "Cachorro de Pelúcia Laika",
+      "price": 60,
+      "rating": "3",
+      "image": "https://cdn.shopify.com/s/files/1/0071/4227/7171/products/360043_1_1080x.jpg?v=1611147843",
+      "description": "Imagem de um cachorro de pelúcia"
+    }
+  ]
