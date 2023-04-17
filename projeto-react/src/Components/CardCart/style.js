@@ -12,11 +12,11 @@ export const Card = styled.div`
     font-size: 0.7rem;
     text-align: center;
     font-weight: 600;
-    color: white;
+    color: black;
   }
 
   .card-price{
-    color: white;
+    color: black;
     font-size: 1.20rem;
     font-weight: 700;
     padding: 10px;
@@ -28,7 +28,7 @@ export const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
   }
 
   .card-delete-button{
@@ -44,8 +44,8 @@ export const Card = styled.div`
     border-radius: 10px;
     background: none;
     border: none;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid black;
+    color: black;
     cursor: pointer;
     margin: 5px 5px;
   }

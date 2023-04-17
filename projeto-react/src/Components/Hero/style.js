@@ -6,6 +6,7 @@ export const HeroContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15vh;
 `
 
 export const Heading = styled.div`

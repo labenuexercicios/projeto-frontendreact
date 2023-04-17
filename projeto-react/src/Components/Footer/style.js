@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const FooterSection = styled.footer`
     height: 40vh;
     width: 100%;
-    border-top: 3px solid #ffffff30;
     color: white;
+    background-color: #272c99;
 
     .customer-information{
         display: flex;
@@ -29,6 +29,11 @@ export const FooterSection = styled.footer`
             list-style: none;
         }
     }
+
+    li:hover{
+        cursor: pointer;
+        color: #CBD5E0;
+    }
     
     h4{
         color: #4299e1;
@@ -41,6 +46,10 @@ export const FooterSection = styled.footer`
 
     .social-midias{
         size: 1rem;
+
+        :hover{
+            cursor: pointer;
+        }
     }
 
     .develop-by{

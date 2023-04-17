@@ -5,6 +5,7 @@ export const ContainerCard = styled.div`
   grid-template-columns: repeat(3, 1fr);
   row-gap: 50px;
   padding: 16px;
+  padding-bottom: 70px;
 `;
 
 export const AppContainer = styled.div`
@@ -18,7 +19,7 @@ export const MainContainer = styled.div`
   grid-template-columns: 1fr 3fr;
   gap: 40px;
   margin-top: 15vh;
-  margin-bottom: 70px;
+  background-color: #f7f7f7;
 `;
 
 export const ProductContainer = styled.section`

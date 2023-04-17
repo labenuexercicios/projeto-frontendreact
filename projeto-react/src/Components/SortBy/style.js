@@ -7,7 +7,7 @@ export const SortProducts = styled.div`
   padding: 16px;
   margin-top: 30px;
   margin-right: 60px;
-  color: white;
+  color: black;
 
   select{
     background: #fff 0 0 no-repeat padding-box;

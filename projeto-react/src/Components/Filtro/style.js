@@ -12,20 +12,22 @@ export const Filtros = styled.div`
   width: 250px;
   height: 60vh;
   margin-top: 50px;
-  border-radius: 15px;
+  border-radius: 20px;
   background: #ffffff10;
   border: none;
+  background-color: white;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 
   h3 {
     font-size: 1.3em;
     padding: 1em 1em;
     font-weight: bold;
-    color: white;
+    color: black;
   };
 
   .filtro-min, .filtro-max{
     padding-left: 20px;
-    color: white;
+    color: #6e6e6e;
   }
 
   .filtro-max{
@@ -39,6 +41,8 @@ export const Filtros = styled.div`
     border-radius: 10px;
     height: 22px;
     outline: none;
+    color: #6e6e6e;
+    padding-left: 0.8rem;
   }
 `;
 
@@ -50,10 +54,18 @@ export const ClearFilters = styled.div`
   button{
     width: 80%;
     height: 25px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
     cursor: pointer;
-    background-color: #CBD5E0;
-    color:#4A5568;
+    background-color: black;
+    color: white;
+
+    :hover{
+      -webkit-transform:scale(1.1); 
+      -moz-transform:scale(1.1); 
+      -o-transform:scale(1.1);
+      transform:scale(1.1);
+      transition: all .55s ease;
+    }
   }
 ` 

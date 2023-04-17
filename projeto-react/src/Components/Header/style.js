@@ -6,32 +6,8 @@ export const HeaderContainer = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .search-group{
-    position: relative;
-
-    input {
-      min-width: 500px;
-      height: 5vh;
-      border: white;
-      border-radius: 10px;
-      box-shadow: rgb(0 0 0 / 12%) 0px 10px 15px;
-      outline: none;
-    }
-
-    .search-input{
-      padding-left: 35px;
-    }
-
-    img{
-      position: absolute;
-      left: 0;
-      padding: 9px 8px;
-      color: #aaa;
-      transition: 0.3s;
-      height: 100%;
-    }
-  }
+  background-color: #272c99;
+  position: fixed;
 
   .nav-bar {
     display: flex;
@@ -66,7 +42,7 @@ export const HeaderContainer = styled.section`
 
     :hover{
       cursor: pointer;
-      color: white;
+      color: #4299e1;
     }
 
     .cart-badge{

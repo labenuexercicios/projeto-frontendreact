@@ -22,6 +22,7 @@ export const Imagem = styled.img`
 export const Legenda = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: white;
 
 
   .card-name{
@@ -29,7 +30,7 @@ export const Legenda = styled.div`
     text-align: center;
     font-weight: 600;
     padding-top: 8px;
-    color: #fff;
+    color: black;
     text-shadow:
         0 0 2px #fff,
         0 0 7px #fff,
@@ -47,16 +48,16 @@ export const Legenda = styled.div`
     padding: 10px;
     display: flex;
     justify-content: center;
-    color: #fff;
-    text-shadow:
-      0 0 2px #fff,
-      0 0 7px #fff,
-      0 0 21px #fff,
-      0 0 30px #4299e1,
-      0 0 80px #4299e1,
-      0 0 90px #4299e1,
-      0 0 100px #4299e1,
-      0 0 120px #4299e1;
+    color: black;
+    // text-shadow:
+    //   0 0 2px #fff,
+    //   0 0 7px #fff,
+    //   0 0 21px #fff,
+    //   0 0 30px #4299e1,
+    //   0 0 80px #4299e1,
+    //   0 0 90px #4299e1,
+    //   0 0 100px #4299e1,
+    //   0 0 120px #4299e1;
   }
 
   .card-carting{

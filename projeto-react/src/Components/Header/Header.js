@@ -14,7 +14,7 @@ function Header(props) {
           <h1>Space</h1>
           <h1>Land</h1>
         </Logo>
-        <IoRocketSharp size="70px" color="white"/>
+        <IoRocketSharp size="70px" color="#4299e1"/>
       </div>
 
       <div className="nav-bar">

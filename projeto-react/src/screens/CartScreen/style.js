@@ -11,6 +11,7 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   position: absolute;
+  background-color: #272c99;
 
   .logo-group{
     display: flex;
@@ -51,7 +52,8 @@ export const Logo = styled.div`
 
 export const Main = styled.div`
   margin-top: 15vh;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
+  background-color: #f7f7f7;
   
   .shopping-continue{
     display: flex;
@@ -59,7 +61,7 @@ export const Main = styled.div`
     font-weight: 600;
     font-size: 25px;
     margin: 20px 16px;
-    color: white;
+    color: black;
 
     :hover{
       cursor: pointer;
@@ -77,7 +79,7 @@ export const Main = styled.div`
 
       .header-cart-section{
         margin: 20px 0px;
-        color: white;
+        color: black;
 
         h3{
           font-size: 20px;
@@ -89,7 +91,7 @@ export const Main = styled.div`
           font-weight: 500;
           font-size: 18px;
           line-height: 27px;
-          color: #CBD5E0;
+          color: black;
         }
       }
     }
@@ -102,6 +104,7 @@ export const Main = styled.div`
     box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
     border: 1px solid rgba(var(--lightGrey), 1);
     border-radius: 15px;
+    background-color: white;
 
     .header-cart-products{
       display: flex;
@@ -111,7 +114,7 @@ export const Main = styled.div`
       margin-right: 50px;
       padding: 20px 0px;
       font-weight: 600;
-      color: white;
+      color: black;
     }
   }
 
@@ -160,13 +163,19 @@ export const Main = styled.div`
     height: 40px;
     border-radius: 6px;
     outline: none;
+    color: white;
+    padding-left: 10px;
 }
+
+  input[type="number"]{
+    color: white;
+    padding-left: 10px;
+  }
 
   input::placeholder{
     color: white;
     font-size: 13px;
     font-weight: 500;
-    padding-left: 10px;
   }
 
   .payment-inputs{
