@@ -1,0 +1,135 @@
+.product {
+    width: 100vw;
+    padding: 20px 50px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: -50px;
+}
+
+.leftProduct {
+    margin-left: 50px;
+    flex: 1;
+    gap: 13px;
+    display: flex;
+}
+
+.optionalImages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+.optionalImages img {
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.mainImages {
+    flex: 5;
+}
+
+.mainImage img{
+    width: 95%;
+    max-height: 1000px;
+    object-fit: cover;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.rightProduct {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#price {
+    font-size: 30px;
+    color: blueviolet;
+    font-weight: 600;
+}
+
+.rightProduct p {
+    font-size: 19px;
+    font-weight: 300;
+}
+
+.productQuantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.productQuantity button {
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.add {
+    width: 250px;
+    padding: 10px;
+    background-color: blueviolet;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+}
+
+.linkFavBalance {
+    display: flex;
+    gap: 20px;
+}
+
+.itemFav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: blue;
+    font-size: 14px;
+}
+
+.itemBalance {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: blue;
+    font-size: 14px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: gray;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+hr {
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.details hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 215px;
+}
+
+.details span {
+    color: black;
+}

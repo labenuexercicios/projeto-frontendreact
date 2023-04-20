@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.border {
+  height: 369px;
+  width: 290px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+
+.border:hover {
+  border: 1px solid #fff;
+}
+
+ .cardContainer {
+  height: 379px;
+  width: 300px;
+  background: #808080;
+  border-radius: 10px;
+  transition: background 2s;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 70px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+} 
+
+.card0 {
+  background: url("/public/img/creatureHero.png")
+    center center no-repeat;
+  background-size: 450px;
+}
+
+.card0:hover {
+  background: url("/public/img/creatureHero.png")
+    right center no-repeat;
+  background-size: 600px;
+}
+
+.card0:hover h2 {
+  opacity: 1;
+}
+
+.card0:hover .fab {
+  opacity: 1;
+}
+
+.card1 {
+  background: url("https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg")
+    center center no-repeat;
+  background-size: 300px;
+  transition: background 2s;
+}
+
+.card1:hover {
+  background: url("https://i.pinimg.com/originals/e0/7c/03/e07c03f2e5f9ad575f5a727fee7a0471.jpg")
+    left center no-repeat;
+  background-size: 600px;
+}
+
+.card1:hover h2 {
+  opacity: 1;
+}
+
+.card1:hover .fab {
+  opacity: 1;
+}
+
+.card2 {
+  background: url("https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg")
+    center center no-repeat;
+  background-size: 300px;
+}
+
+.card2:hover {
+  background: url("https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg")
+    left center no-repeat;
+  background-size: 600px;
+}
+
+.card2:hover h2 {
+  opacity: 1;
+}
+
+.card2:hover .fab {
+  opacity: 1;
+}
+
+
+

@@ -1,0 +1,96 @@
+.card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px;
+    cursor: default;
+    z-index: -2;
+}
+
+.imageCard {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+
+.imageCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    cursor: pointer;
+    z-index: -1;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.card:hover {
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.imageCard:hover .mainImage {
+    transform: scale(1.1);
+}
+
+.mainImage {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.imageCard:hover span {
+    transform: translate(-10px, -15px);
+}
+
+.imageCard span {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    color: rgb(2, 158, 190);
+    padding: 3px 5px;
+    z-index: 0;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mainImage {
+    z-index: 1;
+}
+
+.linkCard {
+    text-decoration: none;
+    color: black;
+}
+
+.card h2 {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.prices {
+    display: flex;
+    gap: 20px;
+}
+
+.prices h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.prices h3:last-child {
+    color: gray;
+    text-decoration: line-through;
+}
