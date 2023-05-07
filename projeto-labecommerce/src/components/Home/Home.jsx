@@ -1,10 +1,21 @@
-import { ProductCard } from "./ProductCard/ProductCard";
+import { ProductCard } from "../ProductCard/ProductCard"
 
 export function Home(){
     return(
-        <div>
-            <h1>HOME: TODOS OS PRODUTOS</h1>
-            <ProductCard/>
-        </div>
+        <section className="home">
+            <div className="containerOrdenar">
+                <label htmlFor="ordernar">Ordernar:</label>
+                <input type="" /> 
+            </div>
+            <div className="card">
+                <ProductCard/>
+                <ProductCard/>
+                <ProductCard/>
+            </div>
+        </section>
     )
 }
+
+//Duvida qual input usar na ordernação
+
+// Passar os produtos por props

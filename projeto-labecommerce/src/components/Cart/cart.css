@@ -1,0 +1,33 @@
+.containerCart{
+    display: flex;
+    flex-direction: column;
+
+    padding: .5em;
+    width: 10vw;
+
+    border-top: 1px solid black;
+    border-right: 1px solid black ;
+}
+
+.containerCart .first{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 1em 1em;
+}
+
+.first h1{
+    font-size: 1.3em;
+}
+
+.containerCart .second{
+    display: flex;
+    flex-direction:column ;
+
+    background-color: #B8CABE;
+    border-radius: 20px;
+    padding: .55em;
+}
+
