@@ -1,0 +1,21 @@
+.home{
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #B8CABE;
+    border: 1px solid black;
+}
+
+.containerOrdenar{
+    padding: .5em;
+}
+
+.card{
+    align-self: center;
+    display: flex;
+    gap:3em;
+    
+}
