@@ -1,0 +1,26 @@
+.productCard{
+    background: #B88F93;
+
+    margin: 1em;
+    height: 25em;
+    width:16.5em ;
+    
+    transition: filter 0.2s;
+}
+
+.productCard > h2{
+    padding: .5em;
+    color: #fff;
+}
+
+.productCard > p{
+    color: #F9EFD4;
+    font-size: 1.2em;
+
+    padding: .5em;
+}
+
+/*Hover*/
+.productCard:hover{
+    filter: opacity(70%);
+}

@@ -1,0 +1,30 @@
+.filters {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    width: 10vw;
+
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.filters>.container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0 0 0;
+}
+
+label {
+    font-size: 1em;
+    margin: .2em 0;
+}
+
+input {
+    background: #B8CABE;
+    border-radius: 20px;
+    border: none;
+
+    height: 2.5vh;
+    width: 180px;
+}
