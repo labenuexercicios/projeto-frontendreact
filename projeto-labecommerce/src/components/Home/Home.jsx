@@ -1,6 +1,13 @@
+import { useState } from "react"
 import { ProductCard } from "../ProductCard/ProductCard"
 
 export function Home(props){
+    const [select, setSelect] = useState("")
+
+    function onChangeSelect(event){
+        setSelect(event.target.value)
+    }
+
     const result = props.produtos.map(item=>{
         return item
     })
@@ -8,9 +15,9 @@ export function Home(props){
         <section className="home">
             <div className="containerOrdenar">
                 <label htmlFor="ordernar">Ordernar:</label>
-                <select>
-                    <option value={""}>Crescente</option>
-                    <option value={""}>Decrescente</option>
+                <select value={select} onChange={onChangeSelect}>
+                    <option>Crescente</option>
+                    <option>Decrescente</option>
                 </select> 
             </div>
             <article className="card">

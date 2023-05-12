@@ -20,7 +20,7 @@ label {
     margin: .2em 0;
 }
 
-input {
+.filters input {
     background: #B8CABE;
     border-radius: 20px;
     border: none;
