@@ -6,9 +6,6 @@ import { Home } from './components/Home/Home'
 import { Cart } from './components/Cart/Cart'
 import { listaDeProduto } from './assets/ListaProdutos'
 
-
-//Coloca a lista de produtos!!!
-
 export function Index() {
     return(
         <div>
@@ -16,7 +13,7 @@ export function Index() {
                 <h1>Labecommerce</h1>
             </header>
             <main>
-               <Filters/>
+               <Filters />
                <Home produtos={listaDeProduto}/> 
                <Cart/>
             </main>
