@@ -4,6 +4,8 @@ import { useState } from 'react' // useStage (não irei mexer no momento)
 import { Filters } from './components/Filters/Filters'
 import { Home } from './components/Home/Home'
 import { Cart } from './components/Cart/Cart'
+import { listaDeProduto } from './assets/ListaProdutos'
+
 
 //Coloca a lista de produtos!!!
 
@@ -15,7 +17,7 @@ export function Index() {
             </header>
             <main>
                <Filters/>
-               <Home/>
+               <Home produtos={listaDeProduto}/> 
                <Cart/>
             </main>
             <footer>
@@ -24,5 +26,11 @@ export function Index() {
         </div>
     )
 }
+
+// Sempre que é o bigode é o que eu to enviando produtos
+/*
+   produtos = {dentro daqui é o valor!!!!}
+usa-se esse
+*/
 
 
