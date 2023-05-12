@@ -2,15 +2,24 @@ import CardProdutos from "../CardProdutos/CardProdutos"
 import { ListaDeProdutosContaiener } from "./Styles"
 
 
-function ListaDeProdutos() {
+function ListaDeProdutos(props) {
+
+    const { results } = props
+
+    const renderList = results.map(prod => {
+        return (
+            <CardProdutos
+                img={prod.image}
+                nome={prod.title}
+                valor={prod.price}
+            />
+        )
+    })
 
     return (
         <ListaDeProdutosContaiener>
             <main>
-                <CardProdutos />
-                <CardProdutos />
-                <CardProdutos />
-                <CardProdutos />
+                {renderList}
             </main>
         </ListaDeProdutosContaiener>
     )
