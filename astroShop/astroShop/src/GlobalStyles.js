@@ -27,6 +27,7 @@ export default createGlobalStyle`
 
   body {
     background: linear-gradient(250deg, var(--color-secondary) -12%, var(--color-tertiary) 114%);
+    
   }
 
   body, input, button, textarea {
@@ -35,4 +36,6 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  
 `;
