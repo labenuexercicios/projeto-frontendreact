@@ -1,7 +1,17 @@
+import ProductCard from "../ProductCard";
+import { Container } from "./styles";
+
 const Home = () => {
   return(
     <>
-    oi
+    <Container>
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    </Container>
     </>
   )
 }

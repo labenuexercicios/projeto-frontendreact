@@ -13,15 +13,16 @@ padding: 0 15px;
 
 color: var(--color-text);
 
-:focus-within {
+/* :focus-within {
   border: 1px solid var(--color-primary);
-}
+} */
 input {
   width: 100%;
   height: 100%;
   background: none;
   border: none;
   color: var(--color-primary);
+  font-size: 12px;
 }
 label {
   display: flex;

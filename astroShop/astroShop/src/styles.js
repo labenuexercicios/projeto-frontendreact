@@ -6,13 +6,13 @@ export const Container = styled.div`
 `
 export const LeftPanel = styled.div`
   flex: 1;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `
 export const MiddlePanel = styled.div`
   flex: 3;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `
 export const RightPanel = styled.div`
   flex: 1;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `
