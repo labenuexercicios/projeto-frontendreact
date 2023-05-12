@@ -1,20 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { AppStyle } from './AppStyle';
 import { Filters } from './Components/Filters/Filters';
 import { Home } from './Components/ProductList/Home/Home';
-import { ProductCard } from './Components/ProductList/ProductCard/ProductCard';
 import { Cart } from './Components/ShoppingCart/Cart/Cart';
-import { Items } from './Components/ShoppingCart/Items/Items';
+import GlobalStyle from './GlobalStyle';
+
+
+
 
 function App() {
+
+
+
+
   return (
-    <div className="App">
+    <AppStyle >
+      <GlobalStyle/>
       <Filters />
       <Home />
-      <ProductCard />
-      <Cart />
-      <Items />
-    </div>
+      
+      <Cart/>
+      
+    </AppStyle>
   );
 }
 
