@@ -1,4 +1,4 @@
-import moletomNasa from '../../../assets/img/moletomNasa.png'
+import moletomNasa from '../../../assets/img/blusa1.png'
 import { AddToCartButton, Card, CardImage, CardPrice, CardTitle } from "./styles";
 
 const ProductCard = () => {

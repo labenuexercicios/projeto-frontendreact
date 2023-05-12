@@ -4,7 +4,7 @@ export const Container = styled.div`
 display: flex;
 flex-direction: column;
 height: 100vh;
-padding: 10px;
+padding: 12px;
 justify-content: space-between;
 
 h1 {
@@ -14,7 +14,17 @@ h1 {
 }
 
 img {
+  display: flex;
+  align-items: center;
   width: 200px;
   height: 100px;
+  justify-content: center;
 }
 `;
+
+export const InputsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
