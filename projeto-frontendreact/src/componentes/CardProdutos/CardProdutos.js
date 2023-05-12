@@ -1,13 +1,15 @@
 import { CardProdutosContainer } from "./CardProdutosStyles"
 
-function CardProdutos() {
+function CardProdutos(props) {
+    console.log(props)
+    const { img, nome, valor } = props
 
     return (
 
         <CardProdutosContainer>
-            <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="algum nome"/>
-            <h2>nome do produto</h2>
-            <p>valor</p>
+            <img src={img} alt={nome} />
+            <h2>{nome}</h2>
+            <p>{valor}</p>
         </CardProdutosContainer>
     )
 
