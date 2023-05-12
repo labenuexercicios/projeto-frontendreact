@@ -1,15 +1,16 @@
 import React from "react";
 import { BoxInsideCard, ImageBox, ImageStyle, InfoBox } from "./ProductCardStyle";
 
-export const ProductCard = () => {
+export const ProductCard = ({produto}) => {
+
     return (
         <BoxInsideCard>
         <ImageBox>
-        <ImageStyle src={"https://picsum.photos/200/300"}/>
+        <ImageStyle src={produto.imageUrl}/>
         </ImageBox>
         <InfoBox>
-        <h3>Produto:</h3>
-        <h3>Valor:</h3>
+        <h3>Produto: {produto.name}</h3>
+        <h3>Valor: {produto.value}</h3>
         <button>Adicionar ao carrinho</button>
         </InfoBox>
         </BoxInsideCard>
