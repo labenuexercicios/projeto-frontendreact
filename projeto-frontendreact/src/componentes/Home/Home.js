@@ -1,0 +1,13 @@
+import "./HomeStyle.js"
+
+function Home () {
+
+    return (
+
+        <p>Home</p>
+
+    )
+
+}
+
+export default Home
