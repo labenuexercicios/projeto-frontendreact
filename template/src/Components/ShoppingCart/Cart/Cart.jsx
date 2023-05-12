@@ -1,11 +1,12 @@
 import { Items } from "../Items/Items"
+import { CartStyle } from "./CartStyle"
 
 export const Cart =()=>{
     return(
-        <>
-        <p>Cart</p>
+        <CartStyle>
+        <h2>Cart</h2>
         <Items/>
-        </>
+        </CartStyle>
         
     )
 }
