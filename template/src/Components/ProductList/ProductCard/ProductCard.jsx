@@ -1,16 +1,15 @@
 import { Produto, Div } from "./ProductCardStyle"
 
-export const ProductCard =()=>{
+export const ProductCard =({produto})=>{
     return(
         
         <Produto>
-            <img src="https://picsum.photos/400/400?a=1 " alt="imagem produto"/>
+            <img src={produto.imageUrl} alt="imagem produto"/>
             <Div>
-                <h4>Nome do produto</h4>
-                <p>Valor:</p>
+                <h4>{produto.name}</h4>
+                <p>Valor: {produto.value} R$</p>
                 <button>Add ao carrinho</button>
             </Div>
-            
         </Produto>
     )
 }

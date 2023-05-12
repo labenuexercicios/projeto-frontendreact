@@ -1,11 +1,11 @@
 import { ProductCard } from "../ProductCard/ProductCard"
 import {HomeStyle} from "./HomeStyle"
 
-export const Home =()=>{
+export const Home =({produtos})=>{
     return(
         <HomeStyle>
             <div>
-                <p>Quantidade de produtos:</p>
+                <p>Quantidade de produtos: {produtos.length}</p>
         <label> Ordenação
             <select> 
                 <option>Crescente</option>
@@ -13,9 +13,9 @@ export const Home =()=>{
             </select>
         </label>
             </div>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
+        <ProductCard produto={produtos[0]}/>
+        <ProductCard produto={produtos[1]}/>
+        <ProductCard produto={produtos[2]}/>
         </HomeStyle>
     )
 }

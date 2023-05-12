@@ -3,6 +3,7 @@ import styled, {createGlobalStyle} from "styled-components";
 import {Filter} from './Components/Filters/Filters';
 import {Home} from './Components/ProductList/Home/Home';
 import {Cart} from './Components/ShoppingCart/Cart/Cart';
+import {produtos} from './assets/productList';
 
 const GlobalStyle = createGlobalStyle`
   *{margin: 0;
@@ -22,7 +23,7 @@ function App() {
     <GlobalStyle/>
     <Main>
       <Filter/>
-      <Home/>
+      <Home produtos={produtos}/>
       <Cart/>
     </Main>
     </>
