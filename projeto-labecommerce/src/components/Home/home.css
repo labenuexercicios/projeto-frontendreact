@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: column;
 
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: auto;
 
     background-color: #B8CABE;
     border: 1px solid black;
+
+    padding: 1em;
 }
 
 .containerOrdenar{
@@ -14,8 +16,9 @@
 }
 
 .card{
-    align-self: center;
+    margin: 1em;
     display: flex;
-    gap:3em;
-    
+    flex-wrap: wrap;
+    gap:1em 2em;
+    justify-content: center;
 }
