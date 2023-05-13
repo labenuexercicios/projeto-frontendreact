@@ -4,7 +4,7 @@ import ProductCard from "../ProductCard/ProductCard";
 function Home() {
   return (
     <>
-      <p>Home</p>
+      <p>Home.</p>
       <ProductCard />
     </>
   );
