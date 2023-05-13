@@ -4,7 +4,7 @@ import Items from "../Items/Items";
 function Cart() {
   return (
     <>
-      <p>Cart..</p>
+      <p>Cart!</p>
       <Items />
     </>
   );
