@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const CartStyle = styled.div`
-    height: 40vmin;
-    background-color: #61dafb;    
+    padding: 1%;
     width: 20vw;
-    border: solid black 2px;
+    border: solid black 1px;
 
 `

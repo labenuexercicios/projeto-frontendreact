@@ -1,10 +1,10 @@
 import React from 'react'
 import ProductCard from '../ProductCard/ProductCard'
-import { Topo,Cards } from './homeStyle'
+import { Topo,Cards,Container } from './homeStyle'
 
 function Home() {
     return (
-        <>
+        <Container>
             <Topo>
                 <div>
                     <p>Quantidade de produtos:</p>
@@ -26,7 +26,7 @@ function Home() {
                 <ProductCard/>
             </Cards>
             
-        </>
+        </Container>
     )
 }
 

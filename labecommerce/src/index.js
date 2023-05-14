@@ -6,6 +6,7 @@ import App from './App';
 
 const GlobalStyle = createGlobalStyle`
 body{
+  width: 100vw;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

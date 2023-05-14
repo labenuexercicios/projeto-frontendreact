@@ -4,7 +4,7 @@ import { ProductStyled,Texto,Botao} from './productCardStyle'
 
 
 function ProductCard() {
-    const cardImage = `https://picsum.photos/200/300?a=${Math.floor(Math.random()*6)+1}`
+    const cardImage = `https://picsum.photos/180/180?a=${Math.floor(Math.random()*6)+1}`
     return (
         <>
             <ProductStyled>
