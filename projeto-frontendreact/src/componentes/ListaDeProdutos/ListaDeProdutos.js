@@ -4,11 +4,11 @@ import { ListaDeProdutosContaiener } from "./Styles"
 
 function ListaDeProdutos(props) {
 
-    const { results } = props
+    const { produto } = props
 
-    const renderList = results.map(prod => {
+    const renderList = produto.map(prod => {
         return (
-            <CardProdutos
+            <CardProdutos key={prod.id}
                 img={prod.image}
                 nome={prod.title}
                 valor={prod.price}
