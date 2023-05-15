@@ -28,6 +28,7 @@ export const ItemContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 30px;
 `;
 
 export const RemoveButton = styled.button`
@@ -37,4 +38,23 @@ export const RemoveButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+    &:hover {
+      background: red;
+      transition: 0.3s;
+  }
+`;
+
+export const CheckoutButton = styled.button`
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  &:hover {
+    background-color: #2db653;
+    color: #000;
+    transition: 0.3s;
+  }
 `;

@@ -1,4 +1,4 @@
-import { Container, ItemContainer, RemoveButton } from "./styles";
+import { CheckoutButton, Container, ItemContainer, RemoveButton } from "./styles";
 import camisaNasa from '../../assets/img/blusa1.png'
 
 const ShoppingCart = () => {
@@ -13,6 +13,7 @@ const ShoppingCart = () => {
         </div>
         <RemoveButton>Remover</RemoveButton>
       </ItemContainer>
+      <CheckoutButton>Finalizar Compra</CheckoutButton>
     </Container>
     </>
   )

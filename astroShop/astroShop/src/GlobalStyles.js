@@ -33,6 +33,9 @@ export default createGlobalStyle`
   body, input, button, textarea {
     font-family: 'Montserrat'
   }
+  p, h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);
+  }
   button {
     cursor: pointer;
   }

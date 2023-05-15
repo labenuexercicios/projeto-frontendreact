@@ -47,6 +47,7 @@ export const AddToCartButton = styled.button`
   cursor: pointer;
   &:hover {
     background-color: #2db653;
+    color: #000;
     transition: 0.3s;
   }
 
