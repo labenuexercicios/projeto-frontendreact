@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { GlobalStyle } from './GlobalStyle';
 import Header from './componentes/Header/Header';
 import ListaDeProdutos from './componentes/ListaDeProdutos/ListaDeProdutos';
-import { results } from './data/data'
+import { results } from './assents/productsList'
 
 function App() {
 
