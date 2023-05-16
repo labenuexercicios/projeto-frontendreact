@@ -1,4 +1,4 @@
-import { CheckoutButton, Container, ItemContainer, RemoveButton } from "./styles";
+import { CheckoutButton, Container, ItemContainer, RemoveButton } from './styles';
 import camisaNasa from '../../assets/img/blusa1.png'
 
 const ShoppingCart = () => {
@@ -9,7 +9,7 @@ const ShoppingCart = () => {
       <ItemContainer>
         <div>
           <p>Produto: Camisa Nasa</p>
-          <img src={camisaNasa} alt="Camisa Nasa" />
+          <img src={camisaNasa} alt='Camisa Nasa' />
         </div>
         <RemoveButton>Remover</RemoveButton>
       </ItemContainer>

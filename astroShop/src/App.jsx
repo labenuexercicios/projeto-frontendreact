@@ -1,7 +1,7 @@
-import GlobalStyles from "./GlobalStyles";
-import Filters from "./Components/Filters";
-import Home from "./Components/ProductList/Home";
-import ShoppingCart from "./Components/ShoppingCart";
+import GlobalStyles from './GlobalStyles';
+import Filters from './Components/Filters';
+import Home from './Components/ProductList/Home';
+import ShoppingCart from './Components/ShoppingCart';
 import { Container, LeftPanel, MiddlePanel, RightPanel } from './styles';
 import productList from '../src/assents/productList'
 

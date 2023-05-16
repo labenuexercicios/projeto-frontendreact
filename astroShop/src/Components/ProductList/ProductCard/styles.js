@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #eee;
-  border-radius: 4px;
+  border: none;
+  border-radius: 8px;
   padding: 20px;
   margin: 10px;
   max-width: 300px;
@@ -15,6 +15,9 @@ export const Card = styled.div`
   &:hover {
     box-shadow: 0 8px 24px 0 rgba(0,0,0,0.2);
     border: 1px solid var(--color-primary);
+  }
+  img {
+    border-radius: 8px;
   }
   @media (max-width: 600px) {
     max-width: 100%;
