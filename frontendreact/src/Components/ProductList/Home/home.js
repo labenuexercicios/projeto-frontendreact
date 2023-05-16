@@ -41,6 +41,4 @@ export const Home = ({ productList }) => {
   /* <ProductCard produto={product}/> ..*/
 }
 
-{
-  /* <ProductCard produto={product}/> ..*/
-}
+
