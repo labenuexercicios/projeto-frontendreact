@@ -1,7 +1,7 @@
 import React from "react";
 import { FilterBoxStyle } from "./FiltersStyle";
 
-export default function Filters({ minFilter, setMinFilter, maxFilter, setMaxFilter, seachFilter, setSearchFilter }) {
+export default function Filters({ minFilter, setMinFilter, maxFilter, setMaxFilter, seachFilter, setSearchFilter, filter}) {
 
     const conditionSetMinFilter = (e) => {
         const value = parseInt(e.target.value);
@@ -10,7 +10,9 @@ export default function Filters({ minFilter, setMinFilter, maxFilter, setMaxFilt
             setMinFilter("")
         } else {
             setMinFilter(e.target.value)
+            filter()
         }
+
     }
     const conditionSetMaxFilter = (e) => {
         const value = parseInt(e.target.value);
@@ -19,8 +21,11 @@ export default function Filters({ minFilter, setMinFilter, maxFilter, setMaxFilt
             setMaxFilter("")
         } else {
             setMaxFilter(e.target.value)
+            filter()
         }
     }
+// filter()
+
     return (
         <FilterBoxStyle>
             <h2>Filtros</h2>

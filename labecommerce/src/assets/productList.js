@@ -8,50 +8,21 @@ export const productList = [
     },
     {
         id: 2,
-        name: "",
+        name: "Blusa",
         price: 2012,
         imageUrl: "https://picsum.photos/200/300?random=2",
     },
     {
         id: 3,
-        name: "",
+        name: "Moletom",
         price: 123,
         imageUrl: "https://picsum.photos/200/300?random",
     },
     {
         id: 4,
-        name: "",
-        price: 42,
+        name: "sinm",
+        price: 123,
         imageUrl: "https://picsum.photos/200/300?random",
     },
-    {
-        id: 5,
-        name: "",
-        price:520,
-        imageUrl: "https://picsum.photos/200/300?random",
-    },
-    {
-        id: 6,
-        name: "",
-        price: 230,
-        imageUrl: "https://picsum.photos/200/300?random",
-    },
-    {
-        id: 7,
-        name: "",
-        price: 120,
-        imageUrl: "https://picsum.photos/200/300?random",
-    },
-    {
-        id: 8,
-        name: "",
-        price: 20,
-        imageUrl: "https://picsum.photos/200",
-    },
-    {
-        id: 9,
-        name: "",
-        price: 2980,
-        imageUrl: "https://picsum.photos/200",
-    },
+    
 ]

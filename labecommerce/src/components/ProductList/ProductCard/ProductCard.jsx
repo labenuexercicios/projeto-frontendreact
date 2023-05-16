@@ -2,7 +2,8 @@ import React from "react";
 import { BoxImage, Button, CardBox, ProductImage, ProductInfoBox } from "./ProductCardStyle";
 
 
-export default function ProductCard ({product}) {
+export default function ProductCard ({product,addItensOnCart }) {
+
     return(
         <CardBox>
             <BoxImage>
@@ -11,7 +12,7 @@ export default function ProductCard ({product}) {
             <ProductInfoBox>
                 <p>{product.name}</p>
                 <p>Preço: R${product.price}</p>
-                <Button>Adicionar ao carrinho</Button>
+                <Button onClick={()=> addItensOnCart(product)}>Adicionar ao carrinho</Button>
             </ProductInfoBox>
         </CardBox>
     )
