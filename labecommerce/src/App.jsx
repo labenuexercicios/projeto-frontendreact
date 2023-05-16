@@ -22,7 +22,6 @@ function App() {
       }
     }))
   }
-  // console.log(productListFiltered)
   return (
     <AppBox>
      <GlobalStyles />

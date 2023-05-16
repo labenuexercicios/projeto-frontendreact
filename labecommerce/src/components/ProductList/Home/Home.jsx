@@ -72,36 +72,3 @@ export default function Home({
   );
 }
 
-// Metodo para adicionar item ao array cart "setCart([...cart,item])"
-
-/* Metodo para adicionar item ao array cart e adicionar valor total: setCart([
-        ...cart,
-        {...item,
-        quantity:1}
-      ])
-      setAmount(Number(amount) + Number(item.price)) */
-
-
-      // const addItensOnCart = (receivedProduct) => {
-      //   if (cart.length === 0) {
-      //     setCart([...cart, { ...receivedProduct, quantity: 1 }]);
-      //     setAmount(Number(amount) + Number(receivedProduct.price));
-      //   } else {
-      //     cart.map((myProduct) => {
-      //       if (myProduct.id === receivedProduct.id) {
-      //         myProduct.quantity = Number(myProduct.quantity) + 1;
-      //         setCart([...cart]);
-      //         setAmount(Number(amount) + Number(receivedProduct.price));
-      //       } else if (
-      //         !cart.some((item) => {
-      //           return Object.values(item).includes(receivedProduct.id);
-      //         })
-      //       ) {
-      //         setCart([...cart, { ...receivedProduct, quantity: 1 }]);
-      //         setAmount(Number(amount) + Number(receivedProduct.price));
-      //       }
-      //     });
-      //   }
-      //   receivedProduct = "";
-      // }; MEDO
-
