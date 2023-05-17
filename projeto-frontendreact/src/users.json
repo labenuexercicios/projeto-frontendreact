@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "name": "Lucas Breia",
+        "address": "Estrada Marechal Mallet, 521",
+        "district": "Rio de Janeiro",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "zipCode": "21745-091",
+        "card": [
+            {
+                "nameCard": "Lucas Breia",
+                "numberCard": 4987775534259876,
+                "cardType": "Visa",
+                "codSecurity": 222,
+                "dateExp": "03/30",
+                "imageCard": "./image/visacard.png"
+            }
+        ]
+    }
+]
