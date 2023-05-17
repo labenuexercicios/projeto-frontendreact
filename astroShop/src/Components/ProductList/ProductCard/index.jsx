@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import moletomNasa from '../../../assets/img/blusa1.png'
+
 import { AddToCartButton, Card, CardImage, CardPrice, CardTitle } from './styles';
 
 const ProductCard = ({product}) => {
