@@ -27,9 +27,9 @@ const Home = ({ productList, minFilter, maxFilter, searchFilter }) => {
     }
 
     const sortedProducts = [...filteredProducts].sort((min, max) => {
-      if (sortValue === "crescente") {
+      if (sortValue === "ascending") {
         return min.value - max.value;
-      } else if (sortValue === "decrescente") {
+      } else if (sortValue === "descending") {
         return max.value - min.value;
       } else {
         return 0;
@@ -44,10 +44,10 @@ const Home = ({ productList, minFilter, maxFilter, searchFilter }) => {
       <Container>
         <Header>
           <p>Quantidade de Produtos: {sortedProductList.length}</p>
-          <select name="crescente" id="crescente" onChange={handleSort}>
+          <select name="ascending" id="ascending" onChange={handleSort}>
             <option value="">Ordenar por:</option>
-            <option value="crescente">crescente</option>
-            <option value="decrescente">decrescente</option>
+            <option value="ascending">crescente</option>
+            <option value="descending">decrescente</option>
           </select>
         </Header>
         <ProductGrid>

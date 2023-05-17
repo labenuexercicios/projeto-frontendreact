@@ -31,6 +31,7 @@ const Filters = ({ minFilter, maxFilter, onChange, searchFilter }) => {
             label="valor mínimo:"
             value={minFilter}
             onChange={onHandleMinFilter}
+            onlyNumbers
           >
             <MdPriceCheck />
           </Input>
@@ -39,6 +40,7 @@ const Filters = ({ minFilter, maxFilter, onChange, searchFilter }) => {
           label="valor maximo:"
           value={maxFilter}
           onChange={onHandleMaxFilter}
+          onlyNumbers
           >
             <MdPriceCheck />
           </Input>
