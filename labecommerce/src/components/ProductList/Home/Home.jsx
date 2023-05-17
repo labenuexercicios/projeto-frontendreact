@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import { HomeBoxStyled, HomeCardsBox, HomeLabelBox } from "./HomeStyle";
 
@@ -8,9 +8,10 @@ export default function Home({
   setAmount,
   cart,
   setCart,
+  sortedList,
+  setSortedList
 }) {
-  const [ordination, setOrdination] = useState("");
-
+  const [ordination, setOrdination] = useState("null");
   let productQuantity = 0;
 
   const addItensOnCart = (receivedProduct) => {
@@ -42,15 +43,31 @@ export default function Home({
     return <ProductCard product={product} addItensOnCart={addItensOnCart} key={product.id}/>;
   });
 
-  const changeSelection = (e) => {
-    console.log("change")
-    setOrdination(e.target.value)
-  }
+  useEffect(() => {
+    sortedList.sort((a,b) => {
+      if(ordination === "Decrescente"){
 
- 
-  const onChangeHandler = (e) => {
-    changeSelection(e)
-  }
+        if(a.name < b.name){
+          return -1;
+        }
+        if(a.name > b.name){
+          return 1
+        }
+        return 0
+      }else if(ordination === "Crescente"){
+        if(a.name > b.name){
+          return -1;
+        }
+        if(a.name < b.name){
+          return 1
+        }
+        return 0
+      }
+      return 0
+    })
+    setSortedList([...sortedList])
+  }, [ordination])
+
 
   return (
     <HomeBoxStyled>
@@ -60,10 +77,11 @@ export default function Home({
           Ordenação:
           <select
             value={ordination}
-            onChange={onChangeHandler}
+            onChange={(e)=>setOrdination(e.target.value)}
           >
-            <option value={"Crescente"}>Crescente</option>
-            <option value={"Decrescente"}>Decrescente</option>
+            <option value="null" disabled></option>
+            <option value="Crescente">Crescente</option>
+            <option value="Decrescente">Decrescente</option>
           </select>
         </label>
       </HomeLabelBox>
