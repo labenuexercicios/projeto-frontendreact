@@ -7,22 +7,14 @@ import { Container, Header, ProductGrid } from "./styles";
 
 const Home = ({ productList, minFilter, maxFilter, searchFilter }) => {
   const [sortedProductList, setSortedProductList] = useState([...productList]);
+  const [sortValue, setSortValue] = useState('');
 
   const handleSort = (e) => {
-    const sortValue = e.target.value;
-    const sortedProducts = [...productList].sort((min, max) => {
-      if (sortValue === "crescente") {
-        return min.value - max.value;
-      } else if (sortValue === "decrescente") {
-        return max.value - min.value;
-      } else {
-        return 0;
-      }
-    });
-    setSortedProductList(sortedProducts);
+    setSortValue(e.target.value)
   };
+
   useEffect(() => {
-    const filteredProducts = productList.filter(
+    let filteredProducts = productList.filter(
       product => 
       (minFilter ? product.value >= minFilter : true) &&
       (maxFilter ? product.value <= maxFilter : true)
@@ -31,10 +23,21 @@ const Home = ({ productList, minFilter, maxFilter, searchFilter }) => {
     if(searchFilter) {
       filteredProducts = filteredProducts.filter(product =>
         product.name.toLowerCase().includes(searchFilter.toLowerCase())  
-      )
+      );
     }
-    setSortedProductList(filteredProducts);
-  }, [productList, minFilter, maxFilter, searchFilter]);
+
+    const sortedProducts = [...filteredProducts].sort((min, max) => {
+      if (sortValue === "crescente") {
+        return min.value - max.value;
+      } else if (sortValue === "decrescente") {
+        return max.value - min.value;
+      } else {
+        return 0;
+      }
+    });
+
+    setSortedProductList(sortedProducts);
+  }, [productList, minFilter, maxFilter, searchFilter, sortValue]);
 
   return (
     <>
