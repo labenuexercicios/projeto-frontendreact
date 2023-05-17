@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 display: flex;
-justify-content: center;
+justify-content: flex-start;
+flex-wrap: wrap;
 flex-direction: column;
 align-items: center;
 gap: 20px;
@@ -38,7 +39,7 @@ padding: 20px;
 
 export const ProductGrid = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 20px;
 `;

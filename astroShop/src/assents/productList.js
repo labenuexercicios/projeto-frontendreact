@@ -16,7 +16,19 @@ const productList = [
     name: "Item 3",
     value: 500.0,
     imageUrl: "https://picsum.photos/300/335?a=3"
+  },
+  {
+    id: 4,
+    name: "Item 4",
+    value: 500.0,
+    imageUrl: "https://picsum.photos/300/335?a=4"
+  },
+  {
+    id: 5,
+    name: "Exemplo 5",
+    value: 750.0,
+    imageUrl: "https://picsum.photos/300/335?a=5"
   }
 ];
 
-export default productList
+export default productList;
