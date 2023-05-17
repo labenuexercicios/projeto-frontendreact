@@ -1,19 +1,15 @@
-import './style.css';
-import Carrinho from './components/Carrinho/Carrinho';
-import Filtro from './components/Filtro/Filtro';
-// import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import { results } from './assents/productsList';
+import React from 'react';
+import Home from './Home';
+import Filtro from './Filtro';
+import Carrinho from './Carrinho';
 
 function App() {
   return (
-    <div className='container'>
-      {/* <Header /> */}
+    <div>
+      <Home />
       <Filtro />
-      <Home
-        results={results} />
       <Carrinho />
-    </div >
+    </div>
   );
 }
 

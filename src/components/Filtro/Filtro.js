@@ -1,19 +1,12 @@
-import { FiltroContainer } from "./FiltroStyles"
+import React from 'react';
 
 function Filtro() {
-    return (
-        <FiltroContainer>
-            <p>Filtro</p>
-            <label>valor mínimo</label>
-            <input type="text"></input>
-
-            <label>valor máximo</label>
-            <input type="text"></input>
-
-            <label>buscar por nome</label>
-            <input type="text"></input>
-        </FiltroContainer>
-    )
+  return (
+    <div>
+      <h2>Filtro</h2>
+      {/* Componente de filtro */}
+    </div>
+  );
 }
 
-export default Filtro
+export default Filtro;
