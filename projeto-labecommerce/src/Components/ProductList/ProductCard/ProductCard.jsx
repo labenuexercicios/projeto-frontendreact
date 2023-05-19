@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+
   const CardContainer = styled.div`
     border: 1px solid black;
     height: 500px;
@@ -11,16 +12,19 @@ const ProductCard = () => {
     div {
       height: 70%;
     }
+    img {
+      width: 100%;
+    }
 
   `
 
   return (
     <CardContainer>
       <div>
-       <p>ProductCard</p> 
+       <img src={props.imageUrl} />
       </div>
-      <p>Nome do Produto</p>
-      <p>valor</p>
+      <p>{props.name}</p>
+      <p>{props.value}</p>
       <button>Adicionar ao carrinho</button>
     
     </CardContainer>
