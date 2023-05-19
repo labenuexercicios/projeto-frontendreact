@@ -2,6 +2,7 @@ import Filters from './Components/Filters/Filters'
 import Home from './Components/ProductList/Home/Home.jsx'
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart'
 import styled from 'styled-components'
+import { produtos } from './assets/ProductList'
 
 function App() {
   const MainContainer = styled.div`
@@ -13,7 +14,7 @@ function App() {
   return (
     <MainContainer>
       <Filters />
-      <Home />
+      <Home produtos={produtos}/>
       <ShoppingCart />
     </MainContainer>
   )
