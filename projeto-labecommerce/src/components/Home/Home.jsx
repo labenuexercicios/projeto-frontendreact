@@ -11,6 +11,7 @@ export function Home(props){
     const result = props.produtos.map(item=>{
         return item
     })
+    
     return(
         <section className="home">
             <div className="containerOrdenar">
