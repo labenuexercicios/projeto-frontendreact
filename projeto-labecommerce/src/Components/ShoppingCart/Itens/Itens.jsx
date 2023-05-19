@@ -3,7 +3,9 @@ import React from 'react'
 const Itens = () => {
   return (
     <div>
-       <p>Itens</p> 
+       <p> 0x Nome do produto</p> 
+       <button type="button">Remover</button>
+       <p>Valor Total: 0</p>
     </div>
   )
 }
