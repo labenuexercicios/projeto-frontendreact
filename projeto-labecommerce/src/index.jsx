@@ -13,7 +13,7 @@ export function Index() {
   const [searchFilter, setSearchFilter] = useState("");
   //Home & Cart
   const [amount, setAmount] = useState("")
-  const [cart, setCart] = useState("")
+  const [cart, setCart] = useState([])
 
   return (
     <div>

@@ -1,9 +1,15 @@
 .productCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     background: #B88F93;
+    border-radius: 20px;
 
     margin: 1em;
-    height: 25em;
-    width:16.5em ;
+    height: 28em;
+    width:17.5em ;
     
     transition: filter 0.2s;
 }
@@ -11,6 +17,8 @@
 .productCard > h2{
     padding: .5em;
     color: #fff;
+
+    font-size: 1.15em;
 }
 
 .productCard > p{
@@ -20,7 +28,21 @@
     padding: .5em;
 }
 
+.productCard > button{
+    width: 10em;
+    height: 3em;
+
+    background-color: #B8CABE;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px rgb(135, 134, 134);
+
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+}
+
 /*Hover*/
 .productCard:hover{
     filter: opacity(70%);
+    border: 1px solid black;
 }
