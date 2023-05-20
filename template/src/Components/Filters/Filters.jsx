@@ -1,7 +1,12 @@
+import { products } from "../../assets/productList";
 import { Filtro } from "./FiltersStyle"
 
-export const Filter = ({minFilter, onChangeMinFilter,maxFilter, onChangeMaxFilter, searchFilter,onChangeSearchFilter})=> {
-    
+export const Filter = ({minFilter, setMinFilter,maxFilter,setMaxFilter, searchFilter,setSearchFilter})=> {
+
+    const onChangeSearchFilter =(e)=>{setSearchFilter(e.target.value)}
+    const onChangeMinFilter =(e)=>{setMinFilter(e.target.value)}
+    const onChangeMaxFilter =(e)=>{setMaxFilter(e.target.value)}
+
     return(
         <Filtro>
         <h2>Filtro</h2>

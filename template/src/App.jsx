@@ -25,9 +25,6 @@ function App() {
   const [cart,setCart]=useState([]);
   const [amount,setAmount]=useState(0);
   const [quantity,setQuantity] = useState("")
-  const onChangeSearchFilter =(event)=>{setSearchFilter(event.target.value)};
-  const onChangeMinFilter =(e)=>{setMinFilter(e.target.value)}
-  const onChangeMaxFilter =(event)=>{setMaxFilter(event.target.value)};
   
   const addProduct = (product) => {
     if (product.quantity>=1) {product.quantity= product.quantity + 1; setQuantity(product.quantity);setAmount(amount+product.value)}
@@ -43,8 +40,12 @@ function App() {
     <>
     <GlobalStyle/>
     <Main>
-      <Filter minFilter={minFilter} onChangeMinFilter={onChangeMinFilter} maxFilter={maxFilter} onChangeMaxFilter={onChangeMaxFilter} searchFilter={searchFilter} onChangeSearchFilter={onChangeSearchFilter}/>
-      <Home products={products} addProduct={addProduct}/>
+      <Filter minFilter={minFilter} setMinFilter={setMinFilter} maxFilter={maxFilter} setMaxFilter={setMaxFilter} searchFilter={searchFilter} setSearchFilter={setSearchFilter}/>
+      <Home productsFiltered={products
+        .filter((product)=>{return product.name.toLowerCase().includes(searchFilter.toLowerCase())})
+        .filter((product)=>{return product.value>minFilter})
+        .filter((product)=>{return maxFilter? product.value<maxFilter: product})
+        } addProduct={addProduct}/>
       <Cart cart={cart} amount={amount} removeProduct={removeProduct}/>
     </Main>
     </>
