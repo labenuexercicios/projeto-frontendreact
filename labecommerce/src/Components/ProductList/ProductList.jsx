@@ -1,7 +1,7 @@
 import React from "react";
 
-function Productlist() {
-  return <p>ProductList.</p>;
+function ProductList() {
+  return;
 }
 
-export default Productlist;
+export default ProductList;
