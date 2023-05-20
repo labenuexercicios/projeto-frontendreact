@@ -7,7 +7,7 @@ export const ProductCard =({product, addProduct})=>{
             <img src={product.imageUrl} alt="imagem produto"/>
             <Div>
                 <h4>{product.name}</h4>
-                <p>Valor: {product.value.toFixed(2)} R$</p>
+                <p>Valor: {product.value.toFixed(2).replace(".",",")} R$</p>
                 <button onClick={()=>{addProduct(product)}}>Add ao carrinho</button>
             </Div>
         </Produto>

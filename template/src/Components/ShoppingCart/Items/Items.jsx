@@ -6,7 +6,7 @@ export const Items =({product,removeProduct})=>{
         <>
         <CartStyle>
         <div>
-            <p>{product.quantity}x {product.name} {product.value.toFixed(2)}R$  </p>
+            <p>{product.quantity}x {product.name} {product.value.toFixed(2).replace(".",",")}R$  </p>
         <button onClick={()=>{removeProduct(product)}}>Remover</button>
         </div>
         </CartStyle>
