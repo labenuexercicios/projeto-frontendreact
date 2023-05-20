@@ -2,13 +2,13 @@ import { useState } from "react"
 import { ProductCard } from "../ProductCard/ProductCard"
 import {HomeStyle} from "./HomeStyle"
 
-export const Home =({produtos})=>{
+export const Home =({products, addProduct})=>{
     const[ordination,setOrdination] = useState("")
     const onChangeOrdination =(e)=>{setOrdination(e.target.value)}
     return(
         <HomeStyle>
             <div>
-                <p>Quantidade de produtos: {produtos.length}</p>
+                <p>Quantidade de produtos: {products.length}</p>
         <label> Ordenação
             <select value={ordination} onChange={onChangeOrdination}> 
                 <option>Crescente</option>
@@ -16,9 +16,7 @@ export const Home =({produtos})=>{
             </select>
         </label>
             </div>
-        <ProductCard produto={produtos[0]}/>
-        <ProductCard produto={produtos[1]}/>
-        <ProductCard produto={produtos[2]}/>
+            {products.map((product,indice)=>{return <ProductCard key={indice} product={product} addProduct={addProduct}/>})}
         </HomeStyle>
     )
 }

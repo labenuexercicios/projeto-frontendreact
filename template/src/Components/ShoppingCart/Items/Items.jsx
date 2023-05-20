@@ -1,13 +1,15 @@
 import {CartStyle} from "./ItemsStyle"
 
-export const Items =()=>{
+export const Items =({product,removeProduct})=>{
+    
     return(
+        <>
         <CartStyle>
         <div>
-            <p>x0 Items</p>
-        <button>Remover</button>
+            <p>{product.quantity}x {product.name} {product.value.toFixed(2)}R$  </p>
+        <button onClick={()=>{removeProduct(product)}}>Remover</button>
         </div>
-        <p>Valor Total: 0</p>
         </CartStyle>
+        </>
     )
 }
