@@ -18,6 +18,7 @@ body{
     background-color: #B88F93;
     font-family:'Montserrat', sans-serif; 
     font-size: 1em;
+    min-height: 100vh;
 }
 
 /*Header ------*/
@@ -45,7 +46,7 @@ main{
     align-items: center;
     display: flex;
     justify-content: center;
-    height: auto;
+    height: fit-content;
 }
 
 .main-container{
@@ -56,7 +57,6 @@ main{
     grid-template-columns: 1fr 60% 1fr;
 
     width: 80vw;
-    height: auto;
 
     margin: 1em;
 }
@@ -88,13 +88,13 @@ footer p{
 @media screen and (min-device-width : 1700px) and (max-device-width : 3000px) {
     .main-container{
         grid-template-columns: 1fr 65% 1fr;
-        max-width: 60vw;
+        width: 70vw;
     }
 }
 
 @media screen and (min-device-width : 3000px) {
     .main-container{
         grid-template-columns: 1fr 65% 1fr;
-        max-width: 50vw;
+        width: 55vw;
     }
 }
