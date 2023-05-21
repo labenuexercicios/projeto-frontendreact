@@ -2,17 +2,38 @@
     display: flex;
     flex-direction: column;
 
-    height: 100vh;
+    height: auto;
     width: auto;
 
     background-color: #B8CABE;
-    border: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
 
     padding: 1em;
 }
 
 .containerOrdenar{
     padding: .5em;
+}
+
+.home select{
+    background: #A7848B;
+    border-radius: 20px;
+    border: none;
+
+    height: 3vh;
+    width: 11.25em;
+
+    padding: .5em;
+    margin: .5em;
+
+    font-family:'Montserrat', sans-serif; 
+    font-size: .7em;
+    font-weight: 600;
+}
+
+.home option{
+    font-weight: 600;
 }
 
 .card{

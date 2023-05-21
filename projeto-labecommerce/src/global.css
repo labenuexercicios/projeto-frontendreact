@@ -42,8 +42,23 @@ header h1{
 
 /*Main -----*/
 main{
+    align-items: center;
     display: flex;
+    justify-content: center;
     height: auto;
+}
+
+.main-container{
+    box-shadow: 5px 5px 20px rgba(33, 33, 33, 0.789);
+    border: 1px solid black;
+
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+
+    width: 80vw;
+    height: auto;
+
+    margin: 1em;
 }
 
 /*Footer -----*/
@@ -60,4 +75,26 @@ footer{
 footer p{
     color: #A7848B;
     font-weight: 600;
+}
+
+@media screen and (min-device-width : 365px) and (max-device-width : 500px) {
+    .main-container{
+        grid-template-columns: 25% 50% 25%;
+        margin: .5em;
+    }
+}
+
+/*Responsividade*/
+@media screen and (min-device-width : 1700px) and (max-device-width : 3000px) {
+    .main-container{
+        grid-template-columns: 1fr 65% 1fr;
+        max-width: 60vw;
+    }
+}
+
+@media screen and (min-device-width : 3000px) {
+    .main-container{
+        grid-template-columns: 1fr 65% 1fr;
+        max-width: 50vw;
+    }
 }

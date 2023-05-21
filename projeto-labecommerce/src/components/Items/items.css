@@ -15,3 +15,25 @@
 
     border: 0;
 }
+
+@media screen and (min-device-width : 365px) and (max-device-width : 500px) {
+    .containerItems p{
+        font-size: .5em;
+    }
+    .second {
+        height: auto;
+        width: calc(100% - 50px);
+    }
+    label {
+        font-size: .55em;
+        margin: .2em 0;
+    }
+
+    #amount {
+        width: calc(100% - 5px);
+    }
+
+    .second button{
+        width: calc(100% - 10px);;
+    }
+}

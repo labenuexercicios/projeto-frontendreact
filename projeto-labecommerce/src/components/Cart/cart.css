@@ -3,10 +3,7 @@
     flex-direction: column;
 
     padding: .5em;
-    width: 10vw;
-
-    border-top: 1px solid black;
-    border-right: 1px solid black ;
+    max-width: 20em;
 }
 
 .containerCart .first{
@@ -14,8 +11,7 @@
     display: flex;
     justify-content: space-between;
 
-    width: 100%;
-    padding: 1em 1em;
+    margin: 1em ;
 }
 
 .first h1{
@@ -28,6 +24,14 @@
 
     background-color: #B8CABE;
     border-radius: 20px;
+
+    
     padding: .55em;
+}
+
+@media screen and (min-device-width : 365px) and (max-device-width : 500px) {
+    .first h1 {
+        font-size: .8em;
+    } 
 }
 
