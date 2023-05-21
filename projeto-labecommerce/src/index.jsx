@@ -13,7 +13,7 @@ export function Index() {
   const [searchFilter, setSearchFilter] = useState("");
   //Home & Cart
   const [amount, setAmount] = useState("")
-  const [cart, setCart] = useState("")
+  const [cart, setCart] = useState([])
 
   return (
     <div>
@@ -21,6 +21,7 @@ export function Index() {
         <h1>Labecommerce</h1>
       </header>
       <main>
+        <div className="main-container">
         <Filters
           inputMax={maxFilter}
           setMinFilter={setMinFilter}
@@ -33,13 +34,17 @@ export function Index() {
          produtos={listaDeProduto}
          amount={amount}
          setAmount={setAmount}
-         cart={setCart}
-         setCart={setCart} />
+         cart={cart}
+         setCart={setCart}
+         minFilter={minFilter}
+         maxFilter={maxFilter}
+         searchFilter={searchFilter} />
         <Cart
          amount={amount}
          setAmount={setAmount}
-         cart={setCart}
+         cart={cart}
          setCart={setCart}/>
+        </div>
       </main>
       <footer>
         <p>Camila Antunes Copyright © 2023</p>

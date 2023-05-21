@@ -1,16 +1,13 @@
 import { useState } from "react"
 
-export function Items(){
-    const [amount, setAmout] = useState("")
-    function onChangeAmout(event){
-        setAmout(event.target.value)
-    }
-
+export function Items({item, removeItem}){
+    
     return(
         <div className="containerItems">
-            <input type="text" name="" id="amount" />
-            <p>Name</p>
-            <button>Remover</button>
+            <input type="text" id="amount" value={item.amount} />
+            <p>{item.name}</p>
+            <p> {item.value}</p>
+            <button onClick={()=>removeItem(item)}>Remover</button>
         </div>
     )
 }
