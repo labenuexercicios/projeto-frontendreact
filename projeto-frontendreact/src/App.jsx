@@ -9,7 +9,7 @@ import { ProductCard } from "./Components/ProductCard/ProductCard";
 function App() {
   return (
     <div>
-      <h1>Projeto Inicial Estrutura</h1>
+      <h1>Projeto Inicial Est.</h1>
     </div>
   );
 }
