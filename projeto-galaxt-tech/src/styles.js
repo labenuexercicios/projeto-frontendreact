@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import backgroundModel2 from "../assets/back.jpg";
+import styled from 'styled-components'
+import backgroundModel2 from "./assets/back.jpg";
 
 
 export const SectionHome = styled.section`
@@ -7,11 +7,11 @@ export const SectionHome = styled.section`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-  background-image: url(${backgroundModel2});
-  height: 80vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right bottom;
+  background-image:url(${backgroundModel2});
+  height:80vh;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:right bottom;
 
   .typing {
     margin-top: 6rem;
@@ -33,7 +33,8 @@ export const ContainerMain = styled.main`
 
 
 .Products span { display:inline-block; animation:float .6s ease-in-out infinite; }
- @keyframes float {
+
+@keyframes float {
   0%,100%{ transform:none; }
   33%{ transform:translateY(-1px) rotate(-2deg); }
   66%{ transform:translateY(1px) rotate(2deg); }
@@ -53,9 +54,9 @@ span:nth-child(4n-3) { color:hsl(335, 75%, 75%); text-shadow:1px 1px hsl(30, 25%
 
 export const ContainerProducts = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 15.9375rem);
-  justify-content: center;
+  display:grid;
+  grid-template-columns:repeat(4, 15.9375rem);
+  justify-content:center;
   justify-items: center;
   padding: 1.875rem;
   grid-gap: 1.875rem;

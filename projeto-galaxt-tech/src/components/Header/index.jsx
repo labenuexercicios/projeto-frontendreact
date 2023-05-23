@@ -12,7 +12,7 @@ import iconX from "../../assets/x.svg";
 import remove from "../../assets/remove-icon.svg";
 import { priceFormatter } from "../../utils/priceFormatter";
 
-export function Header(props) {
+export default function Header (props) {
   const [sidebar, setSidebar] = useState(false);
   const showSiderbar = () => setSidebar(!sidebar);
 
