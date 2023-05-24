@@ -1,10 +1,13 @@
 import { Items } from "../Items/Items";
+import { CartCaixa } from "./cartStyle";
 
 export function Cart() {
   return (
     <>
-      <p>Cart</p>
-      <Items />
+      <CartCaixa>
+        <p>Cart</p>
+        <Items />
+      </CartCaixa>
     </>
   );
 }
