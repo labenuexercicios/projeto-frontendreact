@@ -14,7 +14,7 @@
 }
 
 label {
-    font-size: 1em;
+    font-size: .95em;
     margin: .2em 0;
 }
 
@@ -24,7 +24,9 @@ label {
     border: none;
 
     height: 2.5vh;
-    width: 11.25em;
+    width: calc(100%- 11em);
+
+    padding: .5em ;
 }
 
 /*Responsividade*/

@@ -7,6 +7,6 @@ export function Items(props){
             <p>{props.item.name}</p>
             <p> {props.item.value}</p>
             <button onClick={()=>props.removeItem(props.item)}>Remover</button>
-        </div>
+       </div>
     )
 }

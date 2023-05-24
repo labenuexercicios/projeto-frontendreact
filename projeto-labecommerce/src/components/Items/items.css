@@ -1,10 +1,45 @@
 .containerItems{
-    align-items: center;
-    display: flex;
-    gap: .2em;
+    margin: .2em 0;
 }
 
-.containerItems p{
+.firstContainerItems{
+    align-items: center;
+    display: flex;
+    gap: .5em;
+    margin: .5em;
+}
+
+.firstContainerItems input {
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    color: #ffffff;
+    background-color: #A7848B;
+}
+
+.firstContainerItems p {
+    font-size: .9em;
+}
+
+.secondContainerItems{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: .2em;
+
+    margin: .5em;
+}
+
+.secondContainerItems button{
+    background-color: #A7848B;
+    border: 0;
+    color: #ffffff;
+    width: calc(100% - 100px);
+    font-size: calc(100% - 5px);
+    font-family: 'Montserrat', sans-serif; ;
+}
+
+.secondContainerItems p{
+    font-weight: 600;
     font-size: .9em;
 }
 
@@ -31,5 +66,18 @@
 
     .second button{
         width: calc(100% - 10px);;
+    }
+}
+
+@media screen and (min-device-width : 1700px) and (max-device-width : 2100px) {
+    .secondContainerItems button{
+        width: calc(100% - 100px);
+        font-size: calc(100% - 5.5px);
+    }
+}
+@media screen and (min-device-width : 2000px) {
+    .secondContainerItems button{
+        width: calc(100% - 150px);
+        font-size: calc(100% - 5px);
     }
 }

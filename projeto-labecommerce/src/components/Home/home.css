@@ -2,9 +2,7 @@
     display: flex;
     flex-direction: column;
 
-    height: auto;
-    width: auto;
-
+    min-height: 100vh;
     background-color: #B8CABE;
     border-right: 1px solid black;
     border-left: 1px solid black;
