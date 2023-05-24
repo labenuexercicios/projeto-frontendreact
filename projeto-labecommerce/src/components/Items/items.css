@@ -43,7 +43,7 @@
     font-size: .9em;
 }
 
-#amount{
+#quantity{
     text-align: center;
     font-size: .8em;
     width: 1.5em;
@@ -62,10 +62,6 @@
     label {
         font-size: .55em;
         margin: .2em 0;
-    }
-
-    #amount {
-        width: calc(100% - 5px);
     }
 
     .second button{

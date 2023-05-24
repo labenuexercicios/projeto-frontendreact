@@ -4,35 +4,34 @@ import { ProductCard } from "../ProductCard/ProductCard";
 export function Home(props) {
   const [select, setSelect] = useState("");
 
-  const onChangeSelect = (event) => {
-    setSelect(event.target.value);
-  }
-
-  const produtos = props.produtos.map((item) => {
+  const product = props.produtos.map((item) => {
     return item;
   });
 
-  function moreProductInCart (elemento) { // !Adicionar produtos
-    // .find()
-    const isItemInCart = props.cart.find((item)=>item.id === elemento)
+  const onChangeSelect = (event) => {
+    setSelect(event.target.value);
+  };
 
-    if(isItemInCart){
-      console.log(isItemInCart)
-      const updateCart = props.cart.map((item)=>{
-        if(item.id === elemento.id){
-          return{
-            ...item, quantity: item.quantity + 1,
+  function moreProductInCart(elemento) {
+    const isItemInCart = props.cart.find((item) => item.id === elemento.id);
+
+    if (isItemInCart) {
+        const updateCart = props.cart.map((item) => {
+          if (item.id === elemento.id) {
+            return {
+              ...item,
+              quantity: item.quantity + 1,
+            };
           }
-        }
-        return item
-      })
-      props.setCart(updateCart)
-      console.log("Carrinho",cart)
-    }else{
-      props.setCart([...props.cart, {...elemento, amount: 1}])
+          return item;
+        });
+      props.setCart(updateCart);
+    }else {
+        const newProductInCart = [...props.cart, { ...elemento, quantity: 1 }];
+        props.setCart(newProductInCart);
     }
-  }
 
+  }
 
   return (
     <section className="home">
@@ -45,26 +44,34 @@ export function Home(props) {
         </select>
       </div>
       <article className="card">
-        {produtos
+        {product
           .filter((item) => {
-            if (props.minFilter && !isNaN(props.minFilter) && item.value <= props.minFilter) {
+            if (
+              props.minFilter &&
+              !isNaN(props.minFilter) &&
+              item.value <= props.minFilter
+            ) {
               return item; // O PROBLEMA É A LOGICA DAQUI !!!!!!
             } else if (!props.minFilter) {
               return item;
             }
           })
           .filter((item) => {
-            if (props.maxFilter && !isNaN(props.maxFilter) && item.value >= props.maxFilter) {
-              return item; 
+            if (
+              props.maxFilter &&
+              !isNaN(props.maxFilter) &&
+              item.value >= props.maxFilter
+            ) {
+              return item;
             } else if (!props.maxFilter) {
               return item;
             }
           })
           .filter((item) => {
             if (props.searchFilter && item.name.includes(props.searchFilter)) {
-              return item
+              return item;
             } else if (!props.searchFilter) {
-              return item
+              return item;
             }
           })
           .sort((a, b) => {
@@ -76,7 +83,13 @@ export function Home(props) {
             }
           })
           .map((item, index) => {
-            return <ProductCard key={index} card={item} moreCart={moreProductInCart}/>;
+            return (
+              <ProductCard
+                key={index}
+                card={item}
+                moreCart={moreProductInCart}
+              />
+            );
           })}
       </article>
     </section>
