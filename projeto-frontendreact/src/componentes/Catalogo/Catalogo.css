@@ -1,0 +1,42 @@
+/* .App {
+    background-color: rgb(116, 163, 178);
+} */
+
+.catalogo {
+  display: grid;
+  text-align: center;
+  list-style-type: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:30px;
+}
+
+.catalogo img {
+  border: 23px solid rgb(98, 217, 38);
+  border-style: groove;
+  border-radius: 24rem;
+  gap: 10px;
+}
+
+.lista-produtos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  font-family: cursive;
+  color: rgb(21, 233, 10);
+  list-style-type: none;
+  margin: 10px;
+
+}
+
+.ordernar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ordernar-container p {
+  padding-right: 8px;
+  margin: 0;
+}

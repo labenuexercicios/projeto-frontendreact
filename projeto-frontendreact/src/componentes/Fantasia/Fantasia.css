@@ -1,0 +1,24 @@
+.lista-produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .lista-produtos img {
+        max-width: 100%
+    }
+
+    .lista-produtos button {
+        margin-top: 20px;
+        background-color: #6278f7;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 19px;
+        padding: 10px 20px;
+        border: 1px solid red;
+        color:crimson;
+        cursor: pointer;
+
+    }
+
+
