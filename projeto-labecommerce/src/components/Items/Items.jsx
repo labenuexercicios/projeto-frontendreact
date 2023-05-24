@@ -1,13 +1,12 @@
-import { useState } from "react"
+import "./items.css"
 
-export function Items({item, removeItem}){
-    
+export function Items(props){
     return(
         <div className="containerItems">
-            <input type="text" id="amount" value={item.amount} />
-            <p>{item.name}</p>
-            <p> {item.value}</p>
-            <button onClick={()=>removeItem(item)}>Remover</button>
+            <input type="text" id="quantity" value={props.item.quantity} />
+            <p>{props.item.name}</p>
+            <p> {props.item.value}</p>
+            <button onClick={()=>props.removeItem(props.item)}>Remover</button>
         </div>
     )
 }

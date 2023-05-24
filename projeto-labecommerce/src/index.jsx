@@ -31,19 +31,19 @@ export function Index() {
           setSearchFilter={setSearchFilter}
         />
         <Home
-         produtos={listaDeProduto}
-         amount={amount}
-         setAmount={setAmount}
-         cart={cart}
-         setCart={setCart}
-         minFilter={minFilter}
-         maxFilter={maxFilter}
-         searchFilter={searchFilter} />
+          produtos={listaDeProduto}
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}
+          minFilter={minFilter}
+          maxFilter={maxFilter}
+          searchFilter={searchFilter} />
         <Cart
-         amount={amount}
-         setAmount={setAmount}
-         cart={cart}
-         setCart={setCart}/>
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}/>
         </div>
       </main>
       <footer>
