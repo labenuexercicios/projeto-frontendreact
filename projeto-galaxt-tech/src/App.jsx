@@ -1,4 +1,3 @@
-
 import { SectionProducts } from "./components/SectionProducts";
 import { Filters } from "./components/Filters";
 import { useState, useEffect } from "react";
@@ -6,9 +5,8 @@ import products from "./assets/products.json";
 import { ContainerMain, SectionHome, ContainerProducts } from "./styles";
 import { Footer } from "./components/Footer";
 import Header from "./components/Header";
-// import Typewriter from "typewriter-effect";
-
-
+import GlobalStyles from "../GlobalStyles";
+import Typewriter from "typewriter-effect";
 
 function App(props) {
   const [searchProducts, setSearchProducts] = useState("");
@@ -77,7 +75,7 @@ function App(props) {
 
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyles />
       <Header
         searchProducts={searchProducts}
         setSearchProducts={setSearchProducts}
@@ -101,7 +99,13 @@ function App(props) {
       </SectionHome>
 
       <ContainerMain>
-      <h2 className="Products"><span>P</span><span>R</span><span>O</span><span>D</span><span>U</span>T<span>O</span>S<span>!</span></h2>
+        <h2 className="Products">
+          <span>P</span>
+          <span>R</span>
+          <span>O</span>
+          <span>D</span>
+          <span>U</span>T<span>O</span>S<span>!</span>
+        </h2>
 
         <Filters
           minimumPrice={minimumPrice}
@@ -172,7 +176,7 @@ function App(props) {
             })}
         </ContainerProducts>
       </ContainerMain>
-      <Footer/>
+      <Footer />
     </>
   );
 }

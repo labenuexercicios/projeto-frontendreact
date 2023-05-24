@@ -12,7 +12,7 @@ import iconX from "../../assets/x.svg";
 import remove from "../../assets/remove-icon.svg";
 import { priceFormatter } from "../../utils/priceFormatter";
 
-export default function Header (props) {
+export default function Header(props) {
   const [sidebar, setSidebar] = useState(false);
   const showSiderbar = () => setSidebar(!sidebar);
 
@@ -23,9 +23,7 @@ export default function Header (props) {
   return (
     <ContainerHeader>
       <ContainerInput>
-        <label className="Procurar">
-          Procurar🔎
-          </label>
+        <label className="Procurar">Procurar🔎</label>
         <input
           type="text"
           placeholder="Digite um produto..."
@@ -37,7 +35,6 @@ export default function Header (props) {
       </ContainerInput>
 
       <ContainerIcons>
-     
         <div className="cartQuantity">
           <img
             className="icon-cart"
@@ -70,9 +67,7 @@ export default function Header (props) {
                         <span
                           className="defineQuantity"
                           onClick={() => props.addQuantity(index)}
-                        >
-                  
-                        </span>
+                        ></span>
                       </div>
                     </div>
                     <div className="boxRemoveEPrice">

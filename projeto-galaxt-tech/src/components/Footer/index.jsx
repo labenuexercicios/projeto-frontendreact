@@ -12,7 +12,8 @@ export function Footer() {
           <h2>Sobre a Galaxia Tech 👩🏽‍🚀</h2>
           <p className="paragraph">
             Lojinha de brinquedos com tema espacial, para todas as idades.
-            Desenvolvida por <span color="hotpink">Caroline Voleck</span> no curso da Labenu utilizando <span color="blue">React</span>.{" "}
+            Desenvolvida por <span color="hotpink">Caroline Voleck</span> no
+            curso da Labenu utilizando <span color="blue">React</span>.{" "}
           </p>
         </section>
 

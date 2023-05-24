@@ -1,4 +1,4 @@
-/* import styled from "styled-components"; */
+import styled from "styled-components";
 
 export const ContainerHeader = styled.header`
   position: fixed;
@@ -6,10 +6,16 @@ export const ContainerHeader = styled.header`
   top: 0;
   left: 0;
   z-index: 1;
-  background: radial-gradient(circle at 99.06% 50%, #ce48ff 0, #7c34ed 25%, #081db2 50%, #000977 75%, #000045 100%);
+  background: radial-gradient(
+    circle at 99.06% 50%,
+    #ce48ff 0,
+    #7c34ed 25%,
+    #081db2 50%,
+    #000977 75%,
+    #000045 100%
+  );
   display: flex;
   justify-content: space-between;
-  
 `;
 
 export const ContainerInput = styled.div`
@@ -26,10 +32,9 @@ export const ContainerInput = styled.div`
     height: 2.8125rem;
     margin-top: 0.1563rem;
     outline: none;
-    
   }
 
-  label{
+  label {
     margin-top: 0.825rem;
     margin-left: 30.875rem;
     font-size: 1.25rem;
@@ -81,7 +86,7 @@ export const ContainerIcons = styled.div`
 
 export const ContainerSidebar = styled.div`
   color: white;
-  background: rgba(3, 125, 144, 0.4); 
+  background: rgba(3, 125, 144, 0.4);
   position: fixed;
   height: 70%;
   top: 0rem;
@@ -94,7 +99,7 @@ export const ContainerSidebar = styled.div`
     margin-top: 0.9375rem;
     margin-left: 20%;
     margin-bottom: 3%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 1.8625rem;
   }
 
@@ -120,8 +125,7 @@ export const ContainerSidebar = styled.div`
 `;
 
 export const Content = styled.div`
-
-overflow-y: auto;
+  overflow-y: auto;
   ::-webkit-scrollbar {
     -webkit-appearance: none;
     display: none;
@@ -161,7 +165,6 @@ overflow-y: auto;
   .itemQuantity {
     margin: 1.125rem;
     font-size: 1.125rem;
-
   }
 
   .cardInfoQuantityERemove {
@@ -209,9 +212,9 @@ overflow-y: auto;
   }
 
   > h2 {
-    position:sticky;
+    position: sticky;
     bottom: 0%;
-    margin-bottom: 0.75rem; 
-    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0.75rem;
+    font-family: "Times New Roman", Times, serif;
   }
 `;
