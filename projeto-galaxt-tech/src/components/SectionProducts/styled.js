@@ -30,7 +30,7 @@ export const Cards = styled.section`
     #a82d90 0, #962193 16.67%, #7f1696 33.33%, #630e99 50%,
     #3b0e9c 66.67%, #00149e 83.33%, #001aa1 100%);
     width: 13.75rem;
-    height:14.375rem;
+    height:13.75rem;
     border-radius: 0.5rem;
   }
 
@@ -119,7 +119,8 @@ export const Cards = styled.section`
   }
 
   .textAddToCart {
-    font-size: 0.625rem;
+    color: #f5f5f5;
+    font-size: 12px;
     margin-top: 0.1rem;
     margin-left: 0.1875rem;
   }

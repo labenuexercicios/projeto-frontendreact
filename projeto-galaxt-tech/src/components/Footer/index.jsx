@@ -9,7 +9,7 @@ export function Footer() {
     <ContainerFooter>
       <div className="section">
         <section className="about">
-          <h2>Sobre a Galaxia Tech 👩🏽‍🚀</h2>
+          <h2>Sobre a Galaxia Tech👩🏽‍🚀</h2>
           <p className="paragraph">
             Lojinha de brinquedos com tema espacial, para todas as idades.
             Desenvolvida por <span color="hotpink">Caroline Voleck</span> no
@@ -18,7 +18,7 @@ export function Footer() {
         </section>
 
         <section className="contact">
-          <h2>Entre em contato 🚀</h2>
+          <h2>Entre em contato🚀</h2>
           <div className="container-contact">
             <div>
               <img

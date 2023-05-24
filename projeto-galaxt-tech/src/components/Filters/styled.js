@@ -32,13 +32,13 @@ export const ContainerFilters = styled.div`
     }
 
     input{
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.1);
         outline: none;
         padding-left: 0.625rem;
     }
 
     select{
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.1);
         outline: none;
         border: none;
         height: 2.5rem;
