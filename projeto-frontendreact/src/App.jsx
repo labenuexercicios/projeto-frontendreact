@@ -1,6 +1,5 @@
 import { Filters } from "./Components/Filters/Filter";
 import { Home } from "./Components/ProductList/Home/Home";
-
 import { Cart } from "./Components/ShoppingCart/Cart/Cart";
 
 function App() {
