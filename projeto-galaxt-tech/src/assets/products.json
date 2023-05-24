@@ -1,0 +1,189 @@
+[
+    {
+        "id": 1,
+        "name": "Robô android giratotório com tiros",
+        "color": "Cinza",
+        "price": 255.00,
+        "description": "Robô a bateria, acompanha carregador",
+        "category": "Robôs",
+        "image": "img/ANDROID.png"
+    },
+    {
+        "id": 2,
+        "name": "Astronauta e mergulhador com acessórios",
+        "color": "Laranja",
+        "price": 155.00,
+        "description": "Mergulhador com traje para ambas situações",
+        "category": "Astronauta",
+        "image": "img/ASTRO MERG.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Roupa astronauta e acompanha capacete",
+        "color": "Branco",
+        "price": 160.00,
+        "description": "Roupa com tecnologia para carregar muito rápido",
+        "category": "Astronauta",
+        "image": "img/ASTRO.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Roupa astronauta com capacete dourado",
+        "color": "Branco",
+        "price": 360.00,
+        "description": "Roupa com acompanhamento de capacete dourado",
+        "category": "Astronauta",
+        "image": "img/ASTRONAUTA.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Astronauta pequeno com capacete dourado",
+        "color": "Branco",
+        "price": 265.90,
+        "description": "Astronauta no espaço com capacete dourado",
+        "category": "Astronauta",
+        "image": "img/ASTRONAUTA2.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Robô clone com arma e munição",
+        "color": "Branco",
+        "price": 364.50,
+        "description": "Robô armado indo para lua derrotar os inimigos",
+        "category": "Astronauta",
+        "image": "img/CLONE.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Boneco stars Wars Darth com espada",
+        "color": "Preto",
+        "price": 265.00,
+        "description": "Darth em praparação para a nova batalha na galaxia",
+        "category": "Robôs",
+        "image": "img/DARTH.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Nave com iluminação de led azul e laranja",
+        "color": "Preto",
+        "price": 362.50,
+        "description": "Nave com alta velocidade e blindada com alta tecnologia",
+        "category": "Naves",
+        "image": "img/ET NAVE.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Alien pequeno acompanha planetas",
+        "color": "Verde",
+        "price": 370.00,
+        "description": "Alien viajando para conhecer novos planetas",
+        "category": "Alien",
+        "image": "img/ET.jpg"
+    },
+    
+    {
+        "id": 10,
+        "name": "Mosquito android com iluminação",
+        "color": "Preto",
+        "price": 149.00,
+        "description": "Mosquito com alta tecnologia e super velocidade",
+        "category": "Animais",
+        "image": "img/MOSQUITO ANDROID.png"
+    },
+    {
+        "id": 11,
+        "name": "Nave acompanha controle remoto",
+        "color": "Cinza",
+        "price": 355.90,
+        "description": "Nave destruidora de inimigos",
+        "category": "Naves",
+        "image": "img/NAVE GRANDE.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Nave de alta velocidade para viagens insanas",
+        "color": "Azul",
+        "price": 255.90,
+        "description": "Nave perfeita para viagens rapidas até a galáxia",
+        "category": "Naves",
+        "image": "img/NAVE.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Cópia de robô ciborg com super força",
+        "color": "Preto",
+        "price": 255.90,
+        "description": "Robôs em força dupla para acabar com os inimigos",
+        "category": "Robôs",
+        "image": "img/ROBO CIBORG.png"
+    },
+    {
+        "id": 14,
+        "name": "Robô Go detonador e dispara míssil",
+        "color": "Vermelho",
+        "price": 370.00,
+        "description": "Detonador de vidas indesejadas de outros planetas",
+        "category": "Robôs",
+        "image": "img/ROBO GO.jpg"
+    },
+    
+    {
+        "id": 15,
+        "name": "Robô android de alta técnologia",
+        "color": "Laranja",
+        "price": 275.00,
+        "description": "Robô perfeito para captar sinais de satélites",
+        "category": "Robôs",
+        "image": "img/ROBO PEQUENO.jpg"
+    },
+    
+    {
+        "id": 16,
+        "name": "Robô pink charmoso com poderes",
+        "color": "Rosa",
+        "price": 175.00,
+        "description": "Android super forte e fofo com munição infinita",
+        "category": "Robôs",
+        "image": "img/ROBO PINK.png"
+    },
+    
+    {
+        "id": 17,
+        "name": "Robô vermelho com super poderes",
+        "color": "Vermelho",
+        "price": 12.90,
+        "description": "Robô elegante e perigoso de alto padrão",
+        "category": "Robôs",
+        "image": "img/ROBO RED.png"
+    },
+    
+    {
+        "id": 18,
+        "name": "Combo de robôs stars wars com poderes",
+        "color": "Branco",
+        "price": 345.00,
+        "description": "Combo perfeito de destruição em massa",
+        "category": "Robôs",
+        "image": "img/ROBO STARS WARS.jpg "
+    },
+    
+    {
+        "id": 19,
+        "name": "Robô amarelo com lanterna embutida na arma",
+        "color": "Cinza",
+        "price": 271.50,
+        "description": "Robô com iluminação avançada e muita munição",
+        "category": "Robôs",
+        "image": "img/ROBO YELLOW.jpg"
+    },
+    
+    {
+        "id": 20,
+        "name": "Nave de guerra indestrutivel",
+        "color": "Cinza",
+        "price": 147.00,
+        "description": "Nave de guerra muito agil e segura com suporte para canhão",
+        "category": "Naves",
+        "image": "img/TANQUE.jpg"
+    }
+]
