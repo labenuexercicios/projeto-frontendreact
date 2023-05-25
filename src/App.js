@@ -4,12 +4,14 @@ import Cart from "./Components/ShoppingCart/Cart/Cart";
 import GlobalStyle from "./GlobalStyle";
 import { AppCaixa } from "./AppStyle";
 import Home from "./Components/ProductList/Home/Home";
+import { productList } from "./assents/productList";
 
 
 
 
 
 function App() {
+  console.log(productList)
   return (
     <div>
 
@@ -17,7 +19,7 @@ function App() {
       <h1>Projeto Labecommerce</h1>
       <AppCaixa>
     <Filters />
-    <Home />
+    <Home listaDeProdutos= {productList} />
     <Cart />
     </AppCaixa>
     </div>

@@ -9,13 +9,18 @@ export const CaixaDoProduto = styled.div`
 `
 export const ImagemProduto = styled.div`
     background-color: black;
-    height: 70%;
+    height: 60%;
 
 `
 export const InfoProduto = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 30%;
-    background-color: blue;
+    justify-content: space-evenly;
+    height: 20%;
+
+`
+export const Imagem = styled.img`
+    width: 100%;
+    max-height: 80%;
+    border: 3px solid black;
 `
