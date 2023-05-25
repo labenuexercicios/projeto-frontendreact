@@ -1,18 +1,20 @@
-import { CaixaDoProduto, ImagemProduto, InfoProduto } from "./ProductCardStyle";
+import { CaixaDoProduto, Imagem, ImagemProduto, InfoProduto } from "./ProductCardStyle";
 
 
 
-function ProductCard() {
+function ProductCard({listaDeProdutos}) {
+  console.log('card', listaDeProdutos)
   return (
-    <CaixaDoProduto>
+    <CaixaDoProduto> 
+           <Imagem src={listaDeProdutos.imageUrl} />
       <InfoProduto />
-      <ImagemProduto />
-      <div>
-      <p>Nome do Produto</p>
+
+      <p>{listaDeProdutos.name}</p>
+      <p>{listaDeProdutos.value}</p>
+
 
       <p>Valor do produto</p>
       <button >Adicionar Item</button>
-      </div>
     </CaixaDoProduto>
 
   );

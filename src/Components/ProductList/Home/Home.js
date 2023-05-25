@@ -1,13 +1,15 @@
 import { CaixaProdutos, HomeCaixa, InfoHome } from "./HomeStyle";
 import ProductCard from "../ProductCard/ProductCard";
+import { productList } from "../../../assents/productList";
 
 
 
-function Home() {
+function Home({listaDeProdutos}) {
+  console.log(listaDeProdutos)
   return (
     <HomeCaixa>
       <InfoHome>
-      <span>Quantidade de Produtos 2</span>
+      <span>Quantidade de Produtos: {listaDeProdutos.length}</span>
       <span>Ordenação: <select>
         <option>Crescente</option>
         <option>Decrescente</option>
@@ -15,9 +17,10 @@ function Home() {
         </span>
         </InfoHome>
         <CaixaProdutos>
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      <ProductCard listaDeProdutos={listaDeProdutos[0]}/>
+      <ProductCard listaDeProdutos={listaDeProdutos[1]}/>
+      <ProductCard listaDeProdutos={listaDeProdutos[2]}/>
+     
       </CaixaProdutos>
     </HomeCaixa>
   );
