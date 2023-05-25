@@ -1,8 +1,8 @@
-import { FiltroCaixa } from "./filersStyle";
+import { FiltroCa } from "./filersStyle";
 
 export function Filters() {
   return (
-    <FiltroCaixa>
+    <FiltroCa>
       <h2>Filtro</h2>
       <label>
         <br />
@@ -22,6 +22,6 @@ export function Filters() {
         <br />
         <input type="text" />
       </label>
-    </FiltroCaixa>
+    </FiltroCa>
   );
 }

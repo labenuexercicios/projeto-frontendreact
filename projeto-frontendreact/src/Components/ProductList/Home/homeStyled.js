@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const HomeCaixa = styled.div`
-  border: 2px solid yellow;
+export const HomeCaixa0 = styled.div`
+  border: 3px yellow;
+
   grid-column: 2/7;
 `;
 

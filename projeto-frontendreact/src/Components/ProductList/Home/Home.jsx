@@ -1,10 +1,10 @@
 import { ProductCard } from "../ProductCard/ProductCard";
-import { HomeCaixa, HomeCaixa1, HomeCaixa2 } from "./homeStyled";
+import { HomeCaixa0, HomeCaixa1, HomeCaixa2 } from "./homeStyled";
 
 export function Home() {
   return (
     <>
-      <HomeCaixa>
+      <HomeCaixa0>
         <HomeCaixa1>
           <span>Quantidade de produtos</span>
           <span>
@@ -21,7 +21,7 @@ export function Home() {
           <ProductCard />
           <ProductCard />
         </HomeCaixa2>
-      </HomeCaixa>
+      </HomeCaixa0>
     </>
   );
 }
