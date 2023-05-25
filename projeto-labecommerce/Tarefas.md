@@ -6,7 +6,7 @@
 - [X] Componente Home (lista de produtos)
 - [X] Componente de Carrinho
 - [X] Componente de card de produto
-- [] Componente de quantidade de produto e ordenação
+- [X] Componente de quantidade de produto e ordenação
 
 ### Produtos
 
@@ -27,3 +27,6 @@
         [x] Criar o estados para guardar a lista de itens do carrinho
         [x] Implementar a função adicionar
         [X] Implementar a função remover
+        [X] Salvar no LocalStorage
+        [x] Recuperar os items quando atualiza com o LocalStorage
+        [] Somar os valores
