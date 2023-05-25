@@ -3,12 +3,13 @@ import { HomeBox } from "./homeStyle"
 import { ProductBox } from "./homeStyle"
 import { CardsBox } from "./homeStyle"
 
-function Home() {
+function Home({ productList }) {
+    console.log(productList)
     return (
         <>
             <HomeBox>
                 <ProductBox>
-                    <span>Quantidade de produtos:</span>
+                    <span>Quantidade de produtos:{productList.length}</span>
                     <span>Ordernação:
                         <select >
                             <option>Crescente</option>
@@ -17,9 +18,9 @@ function Home() {
                     </span>
                 </ProductBox>
                 <CardsBox>
-                    <ProductList />
-                    <ProductList />
-                    <ProductList />
+                    <ProductList productList={productList[0]} />
+                    <ProductList productList={productList[1]} />
+                    <ProductList productList={productList[2]} />
                 </CardsBox>
             </HomeBox>
         </>

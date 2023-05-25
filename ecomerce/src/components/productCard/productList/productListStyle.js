@@ -7,12 +7,12 @@ height:30vh;
 display:flex;
 flex-direction:column;
 `
-export const ImageBox = styled.div`
-background-color:black;
-height:70%;
+export const Imagem = styled.img`
+width:100%;
+max-height: 65%;
 `
 export const CardTexBox = styled.div`
-height:30%;
+height:35%;
 display: flex;
 flex-direction:column;
 justify-content: space-evenly;
