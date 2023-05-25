@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ProductCard } from "../ProductCard/ProductCard";
+import { ProductCard } from "../ProductCard";
 
 export function Home(props) {
   const [select, setSelect] = useState("");
@@ -32,6 +32,8 @@ export function Home(props) {
     }
 
   }
+
+
 
   return (
     <section className="home">

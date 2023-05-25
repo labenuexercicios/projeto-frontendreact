@@ -1,12 +1,12 @@
 import { useState } from "react"; // useStage (não irei mexer no momento)
 
 //Link dos Componentes:
-import { Filters } from "./components/Filters/Filters";
-import { Home } from "./components/Home/Home";
-import { Cart } from "./components/Cart/Cart";
+import { Filters } from "./components/Filters";
+import { Home } from "./components/Home";
+import { Cart } from "./components/Cart";
 import { listaDeProduto } from "./assets/ListaProdutos";
 
-export function Index() {
+export function App() {
   //Filters
   const [minFilter, setMinFilter] = useState("");
   const [maxFilter, setMaxFilter] = useState("");
