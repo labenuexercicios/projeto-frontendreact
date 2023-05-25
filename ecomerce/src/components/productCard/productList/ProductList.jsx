@@ -1,13 +1,14 @@
-import { CardBox, CardTexBox, ImageBox } from "./productListStyle"
+import { CardBox, CardTexBox, Imagem } from "./productListStyle"
 
-function ProductList() {
+function ProductList({ productList }) {
+    console.log(productList)
     return (
         <>
             <CardBox>
-                <ImageBox />
+                <Imagem src={productList.imageUrl} />
                 <CardTexBox>
-                    <p>Nome do produto</p>
-                    <p>Valor do produto</p>
+                    <p>{productList.name}</p>
+                    <p>R$ {productList.value}</p>
                     <button>Adicionar item</button>
                 </CardTexBox>
             </CardBox>
