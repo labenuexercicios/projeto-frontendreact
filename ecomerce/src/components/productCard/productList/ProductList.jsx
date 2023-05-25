@@ -1,7 +1,7 @@
 import { CardBox, CardTexBox, Imagem } from "./productListStyle"
 
 function ProductList({ productList }) {
-    console.log(productList)
+
     return (
         <>
             <CardBox>

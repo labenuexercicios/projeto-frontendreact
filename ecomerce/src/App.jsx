@@ -4,10 +4,15 @@ import Cart from './components/shoppingCart/cart/Cart'
 import GlobalStyles from './GlobalStyles'
 import { AppCaixa } from './appStyle'
 import { productList } from './assents/productsList'
+import { useState } from 'react'
 
 function App() {
 
-  console.log(productList)
+  const [cart, setCart] = useState("");
+  const [amount, setAmount] = useState("");
+  const [minFilter, setMinFilter] = useState("");
+  const [maxFilter, setMaxFilter] = useState("");
+  const [searchFilter, setSearchFilter] = useState("");
   return (
     <>
       <GlobalStyles />
