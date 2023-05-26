@@ -1,7 +1,13 @@
 import { CarrinhoCaixa } from "./CartSyle";
 import Items from "../Items/Items";
 
-function Cart() {
+function Cart({
+  cart,
+  setCart,
+  amount, 
+  setAmount
+}) {
+  
   return (
     <CarrinhoCaixa>
       <p>Carrinho</p>

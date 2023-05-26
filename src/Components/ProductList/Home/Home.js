@@ -4,8 +4,17 @@ import { productList } from "../../../assents/productList";
 
 
 
-function Home({listaDeProdutos}) {
+
+function Home({
+  listaDeProdutos,
+  amount,
+  setAmont,
+  cart,
+  setCart
+}) {
   console.log(listaDeProdutos)
+
+
   return (
     <HomeCaixa>
       <InfoHome>
