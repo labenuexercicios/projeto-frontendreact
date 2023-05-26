@@ -1,3 +1,4 @@
+import React from 'react'
 import Filters from './Components/Filters/Filters'
 import Home from './Components/ProductList/Home/Home.jsx'
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart'
@@ -5,6 +6,13 @@ import styled from 'styled-components'
 import { produtos } from './assets/ProductList'
 
 function App() {
+  const [minFilter, setMinFilter] = React.useState('')
+  const [maxFilter, setMaxFilter] = React.useState('')
+  const [searchFilter, setSearchFilter] = React.useState('')
+  const [cart, setCart] = React.useState('')
+  const [amount, setAmount] = React.useState('')
+
+
   const MainContainer = styled.div`
     border: 1px solid red;
     display: flex;
