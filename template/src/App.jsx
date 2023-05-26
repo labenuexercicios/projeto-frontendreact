@@ -6,7 +6,6 @@ import {Cart} from './Components/ShoppingCart/Cart/Cart';
 import {products} from './assets/productList';
 import { useEffect, useState } from 'react';
 import { Header } from './Components/Header/Header';
-import { Masculino } from './Components/ProductList/Home/Masculino';
 
 const GlobalStyle = createGlobalStyle`
   *{margin: 0;
@@ -28,6 +27,25 @@ function App() {
   const [amount,setAmount]=useState(0);
   const [quantity,setQuantity] = useState("")
   const [screen, setScreen] = useState("Homepage");
+  
+  useEffect(()=>{
+    const savedCart = JSON.parse(localStorage.getItem("cart"));
+    const savedAmount = JSON.parse(localStorage.getItem("amount"));
+    console.log(savedAmount)
+    if(savedCart){
+      setCart(savedCart);
+      setAmount(savedAmount);
+    } else{
+      setCart([])
+    }
+  }, []);
+
+  useEffect(()=>{
+    if(cart.length>0){
+      localStorage.setItem("cart",JSON.stringify(cart));
+      localStorage.setItem("amount",JSON.stringify(amount));
+    }
+  }, [cart]);
 
   const addProduct = (product) => {
     const cartContainItem = cart.find((item)=>item.id===product.id);
@@ -44,6 +62,10 @@ function App() {
   const removeProduct=(product)=>{
     if (product.quantity>1) {product.quantity=product.quantity-1; setQuantity(product.quantity);setAmount(amount-product.value); setCart([...cart])}
     else {product.quantity=0; const listaFiltrada = cart.filter((item) => item !== product); setCart(listaFiltrada); setAmount(amount-product.value)
+      if(cart.length===1){
+        localStorage.removeItem("cart");
+        setAmount(0)
+      }
     }
   }
 
