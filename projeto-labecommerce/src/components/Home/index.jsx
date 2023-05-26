@@ -16,6 +16,7 @@ export function Home(props) {
     const isItemInCart = props.cart.find((item) => item.id === elemento.id);
 
     if (isItemInCart) {
+      console.log(isItemInCart)
       const updateCart = props.cart.map((item) => {
         if (item.id === elemento.id) {
           return {
@@ -36,10 +37,10 @@ export function Home(props) {
       const updateValue = props.amount.map((item) => {
           return item + elemento.value
       });
-      props.setAmount(updateValue);
+      props.setAmount(updateValue.toFixed(2));
     } else {
       const updateValue = [elemento.value];
-      props.setAmount(updateValue);
+      props.setAmount(updateValue.toFixed(2));
     }
   }
 
@@ -56,22 +57,21 @@ export function Home(props) {
       <article className="card">
         {product
           .filter((item) => {
-            if (!isNaN(props.minFilter) && item.value >= props.minFilter || props.minFilter >= props.maxFilter) {
+            if (!isNaN(props.minFilter) && item.value > props.minFilter) {
               return item; 
             } else if (!props.minFilter) {
               return item;
             }
           })
           .filter((item) => {
-            if (props.maxFilter && !isNaN(props.maxFilter) && item.value <= props.maxFilter ||
-            props.minFilter >= props.maxFilter) {
+            if (!isNaN(props.maxFilter) && item.value < props.maxFilter) {
               return item;
             } else if (!props.maxFilter) {
               return item;
             }
           })
           .filter((item) => {
-            if (props.searchFilter && item.name.includes(props.searchFilter)) {
+            if (props.searchFilter && item.name.toLowerCase().includes(props.searchFilter)) {
               return item;
             } else if (!props.searchFilter) {
               return item;

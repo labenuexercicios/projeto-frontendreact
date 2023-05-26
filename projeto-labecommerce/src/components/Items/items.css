@@ -1,52 +1,42 @@
 .containerItems{
-    margin: .2em 0;
+    margin: 1.2em 0;
 }
 
-.firstContainerItems{
-    align-items: center;
+.containerItems-first{
     display: flex;
     gap: .5em;
-    margin: .5em;
 }
 
-.firstContainerItems input {
-    border: 2px solid #ffffff;
-    border-radius: 2px;
-    color: #ffffff;
-    background-color: #A7848B;
-}
-
-.firstContainerItems p {
-    font-size: .9em;
-}
-
-.secondContainerItems{
-    align-items: center;
-    justify-content: space-between;
+.containerItems-second{
     display: flex;
-    gap: .2em;
-
-    margin: .5em;
+    gap: .5em;
+    justify-content: space-between;
+    margin: 0.5em 0;
 }
 
-.secondContainerItems button{
-    background-color: #A7848B;
+.containerItems-second button{
+    background-color: #050505;
     border: 0;
     color: #ffffff;
     width: calc(100% - 100px);
     font-size: calc(100% - 5px);
-    font-family: 'Montserrat', sans-serif; ;
+    font-family: 'Montserrat', sans-serif; 
+    order: -1;
 }
 
-.secondContainerItems p{
+.containerItems p{
     font-weight: 600;
     font-size: .9em;
+    color: #000;
 }
 
 #quantity{
     text-align: center;
     font-size: .8em;
-    width: 1.5em;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: #000000;
+    color: #fff;
 
     border: 0;
 }
@@ -64,19 +54,19 @@
         margin: .2em 0;
     }
 
-    .second button{
+    .containerItems button{
         width: calc(100% - 10px);;
     }
 }
 
 @media screen and (min-device-width : 1700px) and (max-device-width : 2100px) {
-    .secondContainerItems button{
+    .containerItems button{
         width: calc(100% - 100px);
         font-size: calc(100% - 5.5px);
     }
 }
 @media screen and (min-device-width : 2000px) {
-    .secondContainerItems button{
+    .containerItems button{
         width: calc(100% - 150px);
         font-size: calc(100% - 5px);
     }

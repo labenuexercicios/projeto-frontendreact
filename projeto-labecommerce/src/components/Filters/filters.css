@@ -2,6 +2,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    opacity: 0.85;
 
     padding: 2em 1em;
     max-width: 30vw;
@@ -13,16 +15,21 @@
     margin: 1.5em 0 0 0;
 }
 
+.filters h2{
+    color: #000;
+}
+
 label {
     font-size: .95em;
     margin: .2em 0;
-    color: #fff;
+    color: #000;
 }
 
 .filters input {
-    background: #fff;
+    background: #000;
     border-radius: 20px;
     border: none;
+    color: #fff;
 
     height: 2.5vh;
     width: calc(100%- 11em);

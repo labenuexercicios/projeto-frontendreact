@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: center;
 
-    border-radius: 41px;
-    background: linear-gradient(145deg, #0f327b, #0d2a68);
-    box-shadow:  41px 41px 82px #06132e,
-                 -41px -41px 82px #164bb8;
+    border: 1px solid #fff;
+    border-radius: 21px;
+    background: linear-gradient(145deg, #071c48, #091e4c);
+    box-shadow:  21px 21px 42px #06132e,
+                 -21px -11px 42px #103b918f;
 
     margin: 1em;
     height: 25em;
