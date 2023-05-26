@@ -2,7 +2,15 @@ import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import { HomeDiv, HomeStyled, DivProducts } from "./HomeStyle";
 
-function Home({ productList, orderFilter, setOrderFilter }) {
+function Home({
+  productList,
+  orderFilter,
+  setOrderFilter,
+  amount,
+  setAmount,
+  cart,
+  setCart,
+}) {
   const handleOrderSearch = (e) => {
     setOrderFilter(e.target.value);
   };

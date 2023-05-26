@@ -18,13 +18,29 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        <Filter />
+        <Filter
+          minFilter={minFilter}
+          setMinFilter={setMinFilter}
+          maxFilter={maxFilter}
+          setMaxFilter={setMaxFilter}
+          searchFilter={searchFilter}
+          setSearchFilter={setSearchFilter}
+        />
         <Home
           productList={productList}
+          amount={amount}
+          setAmount={setAmount}
           orderFilter={orderFilter}
           setOrderFilter={setOrderFilter}
+          cart={cart}
+          setCart={setCart}
         />
-        <Cart />
+        <Cart
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}
+        />
       </Container>
     </>
   );
