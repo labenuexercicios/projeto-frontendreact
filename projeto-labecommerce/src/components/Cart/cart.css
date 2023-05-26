@@ -1,6 +1,8 @@
 .containerCart{
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    opacity: 0.85;
 
     padding: .5em;
     max-width: 30em;
@@ -16,21 +18,23 @@
 
 .first h1{
     font-size: 1.3em;
+    color: #000;
 }
 
-.containerCart .second{
+.second-value{
     display: flex;
-    flex-direction:column ;
-
-    /* background:linear-gradient(180deg, #0E2F73 55.81% #040e23 86.74%); */
-    border-radius: 20px;
-    min-height: 10vh;
+    justify-content: space-between;
 }
 
-#amount{
-    font-size: .85em;
-    margin-top: 1em;
+.amount{
+    font-size: .9em;
+    font-weight: 700;
+    margin: 1.2em 0;
+    color: #000;
 }
+
+
+
 
 @media screen and (min-device-width : 365px) and (max-device-width : 500px) {
     .first h1 {
