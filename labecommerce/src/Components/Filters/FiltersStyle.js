@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 
+
 const FiltersDiv = styled.div`
   display: flex;
   flex-direction: column;
