@@ -11,7 +11,7 @@ function Filter({
 
     function handMinFilter(event) {
         if (event.target.value < 0) {
-            alert("Valor negativo não aceito")
+            alert("Valor fiado não rola!")
             setMinFilter(0)
         } else {
 
@@ -21,7 +21,7 @@ function Filter({
 
     function handMaxFilter(event) {
         if (event.target.value < 0) {
-            alert("Valor negativo não aceito")
+            alert("Valor fiado não rola!")
             setMaxFilter(0)
         } else {
 
