@@ -4,8 +4,10 @@
     align-items: center;
     justify-content: center;
 
-    background: #B88F93;
-    border-radius: 20px;
+    border-radius: 41px;
+    background: linear-gradient(145deg, #0f327b, #0d2a68);
+    box-shadow:  41px 41px 82px #06132e,
+                 -41px -41px 82px #164bb8;
 
     margin: 1em;
     height: 25em;
@@ -37,10 +39,10 @@
     width: calc(100% - 80px);
     height: 2.5em;
 
-    background-color: #B8CABE;
+    background-color: #fff;
     border-radius: 10px;
     border: none;
-    box-shadow: 2px 2px 10px rgb(135, 134, 134);
+    box-shadow: 2px 2px 10px rgb(97, 96, 96);
 
     font-family: 'Montserrat', sans-serif; 
     font-weight: 700;

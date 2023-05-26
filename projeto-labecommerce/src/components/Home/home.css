@@ -3,11 +3,12 @@
     flex-direction: column;
 
     min-height: 100vh;
-    background-color: #B8CABE;
     border-right: 1px solid black;
     border-left: 1px solid black;
 
     padding: 1em;
+
+    /*     background: linear-gradient(180deg, #9B45BF 0%, #0442BF 31.43%, #0E2F73 55.81%, #0E2F73 86.74%); */
 }
 
 .containerOrdenar{
@@ -15,7 +16,7 @@
 }
 
 .home select{
-    background: #A7848B;
+    background: #fff;
     border-radius: 20px;
     border: none;
 

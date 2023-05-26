@@ -16,7 +16,7 @@ export function App() {
   const [cart, setCart] = useState([])
 
   return (
-    <div>
+    <div className="fundo">
       <header>
         <h1>Labecommerce</h1>
       </header>
