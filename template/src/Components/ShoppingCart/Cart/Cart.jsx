@@ -8,7 +8,7 @@ export const Cart =({cart, amount, removeProduct,changeScreen})=>{
         <CartStyle>
         <button onClick={showHomepage}>+</button>
         <h2>Cart</h2>
-        {cart.map((product)=>{return (<Items product={product} removeProduct={removeProduct}/>)})}
+        {cart.map((product,index)=>{return (<Items product={product} key={index} removeProduct={removeProduct}/>)})}
         <p>Valor Total: {amount.toFixed(2).replace(".",",")}</p>
         </CartStyle>
         </Background>

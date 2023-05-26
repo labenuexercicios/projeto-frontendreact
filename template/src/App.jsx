@@ -4,7 +4,7 @@ import {Filter} from './Components/Filters/Filters';
 import {Home} from './Components/ProductList/Home/Home';
 import {Cart} from './Components/ShoppingCart/Cart/Cart';
 import {products} from './assets/productList';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from './Components/Header/Header';
 import { Masculino } from './Components/ProductList/Home/Masculino';
 
@@ -30,14 +30,24 @@ function App() {
   const [screen, setScreen] = useState("Homepage");
 
   const addProduct = (product) => {
-    if (product.quantity>=1) {product.quantity= product.quantity + 1; setQuantity(product.quantity);setAmount(amount+product.value)}
+    const cartContainItem = cart.find((item)=>item.id===product.id);
+    if (cartContainItem){
+      const newCart = cart.map((item)=>{
+        if(item.name===product.name){
+          return{...item,quantity: item.quantity+1}
+        }return item;
+      }); setCart(newCart);setQuantity(product.quantity);setAmount(amount+product.value); console.log(amount)
+      }
+  
     else{product.quantity=1; setQuantity(product.quantity); setCart([...cart, product]); setAmount(amount+product.value)}};
 
   const removeProduct=(product)=>{
-    if (product.quantity>1) {product.quantity=product.quantity-1; setQuantity(product.quantity);setAmount(amount-product.value)}
-    else {product.quantity=0; const listaFiltrada = cart.filter((item) => item !== product); setCart(listaFiltrada); setAmount(amount-product.value)}
+    if (product.quantity>1) {product.quantity=product.quantity-1; setQuantity(product.quantity);setAmount(amount-product.value); setCart([...cart])}
+    else {product.quantity=0; const listaFiltrada = cart.filter((item) => item !== product); setCart(listaFiltrada); setAmount(amount-product.value)
+    }
   }
 
+  
 
 const changeScreen = (newScreen) => { setScreen(newScreen)}
 
