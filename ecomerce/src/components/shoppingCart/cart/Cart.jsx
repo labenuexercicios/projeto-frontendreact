@@ -1,7 +1,7 @@
 import Item from "../items/Items"
 import { CartBox } from "./cartStyle"
 
-function Cart() {
+function Cart({ cart, amount, setCart, setAmount }) {
     return (
         <>
             <CartBox>

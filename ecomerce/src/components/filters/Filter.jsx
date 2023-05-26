@@ -1,6 +1,39 @@
 
 import { FilterBox } from "./filterStyle"
-function Filter() {
+function Filter({
+    minFilter,
+    setMinFilter,
+    maxFilter,
+    setMaxFilter,
+    searchFilter,
+    setSearchFilter,
+}) {
+
+    function handMinFilter(event) {
+        if (event.target.value < 0) {
+            alert("Valor negativo não aceito")
+            setMinFilter(0)
+        } else {
+
+            setMinFilter(event.target.value)
+        }
+    }
+
+    function handMaxFilter(event) {
+        if (event.target.value < 0) {
+            alert("Valor negativo não aceito")
+            setMaxFilter(0)
+        } else {
+
+            setMaxFilter(event.target.value)
+        }
+
+    }
+
+    function handSearchFilter(event) {
+        setSearchFilter(event.target.value)
+    }
+
     return (
         <>
 
@@ -8,21 +41,24 @@ function Filter() {
                 <h2>Filtro</h2>
                 <label>Valor mínimo:
                     <br />
-                    <input type="number" />
+                    <input type="number" value={minFilter}
+                        onChange={handMinFilter} />
                 </label>
 
                 <br />
 
                 <label>Valor maxímo:
                     <br />
-                    <input type="number" />
+                    <input type="number" value={maxFilter}
+                        onChange={handMaxFilter} />
                 </label>
 
                 <br />
 
                 <label>Busca por nome:
                     <br />
-                    <input type="text" />
+                    <input type="text" value={searchFilter}
+                        onChange={handSearchFilter} />
                 </label>
 
             </FilterBox>

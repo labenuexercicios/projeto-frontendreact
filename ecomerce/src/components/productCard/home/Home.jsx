@@ -4,7 +4,13 @@ import { ProductBox } from "./homeStyle"
 import { CardsBox } from "./homeStyle"
 import { useState } from 'react'
 
-function Home({ productList }) {
+function Home({
+    productList,
+    amount,
+    setAmout,
+    cart,
+    setCart,
+}) {
     const [ordination, setOrdination] = useState("");
 
     function handSelect(event) {
