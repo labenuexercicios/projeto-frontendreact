@@ -16,10 +16,11 @@
 label {
     font-size: .95em;
     margin: .2em 0;
+    color: #fff;
 }
 
 .filters input {
-    background: #B8CABE;
+    background: #fff;
     border-radius: 20px;
     border: none;
 

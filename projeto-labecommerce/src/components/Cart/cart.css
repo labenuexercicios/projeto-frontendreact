@@ -22,7 +22,7 @@
     display: flex;
     flex-direction:column ;
 
-    background-color: #B8CABE;
+    /* background:linear-gradient(180deg, #0E2F73 55.81% #040e23 86.74%); */
     border-radius: 20px;
     min-height: 10vh;
 }

@@ -16,24 +16,32 @@ export function Home(props) {
     const isItemInCart = props.cart.find((item) => item.id === elemento.id);
 
     if (isItemInCart) {
-        const updateCart = props.cart.map((item) => {
-          if (item.id === elemento.id) {
-            return {
-              ...item,
-              quantity: item.quantity + 1,
-            };
-          }
-          return item;
-        });
+      const updateCart = props.cart.map((item) => {
+        if (item.id === elemento.id) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
+        }
+        return item;
+      });
       props.setCart(updateCart);
-    }else {
-        const newProductInCart = [...props.cart, { ...elemento, quantity: 1 }];
-        props.setCart(newProductInCart);
+    } else {
+      const newProductInCart = [...props.cart, { ...elemento, quantity: 1 }];
+      props.setCart(newProductInCart);
     }
 
+    const totalValueInCart = props.cart.reduce((total,item)=> total + item.quantity,1)
+    if (props.cart.length > 1 || totalValueInCart > 1) {
+      const updateValue = props.amount.map((item) => {
+          return item + elemento.value
+      });
+      props.setAmount(updateValue);
+    } else {
+      const updateValue = [elemento.value];
+      props.setAmount(updateValue);
+    }
   }
-
-
 
   return (
     <section className="home">
@@ -48,22 +56,15 @@ export function Home(props) {
       <article className="card">
         {product
           .filter((item) => {
-            if (
-              props.minFilter &&
-              !isNaN(props.minFilter) &&
-              item.value <= props.minFilter
-            ) {
-              return item; // O PROBLEMA É A LOGICA DAQUI !!!!!!
+            if (!isNaN(props.minFilter) && item.value >= props.minFilter || props.minFilter >= props.maxFilter) {
+              return item; 
             } else if (!props.minFilter) {
               return item;
             }
           })
           .filter((item) => {
-            if (
-              props.maxFilter &&
-              !isNaN(props.maxFilter) &&
-              item.value >= props.maxFilter
-            ) {
+            if (props.maxFilter && !isNaN(props.maxFilter) && item.value <= props.maxFilter ||
+            props.minFilter >= props.maxFilter) {
               return item;
             } else if (!props.maxFilter) {
               return item;
