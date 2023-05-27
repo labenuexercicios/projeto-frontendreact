@@ -1,7 +1,6 @@
-import { NavStyle, Img, Div } from "./HeaderStyled"
-import image1 from "../../assets/Images/homem-viajando-com-o-metro-da-cidade.jpg"
-import image2 from "../../assets/Images/homem-de-baixo-angulo-jogando-padel.jpg"
-
+import { NavStyle, Img, Img2, Div, NavBackground } from "./HeaderStyled"
+import image1 from "../../assets/Images/mulher-pensativa-de-cabelo-encaracolado.jpg"
+import image2 from "../../assets/Images/retrato-analogico-de-homem-bonito-posando-artisticamente-ao-ar-livre.jpg"
 
 export const Header = ({changeScreen})=>{
 const showCart = () => { changeScreen("Cart")}
@@ -19,10 +18,14 @@ const showHomepage = () => { changeScreen("Homepage")}
         <button onClick={showCart}>Carrinho</button>
         </NavStyle>
         <Div>
+        <Div>
         <Img src={image1}/>
-        <Img src={image2}/>
         </Div>
-        
+        <Div>
+        <Img2 src={image2}/>
+        </Div>
+         </Div>
+         <NavBackground/><NavBackground/>
         </>
     )
 }

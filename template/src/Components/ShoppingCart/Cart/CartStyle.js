@@ -1,12 +1,12 @@
 import { Styled, styled } from "styled-components"
 
 export const CartStyle = styled.div`
+z-index: 30;
     background-color: white;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     text-align: center;
     padding: 20px;
-    flex-wrap: wrap;
     position: fixed;
     top: 0;
     right: 0;
@@ -19,7 +19,11 @@ export const CartStyle = styled.div`
         0% {transform: translateX(30vw)}
         100% {transform: translateX(0)}
     }
-
+    
+    `
+export const Div1 = styled.div`
+width: 100%;
+height: 100px;
     button:first-child{
         font-size: 50px;
         position: fixed;
@@ -48,7 +52,36 @@ export const CartStyle = styled.div`
         100% {transform: rotate(0)}
     } }
     `
+export const Div2 = styled.div`
+max-height: 450px;
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+`
+export const Div3 = styled.div`
+width: 90%;
+height: 100px;
+border-top: 1px solid rgb(179, 179, 179);;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+position: absolute;
+bottom: 30px;
+right: 20px;
+button:first-child{
+    height: 50px;
+    width: 50%;
+}
+button:nth-child(2){
+    height: 50px;
+    width: 50%;
+    background-color: black;
+    color: white;
+}
+`
+
 export const Background = styled.section`
+z-index: 30;
 position: fixed;
 top: 0;
 right: 0;

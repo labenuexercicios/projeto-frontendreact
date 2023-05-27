@@ -2,7 +2,7 @@ import { useState } from "react"
 import { ProductCard } from "../ProductCard/ProductCard"
 import {HomeStyle} from "./HomeStyle"
 
-export const Home =({productsFiltered, addProduct})=>{
+export const Home =({productsFiltered, addProduct,setCont})=>{
     const[ordination,setOrdination] = useState("")
     const onChangeOrdination =(e)=>{setOrdination(e.target.value)}
     return(
