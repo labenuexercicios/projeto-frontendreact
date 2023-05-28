@@ -5,13 +5,22 @@ import { HiShoppingCart } from "react-icons/hi";
 export function Cart(props) {
   const removeItem = (elemento) => {
     const haveInCart = props.cart.find((item) => item.id === elemento.id);
+    console.log(haveInCart)
 
     if (haveInCart.quantity === 1) {
       const updateCart = props.cart.filter((item) => item.id !== elemento.id);
       props.setCart(updateCart);
-    } else {
+
+      if(props.cart.length === 1){
+        localStorage.removeItem("cart")
+      }
+
+    } else if (haveInCart.quantity > 1) {
       const updateInCart = props.cart.map((item) => {
-        return { ...item, quantity: item.quantity - 1 };
+        if(item.id === elemento.id){
+          return { ...item, quantity: item.quantity - 1 };
+        }
+        return item
       });
       props.setCart(updateInCart);
     }
@@ -22,6 +31,7 @@ export function Cart(props) {
     const listCart = JSON.stringify(props.cart);
     if (props.cart.length > 0) {
       localStorage.setItem("cart", listCart);
+    }else{
     }
   }, [props.cart]);
 
@@ -48,15 +58,15 @@ export function Cart(props) {
     }
   }, []);
 
-  useEffect(() => {
-    const listAmount = localStorage.getItem("amount");
-    const listAmountArray = JSON.parse(listAmount);
-    if (listAmount) {
-      props.setAmount(listAmountArray);
-    } else {
-      props.setAmount(0);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const listAmount = localStorage.getItem("amount");
+  //   const listAmountArray = JSON.parse(listAmount);
+  //   if (listAmount) {
+  //     props.setAmount(listAmountArray);
+  //   } else {
+  //     props.setAmount(0);
+  //   }
+  // }, []);
 
   return (
     <div className="containerCart">
