@@ -40,9 +40,9 @@ export function Home({
 
   useEffect(() => {
     orderList.sort((a, b) => {
-      if (ordination === "Crescente") {
+      if (ordination === "Decrescente") {
         return b.value - a.value;
-      } else if (ordination === "Decrescente") {
+      } else if (ordination === "Crescente") {
         return a.value - b.value;
       }
       return 0;
