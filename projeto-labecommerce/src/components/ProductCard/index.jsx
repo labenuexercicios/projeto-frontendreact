@@ -1,12 +1,12 @@
- //Temporario
+import "./ProductCardStyle.css"
 
-export function ProductCard({card, moreCart}){
+export function ProductCard(props){
     return(
         <article className="productCard">
-            <img src={card.imageUrl} alt={card.name} />
-            <h2>{card.name}</h2>
-            <p>R${card.value},00</p>
-            <button onClick={()=>moreCart(card)}>Adicionar no carrinho</button>
+            <img src={props.card.imageUrl} alt={props.card.name} />
+            <h2>{props.card.name}</h2>
+            <p>R${props.card.value},00</p>
+            <button onClick={()=>props.moreCart(props.card)}>Adicionar no carrinho</button>
         </article>
     )
 }

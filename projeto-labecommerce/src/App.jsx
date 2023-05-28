@@ -4,7 +4,7 @@ import { useState } from "react"; // useStage (não irei mexer no momento)
 import { Filters } from "./components/Filters";
 import { Home } from "./components/Home";
 import { Cart } from "./components/Cart";
-import { listaDeProduto } from "./assets/ListaProdutos";
+import { listProduct } from "./assets/ListProduct";
 
 export function App() {
   //Filters
@@ -31,7 +31,7 @@ export function App() {
           setSearchFilter={setSearchFilter}
         />
         <Home
-          produtos={listaDeProduto}
+          product={listProduct}
           amount={amount}
           setAmount={setAmount}
           cart={cart}

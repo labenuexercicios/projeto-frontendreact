@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:wght@400;600&display=swap');
 
-/*Link dos CSS*/
-@import url(components/Filters/filters.css);
-@import url(components/Home/home.css);
-@import url(components/ProductCard/ProductCardStyle.css);
-@import url(components/Cart/cart.css);
-@import url(components/Items/items.css);
-
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +8,7 @@
 }
 
 body {
-    background-image: url(assets/img/5b856b64df3358c91cd00464d9b8fc8e.jpg);
+    background-image: url(assets/img/background-page.jpg);
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     min-height: 100vh;

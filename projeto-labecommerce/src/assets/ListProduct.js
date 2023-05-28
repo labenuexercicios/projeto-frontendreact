@@ -8,7 +8,7 @@ import foto7  from "./img/foto7.png"
 import foto8  from "./img/foto8.png"
 import foto9  from "./img/foto9.png"
 
-export const listaDeProduto = [
+export const listProduct = [
     {
         id:1,
         name:"Boneco Star Trek 12cm - Michelle Burnham",
