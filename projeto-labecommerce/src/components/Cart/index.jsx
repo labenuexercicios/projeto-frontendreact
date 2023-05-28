@@ -1,14 +1,15 @@
+import "./cart.css"
 import { useEffect } from "react";
 import { Items } from "../Items";
 import { HiShoppingCart } from "react-icons/hi";
 
 export function Cart(props) {
-  const removeItem = (elemento) => {
-    const haveInCart = props.cart.find((item) => item.id === elemento.id);
+  const removeItem = (element) => {
+    const haveInCart = props.cart.find((item) => item.id === element.id);
     console.log(haveInCart)
 
     if (haveInCart.quantity === 1) {
-      const updateCart = props.cart.filter((item) => item.id !== elemento.id);
+      const updateCart = props.cart.filter((item) => item.id !== element.id);
       props.setCart(updateCart);
 
       if(props.cart.length === 1){
@@ -17,7 +18,7 @@ export function Cart(props) {
 
     } else if (haveInCart.quantity > 1) {
       const updateInCart = props.cart.map((item) => {
-        if(item.id === elemento.id){
+        if(item.id === element.id){
           return { ...item, quantity: item.quantity - 1 };
         }
         return item
@@ -58,16 +59,6 @@ export function Cart(props) {
     }
   }, []);
 
-  // useEffect(() => {
-  //   const listAmount = localStorage.getItem("amount");
-  //   const listAmountArray = JSON.parse(listAmount);
-  //   if (listAmount) {
-  //     props.setAmount(listAmountArray);
-  //   } else {
-  //     props.setAmount(0);
-  //   }
-  // }, []);
-
   return (
     <div className="containerCart">
       <div className="first">
@@ -88,7 +79,7 @@ export function Cart(props) {
         })}
         <div className="second-value">
           <p className="amount">Valor da Compra: </p>
-          <p className="amount" id="value">R$ {props.amount}</p>
+          <p className="amount" id="value">R$ {props.amount},00</p>
         </div>
       </div>
     </div>
