@@ -1,13 +1,13 @@
 import React from "react";
 
-function Items() {
+function Items({ name, value, quantity, id, removeItem }) {
   return (
     <>
-      <h2>Cart</h2>
-      <p>
-        x0 Nome do Produto <button>Remover</button>
-      </p>
-      <p>Valor Total: 0</p>
+      <p>Nome: {name}</p>
+      <span>
+        Valor: {value} | Qtd: {quantity}
+      </span>
+      <button onClick={() => removeItem(id)}>Remover</button>
     </>
   );
 }

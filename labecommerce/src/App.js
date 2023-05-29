@@ -8,12 +8,18 @@ import { GlobalStyle } from "./GlobalStyle";
 import productList from "./assents/productList";
 
 function App() {
-  const [minFilter, setMinFilter] = useState("");
-  const [maxFilter, setMaxFilter] = useState("");
+  const [minFilter, setMinFilter] = useState(0);
+  const [maxFilter, setMaxFilter] = useState(0);
   const [searchFilter, setSearchFilter] = useState("");
-  const [cart, setCart] = useState("");
-  const [amount, setAmount] = useState("");
+  const [cart, setCart] = useState([]);
+  const [amount, setAmount] = useState(0);
   const [orderFilter, setOrderFilter] = useState("");
+  function handleFilterChange(filterName, value) {
+    if (filterName === "minFilter") {
+      console.log(handleFilterChange);
+      setMinFilter(value);
+    }
+  }
   return (
     <>
       <GlobalStyle />
@@ -25,6 +31,7 @@ function App() {
           setMaxFilter={setMaxFilter}
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
+          onChange={handleFilterChange}
         />
         <Home
           productList={productList}

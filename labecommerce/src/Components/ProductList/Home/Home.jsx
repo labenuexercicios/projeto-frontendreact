@@ -10,11 +10,38 @@ function Home({
   setAmount,
   cart,
   setCart,
+  minFilter,
+  maxFilter,
+  searchFilter,
 }) {
   const handleOrderSearch = (e) => {
     setOrderFilter(e.target.value);
   };
 
+  function addToCart(product) {
+    // console.log(product, "o produto é isto");
+    const addNewProduct = cart.find(
+      (produtoCallBack) => product.id === produtoCallBack.id
+    );
+
+    if (addNewProduct === undefined) {
+      product = { ...product, quantity: 1 };
+      setCart([...cart, product]);
+    } else {
+      const newCart = cart.map((product) => {
+        if (product.id === addNewProduct.id) {
+          const totalValue = amount + product.value;
+          setAmount(totalValue);
+          return { ...addNewProduct, quantity: product.quantity + 1 };
+        } else {
+          return product;
+        }
+      });
+      setCart(newCart);
+    }
+  }
+  // console.log(cart, "Carrinho de compras");
+  console.log("Valor total", amount);
   return (
     <HomeStyled>
       <HomeDiv>
@@ -39,7 +66,11 @@ function Home({
           })
           .map((productList) => {
             return (
-              <ProductCard key={productList.id} productList={productList} />
+              <ProductCard
+                key={productList.id}
+                productList={productList}
+                adicionarAoCarrinho={addToCart}
+              />
             );
           })}
       </DivProducts>

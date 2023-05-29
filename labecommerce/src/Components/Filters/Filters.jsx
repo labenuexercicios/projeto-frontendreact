@@ -8,12 +8,14 @@ function Filters({
   setMaxFilter,
   searchFilter,
   setSearchFilter,
+  onChange,
 }) {
   function handleMinFilter(event) {
     if (event.target.value < 0) {
+      console.log(minFilter);
       alert("Valor inválido!");
     } else {
-      setMinFilter(event.target.value);
+      onChange("minFilter", event.target.value);
     }
   }
   function handleMaxFilter(event) {
@@ -31,12 +33,30 @@ function Filters({
   return (
     <FiltersDiv>
       <h2>Filters</h2>
-      <label>Valor mínimo:</label>
-      <input type="number"></input>
+      <label id="minimo">Valor mínimo:</label>
+      <input
+        type="number"
+        id="minimo"
+        name="minimo"
+        onChange={handleMinFilter}
+        value={minFilter}
+      ></input>
       <label>Valor máximo:</label>
-      <input type="number"></input>
-      <label>Busca por nome:</label>
-      <input type="text"></input>
+      <input
+        type="number"
+        id="maximo"
+        name="maximo"
+        onChange={handleMaxFilter}
+        value={maxFilter}
+      ></input>
+      <label id="busca">Busca por nome:</label>
+      <input
+        type="text"
+        id="busca"
+        name="busca"
+        onChange={handleSearchFilter}
+        value={searchFilter}
+      ></input>
     </FiltersDiv>
   );
 }
