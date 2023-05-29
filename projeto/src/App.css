@@ -1,0 +1,9 @@
+.App{
+    padding: 0;
+    margin: 0;
+    display: grid;
+     /* text-align: center; */
+    grid-template-columns: 20% 60% 20%;
+    height: 100vh;
+    
+}
