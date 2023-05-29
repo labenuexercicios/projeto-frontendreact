@@ -1,4 +1,5 @@
-import './Filtro.css'
+import { HR } from "../Itens/ItensStyle";
+import { Container, InputFiltros, Margem1, Margem2, Texto1, Texto2 } from "./FiltroStyle";
 
 function Filtro(props) {
 
@@ -17,17 +18,31 @@ function Filtro(props) {
   }
 
   return (
-    <div className="filtro">
-      <p>Filtro</p>
-      <label>valor mínimo</label>
-      <input value={minFilter} onChange={HandleSetMinFilter} type="text"></input>
+    <Container>
+      <Texto1>Filtro</Texto1>
 
-      <label>valor máximo</label>
-      <input value={maxFilter} onChange={HandleSetMaxFilter} type="text"></input>
+      <div>
+        <Margem1/>
+        <Texto2>Valor mínimo</Texto2>
+        <InputFiltros value={minFilter}  onChange={HandleSetMinFilter} type="text"></InputFiltros>
+      </div>
 
-      <label>buscar por nome</label>
-      <input value={searchFilter} onChange={HandleSetSearchFilter} type="text"></input>
-    </div>
+      <HR></HR>
+
+      <div>
+      <Margem2/>
+        <Texto2>Valor máximo</Texto2>
+        <InputFiltros value={maxFilter} onChange={HandleSetMaxFilter} type="text"></InputFiltros>
+      </div>
+
+      <HR></HR>
+
+      <div>
+      <Margem2/>
+        <Texto2>Buscar por nome</Texto2>
+        <InputFiltros value={searchFilter} onChange={HandleSetSearchFilter} type="text"></InputFiltros>
+      </div>
+    </Container>
   );
 }
 

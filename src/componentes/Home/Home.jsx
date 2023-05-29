@@ -1,6 +1,6 @@
-import {  useState } from "react";
+import { useState } from "react";
 import CardProduto from "../CardProduto/CardProduto";
-import "./Home.css";
+import { OrdinationContainer, HomeContainer, ProductHome, Texto2, Texto4, Texto5, SelectFiltros } from "./HomeStyle";
 
 function Home(props) {
   const { results, amount, setAmount, cart, setCart } = props;
@@ -12,7 +12,6 @@ function Home(props) {
     });
     return total;
   };
-
 
   const [ordination, setOrdination] = useState();
 
@@ -40,8 +39,6 @@ function Home(props) {
     setAmount(novoValorTotal);
   };
 
-
-
   const productList = results.map((product) => {
     return (
       <CardProduto
@@ -59,17 +56,20 @@ function Home(props) {
   });
 
   return (
-    <div>
-      <div className="ordenacao">
-        <p>Quantidade de produto: {results.length}</p>
-        <label>Ordenação:</label>
-        <select onChange={ordernar}>
-          <option value="asc">Crescente</option>
-          <option value="desc">Decrescente</option>
-        </select>
-      </div>
-      <div className="produtos">{productList}</div>
-    </div>
+    <HomeContainer>
+      <OrdinationContainer>
+        <Texto2>Quantidade de produto: <Texto4>{results.length}</Texto4></Texto2>
+        <Texto5>
+          Ordenação:
+          <SelectFiltros onChange={ordernar}>
+            <option value="asc">Crescente</option>
+            <option value="desc">Decrescente</option>
+          </SelectFiltros>
+        </Texto5>
+      </OrdinationContainer>
+
+      <ProductHome>{productList}</ProductHome>
+    </HomeContainer>
   );
 }
 
