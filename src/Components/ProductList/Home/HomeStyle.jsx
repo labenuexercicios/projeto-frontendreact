@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeArticle = styled.article`
-  background-color: yellow;
+  /* background-color: yellow; */
 `;
 
 export const OrdenacaoSection = styled.section`
@@ -11,5 +11,5 @@ export const OrdenacaoSection = styled.section`
 
 export const HomeCards = styled.section`
   display:flex;
-  background-color: grey;
+  /* background-color: #ff7989; */
 `;

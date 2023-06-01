@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { GeralStyle, CardImagem, ButtonCard, NomeProduto, PrecoProdutos } from "./ProductCardStyle";
 
-function ProductCard() {
+function ProductCard(props) {
   return (
-    <p>ProductCard</p>
-  )
+    <GeralStyle>
+      <CardImagem src={props.image} />
+
+      <NomeProduto>{props.nomeDoProduto}</NomeProduto>
+
+      <PrecoProdutos>{props.valor}</PrecoProdutos>
+
+      <ButtonCard>Adicionar ao Carrinho</ButtonCard>
+      
+    </GeralStyle>
+  );
 }
 
-export default ProductCard
+export default ProductCard;

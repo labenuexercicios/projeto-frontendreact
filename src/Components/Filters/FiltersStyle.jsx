@@ -5,9 +5,10 @@ display:flex;
 border: 1px solid black;
 flex-direction:column;
 padding-left: 10px;
+/* background-color:#db497a; */
 
 input {
-    width:10%;
+    width:40%;
     margin-bottom:10px;  
 }
 `
