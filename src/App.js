@@ -1,18 +1,20 @@
-import React from 'react'
-import Filters from './Components/Filters/Filters'
-import Home from './Components/ProductList/Home/Home'
-import Cart from './Components/ShoppingCart/Cart/Cart'
-
+import React from "react";
+import Filters from "./Components/Filters/Filters";
+import Home from "./Components/ProductList/Home/Home";
+import Cart from "./Components/ShoppingCart/Cart/Cart";
+import { GlobalStyles } from "./GlobalStyles";
 
 function App() {
   return (
-    <div>
-      <Filters/>
-      <Home/>
-      <Cart/>
-
-    </div>
-  )
+    <>
+      <GlobalStyles />
+      <main>
+        <Filters />
+        <Home />
+        <Cart />
+      </main>
+    </>
+  );
 }
 
-export default App
+export default App;
