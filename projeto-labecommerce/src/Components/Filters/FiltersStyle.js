@@ -5,7 +5,7 @@ export const FilterStyle = styled.form`
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 10vw;
     padding: 1em;
 
     h3 {

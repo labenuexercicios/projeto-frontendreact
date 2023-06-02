@@ -1,23 +1,35 @@
-import React from 'react'
-
-import { CardContainer } from './ProductCardStyle'
+import { CardContainer } from "./ProductCardStyle";
 
 const ProductCard = (props) => {
+  console.log(props)
+  const productData = props.produtos.map((element, index) => {
+    console.log(element);
+    return (
+     
+        <div key={element.id}>
+          <img src={element.imageUrl} />
+          <span>
+            <p>{element.name}</p>
 
-  
+            <hr/>
+
+            <p>R$ {element.value}</p>
+           
+            <button>Adicionar ao carrinho</button>
+          </span>
+        </div>
+        
+      
+    );
+  });
 
   return (
     <CardContainer>
-      <div>
-       <img src={props.imageUrl} />
-      </div>
-      <p>{props.name}</p>
-      <p>{props.value}</p>
-      <button>Adicionar ao carrinho</button>
-    
+      {productData}
     </CardContainer>
-    
-  )
-}
 
-export default ProductCard
+  )
+  
+};
+
+export default ProductCard;

@@ -21,7 +21,6 @@ function App() {
 
     })
   
-    console.log(formData)
   function handleChange(e) {
     const {value, name, type, checked} = e.target
 
