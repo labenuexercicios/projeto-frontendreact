@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const HomeArticle = styled.article`
+padding:5px;
+border: 2px solid black;
   /* background-color: yellow; */
 `;
 
