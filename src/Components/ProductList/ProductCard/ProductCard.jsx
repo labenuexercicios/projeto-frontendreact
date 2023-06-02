@@ -4,11 +4,11 @@ import { GeralStyle, CardImagem, ButtonCard, NomeProduto, PrecoProdutos } from "
 function ProductCard(props) {
   return (
     <GeralStyle>
-      <CardImagem src={props.image} />
+      <CardImagem src={props.produto.imageUrl} />
 
-      <NomeProduto>{props.nomeDoProduto}</NomeProduto>
+      <NomeProduto>{props.produto.name}</NomeProduto>
 
-      <PrecoProdutos>{props.valor}</PrecoProdutos>
+      <PrecoProdutos>{props.produto.value}</PrecoProdutos>
 
       <ButtonCard>Adicionar ao Carrinho</ButtonCard>
       
