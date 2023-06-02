@@ -7,6 +7,7 @@ const ProductCard = (props) => {
     return (
      
         <div key={element.id}>
+          
           <img src={element.imageUrl} />
           <span>
             <p>{element.name}</p>

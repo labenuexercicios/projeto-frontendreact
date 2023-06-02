@@ -16,13 +16,14 @@ const Home = (props) => {
   return (
     <HomeContainer>
       <HomeHeader>
+        <h1>Space Themed E-Commerce</h1>
         <p>Quantidade de produtos:{props.produtos.length}</p>
         <span>
-          <p>Ordenacao:</p>
+          <p>Ordenação</p>
           <select onChange={handleOrdinationChange} value={ordination}>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+            <option>Crescente</option>
+            <option>Decrescente</option>
+            <option>Novidades</option>
           </select>
         </span>
       </HomeHeader>

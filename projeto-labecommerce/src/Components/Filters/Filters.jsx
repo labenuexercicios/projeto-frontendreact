@@ -1,4 +1,3 @@
-import React from 'react'
 import { FilterStyle } from './FiltersStyle'
 
 const Filters = (props) => {
@@ -7,9 +6,9 @@ const Filters = (props) => {
 
   return (
     <FilterStyle>
-        <h3>Filters</h3>
+        <h3>Filtros</h3>
 
-        <label htmlFor='minFilter'>Valor minimo</label>
+        <label htmlFor='minFilter'>Valor mínimo</label>
         <input 
           onChange={props.handleChange} 
           value={props.data.minFilter} 
@@ -18,7 +17,7 @@ const Filters = (props) => {
           
         />
 
-        <label htmlFor='maxFilter'>Valor maximo</label>
+        <label htmlFor='maxFilter'>Valor máximo</label>
         <input 
           onChange={props.handleChange} 
           value={props.data.maxFilter} 
