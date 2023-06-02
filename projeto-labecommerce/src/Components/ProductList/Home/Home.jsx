@@ -3,7 +3,7 @@ import ProductCard from '../ProductCard/ProductCard'
 import { HomeContainer, ProductCardContainer } from './HomeStyle'
 
 const Home = (props) => {
-  // console.log(props.produtos)
+  // console.log(props)
   const [ordination, setOrdination] = React.useState('')
 
   function handleOrdinationChange(event) {

@@ -2,28 +2,58 @@ import React from 'react'
 import Filters from './Components/Filters/Filters'
 import Home from './Components/ProductList/Home/Home.jsx'
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart'
-import styled from 'styled-components'
 import { produtos } from './assets/ProductList'
+import { MainContainer } from './AppStyle'
 
 function App() {
-  const [minFilter, setMinFilter] = React.useState('')
-  const [maxFilter, setMaxFilter] = React.useState('')
-  const [searchFilter, setSearchFilter] = React.useState('')
-  const [cart, setCart] = React.useState('')
-  const [amount, setAmount] = React.useState('')
+  // const [minFilter, setMinFilter] = React.useState('')
+  // const [maxFilter, setMaxFilter] = React.useState('')
+  // const [searchFilter, setSearchFilter] = React.useState('')
+  // const [cart, setCart] = React.useState('')
+  // const [amount, setAmount] = React.useState('')
+  const [formData, setFormData] = React.useState(
+    {
+      minFilter: 0,
+      maxFilter: 0,
+      searchFilter: '',
+      cart: '',
+      amount: '',
 
+    })
+  
+    console.log(formData)
+  function handleChange(e) {
+    const {value, name, type, checked} = e.target
 
-  const MainContainer = styled.div`
-    border: 1px solid red;
-    display: flex;
-    height: 100vh;
-  `
+    if (type === 'number' && value < 0) {
+      return 
+    }
+
+    setFormData(prevData => {
+      
+      return {
+        ...prevData,
+        [name]: type === 'checkbox' ? checked : value
+      }
+    })
+  }
+
 
   return (
     <MainContainer>
-      <Filters />
-      <Home produtos={produtos}/>
-      <ShoppingCart />
+      <Filters 
+        handleChange={handleChange}
+        data={formData}
+      />
+      <Home 
+        handleChange={handleChange}  
+        data={formData}
+        produtos={produtos}
+      />
+      <ShoppingCart 
+        handleChange={handleChange}
+        data={formData}
+      />
     </MainContainer>
   )
 }

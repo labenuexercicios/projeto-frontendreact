@@ -1,36 +1,39 @@
 import React from 'react'
-import styled from 'styled-components'
+import { FilterStyle } from './FiltersStyle'
 
-const Filters = () => {
-  const FilterStyle = styled.form`
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    padding: 1em;
-
-    h3 {
-      margin: 0;
-    }
-
-    label {
-      margin-top: 1em;
-    }
-
-  `
+const Filters = (props) => {
+  console.log(props)
+  
 
   return (
     <FilterStyle>
         <h3>Filters</h3>
 
-        <label for='valor-minimo'>Valor minimo</label>
-        <input type="text" name="valor-minimo" />
+        <label htmlFor='minFilter'>Valor minimo</label>
+        <input 
+          onChange={props.handleChange} 
+          value={props.data.minFilter} 
+          type="number" 
+          name="minFilter"
+          
+        />
 
-        <label for='valor-maximo'>Valor maximo</label>
-        <input type="text" name="valor-maximo" />
+        <label htmlFor='maxFilter'>Valor maximo</label>
+        <input 
+          onChange={props.handleChange} 
+          value={props.data.maxFilter} 
+          type="number" 
+          name="maxFilter"
+          
+        />
 
-        <label for='busca'>Busca por nome</label>
-        <input type="text" name="busca" />
+        <label htmlFor='searchFilter'>Busca por nome</label>
+        <input 
+          onChange={props.handleChange} 
+          value={props.data.searchFilter} 
+          type="text" 
+          name="searchFilter" 
+        />
     </FilterStyle>
   )
 }
