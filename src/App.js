@@ -3,27 +3,41 @@ import Filters from "./Components/Filters/Filters";
 import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import { GlobalStyles } from "./GlobalStyles";
-import { listaDeProdutos } from "./assets/productsList";
+import { listaDeProdutos as Catalogo } from "./assets/productsList";
 
 function App() {
-    const [minFilter, setMinFilter] = useState("");
-    const [maxFiler, setMaxFilter] = useState("");
-    const [busca, setBusca] = useState("");
-    const [cart, setCart] = useState("");
-    const [valorTotal, setValorTotal] = useState("");
-
-
-  
+  const [cart, setCart] = useState("fff");
+  const [amount, setAmount] = useState("uuuu");
+  const [minFilter, setMinFilter] = useState("");
+  const [maxFiler, setMaxFilter] = useState("");
+  const [searchFilter, setSearchFilter] = useState("");
+  const [listaDeProdutos, setListaDeProdutos] = useState(Catalogo);
 
   return (
     <>
       <GlobalStyles />
       <main>
-        <Filters />
-        <Home
-        listaDeProdutos ={listaDeProdutos}
+        <Filters
+          minFilter={minFilter}
+          setMinFilter={setMinFilter}
+          maxFiler={maxFiler}
+          setMaxFilter={setMaxFilter}
+          searchFilter={searchFilter}
+          setSearchFilter={setSearchFilter}
         />
-        <Cart />
+        <Home
+          listaDeProdutos={listaDeProdutos}
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}
+        />
+        <Cart
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}
+        />
       </main>
     </>
   );

@@ -1,22 +1,15 @@
 import React, { useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import { HomeArticle, HomeCards, OrdenacaoSection } from "./HomeStyle";
-import { async } from "q";
 
-function Home(props) {
-  /** @type (Array) */
-  const listaDeProdutos = props.listaDeProdutos;
+function Home({ listaDeProdutos, amount, setAmount, cart, setCart }) {
+  const [ordination, setOrdination] = useState("");
 
-
-    const [ordination, setOrdination] = useState("");
-  
-
-  const onChangeOrdemProdutos = (event) =>{
+  const onChangeOrdemProdutos = (event) => {
     setOrdination(event.target.value);
     // console.log(event.target.value)
     // console.log(ordination)
-
-  }
+  };
 
   return (
     <HomeArticle>
@@ -24,9 +17,7 @@ function Home(props) {
         <div>Quantidade de produtos: {listaDeProdutos.length}</div>
         <div>
           <label>Ordenação: </label>
-          <select
-          onChange={onChangeOrdemProdutos}
-          >
+          <select onChange={onChangeOrdemProdutos}>
             <option value=""></option>
             <option value="Crescente">Crescente</option>
             <option value="Decrescente">Decrescente</option>
