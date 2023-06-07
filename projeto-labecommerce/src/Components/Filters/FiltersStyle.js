@@ -8,6 +8,7 @@ export const FilterStyle = styled.form`
     width: 10vw;
     padding: 1em;
     font-size: 12px;
+    color: var(--primary-font-color);
 
     h3 {
       margin: 0;

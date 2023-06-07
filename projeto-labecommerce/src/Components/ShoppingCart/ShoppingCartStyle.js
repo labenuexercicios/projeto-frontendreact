@@ -9,6 +9,8 @@ export const CartContainer = styled.div`
     align-items: center;
     font-size: 12px;
     row-gap: 10px;
+    color: var(--primary-font-color);
+    padding: 1em;
 
     button {
         cursor: pointer;

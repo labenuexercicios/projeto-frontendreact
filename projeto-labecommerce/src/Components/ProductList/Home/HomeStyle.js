@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const HomeContainer = styled.div`
-width: 100%;
+  width: 100%;
 
 
 `
@@ -13,16 +13,17 @@ export const ProductCardContainer = styled.div`
   align-content: center; */
 
 `
-export const HomeHeader = styled.span`
+export const HomeHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-
+  color: var(--primary-font-color);
+  
   h1 {
     font-family: 'Rubik Moonrocks';
     font-size: 20px;
-    color: #1E0126;
+    
   }
 
   span {
@@ -30,8 +31,4 @@ export const HomeHeader = styled.span`
     flex-direction: column;
   }
 
-  div {
-    cursor: pointer;
-    width: 200px;
-  }
 `

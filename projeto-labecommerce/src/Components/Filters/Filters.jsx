@@ -1,7 +1,7 @@
 import { FilterStyle } from './FiltersStyle'
 
 const Filters = (props) => {
-  console.log(props)
+  // console.log(props)
   
 
   return (

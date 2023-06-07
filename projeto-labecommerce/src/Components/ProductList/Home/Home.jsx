@@ -3,7 +3,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import { HomeContainer, HomeHeader } from "./HomeStyle";
 
 const Home = (props) => {
-  console.log(props)
+  // console.log(props)
   const [ordination, setOrdination] = React.useState("");
 
   function handleOrdinationChange(event) {
@@ -27,11 +27,10 @@ const Home = (props) => {
           </select>
         </span>
       </HomeHeader>
-      <>
         <ProductCard
           produtos={props.produtos}
+          handleClick={props.handleClick}
         />
-      </>
     </HomeContainer>
   );
 };

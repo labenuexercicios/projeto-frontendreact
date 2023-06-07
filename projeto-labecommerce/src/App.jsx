@@ -9,17 +9,24 @@ function App() {
   // const [minFilter, setMinFilter] = React.useState('')
   // const [maxFilter, setMaxFilter] = React.useState('')
   // const [searchFilter, setSearchFilter] = React.useState('')
-  // const [cart, setCart] = React.useState('')
+  
   // const [amount, setAmount] = React.useState('')
   const [formData, setFormData] = React.useState(
     {
       minFilter: 0,
       maxFilter: 0,
       searchFilter: '',
-      cart: '',
-      amount: '',
+      cart: [{}],
+      amount: 0,
 
     })
+  const [cart, setCart] = React.useState(formData.cart)
+
+  function handleClick() {
+    console.log('click')
+    console.log(cart)
+  }
+  
   
   function handleChange(e) {
     const {value, name, type, checked} = e.target
@@ -48,6 +55,7 @@ function App() {
         handleChange={handleChange}  
         data={formData}
         produtos={produtos}
+        handleClick={handleClick}
       />
       <ShoppingCart 
         handleChange={handleChange}
