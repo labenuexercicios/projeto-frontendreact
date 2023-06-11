@@ -1,4 +1,4 @@
-import styled from "styled-components"
+/*import styled from "styled-components"
 
 export const HomeStyle = styled.input`
 input.cart {
@@ -14,4 +14,4 @@ img {
     padding: 0px;
 }
 
-`
+`*/

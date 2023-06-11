@@ -1,13 +1,16 @@
-import { ProductCard } from "./productCardStyle";
-import ProductList from "../../assents/productList"
-import { useState } from 'react'
 
-const ProductCard = (props) => {
-    console.log("props ProductList", props);
+import productList from "../../../App"
+
+const ProductCard = () => {
+   
     
 return (
     <div className="ProductCard">
-        <ProductList />
+       <p>ProductCard</p>
+       <App productList={productList} />
+       
+       
+        
     </div>
 )
 }

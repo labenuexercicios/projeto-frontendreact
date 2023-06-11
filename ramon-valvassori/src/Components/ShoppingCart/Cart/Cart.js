@@ -1,1 +1,11 @@
-import ProductList from "../assents/productList"
+
+
+const Cart = () => {
+    return(
+        <div>
+            <p>Cart</p>
+        </div>
+    )
+}
+
+export default Cart

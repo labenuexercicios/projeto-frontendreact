@@ -1,8 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react'
+import Filters from './Components/Filters/Filters';
+import Home from './Components/Product List/Home/Home';
+import Cart from './Components/ShoppingCart/Cart/Cart';
+import Items from './Components/ShoppingCart/Items/Items';
+import ProductCard from './Components/Product List/ProductCard/ProductCard';
+import productList from './Components/assents/productList';
 
 function App() {
+  
+  
   const [minFilter, setMinFilter] = useState() 
   const [maxFilter, setMaxFilter] = useState()
   const [cart, setCart] = useState()
@@ -10,21 +18,13 @@ function App() {
   const [amount, SetAmount] = useState()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Filters/>
+      <Home/>
+      <Cart/>
+      <ProductCard productList={productList}/>
+      <Items/>
     </div>
+    
   );
 }
 
