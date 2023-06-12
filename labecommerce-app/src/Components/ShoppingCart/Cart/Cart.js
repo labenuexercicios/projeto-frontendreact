@@ -1,10 +1,18 @@
+import Itens from "../Itens/Itens";
+import { CartStyle } from './CartStyle'
+
 function Cart() {
 
   
     
   
     return (
-        <p>Cart</p>
+        <CartStyle>
+            <h1>Cart</h1>
+            <Itens/>
+            <Itens/>
+            <p>Valor total</p>
+        </CartStyle>
     )
 }
 

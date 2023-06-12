@@ -1,10 +1,16 @@
+import { ItemStyle } from './ItensStyle'
+
 function Itens() {
 
   
     
   
     return (
-        <p>Itens</p>
+        <ItemStyle>
+            <p>Item</p>
+            <button>Remover</button>
+        </ItemStyle>
+        
     )
 }
 
