@@ -2,6 +2,7 @@ import Filter from "./Components/Filters/Filters";
 import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import styled from 'styled-components';
+import { meusProdutos } from './assents/productList';
 
 const AppStyle = styled.div`
     display: grid;
@@ -22,17 +23,20 @@ const Header = styled.header`
 
 
 function App() {
+
+
   return (
     <>
       <Header>
           <h1>Titulo da Loja</h1>
-        </Header>
+      </Header>
       <AppStyle>
-        
-
 
         <Filter/>
-        <Home/>
+        <Home
+        meusProdutos={meusProdutos}
+        />
+        
         <Cart/>
 
         

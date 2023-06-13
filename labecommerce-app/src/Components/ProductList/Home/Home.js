@@ -1,15 +1,16 @@
 import ProductCard from "../ProductCard/ProductCard";
 import { HomeStyle, Header, Container, Select } from './HomeStyle'
 
-function Home() {
+function Home(props) {
 
-  
+  const { meusProdutos } = props
+
     
   
     return (
         <HomeStyle>
             <Header>
-                <p>Quantidade de produtos</p>
+                <p>Quantidade de produtos: {meusProdutos.lenght}</p>
                 
                 <label>Ordenação:
                     <Select>
@@ -23,10 +24,17 @@ function Home() {
                 </label>
             </Header>
             <Container>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
+            {meusProdutos.map((produto) => {
+              return (
+                <ProductCard
+                name={produto.name}
+                valor={produto.value}
+                img={produto.imageUrl}
+                
+                />
+            );
+          })}
+                
 
             </Container>
         </HomeStyle>
