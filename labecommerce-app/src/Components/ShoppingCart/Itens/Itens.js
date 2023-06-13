@@ -1,13 +1,13 @@
 import { ItemStyle } from './ItensStyle'
 
-function Itens() {
+function Itens(props) {
 
   
     
   
     return (
         <ItemStyle>
-            <p>Item</p>
+            <p>{props.name}</p>
             <button>Remover</button>
         </ItemStyle>
         

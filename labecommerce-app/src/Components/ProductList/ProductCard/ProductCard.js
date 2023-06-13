@@ -1,17 +1,15 @@
 import { Card, Dados } from './ProductCardStyle'
 
 
-function ProductCard() {
+function ProductCard(props) {
 
-  
-    
-  
+
     return (
         <Card>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/1200px-OSIRIS_Mars_true_color.jpg"/>
+            <img src={props.img}/>
             <Dados>
-                <p>Nome do produto:</p>
-                <p>Valor</p>
+                <p>{props.name}</p>
+                <p>{props.valor}</p>
                 <button>Adicionar ao carrinho</button>
             </Dados>
         </Card>

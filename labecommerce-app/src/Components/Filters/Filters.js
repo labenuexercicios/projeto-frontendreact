@@ -1,9 +1,9 @@
 import { Filters, Form } from './FiltersStyle';
 
 
-function Filter() {
+function Filter(props) {
 
-  
+    const { meusProdutos } = props
     
   
     return (
