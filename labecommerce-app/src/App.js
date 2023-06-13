@@ -3,6 +3,7 @@ import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import styled from 'styled-components';
 import { meusProdutos } from './assents/productList';
+import React, { useState } from 'react';
 
 const AppStyle = styled.div`
     display: grid;
@@ -23,6 +24,11 @@ const Header = styled.header`
 
 
 function App() {
+  const [cart, setCart] = useState("")
+  const [amount, setAmount] = useState("")
+  const [minFilter, setMinFilter] = useState("")
+  const [maxFilter, setMaxFilter] = useState("")
+  const [searchFilter, setSearchFilter] = useState("")
 
 
   return (
