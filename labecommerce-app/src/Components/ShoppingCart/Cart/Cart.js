@@ -4,6 +4,8 @@ import { CartStyle } from './CartStyle'
 function Cart(props) {
 
     const { meusProdutos } = props
+    const { cart } = props
+    const { amount } = props
     
   
     return (
@@ -11,7 +13,8 @@ function Cart(props) {
             <h1>Cart</h1>
 
             <Itens
-            // name={meusProdutos.name}
+            // onChange={handleMax}
+            // value={maxFilter}
             />
 
             <p>Valor total</p>

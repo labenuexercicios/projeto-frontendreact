@@ -24,26 +24,71 @@ const Header = styled.header`
 
 
 function App() {
-  const [cart, setCart] = useState("")
+
+  //  Home - Cart
+  const [cart, setCart] = useState()
   const [amount, setAmount] = useState("")
+  
+  //  Filters
   const [minFilter, setMinFilter] = useState("")
   const [maxFilter, setMaxFilter] = useState("")
   const [searchFilter, setSearchFilter] = useState("")
 
 
+  // function addCart (){
+
+  // }
+
   return (
     <>
       <Header>
-          <h1>Titulo da Loja</h1>
+          <h1>Intergalática</h1>
       </Header>
       <AppStyle>
-
-        <Filter/>
-        <Home
+        
+        <Filter
         meusProdutos={meusProdutos}
+
+        minFilter={minFilter}
+        setMinFilter={setMinFilter}
+
+        maxFilter={maxFilter}
+        setMaxFilter={setMaxFilter}
+
+        searchFilter={searchFilter}
+        setSearchFilter={setSearchFilter}
+        />
+
+        <Home
+        minFilter={minFilter}
+        setMinFilter={setMinFilter}
+        
+        maxFilter={maxFilter}
+        setMaxFilter={setMaxFilter}
+        
+        searchFilter={searchFilter}
+        setSearchFilter={setSearchFilter}
+
+
+        meusProdutos={meusProdutos}
+        amount={amount}
+        setAmount={setAmount}
+
+        cart={cart}
+        setCart={setCart}
+        // addCart={addCart}
         />
         
-        <Cart/>
+        <Cart
+        meusProdutos={meusProdutos}
+
+        amount={amount}
+        setAmount={setAmount}
+
+        cart={cart}
+        setCart={setCart}
+        // addCart={addCart}
+        />
 
         
       </AppStyle>
