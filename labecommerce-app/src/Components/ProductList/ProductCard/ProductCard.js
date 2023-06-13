@@ -3,6 +3,7 @@ import { Card, Dados } from './ProductCardStyle'
 
 function ProductCard(props) {
 
+    const { addCart } = props
 
     return (
         <Card>
@@ -10,7 +11,9 @@ function ProductCard(props) {
             <Dados>
                 <p>{props.name}</p>
                 <p>{props.valor}</p>
-                <button>Adicionar ao carrinho</button>
+                <button 
+                onClick={addCart}
+                >Adicionar ao carrinho</button>
             </Dados>
         </Card>
         
