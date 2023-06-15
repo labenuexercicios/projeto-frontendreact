@@ -2,16 +2,26 @@ import { ItemStyle } from './ItensStyle'
 
 function Itens(props) {
 
-    const { meusProdutos } = props
-    // const { cart } = props
-    // const { amount } = props
-    
+    const { produto } = props
+    const { removeCart } = props
+
   
     return (
-        <ItemStyle>
-            <p>Item</p>
-            <button>Remover</button>
-        </ItemStyle>
+        <ul>
+            <ItemStyle >
+        
+                <p>{props.name}: {props.qtd}</p>
+                        
+                <button
+                    onClick={() => removeCart({produto})}
+                >Remover</button>
+
+                </ItemStyle>
+    
+
+        </ul>
+        
+        
         
     )
 }

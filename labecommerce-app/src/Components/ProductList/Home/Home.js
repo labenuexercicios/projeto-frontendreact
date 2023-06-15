@@ -10,6 +10,9 @@ function Home(props) {
     const { searchFilter } = props
     const { minFilter } = props
     const { maxFilter } = props
+    const { addCart } = props
+
+    
 
     const handleOrdem = (e) => {
         setOrdination(e.target.value)
@@ -61,12 +64,17 @@ function Home(props) {
                       } else{
                         return produto
                       }})
-                      .map((produto) => {
+                      .map((produto, index) => {
                         return (
                           <ProductCard
+
+                          key={index}
+                          addCart={addCart}
                           name={produto.name}
                           valor={produto.value}
                           img={produto.imageUrl}
+                          produto={produto}
+
                           />
                 );
           })}
