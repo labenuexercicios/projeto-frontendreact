@@ -1,8 +1,25 @@
 import { CardContainer } from "./ProductCardStyle";
 
 const ProductCard = (props) => {
-  // console.log(props)
-  const productData = props.produtos.map((element, index) => {
+  console.log(props)
+  const productData = props.produtos
+  .filter(element => {
+    return element.name.toLowerCase().includes(props.searchFilter.toLowerCase())
+  })
+  .filter(element => {
+    return props.minFilter ? element.value.includes(props.minFilter) : element
+  })
+  .filter(element => {
+    return props.maxFilter ? element.value.includes(props.maxFilter) : element
+  })
+  .sort((a, b) => {
+    if(props.ordination === "Crescente") {
+      return a.name.localeCompare(b.name)
+    } else if (props.ordination === "Decrescente"){
+      return b.name.localeCompare(a.name)
+    } 
+  })
+  .map((element, index) => {
     // console.log(element);
     return (
      

@@ -10,8 +10,8 @@ const Filters = (props) => {
 
         <label htmlFor='minFilter'>Valor mínimo</label>
         <input 
-          onChange={props.handleChange} 
-          value={props.data.minFilter} 
+          onChange={(e) => props.setMinFilter(e.target.value)} 
+          value={props.minFilter} 
           type="number" 
           name="minFilter"
           
@@ -19,8 +19,8 @@ const Filters = (props) => {
 
         <label htmlFor='maxFilter'>Valor máximo</label>
         <input 
-          onChange={props.handleChange} 
-          value={props.data.maxFilter} 
+          onChange={(e) => props.setMaxFilter(e.target.value)} 
+          value={props.maxFilter} 
           type="number" 
           name="maxFilter"
           
@@ -28,8 +28,8 @@ const Filters = (props) => {
 
         <label htmlFor='searchFilter'>Busca por nome</label>
         <input 
-          onChange={props.handleChange} 
-          value={props.data.searchFilter} 
+          onChange={(e) => props.setSearchFilter(e.target.value)} 
+          value={props.searchFilter} 
           type="text" 
           name="searchFilter" 
         />

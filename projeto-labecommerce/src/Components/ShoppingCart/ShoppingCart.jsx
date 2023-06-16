@@ -11,7 +11,7 @@ const ShoppingCart = (props) => {
   return (
     <CartContainer>
         <h3>Carrinho</h3>
-        <Itens />
+        <Itens cart={props.itemsCart} cartProducts={props.cartProducts}/>
     </CartContainer>
   )
 }

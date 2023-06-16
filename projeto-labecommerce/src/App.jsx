@@ -6,60 +6,40 @@ import { produtos } from './assets/ProductList'
 import { MainContainer } from './AppStyle'
 
 function App() {
-  // const [minFilter, setMinFilter] = React.useState('')
-  // const [maxFilter, setMaxFilter] = React.useState('')
-  // const [searchFilter, setSearchFilter] = React.useState('')
-  
+  const [minFilter, setMinFilter] = React.useState('')
+  const [maxFilter, setMaxFilter] = React.useState('')
+  const [searchFilter, setSearchFilter] = React.useState('')
+  const [cart, setCart] = React.useState([])
   // const [amount, setAmount] = React.useState('')
-  const [formData, setFormData] = React.useState(
-    {
-      minFilter: 0,
-      maxFilter: 0,
-      searchFilter: '',
-      cart: [{}],
-      amount: 0,
 
-    })
-  const [cart, setCart] = React.useState(formData.cart)
+    console.log(maxFilter, minFilter, searchFilter)
 
-  function handleClick() {
-    console.log('click')
-    console.log(cart)
-  }
-  
-  
-  function handleChange(e) {
-    const {value, name, type, checked} = e.target
-
-    if (type === 'number' && value < 0) {
-      return 
-    }
-
-    setFormData(prevData => {
+    function handleClick() {
+      console.log('click')
+      setCart((prevCart) => [...prevCart, 'added']);
       
-      return {
-        ...prevData,
-        [name]: type === 'checkbox' ? checked : value
-      }
-    })
-  }
+    }
+  
 
 
   return (
     <MainContainer>
       <Filters 
-        handleChange={handleChange}
-        data={formData}
+        minFilter={minFilter}
+        setMinFilter={setMinFilter}
+        maxFilter={maxFilter}
+        setMaxFilter={setMaxFilter}
+        searchFilter={searchFilter}
+        setSearchFilter={setSearchFilter}
       />
       <Home 
-        handleChange={handleChange}  
-        data={formData}
         produtos={produtos}
         handleClick={handleClick}
+        maxFilter={maxFilter}
+        searchFilter={searchFilter}
       />
       <ShoppingCart 
-        handleChange={handleChange}
-        data={formData}
+        itemsCart={cart}
       />
     </MainContainer>
   )

@@ -1,11 +1,25 @@
 
 
-const Itens = () => {
+const Itens = (props) => {
+// console.log(props)
+  
+const cartProducts = props.cart.map((element, index) => {
+
+  // console.log(element)
+  return (
+        <div key={index}>
+          <p> 0x {element.name}</p> 
+         
+          <button type="button">Remover</button>
+        </div>
+        
+    )
+})
+
   return (
     <div>
-       <p> 0x Nome do produto</p> 
-       <p>Valor Total: 0</p>
-       {/* <button type="button">Remover</button> */}
+      {cartProducts}
+      <p>Valor Total: 0</p>
     </div>
   )
 }

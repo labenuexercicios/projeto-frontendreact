@@ -3,11 +3,10 @@ import ProductCard from "../ProductCard/ProductCard";
 import { HomeContainer, HomeHeader } from "./HomeStyle";
 
 const Home = (props) => {
-  // console.log(props)
+  console.log(props)
   const [ordination, setOrdination] = React.useState("");
 
   function handleOrdinationChange(event) {
-    console.log(event.target.value);
     setOrdination(event.target.value);
   }
 
@@ -21,15 +20,20 @@ const Home = (props) => {
         <span>
           <p>Ordenação</p>
           <select onChange={handleOrdinationChange} value={ordination}>
+            <option>Ordenar</option>
             <option>Crescente</option>
             <option>Decrescente</option>
-            <option>Novidades</option>
+            
           </select>
         </span>
       </HomeHeader>
         <ProductCard
           produtos={props.produtos}
+          ordination={ordination}
+          setOrdination={setOrdination}
           handleClick={props.handleClick}
+          maxFilter={props.maxFilter}
+          searchFilter={props.searchFilter}
         />
     </HomeContainer>
   );
