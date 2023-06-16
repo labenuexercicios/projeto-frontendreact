@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "nome": "Traje espacial Sokol-KV2",
+        "preco": 560.95,
+        "imagem": "sokol-kv2.jpg",
+        "alt":"Imagem Traje espacial Sokol-KV2"
+    },
+    {
+        "id": 2,
+        "nome": "Traje espacial Feitian",
+        "preco": 497.50,
+        "imagem": "feitian.jpg",
+        "alt":"Imagem Traje espacial Feitian"
+    },
+    {
+        "id": 3,
+        "nome": "Traje espacial Navy Mark IV",
+        "preco": 543.99,
+        "imagem": "navy-mark-iv.jpg",
+        "alt":"Imagem Traje espacial Navy Mark IV"
+    },
+    {
+        "id": 4,
+        "nome": "Traje espacial Orlan",
+        "preco": 450.00,
+        "imagem": "orlan.jpg",
+        "alt":"Imagem Traje espacial Orlan"
+    }
+    ,
+    {
+        "id": 5,
+        "nome": "Traje espacial Apollo A7L",
+        "preco": 600.85,
+        "imagem": "apollo-a7l.jpg",
+        "alt":"Imagem Traje espacial Apollo A7L"
+    },
+    {
+        "id": 6,
+        "nome": "Traje espacial Yastreb",
+        "preco": 480.99,
+        "imagem": "yastreb.jpg",
+        "alt":"Imagem Traje espacial Yastreb"
+    },
+    {
+        "id": 7,
+        "nome": "Traje espacial SK-1",
+        "preco": 390.50,
+        "imagem": "sk-1.jpg",
+        "alt":"Imagem Traje espacial Yastreb"
+    },
+    {
+        "id": 8,
+        "nome": "Traje espacial Orion",
+        "preco": 750.35,
+        "imagem": "orion.jpg",
+        "alt":"Imagem Traje espacial Orion"
+    }
+]
