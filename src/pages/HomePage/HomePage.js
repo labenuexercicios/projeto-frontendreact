@@ -1,36 +1,17 @@
-import { createGlobalStyle } from "styled-components";
 import React from "react";
 import { useState, useEffect } from "react";
-import Filtros from './Componentes/Filtros/Filtros';
-import Carrinho from "./Componentes/Carrinho/Carrinho";
-import Header from "./Componentes/Header/Header"
-import Footer from "./Componentes/Footer/Footer"
-import produtos from "./Componentes/Produtos/produtos"
-import { Main, Section, Cards, ImagemProduto, MainContainer, Nome, Value, Button } from "./Styles.js";
+import Filtros from '../../Componentes/Filtros/Filtros';
+import Carrinho from "../../Componentes/Carrinho/Carrinho";
+import Header from "../../Componentes/Header/Header"
+import Footer from "../../Componentes/Footer/Footer"
+import produtos from "../../Componentes/Produtos/produtos"
+import { Main, Section, Cards, ImagemProduto, MainContainer, Nome, Value, Button } from "./HomePage.styled.js";
+import { goToLoginPage } from "../../router/Coordinator";
+import { useNavigate } from "react-router-dom";
 
-const GlobalStyle = createGlobalStyle`
-  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden
-  }
-  body::-webkit-scrollbar {
-  width: 5px;               
-  }
+export function HomePage() {
 
-  body::-webkit-scrollbar-track {
-  background-image: url("https://i.pinimg.com/originals/96/48/17/964817c3d30f206246d49bf28ca1a96f.jpg");
-  background-attachment: local;       
-  }
-
-  body::-webkit-scrollbar-thumb {
-  background-color: white;    
-  border-radius: 5px;       
-}
-`;
-
-function App() {
+  const navigate = useNavigate();
 
   const [buscar, setBuscar] = useState("");
   const [ordenacao, setOrdenacao] = useState ("")
@@ -67,8 +48,8 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
         <Header />
+        <button onClick={()=>goToLoginPage(navigate)} type="submit">Login</button>
         <MainContainer>
           <Filtros 
           buscar={buscar}
@@ -128,5 +109,3 @@ function App() {
     </>
   );
 }
-
-export default App;
