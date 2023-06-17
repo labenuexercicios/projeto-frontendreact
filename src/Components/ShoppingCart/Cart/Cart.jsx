@@ -6,8 +6,11 @@ function Cart({ amount, setAmount, cart, setCart }) {
   return (
     <CartaoStyle>
       <TituloCart>CART</TituloCart>
-      <Items />
-      <p>Valor total:{cart} </p>
+      <Items 
+        cart={cart}
+        setCart={setCart}
+      />
+      <p>Valor total:{amount} </p>
     </CartaoStyle>
   );
 }
