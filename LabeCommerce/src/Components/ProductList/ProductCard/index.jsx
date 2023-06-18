@@ -4,11 +4,11 @@ import React from "react";
 import { CardContainer } from "./style.jsx";
 
 export default function ProductCard(props) {
-  const { Produto } = props;
+  const { produto } = props;
   
 
   return ( 
-      Produto.map((item) =>  
+      produto.map((item) =>  
     
       <CardContainer>
         <img key={item.id}src={item.imageUrl} alt="Imagem do Produto" />
