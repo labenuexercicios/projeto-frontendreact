@@ -1,5 +1,6 @@
 import React from "react";
-import { FiltroLabel, TituloPagina,FiltroInput, Container } from "./style";
+
+import { FiltroLabel, TituloPagina,FiltroInput, Container } from "./style.jsx";
 
 
 

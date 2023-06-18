@@ -1,5 +1,5 @@
 import React from 'react'
-import { CartContainer } from './style'
+import { CartContainer } from './style.jsx'
 import Items from '../Items'
 
 export default function Cart() {

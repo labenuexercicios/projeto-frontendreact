@@ -1,5 +1,4 @@
-import React from "react";
-import { ItemsContainer } from "../Items/style";
+import { ItemsContainer } from "../Items/style.jsx";
 
 export default function Items() {
   return (

@@ -1,18 +1,17 @@
-import React from "react";
 import Filter from "./Components/Filters";
 import Home from "./Components/ProductList/Home";
-import ProductCard from "./Components/ProductList/ProductCard";
 import Cart from "./Components/ShoppingCart/Cart";
-import Items from "./Components/ShoppingCart/Items";
-import { Wrapper } from "./App.styled";
+import { Wrapper } from "./App.styled.jsx";
+import Product from "./assets/productList";
 
 function App() {
+  
   return (
     <>
       <Wrapper>
 
         <Filter />
-        <Home />
+        <Home Produto={Product} />
         <Cart />
         
 

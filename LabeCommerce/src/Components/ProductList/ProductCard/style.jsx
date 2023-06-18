@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
   border: 1px solid black;
-  
+
   display: flex;
   flex-direction: column;
   margin: 25px;
@@ -18,7 +18,6 @@ export const CardContainer = styled.div`
   }
 
   p {
- 
     margin-left: 10px;
   }
 
