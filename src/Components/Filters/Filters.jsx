@@ -27,11 +27,11 @@ function Filters({
       <TituloFiltro>Filters</TituloFiltro>
       <label>Valor minímo:</label>
       <input onChange={handleMinFilter} type="number" value={minFilter} min="0"  />
+
       <label>Valor máximo:</label>
-
       <input onChange={handleMaxFilter} type="number" value={maxFiler}  min="0" />
-      <label>Busca por nome:</label>
 
+      <label>Busca por nome:</label>
       <input onChange={handleSearchFilter} type="text" value={searchFilter} />
     </AsideFiltro>
   );

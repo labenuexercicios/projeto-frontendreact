@@ -3,15 +3,38 @@ import Filters from "./Components/Filters/Filters";
 import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import { GlobalStyles } from "./GlobalStyles";
-import { listaDeProdutos as Catalogo } from "./assets/productsList";
+import { listaDeProdutos} from "./assets/productsList";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState(0);
   const [minFilter, setMinFilter] = useState("");
   const [maxFiler, setMaxFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
-  const [listaDeProdutos, setListaDeProdutos] = useState(Catalogo);
+  // const [listaDeProdutos, setListaDeProdutos] = useState(Catalogo);
+
+
+ const filterProducts= listaDeProdutos 
+  .filter((produto) => {
+    if(minFilter){
+      return produto.value >= parseInt(minFilter)
+      }
+      return true;
+    })
+    .filter((produto) => {
+      if (maxFiler) {
+        return produto.value <= parseInt(maxFiler);
+      }
+      return true;
+    })
+      .filter((produto) => {
+        if (searchFilter) {
+          return produto.name.toLowerCase().includes(searchFilter.toLowerCase());
+        }
+        return true;
+    });
+    
+  
 
   return (
     <>
@@ -24,13 +47,15 @@ function App() {
           setMaxFilter={setMaxFilter}
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
+          
         />
         <Home
-          listaDeProdutos={listaDeProdutos}
+          listaDeProdutos={filterProducts}
           amount={amount}
           setAmount={setAmount}
           cart={cart}
           setCart={setCart}
+         
         />
         <Cart
           amount={amount}
