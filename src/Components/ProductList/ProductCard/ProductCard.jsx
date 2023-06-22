@@ -17,7 +17,7 @@ function ProductCard(props) {
 
       <NomeProduto>{props.produto.name}</NomeProduto>
 
-      <PrecoProdutos>{props.produto.value}</PrecoProdutos>
+      <PrecoProdutos>R$ {props.produto.value.toFixed(2)}</PrecoProdutos>
 
       <ButtonCard
         onClick={() => {

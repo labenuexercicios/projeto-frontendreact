@@ -19,5 +19,5 @@ export const NomeProduto = styled.p`
 `;
 
 export const PrecoProdutos = styled.h4`
-  /* color:black; */
+  color:red;
 `;

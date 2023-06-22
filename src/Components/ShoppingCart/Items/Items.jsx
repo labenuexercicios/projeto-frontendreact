@@ -1,10 +1,8 @@
 import React from "react";
 import { EstilizacaoGeralItens } from "./ItemsStyle";
 
-function Items({ cart, setCart, amount, setAmount }) {
-  const removeProduto = (produto) => {
-    console.log(produto);
-  };
+function Items({ cart, callbackClick }) {
+ 
 
   return (
     <EstilizacaoGeralItens>
@@ -16,7 +14,7 @@ function Items({ cart, setCart, amount, setAmount }) {
             </span>
             <button
               onClick={() => {
-                removeProduto(produto);
+                callbackClick(produto);
               }}
             >
               Remover
