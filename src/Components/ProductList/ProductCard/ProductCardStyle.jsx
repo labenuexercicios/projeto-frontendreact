@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const GeralStyle = styled.article`
-  display: flex;
+  display:grid;
   flex-direction: column;
   padding: 10px;
 `;
