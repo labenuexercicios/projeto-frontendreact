@@ -1,22 +1,30 @@
 import styled from "styled-components";
 
-export const EstilizacaoGeralItens = styled.aside`
-  display: flex;
-  flex-direction: row;
-  align-items:center;
+export const EstilizacaoGeralItens = styled.ul`
   
-
-  button{
-    width:50%;
-    height:50%;
-  }
-
-  p{
-    font-size:1em;
-    width:50%;
-    height:50%;
+  /* flex-direction: row; */
+  /* align-items:center; */
+  
+  li{
+    display: flex;
+    /* justify-content:flex-start; */
+    justify-content:space-around;
+    padding:10px
     
   }
+
+  button{
+    /* width:50%; */
+    /* height:50%; */
+  }
+
+  span{
+    /* font-size:1em; */
+    /* width:50%; */
+    /* height:50%; */
+    
+  }
+
   `;
 
  

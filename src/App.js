@@ -6,8 +6,8 @@ import { GlobalStyles } from "./GlobalStyles";
 import { listaDeProdutos as Catalogo } from "./assets/productsList";
 
 function App() {
-  const [cart, setCart] = useState("fff");
-  const [amount, setAmount] = useState("uuuu");
+  const [cart, setCart] = useState([]);
+  const [amount, setAmount] = useState("");
   const [minFilter, setMinFilter] = useState("");
   const [maxFiler, setMaxFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");

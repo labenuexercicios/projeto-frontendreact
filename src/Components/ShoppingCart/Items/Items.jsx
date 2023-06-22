@@ -1,11 +1,27 @@
 import React from "react";
 import { EstilizacaoGeralItens } from "./ItemsStyle";
 
-function Items() {
+function Items({ cart, callbackClick }) {
+ 
+
   return (
     <EstilizacaoGeralItens>
-      <p>Nome do Produto</p>
-      <button>Remover</button>
+      {cart.map((produto) => {
+        return (
+          <li key={produto.id}>
+            <span>
+              {produto.quantity}x - {produto.name}
+            </span>
+            <button
+              onClick={() => {
+                callbackClick(produto);
+              }}
+            >
+              Remover
+            </button>
+          </li>
+        );
+      })}
     </EstilizacaoGeralItens>
   );
 }
