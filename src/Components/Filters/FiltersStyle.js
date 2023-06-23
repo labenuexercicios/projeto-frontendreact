@@ -8,6 +8,8 @@ padding-left: 10px;
 position:sticky;
 top:0;
 color:white;
+position:fixed;
+
 
 input {
     width:40%;

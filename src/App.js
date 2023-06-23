@@ -4,6 +4,7 @@ import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import { GlobalStyles } from "./GlobalStyles";
 import { listaDeProdutos } from "./assets/productsList";
+import { MainApp } from "./AppStyle";
 
 
 
@@ -49,11 +50,14 @@ function App() {
   // };
 
   // useEffect(() => {
-  //   getItensLocalStorage()
+  //   localStorage()
+     // usar o getItem,usar o setCart aqui dentro.
   // }, []);
 
+//No segundo useEffect usar setItem, fazer a verificação do tamanho do carrinho. 
+
   // useEffect(() => {
-  //   if (cart.length) {
+  //   if (cart.length) { ***fazer a lógica aqui dentro
   //     console.log("useEffect SALVAR do localStorage");
   //     saveLocalStorage();
   //   }
@@ -64,8 +68,7 @@ function App() {
     <>
       <GlobalStyles />
      
-    
-      <main>
+      <MainApp>
         
         <Filters
           minFilter={minFilter}
@@ -88,7 +91,7 @@ function App() {
           cart={cart}
           setCart={setCart}
         />
-      </main>
+      </MainApp>
     </>
   );
 }

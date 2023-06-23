@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const HomeArticle = styled.article`
+display:grid;
+grid-column: 2/3;
 padding:5px;
-border: 2px solid black;
+border: 2px solid white;
   /* background-color: yellow; */
+  width:100%;
+  background-color: white;
 `;
 
 export const OrdenacaoSection = styled.section`
