@@ -3,7 +3,9 @@ import Filters from "./Components/Filters/Filters";
 import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import { GlobalStyles } from "./GlobalStyles";
-import { listaDeProdutos} from "./assets/productsList";
+import { listaDeProdutos } from "./assets/productsList";
+
+
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -13,11 +15,10 @@ function App() {
   const [searchFilter, setSearchFilter] = useState("");
   // const [listaDeProdutos, setListaDeProdutos] = useState(Catalogo);
 
-
- const filterProducts= listaDeProdutos 
-  .filter((produto) => {
-    if(minFilter){
-      return produto.value >= parseInt(minFilter)
+  const filterProducts = listaDeProdutos
+    .filter((produto) => {
+      if (minFilter) {
+        return produto.value >= parseInt(minFilter);
       }
       return true;
     })
@@ -27,19 +28,45 @@ function App() {
       }
       return true;
     })
-      .filter((produto) => {
-        if (searchFilter) {
-          return produto.name.toLowerCase().includes(searchFilter.toLowerCase());
-        }
-        return true;
+    .filter((produto) => {
+      if (searchFilter) {
+        return produto.name.toLowerCase().includes(searchFilter.toLowerCase());
+      }
+      return true;
     });
-    
+
+  // const saveLocalStorage = () => {
+  //   const listLocal = JSON.stringify(cart);
+  //   localStorage.setItem("cart", listLocal);
+  // };
+
+  // const getItensLocalStorage = () => {
+  //   const listaArray = JSON.parse(localStorage.getItem("produto"));
+  //   if (listaArray) {
+  //     setCart(listaArray);
+  //   }
+  //   listaArray && setCart(listaArray);
+  // };
+
+  // useEffect(() => {
+  //   getItensLocalStorage()
+  // }, []);
+
+  // useEffect(() => {
+  //   if (cart.length) {
+  //     console.log("useEffect SALVAR do localStorage");
+  //     saveLocalStorage();
+  //   }
+  // }, [cart]); 
   
 
   return (
     <>
       <GlobalStyles />
+     
+    
       <main>
+        
         <Filters
           minFilter={minFilter}
           setMinFilter={setMinFilter}
@@ -47,7 +74,6 @@ function App() {
           setMaxFilter={setMaxFilter}
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
-          
         />
         <Home
           listaDeProdutos={filterProducts}
@@ -55,7 +81,6 @@ function App() {
           setAmount={setAmount}
           cart={cart}
           setCart={setCart}
-         
         />
         <Cart
           amount={amount}

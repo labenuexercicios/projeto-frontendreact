@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const EstilizacaoGeralItens = styled.ul`
+  color:white;
   
   /* flex-direction: row; */
   /* align-items:center; */
@@ -8,20 +9,24 @@ export const EstilizacaoGeralItens = styled.ul`
   li{
     display: flex;
     /* justify-content:flex-start; */
-    justify-content:space-around;
-    padding:10px
+    justify-content:space-evenly;
+    padding:3px
     
   }
 
   button{
-    /* width:50%; */
-    /* height:50%; */
+    border-radius: 40%;
+    width:40%; 
+    height:50%;
+    background-color:red;
+    color:white;
+    
   }
 
   span{
-    /* font-size:1em; */
-    /* width:50%; */
-    /* height:50%; */
+    font-size:1.3em; 
+     width:50%; 
+     height:50%;
     
   }
 

@@ -5,14 +5,18 @@ display:flex;
 border: 1px solid black;
 flex-direction:column;
 padding-left: 10px;
-/* background-color:#db497a; */
+position:sticky;
+top:0;
+color:white;
 
 input {
     width:40%;
     margin-bottom:10px;  
+    
 }
 `
 export const TituloFiltro = styled.h1`
+color:white;
    
 `;
 

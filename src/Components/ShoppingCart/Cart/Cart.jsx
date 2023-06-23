@@ -1,6 +1,6 @@
 import React from "react";
 import Items from "../Items/Items";
-import { CartaoStyle, TituloCart } from "./CartStyle";
+import { CartaoStyle, TituloCart, ValorStyle } from "./CartStyle";
 
 function Cart({ amount, setAmount, cart, setCart }) {
   const valorTotal = (carrinho) => {
@@ -32,7 +32,7 @@ function Cart({ amount, setAmount, cart, setCart }) {
     <CartaoStyle>
       <TituloCart>CART</TituloCart>
       <Items cart={cart} callbackClick={removeProduto} />
-      <p>Valor total: R$ {amount.toFixed(2)} </p>
+      <ValorStyle>Valor total: R$ {amount.toFixed(2)} </ValorStyle>
     </CartaoStyle>
   );
 }

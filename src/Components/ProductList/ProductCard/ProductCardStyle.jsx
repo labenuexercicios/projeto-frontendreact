@@ -8,7 +8,7 @@ export const GeralStyle = styled.article`
 
 export const CardImagem = styled.img`
   /* background-color: red; */
-  width: 19vw;
+  width: 18vw;
 `;
 export const ButtonCard = styled.button`
   /* background-color: yellow; */

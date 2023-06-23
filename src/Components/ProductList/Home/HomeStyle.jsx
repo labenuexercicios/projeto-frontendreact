@@ -13,5 +13,13 @@ export const OrdenacaoSection = styled.section`
 
 export const HomeCards = styled.section`
   display:flex;
+  flex-wrap: wrap;
   /* background-color: #ff7989; */
 `;
+
+// export const Headerstyle = styled.nav`
+// color:white;
+// display:grid;
+// grid-column:1/3;
+// grid-row: 1/1;
+// `
