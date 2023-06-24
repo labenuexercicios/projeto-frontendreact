@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Items from "../Items/Items";
 import { CartaoStyle, TituloCart, ValorStyle } from "./CartStyle";
 
@@ -8,7 +8,7 @@ function Cart({ amount, setAmount, cart, setCart }) {
       const valorParcial = mercadoria.value * mercadoria.quantity;
       return total + valorParcial;
     }, 0);
-
+    
     setAmount(amount);
   };
 
@@ -17,16 +17,20 @@ function Cart({ amount, setAmount, cart, setCart }) {
     let carrinho = [...cart];
 
     if (produto.quantity > 1) {
-        produto.quantity--;
+      produto.quantity--;
     } else {
-        carrinho = carrinho.filter((mercadoria) => {
+      carrinho = carrinho.filter((mercadoria) => {
         return produto.id !== mercadoria.id;
       });
     }
 
     setCart(carrinho);
-    valorTotal(carrinho);
+    
   };
+
+  useEffect(() => {
+    valorTotal(cart);
+  }, [cart]);
 
   return (
     <CartaoStyle>

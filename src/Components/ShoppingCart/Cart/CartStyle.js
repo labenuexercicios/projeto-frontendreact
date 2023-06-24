@@ -5,9 +5,7 @@ display:flex;
 flex-direction: column;
 border: 1px solid black;
 color:white;
-/* background-color:#ffbd8f; */
-/* align-items:center; */
-/* justify-content:space-between; */
+top:200px;
 position:fixed;
 right:0;
 

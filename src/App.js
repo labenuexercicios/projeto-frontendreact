@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Filters from "./Components/Filters/Filters";
 import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import { GlobalStyles } from "./GlobalStyles";
 import { listaDeProdutos } from "./assets/productsList";
-import { MainApp } from "./AppStyle";
-
-
+import { MainApp, NavApp } from "./AppStyle";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -14,7 +12,7 @@ function App() {
   const [minFilter, setMinFilter] = useState("");
   const [maxFiler, setMaxFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
-  // const [listaDeProdutos, setListaDeProdutos] = useState(Catalogo);
+  
 
   const filterProducts = listaDeProdutos
     .filter((produto) => {
@@ -36,40 +34,37 @@ function App() {
       return true;
     });
 
-  // const saveLocalStorage = () => {
-  //   const listLocal = JSON.stringify(cart);
-  //   localStorage.setItem("cart", listLocal);
-  // };
+    const saveLocalStorage = () => {
+     const listLocal = JSON.stringify(cart);
+     localStorage.setItem("cart", listLocal);
+   };
 
-  // const getItensLocalStorage = () => {
-  //   const listaArray = JSON.parse(localStorage.getItem("produto"));
-  //   if (listaArray) {
-  //     setCart(listaArray);
-  //   }
-  //   listaArray && setCart(listaArray);
-  // };
-
-  // useEffect(() => {
-  //   localStorage()
-     // usar o getItem,usar o setCart aqui dentro.
-  // }, []);
-
-//No segundo useEffect usar setItem, fazer a verificação do tamanho do carrinho. 
-
-  // useEffect(() => {
-  //   if (cart.length) { ***fazer a lógica aqui dentro
-  //     console.log("useEffect SALVAR do localStorage");
-  //     saveLocalStorage();
-  //   }
-  // }, [cart]); 
   
+
+  useEffect(() => {
+    const listLocal = JSON.parse(localStorage.getItem("cart"));
+    listLocal && setCart(listLocal);
+  }, []);
+
+  
+
+  useEffect(() => {
+    if(cart.length){saveLocalStorage()
+    
+    } else{
+      localStorage.removeItem('cart')
+    }
+
+    
+    
+  }, [cart]);
 
   return (
     <>
       <GlobalStyles />
-     
+
       <MainApp>
-        
+        <NavApp>Espaço da Moda</NavApp>
         <Filters
           minFilter={minFilter}
           setMinFilter={setMinFilter}

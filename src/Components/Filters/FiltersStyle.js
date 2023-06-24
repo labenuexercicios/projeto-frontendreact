@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 export const AsideFiltro = styled.aside`
-display:flex;
+display:grid;
+grid-column:1/2;
+grid-row:2/3;
 border: 1px solid black;
-flex-direction:column;
+/* flex-direction:column; */
 padding-left: 10px;
-position:sticky;
-top:0;
+top:200px;
 color:white;
 position:fixed;
+
+
 
 
 input {
