@@ -1,18 +1,23 @@
 import React from 'react';
+import Header from './Components/Header/Header'
+import Footer from './Components/Footer/Footer';
 import Filters from './Components/Filters/Filters'
 import Home from './Components/ProductList/Home/Home'
 import Cart from './Components/ShoppingCart/Cart/Cart'
-import ProductCard from './Components/ProductList/Home/ProductCart/ProductCard'
-import Items from './Components/ShoppingCart/Cart/Items/Items'
+import { AppStyled } from './App.styled'
+
+
 
 function App() {
   return (
     <>
-      <Filters />
-      <Home />
-      <ProductCard />
-      <Cart />
-      <Items />
+      <Header />
+      <AppStyled>
+        <Filters />
+        <Home /> 
+        <Cart />
+      </AppStyled>
+      <Footer />
     </>
   );
 }
