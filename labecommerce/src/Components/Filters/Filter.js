@@ -1,10 +1,25 @@
 import React from 'react'
+import { Title, Lista,Filters } from './filterStyle'
+
+
+
 
 const Filter = () => {
   return (
-    <div>
-      <p>Filter</p>
-    </div>
+    <>
+    
+    <Filters>
+      <Title>Filters</Title>
+      <Lista>
+      <li>Valor Mínimo:</li>
+      <input/>
+      <li>Valor Maximo:</li>
+      <input/>
+      <li>Busca por nome:</li>
+      <input/>
+      </Lista>
+    </Filters>
+    </>
   )
 }
 
