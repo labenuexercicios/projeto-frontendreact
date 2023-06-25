@@ -1,10 +1,23 @@
 import React from 'react'
+import ProductCard from '../ProductCard/ProductCard'
+import { HomeStyle } from './homeStyle'
 
 const Home = () => {
   return (
-    <div>
-      <p>Home</p>
-    </div>
+
+  <>
+    
+    <HomeStyle>
+      
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+
+    </HomeStyle>
+  </>
   )
 }
 
