@@ -2,23 +2,29 @@ import React from 'react'
 import ProductCard from '../ProductCard/ProductCard'
 import { HomeStyle } from './homeStyle'
 
-const Home = () => {
+const Home = (props) => {
+  const {products} = props;
   return (
-
-  <>
-    
     <HomeStyle>
-      
-      <ProductCard/>
-      <ProductCard/>
-      <ProductCard/>
-      <ProductCard/>
-      <ProductCard/>
-      <ProductCard/>
-
+      {products.map((product) => (
+      <ProductCard key={product.id} product={product} />
+    ))}
     </HomeStyle>
-  </>
-  )
+    );
+  // <>
+    
+  //   <HomeStyle>
+      
+  //     <ProductCard/>
+  //     <ProductCard/>
+  //     <ProductCard/>
+  //     <ProductCard/>
+  //     <ProductCard/>
+  //     <ProductCard/>
+
+  //   </HomeStyle>
+  // </>
+  // )
 }
 
 export default Home

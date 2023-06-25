@@ -21,6 +21,7 @@ export const PageStyle = styled.div`
     gap:5px
     width:100%;
     padding-top:2rem;
+    height:70vh;
    
 `
 
