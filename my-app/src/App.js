@@ -9,13 +9,16 @@ import { AppStyled } from './App.styled'
 
 
 function App() {
+
+  
+
   return (
     <>
       <Header />
       <AppStyled>
         <Filters />
-        <Home /> 
-        <Cart />
+        <Home/> 
+        <Cart/>
       </AppStyled>
       <Footer />
     </>

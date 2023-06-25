@@ -1,19 +1,25 @@
 import React from 'react'
-import { Card , Etiqueta} from './productCardStyle'
+import { Card , Etiqueta } from './productCardStyle'
+import ProductList from '../../../../assets/ProductList'
 
 const ProductCard = () => {
+  
+  
   return (
     <>
-      <Card>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <Etiqueta>
-          <h4>Nome do produto</h4>
-          <p>Valor</p>
-          <button>Adicionar</button>
-        </Etiqueta>
-      </Card>
+      {ProductList.map((item) => (
+        <Card>
+          <div>
+          <img src={item.image} alt=''/>
+          </div>
+          <Etiqueta>
+            <h4>{item.name}</h4>
+            <p>{item.description}</p>
+            <p>{item.price}</p>
+            <button>Adicionar</button>
+          </Etiqueta>
+        </Card>
+      ))}
     </>
   )
 }
