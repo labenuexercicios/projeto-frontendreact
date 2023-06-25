@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const CartStyle = styled.aside`
 
-    border: 1px solid black;
     padding: 1em;
 
 

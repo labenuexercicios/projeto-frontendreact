@@ -10,18 +10,13 @@ const Filters = () => {
         <label>
           Valor Mínimo: <input type="number" min="1" max="1000"/>
         </label>
-          
+        <hr/> 
         <label>
           Valor Maximo: <input type="number" min="1" max="1000"/>
         </label>
-          
-        <label htmlFor="buscaNome">
-          Busca por nome: <input type="text" />
-        </label>
-          
-        <Button>Buscar</Button>
-      </Form>
-       
+        <hr/>   
+        <Button>Buscar +</Button>
+      </Form>   
     </Search>
   )
 }
