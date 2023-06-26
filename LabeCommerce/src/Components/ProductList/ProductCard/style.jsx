@@ -8,7 +8,8 @@ export const CardContainer = styled.div`
   margin: 25px;
   gap: 10px;
   height: auto;
-  width: 40vw;
+  
+  width:max(20%,100px);
   align-self: center;
 
   img {
