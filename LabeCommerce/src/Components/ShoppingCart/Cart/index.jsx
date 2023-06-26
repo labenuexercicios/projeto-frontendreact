@@ -14,7 +14,6 @@ let calculateTotalArray =calculateTotal.reduce((calculateTotalArray,calculateTot
 
 
 
-  
   return (
     <CartContainer>
       <h1>Cart</h1>
