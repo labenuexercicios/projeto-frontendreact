@@ -4,7 +4,7 @@ import { HomeContainer, CardContainer, ContainerInfo } from "./style.jsx";
 import ProductCard from "../ProductCard";
 
 export default function Home(props) {
-  const { produto } = props;
+  const { Products, cart, setCart, amount, setAmount } = props;
   const [ordination, setOrdination] = useState("");
 
   return (
@@ -24,7 +24,7 @@ export default function Home(props) {
       </ContainerInfo>
 
       <CardContainer>
-        <ProductCard produto={produto} />
+        <ProductCard Products={Products} cart={cart} setCart={setCart} />
       </CardContainer>
     </HomeContainer>
   );

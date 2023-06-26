@@ -1,49 +1,32 @@
 import styled from "styled-components";
 
-
-
 export const HomeContainer = styled.div`
+  display: flex;
 
-display: flex;
-flex-direction: column;
-align-content: flex-end;
-height:85vh;
-width: 70vw;
-
-
-
-
-
-
-
-
-
-
-`
-
-
-
+  flex-direction: column;
+  align-content: flex-end;
+  height: 85vh;
+  width: 70vw;
+`;
 
 export const ContainerInfo = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-
-div{
+  div {
     display: flex;
+
     align-items: center;
-
-}
-`
-
-
-
+  }
+`;
 
 export const CardContainer = styled.div`
-
-display: flex;
-
-
-`
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  
+`;
