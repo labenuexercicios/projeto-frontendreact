@@ -1,12 +1,48 @@
-import { ItemsContainer } from "../Items/style.jsx";
+import { ItemsContainer, CartItems } from "../Items/style.jsx";
+import { Trash2 } from "lucide-react";
+export default function Items(props) {
+  const { cart, setCart} = props;
 
-export default function Items() {
-  return (
-    <ItemsContainer>
-      <h4>0x</h4>
-      <h4>Nome do Produto</h4>
-      <button>Remover</button>
-     
+function deleteCartItem(product) {
+    const deleteProduct = cart.find((item) => item.id === product.id);
+
+    
+    
+      if (deleteProduct.quantity > 1 ) {
+        const newCart = cart.map((item) =>{
+          if (item.id === product.id){
+        return{ ...deleteProduct, quantity: deleteProduct.quantity - 1 }
+          }else{
+           return item
+          }
+        })
+
+        setCart(newCart)
+  
+    }else {
+      const newCart = cart.filter((item) => {
+        return item.id !== product.id
+      })
+      setCart( newCart)
+    }
+
+  }
+  
+
+
+
+
+
+  return cart.map((item) => (
+    <ItemsContainer key={item.id}>
+      <CartItems>
+        <h1>{item.name}</h1>
+        <h2>Valor:{item.value}</h2>
+        <h3>Qtd:{item.quantity}</h3>
+        <button onClick={()=>deleteCartItem(item)}>
+          <Trash2 />
+        </button>
+      </CartItems>
     </ItemsContainer>
-  );
+));
 }
