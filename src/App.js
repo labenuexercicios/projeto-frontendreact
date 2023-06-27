@@ -4,7 +4,8 @@ import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import { GlobalStyles } from "./GlobalStyles";
 import { listaDeProdutos } from "./assets/productsList";
-import { MainApp, NavApp } from "./AppStyle";
+import { MainApp, HeaderApp } from "./AppStyle";
+
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -64,7 +65,9 @@ function App() {
       <GlobalStyles />
 
       <MainApp>
-        <NavApp>Espaço da Moda</NavApp>
+        <HeaderApp>
+          {/* <h1>SPACE FASHION</h1> */}
+        </HeaderApp>
         <Filters
           minFilter={minFilter}
           setMinFilter={setMinFilter}

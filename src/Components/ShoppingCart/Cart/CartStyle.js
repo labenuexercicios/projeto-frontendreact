@@ -3,27 +3,36 @@ import styled from "styled-components";
 export const CartaoStyle = styled.aside`
 display:flex;
 flex-direction: column;
-border: 1px solid black;
-color:white;
-top:200px;
+top:170px;
 position:fixed;
 right:0;
+grid-area:CataoStyle;
+width:23%;
 
 
 `
 
-export const TituloCart = styled.h2`
-
-display:flex;
-flex-direction: column;
+export const TituloCart = styled.h1`
+display:grid;
 align-items:center;
-color:white;
+color: var(--4);
+justify-self:center;
+align-items:center;
+justify-items: center;
+font-size:2rem;
+
 `
 
 export const ValorStyle = styled.h2`
-display:flex;
+display:grid;
+color:var(--1);
+justify-self:center;
 align-items:center;
-text-align:center;
-color:yellow;
+justify-items: center;
+width:100%;
 
 `
+
+// export const ItensStyle = styled.Items`
+
+// `

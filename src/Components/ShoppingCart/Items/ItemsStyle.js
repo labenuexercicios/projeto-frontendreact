@@ -3,20 +3,15 @@ import styled from "styled-components";
 export const EstilizacaoGeralItens = styled.ul`
   color:white;
   
-  /* flex-direction: row; */
-  /* align-items:center; */
-  
   li{
     display: flex;
-    /* justify-content:flex-start; */
-    justify-content:space-evenly;
-    padding:3px
+    justify-content:flex-start;
+    padding:2px
     
   }
 
   button{
-    border-radius: 40%;
-    width:40%; 
+    width:30%; 
     height:50%;
     background-color:red;
     color:white;

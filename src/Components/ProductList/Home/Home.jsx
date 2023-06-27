@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
-import { HomeArticle, HomeCards, OptionHome, OrdenacaoSection } from "./HomeStyle";
+import {HomeArticle, HomeCards, OptionHome, OrdenacaoSection } from "./HomeStyle";
 
-function Home({ listaDeProdutos, setAmount, cart, setCart }) {
+function Home({ listaDeProdutos, cart, setCart }) {
   const [ordination, setOrdination] = useState("");
 
   const onChangeOrdemProdutos = (event) => {
@@ -61,5 +61,6 @@ function Home({ listaDeProdutos, setAmount, cart, setCart }) {
     </HomeArticle>
   );
 }
+
 
 export default Home;
