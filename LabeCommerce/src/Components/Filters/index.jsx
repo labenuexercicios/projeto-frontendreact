@@ -10,7 +10,13 @@ export default function Filter(props) {
     setMaxFilter,
     searchFilter,
     setSearchFilter,
+  
+    
   } = props;
+
+
+
+
 
   return (
     <Container>
