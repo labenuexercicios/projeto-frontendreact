@@ -6,14 +6,22 @@ import Product from "./assets/productList";
 import { useState } from "react";
 
 function App() {
-  const [minFilter, setMinFilter] = useState("");
-  const [maxFilter, setMaxFilter] = useState("");
+  const [minFilter, setMinFilter] = useState(-Infinity);
+  const [maxFilter, setMaxFilter] = useState(-Infinity);
   const [searchFilter, setSearchFilter] = useState("");
   const [cart, setCart] = useState([]);
   const [amount, setAmount] = useState(0);
 
+const searchFiltered = Product
+.filter((item)=>{return item.value >= minFilter || !minFilter})
+.filter((item)=>{return item.value <= maxFilter || !maxFilter})
+.filter((item)=>{return item.name.toUpperCase().includes(searchFilter) || !searchFilter})
+//implementar validações de tamanho de letras upper casa lower case
 
 
+
+
+console.log(searchFiltered)
 
 
   
@@ -27,13 +35,16 @@ function App() {
           setMaxFilter={setMaxFilter}
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
+          Product={Product}
+  
         />
         <Home
-          Products={Product}
+          Products={searchFiltered}
           cart={cart}
           setCart={setCart}
           amount={amount}
           setAmount={setAmount}
+          
         />
         <Cart
           cart={cart}
