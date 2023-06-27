@@ -8,10 +8,10 @@ export default function Home(props) {
   const [ordination, setOrdination] = useState("asc");
 
   const filteredList = Products.sort((a, b) => {
-    if (ordination === "asc") {
+    if (ordination === "asc" || ordination === "") {
       return a.value - b.value;
     }
-    if (ordination === "desc") {
+    if (ordination === "desc" || ordination === "") {
       return b.value - a.value;
     }
   });

@@ -15,7 +15,7 @@ function App() {
 const searchFiltered = Product
 .filter((item)=>{return item.value >= minFilter || !minFilter})
 .filter((item)=>{return item.value <= maxFilter || !maxFilter})
-.filter((item)=>{return item.name.toUpperCase().includes(searchFilter) || !searchFilter})
+.filter((item)=>{return item.name.toLowerCase().includes(searchFilter) || searchFilter === ""})
 //implementar validações de tamanho de letras upper casa lower case
 
 
