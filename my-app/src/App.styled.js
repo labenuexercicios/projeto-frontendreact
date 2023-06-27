@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const AppStyled = styled.body`
+export const AppStyled = styled.div`
     
 
     display: grid ;

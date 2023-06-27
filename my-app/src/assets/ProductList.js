@@ -91,7 +91,7 @@ const ProductList = [
     },
     {
         name: 'RELÓGIO BUSSOLA ESPACIAL',
-        id: 8,
+        id: 9,
         rate: 3.5,
         category: 'Relógios',
         price: 89.90,
