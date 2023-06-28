@@ -3,23 +3,9 @@ import ProductList from '../../assets/ProductList';
 
 import { Search , Form, Button } from './Filters.styled'
 
-const Filters = () => {
+const Filters = ({handleValorMax, handleValorMin, valorMax, valorMin}) => {
   
-  const [valorMin, setValorMin] = useState(0);
-  const [valorMax, setValorMax] = useState(0);
-
-  const handleValorMin = (event) => {
-    setValorMin(event.target.value);
-  }
-
-  const handleValorMax = (event) => {
-    setValorMax(event.target.value);
-  }
-
-  const filteredProducts = ProductList.filter((item) => {
-    return item.price >= valorMin && item.price <= valorMax
-  })
-
+  
   
   return (
     <Search> 
