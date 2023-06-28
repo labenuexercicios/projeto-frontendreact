@@ -36,9 +36,9 @@ function deleteCartItem(product) {
   return cart.map((item) => (
     <ItemsContainer key={item.id}>
       <CartItems>
-        <h1>{item.name}</h1>
-        <h2>Valor:{item.value}</h2>
-        <h3>Qtd:{item.quantity}</h3>
+        <p>{item.name}</p>
+        <p>Valor:{item.value}</p>
+        <p>Qtd:{item.quantity}</p>
         <button onClick={()=>deleteCartItem(item)}>
           <Trash2 />
         </button>

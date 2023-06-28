@@ -30,14 +30,14 @@ export default function Cart(props) {
 
   return (
     <CartContainer>
-      <h1>Cart</h1>
+      <h1>Bag</h1>
 
       <Items cart={cart} setCart={setCart} />
 
-      <h4>
+      <p>
         Valor Total:
         {amount.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
-      </h4>
+      </p>
     </CartContainer>
   );
 }
