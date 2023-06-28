@@ -3,7 +3,7 @@ import { HomeStyle , HomeHeader, HomeGalery } from './Home.styled'
 import { quantidade } from '../../../assets/ProductList'
 import ProductCard from './ProductCard/ProductCard'
 
-const Home = ({addToCart, ProductList}) => {
+const Home = ({addToCart, ProductList, filteredProducts}) => {
   
   const [ordination , setOrdination] = useState ('')
   
@@ -27,7 +27,10 @@ const Home = ({addToCart, ProductList}) => {
           </label>
       </HomeHeader>
       <HomeGalery>
-          <ProductCard ProductList={ProductList} addToCart={addToCart}/>
+          <ProductCard 
+          ProductList={ProductList} 
+          addToCart={addToCart} 
+          filteredProducts={filteredProducts} />
       </HomeGalery>
     </HomeStyle> 
   )

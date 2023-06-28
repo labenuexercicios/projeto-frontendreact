@@ -16,6 +16,12 @@ function App() {
   const [maxFilter, setMaxFilter] = useState('')
   const [searchFilter, setSearchFilter] = useState('')
   const [amount, setAmount] = useState('')
+  const [valorMin, setValorMin] = useState('')
+  const [valorMax, setValorMax] = useState('')
+  // const [listaProducts, setListaProducts] = useState(listaProducts)
+  
+  
+  
   const [cart, setCart] = useState([{
     name: 'ALMOFADA GALÁXIA ROXA',
     id: 1,
@@ -26,15 +32,31 @@ function App() {
     description: 'Capa de almofada 45x45 cm com ziper embutido',
 }])
 
-  // const renderArray = ProductList
-  // .map((item, id) => {
-  //   return <ProductCard key={id} item={item} addToCart={addToCart}/>
-  // })
+  
+  const handleValorMin = (event) => {
+    setValorMin(event.target.value);
+  }
+
+  const handleValorMax = (event) => {
+    setValorMax(event.target.value);
+  }
+
+
+  const filteredProducts = ProductList.filter((item) => {
+    if(item.price >= valorMin && item.price <= valorMax){
+      return <ProductCard/>
+    } else if (valorMin === '' && valorMax === ''){
+      return item
+    }
+  })
+
 
   const renderCart = cart
   .map((item, id) => {
     return <Items key={id} item={item}/>
   })
+
+
 
   const addToCart = (produto) => {
     const newProduct = renderCart
@@ -55,6 +77,7 @@ function App() {
     }
   }
 
+
   
   return (
     <div>
@@ -67,11 +90,18 @@ function App() {
         minFilter={minFilter} 
         setMinFilter={setMinFilter} 
         maxFilter={maxFilter} 
-        setMaxFilter={setMaxFilter}/>
+        setMaxFilter={setMaxFilter}
+        ProductList={ProductList}
+        handleValorMax={handleValorMax}
+        handleValorMin={handleValorMin}
+        valorMin={valorMin}
+        valorMax={valorMax} />
 
         <Home 
         addToCart={addToCart} 
-        ProductList={ProductList} /> 
+        ProductList={ProductList}
+        filteredProducts={filteredProducts}
+        /> 
 
         <Cart 
         renderCart={renderCart} 
