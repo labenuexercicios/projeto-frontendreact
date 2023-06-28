@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { HomeStyle , HomeHeader, HomeGalery } from './Home.styled'
 import { quantidade } from '../../../assets/ProductList'
+import ProductCard from './ProductCard/ProductCard'
 
-
-const Home = ({renderArray}) => {
+const Home = ({addToCart, ProductList}) => {
   
   const [ordination , setOrdination] = useState ('')
   
@@ -13,8 +13,7 @@ const Home = ({renderArray}) => {
 
 
   
-  return (
-      
+  return ( 
     <HomeStyle>
       <HomeHeader>
         <h4>Galeria de produtos: {quantidade} produtos</h4>
@@ -28,7 +27,7 @@ const Home = ({renderArray}) => {
           </label>
       </HomeHeader>
       <HomeGalery>
-          {renderArray}
+          <ProductCard ProductList={ProductList} addToCart={addToCart}/>
       </HomeGalery>
     </HomeStyle> 
   )

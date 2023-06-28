@@ -2,11 +2,11 @@ import React from 'react'
 import { Card , Etiqueta } from './productCardStyle'
 
 
-const ProductCard = ({item}) => {
-
-  return (
-    
-    <Card>
+const ProductCard = ({ProductList, addToCart}) => {
+  
+  const listaRenderizada = ProductList.map((item, index) => {
+    return (
+      <Card key={index}>
       <div>
         <img src={item.image} alt=''/>
       </div>
@@ -14,10 +14,16 @@ const ProductCard = ({item}) => {
         <h4>{item.name}</h4>
         <p>{item.description}</p>
         <p>{item.price}</p>
-        <button>Adicionar</button>
+        <button onClick={() => addToCart(item)}>Adicionar</button>
       </Etiqueta>
-    </Card>
-   
+      </Card>
+    )
+  })
+
+  return ( 
+    <div>
+      {listaRenderizada}
+    </div>
   )
 }
 
