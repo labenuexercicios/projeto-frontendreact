@@ -10,13 +10,7 @@ export default function Filter(props) {
     setMaxFilter,
     searchFilter,
     setSearchFilter,
-  
-    
   } = props;
-
-
-
-
 
   return (
     <Container>
@@ -24,7 +18,7 @@ export default function Filter(props) {
 
       <FiltroLabel htmlFor="textMin">Valor mínimo:</FiltroLabel>
       <FiltroInput
-        value={minFilter}
+        defaultvalue={minFilter}
         onChange={
           minFilter >= 0 ? (e) => setMinFilter(e.target.value) : setMinFilter(0)
         }
@@ -35,7 +29,7 @@ export default function Filter(props) {
 
       <FiltroLabel htmlFor="textMax">Valor máximo:</FiltroLabel>
       <FiltroInput
-        value={maxFilter}
+        defaultvalue={maxFilter}
         onChange={
           maxFilter >= 0 ? (e) => setMaxFilter(e.target.value) : setMaxFilter(0)
         }
@@ -46,7 +40,7 @@ export default function Filter(props) {
 
       <FiltroLabel htmlFor="textNome">Busca por Nome:</FiltroLabel>
       <FiltroInput
-        value={searchFilter}
+        defaultvalue={searchFilter}
         onChange={(e) => setSearchFilter(e.target.value)}
         type="text"
         id="textNome"

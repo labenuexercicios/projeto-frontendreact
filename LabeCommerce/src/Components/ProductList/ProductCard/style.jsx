@@ -1,21 +1,24 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  border: 1px solid black;
-
   display: flex;
   flex-direction: column;
-  margin: 25px;
-  gap: 10px;
-  height: auto;
-  
-  width:max(20%,100px);
+  justify-content: center;
+
+  padding: 16px;
+  gap: 8px;
+  width: max(20%, 100px);
   align-self: center;
+  border-radius: 22px;
 
   img {
-    border: 1px solid black;
-    height: auto;
-    width: auto;
+    display: flex;
+    width: 20vh;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 22px;
   }
 
   p {

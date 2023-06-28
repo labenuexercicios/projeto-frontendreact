@@ -10,8 +10,12 @@ export default function Cart(props) {
     (cartItem) => cartItem.value * cartItem.quantity
   );
 
+  const saveCartLocalStorage = () =>
+    localStorage.setItem("CartItems", JSON.stringify(cart));
+  const getCartLocalStorage = localStorage.getItem("CartItems");
   useEffect(() => {
-    
+    saveCartLocalStorage();
+
     let sumArray = calculateTotal.reduce(
       (calculateTotalArray, calculateTotal) =>
         calculateTotalArray + calculateTotal,
@@ -20,6 +24,9 @@ export default function Cart(props) {
     setAmount(sumArray);
   }, [cart]);
 
+  useEffect(() => {
+    setCart(JSON.parse(getCartLocalStorage));
+  }, []);
 
   return (
     <CartContainer>
@@ -28,7 +35,7 @@ export default function Cart(props) {
       <Items cart={cart} setCart={setCart} />
 
       <h4>
-        Valor Total: 
+        Valor Total:
         {amount.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
       </h4>
     </CartContainer>

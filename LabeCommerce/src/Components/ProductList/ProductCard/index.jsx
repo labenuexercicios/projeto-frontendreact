@@ -24,16 +24,21 @@ export default function ProductCard(props) {
 
   return Products.map((item) => (
     <CardContainer key={item.id}>
-      <img src={item.imageUrl} alt="Imagem do Produto" />
+      <div>
+        <img src={item.imageUrl} alt="Imagem do Produto" />
+      </div>
+
       <p>{item.name}</p>
-      <p>{item.value}</p>
-      <button
-        onClick={() => {
-          addCart(item);
-        }}
-      >
-        Adicionar ao Carrinho
-      </button>
+      <div>
+        <p>{item.value}</p>
+        <button
+          onClick={() => {
+            addCart(item);
+          }}
+        >
+          Adicionar ao Carrinho
+        </button>
+      </div>
     </CardContainer>
   ));
 }
