@@ -6,6 +6,8 @@ function ProductCard(props) {
   const { product } = props;
   
   return (
+    <>
+   
   <Container>
     <h2>{product.name}</h2>
     <img src={product.image} alt={product.name} />
@@ -13,6 +15,7 @@ function ProductCard(props) {
     <p>Price: ${product.price}</p>
     <button>Adicionar ao carrinho</button>
   </Container>
+  </>
   );
   }
 

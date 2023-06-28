@@ -1,8 +1,6 @@
 import React from "react";
 
 
-
-
 const productsList= 
     [
         {
@@ -10,7 +8,9 @@ const productsList=
           name: "Camiseta 1",
           description:"xxx",
           price: 85.00,
-          image: require("./utils/cam1.jpg").default,
+          image:<img src="./utils/cam1.jpg" alt= "camisa1"/>,
+          description:"100% Poliéster Sublimação Total",
+          // image: require("./utils/cam1.jpg").default,
         },
         {
           id: 2,
