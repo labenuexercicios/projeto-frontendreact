@@ -1,7 +1,7 @@
 import Filter from "./Components/Filters";
 import Home from "./Components/ProductList/Home";
 import Cart from "./Components/ShoppingCart/Cart";
-import { Wrapper } from "./App.styled.jsx";
+import { Wrapper, GlobalStyle } from "./App.styled.js";
 import Product from "./assets/productList";
 import {  useState } from "react";
 
@@ -20,6 +20,7 @@ function App() {
   
   return (
     <>
+    <GlobalStyle/>
       <Wrapper>
         <Filter
           minFilter={minFilter }
