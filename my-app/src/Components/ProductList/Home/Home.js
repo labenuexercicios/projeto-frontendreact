@@ -1,16 +1,16 @@
-import React from 'react'
-import ProductCard from './ProductCard/ProductCard'
+import React, { useState } from 'react'
 import { HomeStyle , HomeHeader, HomeGalery } from './Home.styled'
 import { quantidade } from '../../../assets/ProductList'
-import ProductList from '../../../assets/ProductList'
 
-const Home = () => {
-  
-  // const [ordination , setOrdination] = useState('')
-  
-  // const alterarOrdem = () => {
 
-  // }
+const Home = ({renderArray}) => {
+  
+  const [ordination , setOrdination] = useState ('')
+  
+  const alterarOrdem = (event) => {
+    setOrdination(event.target.value) 
+  }
+
 
   
   return (
@@ -20,23 +20,15 @@ const Home = () => {
         <h4>Galeria de produtos: {quantidade} produtos</h4>
           <label>
               Ordernar por:
-            <select name="" id="">
-                <option value="">Selecione ordem</option>
-                <option value="" >Crescente</option>
-                <option value="">Descrescente</option>
+            <select value={ordination} onChange={alterarOrdem}>
+                <option>Selecione ordem</option>
+                <option>Crescente</option>
+                <option>Descrescente</option>
             </select>
           </label>
       </HomeHeader>
       <HomeGalery>
-        {ProductList.map((item) => {
-          return (
-            <ProductCard 
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            image={item.image}/>
-          )
-        })}
+          {renderArray}
       </HomeGalery>
     </HomeStyle> 
   )

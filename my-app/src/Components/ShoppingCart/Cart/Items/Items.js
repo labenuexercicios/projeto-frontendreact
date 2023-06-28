@@ -1,11 +1,11 @@
 import React from 'react'
 import { ItensStyle , Button} from './Items.styled'
 
-const Items = () => {
+const Items = (props) => {
   return (
     <ItensStyle>
       
-        <p>x2 Nome do produto</p>
+        <p>{props.name}</p>
         <Button>Remover</Button>
   
     </ItensStyle>
