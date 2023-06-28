@@ -11,6 +11,7 @@ export default function Cart(props) {
   );
 
   useEffect(() => {
+    
     let sumArray = calculateTotal.reduce(
       (calculateTotalArray, calculateTotal) =>
         calculateTotalArray + calculateTotal,
@@ -19,6 +20,7 @@ export default function Cart(props) {
     setAmount(sumArray);
   }, [cart]);
 
+
   return (
     <CartContainer>
       <h1>Cart</h1>
@@ -26,7 +28,7 @@ export default function Cart(props) {
       <Items cart={cart} setCart={setCart} />
 
       <h4>
-        Valor Total:{" "}
+        Valor Total: 
         {amount.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
       </h4>
     </CartContainer>

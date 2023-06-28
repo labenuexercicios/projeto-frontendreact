@@ -21,8 +21,6 @@ const searchFiltered = Product
 
 
 
-console.log(searchFiltered)
-
 
   
   return (
