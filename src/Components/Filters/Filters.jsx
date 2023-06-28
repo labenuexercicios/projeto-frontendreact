@@ -24,7 +24,7 @@ function Filters({
 
   return (
     <AsideFiltro>
-      <TituloFiltro>FILTERS</TituloFiltro>
+      <TituloFiltro>FILTERS 🚀 </TituloFiltro>
       <LabelFiltro placeholder="Valor mínimo" >Valor Mínimo:</LabelFiltro>
       <input onChange={handleMinFilter} type="number" value={minFilter} min="0"  />
 
@@ -38,3 +38,4 @@ function Filters({
 }
 
 export default Filters;
+{/* <img src="icones/foguete2.png"/> */}

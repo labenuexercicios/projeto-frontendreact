@@ -12,9 +12,10 @@ function Home({ listaDeProdutos, cart, setCart }) {
 
   const adicionaProduto = (produto) => {
     const carrinho = [...cart];
+    const produtoExistente = carrinho.find(item => item.id === produto.id);
 
-    if (cart.includes(produto)) {
-      produto.quantity++;
+    if (produtoExistente) {
+      produtoExistente.quantity++;
     } else {
       produto.quantity = 1;
       carrinho.push(produto);

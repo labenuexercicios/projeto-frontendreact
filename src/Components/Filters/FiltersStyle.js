@@ -4,13 +4,15 @@ export const AsideFiltro = styled.aside`
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-  top: 170px;
+  top:190px;
   color: white;
   position: fixed;
   grid-area: AsideFiltro;
   width: 20%;
   align-items:center;
   /* margin-left: 15px; */
+  
+
 
   input {
     border-radius: 8px;

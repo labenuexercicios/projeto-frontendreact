@@ -66,7 +66,7 @@ function App() {
 
       <MainApp>
         <HeaderApp>
-          {/* <h1>SPACE FASHION</h1> */}
+          <h1>SPACE FASHION</h1>
         </HeaderApp>
         <Filters
           minFilter={minFilter}

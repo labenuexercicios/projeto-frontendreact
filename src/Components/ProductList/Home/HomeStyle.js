@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const HomeArticle = styled.article`
-  border: 4px solid var(--6);
+  border-left: 4px solid var(--6);
+  border-right: 4px solid var(--6);
   justify-self:center;
   grid-area: HomeArticle;
   position:relative;
+
   
 `
 
@@ -15,13 +17,10 @@ export const OrdenacaoSection = styled.section`
   z-index: 100;
   position:fixed;
   width:55vw;
-  height:5vh;
+  height:7vh;
   justify-content:space-around;
   align-items:center;
   color:var(--2)
-  
-
- 
 
 `;
 
@@ -37,14 +36,15 @@ export const HomeCards = styled.section`
   background-position: center;
 
 
-  
+
 
 `;
 
 export const OptionHome = styled.option`
   display: flex;
   background-color:var(--4);
-  color: var(--2)
+  color: var(--2);
+  cursor: pointer;
 
 `;
 

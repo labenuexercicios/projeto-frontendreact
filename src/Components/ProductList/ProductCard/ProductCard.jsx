@@ -6,7 +6,6 @@ import {
   NomeProduto,
   PrecoProdutos,
 } from "./ProductCardStyle";
-import Cart from "../../ShoppingCart/Cart/Cart";
 
 function ProductCard(props) {
  
