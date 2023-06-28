@@ -3,7 +3,7 @@ import Home from "./Components/ProductList/Home";
 import Cart from "./Components/ShoppingCart/Cart";
 import { Wrapper } from "./App.styled.jsx";
 import Product from "./assets/productList";
-import { useState } from "react";
+import {  useState } from "react";
 
 function App() {
   const [minFilter, setMinFilter] = useState(-Infinity);
@@ -12,28 +12,23 @@ function App() {
   const [cart, setCart] = useState([]);
   const [amount, setAmount] = useState(0);
 
-const searchFiltered = Product
-.filter((item)=>{return item.value >= minFilter || !minFilter})
-.filter((item)=>{return item.value <= maxFilter || !maxFilter})
-.filter((item)=>{return item.name.toLowerCase().includes(searchFilter) || searchFilter === ""})
-//implementar validações de tamanho de letras upper casa lower case
-
-
-
-
-
+  const searchFiltered = Product
+  .filter((item)=>{return item.value >= minFilter || !minFilter  })
+  .filter((item)=>{return item.value <= maxFilter || !maxFilter })
+  .filter((item)=>{return item.name.toLowerCase().includes(searchFilter) || searchFilter === ""})
+  
   
   return (
     <>
       <Wrapper>
         <Filter
-          minFilter={minFilter}
+          minFilter={minFilter }
           setMinFilter={setMinFilter}
           maxFilter={maxFilter}
           setMaxFilter={setMaxFilter}
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
-          Product={Product}
+        
   
         />
         <Home
