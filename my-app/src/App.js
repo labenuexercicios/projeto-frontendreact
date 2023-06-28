@@ -53,7 +53,7 @@ function App() {
 
   const renderCart = cart
   .map((item, id) => {
-    return <Items key={id} item={item}/>
+    return <Items key={id} item={item} removerItem={removerItem}/>
   })
 
 
@@ -75,6 +75,10 @@ function App() {
 
       setCart(newCart)
     }
+  }
+
+  const removerItem = () => {
+
   }
 
 
