@@ -2,22 +2,22 @@ import React from 'react'
 import { Card , Etiqueta } from './productCardStyle'
 
 
-const ProductCard = (props) => {
+const ProductCard = ({item}) => {
+
   return (
-    <div>
-      
-        <Card>
-          <div>
-          <img src={props.image} alt=''/>
-          </div>
-          <Etiqueta>
-            <h4>{props.name}</h4>
-            <p>{props.description}</p>
-            <p>{props.price}</p>
-            <button>Adicionar</button>
-          </Etiqueta>
-        </Card>
-    </div>
+    
+    <Card>
+      <div>
+        <img src={item.image} alt=''/>
+      </div>
+      <Etiqueta>
+        <h4>{item.name}</h4>
+        <p>{item.description}</p>
+        <p>{item.price}</p>
+        <button>Adicionar</button>
+      </Etiqueta>
+    </Card>
+   
   )
 }
 

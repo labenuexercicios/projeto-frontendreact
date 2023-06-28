@@ -1,6 +1,7 @@
 import React from 'react'
 import Items from './Items/Items'
 import { CartStyle , Lista } from './CartStyle'
+import ProductList from '../../../assets/ProductList'
 
 const Cart = () => {
   return (
@@ -8,7 +9,10 @@ const Cart = () => {
       
       <Lista>
         <h4>Carrinho</h4>
-        <Items />
+        <Items 
+        name={ProductList.name} 
+        id={ProductList.id}
+        price={ProductList.price}/>
         <Items />
         <Items />
         <Items />
