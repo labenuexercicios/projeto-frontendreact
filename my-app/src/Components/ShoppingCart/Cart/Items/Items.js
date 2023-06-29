@@ -1,17 +1,24 @@
 import React from 'react'
 import { ItensStyle , Button } from './Items.styled'
 
-const Items = ({item}) => {
+const Items = ({cart, removerItem}) => {
   
-  
-  return (
-    <ItensStyle>
-      
+  const itensCart = cart.map((item, id) => {
+    return (
+      <ItensStyle key={id}>
         <p>{item.name}</p>
         <p>{item.price}</p>
-        <Button>Remover</Button>
-  
-    </ItensStyle>
+        <p>Quantidade: {item.amount}</p>
+        <Button onClick={()=>removerItem(item)}>Remover</Button>
+      </ItensStyle>
+    )
+  })
+
+
+  return (
+    <div>
+      {itensCart}
+    </div>
   )
 }
 

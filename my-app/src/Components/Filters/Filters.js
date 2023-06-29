@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import ProductList from '../../assets/ProductList';
+import React from 'react'
 
 import { Search , Form, Button } from './Filters.styled'
 
