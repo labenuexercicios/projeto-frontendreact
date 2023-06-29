@@ -17,13 +17,13 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  const {name, setName} = useContext(ProductContext)
+  const {name, setName, category, setCategory} = useContext(ProductContext)
 
   return (
     <header>
       <nav className="flex items-center justify-between flex-wrap bg-white shadow-md p-4 w-full z-10 top-0">
         <div className="flex items-center text-white ml-3">
-          <div>fill
+          <div>
             <span>
               <img
                 src={logo4}
@@ -82,9 +82,19 @@ const Header = () => {
                 Sobre-nos
               </div>
             </li>
-            <li className="mr-3 cursor-pointer">
+            <li className="mr-3">
               <div className="inline-block text-gray-950 no-underline hover:text-gray-200 ease-out hover:text-underline py-2 px-4">
-                Produtos
+                <select
+                  name="filter-category"
+                  id="filters"
+                  className="outline-none cursor-pointer text-gray-950"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  <option value="">Produtos</option>
+                  <option value="Viagem-Solo">Viagem Solo</option>
+                  <option value="Viagem-Familia">Viagem Familia</option>
+                </select>
               </div>
             </li>
             <li className="mr-3 cursor-pointer">

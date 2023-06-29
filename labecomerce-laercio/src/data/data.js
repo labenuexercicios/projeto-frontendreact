@@ -23,7 +23,7 @@ const data = [
       name: "Estadia na Estação Espacial",
       id: 1,
       category: "Viagem-Solo",
-      price: 156025.0,
+      price: 1800.00,
       stoke: 4,
       discription:
         "Você gostaria de vivenciar a vida no espaço por um período mais longo? Oferecemos a oportunidade de passar semanas a bordo da Estação Espacial Internacional. Você terá a chance de trabalhar com astronautas profissionais e apreciar a vista deslumbrante do espaço sideral.",
@@ -34,7 +34,7 @@ const data = [
       name: "Turismo na Lua",
       id: 2,
       category: "Viagem-Solo",
-      price: 32079.0,
+      price: 3246.00,
       stoke: 7,
       discription:
         "Viagem a bordo de uma espaçonave tripulada até o nosso satélite natural. Explore a superfície lunar, caminhe onde os astronautas históricos já estiveram e maravilhe-se com a imensidão do cosmos.",
@@ -47,7 +47,7 @@ const data = [
       name: "Colonização espacial",
       id: 3,
       category: "Viagem-Familia",
-      price: 895663,
+      price: 9854.00,
       stoke: 4,
       discription:
         "Se você está interessado em ser parte da história e contribuir para a colonização de outros planetas, oferecemos viagens para estabelecer assentamentos em planetas como Marte. Projetadas para pessoas corajosas e visionárias que desejam criar uma nova vida em um mundo extraterrestre.",
@@ -58,7 +58,7 @@ const data = [
       name: "Viagem Orbital",
       id: 4,
       category: "Viagem-Solo",
-      price: 12052.0,
+      price: 1200.00,
       stoke: 6,
       discription:
         "Emocionante viagem Orbital da Terra, a bordo de uma   espaçonave especialmente projetada para você terá a oportunidade de subir até a borda do espaço, contemplar a curvatura da Terra e desfrutar de vistas deslumbrantes antes de retornar à Terra.",
@@ -70,7 +70,7 @@ const data = [
       name: "Viagem Interestrelar",
       id: 5,
       category: "Viagem Solo",
-      price: 985263.0,
+      price: 9850.00,
       stoke: 4,
       discription:
         "Embarque em uma espaçonave de última geração projetada para viagens interestelares e descubra as maravilhas do universo. Visite sistemas estelares distantes, admire paisagens cósmicas e desvende os mistérios do cosmos.",
@@ -84,7 +84,7 @@ const data = [
       name: "Viagem a Mercúrio",
       id: 6,
       category: "Viagem-Familia",
-      price: 895663.0,
+      price: 8790.00,
       stoke: 4,
       discription:
         "Embarque em uma missão para Mercúrio e teste os limites da tecnologia espacial enquanto você se aventura no planeta mais próximo do Sol. Explore as crateras e formações rochosas únicas de Mercúrio e desfrute das vistas incríveis do pôr do sol em um cenário cósmico.",
@@ -95,7 +95,7 @@ const data = [
       name: "Viagem a Vênus",
       id: 7,
       category: "Viagem-Familia",
-      price: 895663.0,
+      price: 8760.00,
       stoke: 4,
       discription:
         "Faça uma viagem para o planeta irmão da Terra e experimente a paisagem vulcânica e a atmosfera densa de Vênus. Admire as montanhas e os vales cobertos de nuvens, e descubra os segredos desse mundo misterioso",
@@ -106,7 +106,7 @@ const data = [
       name: "Viagem a Marte",
       id: 8,
       category: "Viagem-Familia",
-      price: 62538.0,
+      price: 6250.00,
       stoke: 3,
       discription:
         "Jornada incrível e desafiadora o levará ao Planeta Vermelho, onde você terá a chance de explorar sua geologia, estudar sua atmosfera e quem sabe, descobrir sinais de vida passada ou futura.",
@@ -120,7 +120,7 @@ const data = [
       name: "Viagem a Júpiter",
       id: 9,
       category: "Viagem-Familia",
-      price: 895663.0,
+      price: 5660.00,
       stoke: 4,
       discription:
         "Embarque em uma nave espacial especialmente projetada para suportar as condições extremas de Júpiter, o maior planeta do sistema solar. Maravilhe-se com as faixas coloridas de nuvens e as tempestades violentas que dominam a atmosfera gasosa de Júpiter.",
@@ -131,7 +131,7 @@ const data = [
       name: "Viagem a Saturno",
       id: 10,
       category: "Viagem-Familia",
-      price: 895663.0,
+      price: 5880.00,
       stoke: 4,
       discription:
         "Faça uma viagem inesquecível para Saturno e fique maravilhado com seus anéis majestosos. Desça na lua Titã, com sua atmosfera densa e lagos de metano líquido, ou visite Encélado, onde jatos de água são expelidos de sua superfície gelada.",
@@ -141,7 +141,7 @@ const data = [
       name: "Viagem a Urano",
       id: 11,
       category: "Viagem-Familia",
-      price: 895663.0,
+      price: 6500.00,
       stoke: 4,
       discription:
         "Explore o planeta gelado de Urano e testemunhe sua inclinação única, onde ele roda de lado. Observe suas nuvens azul-esverdeadas e descubra seus anéis escuros e suas luas fascinantes.",
@@ -152,7 +152,7 @@ const data = [
       name: "Viagem a Netuno",
       id: 12,
       category: "Viagem-Familia",
-      price: 895663.0,
+      price: 7540.00,
       stoke: 4,
       discription:
         " Embarque em uma missão para o distante planeta azul de Netuno. Maravilhe-se com as tempestades violentas e os ventos poderosos que ocorrem em sua atmosfera. Descubra suas luas intrigantes, como Tritão, e mergulhe em um mundo completamente diferente.",

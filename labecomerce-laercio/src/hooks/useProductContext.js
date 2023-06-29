@@ -7,7 +7,6 @@ export const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
-  const [loading] = useState(false);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [preco, setPreco] = useState("");
@@ -42,6 +41,9 @@ const ProductProvider = ({ children }) => {
 
     return preco === "0" || (preco ? product.price <= preco : true);
   };
+
+
+  
 
   return (
     <ProductContext.Provider

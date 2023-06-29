@@ -1,63 +1,28 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React, { useContext } from "react";
 import { ProductContext } from "../../../hooks/useProductContext";
 
 const Card = () => {
-  const {
-    products,
-    searchFilterName,
-    category,
-    setCategory,
-    searchCategory,
-    preco,
-    setPreco,
-    searchPrice,
-  } = useContext(ProductContext);
+  const { products, searchFilterName, searchCategory, searchPrice } =
+    useContext(ProductContext);
 
   return (
     <>
-      {/* <div className="flex justify-center border mt-12">
-        <div className="flex">
-          <input
-            type="range"
-            min={100000}
-            max={100000000}
-            value={preco}
-            onChange={(e) => setPreco(e.target.value)}
-            step={10}
-            className="w-48 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-slate-900"
-          />
-        </div>
-        <span className="border-solid border-2 border-slate-900 w-18  text-center font-bold"></span>
-      </div> */}
-      <div className="flex justify-center mt-4">
-        <div className="rounded border flex">
-          <select
-            name="filter-category"
-            id="filters"
-            className="w-48"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-          >
-            <option value="">Selecionar</option>
-            <option value="Viagem-Solo">Viagem Solo</option>
-            <option value="Viagem-Familia">Viagem Familia</option>
-          </select>
-        </div>
-      </div>
-
       <div className="bg-gray-100 flex flex-wrap justify-center">
         {products
           .filter(searchCategory)
           .filter(searchPrice)
           .filter(searchFilterName)
           .map((item) => (
-            <div className="relative m-3 flex flex-wrap mx-auto justify-center">
+            <div
+              key={item}
+              className="relative m-3 flex flex-wrap mx-auto justify-center"
+            >
               <div className="relative max-w-sm min-w-[340px] bg-white shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer">
                 <div className="overflow-x-hidden rounded-2xl relative">
                   <img
                     className="h-60 rounded-2xl w-full object-cover"
                     src={item.imagem}
+                    alt="bananinha"
                   />
                   <p className="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group">
                     <svg
@@ -81,8 +46,8 @@ const Card = () => {
                     <p className="text-lg font-semibold text-gray-900 mb-0">
                       {item.name}
                     </p>
-                    <p className="text-md text-gray-800 mt-0">{`R$ ${item.price.toFixed(
-                      2)}`}
+                    <p className="text-md text-gray-800 mt-0">
+                      {`R$ ${item.price.toFixed(2)}`}
                     </p>
                     <p className="text-sm text-black mt-0 align-items-center">
                       {item.discription}
