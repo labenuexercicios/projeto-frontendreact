@@ -2,7 +2,7 @@ import React from 'react'
 import { Card , Etiqueta } from './productCardStyle'
 
 
-const ProductCard = ({ProductList, addToCart, filteredProducts}) => {
+const ProductCard = ({addToCart, filteredProducts}) => {
   
   const listaRenderizada = filteredProducts.map((item, index) => {
     return (
@@ -19,7 +19,6 @@ const ProductCard = ({ProductList, addToCart, filteredProducts}) => {
       </Card>
     )
   })
-
 
 
   return ( 

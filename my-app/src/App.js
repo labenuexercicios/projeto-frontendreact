@@ -7,7 +7,7 @@ import Cart from './Components/ShoppingCart/Cart/Cart'
 import { AppStyled } from './App.styled'
 import ProductList from './assets/ProductList';
 import ProductCard from './Components/ProductList/Home/ProductCard/ProductCard';
-import Items from './Components/ShoppingCart/Cart/Items/Items';
+
 
 
 function App() {
@@ -15,24 +15,14 @@ function App() {
   const [minFilter, setMinFilter] = useState('')
   const [maxFilter, setMaxFilter] = useState('')
   const [searchFilter, setSearchFilter] = useState('')
-  const [amount, setAmount] = useState('')
+  const [amount, setAmount] = useState(0)
   const [valorMin, setValorMin] = useState('')
   const [valorMax, setValorMax] = useState('')
-  // const [listaProducts, setListaProducts] = useState(listaProducts)
-  
-  
-  
-  const [cart, setCart] = useState([{
-    name: 'ALMOFADA GALÁXIA ROXA',
-    id: 1,
-    category: 'Almofadas',
-    rate: 5,
-    price: 12.90,
-    stock: 20,
-    description: 'Capa de almofada 45x45 cm com ziper embutido',
-}])
+  const [cart, setCart] = useState([])
 
   
+  
+
   const handleValorMin = (event) => {
     setValorMin(event.target.value);
   }
@@ -45,21 +35,16 @@ function App() {
   const filteredProducts = ProductList.filter((item) => {
     if(item.price >= valorMin && item.price <= valorMax){
       return <ProductCard/>
-    } else if (valorMin === '' && valorMax === ''){
+    } else if (valorMin === '' || valorMax === ''){
       return item
+    } else {
+      return ('')
     }
   })
 
-
-  const renderCart = cart
-  .map((item, id) => {
-    return <Items key={id} item={item} removerItem={removerItem}/>
-  })
-
-
-
+  
   const addToCart = (produto) => {
-    const newProduct = renderCart
+    const newProduct = cart
     .find((item) => produto.id === item.id)
 
     if(newProduct === undefined) {
@@ -77,15 +62,11 @@ function App() {
     }
   }
 
-  const removerItem = () => {
-
-  }
-
-
   
   return (
     <div>
-      <Header searchFilter={searchFilter} 
+      <Header 
+      searchFilter={searchFilter} 
       setSearchFilter={setSearchFilter}/>
 
       <AppStyled>
@@ -108,7 +89,6 @@ function App() {
         /> 
 
         <Cart 
-        renderCart={renderCart} 
         cart={cart} 
         setCart={setCart} 
         amount={amount} 
