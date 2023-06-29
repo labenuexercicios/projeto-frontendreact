@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CartaoStyle = styled.aside`
 display:grid;
 flex-direction: column;
-top:190px;
+top:28vh;
 position:absolute;
 right:0;
 grid-area:CataoStyle;

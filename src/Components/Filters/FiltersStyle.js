@@ -4,7 +4,7 @@ export const AsideFiltro = styled.aside`
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-  top:190px;
+  top:28vh;
   color: white;
   position: fixed;
   grid-area: AsideFiltro;
