@@ -1,9 +1,16 @@
 import React from 'react'
 
-import { Search , Form, Button } from './Filters.styled'
+import { Search , Form } from './Filters.styled'
 
-const Filters = ({handleValorMax, handleValorMin, valorMax, valorMin}) => {
+const Filters = ({valorMax, valorMin, setValorMin, setValorMax}) => {
   
+  const handleValorMin = (event) => {
+    setValorMin(event.target.value);
+  }
+
+  const handleValorMax = (event) => {
+    setValorMax(event.target.value);
+  }
   
   
   return (
@@ -17,7 +24,6 @@ const Filters = ({handleValorMax, handleValorMin, valorMax, valorMin}) => {
           Valor Maximo: <input type="number" value={valorMax} min="1" max="1000" onChange={handleValorMax}/>
         </label>
         <hr/>   
-        <Button>Buscar</Button>
       </Form>   
     </Search>
   )

@@ -19,30 +19,40 @@ function App() {
   const [valorMin, setValorMin] = useState('')
   const [valorMax, setValorMax] = useState('')
   const [cart, setCart] = useState([])
+  const [ordination , setOrdination] = useState ('')
 
-  
-  
-
-  const handleValorMin = (event) => {
-    setValorMin(event.target.value);
-  }
-
-  const handleValorMax = (event) => {
-    setValorMax(event.target.value);
-  }
-
-
-  const filteredProducts = ProductList.filter((item) => {
-    if(item.price >= valorMin && item.price <= valorMax){
+  // Filtra produtos para renderizar no card
+  const filteredProducts = ProductList
+  .filter((item) => {
+    if(valorMax === ''){
+      if(item.price >= valorMin){
+        return <ProductCard/>
+      }
+      
+    } else if (valorMin === ''){
+      if(item.price <= valorMax){
+        return <ProductCard/>
+      }
+      
+    } else if (item.price >= valorMin && item.price <= valorMax){
       return <ProductCard/>
-    } else if (valorMin === '' || valorMax === ''){
-      return item
+    
     } else {
       return ('')
     }
   })
+  .filter((item) => {
+    if(item.name.includes(searchFilter.toUpperCase())){
+      return <ProductCard/>
+    }
+  })
+  .sort((a,b) => ordination === 'Menor preço' && a.price > b.price ? 1 : -1)
+  .sort((a,b) => ordination === 'Maior preço' && a.price > b.price ? -1 : 1)
 
-  
+  // Calcula quantidade de itens renderizados em tela
+  const quantidade = filteredProducts.length
+
+  // Função adicionar ao carrinho
   const addToCart = (produto) => {
     const newProduct = cart
     .find((item) => produto.id === item.id)
@@ -57,7 +67,6 @@ function App() {
           return item
         }
       })
-
       setCart(newCart)
     }
   }
@@ -67,7 +76,8 @@ function App() {
     <div>
       <Header 
       searchFilter={searchFilter} 
-      setSearchFilter={setSearchFilter}/>
+      setSearchFilter={setSearchFilter}
+      filteredProducts={filteredProducts}/>
 
       <AppStyled>
         
@@ -76,17 +86,18 @@ function App() {
         setMinFilter={setMinFilter} 
         maxFilter={maxFilter} 
         setMaxFilter={setMaxFilter}
-        ProductList={ProductList}
-        handleValorMax={handleValorMax}
-        handleValorMin={handleValorMin}
         valorMin={valorMin}
-        valorMax={valorMax} />
+        valorMax={valorMax}
+        setValorMin={setValorMin}
+        setValorMax={setValorMax} />
 
         <Home 
         addToCart={addToCart} 
         ProductList={ProductList}
         filteredProducts={filteredProducts}
-        /> 
+        setOrdination={setOrdination}
+        ordination={ordination}
+        quantidade={quantidade}/> 
 
         <Cart 
         cart={cart} 

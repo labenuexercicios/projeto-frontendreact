@@ -3,7 +3,12 @@ import { HeaderStyled , HeaderNav , Pesquisa } from './Header.styled'
 import logo from '../../images/logo2.png'
 
 
-const Header = () => {
+const Header = ({searchFilter, setSearchFilter}) => {
+  
+  const handleSearch = (event) => {
+    setSearchFilter(event.target.value)
+  }
+  
   return (
     <div>
         <HeaderStyled>
@@ -12,7 +17,7 @@ const Header = () => {
             </div>
             <div>
                 <Pesquisa>
-                    <input type="text" placeholder="Busca"/>
+                    <input type="text" placeholder="Busca" value={searchFilter} onChange={handleSearch}/>
                     <a href=""><img className="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png" alt='icone'/></a>
                 </Pesquisa>
             </div>

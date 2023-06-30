@@ -20,7 +20,6 @@ const ProductCard = ({addToCart, filteredProducts}) => {
     )
   })
 
-
   return ( 
     <div>
       {listaRenderizada}
