@@ -27,11 +27,13 @@ const searchFilterName = (product) => {
 // FUNÇÃO DE CATEGORIA
 
 const searchCategory = (product) => {
-  if(category === "Cadernos"){
+  if(category === "Bonecos"){
     return product.category.includes(category)
-  }else if(category === "Canecas"){
+  }else if(category === "Naves"){
     return product.category.includes(category)
-  }else{
+  }else if(category === "Capacete"){
+    return product.category.includes(category)
+  } else{
     return product
   }
 }
