@@ -8,7 +8,7 @@ const Card = () => {
 
     return (
         <>
-            {/* <div className="flex justify-center border mt-12">
+            <div className="flex justify-center border mt-12">
                 <div className="flex">
                     <input
                         type="range"
@@ -21,7 +21,7 @@ const Card = () => {
                     />
                 </div>
                 <span className="border-solid border-2 border-slate-900 w-18  text-center font-bold"></span>
-            </div> */}
+            </div>
             <div className="flex justify-end mt-4">
                 <div className="rounded border flex">
                     <select
