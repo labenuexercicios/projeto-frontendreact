@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "name": "Alien de Pelucia",
+      "value": 50.00,
+      "imageUrl": "https://img.freepik.com/fotos-gratis/renderizacao-3d-de-yeti_23-2149937551.jpg?w=740&t=st=1687975729~exp=1687976329~hmac=f1e426a97237d505a2b2679b4782405350cfb5d51149764b8c7e2eaafbe5038a"
+    },
+    {
+      "id": 2,
+      "name": "Mochila Astronalta",
+      "value": 100.00,
+      "imageUrl": "https://img.freepik.com/fotos-gratis/bonito-garoto-astronauta-jogando_23-2149836518.jpg?w=1060&t=st=1687976110~exp=1687976710~hmac=d37263fee9925e98aa455111d3aea10038dac37c880b451a7ad2ccc4d3def5e2"
+    },
+    {
+      "id": 3,
+      "name": "Kit Massinha Espacial",
+      "value": 500.0,
+      "imageUrl": "https://img.freepik.com/fotos-gratis/feminino-artista-mao-fazendo-caretas-usando-argila-macia_23-2148188319.jpg?w=1380&t=st=1687976454~exp=1687977054~hmac=8f8837cd5cce4e0fc6c14f5341e174eb83e3fed01cb1e66c04f3d6b5905c2b6f"
+
+
+    },
+    {
+        "id": 4,
+        "name": "Alien Slime",
+        "value": 18.00,
+        "imageUrl": "https://img.freepik.com/fotos-gratis/monstro-de-massinha-azul-bonito_23-2149554799.jpg?w=1060&t=st=1687975654~exp=1687976254~hmac=4c722a69bd8f9bd590dd727cf52f33f4c620ecc7ba6c5e8b1331a6c1a2246d25"
+      },
+      {
+        "id": 5,
+        "name": "Android Intergalactico",
+        "value": 36.00,
+        "imageUrl": "https://img.freepik.com/psd-gratuitas/ilustracao-3d-do-robo-de-brinquedo-infantil_23-2149345310.jpg?w=740&t=st=1687975277~exp=1687975877~hmac=5b90d45bdd953b6c186411b9e8ce503cdf16266462f0cede7315d209e55a1ce9"
+      },
+      {
+        "id": 6,
+        "name": "Nave Alien",
+        "value": 59.90,
+        "imageUrl": "https://img.freepik.com/vetores-gratis/um-modelo-de-adesivo-com-ovni-ou-objeto-voador-nao-identificado-isolado_1308-62581.jpg?w=1060&t=st=1687975164~exp=1687975764~hmac=97dc2e400909d8718abcbe9a965a626866dc0796a67301eb13a53ffc8fd1ceee"
+  
+  
+      },
+      {
+        "id": 7,
+        "name": "Foguete Espacial",
+        "value": 10.70,
+        "imageUrl": "https://img.freepik.com/psd-gratuitas/icone-3d-isolado-de-foguete_47987-7596.jpg?w=740&t=st=1687975066~exp=1687975666~hmac=ef574c50f0b0cfd51e1a7443f5978a23af0dd83eec7130ad0ef9ead47d9e08dd"
+      },
+      {
+        "id": 8,
+        "name": "Super Nave Espacial",
+        "value": 87.52,
+        "imageUrl": "https://img.freepik.com/psd-gratuitas/ilustracao-de-renderizacao-3d-isolada-icone-ovni_439185-12560.jpg?w=740&t=st=1687974953~exp=1687975553~hmac=7b63cfd035cd3748dfbc39f821e291b7b2d283c695d726e4329fc8ebb586ed2f"
+      }
+
+
+  ]
