@@ -1,5 +1,6 @@
-import { CartContainer } from "./style.jsx";
+import { CartContainer, ItensContainer, TotalCart } from "./style.jsx";
 import Items from "../Items";
+import { BaggageClaim } from "lucide-react";
 
 import { useEffect } from "react";
 
@@ -30,14 +31,22 @@ export default function Cart(props) {
 
   return (
     <CartContainer>
-      <h1>Bag</h1>
-
-      <Items cart={cart} setCart={setCart} />
-
-      <p>
-        Valor Total:
-        {amount.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
-      </p>
+      <div>
+        <h1>Bag</h1>
+      </div>
+      <ItensContainer>
+        <Items cart={cart} setCart={setCart} />
+      </ItensContainer>
+      <TotalCart>
+        <BaggageClaim />
+        <p>
+          Valor Total :{' '}
+          {amount.toLocaleString("pt-br", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </p>
+      </TotalCart>
     </CartContainer>
   );
 }

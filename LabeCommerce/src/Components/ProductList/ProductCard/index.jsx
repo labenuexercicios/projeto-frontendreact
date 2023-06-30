@@ -30,14 +30,19 @@ export default function ProductCard(props) {
 
       <Name>{item.name}</Name>
       <div>
-        <Price>{item.value}</Price>
+        <Price>{item.value.toLocaleString("pt-br", {
+            style: "currency",
+            currency: "BRL",
+          })}
         <button
           onClick={() => {
             addCart(item);
           }}
         >
           <ShoppingBag />
+          
         </button>
+        </Price>
       </div>
     </CardContainer>
   ));

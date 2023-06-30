@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+
 import { HomeContainer, CardContainer, ContainerInfo } from "./style.jsx";
 import ProductCard from "../ProductCard";
+import { useState } from "react";
 
 export default function Home(props) {
   const { Products, cart, setCart,searchFiltered  } = props;

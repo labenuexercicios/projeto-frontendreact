@@ -1,5 +1,4 @@
-import React from "react";
-
+/* eslint-disable react/prop-types */
 import { FiltroLabel, TituloPagina, FiltroInput, Container } from "./style.jsx";
 
 export default function Filter(props) {
