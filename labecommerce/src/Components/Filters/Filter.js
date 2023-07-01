@@ -4,9 +4,20 @@ import { useState } from 'react'
 import productsList from '../../assents/productsList'
 
 
-const Filter = ({ products, searchFilter, onSearch, onClear, minFilter, 
-  maxPrice,onMinFilterChange, onMaxFilterChange}) => {
+const Filter = ({ products, searchFilter, onClear, minFilter, 
+  maxFilter,setMinFilter, setMaxFilter, setSearchFilter}) => {
  
+    const handleMinFilterChange = (event) => {
+      setMinFilter(event.target.value);
+    };
+    const handleMaxFilterChange = (event) => {
+      setMaxFilter(event.target.value);
+    };
+  
+    const handleSearchFilterChange = (event) => {
+      setSearchFilter(event.target.value);
+    };
+    
 
   return (
     
@@ -16,39 +27,17 @@ const Filter = ({ products, searchFilter, onSearch, onClear, minFilter,
       <Title>Filters</Title>
       <Lista>
       
-      <li>Valor Mínimo:</li>
-      <div>
-    
-      <input
-        type="number"
-        placeholder="Preço mínimo"
-        value={minFilter}
-        onChange={onMinFilterChange}
-      />
-      </div>
-      <li>Valor Maximo:</li>
-      <div>
-      <input
-        type="number"
-        placeholder="Preço máximo"
-        value={maxPrice}
-        onChange={onMaxFilterChange}
-      />
-      </div>
+      <label htmlFor="minFilter">Mínimo:</label>
+      <input type="number" id="minFilter" value={minFilter} onChange={handleMinFilterChange} />
 
-      <li>Busca por nome:</li>
-      <div>
-      <input
-        type="text"
-        placeholder="Digite sua busca..."
-        value={searchFilter}
-        onChange={onSearch}
-        
-      />
+      <label htmlFor="maxFilter">Máximo:</label>
+      <input type="number" id="maxFilter" value={maxFilter} onChange={handleMaxFilterChange} />
+       
+      <label htmlFor="searchFilter">Pesquisar:</label>
+      <input type="text" id="searchFilter" value={searchFilter} onChange={handleSearchFilterChange} />
       
       <button onClick={onClear}>Limpar</button>
-     
-      </div>
+      
       </Lista>
     </Filters>
    
