@@ -2,9 +2,12 @@ import React from 'react'
 import{Container} from './productCardStyle'
 
 
-function ProductCard(props) {
-  const { product } = props;
+
+
+function ProductCard({product, selectedProduct}) {
+  // const { product } = props;
   
+  console.log (product.imagem)
   return (
     <>
    
@@ -12,13 +15,15 @@ function ProductCard(props) {
     <h2>{product.name}</h2>
     <img src={product.image} alt={product.name} />
     <p>{product.description}</p>
-    <p>Price: ${product.price}</p>
+    <p>Price: R${product.price.toFixed(2)}</p>
     <button>Adicionar ao carrinho</button>
+   
   </Container>
-  </>
-  );
-  }
 
+  
+  </>
+  )
+}
 // Antes de passar por props:
 //const ProductCard = () => {
 //   return (

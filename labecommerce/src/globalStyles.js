@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
       margin:0;
       padding: 0;
       box-sizing:border-box;
+      
       ul {
       list-style: none;  
       }
@@ -18,10 +19,10 @@ const GlobalStyle = createGlobalStyle`
 export const PageStyle = styled.div`
     display:grid;
     grid-template-columns: 20% 60% 20%;
-    gap:5px
+    gap:5px;
     width:100%;
     padding-top:2rem;
-    height:70vh;
+    height:60vh;
    
 `
 
