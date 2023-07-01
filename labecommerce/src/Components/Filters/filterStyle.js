@@ -6,7 +6,7 @@ export const Filters = styled.div`
 background: white;
 padding-left:1rem;
 border:1px solid;
-margin-left:10px;
+margin-left:10px; 
 
 `;
 
@@ -17,6 +17,8 @@ color:black;
 
 `;
 export const Lista = styled.ul`
+display:grid;
+
 font-size:1rem;
 `;
 

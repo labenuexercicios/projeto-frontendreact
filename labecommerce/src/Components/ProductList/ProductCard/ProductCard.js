@@ -4,7 +4,7 @@ import{Container} from './productCardStyle'
 
 
 
-function ProductCard({product, selectedProduct}) {
+function ProductCard ({product,}) {
   // const { product } = props;
   
   console.log (product.imagem)

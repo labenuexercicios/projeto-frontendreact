@@ -13,10 +13,16 @@ import InfoProdutos from './Components/ProductList/InfoProdutos/InfoProdutos'
 
 function App ()  {
     const [ searchFilter, setSearchFilter] = useState('');
-    const [minFilter, setMinFilter] = useState('');
-    const [maxFilter, setMaxFilter] = useState('');
+    const [minFilter, setMinFilter] = useState(0);
+    const [maxFilter, setMaxFilter] = useState(0);
     const [searchResults, setSearchResults] = useState([]);
 
+       
+    // const [productsList, setProductsList] = useState(productsList);
+    const [amount, setAmount] = useState(0);
+    const [cart, setCart] = useState([]);
+
+    // console.log (searchFilter)
     const handleSearch = (event) => {
       const  searchFilter = event.target.value;
       setSearchFilter( searchFilter);
@@ -34,16 +40,9 @@ function App ()  {
       setSearchFilter('');
       setSearchResults([]);
     };
-
+      
    
-      const handleminFilterChange = (event) => {
-      setMinFilter(event.target.value);
-    };
   
-      const handlemaxFilterChange = (event) => {
-      setMaxFilter(event.target.value);
-    };
-
   return (
     
     <>
@@ -52,20 +51,35 @@ function App ()  {
       <Header/>
       <InfoProdutos/>
       <PageStyle>
-        <Filter 
+      <Filter 
         products={searchResults}
         searchFilter={ searchFilter}
         onClear={handleClear}
         minFilter={minFilter}
         maxFilter={maxFilter}
-        onMinFilterChange={handleminFilterChange}
-        onMaxFilterChange={handlemaxFilterChange}
-        onSearch={handleSearch}
       
-        />
-        <Home products={productsList}/>
-        <Cart/>
-        <Footer/>
+        handleSearchFilterChange={handleSearch}
+        setMinFilter={setMinFilter}
+        setMaxFilter={setMaxFilter}
+        setSearchFilter={setSearchFilter}
+      
+      />
+      <Home 
+        products={productsList}
+        
+        amount={amount}
+        setAmount={setAmount}
+        cart={cart}
+        setCart={setCart}
+        
+      />
+      <Cart
+        amount={amount}
+        setAmount={setAmount}
+        cart={cart}
+        setCart={setCart}
+      />
+      <Footer/>
         
       </PageStyle>
       
