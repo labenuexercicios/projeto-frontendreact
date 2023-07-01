@@ -1,24 +1,57 @@
 import React from 'react'
 import { Title, Lista,Filters } from './filterStyle'
+import { useState } from 'react'
+import productsList from '../../assents/productsList'
 
 
+const Filter = ({ products, searchFilter, onSearch, onClear, minFilter, 
+  maxPrice,onMinFilterChange, onMaxFilterChange}) => {
+ 
 
-
-const Filter = () => {
   return (
-    <>
     
+    <>
+     
     <Filters>
       <Title>Filters</Title>
       <Lista>
+      
       <li>Valor Mínimo:</li>
-      <input/>
+      <div>
+    
+      <input
+        type="number"
+        placeholder="Preço mínimo"
+        value={minFilter}
+        onChange={onMinFilterChange}
+      />
+      </div>
       <li>Valor Maximo:</li>
-      <input/>
+      <div>
+      <input
+        type="number"
+        placeholder="Preço máximo"
+        value={maxPrice}
+        onChange={onMaxFilterChange}
+      />
+      </div>
+
       <li>Busca por nome:</li>
-      <input/>
+      <div>
+      <input
+        type="text"
+        placeholder="Digite sua busca..."
+        value={searchFilter}
+        onChange={onSearch}
+        
+      />
+      
+      <button onClick={onClear}>Limpar</button>
+     
+      </div>
       </Lista>
     </Filters>
+   
     </>
   )
 }
