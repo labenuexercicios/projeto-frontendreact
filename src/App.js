@@ -4,8 +4,7 @@ import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 import { GlobalStyles } from "./GlobalStyles";
 import { listaDeProdutos } from "./assets/productsList";
-import { MainApp, HeaderApp } from "./AppStyle";
-
+import { MainApp, HeaderApp, Logo, AstroLogo, FooterStylo } from "./AppStyle";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -13,7 +12,7 @@ function App() {
   const [minFilter, setMinFilter] = useState("");
   const [maxFiler, setMaxFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
-  
+  const [size, setSize] = useState("");
 
   const filterProducts = listaDeProdutos
     .filter((produto) => {
@@ -33,31 +32,30 @@ function App() {
         return produto.name.toLowerCase().includes(searchFilter.toLowerCase());
       }
       return true;
+    })
+    .filter((produto) => {
+      if (size) {
+        return produto.tamanhos.includes(size);
+      }
+      return true;
     });
 
-    const saveLocalStorage = () => {
-     const listLocal = JSON.stringify(cart);
-     localStorage.setItem("cart", listLocal);
-   };
-
-  
+  const saveLocalStorage = () => {
+    const listLocal = JSON.stringify(cart);
+    localStorage.setItem("cart", listLocal);
+  };
 
   useEffect(() => {
     const listLocal = JSON.parse(localStorage.getItem("cart"));
     listLocal && setCart(listLocal);
   }, []);
 
-  
-
   useEffect(() => {
-    if(cart.length){saveLocalStorage()
-    
-    } else{
-      localStorage.removeItem('cart')
+    if (cart.length) {
+      saveLocalStorage();
+    } else {
+      localStorage.removeItem("cart");
     }
-
-    
-    
   }, [cart]);
 
   return (
@@ -66,7 +64,14 @@ function App() {
 
       <MainApp>
         <HeaderApp>
-          <h1>SPACE FASHION</h1>
+          <Logo
+            src={process.env.PUBLIC_URL + "imagens/logo1.png"}
+            alt="Imagem"
+          />
+          <AstroLogo
+            src={process.env.PUBLIC_URL + "imagens/astro.png"}
+            alt="Imagem"
+          />
         </HeaderApp>
         <Filters
           minFilter={minFilter}
@@ -75,6 +80,8 @@ function App() {
           setMaxFilter={setMaxFilter}
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
+          size={size}
+          setSize={setSize}
         />
         <Home
           listaDeProdutos={filterProducts}
@@ -89,6 +96,10 @@ function App() {
           cart={cart}
           setCart={setCart}
         />
+
+        <FooterStylo>
+          <p>Desenvolvido por <a target="_blank" href="https://www.linkedin.com/in/karina-darc/">Karina D'arc</a> </p>
+        </FooterStylo>
       </MainApp>
     </>
   );

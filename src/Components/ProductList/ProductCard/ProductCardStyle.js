@@ -1,25 +1,47 @@
 import styled from "styled-components";
 
 export const GeralStyle = styled.article`
-  /* display:grid; */
   flex-direction: column;
-  padding: 10px;
+  padding-left: 4%;
+  padding-top: 10%;
 `;
 
 export const CardImagem = styled.img`
-  /* background-color: red; */
-  width: 17vw;
+  width: 15vw;
+  border: 4px solid var(--2);
+  border-radius: 40%;
 `;
 export const ButtonCard = styled.button`
-  background-color: var(--6);
-  width:100%;
-  height:5vh;
+  background-color: var(--4);
+  width: 80%;
+  text-align:center;
+  align-items:center;
+  height: 5vh;
+  border-radius: 8px;
+  font-weight:bold;
+  color:white;
+  &:disabled{
+    opacity: 0.6;
+  }
+
 `;
 
-export const NomeProduto = styled.h2`
+export const NomeProduto = styled.h3`
   color: var(--8);
+  
 `;
 
-export const PrecoProdutos = styled.h4`
-  color:red;
+export const PrecoProdutos = styled.h3`
+  color: red;
 `;
+
+export const TamanhoProdutos = styled.select`
+height:4vh;
+ background-image: linear-gradient(to right, var(--6), var(--4));
+  background-color: var(--4);
+  color:white;
+  border-radius: 8px;
+
+  /* color: var(--8); */
+
+`

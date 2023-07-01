@@ -2,33 +2,31 @@ import styled from "styled-components";
 
 export const EstilizacaoGeralItens = styled.ul`
   color: white;
-  /* display: flex; */
   flex-direction:column;
-  /* justify-content: space-between; */
-
-
+  padding-right:3%;
 
 
   li {
-    /* justify-content: space-around; */
-    padding: 1.1px;
+    margin-bottom: 8px;
     list-style: none;
+
 
   }
 
   button {
-    /* display:flex; */
-  /* flex-direction:column; */
-
-    width: 30%;
-    height: 50%;
-    background-color: red;
-    color: white;
-    border-radius: 8px;
+   padding:0;
+   margin:0;
+    width: 30px;
+    height: 27px;
+     border:1px solid red;
     cursor: pointer;
-    background-image: linear-gradient(to right, var(--6), var(--4));
     float: right;
+    background-color:transparent ;
 
+    img{
+    width: 20px;
+    height: 20px; 
+    }
   }
 
   span {
@@ -36,6 +34,6 @@ export const EstilizacaoGeralItens = styled.ul`
     width: 50%;
     height: 50%;
     
-
   }
 `;
+

@@ -13,14 +13,14 @@ function Cart({ amount, setAmount, cart, setCart }) {
   };
 
   const removeProduto = (produto) => {
-    //console.log(produto);
+    console.log(produto);
     let carrinho = [...cart];
 
     if (produto.quantity > 1) {
       produto.quantity--;
     } else {
       carrinho = carrinho.filter((mercadoria) => {
-        return produto.id !== mercadoria.id;
+        return produto.id !== mercadoria.id || produto.tamanhoSelecionado !== mercadoria.tamanhoSelecionado ;
       });
     }
 
@@ -34,9 +34,9 @@ function Cart({ amount, setAmount, cart, setCart }) {
 
   return (
     <CartaoStyle>
-      <TituloCart>CART</TituloCart>
+      <TituloCart>CARRINHO</TituloCart>
       <Items cart={cart} callbackClick={removeProduto} />
-      <ValorStyle>Valor total: R$ {amount.toFixed(2)} </ValorStyle>
+      <ValorStyle>VALOR TOTAL: R$ {amount.toFixed(2)} </ValorStyle>
     </CartaoStyle>
   );
 }

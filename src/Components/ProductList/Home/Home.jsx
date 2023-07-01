@@ -10,15 +10,26 @@ function Home({ listaDeProdutos, cart, setCart }) {
     console.log(event.target.value);
   };
 
-  const adicionaProduto = (produto) => {
+  const adicionaProduto = (produto,tamanho) => {
+    // console.log(tamanho)
     const carrinho = [...cart];
-    const produtoExistente = carrinho.find(item => item.id === produto.id);
+    const produtoExistente = carrinho.find(item => item.id === produto.id && item.tamanhoSelecionado === tamanho);
 
     if (produtoExistente) {
       produtoExistente.quantity++;
+      // console.log(produtoExistente)
+
     } else {
-      produto.quantity = 1;
-      carrinho.push(produto);
+      
+      const novoProduto = {
+        ...produto,
+        quantity : 1,
+        tamanhoSelecionado: tamanho
+      }
+      console.log(produto)
+      console.log(novoProduto)
+      
+      carrinho.push(novoProduto);
     }
 
     setCart(carrinho);
@@ -27,14 +38,13 @@ function Home({ listaDeProdutos, cart, setCart }) {
   return (
     <HomeArticle>
       <OrdenacaoSection>
-        <div>Quantidade de produtos: {listaDeProdutos.length}</div>
+        <div>QUANTIDADE DE PRODUTOS: {listaDeProdutos.length}</div>
         <div>
-          <label>Ordenação: </label>
-          <select value={ordination} onChange={onChangeOrdemProdutos}>
-            <OptionHome disabled value=""></OptionHome>
-            <OptionHome value="asc">Crescente</OptionHome>
-            <OptionHome value="desc">Decrescente</OptionHome>
-          </select>
+          <OptionHome id="ordenacao" value={ordination} onChange={onChangeOrdemProdutos}>
+            <option disabled value="">ORDENAÇÃO</option>
+            <option value="asc">Crescente</option>
+            <option value="desc">Decrescente</option>
+          </OptionHome>
         </div>
       </OrdenacaoSection>
 
