@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer';
 import Filters from './Components/Filters/Filters'
@@ -70,6 +70,27 @@ function App() {
       setCart(newCart)
     }
   }
+
+  const saveLocalStorage = () => {
+    const cartString = JSON.stringify(cart)
+    localStorage.setItem('carrinho', cartString)
+  }
+
+  const getItemsLocalStorage = () => {
+    const cartParse = JSON.parse(localStorage.getItem('carrinho'))
+
+    if(cartParse){
+      setCart(cartParse)
+    }
+  }
+
+  useEffect(() => {
+    getItemsLocalStorage()
+  }, [])
+
+  useEffect(() => {
+    cart.length && saveLocalStorage()
+  }, [cart])
 
   
   return (
