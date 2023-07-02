@@ -1,4 +1,4 @@
-import { ItemsContainer, CartItems } from "../Items/style.jsx";
+import { ItemsContainer, CartItems } from "../Items/style.js";
 import { Trash2 } from "lucide-react";
 export default function Items(props) {
   const { cart, setCart} = props;
@@ -36,11 +36,14 @@ function deleteCartItem(product) {
   return cart.map((item) => (
     <ItemsContainer key={item.id}>
       <CartItems>
-        <p>{item.name}</p>
-        <p>Valor:{item.value}</p>
-        <p>Qtd:{item.quantity}</p>
+        <img src={item.imageUrl}/>
+        <p>{item.quantity}x</p>
+        <p>{item.value.toLocaleString("pt-br", {
+            style: "currency",
+            currency: "BRL",
+          })}</p>
         <button onClick={()=>deleteCartItem(item)}>
-          <Trash2 />
+          <Trash2 size={20}/>
         </button>
       </CartItems>
     </ItemsContainer>

@@ -1,11 +1,25 @@
 /* eslint-disable react/prop-types */
 
-import { HomeContainer, CardContainer, ContainerInfo } from "./style.jsx";
+import {
+  HomeContainer,
+  CardContainer,
+  ContainerOrdination,
+  FiltroContainer,
+  TopBarContainer,
+} from "./style.js";
 import ProductCard from "../ProductCard";
 import { useState } from "react";
 
 export default function Home(props) {
-  const { Products, cart, setCart,searchFiltered  } = props;
+  const {
+    Products,
+    cart,
+    setCart,
+    searchFiltered,
+    searchFilter,
+    setSearchFilter,
+  } = props;
+
   const [ordination, setOrdination] = useState("asc");
 
   const filteredList = Products.sort((a, b) => {
@@ -15,14 +29,32 @@ export default function Home(props) {
     if (ordination === "desc" || ordination === "") {
       return b.value - a.value;
     }
+  }).filter((item) => {
+    if(item.name.toLowerCase().includes(searchFilter) || searchFilter === ""){
+      return item
+    }if(item.name.toUpperCase().includes(searchFilter) || searchFilter === ""){
+      return item
+    }
+      
+    
   });
 
   return (
     <HomeContainer>
-      <ContainerInfo>
-        <h3>Quantidade de produtos:</h3>
-        <div>
-          <h4>Ordenação</h4>
+      <TopBarContainer>
+        <FiltroContainer>
+          <label htmlFor="textNome">Search Item</label>
+
+          <input
+            value={searchFilter}
+            onChange={(e) => setSearchFilter(e.target.value)}
+            type="text"
+            id="textNome"
+            name="textNome"
+            placeholder="Products..."
+          />
+        </FiltroContainer>
+        <ContainerOrdination>
           <select
             value={ordination}
             name="seleçãoOrdem"
@@ -31,12 +63,19 @@ export default function Home(props) {
             <option value="asc">Crescente</option>
             <option value="desc">Decrescente</option>
           </select>
-        </div>
-      </ContainerInfo>
+        </ContainerOrdination>
+      </TopBarContainer>
 
-      <CardContainer>
-        <ProductCard  searchFiltered={searchFiltered} Products={filteredList} cart={cart} setCart={setCart} />
-      </CardContainer>
-    </HomeContainer>
+      
+        <CardContainer>
+          <ProductCard
+            searchFiltered={searchFiltered}
+            Products={filteredList}
+            cart={cart}
+            setCart={setCart}
+          />
+        </CardContainer>
+      </HomeContainer>
+    
   );
 }

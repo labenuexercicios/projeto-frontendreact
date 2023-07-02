@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0px;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-   
+    border: none;
 
     
    }
@@ -14,6 +14,8 @@ export const GlobalStyle = createGlobalStyle`
 
    body {
     background: #EDEDED;
+  
+
    }
    
    :root {
@@ -29,7 +31,12 @@ export const GlobalStyle = createGlobalStyle`
 
 `;
 export const Wrapper = styled.div`
-  width: 100%;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  padding-top: 24px;
+  gap: 10px;
+  width: 100vw;
   height: 100vh;
-  display: flex;
 `;

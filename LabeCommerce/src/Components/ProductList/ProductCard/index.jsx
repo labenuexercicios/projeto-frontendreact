@@ -24,9 +24,9 @@ export default function ProductCard(props) {
 
   return Products.map((item) => (
     <CardContainer key={item.id}>
-      <div>
+      
         <img src={item.imageUrl} alt="Imagem do Produto" />
-      </div>
+      
 
       <Name>{item.name}</Name>
       <div>
@@ -39,6 +39,7 @@ export default function ProductCard(props) {
             addCart(item);
           }}
         >
+          
           <ShoppingBag />
           
         </button>
