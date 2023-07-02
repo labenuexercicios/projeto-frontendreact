@@ -11,23 +11,28 @@ const Home = ({addToCart, ProductList, setOrdination, ordination, filteredProduc
   
   return ( 
     <HomeStyle>
-      <HomeHeader>
-        <h4>Galeria de produtos: {quantidade} produtos</h4>
-          <label>
-              Ordernar por:
-            <select value={ordination} onChange={HandleOrdem}>
-                <option>Selecione</option>
-                <option>Maior preço</option>
-                <option>Menor preço</option>   
-            </select>
-          </label>
-      </HomeHeader>
-      <HomeGalery>
-          <ProductCard 
-          ProductList={ProductList} 
-          addToCart={addToCart} 
-          filteredProducts={filteredProducts} />
-      </HomeGalery>
+        <HomeHeader>
+        
+          <h4><i class="fa fa-th" aria-hidden="true"></i>Galeria: {quantidade} produtos encontrados</h4>
+            <div>
+              
+              <label>
+              <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>Ordernar por:
+                <select value={ordination} onChange={HandleOrdem}>
+                    <option><p>Selecione</p></option>
+                    <option>Maior preço</option>
+                    <option>Menor preço</option>
+                </select>
+              </label>
+            </div>
+        </HomeHeader>
+        <HomeGalery>
+            <ProductCard
+            ProductList={ProductList}
+            addToCart={addToCart}
+            filteredProducts={filteredProducts} />
+        </HomeGalery>
+  
     </HomeStyle> 
   )
 }

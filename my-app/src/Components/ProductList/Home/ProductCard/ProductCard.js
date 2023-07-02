@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card , Etiqueta } from './productCardStyle'
+import { Card , Etiqueta, Lista } from './productCardStyle'
 
 
 const ProductCard = ({addToCart, filteredProducts}) => {
@@ -13,17 +13,19 @@ const ProductCard = ({addToCart, filteredProducts}) => {
       <Etiqueta>
         <h4>{item.name}</h4>
         <p>{item.description}</p>
-        <p>{item.price}</p>
-        <button onClick={() => addToCart(item)}>Adicionar</button>
+        <div>
+          <h4>R$ {item.price.toFixed(2)}</h4>
+          <button onClick={() => addToCart(item)}><p>+</p></button>
+        </div>
       </Etiqueta>
       </Card>
     )
   })
 
   return ( 
-    <div>
+    <Lista>
       {listaRenderizada}
-    </div>
+    </Lista>
   )
 }
 

@@ -17,13 +17,14 @@ const Filters = ({valorMax, valorMin, setValorMin, setValorMax}) => {
     <Search> 
       <Form action="">
         <label>
-          Valor Mínimo: <input type="number" value={valorMin} min="1" max="1000" onChange={handleValorMin}/>
+        <i class="fa fa-filter" aria-hidden="true"></i>
+          Valor Mínimo: <input type="number" placeholder='R$' value={valorMin} min="1" max="1000" onChange={handleValorMin}/>
         </label>
-        <hr/> 
         <label>
-          Valor Maximo: <input type="number" value={valorMax} min="1" max="1000" onChange={handleValorMax}/>
+        <i class="fa fa-filter" aria-hidden="true"></i>
+          Valor Máximo: <input type="number" placeholder='R$' value={valorMax} min="1" max="1000" onChange={handleValorMax}/>
         </label>
-        <hr/>   
+  
       </Form>   
     </Search>
   )

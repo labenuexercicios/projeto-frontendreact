@@ -10,15 +10,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  p {
-    font-size: 10px;
-    color: grey;
+  p, h5, h4, label {
+    color: #2D2D2D;
   }
 
-  h4 {
-    font-size: 12px;
-    color: grey;
-
+  h4, h5, label {
+    font-family: 'MuseoModerno', cursive;
   }
 
 `
