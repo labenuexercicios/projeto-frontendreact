@@ -9,10 +9,10 @@ export const CartItems = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  gap: 10px;
-  margin: auto;
+  gap: 5px;
+  
   height: min(100%,5rem) ;
-  width: min(90%,25rem);
+  width: min(100%,25rem);
   
   
   padding: 2px 0px 0px;
