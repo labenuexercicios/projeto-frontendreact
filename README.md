@@ -10,7 +10,7 @@
 ## Home (Lista de Produtos)
 + Visualizar uma lista de produtos.
 + Visualizar os dados do produto (nome, preço e imagem).
-+ Adicionar um produto ao carrinho.<br> <img src= >
++ Adicionar um produto ao carrinho.<br> 
 ## Carrinho
 + Visualizar os produtos adicionados.
 + Visualizar a quantidade correta de cada produto no carrinho.
