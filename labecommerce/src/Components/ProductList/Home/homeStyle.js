@@ -9,9 +9,6 @@ export const HomeStyle = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr;
     gap:3rem; 
-    padding-top:3rem;
-    
-    
 
 `;
 

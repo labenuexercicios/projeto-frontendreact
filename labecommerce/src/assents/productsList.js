@@ -7,7 +7,7 @@ const productsList=
           id: 1,
           name: "Camiseta balões de planetas",
           description:" Camiseta preta, adulto, 100% Poliéster Sublimação Total",
-          price: 85.00,
+          price: 35.00,
           // image:<img src="./utils/cam1.jpg" alt= "camisa1"/>,
           
           image:"https://www.useupdate.com.br/media/product/f43/camiseta-astronauta-8a1.jpg"
@@ -16,7 +16,7 @@ const productsList=
           id: 2,
           name: "Camiseta Amor Espacial",
           description:" Camiseta preta, adulto, 100% Poliéster Sublimação Total",
-          price: 99.00,
+          price: 29.90,
           image:"https://www.useupdate.com.br/media/product/ede/camiseta-astronauta-in-love-10f.jpg"
           // image: <img src="./src/utils/cam2.jpg"/>,
           // image: require("./utils/cam1.jpg").default,
@@ -27,7 +27,7 @@ const productsList=
           id: 4,
           name: "Camiseta Universo",
           description:"Camiseta preta, adulto, 100% Poliéster Sublimação Total",
-          price: 49.90,
+          price: 25.90,
           image:"https://http2.mlstatic.com/D_NQ_NP_635057-MLB47118074547_082021-O.webp",
           
         },
@@ -35,7 +35,7 @@ const productsList=
           id: 5,
           name: "Camiseta Espaço",
           description:"Camiseta branca, mangas pretas, infantil, 100% Poliéster Sublimação Total",
-          price: 100.00,
+          price: 19.00,
           image:"https://photos.enjoei.com.br/camiseta-infantil-menino-raglan-preciso-de-mais-espaco-astronauta-12/1200xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy81NTgxMzM2L2Q0ZGEyNTA4NTkyZDdkNjA3ODU1NDI0ZDRjM2M4ZGUxLmpwZw"
         },
         {
@@ -49,7 +49,7 @@ const productsList=
           id: 6,
           name: "Camiseta Planetas",
           description:"Camiseta cinza, infanto-juvenil, 100% Poliéster Sublimação Total",
-          price: 150.00,
+          price: 49.00,
           image:"https://cf.shopee.com.br/file/ea14db8e378e5935d29112147506c2ec"
           
         }
