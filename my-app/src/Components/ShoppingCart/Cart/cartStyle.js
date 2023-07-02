@@ -4,11 +4,14 @@ export const CartStyle = styled.div`
     h4 {
       font-size: 1.5vw;
       color: white;
+      margin-left: 5px;
     }
 
     i {
-      margin-right: 8px;
+      margin-right: 6px;
     }
+    
+
     padding: 0.8vw;
     margin-left: 1vw;
     width: 21vw;
@@ -50,4 +53,28 @@ export const Lista = styled.div`
     }
     
     
+`
+
+export const Button = styled.button`
+
+    
+    border-radius: 2.1vw;
+    height: 2.1vw;
+    width: 2.1vw;
+        
+    border: none;
+    background-color: #83A3C9;
+    color: #5E7796;
+    
+
+    :hover {
+        background-color: #c70035;
+        color: #63001b;
+    }
+
+    i {
+      margin-right: 0;
+    }
+
+  
 `

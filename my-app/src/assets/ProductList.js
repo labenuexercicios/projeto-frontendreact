@@ -116,7 +116,7 @@ const ProductList = [
     },
     {
         name: 'BRINQUEDO ALPHA',
-        id: 9,
+        id: 10,
         rate: 3.5,
         category: 'Brinquedos',
         price: 230.90,
@@ -126,7 +126,7 @@ const ProductList = [
     },
     {
         name: 'BRINQUEDO BETA',
-        id: 9,
+        id: 11,
         rate: 3.5,
         category: 'Brinquedos',
         price: 280.90,
@@ -136,7 +136,7 @@ const ProductList = [
     },
     {
         name: 'BRINQUEDO GAMA',
-        id: 9,
+        id: 12,
         rate: 3.5,
         category: 'Brinquedos',
         price: 210.90,
@@ -155,7 +155,7 @@ const ProductList = [
         image: brinquedo4
     },{
         name: 'BRINQUEDO EPSILON',
-        id: 9,
+        id: 13,
         rate: 3.5,
         category: 'Brinquedos',
         price: 350.90,
@@ -164,7 +164,7 @@ const ProductList = [
         image: brinquedo5
     },{
         name: 'BRINQUEDO ZETA',
-        id: 9,
+        id: 14,
         rate: 3.5,
         category: 'Brinquedos',
         price: 320.90,
@@ -173,7 +173,7 @@ const ProductList = [
         image: brinquedo6
     },{
         name: 'BRINQUEDO OMIKRON',
-        id: 9,
+        id: 15,
         rate: 3.5,
         category: 'Brinquedos',
         price: 178.90,
@@ -182,7 +182,7 @@ const ProductList = [
         image: brinquedo7
     },{
         name: 'BRINQUEDO OMEGA',
-        id: 9,
+        id: 16,
         rate: 3.5,
         category: 'Brinquedos',
         price: 199.90,
@@ -191,7 +191,7 @@ const ProductList = [
         image: brinquedo8
     },{
         name: 'BRINQUEDO PHI',
-        id: 9,
+        id: 17,
         rate: 3.5,
         category: 'Brinquedos',
         price: 145.90,
@@ -200,7 +200,7 @@ const ProductList = [
         image: brinquedo9
     },{
         name: 'BRINQUEDO THETA',
-        id: 9,
+        id: 18,
         rate: 3.5,
         category: 'Brinquedos',
         price: 120.90,
@@ -209,7 +209,7 @@ const ProductList = [
         image: brinquedo10
     },{
         name: 'BRINQUEDO KAPPA',
-        id: 9,
+        id: 19,
         rate: 3.5,
         category: 'Brinquedos',
         price: 122.90,
@@ -218,7 +218,7 @@ const ProductList = [
         image: brinquedo11
     },{
         name: 'BRINQUEDO LAMBDA',
-        id: 9,
+        id: 20,
         rate: 3.5,
         category: 'Brinquedos',
         price: 140.90,
@@ -227,7 +227,7 @@ const ProductList = [
         image: brinquedo12
     },{
         name: 'BRINQUEDO SIGMA',
-        id: 9,
+        id: 21,
         rate: 3.5,
         category: 'Brinquedos',
         price: 320.90,
@@ -236,7 +236,7 @@ const ProductList = [
         image: brinquedo13
     },{
         name: 'BRINQUEDO PI',
-        id: 9,
+        id: 22,
         rate: 3.5,
         category: 'Brinquedos',
         price: 285.90,

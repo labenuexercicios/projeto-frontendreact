@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import Items from './Items/Items'
-import { CartStyle , Lista } from './cartStyle'
+import { CartStyle , Lista, Button } from './cartStyle'
 
 
 const Cart = ( {cart, setCart, amount, setAmount} ) => {
@@ -12,6 +12,10 @@ const Cart = ( {cart, setCart, amount, setAmount} ) => {
     setAmount(newTotalPrice.toFixed(2));
 
   }, [cart]);
+
+  const clearCart = () => {
+    setCart([])
+  }
 
   const removerItem = (produto) => {
     const ProductToDelete = cart
@@ -37,15 +41,19 @@ const Cart = ( {cart, setCart, amount, setAmount} ) => {
 
   return (
     <CartStyle>
-      <h4><i class="fa fa-shopping-cart" aria-hidden="true"></i>Carrinho</h4>
+        <h4><i class="fa fa-shopping-cart" aria-hidden="true"></i>Carrinho</h4>
       <Lista>
-        
+  
         <Items 
         cart={cart}
         removerItem={removerItem}/>
 
-        <h4>Total: R$ {amount}</h4>
+        
       </Lista>
+      <div>
+          <h4>Total: R$ {amount}</h4>
+          <Button onClick={clearCart}><i class="fa fa-trash-o" aria-hidden="true"/></Button>
+      </div>
         
     </CartStyle>
   )

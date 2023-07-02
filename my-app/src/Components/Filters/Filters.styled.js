@@ -5,7 +5,25 @@ export const Search = styled.aside`
 
     padding: 1vh;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
+    p {
+        color: white;
+        font-size: 0.9vw;
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    i {
+        margin: 0 3px;
+        color: white;
+    }
        
 `
 
@@ -18,6 +36,7 @@ export const Form = styled.form`
 
     i {
         margin-right: 8px;
+        color: #3CFFF3;
     }
 
     label {
