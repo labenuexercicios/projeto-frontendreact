@@ -3,11 +3,12 @@ import { FooterStyle } from "./footerStyle";
 
 const Footer = () =>{
     return(
-        <div>
-            <h1>Footer</h1>
-        </div>
+    <FooterStyle>
+        <span>Todos os direitos reservados ©</span>
+        <span>Desenvolvido por: Renata Santos</span>
+    </FooterStyle>
     )
 
-}
+};
 
 export default Footer

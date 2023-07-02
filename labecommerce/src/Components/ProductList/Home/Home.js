@@ -5,29 +5,29 @@ import { useState } from 'react'
 import InfoProdutos from '../InfoProdutos/InfoProdutos'
 import productsList from '../../../assents/productsList'
 
-const Home = (props) => {
+const Home = ({productsList}) => {
   const [ordination, setOrdination] = useState('');
 
   const handleOrdinationChange = (event) => {
     setOrdination(event.target.value);
   };
-  const {products} = props;
+ 
+  // const {productList} = props;
   
   return (
     <>
     
       <HomeStyle>
-        {products.map((product) => (
+      {productsList.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
       </HomeStyle>
           
-      {/* <InfoProdutos products = {productsList}/> */}
       
       {/* <div> // Fiz a chamada no componente InfoProdutos
         <InfoProdutos ordination={ordination} onOrdinationChange={handleOrdinationChange} />
       </div> */}
-    
+
     </>
     );
     

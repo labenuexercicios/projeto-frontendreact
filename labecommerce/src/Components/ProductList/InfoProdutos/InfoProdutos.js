@@ -1,20 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Nav } from './infoProdutosStyle'
-import productsList from '../../../assents/productsList';
-import { useState } from 'react';
+import productsList from '../../../assents/productsList'
 
 
 
- const InfoProdutos = ( {ordination, onOrdinationChange} ) => {
-
-  // const totalQuantity = productsList.reduce((total, product) => total + product.quantity, 0);
-
+ const InfoProdutos = ( {ordination, onOrdinationChange,productsList} ) => {
+  
+  
   return (
     <Nav>
-     <div>
-       {/* <p>Total de Produtos: {totalQuantity}</p> */}
-       <p>Produtos encontrados: {productsList.length}</p>
-     </div>
+      <p>Quantidade de Produtos:{productsList.length} </p>
      <div>
        <select value={ordination} onChange={onOrdinationChange}>
          <option value="">Selecione a ordenação</option>

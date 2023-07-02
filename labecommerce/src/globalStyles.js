@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 //deixa em colunas Filter/|Product/Cart
+
 export const PageStyle = styled.div`
     display:grid;
     grid-template-columns: 20% 60% 20%;
@@ -24,6 +25,14 @@ export const PageStyle = styled.div`
     padding-top:2rem;
     height:60vh;
    
+`;
+
+export const Button = styled.button`
+width:10vw;
+height:6vh;
+border-radius:4px;
+align-items:center;
+justify-content:center;
 `
 
 export default GlobalStyle;
