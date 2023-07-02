@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Items from './Items/Items'
-import { CartStyle , Lista } from './CartStyle'
+import { CartStyle , Lista } from './cartStyle'
 
 
 const Cart = ( {cart, setCart, amount, setAmount} ) => {
