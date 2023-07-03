@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.36172cf6.js",
+    "static/js/787.92dac8f2.chunk.js": "/static/js/787.92dac8f2.chunk.js",
+    "static/media/T-Shirt2.jpg": "/static/media/T-Shirt2.fde0c4ff755d1b76b5b5.jpg",
+    "static/media/T-Shirt4.jpg": "/static/media/T-Shirt4.9bf947b2037e7f483600.jpg",
+    "static/media/asteroids.jpg": "/static/media/asteroids.fa0f64509bc527c3dae2.jpg",
+    "static/media/Wallpaper.jpg": "/static/media/Wallpaper.f71893bce46c2ab4bb97.jpg",
+    "static/media/T-Shirt1.jpg": "/static/media/T-Shirt1.8f48ee461f437a8959da.jpg",
+    "static/media/T-Shirt9.jpg": "/static/media/T-Shirt9.3b11c03fa843320f4190.jpg",
+    "static/media/T-Shirt3.jpg": "/static/media/T-Shirt3.041c200b058aa712d627.jpg",
+    "static/media/T-Shirt8.jpg": "/static/media/T-Shirt8.6b3dd1e38b202c13b1c6.jpg",
+    "static/media/T-Shirt5.jpg": "/static/media/T-Shirt5.79710e72fd290cc97f91.jpg",
+    "static/media/T-Shirt10.jpg": "/static/media/T-Shirt10.287c4ec2ea09108f38e2.jpg",
+    "static/media/T-Shirt12.jpg": "/static/media/T-Shirt12.da253056f618939f17bf.jpg",
+    "static/media/T-Shirt7.jpg": "/static/media/T-Shirt7.e4f4ec71cb0f16e53079.jpg",
+    "static/media/T-Shirt11.jpg": "/static/media/T-Shirt11.e97ab9a28e8d8ac317a4.jpg",
+    "static/media/T-Shirt6.jpg": "/static/media/T-Shirt6.956028d1e0395beab7b3.jpg",
+    "static/media/astronaut.svg": "/static/media/astronaut.bfb79a1f85a586c933d6a6920f7801ba.svg",
+    "static/media/rocket.svg": "/static/media/rocket.872db682bbb52e9247c29d6d79f1ce83.svg",
+    "static/media/tiktok.svg": "/static/media/tiktok.14f350e3a13d061d74d4461c4c290703.svg",
+    "index.html": "/index.html",
+    "static/media/instagram.svg": "/static/media/instagram.97209d5c4040b71ea805a5a9e587abcd.svg",
+    "static/media/facebook.svg": "/static/media/facebook.1fc810a8e15c60ec41d7d0586cb4c1d5.svg",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.36172cf6.js.map": "/static/js/main.36172cf6.js.map",
+    "787.92dac8f2.chunk.js.map": "/static/js/787.92dac8f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.36172cf6.js"
+  ]
+}
