@@ -62,7 +62,8 @@ cd Projeto-frontendreact.
 Agora você está pronto para usar o Frontendreact!
 
 Contribuindo
-### Para contribuir com o desenvolvimento do Frontendreact, abra uma issue ou envie um pull request. Agradecemos seu apoio!
+### Para contribuir com o desenvolvimento do Frontendreact, abra uma issue ou envie um pull request, visite também a página do projeto  (https://github.com/Lu4n-M0ur4/projeto-frontendreact/settings/pages).
+ Agradecemos seu apoio!
 <br><br><br>
 # Contato
 ## Em caso de dúvidas ou sugestões, entre em contato pelo email luan.moura-rj@hotmail.com ou através do número 21-99363-6584.
