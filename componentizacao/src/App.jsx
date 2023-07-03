@@ -1,22 +1,35 @@
-import { useState } from 'react'
-import { Filters } from './Components/Filters/Filters';
-import { Home } from './Components/ProductList/Home/Home';
-import { ProductCard } from './Components/ProductList/ProductCard/ProductCard';
-import { Cart } from './Components/ShoppingCart/Cart/Cart';
-import { Items } from './Components/ShoppingCart/Items/Items';
+import { useState } from "react";
+import { Filters } from "./Components/Filters/Filters";
+import { Cart } from "./Components/ShoppingCart/Cart/Cart";
+import { GlobalStyle } from "./GlobalStyle";
+import { Home } from "./Components/ProductList/Home/Home";
+import { ProductCard } from "./Components/ProductList/ProductCard/ProductCard";
+import { productList } from "./assets/productlist";
+import { Header } from "./Components/Header/Header";
+import styled from "styled-components";
 
-function App() {
+const Container = styled.div`
+  display: flex;
+`;
+
+const App = () => {
+
+  const renderProduct = productList
+ 
+  .map((product, id) => {
+    return <ProductCard key={id} product={product} />;
+  });
 
   return (
-    <div>
-      <h1>Labecommerce</h1>
-      <Filters />
-      <Home />
-      <ProductCard />
-      <Cart />
-      <Items />
-    </div>
-  )
-}
-
+    <>
+      <GlobalStyle />
+      <Header/>
+      <Container>
+        <Filters />
+        <Home renderProduct={renderProduct} />
+        <Cart />
+      </Container>
+    </>
+  );
+};
 export default App;
