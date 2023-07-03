@@ -3,13 +3,22 @@ import logo from "../utils/Logo.png";
 import { BiMenuAltRight } from "react-icons/bi";
 import { BsCart } from "react-icons/bs";
 import { ProductContext } from "../hooks/useProductContext";
+import { useCartContext } from "../hooks/useCartContext";
+import { SideBarContext } from "../hooks/SideBarContext";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const { isOpen, setIsOpen } = useContext(SideBarContext);
+  const { amount } = useContext(useCartContext);
 
   const toogleNav = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!open);
   };
+
+  const openCart = () => {
+    setIsOpen(true);
+  };
+
 
   const { searchProducts, setSearchProducts } = useContext(ProductContext);
 
@@ -39,7 +48,7 @@ const Header = () => {
 
         <div
           className={`w-full flex-grow lg:flex lg:items-center lg:w-auto ${
-            isOpen ? "" : "hidden"
+            open ? "" : "hidden"
           }`}
         >
           <ul className=" lg:flex justify-end flex-1 items-center">
@@ -69,8 +78,15 @@ const Header = () => {
               </a>
             </li>
             <li className="mr-3">
-              <div className="inline-block text-black no-underline hover:text-gray-700 ease-in-out hover:text-underline py-2 px-4 cursor-pointer text-xl">
-                <BsCart size={24} />
+            <div className="flex">
+                <div
+                  onClick={openCart}
+                  className="inline-block text-black no-underline py-2 px-4 cursor-pointer text-xl">
+                  <BsCart size={24} />
+                </div>
+                <div>
+                  {amount}
+                </div>
               </div>
             </li>
           </ul>
