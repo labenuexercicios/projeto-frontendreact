@@ -18,7 +18,7 @@ export const AppStyled = styled.div`
 
 
 export const Fundo = styled.div`
-    background-image: url('/fundo.png');
+    background-image: url('./fundo.png');
     overflow: hidden;
     position: absolute;
     top: 0;
