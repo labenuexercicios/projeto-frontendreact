@@ -10,7 +10,7 @@ const Card = () => {
         <>
             <div className="flex justify-center border mt-12">
                 <div className="flex">
-                    <input
+                    {/* <input
                         type="range"
                         min={40.00}
                         max={184.00}
@@ -18,7 +18,7 @@ const Card = () => {
                         onChange={(e) => setPreco(e.target.value)}
                         step={10}
                         className="w-48 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-slate-900"
-                    />
+                    /> */}
                 </div>
                 <span className="border-solid border-2 border-slate-900 w-18  text-center font-bold"></span>
             </div>
