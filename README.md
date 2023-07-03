@@ -6,8 +6,8 @@
 ## General info
 
 Table of contents
-* [Overview](#overview)
 * [Technologies](#technologies)
+* [Overview](#overview)
 * [Setup](#setup)
 
 ## Technologies
