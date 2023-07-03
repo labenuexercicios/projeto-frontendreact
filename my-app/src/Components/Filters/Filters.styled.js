@@ -23,6 +23,13 @@ export const Search = styled.aside`
     i {
         margin: 0 3px;
         color: white;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    
+    i:hover {
+    transform: scale(1.2);
+    color: #85F83F;
     }
        
 `
@@ -36,7 +43,13 @@ export const Form = styled.form`
 
     i {
         margin-right: 8px;
-        color: #3CFFF3;
+        color: #85F83F;
+        transition: none;
+    }
+
+    i:hover {
+        color: #85F83F;
+        transform: none;
     }
 
     label {
