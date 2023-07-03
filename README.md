@@ -26,8 +26,8 @@
 <br><br>
 ## Reponsividade 
 + Layout Mobile <br> <img src="./LabeCommerce/public/Layout%20mobile%20375x667.png" >
-+ WideScreen <br> <img src="./labeCommerce/public/Layout%20WideScreem%201482x966.png">
-+ FullScreen  <br> <img src="./labeCommerce/public/Layout%20FullHD%203390x966.png">
++ WideScreen <br> <img src="./LabeCommerce/public/Layout%20FullHD%203390x966.png">
+
 <br><br>
 *Nota: Há uma barra de rolagem permitindo a vizualização dos demais produtos*
 <br>
