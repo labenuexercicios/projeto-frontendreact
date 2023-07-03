@@ -9,6 +9,7 @@ Table of contents
 * [Overview](#overview)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Run & Deploy](#run--deploy)
 
 ## Technologies
 👩🏻‍💻 Project is created with:
@@ -41,5 +42,29 @@ The Project has 3 great sections:
     - Per name
     - Price Sorting
 
-## Deploy
+## Run & Deploy
+
+These are prerequisites for installing:
+-   Node.js
+-   npm
+
+To install dependencies in your project directory and run the application in your computer, run the following commands:
+
+```sh
+npm install
+```
+
+---
+
+```sh
+npm run start
+```
+
+---
+
+
+[Link do Deploy](https://marcela-celani.github.io/astrodev-store/)
+
+
+
   

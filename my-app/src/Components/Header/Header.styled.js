@@ -11,7 +11,6 @@ export const HeaderStyled = styled.header`
   
     img {
         height: 100px;
-
     }
 
     /* ul {
