@@ -1,5 +1,11 @@
-import { CartContainer } from "./style.jsx";
+import {
+  CartContainer,
+  ItensContainer,
+  TopBagContainer,
+  TotalCart,
+} from "./style.js";
 import Items from "../Items";
+import { BaggageClaim, Store,ArrowBigRightDash } from "lucide-react";
 
 import { useEffect } from "react";
 
@@ -30,14 +36,26 @@ export default function Cart(props) {
 
   return (
     <CartContainer>
-      <h1>Cart</h1>
+      <TopBagContainer>
+        <Store color="var(--ui-success)" size={50} strokeWidth={1.5} />
+        <h1>Bag</h1>
+      </TopBagContainer>
 
-      <Items cart={cart} setCart={setCart} />
+      <ItensContainer>
+        <Items cart={cart} setCart={setCart} />
+      </ItensContainer>
 
-      <h4>
-        Valor Total:
-        {amount.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
-      </h4>
+      <TotalCart>
+        <BaggageClaim color="var(--ui-placeholder)" size={40} strokeWidth={1.5} />
+        <ArrowBigRightDash size={30} strokeWidth={2.0}/>
+        <p>
+           {" "}
+          {amount.toLocaleString("pt-br", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </p>
+      </TotalCart>
     </CartContainer>
   );
 }

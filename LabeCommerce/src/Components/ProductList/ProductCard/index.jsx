@@ -1,7 +1,7 @@
-/* eslint-disable react/jsx-key */
-// eslint-disable-next-line no-unused-vars
+
 import React from "react";
-import { CardContainer } from "./style.jsx";
+import { ShoppingBag } from "lucide-react";
+import { CardContainer, Price, Name } from "./style.js";
 
 export default function ProductCard(props) {
   const { Products, setCart, cart } = props;
@@ -24,20 +24,26 @@ export default function ProductCard(props) {
 
   return Products.map((item) => (
     <CardContainer key={item.id}>
-      <div>
+      
         <img src={item.imageUrl} alt="Imagem do Produto" />
-      </div>
+      
 
-      <p>{item.name}</p>
+      <Name>{item.name}</Name>
       <div>
-        <p>{item.value}</p>
+        <Price>{item.value.toLocaleString("pt-br", {
+            style: "currency",
+            currency: "BRL",
+          })}
         <button
           onClick={() => {
             addCart(item);
           }}
         >
-          Adicionar ao Carrinho
+          
+          <ShoppingBag />
+          
         </button>
+        </Price>
       </div>
     </CardContainer>
   ));
