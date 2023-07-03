@@ -6,7 +6,7 @@ const Items = ({cart, removerItem}) => {
   const itensCart = cart.map((item, id) => {
     return (
       <ItensStyle key={id}>
-        <img src={item.image}/>
+        <img src={item.image} alt='imagem do produto'/>
         <div id='etiqueta'>
           <h5>{item.name}</h5>
           <div id='label'>

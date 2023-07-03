@@ -58,9 +58,9 @@ export const Lista = styled.div`
 export const Button = styled.button`
 
     
-    border-radius: 2.1vw;
-    height: 2.1vw;
-    width: 2.1vw;
+    border-radius: 2.3vw;
+    height: 2.3vw;
+    width: 2.3vw;
         
     border: none;
     background-color: #83A3C9;

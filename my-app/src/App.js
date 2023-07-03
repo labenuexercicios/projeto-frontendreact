@@ -3,7 +3,7 @@ import Header from './Components/Header/Header'
 import Filters from './Components/Filters/Filters'
 import Home from './Components/ProductList/Home/Home'
 import Cart from './Components/ShoppingCart/Cart/Cart'
-import { AppStyled, Fundo, Geral } from './App.styled'
+import { AppStyled, Fundo } from './App.styled'
 import ProductList from './assets/ProductList';
 import ProductCard from './Components/ProductList/Home/ProductCard/ProductCard';
 

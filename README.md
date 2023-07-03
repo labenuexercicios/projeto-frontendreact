@@ -40,4 +40,6 @@ The Project has 3 great sections:
     - Per min and max price
     - Per name
     - Price Sorting
+
+## Deploy
   
