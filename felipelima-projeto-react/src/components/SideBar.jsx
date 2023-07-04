@@ -8,7 +8,7 @@ import { BsFillTrashFill } from "react-icons/bs";
 
 const SideBar = () => {
   const { isOpen, handleClose } = useContext(SideBarContext);
-  const { cart, clearCart, total, amount} = useContext(useCartContext);
+  const { cart, clearCart, total, amount, finishCart} = useContext(useCartContext);
   return (
     <>
       <div
@@ -45,7 +45,7 @@ const SideBar = () => {
           </div>
 
           <div className="bg-gray-400 flex p-4 justify-center items-center text-primary w-full">
-            Finalizar compras
+            <button onClick={finishCart} >Finalizar compras</button>
           </div>
         </div>
       </div>

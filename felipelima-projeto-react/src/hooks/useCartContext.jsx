@@ -10,6 +10,16 @@ const CartProvider = ({ children }) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart"));
+
+    if (savedCart) {
+      setCart(savedCart);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+
     const total = cart.reduce((accumulator, currentItem) => {
       return accumulator + currentItem.price * currentItem.amount;
     }, 0);
@@ -28,7 +38,6 @@ const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addCart = (product, id) => {
-    //INICIALIZA O OBJETO COM 1
     const newItem = { ...product, amount: 1 };
 
     const cartItem = cart.find((item) => {
@@ -50,7 +59,10 @@ const CartProvider = ({ children }) => {
     }
   };
 
-  // REMOVE CART  DO CARRINHO
+  const finishCart = (id) => {
+    alert("Pedido finalizado!")
+    clearCart()
+  }
 
   const removeCart = (id) => {
     const newCart = cart.filter((item) => {
@@ -59,19 +71,14 @@ const CartProvider = ({ children }) => {
     setCart(newCart);
   };
 
-  // REMOVE TODOS OS ITENS DO CARRINHO
   const clearCart = () => {
     setCart([]);
   };
-
-  // AUMENTAR A QUANTIDADE DE PRODUTOS
 
   const increaseAmount = (id) => {
     const cartItem = cart.find((item) => item.id === id);
     addCart(cartItem, id);
   };
-
-  // DIMINUIR A QUANTIDADE DE PRODUTOS
 
   const decreaseAmount = (id) => {
     const cartItem = cart.find((item) => {
@@ -89,7 +96,7 @@ const CartProvider = ({ children }) => {
       setCart(newCart);
     }
     if (cartItem.amount < 2) {
-      removeCart(id)
+      removeCart(id);
     }
   };
 
@@ -105,11 +112,12 @@ const CartProvider = ({ children }) => {
         decreaseAmount,
         amount,
         total,
+        finishCart
       }}
     >
       {children}
     </useCartContext.Provider>
-  )
+  );
 };
 
-export default CartProvider 
+export default CartProvider;

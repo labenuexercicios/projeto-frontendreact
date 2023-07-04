@@ -19,7 +19,6 @@ const Header = () => {
     setIsOpen(true);
   };
 
-
   const { searchProducts, setSearchProducts } = useContext(ProductContext);
 
   return (
@@ -78,15 +77,14 @@ const Header = () => {
               </a>
             </li>
             <li className="mr-3">
-            <div className="flex">
+              <div className="flex">
                 <div
                   onClick={openCart}
-                  className="inline-block text-black no-underline py-2 px-4 cursor-pointer text-xl">
+                  className="inline-block text-black no-underline py-2 cursor-pointer text-xl"
+                >
                   <BsCart size={24} />
                 </div>
-                <div>
-                  {amount}
-                </div>
+                {amount > 0 && <div>{amount}</div>}
               </div>
             </li>
           </ul>

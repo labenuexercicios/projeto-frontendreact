@@ -13,10 +13,10 @@ const CartItem = ({ item }) => {
         <img src={image} alt="Imagem do produto" className="max-w-[70px]" />
 
         <div className="flex gap-3 items-center">
-          <div className="w-6 h-4 bg-black text-white flex items-center justify-center flex-col">
+          <div className="w-6 h-6 bg-black text-white flex items-center justify-center flex-col">
             <span onClick={() => increaseAmount(id)} className="m-auto cursor-pointer">+</span>
           </div>
-          <div onClick={() => decreaseAmount(id)} className="w-6 h-4 bg-black text-white flex items-center justify-center flex-col">
+          <div onClick={() => decreaseAmount(id)} className="w-6 h-6 bg-black text-white flex items-center justify-center flex-col">
             <span className="m-auto cursor-pointer">-</span>
           </div>
         </div>
