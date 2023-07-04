@@ -25,7 +25,7 @@ Esse é o projeto de introdução aos fundamentos do React. O objetivo é que fu
 
 # Tecnologias utilizadas
 
-## Front end
+## Front-end
 
 - React
 - JSX
@@ -44,7 +44,7 @@ Esse é o projeto de introdução aos fundamentos do React. O objetivo é que fu
 
 # Como executar o projeto
 
-## Front end web
+## Front-end web
 Pré-requisitos: npm 
 
 ```bash / terminal
