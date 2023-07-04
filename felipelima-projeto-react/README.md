@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Labe-commerce
+[![NPM](https://img.shields.io/npm/l/react)]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sobre o projeto
 
-## Available Scripts
+https://felipe-lima.surge.sh/
 
-In the project directory, you can run:
+Labe-commerce é uma aplicação Front-end construída durante o curso da [Labenu](https://www.labenu.com.br/ "Site da Labenu").
 
-### `npm start`
+Esse é o projeto de introdução aos fundamentos do React. O objetivo é que funcione como o front-end de um E-Commerce.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Layout mobile
+![Mobile 1](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/mobile1.png) ![Mobile 2](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/mobile2.png) ![Mobile 3](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/mobile3.png) ![Mobile 4](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/mobile4.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Layout web
+![Web 1](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/1.png)
 
-### `npm test`
+![Web 2](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/2.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Web 3](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/3.png)
 
-### `npm run build`
+![Web 4](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/4.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Web 5](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/5.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Web 6](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/6.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Tecnologias utilizadas
 
-### `npm run eject`
+## Front end
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React
+- JSX
+- Componentes
+- Props
+- Estado
+- Tailwind
+- Fluxo de dados no React
+- Renderização de listas
+- Renderização condicional
+- localStorage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Implantação em produção
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Front end web: Surge
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Como executar o projeto
 
-## Learn More
+## Front end web
+Pré-requisitos: npm 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash / terminal
+# clonar repositório
+git clone https://github.com/devsuperior/sds1-wmazoni
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# entrar na pasta do projeto front end web
+cd front-web
 
-### Code Splitting
+# instalar dependências
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# executar o projeto
+npm start
+```
 
-### Analyzing the Bundle Size
+# Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Felipe Lima
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://www.linkedin.com/in/felipelimars
