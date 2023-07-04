@@ -19,8 +19,6 @@ const Header = () => {
     setIsOpen(true);
   };
 
-  const { searchProducts, setSearchProducts } = useContext(ProductContext);
-
   return (
     <header>
       <nav className="flex items-center justify-between flex-wrap bg-silver shadow-md p-2 w-full z-10 top-0">
