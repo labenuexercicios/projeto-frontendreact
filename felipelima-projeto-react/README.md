@@ -1,5 +1,5 @@
 # Labe-commerce
-[![NPM](https://img.shields.io/npm/l/react)]
+![NPM](https://img.shields.io/npm/l/react)
 
 # Sobre o projeto
 
@@ -9,8 +9,6 @@ Labe-commerce é uma aplicação Front-end construída durante o curso da [Laben
 
 Esse é o projeto de introdução aos fundamentos do React. O objetivo é que funcione como o front-end de um E-Commerce.
 
-## Layout mobile
-![Mobile 1](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/mobile1.png) ![Mobile 2](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/mobile2.png) ![Mobile 3](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/mobile3.png) ![Mobile 4](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/mobile4.png)
 
 ## Layout web
 ![Web 1](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/1.png)
