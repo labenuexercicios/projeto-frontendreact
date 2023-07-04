@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import fundo from './images/fundo.png'
 
 export const Geral = styled.div`
     position: relative;
@@ -18,7 +19,7 @@ export const AppStyled = styled.div`
 
 
 export const Fundo = styled.div`
-    background-image: url('/astrodev-store/fundo.png');
+    background-image: url(${fundo});
     overflow: hidden;
     position: absolute;
     top: 0;

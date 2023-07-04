@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
 
   
     img {
-        height: 100px;
+        height: 150px;
     }
 
     /* ul {
@@ -67,6 +67,7 @@ input {
     border-radius: 6px;
     padding: 0 1vw;
     width: 40vw;
+    height: 40px;
 }
 
 input:hover {
@@ -77,6 +78,8 @@ i {
     position: relative;
     top: 1vh;
     right: 4vh;
+    font-size: 19px;
+    color: grey;
 }
 
 transition: transform 0.3s ease-in-out;

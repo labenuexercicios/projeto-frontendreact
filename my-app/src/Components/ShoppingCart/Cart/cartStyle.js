@@ -74,6 +74,7 @@ export const Button = styled.button`
 
     i {
       margin-right: 0;
+      font-size: 1.15vw;
     }
 
   

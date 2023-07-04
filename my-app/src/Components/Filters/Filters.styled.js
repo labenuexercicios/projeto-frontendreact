@@ -23,6 +23,7 @@ export const Search = styled.aside`
     i {
         margin: 0 3px;
         color: white;
+        font-size: 1.1vw;
         transition: transform 0.3s ease-in-out;
     }
 
@@ -61,6 +62,7 @@ export const Form = styled.form`
 
     input {
         width: 100%;
+        height: 30px;
         border: 1px solid grey;
         border-radius: 4px;
         transition: transform 0.3s ease-in-out;
