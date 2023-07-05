@@ -8,10 +8,10 @@ const Card = ({ product }) => {
   return (
     <div
       key={id}
-      className="relative m-10 w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-md hover:scale-105 ease-in-out"
+      className="relative m-2 w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-md hover:scale-105 ease-in-out"
     >
       <div className="flex justify-center">
-        <img src={image} alt="Produto" className="h-64 flex" />
+        <img src={image} alt="Produto" className="h-56 flex" />
       </div>
       <span className="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-sky-400 text-center text-sm text-white">
         Sale
