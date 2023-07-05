@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-Link do projeto: [https://felipe-lima.surge.sh/](https://labecommerce-felipe.surge.sh/)
+Link do projeto: (https://labecommerce-felipe.surge.sh/)
 
 Labe-commerce é uma aplicação Front-end construída durante o curso da [Labenu](https://www.labenu.com.br/ "Site da Labenu").
 
