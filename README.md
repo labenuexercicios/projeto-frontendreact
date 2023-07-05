@@ -10,17 +10,21 @@ Esse é o projeto de introdução aos fundamentos do React. O objetivo é que fu
 
 
 ## Layout web
-![Web 1](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/1.png)
+![Web 1](<img width="1439" alt="1" src="https://github.com/felipelimars/projeto-frontendreact/assets/123341151/3655caf8-cae1-4ea0-b131-f25186693426">
+)
 
-![Web 2](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/2.png)
+![Web 2](<img width="1439" alt="2" src="https://github.com/felipelimars/projeto-frontendreact/assets/123341151/a21165d0-1358-4672-a1ab-79cac849fb34">
+)
 
-![Web 3](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/3.png)
+![Web 3]<img width="1439" alt="3" src="https://github.com/felipelimars/projeto-frontendreact/assets/123341151/b391ba83-2b70-4a38-a2a4-b0895601cae0">
+()
 
-![Web 4](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/4.png)
+![Web 4](<img width="1439" alt="4" src="https://github.com/felipelimars/projeto-frontendreact/assets/123341151/6df34d9f-570d-40fe-ae95-1ede516f6693">
+)
 
-![Web 5](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/5.png)
+![Web 5](<img width="1439" alt="5" src="https://github.com/felipelimars/projeto-frontendreact/assets/123341151/cd4aba21-3ee2-43ec-a9e8-5b7efc829116">
+)
 
-![Web 6](https://github.com/felipelimars/projeto-frontendreact/blob/felipelima-projetofrontend-react/felipelima-projeto-react/src/utils/6.png)
 
 # Tecnologias utilizadas
 
