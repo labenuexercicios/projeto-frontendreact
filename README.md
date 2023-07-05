@@ -1,7 +1,6 @@
 # Labe-commerce
-![NPM](https://img.shields.io/npm/l/react)
 
-# Sobre o projeto
+## Sobre o projeto
 
 Link do projeto: [https://felipe-lima.surge.sh/](https://labecommerce-felipe.surge.sh/)
 
