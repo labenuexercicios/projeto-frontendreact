@@ -7,7 +7,7 @@ export const InputContainer = styled.div`
     height: 120px;
     justify-content: space-evenly;
     padding: 12px 12px;
-    background-color: rgb(77, 77, 138);
+    background-color: black;
     color: black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `

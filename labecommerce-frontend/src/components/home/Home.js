@@ -1,4 +1,4 @@
-import produtos from "../../produtos.json"
+import toys from "../../toys.json"
 import { Image, ProductsContainer } from "./styles"
 
 const Home = ({ cart, setCart, order, valueMin, valueMax, searchName }) => {
@@ -20,7 +20,7 @@ const Home = ({ cart, setCart, order, valueMin, valueMax, searchName }) => {
     return (
         <ProductsContainer>
             <p>Produtos</p>
-            {product
+            {toys
                 .sort((prod1, prod2) => {
                     return order === "crescente"
                         ?

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Iluminador Astronauta",
+        "value": 350,
+        "image": "../toys/abajur.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Foguete",
+        "value": 400,
+        "image": "../toys/foguete.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Jogo Astronauta",
+        "value": 190,
+        "image": "../toys/jogo.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Kit Nave Espacial",
+        "value": 250,
+        "image": "../toys/kitnave.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Planetas do Sistema Solar",
+        "value": 220,
+        "image": "../toys/sistemasolar.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Telescópio",
+        "value": 500,
+        "image": "../toys/telescopio.jpg"
+    }
+]
