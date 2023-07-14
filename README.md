@@ -10,18 +10,11 @@ Esse é o projeto de introdução aos fundamentos do React. O objetivo é que fu
 
 
 ## Layout web
+
 ![Web 1](https://github.com/felipelimars/projeto-frontendreact/blob/main/felipelima-projeto-react/src/utils/1.png)
-
-
 ![Web 2](https://github.com/felipelimars/projeto-frontendreact/blob/main/felipelima-projeto-react/src/utils/2.png)
-
-
 ![Web 3](https://github.com/felipelimars/projeto-frontendreact/blob/main/felipelima-projeto-react/src/utils/3.png)
-
-
 ![Web 4](https://github.com/felipelimars/projeto-frontendreact/blob/main/felipelima-projeto-react/src/utils/4.png)
-
-
 ![Web 5](https://github.com/felipelimars/projeto-frontendreact/blob/main/felipelima-projeto-react/src/utils/5.png)
 
 
