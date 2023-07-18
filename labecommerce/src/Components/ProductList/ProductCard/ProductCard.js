@@ -4,15 +4,18 @@ import {
   ProductCardContainer,
   ProductImage,
   ProductName,
-  ProductPrice
+  ProductPrice,
+  ProductDescription
 } from './productCardStyle';
 
 const ProductCard = ({ product }) => {
   return (
     <ProductCardContainer>
-      <ProductImage src={product.imageUrl} alt={product.name} />
+      <ProductImage src={product.image} alt={product.name} />
       <ProductName>{product.name}</ProductName>
+      <ProductDescription>{product.description}</ProductDescription>
       <ProductPrice>R$ {product.price.toFixed(2)}</ProductPrice>
+      
     </ProductCardContainer>
   );
 };
