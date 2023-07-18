@@ -7,6 +7,8 @@ import { useEffect } from 'react'
 const Filter = ({ productsList, searchFilter, onClear, minFilter, 
   maxFilter,setMinFilter, setMaxFilter, setSearchFilter, useEffect, setFilteredProducts,
 filteredProducts,ProductCard}) => {
+  const[value, setValue] = useState('');
+  
  
     const handleMinFilterChange = (event) => {
       setMinFilter(event.target.value);
@@ -30,7 +32,7 @@ filteredProducts,ProductCard}) => {
       
       <label htmlFor="minFilter">Mínimo:</label>
       <input type="number" id="minFilter" value={minFilter} onChange={handleMinFilterChange} />
-
+      
       <label htmlFor="maxFilter">Máximo:</label>
       <input type="number" id="maxFilter" value={maxFilter} onChange={handleMaxFilterChange} />
        
@@ -40,6 +42,8 @@ filteredProducts,ProductCard}) => {
       <button onClick={onClear}>Limpar</button>
    
       </Lista>
+    
+      
     </Filters>
    
     </>

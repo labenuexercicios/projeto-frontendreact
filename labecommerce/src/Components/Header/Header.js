@@ -4,7 +4,7 @@ import { HeaderStyle } from './headerStyle'
 const Header = () => {
   return (
     <HeaderStyle>
-      <h1>Labecommerce</h1>
+      <h1>Space Shop</h1>
     
     </HeaderStyle>
   )

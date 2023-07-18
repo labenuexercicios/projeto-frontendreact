@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, {useEffect } from 'react'
 import { useState} from 'react'
 import Filter from './Components/Filters/Filter'
 import Home from './Components/ProductList/Home/Home'
@@ -21,7 +21,7 @@ function App ()  {
     const [amount, setAmount] = useState(0);
     const [cart, setCart] = useState([]);
     const [Items, setItems] = useState([]);
-   
+    const [productsFiltered, setProductsFiltered] = useState(productsList);
 
     // const [productsList, setProductsList] = useState(productsList);
 
@@ -43,7 +43,6 @@ function App ()  {
       setSearchFilter('');
       setSearchResults([]);
     };
-
 
     const addToCart = (product)=>{
       const newProduct = cart.find ((item)=>item.id === product.id)
@@ -87,7 +86,9 @@ return (
     <>
       <GlobalStyle/>
      
-      <Header/>
+      <Header
+      productsFiltered={setProductsFiltered}
+      />
       <InfoProdutos productsList={productsList}/>
       <PageStyle>
       <Filter 
@@ -101,7 +102,7 @@ return (
         setMaxFilter={setMaxFilter}
         setSearchFilter={setSearchFilter}
         products={productsList}
-       
+   
       
       />
       <Home 
@@ -111,7 +112,7 @@ return (
         cart={cart}
         setCart={setCart}
         addToCart={addToCart}
-
+        productsFiltered={setProductsFiltered}
       
         
       />
