@@ -1,13 +1,25 @@
-import React from 'react'
+import React from 'react';
+import {
+  ItemsContainer,
+  ItemName,
+  ItemQuantity,
+  RemoveButton
+} from './itemsStyle';
 
-const Items = () => {
-    
-  
+const Items = ({ cart, onRemoveItem }) => {
   return (
-    <div>
-      <p>Items</p>
-    </div>
-  )
-}
+    <ItemsContainer>
+      {cart.map(item => (
+        <div key={item.id}>
+          <ItemName>{item.name}</ItemName>
+          <ItemQuantity>Quantidade: {item.quantity}</ItemQuantity>
+          <RemoveButton onClick={() => onRemoveItem(item.id)}>
+            Remover
+          </RemoveButton>
+        </div>
+      ))}
+    </ItemsContainer>
+  );
+};
 
-export default Items
+export default Items;

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {Nav } from './infoProdutosStyle'
-import productsList from '../../../assents/productsList'
 
 
 
