@@ -1,38 +1,23 @@
-import React from 'react'
-import{Container} from './productCardStyle'
-import productsList from '../../../assents/productsList'
-import Cart from '../../ShoppingCart/Cart/Cart'
-import { Button } from '../../../globalStyles'
+import React from 'react';
 
+import {
+  ProductCardContainer,
+  ProductImage,
+  ProductName,
+  ProductPrice
+} from './productCardStyle';
 
-
-
-
-
-function ProductCard ({product, AddToCart}) {
-  // const { product } = props;
-  
-  console.log (product.imagem)
+const ProductCard = ({ product }) => {
   return (
-    <>
+    <ProductCardContainer>
+      <ProductImage src={product.imageUrl} alt={product.name} />
+      <ProductName>{product.name}</ProductName>
+      <ProductPrice>R$ {product.price.toFixed(2)}</ProductPrice>
+    </ProductCardContainer>
+  );
+};
 
-  <Container>
-  
-    <h2>{product.name}</h2>
-    <img src={product.image} alt={product.name} />
-    <p>{product.description}</p>
-    <span>Preço: R${product.price.toFixed(2)}</span>
-    
-    <Button onClick = {AddToCart}>
-    Adicionar ao carrinho
-    </Button>
-    
-  </Container>
 
-  
-  </>
-  )
-}
 // Antes de passar por props:
 //const ProductCard = () => {
 //   return (

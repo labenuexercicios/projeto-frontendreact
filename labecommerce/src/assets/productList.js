@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const productsList= 
+const productList= 
     [
         {
           id: 1,
@@ -57,4 +57,4 @@ const productsList=
   
 
 
-export default productsList
+export default productList

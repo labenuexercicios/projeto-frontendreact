@@ -1,21 +1,24 @@
-import React from 'react'
-import{Carts} from './cartStyle'
-import productsList from '../../../assents/productsList'
+import React from 'react';
+import Items from '../Items/Items';
+import {
+  CartContainer,
+  TotalValue
+} from './cartStyle';
 
-
-const Cart = ({productsList, productsCart}) => {
-  
- 
+const Cart = ({ cart, totalValue }) => {
   return (
-    <Carts>
-      
-      <h2>Cart</h2>
-      <p>Quatidade:0</p>
-      <p>Valor Total:0</p> 
-      <p>Nome do produto </p> <button >Remover</button> 
-      
-    </Carts>
-  )
-}
+    <CartContainer>
+      <h2>Carrinho</h2>
+      {cart.length > 0 ? (
+        <>
+          <Items cart={cart} />
+          <TotalValue>Total: R$ {totalValue.toFixed(2)}</TotalValue>
+        </>
+      ) : (
+        <p>O carrinho está vazio.</p>
+      )}
+    </CartContainer>
+  );
+};
 
-export default Cart
+export default Cart;
