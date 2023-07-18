@@ -5,6 +5,10 @@ import ProductCard from '../ProductCard/ProductCard';
 import Cart from '../../ShoppingCart/Cart/Cart';
 import Filters from '../../Filters/Filters';
 import Header from '../../Header/Header';
+import {
+   HomeStyle,
+   CardPosition
+   } from './homeStyle';
 
 const Home = () => {
   const [minFilter, setMinFilter] = useState('');
@@ -63,16 +67,17 @@ const Home = () => {
   const filteredProducts = filterProducts(productList);
 
   return (
-    <div>
+    <>
+    <Header/>
+    <HomeStyle>
       {/* <Filters
         minFilter={minFilter}
         maxFilter={maxFilter}
         searchFilter={searchFilter}
         onInputChange={handleInputChange}
       /> */}
-      <Header/>
       <Filters/>
-      <div>
+      <CardPosition>
         {filteredProducts.map(product => (
           <ProductCard
             key={product.id}
@@ -80,9 +85,10 @@ const Home = () => {
             addToCart={addToCart}
           />
         ))}
-      </div>
+      </CardPosition>
       <Cart cart={cart} totalValue={totalValue} onRemoveItem={removeFromCart} />
-    </div>
+    </HomeStyle>
+    </>
   );
 };
 
