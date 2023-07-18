@@ -13,6 +13,9 @@ const GlobalStyle = createGlobalStyle`
       }
       
     }
+    body{
+      background-image: url(https://img.freepik.com/fotos-premium/fundo-de-particula-de-poeira-estrela-abstrata_110488-460.jpg)
+    }
 
 `;
 //deixa em colunas Filter/|Product/Cart
