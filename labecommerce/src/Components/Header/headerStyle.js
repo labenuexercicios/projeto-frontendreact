@@ -10,5 +10,6 @@ export const HeaderStyle = styled.div`
     height:10vh;
     font-size:2rem;
     font-style:bold;
+    margin-bottom:2rem;
     
 `;
