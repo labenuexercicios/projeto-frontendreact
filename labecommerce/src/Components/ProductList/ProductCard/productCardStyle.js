@@ -32,3 +32,7 @@ export const ProductDescription = styled.h3`
      font-weight: bold;
 
 `;
+
+export const AddToCartButton = styled.button`
+
+`;

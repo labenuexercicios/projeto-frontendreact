@@ -1,13 +1,24 @@
 import React from 'react';
+import { useState } from 'react';
 import {
   FiltersContainer,
   FilterInput,
   FilterLabel
 } from '../Filters/filterStyle';
 
-const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange }) => {
+const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange, onApplyFilters }) => {
+    const [minValue, setMinValue] = useState('');
+    const [maxValue, setMaxValue] = useState('');
+    const [searchValue, setSearchValue] = useState('');
+
+    const handleApplyFilters = () => {
+      onApplyFilters(parseFloat(minValue), parseFloat(maxValue), searchValue);
+     
+    };
+   
   return (
     <FiltersContainer>
+      
       <FilterLabel>
         Valor mínimo:
         <FilterInput
@@ -25,6 +36,7 @@ const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange }) => {
           value={maxFilter}
           onChange={onInputChange}
         />
+        <button onClick={handleApplyFilters}>Aplicar Filtros</button>
       </FilterLabel>
       <FilterLabel>
         Buscar:

@@ -2,13 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-
-
 export const HomeStyle = styled.div`
     display:grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 80% 20%;
     grid-template-rows:1fr 1fr;
     gap:3rem; 
+   
 
 `;
 

@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import {Nav } from './infoProdutosStyle'
-
-
+import productList from '../../../assets/productList'
 
  const InfoProdutos = ( {ordination, onOrdinationChange,productsList} ) => {
   
   
   return (
     <Nav>
-      <p>Quantidade de Produtos:{productsList.length} </p>
+      <p>Quantidade de Produtos:{productList.length} </p>
      <div>
        <select value={ordination} onChange={onOrdinationChange}>
          <option value="">Selecione a ordenação</option>

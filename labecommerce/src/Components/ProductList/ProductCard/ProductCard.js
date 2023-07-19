@@ -5,17 +5,21 @@ import {
   ProductImage,
   ProductName,
   ProductPrice,
-  ProductDescription
+  ProductDescription,
+  AddToCartButton
 } from './productCardStyle';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onAddToCart }) => {
+  const handleAddToCart = () => {
+    onAddToCart(product);
+  };
   return (
     <ProductCardContainer>
       <ProductImage src={product.image} alt={product.name} />
       <ProductName>{product.name}</ProductName>
       <ProductDescription>{product.description}</ProductDescription>
       <ProductPrice>R$ {product.price.toFixed(2)}</ProductPrice>
-      
+      <AddToCartButton onClick={handleAddToCart}>Comprar</AddToCartButton>
     </ProductCardContainer>
   );
 };
