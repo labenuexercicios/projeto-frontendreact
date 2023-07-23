@@ -5,16 +5,16 @@ import {
   FilterInput,
   FilterLabel
 } from '../Filters/filterStyle';
+import productList from '../../assets/productList';
 
-const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange, onApplyFilters }) => {
-    const [minValue, setMinValue] = useState('');
-    const [maxValue, setMaxValue] = useState('');
-    const [searchValue, setSearchValue] = useState('');
+const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange }) => {
+    // const [minValue, setMinValue] = useState('');
+    // const [maxValue, setMaxValue] = useState('');
+    // const [searchValue, setSearchValue] = useState('');
 
-    const handleApplyFilters = () => {
-      onApplyFilters(parseFloat(minValue), parseFloat(maxValue), searchValue);
-     
-    };
+    // const handleApplyFilters = () => {
+    //   onApplyFilters(parseFloat(minValue), parseFloat(maxValue), searchValue);
+    // };
    
   return (
     <FiltersContainer>
@@ -36,7 +36,7 @@ const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange, onApplyFil
           value={maxFilter}
           onChange={onInputChange}
         />
-        <button onClick={handleApplyFilters}>Aplicar Filtros</button>
+        {/* <button onClick={handleApplyFilters}>Aplicar Filtros</button> */}
       </FilterLabel>
       <FilterLabel>
         Buscar:

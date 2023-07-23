@@ -23,11 +23,14 @@ const GlobalStyle = createGlobalStyle`
 
 
 // export const Button = styled.button`
-// width:10vw;
-// height:6vh;
-// border-radius:4px;
-// align-items:center;
-// justify-content:center;
-// `
+//      background-color: #333;
+//      color: #fff;
+//      border: none;
+//      padding: 10px 20px;
+     
 
+// :hover{
+//     cursor: pointer;
+// }
+// `;
 export default GlobalStyle;

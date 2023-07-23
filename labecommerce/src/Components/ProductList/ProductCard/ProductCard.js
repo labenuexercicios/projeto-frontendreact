@@ -10,15 +10,18 @@ import {
 } from './productCardStyle';
 
 const ProductCard = ({ product, onAddToCart }) => {
+
+
   const handleAddToCart = () => {
     onAddToCart(product);
   };
+
   return (
     <ProductCardContainer>
       <ProductImage src={product.image} alt={product.name} />
       <ProductName>{product.name}</ProductName>
       <ProductDescription>{product.description}</ProductDescription>
-      <ProductPrice>R$ {product.price.toFixed(2)}</ProductPrice>
+      <ProductPrice>R$ {Number(product.value).toFixed(2)}</ProductPrice>
       <AddToCartButton onClick={handleAddToCart}>Comprar</AddToCartButton>
     </ProductCardContainer>
   );
