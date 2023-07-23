@@ -34,5 +34,12 @@ export const ProductDescription = styled.h3`
 `;
 
 export const AddToCartButton = styled.button`
-
+     background-color: #333;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     
+:hover{
+    cursor: pointer;
+} 
 `;

@@ -12,6 +12,7 @@ import {
 import Footer from '../../Footer/Footer';
 import InfoProdutos from '../InfoProdutos/InfoProdutos';
 
+
 const Home = () => {
   const [minFilter, setMinFilter] = useState('');
   const [maxFilter, setMaxFilter] = useState('');
@@ -54,26 +55,47 @@ const Home = () => {
   };
 
   
-const handleFilterChange = (filterName, value) => {
-  if (filterName === 'minPrice') {
-    setMinFilter(value);
-  } else if (filterName === 'maxPrice') {
-    setMaxFilter(value);
-  }
-};
+  const handleFilterChange = (filterName, value) => {
+    if (filterName === 'minPrice') {
+      setMinFilter(value);
+    } else if (filterName === 'maxPrice') {
+      setMaxFilter(value);
+    }
+  };
 
-const handleSearchChange = (searchValue) => {
-  setSearchFilter(searchValue);
+  const handleSearchChange = (searchValue) => {
+    setSearchFilter(searchValue);
 
 
-};
+  };
 
-const handleSortChange = (sortValue) => {
+  const handleSortChange = (sortValue) => {
   setSortBy(sortValue);
 
-  // const sorted = sortProducts(productList, sortValue);
-  // setFilteredProducts(sorted);
-};
+
+ };
+
+  const filterProducts = (products) => {
+    return products.filter(product => {
+      const meetsMinFilter = minFilter === '' || product.value >= minFilter;
+      const meetsMaxFilter = maxFilter === '' || product.value <= maxFilter;
+      const meetsSearchFilter = searchFilter === '' || product.name.toLowerCase().includes(searchFilter.toLowerCase());
+      return meetsMinFilter && meetsMaxFilter && meetsSearchFilter;
+    });
+  };
+
+  const sortProducts = (products, sortBy) => {
+    return [...products].sort((a, b) => {
+      if (sortBy === 'asc') {
+        return a.value - b.value;
+      } else if (sortBy === 'desc') {
+        return b.value - a.value;
+      } else {
+        return 0;
+      }
+    });
+  };
+
   const handleAddToCart = (product) => {
     setCart(prevCart => {
       const existingItem = prevCart.find(item => item.id === product.id);
@@ -86,65 +108,6 @@ const handleSortChange = (sortValue) => {
     });
   };
 
-  const addToCart = (product) => {
-    const existingItem = cart.find(item => item.id === product.id);
-    if (existingItem) {
-      existingItem.quantity += 1;
-      setCart([...cart]);
-    } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
-    }
-    setTotalValue(totalValue + product.value);
-  };
-
-  const removeFromCart = (itemId) => {
-    const updatedCart = cart.map(item => {
-      if (item.id === itemId) {
-        if (item.quantity === 1) {
-          setTotalValue(totalValue - item.value);
-          return null;
-        } else {
-          setTotalValue(totalValue - item.value);
-          item.quantity -= 1;
-        }
-      }
-      return item;
-    }).filter(Boolean);
-    setCart(updatedCart);
-  };
-
-  
-  const filterProducts = (products) => {
-    return products.filter(product => {
-      const meetsMinFilter = minFilter === '' || product.value >= minFilter;
-      const meetsMaxFilter = maxFilter === '' || product.value <= maxFilter;
-      const meetsSearchFilter = searchFilter === '' || product.name.toLowerCase().includes(searchFilter.toLowerCase());
-      return meetsMinFilter && meetsMaxFilter && meetsSearchFilter;
-    });
-  };
-  const sortProducts = (products, sortBy) => {
-    return [...products].sort((a, b) => {
-      if (sortBy === 'asc') {
-        return a.value - b.value;
-      } else if (sortBy === 'desc') {
-        return b.value - a.value;
-      } else {
-        return 0;
-      }
-    });
-  };
-  
-    // const filtered = productList.filter((product) => {
-    //   const { value, name } = product;
-    //   return (
-    //     value >= minValue &&
-    //     value <= maxValue &&
-    //     name.toLowerCase().includes(searchValue.toLowerCase())
-    //   );
-    // });
-
-    // setFilteredProducts(filtered);
-  
 
 
   return (
@@ -156,31 +119,26 @@ const handleSortChange = (sortValue) => {
       maxFilter={maxFilter}
       searchFilter={searchFilter}
       onInputChange={handleInputChange}
-      // onApplyFilters={applyFilters}
       onFilterChange={handleFilterChange}
       onSearchChange={handleSearchChange}
       onSortChange={handleSortChange}
       onApplyFilters={applyFilters}
     />
     <HomeStyle>
-      {/* <Filters
-        minFilter={minFilter}
-        maxFilter={maxFilter}
-        searchFilter={searchFilter}
-        onInputChange={handleInputChange}
-      /> */}
+    
       <CardPosition>
         {filteredProducts.map((product) => (
           <ProductCard
             key={product.id}
             product={product}
-            addToCart={handleAddToCart}
+            onAddToCart={handleAddToCart}
           />
         ))}
         
       </CardPosition>
       {/* <Cart cart={cart} totalValue={totalValue} onRemoveItem={removeFromCart} /> */}
       <Cart cart={cart} setCart={setCart} />
+    
     </HomeStyle>
     <Footer/>
     </>
