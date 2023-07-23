@@ -11,7 +11,7 @@ import {
    } from './homeStyle';
 import Footer from '../../Footer/Footer';
 import InfoProdutos from '../InfoProdutos/InfoProdutos';
-
+import { filterProducts, sortProducts } from '../../../helper';
 
 const Home = () => {
   const [minFilter, setMinFilter] = useState('');
@@ -66,35 +66,13 @@ const Home = () => {
   const handleSearchChange = (searchValue) => {
     setSearchFilter(searchValue);
 
-
   };
 
   const handleSortChange = (sortValue) => {
   setSortBy(sortValue);
 
-
  };
 
-  const filterProducts = (products) => {
-    return products.filter(product => {
-      const meetsMinFilter = minFilter === '' || product.value >= minFilter;
-      const meetsMaxFilter = maxFilter === '' || product.value <= maxFilter;
-      const meetsSearchFilter = searchFilter === '' || product.name.toLowerCase().includes(searchFilter.toLowerCase());
-      return meetsMinFilter && meetsMaxFilter && meetsSearchFilter;
-    });
-  };
-
-  const sortProducts = (products, sortBy) => {
-    return [...products].sort((a, b) => {
-      if (sortBy === 'asc') {
-        return a.value - b.value;
-      } else if (sortBy === 'desc') {
-        return b.value - a.value;
-      } else {
-        return 0;
-      }
-    });
-  };
 
   const handleAddToCart = (product) => {
     setCart(prevCart => {
@@ -109,11 +87,15 @@ const Home = () => {
   };
 
 
-
   return (
     <>
     <Header/>
-    <InfoProdutos/>
+    <InfoProdutos
+       ordination={sortBy}
+       onOrdinationChange={(e)=> setSortBy (e.target.value)}
+       //passando os produtos filtrados e ordenados
+       productsList={filteredProducts}
+    />
     <Filters
       minFilter={minFilter}
       maxFilter={maxFilter}
@@ -125,7 +107,6 @@ const Home = () => {
       onApplyFilters={applyFilters}
     />
     <HomeStyle>
-    
       <CardPosition>
         {filteredProducts.map((product) => (
           <ProductCard
@@ -137,7 +118,8 @@ const Home = () => {
         
       </CardPosition>
       {/* <Cart cart={cart} totalValue={totalValue} onRemoveItem={removeFromCart} /> */}
-      <Cart cart={cart} setCart={setCart} />
+      <Cart cart={cart} setCart={setCart} 
+      />
     
     </HomeStyle>
     <Footer/>
