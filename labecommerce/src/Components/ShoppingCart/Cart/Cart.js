@@ -21,11 +21,12 @@ const Cart = ({ cart, setCart, totalValue }) => {
     const getTotalPrice = () => {
       return cart.reduce((total, item) => total + (parseFloat(item.value) * item.quantity), 0);
     };
-  
+     //Está função removia todos os itens
     // const handleRemoveItem = (itemId) => {
     //   setCart(prevCart => prevCart.filter(item => item.id !== itemId));
     // };
 
+    // Esta função remove um item por vez
     const handleRemoveOneItem = (itemId) => {
       setCart(prevCart => {
         const updatedCart = prevCart.map(item => {
@@ -63,7 +64,7 @@ const Cart = ({ cart, setCart, totalValue }) => {
   );
 };
 
-
+// parseFloat converte string em um valor de número com casas décimais
 
 
 export default Cart

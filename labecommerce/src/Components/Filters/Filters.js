@@ -47,6 +47,7 @@ const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange }) => {
           onChange={onInputChange}
         />
       </FilterLabel>
+     
     </FiltersContainer>
   );
 };

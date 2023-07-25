@@ -1,12 +1,17 @@
 import React from 'react'
-import { HeaderStyle } from './headerStyle'
+import { HeaderStyle, Banner } from './headerStyle'
 
 const Header = () => {
   return (
-    <HeaderStyle>
-      <h1>Space Shop</h1>
-    
-    </HeaderStyle>
+    <>
+      <HeaderStyle>
+        <h1>Space Shop</h1>
+      </HeaderStyle>
+      <Banner>
+      <p>A MODA DE OUTRO MUNDO</p>
+      </Banner>
+
+    </>
   )
 }
 
