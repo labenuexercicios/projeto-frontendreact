@@ -6,16 +6,30 @@ export const FooterStyle = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     background:#2C5F2D;
     color:white;
-    /* padding-bottom:0; */
     /* justify-content:center;
     align-items:center; */
     width:100vw;
     margin:0;
-    height:25vh;
+    height:20vh;
 p{
     font-size:15px;
-}
-span {
-   font-size:12px;
-}
+};
 `;
+export const SocialMedia = styled.div`
+    display:grid;
+    font-size: 12px;
+    justify-content:center;
+    
+ `;
+export const Base = styled.div`
+    display:grid;
+    font-size: 12px;
+    justify-content:center;
+
+    align-items:center;
+    background:#2C5F2D;
+    color:white;
+    width:100vw;
+    
+ `;
+

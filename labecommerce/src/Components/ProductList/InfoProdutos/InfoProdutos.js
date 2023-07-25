@@ -7,16 +7,16 @@ import productList from '../../../assets/productList'
   
   return (
     <Nav>
-      <p>Quantidade de Produtos:{productList.length} </p>
+      
      <div>
        <select value={ordination} onChange={onOrdinationChange}>
          <option value="">Selecione a ordenação</option>
          <option value="asc">Ordem Crescente</option>
          <option value="desc">Ordem Decrescente</option>
        </select>
+       <p>Quantidade de Produtos:{productList.length} </p>
      </div>
-    
-       
+  
     </Nav>
   )
 }

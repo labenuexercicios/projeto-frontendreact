@@ -1,5 +1,6 @@
 import React from "react";
-import { FooterStyle } from "./footerStyle";
+import { FooterStyle, Base, SocialMedia } from "./footerStyle";
+import {MdFacebook, MdWhatsapp} from 'react-icons/md';
 
 const Footer = () =>{
     return(
@@ -14,15 +15,17 @@ const Footer = () =>{
         <p>Master Card</p>
         <p>Elo</p>
      </pay>
-     <socialMedia>
+     <SocialMedia>
          <p>instagram</p>
-         <p>facebook</p>
-         <p>whatssap</p>
-     </socialMedia>
-     
-            <span>Todos os direitos reservados © 2023</span>
-            <span>Desenvolvido por: Renata Santos</span>
+         <p><MdFacebook size={28}/></p>
+         <p><MdWhatsapp size={28}/></p>
+     </SocialMedia>
      </FooterStyle>
+            
+     <Base>
+         <p>Todos os direitos reservados © 2023</p>
+         <p>Desenvolvido por: Renata Santos</p>
+     </Base>
 
     </>
     )

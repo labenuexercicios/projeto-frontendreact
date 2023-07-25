@@ -7,7 +7,8 @@ export const HomeStyle = styled.div`
     grid-template-columns: 80% 20%;
     grid-template-rows:1fr 1fr;
     gap:3rem; 
-    height: 240vh;
+    height: 190vh;
+    margin-right:2rem;
 
 `;
 
