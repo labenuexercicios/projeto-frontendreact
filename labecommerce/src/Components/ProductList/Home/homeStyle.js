@@ -7,7 +7,7 @@ export const HomeStyle = styled.div`
     grid-template-columns: 80% 20%;
     grid-template-rows:1fr 1fr;
     gap:3rem; 
-   
+    height: 240vh;
 
 `;
 
@@ -18,4 +18,5 @@ export const CardPosition = styled.div`
     gap:3rem; 
     padding-top:3rem;
 `;
+
 

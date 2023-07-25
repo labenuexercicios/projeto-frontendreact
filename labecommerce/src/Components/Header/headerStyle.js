@@ -1,15 +1,51 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 export const HeaderStyle = styled.div`
-    background-image: radial-gradient(circle at 100% 0%, #008ecb 0, #008cd5 5.56%, #008bdd 11.11%, #0088e4 16.67%, #0085e9 22.22%, #0082ec 27.78%, #007eed 33.33%, #0079ec 38.89%, #0074ea 44.44%, #486ee5 50%, #6a67df 55.56%, #8460d7 61.11%, #9859cd 66.67%, #a951c2 72.22%, #b749b6 77.78%, #c341a9 83.33%, #cc399c 88.89%, #d3338e 94.44%, #d82e80 100%);
+    background:#2C5F2D;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:Black;
+    color:#97BC62;
     height:10vh;
-    font-size:2rem;
+    font-size:15px;
     font-style:bold;
-    margin-bottom:2rem;
+    /* margin-bottom:2rem; */
     
 `;
+
+const moveAnimation = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-150px); /* Valor desejado para a direita */
+  }
+  100% {
+    transform: translateX(100px);
+  }
+`;
+
+export const Banner = styled.div`
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvLS3-MLaLej-4dX60HFICsZ6ekDak0ox90A&usqp=CAU);
+    display:flex;
+    height: 40vh;
+    /* color: white; */
+    font-size:30px;
+    justify-content:center;
+    align-items:center;
+p{
+    color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: ${moveAnimation} 4s infinite; /* Aplicando a animação */
+
+}
+`;
+
+
+
+
+
+
+
+
