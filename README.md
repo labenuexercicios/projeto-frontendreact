@@ -2,6 +2,8 @@
 
 ![Previa de Design](./projeto-labecommerce/src/assets/img/readme/Previa-do-site-labecommerce.png)
 
+🛠 Em andamento 
+
 Link para
 [FIGMA](https://www.figma.com/file/J15c99k2zxzbbCG382EsP7/Labecomerce---Projeto?type=design&node-id=46%3A110&t=e1bQnjl6mEckqOWX-1)
 
