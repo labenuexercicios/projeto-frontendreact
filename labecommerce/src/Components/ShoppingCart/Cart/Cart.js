@@ -2,15 +2,16 @@ import React from 'react';
 import Items from '../Items/Items';
 import {
   CartContainer,
-  TotalValue,
+  // TotalValue,
   CartItem, 
-  CartItemImage, 
+  // CartItemImage, 
   CartItemName, 
   CartItemPrice, 
   CartItemQuantity, 
   CartItems, CartTitle, TotalPrice,
 
 } from './cartStyle';
+import {MdDelete, MdShoppingCart} from 'react-icons/md';
 
 const Cart = ({ cart, setCart, totalValue }) => {
     const getTotalQuantity = () => {
@@ -46,15 +47,15 @@ const Cart = ({ cart, setCart, totalValue }) => {
   return (
   
     <CartContainer>
-      <CartTitle>Carrinho de Compras</CartTitle>
+      <CartTitle><MdShoppingCart size={28}/></CartTitle>
       <CartItems>
         {cart.map(item => (
           <CartItem key={item.id}>
             {/* <CartItemImage src={item.image} alt={item.name} /> */}
             <CartItemName>{item.name}</CartItemName>
             <CartItemPrice>R$ {parseFloat(item.value).toFixed(2)}</CartItemPrice>
-            <CartItemQuantity>Quantidade: {item.quantity}</CartItemQuantity>
-            <button onClick={() => handleRemoveOneItem(item.id)}>Remover 1</button>
+            <CartItemQuantity>Qtd: {item.quantity}</CartItemQuantity>
+            <button onClick={() => handleRemoveOneItem(item.id)}><MdDelete size={28}/></button>
           </CartItem>
         ))}
       </CartItems>

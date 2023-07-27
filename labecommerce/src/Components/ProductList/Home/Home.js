@@ -68,6 +68,10 @@ const Home = () => {
 
   };
 
+  const handleClearSearch = () => {
+    setSearchFilter(''); // Limpa o valor do campo de busca
+  };
+
   const handleSortChange = (sortValue) => {
   setSortBy(sortValue);
 
@@ -103,6 +107,7 @@ const Home = () => {
       onInputChange={handleInputChange}
       onFilterChange={handleFilterChange}
       onSearchChange={handleSearchChange}
+      onClearSearch= {handleClearSearch}
       onSortChange={handleSortChange}
       onApplyFilters={applyFilters}
     />
@@ -122,6 +127,7 @@ const Home = () => {
       />
     
     </HomeStyle>
+    <hr/>
     <Footer/>
     </>
   );

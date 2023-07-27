@@ -10,6 +10,7 @@ export const HeaderStyle = styled.div`
     height:10vh;
     font-size:15px;
     font-style:bold;
+
     /* margin-bottom:2rem; */
     
 `;
@@ -19,7 +20,7 @@ const moveAnimation = keyframes`
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-150px); /* Valor desejado para a direita */
+    transform: translateX(-150px);
   }
   100% {
     transform: translateX(100px);
@@ -31,13 +32,15 @@ export const Banner = styled.div`
     display:flex;
     height: 40vh;
     /* color: white; */
-    font-size:30px;
+    font-size:35px;
     justify-content:center;
     align-items:center;
+   
 p{
     color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  animation: ${moveAnimation} 4s infinite; /* Aplicando a animação */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: ${moveAnimation} 4s infinite; /* Aplicando a animação */
+    letter-spacing:5px
 
 }
 `;
