@@ -1,0 +1,50 @@
+.home{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+
+    padding: 1em;
+
+    /*     background: linear-gradient(180deg, #9B45BF 0%, #0442BF 31.43%, #0E2F73 55.81%, #0E2F73 86.74%); */
+}
+
+.containerOrdenar{
+    padding: .5em;
+}
+
+.home label{
+    color: #fff;
+    font-weight: 700;
+}
+
+.home select{
+    background: #fff;
+    border-radius: 20px;
+    border: none;
+
+    height: 3vh;
+    width: 11.25em;
+
+    padding: .5em;
+    margin: .5em;
+
+    font-family:'Montserrat', sans-serif; 
+    font-size: .7em;
+    font-weight: 600;
+}
+
+.home option{
+    font-weight: 600;
+    color: #000000;
+}
+
+.card{
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1em 2em;
+    justify-content: center;
+}

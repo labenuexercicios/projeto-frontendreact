@@ -1,0 +1,57 @@
+.filters {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    opacity: 0.85;
+
+    padding: 2em 1em;
+    max-width: 30vw;
+}
+
+.filters>.container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0 0 0;
+}
+
+.filters h2{
+    color: #000;
+}
+
+label {
+    font-size: .95em;
+    margin: .2em 0;
+    color: #000;
+}
+
+.filters input {
+    background: #000;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+
+    height: 2.5vh;
+    width: calc(100%- 11em);
+
+    padding: .5em ;
+}
+
+/*Responsividade*/
+@media screen and (min-device-width : 365px) and (max-device-width : 500px) {
+    .filters> h2{
+        font-size: 1em;
+    }
+    .filters {
+        padding: 1em;
+        max-width: 30vw;
+    }
+    label {
+        font-size: .55em;
+        margin: .2em 0;
+    }
+
+    .filters  input {
+        width: calc(100% - 5px);
+    }
+}

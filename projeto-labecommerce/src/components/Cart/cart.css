@@ -1,0 +1,44 @@
+.containerCart{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    opacity: 0.85;
+
+    padding: .5em;
+    max-width: 30em;
+}
+
+.containerCart .first{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 1em ;
+}
+
+.first h1{
+    font-size: 1.3em;
+    color: #000;
+}
+
+.second-value{
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount{
+    font-size: .9em;
+    font-weight: 700;
+    margin: 1.2em 0;
+    color: #000;
+}
+
+
+
+
+@media screen and (min-device-width : 365px) and (max-device-width : 500px) {
+    .first h1 {
+        font-size: .8em;
+    } 
+}
+
