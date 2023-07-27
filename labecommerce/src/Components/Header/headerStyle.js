@@ -10,6 +10,7 @@ export const HeaderStyle = styled.div`
     height:10vh;
     font-size:15px;
     font-style:bold;
+
     /* margin-bottom:2rem; */
     
 `;
@@ -34,6 +35,7 @@ export const Banner = styled.div`
     font-size:35px;
     justify-content:center;
     align-items:center;
+   
 p{
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);

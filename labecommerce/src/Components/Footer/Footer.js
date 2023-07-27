@@ -10,20 +10,19 @@ const Footer = () =>{
         <p>Atendimento</p>
         <p>Trocas e Devoluções</p>
      </help>
-     <pay>
+     {/* <pay>
         <p>Visa</p>
         <p>Master Card</p>
         <p>Elo</p>
-     </pay>
+     </pay> */}
      <SocialMedia>
-         <p>instagram</p>
          <p><MdFacebook size={28}/></p>
          <p><MdWhatsapp size={28}/></p>
      </SocialMedia>
      </FooterStyle>
             
      <Base>
-         <p>Todos os direitos reservados © 2023</p>
+         <p>Todos os direitos reservados © 2023</p><br/>
          <p>Desenvolvido por: Renata Santos</p>
      </Base>
 

@@ -3,11 +3,12 @@ import { useState } from 'react';
 import {
   FiltersContainer,
   FilterInput,
-  FilterLabel
+  FilterLabel,
+  ClearButton
 } from '../Filters/filterStyle';
 import productList from '../../assets/productList';
 
-const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange }) => {
+const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange, onClearSearch }) => {
     // const [minValue, setMinValue] = useState('');
     // const [maxValue, setMaxValue] = useState('');
     // const [searchValue, setSearchValue] = useState('');
@@ -46,8 +47,10 @@ const Filters = ({ minFilter, maxFilter, searchFilter, onInputChange }) => {
           value={searchFilter}
           onChange={onInputChange}
         />
+         {/* Botão de Limpar */}
+      <ClearButton onClick={onClearSearch}>Limpar</ClearButton>
       </FilterLabel>
-     
+       
     </FiltersContainer>
   );
 };

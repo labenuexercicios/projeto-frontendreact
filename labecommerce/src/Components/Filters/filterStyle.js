@@ -22,7 +22,24 @@ export const FilterInput = styled.input`
 
 // Estilos para o label dos filtros
 export const FilterLabel = styled.label`
+  display: flex;
   font-size: 16px;
   font-weight: bold;
   margin-right: 8px;
+`;
+
+export const ClearButton = styled.button`
+  color:black;
+  background-color:#97BC62;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 4px;
+
+  :hover{
+    color:yellow;
+    background-color:#2C5F2D;
+  }
 `;

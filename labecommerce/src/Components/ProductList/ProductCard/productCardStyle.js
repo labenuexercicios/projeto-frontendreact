@@ -4,8 +4,9 @@ import styled from 'styled-components'
 
 export const ProductCardContainer = styled.div`
     border: 1px solid #ccc;
-    padding: 20px;
+    padding:20px;
     width:80%;
+    /* width:80%; */
     margin-left:20px;
     background-color: #f0f0f0;
     

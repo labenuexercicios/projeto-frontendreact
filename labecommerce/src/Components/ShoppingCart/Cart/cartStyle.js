@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components'
 
 export const CartContainer = styled.div`
-  width: 100%;
+  padding-top:20%;
+  width: 80%;
   /* background-color: #f9f9f9; */
-  padding: 0;
+  margin-left:-18%;
   /* border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   
@@ -36,7 +37,7 @@ export const CartItemName = styled.div`
   flex: 1;
 `;
 export const CartItemPrice = styled.div`
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   padding-right:4px;
 `;
