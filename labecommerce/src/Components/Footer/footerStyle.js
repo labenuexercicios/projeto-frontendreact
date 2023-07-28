@@ -12,15 +12,27 @@ export const FooterStyle = styled.div`
     padding-left:10px;
     padding-top:10px;
     height:20vh;
+
 p{
     font-size:15px;
     line-height:2rem;
 };
 `;
-export const SocialMedia = styled.div`
+export const Help = styled.a`
+    display:grid;
+    text-decoration:none;
+    color: white;
+    padding:8px;
+
+`;
+
+export const SocialMedia = styled.a`
     display:inline-flex;
     font-size: 12px;
     padding-top:10px;
+    text-decoration:none;
+    color:white;
+    padding:6px;
 
  `;
 export const Base = styled.div`
