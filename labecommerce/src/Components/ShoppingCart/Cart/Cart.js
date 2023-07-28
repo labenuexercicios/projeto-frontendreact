@@ -1,5 +1,6 @@
-import React from 'react';
-import Items from '../Items/Items';
+import React, { useEffect } from 'react';
+
+// import Items from '../Items/Items';
 import {
   CartContainer,
   // TotalValue,
@@ -14,6 +15,20 @@ import {
 import {MdDelete, MdShoppingCart} from 'react-icons/md';
 
 const Cart = ({ cart, setCart, totalValue }) => {
+
+    useEffect(() => {
+    
+     const savedCart = localStorage.getItem('cart');
+      if (savedCart) {
+      setCart(JSON.parse(savedCart));
+    }
+  }, []);
+
+    useEffect(() => {
+    // Salva a lista de itens no carrinho no Local Storage sempre que o estado do carrinho é atualizado
+     localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
     const getTotalQuantity = () => {
       return cart.reduce((total, item) => total + item.quantity, 0);
     };
