@@ -9,6 +9,6 @@ export const Nav = styled.div`
  font-size:12px;
  color:white;
  padding-left:10px;
- line-height: 1.5rem
-
+ line-height: 1.5rem;
+ width:100vw;
 `;
