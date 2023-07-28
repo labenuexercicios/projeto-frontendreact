@@ -40,7 +40,7 @@ const productList=
         },
         {
           id: 7,
-          name: "Camiseta Austronauta",
+          name: "Camiseta Astronauta",
           description:"Camiseta branca, infantil, 100% Poliéster Sublimação Total",
           value: 39.90,
           image:"https:photos.enjoei.com.br/camiseta-infantil-menino-raglan-astronauta-roupa-cinza-espaco-4-79956244/800x800/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy81NTgxMzM2Lzg1MTVmZGY3NzBmNGJkODc1MmIzOGViZjcyMDI2YWE1LmpwZw",
