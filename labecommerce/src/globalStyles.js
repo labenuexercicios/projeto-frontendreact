@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
       list-style: none;  
       }
       
+      
     }
    
 
