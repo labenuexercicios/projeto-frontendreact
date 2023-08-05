@@ -1,11 +1,13 @@
+import { ItemContainer } from "./ItemsStyle";
 
 
 const Items = () => {
     return (
-        <div>
-            <p>Items</p>
-           
-        </div>
+        <ItemContainer>
+            <p>x0 Nome do Produto</p>
+            <button>Remover</button>
+            <p>Valor Total: 0</p>
+        </ItemContainer>
     )
 }
 

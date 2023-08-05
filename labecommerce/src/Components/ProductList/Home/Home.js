@@ -1,11 +1,19 @@
 import ProductCard from "../ProductCard/ProductCard";
+import { HomeContainer } from "./HomeStyle";
 
 const Home = () => {
     return (
-        <div>
-            <p>Home</p>
+        <HomeContainer>
+            <header>
+            <p>Quantidade de Produtos:</p>
+            <p>Ordenação:</p>
+            </header>
+            <main>
             <ProductCard />
-        </div>
+            <ProductCard />
+            <ProductCard />
+            </main>
+        </HomeContainer>
     )
 }
 
