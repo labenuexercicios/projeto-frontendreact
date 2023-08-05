@@ -1,11 +1,18 @@
+import { CardContainer } from "./ProductCardStyle";
 
 
 const ProductCard = () => {
     return (
-        <div>
+        <CardContainer>
+            <div id="card">
             <p>ProductCard</p>
-            
-        </div>
+            </div>
+            <div id='descricao'>
+                <p>Nome do Produto</p>
+                <p>Valor</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+        </CardContainer>
     )
 }
 
