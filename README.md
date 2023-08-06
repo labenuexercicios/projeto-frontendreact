@@ -9,7 +9,7 @@ Este é um projeto de e-commerce desenvolvido em React, onde os usuários podem 
 ## Deploy
 
 Acesse o deploy desse projeto:
-
+https://frontendreact-renata-easley.surge.sh/
 
 # projeto-frontendreact
 
