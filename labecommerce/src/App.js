@@ -12,6 +12,13 @@ function App() {
   const [cart, setCart] = useState();
   const [amount, setAmount] = useState();
 
+
+  const handleMinFilter = (event) => setMinFilter(event.target.value)
+  const handleMaxFilter = (event) => setMaxFilter(event.target.value)
+  const handleSearchFilter = (event) => setSearchFilter(event.target.value)
+  const handleCart = (event) => setCart(event.target.value)
+  const handleAmount = (event) => setAmount(event.target.value)
+  
   return (
     <>
       <GlobalStyle />

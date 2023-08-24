@@ -1,5 +1,3 @@
-
-
 export const productList = [
     {
       id: 1,
