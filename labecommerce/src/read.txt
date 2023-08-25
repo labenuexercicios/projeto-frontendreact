@@ -1,3 +1,3 @@
 Anotações para o projeto:
 
-
+fiz a semana 4, porém fiquei em dúvida sobre a posição das funções handleWhatever, ou seja, em qual componente devem estar e quando serão usadas. Inclusive se o onChange nos filtros devem ser com elas ou com os setWhatever.

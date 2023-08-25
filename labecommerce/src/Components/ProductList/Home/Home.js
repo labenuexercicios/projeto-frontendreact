@@ -3,15 +3,13 @@ import { productList } from "../../../assets/productList";
 import ProductCard from "../ProductCard/ProductCard";
 import { HomeContainer } from "./HomeStyle";
 
-const Home = (props) => {
+const Home = ({productList, amount, setAmount, cart , setCart}) => {
   
   const [ordination, setOrdination] = useState('');
 
   const handleOrdination = (event) => {
     setOrdination(event.target.value);
   }
-  
-  
 
   const totalProducts = productList.length; 
 
