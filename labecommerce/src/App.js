@@ -11,22 +11,15 @@ function App() {
   const [searchFilter, setSearchFilter] = useState();
   const [cart, setCart] = useState();
   const [amount, setAmount] = useState();
-
-
-  const handleMinFilter = (event) => setMinFilter(event.target.value)
-  const handleMaxFilter = (event) => setMaxFilter(event.target.value)
-  const handleSearchFilter = (event) => setSearchFilter(event.target.value)
-  const handleCart = (event) => setCart(event.target.value)
-  const handleAmount = (event) => setAmount(event.target.value)
   
   return (
     <>
       <GlobalStyle />
 
       <main>
-        <Filters />
-        <Home productList={productList} />
-        <Cart />
+        <Filters minFilter={minFilter} setMinFilter={setMinFilter} maxFilter={maxFilter} setMaxFilter={setMaxFilter} searchFilter={searchFilter} setSearchFilter={setSearchFilter} />
+        <Home productList={productList} amount={amount} setAmount={setAmount} cart={cart} setCart={setCart}/>
+        <Cart amount={amount} setAmount={setAmount} cart={cart} setCart={setCart}/>
       </main>
     </>
   );
