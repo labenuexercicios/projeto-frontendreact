@@ -11,8 +11,6 @@ const Home = ({productList, amount, setAmount, cart , setCart}) => {
     setOrdination(event.target.value);
   }
 
-  const totalProducts = productList.length; 
-
   let sortedProducts = [...productList]; 
 
   if (ordination === 'Crescente') {
@@ -20,6 +18,15 @@ const Home = ({productList, amount, setAmount, cart , setCart}) => {
   } else if (ordination === 'Decrescente') {
     sortedProducts.sort((a, b) => b.value - a.value);
   }
+
+  const renderedProducts = sortedProducts.map((product) => (
+    <ProductCard
+      key={product.id}
+      name={product.name}
+      value={product.value}
+      imgUrl={product.imageUrl}
+    />
+  ))
 
   return (
     <HomeContainer>
@@ -35,14 +42,7 @@ const Home = ({productList, amount, setAmount, cart , setCart}) => {
         </div>
       </header>
       <main>
-        {sortedProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            name={product.name}
-            value={product.value}
-            imgUrl={product.imageUrl}
-          />
-        ))}
+        {renderedProducts}
       </main>
     </HomeContainer>
   );
