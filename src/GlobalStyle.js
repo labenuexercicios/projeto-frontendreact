@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Principal = styled.main`
   display: flex;
+  flex-direction: row;
   gap: 20px;
   border: 3px solid black;
 `;

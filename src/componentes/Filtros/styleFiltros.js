@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FiltroContainer = styled.main`
-  border: 2px solid green;
+  /* border: 2px solid green; */
   display: flex;
   flex-direction: column;
   gap: 20px;

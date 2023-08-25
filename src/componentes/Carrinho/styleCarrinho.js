@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CarrinhoContainer = styled.main`
-  border: 2px solid violet; 
+  /* border: 2px solid violet;  */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
