@@ -9,6 +9,7 @@ function Home() {
         {/* <h1>Home</h1> */}
         <HomeOrdenacao>
           <label>
+            TEXTO INSERIDO, MAS DEVE SER APAGADO...
             Quantidade de produtos:
             <select>
               <option>10</option>
