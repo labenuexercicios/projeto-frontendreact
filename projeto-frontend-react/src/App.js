@@ -1,16 +1,15 @@
-import { createGlobalStyle } from "styled-components";
-import "./App.css";
+import { AppContainer } from "./AppStyle";
 import { Carrinho } from "./components/Carrinho/Carrinho";
 import { Filtros } from "./components/Filtros/Filtros";
 import { Home } from "./components/Home/Home";
 
 function App() {
   return (
-    <div>
+    <AppContainer>
       <Filtros />
       <Home />
       <Carrinho />
-    </div>
+    </AppContainer>
   );
 }
 
