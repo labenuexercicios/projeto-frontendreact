@@ -9,34 +9,22 @@ export const HomeContainer = styled.main`
   width: 60%;
   height: 50%;
   padding: 20px;
+  h1{
+    display: flex ;
+    align-items: center;
+  }
 `;
 
 export const HomeOrdenacao = styled.div`
   /* border: 2px solid orange; */
   display: flex;
   justify-content: space-around;
-  
-`
+  padding-bottom: 20px;
+`;
 
-// export const Section = styled.section`
-//   border: 2px solid orange;
-//   display: flex;
-//   flex-direction: row;
-//   gap: 20px;
-//   padding: 20px;
-//   width: 100%;
-//   height: 100%;
-// `
 
-// export const HomeCard = styled.div`
-//   border: 2px solid blue;
-//   display: flex;
-//   flex-direction: column;
-//   width: 30vw;
-//   height: 50vh;
-//     .p{
-//       color: aqua;
-//     }
-
-// `
-
+export const HomeCard = styled.section`
+  /* border: 2px solid yellow; */
+  display: flex;
+  gap: 10px;
+`;
