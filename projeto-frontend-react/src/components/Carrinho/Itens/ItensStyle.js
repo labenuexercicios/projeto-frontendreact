@@ -7,6 +7,7 @@ export const ItensContainer = styled.table`
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
+  width: 95%;
 `;
  
 // export const ItensContainer .tr {

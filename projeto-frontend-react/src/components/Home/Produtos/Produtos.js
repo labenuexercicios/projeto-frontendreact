@@ -1,11 +1,12 @@
+import { produtosLista } from "../../../assents/produtosLista";
 import { ProdutosContainer } from "./ProdutosStyle";
 
-export function Produtos() {
+export function Produtos(props) {
   return (
     <ProdutosContainer>
-      <img src="https://picsum.photos/536/354" />
-      <h3>Produto 1</h3>
-      <p>Preço: R$ 0,00</p>
+      <img src= {props.imageUrl} />
+      <h3>{props.name}</h3>
+      <p>Preço: R$ {props.value}</p>
       <button>Adicionar ao carrinho</button>
       <select>
         Quantidade:

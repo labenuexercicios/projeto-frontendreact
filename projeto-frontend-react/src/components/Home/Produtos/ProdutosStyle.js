@@ -6,7 +6,7 @@ export const ProdutosContainer = styled.div`
     margin: 10px;
     padding: 10px;
     /* height: 100vh; */
-    width: 180px;
+    width: 200px;
     display: flex;
     flex-direction: column;
 `
