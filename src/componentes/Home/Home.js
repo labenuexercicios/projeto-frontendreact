@@ -1,22 +1,23 @@
-import Produtos from "../Produtos/Produtos";
-import { HomeContainer, HomeOrdenacao } from "./styleHome";
+import { Produtos } from "../Produtos/Produtos";
+import { HomeContainer, HomeOrdenacao, HomeCard } from "./styleHome";
+import { ProdutosCard } from "../Produtos/styleProdutos";
+import { listaDeProdutos } from "../../assents/ListaDeProdutos";
 
-
-function Home() {
+function Home(props) {
+  const { id, nomeDoProduto, preco, imagem } = listaDeProdutos;
   return (
     <>
       <HomeContainer>
-        {/* <h1>Home</h1> */}
+        <h1>Home</h1>
         <HomeOrdenacao>
           <label>
-            TEXTO INSERIDO, MAS DEVE SER APAGADO...
-            Quantidade de produtos:
-            <select>
+            Quantidade de produtos: {listaDeProdutos.length}
+            {/* <select>
               <option>10</option>
               <option>20</option>
               <option>50</option>
               <option>100</option>
-            </select>
+            </select> */}
           </label>
           <label>
             Ordenação:
@@ -26,30 +27,27 @@ function Home() {
             </select>
           </label>
         </HomeOrdenacao>
-        {/* <Section>
-          <HomeCard>
-            <img src="https://picsum.photos/50/50?a=1" alt=""></img>
-            <h4>Informações do produto</h4>
-            <p>R$ 10,00</p>
-            <button>Adicionar carrinho</button>
-            
-          </HomeCard>
-          <HomeCard>
-            <img src="https://picsum.photos/50/50?a=2" alt=""></img>
-            <h4>Informações do produto</h4>
-            <p>R$ 10,00</p>
-            <button>Adicionar carrinho</button>
-          </HomeCard>
-          <HomeCard>
-            <img src="https://picsum.photos/50/50?a=3" alt=""></img>
-            <h4>Informações do produto</h4>
-            <p>R$ 10,00</p>
-            <button>Adicionar carrinho</button>
-            
-          </HomeCard>
-        </Section> */}
 
-        <Produtos />
+        <HomeCard>
+          <Produtos
+            id={props.id}
+            nomeDoProduto={props.nomeDoProduto}
+            preco={props.preco}
+            imagem={props.imagem}
+          />
+          <Produtos
+            id={props.id}
+            nomeDoProduto={props.nomeDoProduto}
+            preco={props.preco}
+            imagem={props.imagem}
+          />
+          <Produtos
+            id={props.id}
+            nomeDoProduto={props.nomeDoProduto}
+            preco={props.preco}
+            imagem={props.imagem}
+          />
+        </HomeCard>
       </HomeContainer>
     </>
   );

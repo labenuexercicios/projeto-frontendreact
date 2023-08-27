@@ -17,6 +17,7 @@ export const Principal = styled.main`
   flex-direction: row;
   gap: 20px;
   border: 3px solid black;
+  /* background-color: lightskyblue; */
 `;
 
 
