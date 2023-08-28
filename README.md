@@ -42,26 +42,28 @@ The Project has 3 great sections:
     - Per name
     - Price Sorting
 
-## Run & Deploy
+## Installation
+### Prerequisites:
 
-These are prerequisites for installing:
--   Node.js
--   npm
+- Node.js
+- npm
 
-To install dependencies in your project directory and run the application in your computer, run the following commands:
-
-```sh
+1. Clone this repository:
+```
+git clone https://github.com/marcela-celani/projeto-sistema-comunicacao.git
+```
+2. Install dependencies:
+```
+cd design-system-communication
 npm install
 ```
 
----
+3. Configure your Firebase credentials in src/services/firebase.js.
 
-```sh
-npm run start
+4. Start the development server:
 ```
-
----
-
+npm start
+```
 
 [Link do Deploy](https://marcela-celani.github.io/astrodev-store/)
 
