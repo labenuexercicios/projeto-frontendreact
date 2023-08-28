@@ -11,7 +11,7 @@ import { listaDeProdutos } from "./assents/ListaDeProdutos";
 function App() {
   const [listaDeProdutosEstado, setListaDeProdutosEstado] = useState(listaDeProdutos || [])
   
-  const [mimFilter, setMinFilter] = useState("")
+  const [minFilter, setMinFilter] = useState("")
   const [maxFilter, setMaxFilter] = useState("") 
   const [searchFilter, setSearchFilter] = useState("")
   const [cart, setCart] = useState([])
@@ -22,11 +22,28 @@ function App() {
     <div>
       <GlobalStyle />
       <Principal>
-        <Filtros />
+        <Filtros 
+          minFilter={minFilter}
+          setMinFilter={setMinFilter}
+          maxFilter={maxFilter}
+          setMaxFilter={setMaxFilter}
+          searchFilter={searchFilter}
+          setSearchFilter={setSearchFilter}
+        />
         <Home
           listaDeProdutos={listaDeProdutosEstado}
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}
         />
-        <Carrinho />
+        <Carrinho 
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}
+
+        />
       </Principal>
     </div>
   );
