@@ -8,7 +8,6 @@
 Table of contents
 * [Overview](#overview)
 * [Technologies](#technologies)
-* [Setup](#setup)
 * [Run & Deploy](#run--deploy)
 
 ## Technologies
@@ -42,7 +41,7 @@ The Project has 3 great sections:
     - Per name
     - Price Sorting
 
-## Installation
+## Run & Deploy
 ### Prerequisites:
 
 - Node.js
