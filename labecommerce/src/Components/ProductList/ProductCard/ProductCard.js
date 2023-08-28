@@ -1,6 +1,7 @@
+import { productList } from "../../../assets/productList";
 import { CardContainer } from "./ProductCardStyle";
 
-const ProductCard = ({ name, value, imgUrl }) => {
+const ProductCard = ({ name, value, imgUrl, addToCart, id }) => {
   return (
     <CardContainer>
       <div id="card">
@@ -14,11 +15,11 @@ const ProductCard = ({ name, value, imgUrl }) => {
           <p>{value}</p>
         </div>
         <div id="btn">
-          <button>Adicionar ao carrinho</button>
+          <button onClick={() => addToCart(id) }>Adicionar ao carrinho</button>
         </div>
       </div>
     </CardContainer>
   );
 };
 
-export default ProductCard;
+export default ProductCard
