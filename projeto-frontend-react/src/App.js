@@ -3,44 +3,43 @@ import { AppContainer } from "./AppStyle";
 import { Carrinho } from "./components/Carrinho/Carrinho";
 import { Filtros } from "./components/Filtros/Filtros";
 import { Home } from "./components/Home/Home";
-// import { produtosLista } from "./assents/produtosLista";
+import { produtosLista } from "./assents/produtosLista";
 
 function App() {
-  const [produtosLista, setProdutosLista] = useState(
-    {
-      id: 1,
-      name: "Produto 1",
-      value: 10000.0,
-      imageUrl: "https://picsum.photos/536/354",
-    },
-    {
-      id: 2,
-      name: "Produto 2",
-      value: 20000.0,
-      imageUrl: "https://picsum.photos/536/354",
-    },
-    {
-      id: 3,
-      name: "Produto 3",
-      value: 30000.0,
-      imageUrl: "https://picsum.photos/536/354",
-    }   
-  );
-  const { id, name, value, imageUrl } = produtosLista;
-
-  console.log(produtosLista);
-
-  const [minFilter, setMinFilter] = useState("")
-  const [maxFilter, setMaxFilter] = useState("")
-  const [searchFilter, setSearchFilter] = useState("")
-  const [cart, setCart] = useState("")
-  const [amount, setAmount] = useState("")
+  const [minFilter, setMinFilter] = useState("");
+  const [maxFilter, setMaxFilter] = useState("");
+  const [searchFilter, setSearchFilter] = useState("");
+  const [searchFilterMaterial, setSearchFilterMaterial] = useState("");
+  const [cart, setCart] = useState("");
+  const [amount, setAmount] = useState("");
 
   return (
     <AppContainer>
-      <Filtros />
-      <Home id={id} name={name} value={value} imageUrl={imageUrl} />
-      <Carrinho />
+      <Filtros
+        minFilter={minFilter}
+        setMinFilter={setMinFilter}
+        maxFilter={maxFilter}
+        setMaxFilter={setMaxFilter}
+        searchFilter={searchFilter}
+        setSearchFilter={setSearchFilter}
+        searchFilterMaterial={searchFilterMaterial}
+        setSearchFilterMaterial={setSearchFilterMaterial}
+      />
+      {/* <Home id={id} name={name} value={value} imageUrl={imageUrl} /> */}
+      <Home
+        produtosLista={produtosLista}
+        cart={cart}
+        setCart={setCart}
+        amount={amount}
+        setAmount={setAmount}
+      />
+      {/* <Home id={id} name={name} value={value} imageUrl={imageUrl} /> */}
+      <Carrinho
+        cart={cart}
+        setCart={setCart}
+        amount={amount}
+        setAmount={setAmount}
+      />
     </AppContainer>
   );
 }

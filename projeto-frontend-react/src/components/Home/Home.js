@@ -4,42 +4,32 @@ import { HomeCabecalho, HomeContainer, HomeProdutos } from "./HomeStyle";
 import { Produtos } from "./Produtos/Produtos";
 
 export function Home(props) {
-  const { id, name, value, imageUrl } = produtosLista;
+  const [ordination, setOrdination] = useState("");
 
-  const [ordination, setOrdination] = useState ("")
+  console.log(ordination, props.cart, props.amount, props.produtosLista);
 
-  return (
+  const produto = props.produtosLista.map((item) => (
+    <Produtos
+      id={item.id}
+      name={item.name}
+      value={item.value}
+      imageUrl={item.imageUrl}
+    />
+  ));
+
+    return (
     <HomeContainer>
       <h2>Home</h2>
       <HomeCabecalho>
         <h5>Quantidade de produtos: </h5>
-        <p>{produtosLista.length} produto(s)</p>
+        <p>{props.produtosLista.length} produto(s)</p>
         <h5>Ordenação:</h5>
-        <select id="ordination" value={ordination}>
+        <select value={ordination} onChange={(e) => setOrdination(e.target.value)}>
           <option>Crescente</option>
           <option>Decrescente</option>
         </select>
       </HomeCabecalho>
-      <HomeProdutos>
-        <Produtos
-          id={props.id}
-          name={props.name}
-          value={props.value}
-          imageUrl={props.imageUrl}
-        />
-        <Produtos
-          id={props.id}
-          name={props.name}
-          value={props.value}
-          imageUrl={props.imageUrl}
-        />
-        <Produtos
-          id={props.id}
-          name={props.name}
-          value={props.value}
-          imageUrl={props.imageUrl}
-        />
-      </HomeProdutos>
+      <HomeProdutos>{produto}</HomeProdutos>
     </HomeContainer>
   );
 }
