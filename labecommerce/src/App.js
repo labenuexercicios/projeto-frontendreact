@@ -9,17 +9,45 @@ function App() {
   const [minFilter, setMinFilter] = useState();
   const [maxFilter, setMaxFilter] = useState();
   const [searchFilter, setSearchFilter] = useState();
-  const [cart, setCart] = useState();
-  const [amount, setAmount] = useState();
-  
+  const [cart, setCart] = useState([]);
+  const [amount, setAmount] = useState(0);
+
   return (
     <>
       <GlobalStyle />
 
       <main>
-        <Filters minFilter={minFilter} setMinFilter={setMinFilter} maxFilter={maxFilter} setMaxFilter={setMaxFilter} searchFilter={searchFilter} setSearchFilter={setSearchFilter} />
-        <Home productList={productList} amount={amount} setAmount={setAmount} cart={cart} setCart={setCart}/>
-        <Cart amount={amount} setAmount={setAmount} cart={cart} setCart={setCart}/>
+        <Filters
+          minFilter={minFilter}
+          setMinFilter={setMinFilter}
+          maxFilter={maxFilter}
+          setMaxFilter={setMaxFilter}
+          searchFilter={searchFilter}
+          setSearchFilter={setSearchFilter}
+        />
+        <Home
+          productList={productList
+            .filter((product) => {
+              const productName = product.name.toLowerCase();
+              return searchFilter ? productName.includes(searchFilter.toLowerCase()) : true;
+            })
+            .filter((product) => {
+              return product.value >= (minFilter || 0);
+            })
+            .filter((product) => {
+              return product.value <= (maxFilter || Infinity);
+            })}
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}
+        />
+        <Cart
+          amount={amount}
+          setAmount={setAmount}
+          cart={cart}
+          setCart={setCart}
+        />
       </main>
     </>
   );
