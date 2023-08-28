@@ -62,7 +62,7 @@ npm install
 npm start
 ```
 
-🔗[Link Deploy](https://marcela-celani.github.io/astrodev-store/)
+🔗[Deploy Link](https://marcela-celani.github.io/astrodev-store/)
 
 
 
