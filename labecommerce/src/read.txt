@@ -1,0 +1,8 @@
+Anotações para o projeto:
+
+fiz a semana 4, porém fiquei em dúvida sobre a posição das funções handleWhatever, ou seja, em qual componente devem estar e quando serão usadas. Inclusive se o onChange nos filtros devem ser com elas ou com os setWhatever.
+
+
+creio que o proximo passo seja criar a logica de filtragem no componente Filter, passá-la para o App ?? em uma variável e passá-la por props para o componente Home. Fazer os testes das filtragens/sortagens juntas. (semana 6)
+
+Após isso, partir para o carrinho. (semana 5)
