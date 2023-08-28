@@ -19,18 +19,5 @@ const listaDeProdutos = [
   }
 ];
 
-const Itens = ({id, nomeDoProduto, preco, imagem}) => {
-
-  return(
-    <div>
-      <h4>Id: {id}</h4>
-      <p>Nome do produto: {nomeDoProduto}</p>
-      <p>Preço: R${preco}</p>
-      <img>{imagem}</img>
-    </div>
-
-  )
-
-}
 
 export {listaDeProdutos}

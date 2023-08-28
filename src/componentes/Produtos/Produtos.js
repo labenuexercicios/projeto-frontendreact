@@ -5,7 +5,6 @@ export function Produtos(props) {
   
   return (
     <ProdutosCard>
-      
       <img src={props.imagem} alt="" />
       <h4>{props.nomeDoProduto}</h4>
       <p>R$ {props.preco}</p>
