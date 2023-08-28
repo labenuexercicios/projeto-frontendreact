@@ -1,4 +1,4 @@
-const produtosLista = [
+export const produtosLista = [
   {
     id: 1,
     name: "Produto 1",
@@ -18,5 +18,3 @@ const produtosLista = [
     imageUrl: "https://picsum.photos/536/354",
   }
 ];
-
-export {produtosLista}

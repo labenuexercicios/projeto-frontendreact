@@ -7,8 +7,7 @@ export function Produtos(props) {
       <img src= {props.imageUrl} />
       <h3>{props.name}</h3>
       <p>Preço: R$ {props.value}</p>
-      <button>Adicionar ao carrinho</button>
-      <select>
+           <select>
         Quantidade:
         <option>Quantidade:</option>
         <option>01</option>
@@ -17,6 +16,7 @@ export function Produtos(props) {
         <option>04</option>
         <option>05</option>
       </select>
+      <button>Adicionar ao carrinho</button>
     </ProdutosContainer>
   );
 }

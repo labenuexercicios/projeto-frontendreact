@@ -1,6 +1,8 @@
 import { ItensContainer } from "./ItensStyle"
 
-export function Itens() {
+export function Itens(props) {
+
+  console.log(props.name, props.value, props.amount);
   return (
     <div>
       <h3>Itens</h3>
@@ -13,15 +15,15 @@ export function Itens() {
         </tr>
         <tr>
           <td>0 unidades</td>
-          <td>Nome do produto</td>
-          <td>R$ 0,00</td>
+          <td>{props.name}</td>
+          <td>R$ {props.value}</td>
           <td>
             <button>Remover</button>
           </td>
         </tr>
       </ItensContainer>
 
-      <h4>Valor Total:</h4>
+      <h4>Valor Total: {props.amount}</h4>
     </div>
   );
 }
