@@ -1,10 +1,13 @@
 import { Produtos } from "../Produtos/Produtos";
 import { HomeContainer, HomeOrdenacao, HomeCard } from "./styleHome";
 import { ProdutosCard } from "../Produtos/styleProdutos";
-import { listaDeProdutos } from "../../assents/ListaDeProdutos";
+import { useState } from "react";
 
 function Home(props) {
-  const { id, nomeDoProduto, preco, imagem } = listaDeProdutos;
+  const { listaDeProdutos } = props;
+  const [ordination, setOrdination] = useState("")
+
+
   return (
     <>
       <HomeContainer>
@@ -21,7 +24,11 @@ function Home(props) {
           </label>
           <label>
             Ordenação:
-            <select>
+            <select 
+              value={ordination}
+              onChange={(event)=>{setOrdination(event.target.value)
+              }}
+            >
               <option>Crescente</option>
               <option>Decrescente</option>
             </select>
@@ -29,24 +36,16 @@ function Home(props) {
         </HomeOrdenacao>
 
         <HomeCard>
-          <Produtos
-            id={props.id}
-            nomeDoProduto={props.nomeDoProduto}
-            preco={props.preco}
-            imagem={props.imagem}
-          />
-          <Produtos
-            id={props.id}
-            nomeDoProduto={props.nomeDoProduto}
-            preco={props.preco}
-            imagem={props.imagem}
-          />
-          <Produtos
-            id={props.id}
-            nomeDoProduto={props.nomeDoProduto}
-            preco={props.preco}
-            imagem={props.imagem}
-          />
+          {listaDeProdutos.map((produto) => {
+            return (
+              <Produtos
+                key={produto.id}
+                nomeDoProduto={produto.nomeDoProduto}
+                preco={produto.preco}
+                imagem={produto.imagem}
+              />
+            )
+          })}
         </HomeCard>
       </HomeContainer>
     </>

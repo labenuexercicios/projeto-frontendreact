@@ -6,40 +6,25 @@ import Home from "./componentes/Home/Home";
 import { GlobalStyle } from "./GlobalStyle";
 import { FiltroContainer } from "./componentes/Filtros/styleFiltros";
 import { Principal } from "./GlobalStyle";
+import { listaDeProdutos } from "./assents/ListaDeProdutos";
 
 function App() {
-  const [listaDeProdutos, setListaDeProdutos] = useState(
-    {
-      id: 1,
-      nomeDoProduto: "Laço 01",
-      preco: 1.99,
-      imagem: "https://picsum.photos/id/0/367/267",
-    },
-    {
-      id: 2,
-      nomeDoProduto: "Máscara 01",
-      preco: 7.99,
-      imagem: "https://picsum.photos/id/0/367/267",
-    },
-    {
-      id: 3,
-      nomeDoProduto: "Presilha 01",
-      preco: 12.99,
-      imagem: "https://picsum.photos/id/0/367/267",
-    }
-  );
+  const [listaDeProdutosEstado, setListaDeProdutosEstado] = useState(listaDeProdutos || [])
+  
+  const [mimFilter, setMinFilter] = useState("")
+  const [maxFilter, setMaxFilter] = useState("") 
+  const [searchFilter, setSearchFilter] = useState("")
+  const [cart, setCart] = useState([])
+  const [amount, setAmount] = useState(0)
 
-  const { id, nomeDoProduto, preco, imagem } = listaDeProdutos;
+
   return (
     <div>
       <GlobalStyle />
       <Principal>
         <Filtros />
         <Home
-          id={id}
-          nomeDoProduto={nomeDoProduto}
-          preco={preco}
-          imagem={imagem}
+          listaDeProdutos={listaDeProdutosEstado}
         />
         <Carrinho />
       </Principal>
