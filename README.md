@@ -49,17 +49,15 @@ The Project has 3 great sections:
 
 1. Clone this repository:
 ```
-git clone https://github.com/marcela-celani/projeto-sistema-comunicacao.git
+git clone https://github.com/marcela-celani/astrodev-store.git
 ```
 2. Install dependencies:
 ```
-cd design-system-communication
+cd my-app
 npm install
 ```
 
-3. Configure your Firebase credentials in src/services/firebase.js.
-
-4. Start the development server:
+3. Start the development server:
 ```
 npm start
 ```
