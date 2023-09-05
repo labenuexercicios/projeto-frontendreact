@@ -1,43 +1,25 @@
-# projeto-frontendreact
+## 📖 Introdução 
 
-Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce
+Galaxy Store: Projeto utilizando o React JS com o objetivo de funcionar como front-end de um e-commerce de produtos galacticos, 
+seguindo uma lista de requisitos na construção deste projeto utilizando as tecnologias aprendidas durante o curso.
 
-- JSX
-- Componentes
-- Props
-- Estado
-- Fluxo de dados no React
-- Renderização de listas
-- Renderização condicional
-- localStorage
+## 📄Concepção do Projeto
 
-## Instruções
+### Criação
+ - Foi utilizado o VITE
+  
+### Instalando
+```bash
+# Instalando dependências
+yarn install
 
-O Astrodev deixou um testamento e essa foi a herança deixada pra vocês:
-
-```
-Estudantes do meu coração,
-Estou querendo montar um e-commerce de itens espaciais e vocês serão responsáveis por essa construção. 
-Pretendo montar diferentes linhas de produtos. 
-
-As possíveis linhas de produto são:
-- Satélites antigos;
-- Roupas espaciais;
-- Camisetas com estampas divertidas relacionadas ao espaço;
-- Viagens espaciais;
-- Meteoritos / aerolitos como pedras preciosas;
-- Brinquedos e produtos infantis temáticos;
-- Naves / Foguetes / Ônibus espaciais;
-
-Escolham uma linha dentre essas, e criem um e-commerce de acordo com a lista de requisitos.
-
-
-Att.
+# executando o projeto
+yarn dev
 ```
 
 # Requisitos
 
-O projeto consistirá em 3 grandes partes:
+O projeto consiste em 3 grandes partes:
 
 1. Home
     - Mostrando todos os produtos
@@ -85,39 +67,32 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
     
  ### 
 
-O layout da página é escolha de vocês! O exemplo abaixo é só uma implementação bemmm simples das funcionalidades, não se atenham a ele.
+## 🔗Link de Acesso
+- Deploy Surge: [clique aqui!]().
 
-http://fluttering-coast.surge.sh/
- 
+### Bibliotecas Utilizadas
 
-https://user-images.githubusercontent.com/11279432/197185533-14582ca3-9eb0-4a5a-b57c-b94913ff2dd6.mp4
+```bash
+styled-components
+axios
+react-router-dom
+sweetalert
+```
 
+## 💡Programas utilizados:
+- VSCode
 
+## 💻Tecnologias 
 
-    
-  ### Conseguiu terminar? Aqui temos alguns **desafios**
-  1. Salvar e Recuperar conteúdo do carrinho usando o `LocalStorage`;
-  2. Dediquem um tempo para melhorar o layout e a usabilidade do seu site! Se baseiem em outros e-commerces que vocês gostam para chegar em um resultado   mais próximo do padrão de design visto no mercado;
-  3. Se TODO O RESTO DO SITE  e os dois desafios anteriores estiverem funcionando, pensem: qual outra funcionalidade está faltando? Decidam o que vocês concordam que poderia ser uma boa adição à loja virtual (pode ser qualquer funcionalidade, desde que vocês consigam implementá-la). Todas as funcionalidades extras implementadas devem ser listadas e explicadas no readme do projeto para que possam ser avaliadas.
-  
-  ### Instruções de entrega
-
-- Faça o fork desse repositório e realize o clone da sua cópia `seu-nome-de-usuario/projeto-intro-web`.
-   <details>
-   <summary>Quer uma dica?</summary>
-   <img src="https://firebasestorage.googleapis.com/v0/b/assets-conteudo.appspot.com/o/gerais%2Ffork.png?alt=media&token=7030e997-246a-41fe-a75f-2a2ced61e54d" alt="Como adicionar o projeto no repositório"/>
-   </details>
-- Crie os arquivos do projeto dentro deste repo;
-- Execute o fluxo de entrega do git. **Lembre-se de abrir os PRs para seu próprio repositório.**
-- Para isso, você precisará fazer o projeto utilizando **branches**. Evite fazer as alterações direto na branch ```main```
-    <details>
-       <summary>Dúvidas sobre o Git & Github?</summary>
-       <p>Adiciomos um vídeo explicando o <strong>processo de entrega</strong> [do fork ao pull request] no Material Assincrono da Aula de <a href="https://estudante.labenu.com.br/conteudos/tecnico/mod1/Git%20e%20Github">Git e Github</a>. Esse vídeo também exemplifica situações que podem acontecer durante o fluxo de utilização do Git.</p>
-    </details>
-- Faça o deploy do projeto. Pode ser ultilizado o [surge](https://labenu.notion.site/Deploy-de-front-React-com-Surge-f902a03ec1d247dc9af9aee5a1469d96), Github pages ou outra ferramenta que faça a disponibilização do seu site para acesso público;
-- Adicionar o link do deploy no readme do seu projeto/repositório:
+![HTML](https://user-images.githubusercontent.com/106079184/227619911-eb73aabd-7739-47c0-bbcb-e0920902ead3.png)
+![Javascript](https://user-images.githubusercontent.com/106079184/227620446-5307c4f2-0af2-4b7d-8696-a17780a13148.png)
+![React](https://user-images.githubusercontent.com/106079184/227620813-6e3311e8-9992-407a-8cae-abf2711f1af8.png)
+![React Router](https://user-images.githubusercontent.com/106079184/227621258-7a953c29-092e-43e6-a688-5d08279d7818.png)
+![Styled-Components](https://user-images.githubusercontent.com/106079184/227621509-7956f644-df78-41b1-a26d-ec88112b7de1.png)
+![SweetAlert](https://user-images.githubusercontent.com/106079184/227622475-afbfe25f-92f9-443d-bd50-bd93ba18fa4d.png)
+![Git](https://user-images.githubusercontent.com/106079184/227621865-d6fd9ff4-2e10-4f7f-9759-f31c6434b565.png)
 
 
-- Entregue o **link do repo** no [Formulário de entrega](https://forms.gle/S9XChPZravP3WdxL6) 
-
+## 📫 Contato
+- linkedin: https://github.com/Edudeveloperr
 
