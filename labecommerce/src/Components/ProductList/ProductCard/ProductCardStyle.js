@@ -4,8 +4,8 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content:space-between;
-  border: 1px solid black;
   width: 15vw;
+  z-index: 1000;
 
   #card {
     text-align: center;

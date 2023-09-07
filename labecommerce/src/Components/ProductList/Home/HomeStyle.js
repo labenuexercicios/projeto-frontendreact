@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
   height: 100vh;
-  border: 1px solid black;
+  
+  HomeContainer {
+    background-color: black
+  } 
 
   header {
     display: flex;
