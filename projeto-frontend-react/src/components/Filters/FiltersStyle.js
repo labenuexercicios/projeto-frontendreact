@@ -1,12 +1,15 @@
 import { styled } from "styled-components";
 
 
-export const ProdutosContainer = styled.div`
+export const FiltersContainer = styled.div`
     border: solid 1px black;
     margin: 10px;
     padding: 10px;
     /* height: 100vh; */
-    width: 200px;
     display: flex;
     flex-direction: column;
+    width: 20%;
+    height: 95vh;
 `
+
+

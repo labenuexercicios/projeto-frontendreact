@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const ItensContainer = styled.table`
+export const ItemsContainer = styled.table`
   border: solid 1px black;
   margin: 10px;
   padding: 10px;
