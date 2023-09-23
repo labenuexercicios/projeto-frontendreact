@@ -36,24 +36,7 @@ export function Home(props) {
     );
   })
 
-  // const produtos = productsList.map((item) => {
-  //   return (
-  //     <ProductCard
-  //       key={item.id}
-  //       id={item.id}
-  //       name={item.name}
-  //       value={item.value}
-  //       imageUrl={item.imageUrl}
-  //       cart={cart}
-  //       handlers={{ setCart, setAmount }}
-  //       product={item}
-  //       addCart={addCart}
-  //       deleteProductCart={deleteProductCart}
-  //     />
-  //   );
-  // });
-
-  return (
+   return (
     <>
       <HomeContainer>
         <h2>Home</h2>
@@ -65,8 +48,8 @@ export function Home(props) {
             value={ordination}
             onChange={changeOrder}
           >
-            <option>Crescente</option>
-            <option>Decrescente</option>
+            <option value="asc">Crescente</option>
+            <option value="desc">Decrescente</option>
           </select>
         </HomeCabecalho>
         <HomeProdutos>{renderList}</HomeProdutos>
