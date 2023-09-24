@@ -1,7 +1,6 @@
 import { FiltroContainer, BtFiltro } from "./styleFiltros";
 
 function Filtros(props) {
-  console.log(props);
   return (
     <FiltroContainer>
       <h1>Filtros</h1>
@@ -44,7 +43,7 @@ function Filtros(props) {
           onChange={(event) => props.setSearchFilter(event.target.value)}
         />
       </label>
-      <BtFiltro>Buscar</BtFiltro>
+      {/* <BtFiltro>Buscar</BtFiltro> */}
     </FiltroContainer>
   );
 }
