@@ -15,10 +15,13 @@ const CartItem = (props) => {
 
       props.setCart(newCart);
     } else {
-      const novoCarro = props.cart.filter((item) => item.id !== id);
-      props.setCart(novoCarro);
+      const novoCart = props.cart.filter((item) => item.id !== id);
+      props.setCart(novoCart);
     }
   }
+
+
+  
   return (
     <div>
       <p>Total: R${props.soma}</p>

@@ -13,8 +13,8 @@ function Home(props) {
 
 
   const renderList = listaDeProdutos
-  .sort((a,b)=>ordination === "" || ordination === "asc" && a.name > b.name ? 1 : -1)
-  .sort((a,b)=>ordination === "" || ordination === "desc" && a.name > b.name ? -1 : 1)
+  .sort((a,b)=>ordination === "" || ordination === "asc" && a.nome > b.nome ? 1 : -1)
+  .sort((a,b)=>ordination === "" || ordination === "desc" && a.nome > b.nome ? -1 : 1)
   .map((item) => {
     return (
       <ProdutosCard
@@ -27,9 +27,6 @@ function Home(props) {
       />
     );
   })
-
-
-
 
   const produto = listaDeProdutos
     .filter((item) =>

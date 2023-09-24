@@ -27,7 +27,7 @@ function Filtros(props) {
           value={props.maxFilter}
           onChange={(event) => {
             if (event.target.value < 0) {
-              props.setMaxFilter(0);
+              props.setMaxFilter(1);
               return;
             }          
             props.setMaxFilter(event.target.value)
