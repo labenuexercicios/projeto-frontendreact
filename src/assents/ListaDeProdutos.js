@@ -69,7 +69,13 @@ const listaDeProdutos = [
              nomeDoProduto: "Boneco espacial articulado", 
              preco: 79,
              imagem: foto10,
-            }
+            },
+            {
+              id: 11,
+              nomeDoProduto: "Carro espacial", 
+              preco: 300,
+              imagem: foto06,
+             }
 ];
 
 
