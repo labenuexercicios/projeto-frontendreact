@@ -16,7 +16,10 @@ function App() {
   const [searchFilter, setSearchFilter] = useState("")
   const [cart, setCart] = useState([])
   const [amount, setAmount] = useState(0)
+  const [soma, setSoma] = useState(0)
 
+  let somaValor = soma;
+  
 
   return (
     <div>
@@ -36,12 +39,19 @@ function App() {
           setAmount={setAmount}
           cart={cart}
           setCart={setCart}
+
+          minFilter={minFilter}
+          maxFilter={maxFilter}
+          searchFilter={searchFilter}
         />
+        
         <Carrinho 
           amount={amount}
           setAmount={setAmount}
           cart={cart}
           setCart={setCart}
+          setSoma={setSoma}
+        
 
         />
       </Principal>

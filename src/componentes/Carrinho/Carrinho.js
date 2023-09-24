@@ -1,20 +1,29 @@
-import Itens from "../Itens/Itens";
+import CartItem from "./CartItem";
 import { CarrinhoContainer } from "./styleCarrinho";
 
 
-function Carrinho() {
+function Carrinho(props) {
+  console.log(props.cart);
   return (
     <CarrinhoContainer>
       <h1>Carrinho</h1>
+ 
+    {
+      props.cart && 
+      props.cart.map((item)=>
+        <CartItem
+          key={item.id}
+          id={item.id}
+          cart={props.cart}
+          setCart={props.setCart}
+          nome={item.nomeDoProduto}
+          preco={item.preco}
+          quantidade={item.quantidade}
+        />
+      )
+    }
       
-      <label>x0 Nome do Produto</label>
-      <button>remover</button>
-      <label>x0 Nome do Produto</label>
-      <button>remover</button>
-      <label>x0 Nome do Produto</label>
-      <button>remover</button>
       
-      {/* <Itens /> */}
     </CarrinhoContainer>
   );
 }
