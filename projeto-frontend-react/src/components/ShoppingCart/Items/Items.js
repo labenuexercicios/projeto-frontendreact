@@ -1,36 +1,37 @@
-import { ItemsContainer } from "./ItemsStyle"
+import {
+  ItemsContainer,
+  ItemsContent,
+  ItemsPrice,
+  ItemsTitle,
+} from "./ItemsStyle";
+import { BsCartDashFill } from "react-icons/bs";
+import formatCurrency from "../../../utils/formatCurrency";
 
 export function Items(props) {
-
   // console.log(props.name, props.value, props.amount);
-  
+
   // const { cart, amount } = props.states
-  const { id, name, value, imageUrl } = props
-  const { deleteProductCart } = props
-  const { productsCart } = props
+  const { id, name, value, imageUrl, amount, product } = props;
+  const { deleteProductCart } = props;
+  const { productsCart } = props;
 
   return (
-    <div>
-      <h3>Itens</h3>
+    <section >
       <ItemsContainer>
-        <p>{productsCart}</p>
-        <tr>
-          <th>Quantidade</th>
-          <th>Descrição</th>
-          <th>Valor</th>
-          <th>Remover</th>
-        </tr>
-        <tr>
-          <td>0 unidades</td>
-          <td>{name}</td>
-          <td>R$ {value}</td>
-          <td>
-            <button on click={deleteProductCart}>Remover</button>
-          </td>
-        </tr>
-      </ItemsContainer>
+        <div className="item-image">
+          <img src={imageUrl} />
+        </div>
 
-      {/* <h4>Valor Total: {amount}</h4> */}
-    </div>
+        <div className="item-text">
+          <h3 title={name}>{name}</h3>
+          <p>
+            x {amount} <span>{formatCurrency(value, "BRL")}</span>{" "}
+          </p>
+        </div>
+        <button onClick={() => deleteProductCart(product)}>
+          <BsCartDashFill />
+        </button>
+      </ItemsContainer>
+    </section>
   );
 }

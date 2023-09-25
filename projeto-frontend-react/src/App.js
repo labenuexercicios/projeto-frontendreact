@@ -1,18 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { AppContainer } from "./AppStyle";
 import { productsList } from "./assents/productsList";
 import { Filters } from "./components/Filters/Filters";
 import { Home } from "./components/ProductList/Home/Home";
 import { Cart } from "./components/ShoppingCart/Cart/Cart";
+import { Header } from "./components/Header/Header";
+import { HomeCabecalho } from "./components/ProductList/Home/HomeStyle";
 
 function App() {
-
   const [minFilter, setMinFilter] = useState("");
   const [maxFilter, setMaxFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
-  const [searchFilterMaterial, setSearchFilterMaterial] = useState("");
-  const [searchFilterProduto, setSearchFilterProduto] = useState("");
   const [cart, setCart] = useState([]);
   const [amount, setAmount] = useState(0);
   const [soma, setSoma] = useState(0);
@@ -20,6 +19,20 @@ function App() {
   const { id, name, value, imageUrl } = productsList;
 
   let totalValue = soma;
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      const cartProduct = JSON.stringify(cart);
+      localStorage.setItem("carts", cartProduct);
+    }
+  }, [cart]);
+
+  useEffect(() => {
+    const originalCart = JSON.parse(localStorage.getItem("carts"));
+    if (originalCart) {
+      setCart(originalCart);
+    }
+  }, []);
 
   const filteredProducts = productsList
     .filter(
@@ -71,30 +84,32 @@ function App() {
     setSoma(totalValue - products.value);
   };
 
-  const limparCarrinho = () => {
+  const cleanCart = () => {
     setCart([]);
     setSoma(0);
+  };
+
+  const cleanFilter = () => {
+    setCart([]);
   };
 
   return (
     <>
       <GlobalStyle />
+      <Header productsList={productsList} />
       <AppContainer>
         <Filters
           states={{
             minFilter,
             maxFilter,
             searchFilter,
-            searchFilterMaterial,
-            searchFilterProduto,
           }}
           handlers={{
             setMinFilter,
             setMaxFilter,
             setSearchFilter,
-            setSearchFilterMaterial,
-            setSearchFilterProduto,
           }}
+          cleanFilter={cleanFilter}
         />
         <Home
           states={{ cart, minFilter, maxFilter, searchFilter }}
@@ -110,7 +125,7 @@ function App() {
           productsList={productsList}
           totalValue={totalValue}
           deleteProductCart={deleteProductCart}
-          limparCarrinho={limparCarrinho}
+          cleanCart={cleanCart}
         />
       </AppContainer>
     </>

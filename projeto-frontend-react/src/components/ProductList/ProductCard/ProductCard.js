@@ -1,5 +1,7 @@
-import { ProductCardContainer } from "./ProductCardStyle";
+import { CardInfos, ProductCardContainer } from "./ProductCardStyle";
 import { productsList } from "../../../assents/productsList";
+import { BsFillCartPlusFill } from "react-icons/bs";
+import formatCurrency from "../../../utils/formatCurrency";
 
 export function ProductCard(props) {
   const { products } = props;
@@ -19,20 +21,18 @@ export function ProductCard(props) {
 
     <div>
       <ProductCardContainer>
-        <img src={imageUrl} />
-        <h3>{name}</h3>
-        <p>Preço: R$ {value},00</p>
-        {/* <select>
-          Quantidade:
-          <option>Quantidade:</option>
-          <option>01</option>
-          <option>02</option>
-          <option>03</option>
-          <option>04</option>
-          <option>05</option>
-        </select> */}
-        <button value={cart} onClick={() => addCart(products)}>
-          Adicionar ao Carrinho
+        <img className="card__image" src={imageUrl} alt="product" />
+
+        <CardInfos >
+          <p className="card__price">{formatCurrency(value, "BRL")}</p>
+          <h3 className="card__title">{name}</h3>
+        </CardInfos>
+        <button
+          className="button__add-cart"
+          value={cart}
+          onClick={() => addCart(products)}
+        >
+          <BsFillCartPlusFill />
         </button>
       </ProductCardContainer>
     </div>

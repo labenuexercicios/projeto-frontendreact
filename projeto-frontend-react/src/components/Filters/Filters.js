@@ -15,7 +15,7 @@ export function Filters(props) {
     searchFilter,
     searchFilterMaterial,
     searchFilterProduto,
-  } = props.states
+  } = props.states;
 
   const {
     setMinFilter,
@@ -23,7 +23,9 @@ export function Filters(props) {
     setSearchFilter,
     setSearchFilterMaterial,
     setSearchFilterProduto,
-  } = props.handlers
+  } = props.handlers;
+
+  const { cleanFilter } = props
 
   const filterMinFilter = (e) => {
     setMinFilter(e.target.value);
@@ -44,22 +46,12 @@ export function Filters(props) {
     setSearchFilter(e.target.value);
   };
 
-  const filterProductType = (e) => {
-    setSearchFilter(e.target.value);
-  };
-
-  const filterProductMaterial = (e) => {
-    setSearchFilter(e.target.value);
-  };
-
   return (
     <FiltersContainer>
       <div>
         <h2>Filtros</h2>
       </div>
       <section>
-        <h3>Faixa de preço</h3>
-
         <label>Valor mínimo</label>
         <input
           min={0}
@@ -85,40 +77,10 @@ export function Filters(props) {
           onChange={filterName}
           placeholder="Digite o nome"
         />
-
-        <h3> Tipo de produto</h3>
-        <select
-          type="text"
-          value={searchFilterProduto}
-          onChange={filterProductType}
-        >
-          <option>Tipo de produto</option>
-          <option>Pulseira</option>
-          <option>Brinco</option>
-          <option>Colar</option>
-          <option>Anel</option>
-          <option>Pingente</option>
-          <option>Relógio</option>
-          <option>Aliança</option>
-        </select>
-
-        <h3> Material</h3>
-        <select
-          type="text"
-          value={searchFilterMaterial}
-          onChange={filterProductMaterial}
-        >
-          <option>Material</option>
-          <option>Ouro Amarelo</option>
-          <option>Ouro Rosé</option>
-          <option>Ouro Branco</option>
-          <option>Prata</option>
-          <option>Pedras</option>
-          <option>Ródio Negro</option>
-        </select>
       </section>
-      <button>Filtrar</button>
-      <button>Limpar filtro</button>
+      <div>
+          <button onClick={cleanFilter}>Limpar filtro</button>
+      </div>
     </FiltersContainer>
   );
 }
