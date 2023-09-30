@@ -47,9 +47,9 @@ const Home = ({ productList, amount, setAmount, cart, setCart }) => {
   return (
     <HomeContainer>
       <header>
-        <p>Quantidade de Produtos: {productList.length}</p>
+        <p>Modelos em estoque: {productList.length}</p>
         <div id="order">
-          <p>Ordenação:</p>
+          <p>Ordenar por:</p>
           <select value={ordination} onChange={handleOrdination}>
             <option value="">Selecione</option>
             <option value="Crescente">Mais Barato</option>

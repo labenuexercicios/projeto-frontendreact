@@ -6,7 +6,7 @@ const Filters = ( {minFilter, setMinFilter, maxFilter, setMaxFilter, searchFilte
 
   return (
     <FilterContainer>
-      <h1>Filtros</h1>
+      <h1>Filtrar por:</h1>
       <label for="filtro">Valor Mínimo</label>
       <br />
       <input type="text" id="Valor Mínimo" value={minFilter} onChange={(e) => setMinFilter(e.target.value)}></input>

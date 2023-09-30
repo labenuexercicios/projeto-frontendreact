@@ -12,10 +12,10 @@ const ProductCard = ({ name, value, imgUrl, addToCart, id }) => {
       <div id="descricao">
         <div id="txt">
           <p>{name}</p>
-          <p>{value}</p>
+          <p>₿ {value.toFixed(2)}</p>
         </div>
         <div id="btn">
-          <button onClick={() => addToCart(id) }>Adicionar ao carrinho</button>
+          <button id='botao1' onClick={() => addToCart(id) }>Adicionar ao carrinho</button>
         </div>
       </div>
     </CardContainer>
