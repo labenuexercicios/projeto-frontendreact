@@ -1,0 +1,7 @@
+Anotações para o projeto:
+
+fiz o carrinho, porém está falntando a retirada de um único produto.
+
+Agora é fazer o localstorage e a estilização final para o deploy.
+
+Idealmente, colocar mais produtos
