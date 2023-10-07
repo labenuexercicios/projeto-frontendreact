@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   min-height: 100vh;
   background-color: white;
+
 `;
 
 export const ListaTarefasContainer = styled.div`

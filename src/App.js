@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Header from "./componentes/Header/Header";
 import Bunners from "./componentes/Bunners/Bunners";
-import Comentarios from "./componentes/Comentarios/Comentarios"
+import Comentarios from "./componentes/Comentarios/Comentarios";
 import Footer from "./componentes/Footer/Footer";
-import styled,{ createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import itens from "./itens/itens.json";
-import itensBunners from "./itensBunners/itensBunners"
+import itensBunners from "./itensBunners/itensBunners";
 import ProductCard from "./componentes/ProductCard/ProductCard";
 import Filter from "./componentes/Filtros/Filtros";
+import CartCard from "./componentes/CartCard/CartCard";
 const GlobalStyle = createGlobalStyle`
   body{
     padding: 0;
@@ -38,7 +39,6 @@ const CardsContainer = styled.div`
   width: 100%;
   background-color: white;
   border-bottom: solid black 2px;
-  
 `;
 
 const CartContainer = styled.div`
@@ -48,94 +48,71 @@ const CartContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   background-color: #334455;
-
 `;
 
-
 function App() {
+  const [priceFilter, setPriceFilter] = useState("");
+  const [nameFilter, setNameFilter] = useState("");
+  const [order, setOrder] = useState("");
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
-  const [priceFilter, setPriceFilter] = useState("")
-  const [nameFilter, setNameFilter ] = useState("")
-  const [order , setOrder ] = useState("")
-  const [minPrice, setMinPrice] = useState("")
-  const [maxPrice, setMaxPrice] = useState("")
-  const [cart, setCart] = useState([{}])
-
-
-
-  // const productCart = cart.map((itens) => {
-  //   return (
-  //     <CartCard
-  //     key={itens.id}
-  //     product={itens}
-  //     />
-  //   )
-  // })
-
-
-  console.log(maxPrice)
+  console.log(maxPrice);
 
   return (
     <>
-      <GlobalStyle/>
-        <Header
+      <GlobalStyle />
+      <Header
         priceFilter={priceFilter}
         setPriceFilter={setPriceFilter}
         nameFilter={nameFilter}
         setNameFilter={setNameFilter}
-        
+      />
 
-        />
-
-        <Filter minPrice={minPrice}
+      <Filter
+        minPrice={minPrice}
         setMinPrice={setMinPrice}
         maxPrice={maxPrice}
         setMaxPrice={setMaxPrice}
         order={order}
         setOrder={setOrder}
-        />
-        {/* <CartContainer>
+      />
 
+      {/* <CartContainer>
+        <CartCard itens={itens} />
+      </CartContainer> */}
 
-          <CartCard productCart={productCart}/>
-
-
-        </CartContainer> */}
-
-
-        <CardsContainer>
+      <CardsContainer>
         {itens
-     
-        .filter((itens) => {
-          return itens.name.toLowerCase().includes(nameFilter.toLowerCase());
-        })
-        
-        .filter((itens) => {
-          return itens.price >= minPrice || minPrice === ""
-        })
-        .filter((itens) => {
-          return itens.price <= maxPrice || maxPrice === ""
-        })
-        
-        .sort((a, b) => {
-          if(order === "asc"){ return a.price > b.price ? 1 : -1}
-          if(order === "desc"){ return a.price < b.price ? 1 : -1}
-        })
-        .map((itens) => {
-          return <ProductCard
-            key={itens.name}
-            itens={itens}
-          />
-        })}
-        </CardsContainer>
-        <Bunners itensBunners={itensBunners}/>
-        <Comentarios/>
-        <Footer/>
 
+          .filter((itens) => {
+            return itens.name.toLowerCase().includes(nameFilter.toLowerCase());
+          })
+
+          .filter((itens) => {
+            return itens.price >= minPrice || minPrice === "";
+          })
+          .filter((itens) => {
+            return itens.price <= maxPrice || maxPrice === "";
+          })
+
+          .sort((a, b) => {
+            if (order === "asc") {
+              return a.price > b.price ? 1 : -1;
+            }
+            if (order === "desc") {
+              return a.price < b.price ? 1 : -1;
+            }
+          })
+          .map((itens) => {
+            return <ProductCard key={itens.name} itens={itens} />;
+          })}
+      </CardsContainer>
+      <Bunners itensBunners={itensBunners} />
+      <Comentarios />
+      <Footer />
     </>
-    
   );
 }
-
 
 export default App;

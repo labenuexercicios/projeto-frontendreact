@@ -10,7 +10,7 @@ function ProductCard(props) {
             <img key={itens.image} src={props.itens.image} className={styles.imagemFundo}/>
               <p key={itens.name}>{props.itens.name}</p>
               <div className={styles.ContainerButao}>
-                <button key={itens.price} className={styles.ButaoComprar} >R$ {props.itens.price}</button>
+                <button key={itens.price} className={styles.ButaoComprar}>R$ {props.itens.price}</button>
               </div>
       </div>
     </div>

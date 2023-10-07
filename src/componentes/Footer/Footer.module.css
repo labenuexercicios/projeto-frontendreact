@@ -73,24 +73,29 @@
  
 
 
- @media screen and (min-device-width : 300px) and (max-width: 550px){
+ @media screen and (min-device-width : 300px) and (max-width: 600px){
     .container{
-      gap: 10px;
+      gap: 2px;
       margin: 0 auto;
-      padding-left: 8px;
+      padding: 8px;
+      width: 100%;
      }
     .sobre{
         display: flex;
         justify-content: center;
         text-align: center;
+        width: 60px;
+        margin-left: 10px;
     }
     .suport{
         display: flex;
         justify-content: center;
+        width: 60px;
     }
     .redes{
         justify-content: center;
         display: flex;
         text-align: center;
+        width: 60px;
     }
 }

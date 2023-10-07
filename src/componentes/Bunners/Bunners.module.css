@@ -20,7 +20,7 @@
 .Buner{
     background-color:   #334455;
     border-radius: 10px;
-    width: 20vw;
+    width: 22vw;
     height: 20vh;
     padding: 10px;
     cursor: pointer;
@@ -29,8 +29,13 @@
     position:relative;
     top:0;
     cursor: pointer;
-    min-width: 200px;
+    min-width: 205px;
     justify-content: center;
+    background-color: white;
+    background-image: url(./../../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.5rem;
 
 }
 
@@ -48,6 +53,8 @@
     justify-content: center;
     align-items: center;
     min-width: 60%;
+    border-radius: 0 10px 10px 0px;
+
 }
 
 .ImagemBunner{
@@ -57,17 +64,25 @@
     min-width: 100%;
     display: flex;
     flex-direction: row;
+    border-radius: 10px 0 0 10px;
+
 }
 
 
 
-@media screen and (min-device-width : 300px) and (max-width: 330px){
+@media screen and (min-device-width : 300px) and (max-width: 400px){
     .Buner{
         width: 20vw;
         height: 15vh;
         padding: 10px;
         margin-left: 50px;
     }
-    
+
+    .Container_Burner{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
 }
 

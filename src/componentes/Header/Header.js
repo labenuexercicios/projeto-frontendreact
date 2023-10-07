@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "./../../img/logo.png";
 import styles from "./Header.module.css";
 import { BiSearchAlt } from "react-icons/bi";
 import {GiAstronautHelmet} from "react-icons/gi"

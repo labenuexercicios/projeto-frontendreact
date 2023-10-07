@@ -15,14 +15,7 @@ function Filter(props) {
           <option value="asc" className={styles.Opcao}>Menores preços</option>
           <option value="desc" className={styles.Opcao}>Maiores preços</option>
         </select>
-{/* 
-        <label htmlFor="minPreco">
-          <input type="number" value={props.minPrice} onChange={(e) => props.setMinPrice(e.target.value)} placeholder="Valor mínimo" className={styles.precoInformados}/>
-        </label>
 
-        <label htmlFor="maxPreco">
-          <input type="number" value={props.maxPrice} onChange={(e) => props.setMaxPrice(e.target.value)} placeholder="Valor máximo" className={styles.precoInformados}/>
-        </label> */}
 
         <div>
             {/* imput controlado */}
