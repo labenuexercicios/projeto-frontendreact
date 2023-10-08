@@ -23,7 +23,7 @@ function Footer() {
         <div className={styles.redes}>
         <h3>Nossas redes sociais: </h3>
         <div>
-          <a href="www.facebook.com" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=100089850935111" target="_blank">
           <AiFillFacebook  className={styles.icones}/> 
           </a>
         </div>
@@ -33,7 +33,7 @@ function Footer() {
           </a>
         </div>
         <div>
-          <a href="www.twitter.com" target="_blank"> 
+          <a href="https://twitter.com/i/flow/login?input_flow_data=%7B" target="_blank"> 
           <AiFillTwitterSquare  className={styles.icones}/>
           </a>
         </div>
