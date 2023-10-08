@@ -1,0 +1,20 @@
+.container{
+    width: 100vw;
+    height: auto;
+    min-height: 50vh;
+    background-color:burlywood  ;
+    top: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text{
+    margin-top: 10px;
+}
+
+.carrinho{
+    width: 100px;  
+    height: 50px; 
+}
