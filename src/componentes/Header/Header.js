@@ -2,11 +2,9 @@ import { useState } from "react";
 import styles from "./Header.module.css";
 import { BiSearchAlt } from "react-icons/bi";
 import { GiAstronautHelmet } from "react-icons/gi";
-import ProductCard from "../ProductCard/ProductCard";
 
-function Header(props) {
+function Header({itens, addToCart}) {
   const [showMenu, setShowMenu] = useState(false);
-  const [priceFilter, setPriceFilter] = useState("");
   const [nameFilter, setNameFilter] = useState("");
   const [order, setOrder] = useState("");
   const [minPrice, setMinPrice] = useState("");
@@ -31,7 +29,7 @@ function Header(props) {
             <input
               type="text"
               placeholder="Pesquisar"
-              value={props.nameFilter}
+              value={nameFilter}
               onChange={(e) => setNameFilter(e.target.value)}
             />
           </form>
@@ -41,20 +39,20 @@ function Header(props) {
         className={`${styles.menuSanduwich} ${showMenu ? styles.show : ""}`}
         onClick={toggleMenu}
       >
-        <a href="" target="_blank" className={styles.LinksSandWich}>
+        <a href="https://www.instagram.com/gsmartins216/" target="_blank" rel="noreferrer" className={styles.LinksSandWich}>
           Home
         </a>
-        <a href="" target="_blank" className={styles.LinksSandWich}>
+        <a href="https://www.instagram.com/gsmartins216/" target='_blank' rel="noreferrer" className={styles.LinksSandWich}>
           Carrinho
         </a>
         <a
           href="https://www.instagram.com/gsmartins216/"
-          target="_blank"
+          target="_blank" rel="noreferrer"
           className={styles.LinksSandWich}
         >
           Suporte
         </a>
-        <a href="" target="_blank" className={styles.LinksSandWich}>
+        <a href="https://www.instagram.com/gsmartins216/" target="_blank"  rel="noreferrer" className={styles.LinksSandWich}>
           Configurações
         </a>
       </nav>
@@ -68,7 +66,7 @@ function Header(props) {
       <div className={styles.Categorias}>
         <select
           className={styles.selecionar}
-          value={props.order}
+          value={order}
           onChange={(event) => {
             setOrder(event.target.value);
           }}
@@ -89,7 +87,7 @@ function Header(props) {
           <input
             placeholder="Preço mínimo"
             type="number"
-            value={props.minPrice}
+            value={minPrice}
             onChange={(e) => {
               setMinPrice(e.target.value);
             }}
@@ -100,7 +98,7 @@ function Header(props) {
           <input
             placeholder="Preço máximo"
             type="number"
-            value={props.maxPrice}
+            value={maxPrice}
             onChange={(e) => {
               setMaxPrice(e.target.value);
             }}
@@ -109,7 +107,7 @@ function Header(props) {
         </div>
       </div>
 
-      {props.itens
+      {itens
 
         .filter((itens) => {
           return itens.name.toLowerCase().includes(nameFilter.toLowerCase());
@@ -121,17 +119,32 @@ function Header(props) {
         .filter((itens) => {
           return itens.price <= maxPrice || maxPrice === "";
         })
-
         .sort((a, b) => {
           if (order === "asc") {
             return a.price > b.price ? 1 : -1;
           }
-          if (order === "desc") {
+          else if (order === "desc") {
             return a.price < b.price ? 1 : -1;
-          }
-        })
+          } else return 0;        })
         .map((itens) => {
-          return <ProductCard key={itens.name} itens={itens} />;
+          return (
+          <div className={styles.containerQuadros}>
+            <div className={styles.CardItem} key={itens.id}>
+              <img
+                key={itens.image}
+                src={itens.image}
+                alt="Camisas"
+                className={styles.imagemFundo}
+              />
+              <p key={itens.name}>{itens.name}</p>
+              <div className={styles.ContainerButao}>
+                <button key={itens.price} className={styles.ButaoComprar} onClick={() => addToCart(itens)}>
+                  R$ {itens.price}
+                </button>
+              </div>
+            </div>
+          </div>
+          )
         })}
     </>
   );

@@ -4,7 +4,7 @@
     top: 0;
     display: flex;
     justify-content: space-around;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: row;
     background-color: white;
     background-image: url(./../../img/fundo.jpg);

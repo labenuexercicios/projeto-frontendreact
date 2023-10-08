@@ -6,8 +6,8 @@ import Footer from "./componentes/Footer/Footer";
 import styled, { createGlobalStyle } from "styled-components";
 import itens from "./itens/itens.json";
 import itensBunners from "./itensBunners/itensBunners";
-import ProductCard from "./componentes/ProductCard/ProductCard";
 import CartCard from "./componentes/CartCard/CartCard";
+import Icones from "./componentes/IconeCarrinho/Icone";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -44,21 +44,83 @@ const CardsContainer = styled.div`
 
 const CartContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   flex-wrap: wrap;
+  padding: 5px 0 10px 0;
   width: 100%;
-  background-color: #334455;
+  background-color: aliceblue;
 `;
 
 function App() {
+
+  const [cart, setCart] = useState([])
+
+  const addToCart = (itens) => {
+    const newItem = cart.find((item) => item.id === itens.id)
+    if(newItem === undefined){
+      setCart([...cart, {...itens, amount:1}])
+    } else {
+      const newCart=cart.map((item) => {
+        if(item.id === itens.id){
+          return{...newItem, amount:newItem.amount+1}
+        } else {
+          return item
+        }
+      })
+      setCart(newCart)
+    }
+  }
+
+  const deleteProductToCart = (itens) => {
+    const deleteProduct = cart.find((item) => item.id === itens.id)
+    if(deleteProduct.amount > 1){
+      const newCart = cart.map((item) => {
+        if(item.id === itens.id){
+          return {...deleteProduct, amount:deleteProduct.amount-1}
+        } else {
+          return item
+        }
+      })
+      setCart(newCart)
+    } else{
+      const newCart = cart.filter((item)=>{
+        return item.id!== itens.id
+      })
+      setCart(newCart)
+    }
+  }
+  const productsCart = cart.map((itens) => {
+    return(
+      <CartCard
+        key={itens.id}
+        itens={itens}
+        deleteProductToCart={deleteProductToCart}
+      />
+    )
+  })
+
+  const productsCard = cart.map((itens) => {
+    return(
+      <Header
+        key={itens.id}
+        itens={itens}
+      />
+    )
+  })
 
   return (
     <>
       <GlobalStyle />
       <CardsContainer>
-        <Header itens={itens}/>
-       </CardsContainer>     
+      <Header itens={itens} productsCard={productsCard} addToCart={addToCart}/>
+      </CardsContainer>
+      <CartContainer>
+      <Icones/>
+       {productsCart} 
+      </CartContainer>
       <Bunners itensBunners={itensBunners} />
       <Comentarios />
       <Footer />
@@ -67,3 +129,5 @@ function App() {
 }
 
 export default App;
+
+

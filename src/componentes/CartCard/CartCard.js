@@ -1,27 +1,29 @@
-import styles from "./CartCard.module.css"
- import {AiOutlineShoppingCart} from "react-icons/ai"
+import  { Container, CardItem, ImagemCarrinho, TextoCarrinho, PrecoCarrinho, ButaoDelete, Quantidade } from "./CartCard.styles";
 
-
-
-function CartCard(props){
-
-
-    return (
+function CartCard({ itens, cart, deleteProductToCart }) {
+  return (
     <>
-    
-    <div className={styles.container}>
-      <p className={styles.text}>Esse é o cart:</p>
-      <AiOutlineShoppingCart className={styles.carrinho}/>
-      <strong className={styles.text}>Valor total: R$ </strong>
-    </div> 
-
-    <div>
-        <p>{props.itens.name}</p>
-        <p>{props.itens.price}</p>
-        <p>{props.itens.amount}</p>
-    </div>  
+            <Container>
+              <CardItem key={itens.id}>
+                <ImagemCarrinho
+                  key={itens.image}
+                  src={itens.image}
+                  alt="Camisas"
+                />
+                <TextoCarrinho key={itens.name}>
+                  {itens.name}
+                </TextoCarrinho>
+                <Quantidade>
+                Qtd.{itens.amount}
+                </Quantidade>
+                <PrecoCarrinho key={itens.price}>
+                  R${itens.price}
+                </PrecoCarrinho>
+                <ButaoDelete onClick={()=> deleteProductToCart(itens)}>X</ButaoDelete>
+              </CardItem>
+            </Container>
     </>
-    );
+  );
 }
 
-export default CartCard
+export default CartCard;
