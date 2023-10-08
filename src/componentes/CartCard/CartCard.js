@@ -1,6 +1,6 @@
 import  { Container, CardItem, ImagemCarrinho, TextoCarrinho, PrecoCarrinho, ButaoDelete, Quantidade } from "./CartCard.styles";
 
-function CartCard({ itens, cart, deleteProductToCart }) {
+function CartCard({ itens, deleteProductToCart }) {
   return (
     <>
             <Container>
