@@ -72,10 +72,11 @@
 
 @media screen and (min-device-width : 300px) and (max-width: 400px){
     .Buner{
-        width: 20vw;
+        width: 30vw;
         height: 15vh;
         padding: 10px;
         margin-left: 50px;
+        font-size: 1rem;
     }
 
     .Container_Burner{
