@@ -39,7 +39,7 @@ export const PrecoCarrinho = styled.p`
     background-color: orange;
     width: 60px;
     height: 30px;
-    margin:auto;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
