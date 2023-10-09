@@ -1,0 +1,89 @@
+/* Em baixo do carrosel */
+
+
+.Container_Burner{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    background-image: url(./../../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.Buner{
+    background-color:   #334455;
+    border-radius: 10px;
+    width: 22vw;
+    height: 20vh;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    top:0;
+    cursor: pointer;
+    min-width: 205px;
+    justify-content: center;
+    background-color: white;
+    background-image: url(./../../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.5rem;
+
+}
+
+.Buner:hover{
+    top:-4px;
+    box-shadow:0 4px 4px #999;
+    transition: all .2s ease-in-out
+}
+
+
+.BunerTexto{
+    background-color: #f7f7f7;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60%;
+    border-radius: 0 10px 10px 0px;
+
+}
+
+.ImagemBunner{
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px 0 0 10px;
+
+}
+
+
+
+@media screen and (min-device-width : 300px) and (max-width: 400px){
+    .Buner{
+        width: 30vw;
+        height: 15vh;
+        padding: 10px;
+        margin-left: 50px;
+        font-size: 1rem;
+    }
+
+    .Container_Burner{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+}
+
