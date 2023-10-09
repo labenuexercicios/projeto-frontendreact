@@ -1,6 +1,8 @@
-import  { Container, CardItem, ImagemCarrinho, TextoCarrinho, PrecoCarrinho, ButaoDelete, Quantidade } from "./CartCard.styles";
+import  { Container, CardItem, ImagemCarrinho, TextoCarrinho, PrecoCarrinho, ButaoDelete, Quantidade, Total, ContainerDetalhes } from "./CartCard.styles";
 
-function CartCard({ itens, deleteProductToCart }) {
+function CartCard({ itens, precoTotal, deleteProductToCart }) {
+
+ 
   return (
     <>
             <Container>
@@ -11,15 +13,18 @@ function CartCard({ itens, deleteProductToCart }) {
                   alt="Camisas"
                 />
                 <TextoCarrinho key={itens.name}>
-                  {itens.name}
+                  <strong>{itens.name}</strong>
                 </TextoCarrinho>
+                <ContainerDetalhes>
                 <Quantidade>
-                Qtd.{itens.amount}
+                <strong>Qtd.{itens.amount}</strong>
                 </Quantidade>
                 <PrecoCarrinho key={itens.price}>
-                  R${itens.price}
+                  <strong>R${itens.price}</strong>
                 </PrecoCarrinho>
-                <ButaoDelete onClick={()=> deleteProductToCart(itens)}>X</ButaoDelete>
+                <ButaoDelete onClick={()=> deleteProductToCart(itens)}><strong>X</strong></ButaoDelete>
+                </ContainerDetalhes>
+             
               </CardItem>
             </Container>
     </>

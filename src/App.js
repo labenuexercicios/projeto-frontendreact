@@ -9,7 +9,6 @@ import itensBunners from "./itensBunners/itensBunners";
 import CartCard from "./componentes/CartCard/CartCard";
 import Icones from "./componentes/IconeCarrinho/Icone";
 
-
 const GlobalStyle = createGlobalStyle`
   body{
     padding: 0;
@@ -54,72 +53,103 @@ const CartContainer = styled.div`
   background-color: aliceblue;
 `;
 
-function App() {
+const CartContainerDentro = styled.div`
+  background-color: white;
+  border: solid black 2px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  min-width: 320px;
+  margin: 0 auto;
+`
+const Total = styled.h3`
+    color:black;
+    width: auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 30vw;
+    text-align: center;
+`
+const Strong = styled.strong`
+  background-color: orange;
+`
 
-  const [cart, setCart] = useState([])
+function App() {
+  const [cart, setCart] = useState([]);
+
+  let precoTotal= cart.reduce((acc, itens) => (itens.price * itens.amount) + acc, 0)
 
   const addToCart = (itens) => {
-    const newItem = cart.find((item) => item.id === itens.id)
-    if(newItem === undefined){
-      setCart([...cart, {...itens, amount:1}])
+    const newItem = cart.find((item) => item.id === itens.id);
+    if (newItem === undefined) {
+      setCart([...cart, { ...itens, amount: 1 }]);
     } else {
-      const newCart=cart.map((item) => {
-        if(item.id === itens.id){
-          return{...newItem, amount:newItem.amount+1}
+      const newCart = cart.map((item) => {
+        if (item.id === itens.id) {
+          return { ...newItem, amount: newItem.amount + 1 };
         } else {
-          return item
+          return item;
         }
-      })
-      setCart(newCart)
+      });
+      setCart(newCart);
     }
-  }
+  };
 
   const deleteProductToCart = (itens) => {
-    const deleteProduct = cart.find((item) => item.id === itens.id)
-    if(deleteProduct.amount > 1){
+    const deleteProduct = cart.find((item) => item.id === itens.id);
+    if (deleteProduct.amount > 1) {
       const newCart = cart.map((item) => {
-        if(item.id === itens.id){
-          return {...deleteProduct, amount:deleteProduct.amount-1}
+        if (item.id === itens.id) {
+          return { ...deleteProduct, amount: deleteProduct.amount - 1 };
         } else {
-          return item
+          return item;
         }
-      })
-      setCart(newCart)
-    } else{
-      const newCart = cart.filter((item)=>{
-        return item.id!== itens.id
-      })
-      setCart(newCart)
+      });
+      setCart(newCart);
+    } else {
+      const newCart = cart.filter((item) => {
+        return item.id !== itens.id;
+      });
+      setCart(newCart);
     }
-  }
+  };
   const productsCart = cart.map((itens) => {
-    return(
+    return (
       <CartCard
         key={itens.id}
         itens={itens}
         deleteProductToCart={deleteProductToCart}
+        precoTotal={precoTotal}
       />
-    )
-  })
+    );
+  });
 
   const productsCard = cart.map((itens) => {
-    return(
-      <Header
-        key={itens.id}
-        itens={itens}
-      />
-    )
-  })
+    return <Header key={itens.id} itens={itens} />;
+  });
 
   return (
     <>
       <GlobalStyle />
       <CardsContainer>
-      <Header itens={itens} productsCard={productsCard} addToCart={addToCart}/>
+        <Header
+          itens={itens}
+          productsCard={productsCard}
+          addToCart={addToCart}
+        />
       </CardsContainer>
       <CartContainer>
-      <Icones/>
-       {productsCart} 
+        <CartContainerDentro>
+        <Icones />
+        {productsCart}
+        <Total>
+          <h3>O preço total da sua compra é: <Strong>R${precoTotal},00</Strong></h3>
+        </Total>
+        </CartContainerDentro>
       </CartContainer>
       <Bunners itensBunners={itensBunners} />
       <Comentarios />
@@ -129,5 +159,3 @@ function App() {
 }
 
 export default App;
-
-

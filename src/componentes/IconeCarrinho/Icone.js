@@ -1,5 +1,5 @@
 import styles from "./Icones.module.css"
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import rocket from "./../../img/rocket.png"
 
 
 export default function Icones () {
@@ -10,7 +10,7 @@ export default function Icones () {
             <div className={styles.container}>
                 <div className={styles.containerIcone}>
                     <p>Aqui é o carrinho... Adicione Algo</p>
-                    <AiOutlineShoppingCart className={styles.iconeCarrinho}></AiOutlineShoppingCart>
+                    <img src={rocket} className={styles.iconeCarrinho}></img>
                 </div>
             </div>
         </>
