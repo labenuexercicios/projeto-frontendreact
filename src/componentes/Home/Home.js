@@ -11,29 +11,24 @@ function Home(props) {
     setOrdination(event.target.value);
   };
 
-
-  const renderList = listaDeProdutos
-  .sort((a,b)=>ordination === "" || ordination === "asc" && a.nome > b.nome ? 1 : -1)
-  .sort((a,b)=>ordination === "" || ordination === "desc" && a.nome > b.nome ? -1 : 1)
-  .map((item) => {
-    return (
-      <ProdutosCard
-        key={item.id}
-        id={item.id}
-        cart={cart}
-        nomeDoProduto={item.nomeDoProduto}
-        preco={item.preco}
-        imagem={item.imagem}
-      />
-    );
-  })
-
   const produto = listaDeProdutos
-    .filter((item) =>
-      item.nomeDoProduto
-        .toLowerCase()
-        .includes(props.searchFilter.toLowerCase())
-    )
+    .filter((item) => item.nomeDoProduto.toLowerCase().includes(props.searchFilter.toLowerCase()))
+    .filter((item)=> {
+      if(props.minFilter > 0 && props.maxFilter > 0){
+        return (item.preco >= props.minFilter && item.preco <= props.maxFilter)
+      }else{
+        return item
+      }
+    })
+    .sort((a,b)=>{
+      if (ordination === "asc" && a.nomeDoProduto.toLowerCase() < b.nomeDoProduto.toLowerCase()){
+        return 1 
+      }else if (ordination === "desc" && b.nomeDoProduto.toLowerCase() < a.nomeDoProduto.toLowerCase()){
+        return -1        
+      }else{
+        return 1
+      }
+    })
     .map((produtos) => (
       <Produtos
         key={produtos.id}
@@ -47,41 +42,10 @@ function Home(props) {
       />
     ));
 
-  const filtroMinimo = listaDeProdutos
-    .filter((item) => item.preco < props.minFilter)
-    .map((item) => (
-      <Produtos
-        key={item.id}
-        nomeDoProduto={item.nomeDoProduto}
-        preco={item.preco}
-        imagem={item.imagem}
-      />
-    ));
-
-  const filtroMaximo = listaDeProdutos
-    .filter((item) => {
-      if (item.preco > props.maxFilter) {
-        return      
-      }
-      else {
-        return ""
-      }
-    })
-    .map((item) => (
-      <Produtos
-        key={item.id}
-        nomeDoProduto={item.nomeDoProduto}
-        preco={item.preco}
-        imagem={item.imagem}
-      />
-    ));
-
-
-
   return (
     <>
       <HomeContainer>
-        <h1>Home</h1>
+        <h1>Escolha seu brinquedo</h1>
         <HomeOrdenacao>
           
           <label>Quantidade de produtos: {listaDeProdutos.length}</label>
@@ -91,10 +55,6 @@ function Home(props) {
             <select
               value={ordination}
               onChange={changeOrder}
-            //   onChange={(event) => {
-            //     setOrdination(event.target.value);
-            //   }
-            // }
             >
               <option value="asc">Crescente</option>
               <option value="desc">Decrescente</option>
@@ -105,8 +65,7 @@ function Home(props) {
         
 
         <HomeCard>
-          {filtroMinimo.length > 0 ? filtroMinimo : produto}
-          {filtroMaximo && filtroMaximo}
+          {produto}
         </HomeCard>
       </HomeContainer>
     </>

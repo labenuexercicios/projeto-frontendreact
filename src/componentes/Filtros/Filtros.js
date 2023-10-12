@@ -3,7 +3,16 @@ import { FiltroContainer, BtFiltro } from "./styleFiltros";
 function Filtros(props) {
   return (
     <FiltroContainer>
-      <h1>Filtros</h1>
+      <h2>Encontre seu produto: </h2>
+      <label>
+        Buscar por nome:
+        <br />
+        <input
+          type="text"
+          value={props.searchFilter}
+          onChange={(event) => props.setSearchFilter(event.target.value)}
+        />
+      </label>
       <label>
         Filtro mínimo:
         <br />
@@ -34,16 +43,6 @@ function Filtros(props) {
           }}
         />
       </label>
-      <label>
-        Buscar por nome:
-        <br />
-        <input
-          type="text"
-          value={props.searchFilter}
-          onChange={(event) => props.setSearchFilter(event.target.value)}
-        />
-      </label>
-      {/* <BtFiltro>Buscar</BtFiltro> */}
     </FiltroContainer>
   );
 }

@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-// import "./modulo_scss/App.scss"
 import Carrinho from "./componentes/Carrinho/Carrinho";
 import Filtros from "./componentes/Filtros/Filtros";
 import Home from "./componentes/Home/Home";
+import Header from "./componentes/Header/Header"
+import Footer from "./componentes/Footer/Footer";
 import { GlobalStyle } from "./GlobalStyle";
 import { FiltroContainer } from "./componentes/Filtros/styleFiltros";
 import { Principal } from "./GlobalStyle";
 import { listaDeProdutos } from "./assents/ListaDeProdutos";
+import { useState, useEffect } from "react"
 
 function App() {
   const [listaDeProdutosEstado, setListaDeProdutosEstado] = useState(listaDeProdutos || [])
@@ -19,13 +20,28 @@ function App() {
   const [soma, setSoma] = useState(0)
 
   let somaValor = soma;
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      const cartString = JSON.stringify(cart);
+      localStorage.setItem("car", cartString);
+    }
+  }, [cart]);
+  console.log(cart);
+
+  useEffect(() => {
+    const antigoCart = JSON.parse(localStorage.getItem("car"));
+    if (antigoCart) {
+      setCart(antigoCart);
+    }
+  }, []);
   
 
   return (
     <div>
       <GlobalStyle />
-      <Principal>
-        <Filtros 
+      <Header />
+      <Filtros 
           minFilter={minFilter}
           setMinFilter={setMinFilter}
           maxFilter={maxFilter}
@@ -33,6 +49,8 @@ function App() {
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
         />
+      <Principal>
+        
         <Home
           listaDeProdutos={listaDeProdutosEstado}
           amount={amount}
@@ -51,10 +69,9 @@ function App() {
           cart={cart}
           setCart={setCart}
           setSoma={setSoma}
-        
-
         />
       </Principal>
+      <Footer/>
     </div>
   );
 }

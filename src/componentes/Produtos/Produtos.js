@@ -1,5 +1,4 @@
 import { ProdutosCard } from "./styleProdutos";
-// import mascara01 from "../Imagens/mascara01.png"
 
 export function Produtos(props) {
   
@@ -21,16 +20,22 @@ export function Produtos(props) {
         props.setCart(quantidade)
       }
     }
-  
-   
-  
-
+    const FormataMoeda = (valor) => {
+      if (valor > 0) {
+        let numberFormat = new Intl.NumberFormat("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        }).format(valor);
+        return numberFormat;
+      }
+    };
+    const novoValor = FormataMoeda(props.preco)
   return (
     <ProdutosCard>
       <img src={props.imagem} alt="" />
       <h4>{props.nomeDoProduto}</h4>
-      <p>R$ {props.preco}</p>
-      <button onClick={() => adicionaCart(props.id)}>Adicionar carrinho</button>
+      <p>{novoValor}</p>
+      <button onClick={() => adicionaCart(props.id)} className="btAddCarrinho">Adicionar</button>
     </ProdutosCard>
   );
 }

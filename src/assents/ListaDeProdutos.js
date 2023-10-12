@@ -9,11 +9,12 @@ import foto08 from "./image/foto08.jpg"
 import foto09 from "./image/foto09.jpg"
 import foto10 from "./image/foto10.jpg"
 
+
 const listaDeProdutos = [
   {
     id: 1,
     nomeDoProduto: "Foguete espacial brinquedo",
-    preco: 222.00,
+    preco: 222,
     imagem: foto01,
   },
   {

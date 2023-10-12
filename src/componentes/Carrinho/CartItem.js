@@ -24,11 +24,10 @@ const CartItem = (props) => {
   
   return (
     <div>
-      <p>Total: R${props.soma}</p>
       <p>Produto: {props.nome}</p>
-      <p>Preço: R$ {props.preco}</p>
+      <p>Preço: {props.preco}</p>
       <p>Qnt: {props.quantidade}</p>
-      <button onClick={() => excluirProduto(props.id)}>Remover</button>
+      <button onClick={() => excluirProduto(props.id)} className='btExcluirItem'>Excluir item</button>
     </div>
   )
 }
