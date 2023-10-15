@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content:center;
     margin: 0;
-    
+    zoom: 1;
   }
 
   main{
@@ -81,7 +81,7 @@ const Strong = styled.strong`
 function App() {
   const [cart, setCart] = useState([]);
 
-  let precoTotal= cart.reduce((acc, itens) => (itens.price * itens.amount) + acc, 0)
+  let precoTotal = cart.reduce((acc, itens) => (itens.price * itens.amount) + acc, 0)
 
   const addToCart = (itens) => {
     const newItem = cart.find((item) => item.id === itens.id);
@@ -97,9 +97,13 @@ function App() {
       });
       setCart(newCart);
     }
+
+    const novoCarrinho = [...cart]
+    const guardarNovoCarrinho = JSON.stringify(novoCarrinho)
+    localStorage.setItem("itens",guardarNovoCarrinho)
   };
 
-  const deleteProductToCart = (itens) => {
+  const deleteProductToCart = (itens /*(excluirProdutos)*/) => {
     const deleteProduct = cart.find((item) => item.id === itens.id);
     if (deleteProduct.amount > 1) {
       const newCart = cart.map((item) => {
@@ -116,6 +120,15 @@ function App() {
       });
       setCart(newCart);
     }
+    // const removerItem = [...cart]
+    // const index = removerItem.indexOf(excluirProduto)
+    // if(index > -1){
+    //   removerItem.splice(index, 1)
+    //   const guardarProduto = JSON.stringify(removerItem)
+
+    //   localStorage.setItem("localSalvo", guardarProduto)
+    //   setCart(removerItem)
+    // }
   };
   const productsCart = cart.map((itens) => {
     return (

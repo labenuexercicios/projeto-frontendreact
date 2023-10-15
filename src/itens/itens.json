@@ -3,56 +3,48 @@
     "id": "1",
     "name": "Camisa de Astronauta Preta" ,
     "price": 70.00,
-    "infoTech": "Ficha tecnica",
     "image": "https://a-static.mlcdn.com.br/450x450/camiseta-camisa-personalizada-astronalta-espaco-estilosa-5-estilo-vizu/estilovizu/db43eae8e64111ed92e14201ac185033/8b05437db1bee8482f8885458bc82c1d.jpeg"
   },
   {
     "id": "2",
     "name": "Camisa de Astronauta Branca",
     "price": 39.99,
-    "infoTech": "Ficha tecnica",
     "image": "https://http2.mlstatic.com/D_NQ_NP_767628-MLB70110197705_062023-O.webp"
   },
   { 
     "id": "3",
     "name": "Camisa Nasa Preta",
     "price": 129.99,
-    "infoTech": "Ficha tecnica",
     "image": "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_unissex_nasa_agencia_governamental_exploracao_espacial_espaco_preta_cd_106127_1_ffa24179546f02375d726b72d392d2a4.jpg"
   },
   {
     "id": "4",
     "name": "Camisa Universo",
     "price": 199.99,
-    "infoTech": "Ficha tecnica",
     "image": "https://img.elo7.com.br/product/original/47530CB/camiseta-camisa-espaco-universo-space-galaxia-cosmos-d41-sistema-solar.jpg"
   },
   {
     "id": "5",
     "name": "Camisa Nasa",
     "price": 89.99,
-    "infoTech": "Ficha tecnica",
     "image": "https://img.elo7.com.br/product/original/2E39A86/camiseta-blusa-nasa-astronauta-espacial-espaco-agencia-g2.jpg"
   },
   {
     "id": "6",
     "name": "Camisa astrounata na lua",
     "price": 200.00,
-    "infoTech": "Ficha tecnica",
     "image": "https://a-static.mlcdn.com.br/450x450/camiseta-astronauta-deitado-a-lua-camisa-espaco-divertido-mago-das-camisas/magodascamisas3/15811063193/60803e693086f795a2d2bacfae822dcd.jpeg"
   },
   {
     "id": "7",
     "name": "Camisa de Planetas",
     "price": 350,
-    "infoTech": "Ficha tecnica",
     "image": "https://down-br.img.susercontent.com/file/0ec675a48ba9377052e967dabe7eab84"
   },
   {
     "id": "8",
     "name": "Camisa ET",
     "price": 75.00,
-    "infoTech": "Ficha tecnica",
     "image": "https://down-br.img.susercontent.com/file/79d798021dd5b4381e95ce7725e4f155_tn"
   }
 ]

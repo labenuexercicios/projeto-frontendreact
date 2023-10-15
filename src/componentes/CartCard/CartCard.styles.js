@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: auto;
+    width: 100%;
     height: auto;
     top: 0;
     display: flex;
@@ -11,7 +11,7 @@ export const Container = styled.div`
     min-width: 30vw;
 `
 export const CardItem = styled.div`
-    width: 300px;
+    width: 90%;
     border: solid black 2px;
     min-height: 60px;
     height: auto;
