@@ -9,6 +9,8 @@ import { Principal } from "./GlobalStyle";
 import { listaDeProdutos } from "./assents/ListaDeProdutos";
 import { useState, useEffect } from "react"
 
+// Alteração realizada para testar a branch
+
 function App() {
   const [listaDeProdutosEstado, setListaDeProdutosEstado] = useState(listaDeProdutos || [])
   
