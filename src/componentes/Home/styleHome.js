@@ -70,5 +70,6 @@ export const HomeCard = styled.section`
   @media screen and (min-device-width : 801px) and (max-device-width : 1200px) {
   /* computadores */
     font-size: 18px;
+    
   }
 `;
