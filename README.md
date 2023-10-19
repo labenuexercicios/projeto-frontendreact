@@ -13,35 +13,7 @@
 
 #### O Carrinho traz o valor total dos itens adicionados, assim como as informações de cada produto e a opção de remover os itens, além do botão “Comprar agora”.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-A página é responsiva.
+#### A página é responsiva.
 
 
 
