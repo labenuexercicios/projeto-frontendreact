@@ -2,19 +2,22 @@ import Filters from "./Components/Filter/Filter"
 import Home from "./Components/ProductList/Home/Home"
 import Cart from "./Components/ShoppingCart/Cart/Cart"
 import { MainContainer  } from "./AppStyle";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 export default function App() {
   const [minFilter, setMinFilter] = useState("");
   const [maxFilter, setMaxFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
-  const [cart, setCart] = useState("");
   const [amount, setAmount] = useState("");
+  const [cartProducts, setCartProducts] = useState([])
+
+
 
   return (
     <MainContainer>
-      <Filters 
+      <Filters
+      cartProducts={cartProducts}
+      setCartProducts={setCartProducts}
       minFilter={minFilter} 
       setMinFilter={setMinFilter} 
       maxFilter={maxFilter} 
@@ -24,13 +27,21 @@ export default function App() {
       <Home 
       amount={amount}
       setAmount={setAmount}
-      cart={cart}
-      setCart={setCart}/>
+      cartProducts={cartProducts}
+      setCartProducts={setCartProducts}
+      minFilter={minFilter} 
+      setMinFilter={setMinFilter} 
+      maxFilter={maxFilter} 
+      setMaxFilter={setMaxFilter}
+      searchFilter={searchFilter}
+      setSearchFilter={setSearchFilter}
+      />
       <Cart
       amount={amount}
       setAmount={setAmount}
-      cart={cart}
-      setCart={setCart}/>
+      cartProducts={cartProducts}
+      setCartProducts={setCartProducts}
+      />
     </MainContainer>
   );
 }

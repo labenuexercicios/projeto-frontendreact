@@ -6,5 +6,5 @@ flex-direction: block;
 margin: 10px;
 gap: 2rem;
 background-color: gray;
-height: 100%;
+height: 100rem;
 `

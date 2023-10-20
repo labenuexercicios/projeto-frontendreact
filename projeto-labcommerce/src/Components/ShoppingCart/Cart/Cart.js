@@ -1,16 +1,37 @@
-import {CartContainer} from "./CartStyle"
+// Cart.js
 
-function Cart() {
-    return (
-      <CartContainer>
-        <h2>Cart</h2>
-        <p><b>Products:</b></p>
-        <p><b>x0 Product Name</b></p>
-        <button>Remove</button>
-        <p><b>Total price:</b> US$0,00</p>
-  
-      </CartContainer>
-    );
+import { CartContainer } from "./CartStyle";
+import Items from "../Items/Items";
+import { useState } from "react";
+
+function Cart(props) {
+  const removeFromCart = (productId) => {
+    const updatedCart = props.cartProducts.filter((product) => product.id !== productId);
+    props.setCartProducts(updatedCart);
+  };
+
+  const clearCart = () => {
+    props.setCartProducts([]);
+  };
+
+  function calculateTotalPrice(cartProducts) {
+    return cartProducts.reduce((total, product) => total + product.totalPrice, 0);
   }
 
-  export default Cart;
+  const totalCartPrice = calculateTotalPrice(props.cartProducts);
+
+  return (
+    <CartContainer>
+      <h2>Cart</h2>
+      <p><b>Products:</b></p>
+      <Items
+        cartProducts={props.cartProducts}
+        removeFromCart={removeFromCart}
+      />
+      <button onClick={clearCart}>Clear Cart</button>
+      <p><b>Total price:</b> US${totalCartPrice.toFixed(2)}</p>
+    </CartContainer>
+  );
+}
+
+export default Cart;
