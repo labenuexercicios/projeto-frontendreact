@@ -13,12 +13,18 @@ import listOfProducts from "../../assents/productsList";
 
 
 export default function Home() {
+    const [ordination, setOrdination] = useState("");
+
+    const handleOrdination = (event) => {
+        setOrdination(event.target.value)
+    }
+
     return (
         <StyledMain>
             <SessaoParagrafo>
             <QuantidadeProduto>Quantidade de produtos:</QuantidadeProduto>
             <Ordenacao> Ordenação:</Ordenacao>
-            <StyledSelect>
+            <StyledSelect value={ordination} OnChange={handleOrdination}>
                 <option value="crescente">Crescente</option>
                 <option value="decrecente">Decrecente</option>
             </StyledSelect>
