@@ -49,6 +49,7 @@ export const SectionMain = styled.section `
  grid-column: 1/4;
  align-items: center;
  gap: 25px;
+ 
 `
 
 export const StyledSection = styled.section`
@@ -58,9 +59,7 @@ export const StyledSection = styled.section`
  
 `
 export const StyledProductCard = styled.p`
-padding-top: 13vh;
-padding-bottom: 17vh;
-border: 1px solid black;
+
 `
 
 export const StyledHomeParag = styled.p`

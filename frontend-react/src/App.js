@@ -6,14 +6,19 @@ import Home from './Components/ProductList/Home/Home';
 import Cart from './Components/ShoppingCart/Cart/Cart';
 import { StyledContainer } from './Components/ProductList/Home/HomeStyle';
 
+import listOfProducts from "./Components/assents/productsList";
+
+
 export default function App() {
+  
   return (
+        
 
     <div className="App">
       <StyledContainer>
         <GlobalStyle />
         <Filters />
-        <Home />
+        <Home listOfProducts={listOfProducts}/>
         <Cart />
       </StyledContainer>
     </div>

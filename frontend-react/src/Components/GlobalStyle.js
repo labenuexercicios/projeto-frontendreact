@@ -8,5 +8,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Times New Roman', Times, serif;
     
  }
+
+ .product-image {
+    width: 100%;
+    object-fit: contain; /* or 'contain' depending on your needs */
+}
  
 `

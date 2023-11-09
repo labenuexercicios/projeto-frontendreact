@@ -8,9 +8,8 @@ import {
     SessaoParagrafo,
     QuantidadeProduto,
     Ordenacao
-    
-
 } from "./HomeStyle";
+import listOfProducts from "../../assents/productsList";
 
 
 export default function Home() {
@@ -20,31 +19,21 @@ export default function Home() {
             <QuantidadeProduto>Quantidade de produtos:</QuantidadeProduto>
             <Ordenacao> Ordenação:</Ordenacao>
             <StyledSelect>
-                <option value="decrecente">Crescente</option>
+                <option value="crescente">Crescente</option>
                 <option value="decrecente">Decrecente</option>
             </StyledSelect>
             </SessaoParagrafo>
             <SectionMain>
-                <StyledSection >
-                    <StyledProductCard>Product Card</StyledProductCard>
-                    <StyledHomeParag>Nome do Produto</StyledHomeParag>
-                    <StyledHomeParag>valor</StyledHomeParag>
+                {listOfProducts.map((product) => (
+                    <div key={product.id}>
+                    <StyledSection>
+                    <StyledProductCard>   <img className="product-image" src={product.imageUrl} alt={product.name} /></StyledProductCard>
+                    <StyledHomeParag>{product.name}</StyledHomeParag>
+                    <StyledHomeParag>{product.value}</StyledHomeParag>
                     <button>Adicionar ao Carrinho</button>
                 </StyledSection>
-
-                <StyledSection >
-                    <StyledProductCard>Product Card</StyledProductCard>
-                    <StyledHomeParag>Nome do Produto</StyledHomeParag>
-                    <StyledHomeParag>valor</StyledHomeParag>
-                    <button>Adicionar ao Carrinho</button>
-                </StyledSection>
-
-                <StyledSection >
-                    <StyledProductCard>Product Card</StyledProductCard>
-                    <StyledHomeParag>Nome do Produto</StyledHomeParag>
-                    <StyledHomeParag>valor</StyledHomeParag>
-                    <button>Adicionar ao Carrinho</button>
-                </StyledSection>
+                </div>
+            ))}    
             </SectionMain>
         </StyledMain>
 
