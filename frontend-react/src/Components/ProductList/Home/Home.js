@@ -10,7 +10,7 @@ import {
     Ordenacao
 } from "./HomeStyle";
 import listOfProducts from "../../assents/productsList";
-
+import { useState } from 'react';
 
 export default function Home() {
     const [ordination, setOrdination] = useState("");
