@@ -19,7 +19,7 @@ export const StyledPCart = styled.p`
 `
 
 export const SessaoDoCart = styled.section`
-display: flex;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 `

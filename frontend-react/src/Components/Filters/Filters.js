@@ -17,25 +17,26 @@ export default function Filters({ minFilter, setMinFilter, maxFilter, setMaxFilt
         setSearchFilter(event.target.value)
     }
 
-
-
     return (
 
         <StyledFilter>
             <StyledH2>Filters</StyledH2>
 
             <StyledP>Valor minímo:</StyledP>
-
             <StyledInput value={minFilter}
                 onChange={handleMinFilter}
                 min={0}>
             </StyledInput>
 
             <StyledP>Valor máximo:</StyledP>
-            <StyledInput value={maxFilter} onChange={handleMaxFilter} min={0}></StyledInput>
+            <StyledInput value={maxFilter}
+                onChange={handleMaxFilter}
+                min={0}></StyledInput>
 
             <StyledP>Busca por nome:</StyledP>
-            <StyledInput value={searchFilter} onChange={handleSearchFilter}></StyledInput>
+            <StyledInput value={searchFilter}
+                onChange={handleSearchFilter}>
+            </StyledInput>
 
         </StyledFilter>
     );
