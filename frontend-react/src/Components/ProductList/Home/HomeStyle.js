@@ -21,8 +21,8 @@ export const StyledMain = styled.main`
 export const StyledSelect = styled.select`
 display: grid;
 grid-template-columns: 1fr 1fr;
-width: 78px;
-height: 17px;
+width: 100px;
+height: 20px;
 
 `
 
@@ -31,6 +31,7 @@ export const SessaoParagrafo = styled.section`
  grid-template-columns: 1fr 1fr auto auto;
  grid-column: 1/4;
  padding-top: 18px;
+ padding-bottom: 20px; 
 `
 export const QuantidadeProduto = styled.p `
 display: flex;
@@ -40,6 +41,7 @@ export const Ordenacao = styled.p`
  display: flex;
  grid-column: 3/4;
  align-items: flex-start;
+ padding-right: 5px
 `
 
 
@@ -53,18 +55,36 @@ export const SectionMain = styled.section `
 `
 
 export const StyledSection = styled.section`
- border: 1px solid green;
+ border: 2px dotted navy;
  width: 20vw;
  padding-bottom: 10px;
  
 `
 export const StyledProductCard = styled.p`
-
+ 
 `
 
 export const StyledHomeParag = styled.p`
-  text-align: left;
+  text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
 `
+
+export const ImageContainer = styled.div `
+ position: relative;
+  width: 100%;
+  padding-bottom: 95%;
+  overflow: hidden;
+`
+
+
+export const ProductImage = styled.img `
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`
+

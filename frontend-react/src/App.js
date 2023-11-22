@@ -1,12 +1,11 @@
-//import logo from './logo.svg';
 import './App.css';
 import Filters from './Components/Filters/Filters';
 import { GlobalStyle } from './Components/GlobalStyle';
 import Home from './Components/ProductList/Home/Home';
 import Cart from './Components/ShoppingCart/Cart/Cart';
 import { StyledContainer } from './Components/ProductList/Home/HomeStyle';
-import { useState } from 'react';
 import listOfProducts from "./Components/assents/productsList";
+import { useState, useEffect } from 'react';
 
 
 export default function App() {
@@ -17,8 +16,21 @@ export default function App() {
   const [amount, setAmount] = useState(0);
   const [order, setOrder] = useState("");
   const [sortedProducts, setSortedProducts] = useState([...listOfProducts]);
-  return (
+  const [sortedList, setSortedList] = useState([]);
+  useEffect(() => {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      setCart(JSON.parse(savedCart));
+    }
+  }, []);
 
+  
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+    
+
+  return (
 
     <div className="App">
       <StyledContainer>
@@ -40,6 +52,8 @@ export default function App() {
           setOrder={setOrder}
           sortedProducts={sortedProducts}
           setSortedProducts={setSortedProducts}
+          sortedList={sortedList}
+          setSortedList={setSortedList}
         />
 
         <Cart

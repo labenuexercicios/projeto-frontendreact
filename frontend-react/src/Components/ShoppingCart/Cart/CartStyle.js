@@ -6,8 +6,8 @@ width: 15%;
   text-align: left;
   padding-top: 2%;
   padding-right: 5%;
-  padding-left: 1%
- 
+  padding-left: 1%;
+  
  
 `
 export const StyledH2Cart = styled.h2`
@@ -22,4 +22,11 @@ export const SessaoDoCart = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  p{
+    margin-bottom: 20px;
+  }
+  button {
+    margin-right: 10px; 
+  }
 `
