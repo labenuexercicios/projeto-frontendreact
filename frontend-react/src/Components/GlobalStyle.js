@@ -13,12 +13,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'blanka', fallback;
+  
    
  }
 
  body {
    background-color: black;
-   color: whitesmoke
+   color: whitesmoke;
+ 
  }
 `
 

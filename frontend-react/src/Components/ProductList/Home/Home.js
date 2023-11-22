@@ -1,3 +1,5 @@
+import ProductCard from "../ProductCard/ProductCard"
+import { ImageContainer, ProductImage } from "./HomeStyle";
 import {
     StyledMain,
     StyledSection,
@@ -8,65 +10,33 @@ import {
     QuantidadeProduto,
     Ordenacao
 } from "./HomeStyle";
-import ProductCard from "../ProductCard/ProductCard"
-import { ImageContainer, ProductImage } from "./HomeStyle";
-import { useEffect } from 'react';
 
 export default function Home({
-    minFilter, 
-    setMinFilter,
-    maxFilter, 
-    setMaxFilter,
-    searchFilter, 
-    setSearchFilter,
-    amount, 
+    amount,
     setAmount,
-    cart, 
+    cart,
     setCart,
-    order, 
+    order,
     setOrder,
-    sortedProducts, 
-    setSortedProducts,
-    sortedList, 
-    setSortedList
+    filteredProducts
 }) {
 
+// -------------select Crescente - Decrescente---------------
     const handleOrder = (event) => {
         setOrder(event.target.value)
-
     }
-
-    // const handleMinFilter = (event) => {
-    //     setMinFilter(event.target.value)
-    // }
-
-    // const handleMaxFilter = (event) => {
-    //     setMinFilter(event.target.value)
-    // }
-
   
+    const sortedFilteredProducts = filteredProducts.sort((a, b) => {
+        if (order === 'crescente') {
+            return parseFloat(a.value.replace('R$ ', '')) - parseFloat(b.value.replace('R$ ', ''));
+        } else if (order === 'decrecente') {
+            return parseFloat(b.value.replace('R$ ', '')) - parseFloat(a.value.replace('R$ ', ''));
+        } else {
+            return 0;
+        }
+    });
 
-    useEffect(() => {
-        let sorted = [...sortedProducts];
-        if (minFilter) {
-            sorted = sorted.filter(product => parseFloat(product.value.replace('R$ ', '')) >= minFilter);
-        }
-        if (maxFilter) {
-            sorted = sorted.filter(product => parseFloat(product.value.replace('R$ ', '')) <= maxFilter);
-        }
-        if (searchFilter) {
-            sorted = sorted.filter(product => product.name.toLowerCase().includes(searchFilter.toLowerCase()));
-        }
-        if (order === "crescente") {
-            sorted.sort((a, b) => parseFloat(a.value.replace('R$ ', '')) - parseFloat(b.value.replace('R$ ', '')));
-        } else if (order === "decrecente") {
-            sorted.sort((a, b) => parseFloat(b.value.replace('R$ ', '')) - parseFloat(a.value.replace('R$ ', '')));
-        }
-        setSortedList(sorted);
-
-    }, [order, sortedProducts, minFilter, maxFilter, searchFilter]);
-
-    //cart
+// ----------------cart
     const addToCart = (product) => {
         setCart((currentCart) => {
             const productInCart = currentCart.find(item => item.id === product.id);
@@ -85,13 +55,16 @@ export default function Home({
                 return newCart;
             }
         });
-        
+
         let total = 0;
         for (let item of cart) {
             total += item.value * item.quantity;
         }
         setAmount(total);
     }
+
+    
+
 
     return (
         <StyledMain>
@@ -105,7 +78,7 @@ export default function Home({
                 </StyledSelect>
             </SessaoParagrafo>
             <SectionMain>
-                {sortedList.map((product) => (
+                {sortedFilteredProducts.map((product) => (
                     <div key={product.id}>
                         <StyledSection>
                             <ImageContainer>

@@ -7,6 +7,7 @@ export const StyledContainer = styled.div`
   justify-content: space-evenly;
   height: 50vh;
   padding-top: 5px;
+  padding-bottom: 20px; 
   font-size: 12px;
    
 `
