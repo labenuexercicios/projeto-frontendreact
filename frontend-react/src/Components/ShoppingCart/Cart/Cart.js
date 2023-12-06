@@ -13,6 +13,8 @@ export default function Cart({ cart, setCart, amount, setAmount }) {
         setAmount((currentAmount) => currentAmount - (product.value * product.quantity));
     };
 
+
+
     useEffect(() => {
         let total = 0;
         for (let item of cart) {
@@ -21,6 +23,7 @@ export default function Cart({ cart, setCart, amount, setAmount }) {
         }
         setAmount(total);
     }, [cart, setAmount]); 
+
     return (
         <StyledCart>
             <StyledH2Cart>Cart</StyledH2Cart>
@@ -33,8 +36,7 @@ export default function Cart({ cart, setCart, amount, setAmount }) {
                 ))}
                 <Items amount={amount} setAmount={setAmount} cart={cart} setCart={setCart} />
             </SessaoDoCart>
-            <StyledPCart>Valor Total: R$ {amount.toFixed(2)}</StyledPCart>
+            <StyledPCart> Total Value: R$ {amount.toFixed(2)}</StyledPCart>
         </StyledCart>
-
     );
 }

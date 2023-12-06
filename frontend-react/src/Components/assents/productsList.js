@@ -12,25 +12,25 @@ import KitAstronaulta from "../images/kit-astronauta.webp"
 const listOfProducts = [
     {
         id: 1,
-        name: "Bolinhas de Sistema Solar",
+        name: "Solar System Balls",
         value: "R$ 200.00",
         imageUrl: Bolinhas
     },
     {
         id: 2,
-        name: "Atronauta Lego",
+        name: "Astronaut Lego",
         value: "R$ 270.00",
         imageUrl: AstronautaLego
     },
     {
         id: 3,
-        name: " Fantasia Macacão espacial ",
+        name: " Spaceship Onzie ",
         value: "R$ 350.00",
         imageUrl: FantasiaMacacaoEspacial
     },
     {
         id: 4,
-        name: "Poster Astronauta",
+        name: "Astronaut Poster ",
         value: "R$ 200.00",
         imageUrl: PosterDeAstronauta 
     },
@@ -42,25 +42,25 @@ const listOfProducts = [
     },
     {
         id: 6,
-        name: "X Wing Avioes Espaciais",
+        name: "X Wing Spaceships",
         value: "R$ 550.00",
         imageUrl: XWingStarFighterAvioes
     },
     {
         id: 7,
-        name: "Astronauta de Pelucia",
+        name: "Stuffed Astronaut",
         value: "R$ 300.00",
         imageUrl: AstronautaDePelucia
     },
     {
         id: 8,
-        name: "Foguete D'agua",
+        name: "Water Rocket",
         value: "R$ 270.00",
         imageUrl: FogueteDagua
     },
     {
         id: 9,
-        name: "Kit Astronalta",
+        name: "Astronault kit",
         value: "R$ 650.00",
         imageUrl: KitAstronaulta
     },

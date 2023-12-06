@@ -69,10 +69,10 @@ export default function Home({
     return (
         <StyledMain>
             <SessaoParagrafo>
-                <QuantidadeProduto>Quantidade de produtos:</QuantidadeProduto>
-                <Ordenacao> Ordenação:</Ordenacao>
+                <QuantidadeProduto>Quantity of Product</QuantidadeProduto>
+                <Ordenacao> Ordenation:</Ordenacao>
                 <StyledSelect value={order} onChange={handleOrder}>
-                    <option value="">Ordenar</option>
+                    <option value="">Ordenate</option>
                     <option value="crescente">Crescente</option>
                     <option value="decrecente">Decrecente</option>
                 </StyledSelect>

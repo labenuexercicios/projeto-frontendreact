@@ -22,7 +22,7 @@ export default function Filters({ minFilter, setMinFilter, maxFilter, setMaxFilt
         <StyledFilter>
             <StyledH2>Filters</StyledH2>
 
-            <StyledP>Valor minímo:</StyledP>
+            <StyledP>Min Value: </StyledP>
             <StyledInput 
                 type="number"
                 value={minFilter}
@@ -30,14 +30,14 @@ export default function Filters({ minFilter, setMinFilter, maxFilter, setMaxFilt
                 min={0}>
             </StyledInput>
 
-            <StyledP>Valor máximo:</StyledP>
+            <StyledP>Max Value:</StyledP>
             <StyledInput 
                 type="number"
                 value={maxFilter}
                 onChange={handleMaxFilter}
                 min={0}></StyledInput>
 
-            <StyledP>Busca por nome:</StyledP>
+            <StyledP>Search by Name:</StyledP>
             <StyledInput 
                 value={searchFilter}
                 onChange={handleSearchFilter}>

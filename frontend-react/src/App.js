@@ -5,8 +5,8 @@ import Home from './Components/ProductList/Home/Home';
 import Cart from './Components/ShoppingCart/Cart/Cart';
 import { StyledContainer } from './Components/ProductList/Home/HomeStyle';
 import listOfProducts from "./Components/assents/productsList";
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import Header from './Components/Header/Header';
 
 export default function App() {
   const [minFilter, setMinFilter] = useState(0);
@@ -15,6 +15,19 @@ export default function App() {
   const [cart, setCart] = useState([]);
   const [amount, setAmount] = useState(0);
   const [order, setOrder] = useState("");
+  
+
+    useEffect(() => {
+      const savedCart = localStorage.getItem('cart');
+      if (savedCart) {
+        setCart(JSON.parse(savedCart));
+      }
+    }, []);
+  
+   
+    useEffect(() => {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
   
   
   const filteredProducts = listOfProducts
@@ -26,7 +39,9 @@ export default function App() {
   return (
 
     <div className="App">
+     <Header />
       <StyledContainer>
+     
         <GlobalStyle />
         <Filters
           minFilter={minFilter}

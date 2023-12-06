@@ -4,7 +4,7 @@ export default function ProductCard({ amount, setAmount, cart, setCart, addToCar
 
     return (
         <>
-            <button onClick={addToCart}>Adicionar ao Carrinho</button>
+            <button onClick={addToCart}>Add to Cart </button>
         </>
     )
 
