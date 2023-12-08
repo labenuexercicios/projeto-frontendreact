@@ -1,5 +1,4 @@
 import {CollumCart} from './styled'
-import { NameCart } from './styled'
 
 
 

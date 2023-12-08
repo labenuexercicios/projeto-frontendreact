@@ -1,7 +1,9 @@
 import './App.css';
 import { createGlobalStyle } from 'styled-components';
-import Header from './Componentes/Header/Header'
-import Aside from './Componentes/Aside/Aside'
+import Header from './Componentes/Header/Header';
+import Aside from './Componentes/Aside/Aside';
+import ContainerCard from './Componentes/Containes/Container';
+
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -20,6 +22,7 @@ function App() {
       </Header>
       <Aside>
       </Aside>
+      <ContainerCard></ContainerCard>
     </>
 
 
