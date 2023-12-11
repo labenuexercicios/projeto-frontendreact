@@ -1,42 +1,34 @@
 import styled from "styled-components";
 
 
-//Container on App()
 export const StyledContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  height: 50vh;
+  height: auto;
   padding-top: 5px;
   padding-bottom: 20px; 
-  font-size: 12px;
-   
+  font-size: 12px;  
 `
-//main section on Home.js
+
 export const StyledMain = styled.main`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   padding: 5px;
 `
 
-//select section on main section of home.js
 export const StyledSelect = styled.select`
-display: grid;
 grid-template-columns: 1fr 1fr;
-width: 100px;
 height: 20px;
-
+justify-self: end;
 `
 
 export const SessaoParagrafo = styled.section`
  display: grid;
  grid-template-columns: 1fr 1fr auto auto;
- grid-column: 1/4;
  padding-top: 18px;
  padding-bottom: 20px; 
 `
 export const QuantidadeProduto = styled.p `
 display: flex;
-
 `
 export const Ordenacao = styled.p`
  display: flex;
@@ -45,24 +37,32 @@ export const Ordenacao = styled.p`
  padding-right: 5px
 `
 
-
 export const SectionMain = styled.section `
  display: grid;
- grid-template-columns: 1fr 1fr 1fr;
+ grid-template-columns: 1fr 1fr 1fr ;
  grid-column: 1/4;
  align-items: center;
- gap: 25px;
- 
+ column-gap: 100px;
+ row-gap: 95px;
 `
 
 export const StyledSection = styled.section`
  border: 2px dotted navy;
- width: 20vw;
+ width: 21vw;
  padding-bottom: 10px;
- 
-`
-export const StyledProductCard = styled.p`
- 
+ animation: pulse 2s infinite;
+
+  @keyframes pulse {
+    0% {
+      border-color: navy;
+    }
+    50% {
+      border-color: white;
+    }
+    100% {
+      border-color: navy;
+    }
+  }
 `
 
 export const StyledHomeParag = styled.p`
@@ -78,7 +78,6 @@ export const ImageContainer = styled.div `
   padding-bottom: 95%;
   overflow: hidden;
 `
-
 
 export const ProductImage = styled.img `
   position: absolute;

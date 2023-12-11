@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledFilter = styled.aside`
-  width: 15%;
+  width: 14%;
   border: 1px solid black;
   text-align: left;
   padding-top: 2%;
   padding-right: 5%;
-  padding-left: 1%
+  padding-left: 2%
   
 `
 export const StyledH2 = styled.h2`
@@ -17,5 +17,5 @@ export const StyledP = styled.p`
 `
 
 export const StyledInput = styled.input`
-width: 130%;
+width: 125%;
 `

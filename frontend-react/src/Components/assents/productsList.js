@@ -4,10 +4,12 @@ import FantasiaMacacaoEspacial from "../images/macacao-espacial.jpg";
 import PosterDeAstronauta from "../images/Poster-astronauta.jpg";
 import UCSYWingLego from "../images/UCS-Y.jpg";
 import XWingStarFighterAvioes from "../images/xwing.webp";
-import AstronautaDePelucia from "../images/astronauta-pelucia.avif"
-import FogueteDagua from "../images/foguete-dagua.webp"
-import KitAstronaulta from "../images/kit-astronauta.webp"
-
+import AstronautaDePelucia from "../images/astronauta-pelucia.avif";
+import FogueteDagua from "../images/foguete-dagua.webp";
+import KitAstronaulta from "../images/kit-astronauta.webp";
+import ArticulatedAstronaut from "../images/Articulated-Astronaut.jpg";
+import LedLight  from "../images/led-night-lighting-lamp.jpg";
+import SpaceRocket from "../images/space-rocket.jpg";
 
 const listOfProducts = [
     {
@@ -63,6 +65,24 @@ const listOfProducts = [
         name: "Astronault kit",
         value: "R$ 650.00",
         imageUrl: KitAstronaulta
+    },
+    {
+        id: 10,
+        name: "Articulated Astronaut",
+        value: "R$ 300.00",
+        imageUrl: ArticulatedAstronaut
+    },
+    {
+        id: 11,
+        name: "Led night Lamp",
+        value: "R$ 270.00",
+        imageUrl: LedLight
+    },
+    {
+        id: 12,
+        name: "Space Rocket",
+        value: "R$ 650.00",
+        imageUrl: SpaceRocket
     },
    
 ]

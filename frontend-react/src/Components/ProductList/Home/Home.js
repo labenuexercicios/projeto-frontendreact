@@ -7,8 +7,7 @@ import {
     StyledSelect,
     StyledHomeParag,
     SessaoParagrafo,
-    QuantidadeProduto,
-    Ordenacao
+    QuantidadeProduto
 } from "./HomeStyle";
 
 export default function Home({
@@ -18,25 +17,28 @@ export default function Home({
     setCart,
     order,
     setOrder,
-    filteredProducts
+    listOfProducts
 }) {
 
-// -------------select Crescente - Decrescente---------------
     const handleOrder = (event) => {
         setOrder(event.target.value)
     }
-  
-    const sortedFilteredProducts = filteredProducts.sort((a, b) => {
+    console.log(order);
+    const sortedFilteredProducts = (listOfProducts || []).sort((a, b) => {
+        console.log('Sorting products', a, b);
         if (order === 'crescente') {
-            return parseFloat(a.value.replace('R$ ', '')) - parseFloat(b.value.replace('R$ ', ''));
+            const result = parseFloat(a.value.replace('R$ ', '')) - parseFloat(b.value.replace('R$ ', ''));
+            console.log('Sort result', result);
+            return result;
         } else if (order === 'decrecente') {
-            return parseFloat(b.value.replace('R$ ', '')) - parseFloat(a.value.replace('R$ ', ''));
+            const result = parseFloat(b.value.replace('R$ ', '')) - parseFloat(a.value.replace('R$ ', ''));
+            console.log('Sort result', result);
+            return result;
         } else {
             return 0;
         }
     });
 
-// ----------------cart
     const addToCart = (product) => {
         setCart((currentCart) => {
             const productInCart = currentCart.find(item => item.id === product.id);
@@ -61,16 +63,13 @@ export default function Home({
             total += item.value * item.quantity;
         }
         setAmount(total);
+        alert(`${product.name} was added to the cart.`);
     }
-
-    
-
 
     return (
         <StyledMain>
             <SessaoParagrafo>
-                <QuantidadeProduto>Quantity of Product</QuantidadeProduto>
-                <Ordenacao> Ordenation:</Ordenacao>
+                <QuantidadeProduto>Products</QuantidadeProduto>
                 <StyledSelect value={order} onChange={handleOrder}>
                     <option value="">Ordenate</option>
                     <option value="crescente">Crescente</option>
@@ -78,24 +77,27 @@ export default function Home({
                 </StyledSelect>
             </SessaoParagrafo>
             <SectionMain>
-                {sortedFilteredProducts.map((product) => (
-                    <div key={product.id}>
-                        <StyledSection>
-                            <ImageContainer>
-                                <ProductImage src={product.imageUrl} alt={product.name} />
-                            </ImageContainer>
-                            <StyledHomeParag>{product.name}</StyledHomeParag>
-                            <StyledHomeParag>{product.value}</StyledHomeParag>
-                            <ProductCard
-                                amount={amount}
-                                setAmount={setAmount}
-                                cart={cart}
-                                setCart={setCart}
-                                addToCart={() => addToCart(product)}
-                            />
-                        </StyledSection>
-                    </div>
-                ))}
+                {sortedFilteredProducts.map((product) => {
+                    console.log('Mapping product', product);
+                    return (
+                        <div key={product.id}>
+                            <StyledSection>
+                                <ImageContainer>
+                                    <ProductImage src={product.imageUrl} alt={product.name} />
+                                </ImageContainer>
+                                <StyledHomeParag>{product.name}</StyledHomeParag>
+                                <StyledHomeParag>{product.value}</StyledHomeParag>
+                                <ProductCard
+                                    amount={amount}
+                                    setAmount={setAmount}
+                                    cart={cart}
+                                    setCart={setCart}
+                                    addToCart={() => addToCart(product)}
+                                />
+                            </StyledSection>
+                        </div>
+                    );
+                })}
             </SectionMain>
         </StyledMain>
 

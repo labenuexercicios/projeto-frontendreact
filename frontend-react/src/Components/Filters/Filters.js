@@ -1,19 +1,14 @@
 import { StyledFilter, StyledH2, StyledP, StyledInput } from "./FiltersStyle";
-//import { useState } from "react";
-
 
 export default function Filters({ minFilter, setMinFilter, maxFilter, setMaxFilter, searchFilter, setSearchFilter }) {
 
     const handleMinFilter = (event) => {
-       // console.log(event.target.value)
         setMinFilter(event.target.value)
     }
     const handleMaxFilter = (event) => {
-       // console.log(event.target.value)
-        setMaxFilter(event.target.value)
+        setMaxFilter(Number(event.target.value))
     }
     const handleSearchFilter = (event) => {
-        //console.log(event.target.value)
         setSearchFilter(event.target.value)
     }
 
