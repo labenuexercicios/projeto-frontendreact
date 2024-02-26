@@ -33,11 +33,9 @@ export const GlobalStyle = createGlobalStyle`
 
 `;
 export const Wrapper = styled.div`
-  /* display: grid; */
-
   height: 100vh;
   display: flex;
-  /* grid-template-columns: 1fr 1fr 1fr; */
+
 
   padding-top: 24px;
   gap: 10px;
