@@ -1,8 +1,8 @@
 import styled from "styled-components";
 export const CartContainer = styled.div`
   display: flex;
-  height:min(90%,90vh)  ;
-  width: max(90%,25vh);
+  min-width: 250px;
+    max-width: 400px;
   //21vh;//
   padding: 10px;
   margin: 16px 10px 16px 16px;

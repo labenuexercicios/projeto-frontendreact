@@ -1,7 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  *{
+  *{  
+
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -14,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
 
    body {
     background: #EDEDED;
-  
+ 
+
 
    }
    
@@ -31,12 +33,13 @@ export const GlobalStyle = createGlobalStyle`
 
 `;
 export const Wrapper = styled.div`
-  display: grid;
-  height: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* display: grid; */
+
+  height: 100vh;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr 1fr; */
 
   padding-top: 24px;
   gap: 10px;
-  width: 100vw;
-  height: 100vh;
+
 `;
