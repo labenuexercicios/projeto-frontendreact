@@ -25,8 +25,8 @@
 + Retornar à visualização sem filtros.
 <br><br>
 ## Reponsividade 
-+ Layout Mobile <br> <img src="./LabeCommerce/public/Layout%20mobile%20375x667.png" >
-+ WideScreen <br> <img src="./LabeCommerce/public/Layout%20FullHD%203390x966.png">
++ Layout Mobile <br> <img src="./public/Layout%20mobile%20375x667.png" >
++ WideScreen <br> <img src="./public/Layout%20FullHD%203390x966.png">
 
 <br><br>
 *Nota: Há uma barra de rolagem permitindo a vizualização dos demais produtos*
