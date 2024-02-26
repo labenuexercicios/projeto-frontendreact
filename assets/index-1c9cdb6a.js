@@ -51,7 +51,7 @@ Error generating stack: `+i.message+`
   display: flex;
   flex-wrap: nowrap;
   height: 20rem;
-  width: max(2vw, 15rem);
+  /* width: max(2vw, 15rem); */
   padding: 8px;
   margin: 16px 0 16px 16px;
   flex-direction: column;
@@ -314,8 +314,8 @@ Error generating stack: `+i.message+`
   
 `;function $0(e){const{Products:t,setCart:n,cart:r}=e,l=i=>{const o=r.find(u=>u.id===i.id);if(!o)n([...r,{...i,quantity:1}]);else{const u=r.map(a=>a.id===i.id?{...o,quantity:o.quantity+1}:a);n(u)}};return t.map(i=>j.jsxs(j0,{children:[j.jsx("img",{src:i.imageUrl,alt:"Imagem do Produto"}),j.jsx(I0,{children:i.name}),j.jsx("div",{children:j.jsxs(O0,{children:[i.value.toLocaleString("pt-br",{style:"currency",currency:"BRL"}),j.jsx("button",{onClick:()=>{l(i)},children:j.jsx(E0,{})})]})})]},i.id))}function M0(e){const{Products:t,cart:n,setCart:r,searchFiltered:l,searchFilter:i,setSearchFilter:o}=e,[u,a]=ae.useState("asc"),c=t.sort((p,m)=>{if(u==="asc"||u==="")return p.value-m.value;if(u==="desc"||u==="")return m.value-p.value}).filter(p=>{if(p.name.toLowerCase().includes(i)||i===""||p.name.toUpperCase().includes(i)||i==="")return p});return j.jsxs(z0,{children:[j.jsxs(R0,{children:[j.jsxs(A0,{children:[j.jsx("label",{htmlFor:"textNome",children:"Search Item"}),j.jsx("input",{value:i,onChange:p=>o(p.target.value),type:"text",id:"textNome",name:"textNome",placeholder:"Products..."})]}),j.jsx(T0,{children:j.jsxs("select",{value:u,name:"seleçãoOrdem",onChange:p=>a(p.target.value),children:[j.jsx("option",{value:"asc",children:"Crescente"}),j.jsx("option",{value:"desc",children:"Decrescente"})]})})]}),j.jsx(L0,{children:j.jsx($0,{searchFiltered:l,Products:c,cart:n,setCart:r})})]})}const D0=pe.div`
   display: flex;
-  height:min(90%,90vh)  ;
-  width: max(90%,25vh);
+  min-width: 250px;
+    max-width: 400px;
   //21vh;//
   padding: 10px;
   margin: 16px 10px 16px 16px;
@@ -438,7 +438,8 @@ Error generating stack: `+i.message+`
     letter-spacing: 3px;
   }
 `;function W0(e){const{cart:t,setCart:n}=e;function r(l){const i=t.find(o=>o.id===l.id);if(i.quantity>1){const o=t.map(u=>u.id===l.id?{...i,quantity:i.quantity-1}:u);n(o)}else{const o=t.filter(u=>u.id!==l.id);n(o)}}return t.map(l=>j.jsx(V0,{children:j.jsxs(H0,{children:[j.jsx("img",{src:l.imageUrl}),j.jsxs("p",{children:[l.quantity,"x"]}),j.jsx("p",{children:l.value.toLocaleString("pt-br",{style:"currency",currency:"BRL"})}),j.jsx("button",{onClick:()=>r(l),children:j.jsx(P0,{size:20})})]})},l.id))}function Q0(e){const{cart:t,setCart:n,amount:r,setAmount:l}=e,i=t.map(a=>a.value*a.quantity),o=()=>localStorage.setItem("CartItems",JSON.stringify(t)),u=localStorage.getItem("CartItems");return ae.useEffect(()=>{o();let a=i.reduce((c,p)=>c+p,0);l(a)},[t]),ae.useEffect(()=>{n(JSON.parse(u))},[]),j.jsxs(D0,{children:[j.jsxs(F0,{children:[j.jsx(_0,{color:"var(--ui-success)",size:50,strokeWidth:1.5}),j.jsx("h1",{children:"Bag"})]}),j.jsx(U0,{children:j.jsx(W0,{cart:t,setCart:n})}),j.jsxs(B0,{children:[j.jsx(C0,{color:"var(--ui-placeholder)",size:40,strokeWidth:1.5}),j.jsx(w0,{size:30,strokeWidth:2}),j.jsxs("p",{children:[" ",r.toLocaleString("pt-br",{style:"currency",currency:"BRL"})]})]})]})}const Y0=d0`
-  *{
+  *{  
+
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -451,7 +452,8 @@ Error generating stack: `+i.message+`
 
    body {
     background: #EDEDED;
-  
+ 
+
 
    }
    
@@ -467,12 +469,11 @@ Error generating stack: `+i.message+`
    
 
 `,K0=pe.div`
-  display: grid;
-  height: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
+  height: 100vh;
+  display: flex;
+
 
   padding-top: 24px;
   gap: 10px;
-  width: 100vw;
-  height: 100vh;
+
 `,ll=[{id:1,name:"Especial Force",value:12060.82,imageUrl:"https://s.aficionados.com.br/imagens/giphy-93.gif"},{id:2,name:"Baby Yoda",value:1e4,imageUrl:"https://images.squarespace-cdn.com/content/v1/5ccb050e809d8e130ff3433f/1576149557188-07XDLA913IYR95GZX8V6/baby-yoda-1.gif?format=500w"},{id:3,name:"Space Camaleon",value:2400.56,imageUrl:"https://i.pinimg.com/originals/e0/a2/3e/e0a23eaa9f48062296f035cf1134fa07.gif"},{id:4,name:"Gol Nav",value:600,imageUrl:"https://cdn.pixabay.com/animation/2022/08/16/16/28/16-28-36-108_512.gif"},{id:5,name:"Space City",value:7600,imageUrl:"https://64.media.tumblr.com/ac82a364886554030f398d1b2ce3ca04/tumblr_inline_pg7d1yKDke1ry91tl_540.gif"},{id:6,name:"Spy Sentinel",value:8360,imageUrl:"https://i.pinimg.com/originals/96/fb/a5/96fba5beb0adf9ff00a8372bdf13a489.gif"},{id:7,name:"Team War",value:1e4,imageUrl:"https://media.tenor.com/NVzK7n0A5gMAAAAC/star-trek-tng.gif"},{id:8,name:"Time Traveller",value:8e3,imageUrl:"https://gifs.eco.br/wp-content/uploads/2022/11/gifs-de-star-trek-discovery-3.gif"},{id:9,name:"Darth Vader",value:18e3,imageUrl:"https://i.pinimg.com/originals/bc/c5/7f/bcc57fab127d1b52b6607cc0f191d10e.gif"},{id:10,name:"War Tripulation",value:1e3,imageUrl:"https://media.tenor.com/q1W6vtgXfNMAAAAC/regal-t-starwars.gif"}];function G0(){var m;const[e,t]=ae.useState(0),[n,r]=ae.useState(0),[l,i]=ae.useState(""),[o,u]=ae.useState([]),[a,c]=ae.useState(0),p=(m=ll==null?void 0:ll.filter(h=>(h==null?void 0:h.value)>=e||!e))==null?void 0:m.filter(h=>(h==null?void 0:h.value)<=n||!n);return j.jsxs(j.Fragment,{children:[j.jsx(Y0,{}),j.jsxs(K0,{children:[j.jsx(N0,{minFilter:e,setMinFilter:t,maxFilter:n,setMaxFilter:r,searchFilter:l,setSearchFilter:i,Product:ll}),j.jsx(M0,{Products:p,cart:o,setCart:u,amount:a,setAmount:c,searchFilter:l,setSearchFilter:i}),j.jsx(Q0,{cart:o,setCart:u,amount:a,setAmount:c})]})]})}Ki.createRoot(document.getElementById("root")).render(j.jsx(Bn.StrictMode,{children:j.jsx(G0,{})}));
